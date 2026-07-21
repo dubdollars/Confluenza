@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Confluenza — Living AI/Macro Investment Thesis</title>
+<style>
+:root{
+  --bg:#0b0e13; --panel:#141922; --panel2:#1b212c; --line:#26303d;
+  --ink:#e7edf5; --dim:#93a1b3; --faint:#63707f;
+  --up:#3ddc84; --down:#ff5c6c; --flat:#f4c04f; --new:#5aa9ff;
+  --accent:#7c9cff; --accent2:#c792ff;
+  --chip:#212a37;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+h1,h2,h3,h4{margin:0 0 .3em;font-weight:650;letter-spacing:.2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px 80px}
+header.top{border-bottom:1px solid var(--line);padding:22px 0 16px;position:sticky;top:0;background:linear-gradient(180deg,#0b0e13 70%,rgba(11,14,19,.9));z-index:20}
+.brand{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.brand h1{font-size:24px;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand .edition{color:var(--faint);font-size:12.5px;font-variant-numeric:tabular-nums}
+.tag{color:var(--dim);font-size:13.5px;margin-top:4px;max-width:820px}
+nav.tabs{display:flex;gap:6px;margin-top:16px;flex-wrap:wrap}
+nav.tabs button{background:var(--panel);color:var(--dim);border:1px solid var(--line);padding:8px 14px;border-radius:8px;cursor:pointer;font-size:13.5px;font-weight:550}
+nav.tabs button:hover{color:var(--ink);border-color:#38465a}
+nav.tabs button.active{background:var(--accent);color:#0b0e13;border-color:var(--accent)}
+section.view{display:none;padding-top:26px}
+section.view.active{display:block}
+.lead{color:var(--dim);max-width:860px;margin:2px 0 22px}
+.grid{display:grid;gap:14px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.muted{color:var(--dim)} .faint{color:var(--faint)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;cursor:help;transition:border-color .15s}
+.kpi:hover{border-color:#3a4a60}
+.kpi .n{font-size:26px;font-weight:700;font-variant-numeric:tabular-nums}
+.kpi .l{color:var(--dim);font-size:12.5px;margin-top:2px}
+/* velocity board */
+.themebar{display:grid;grid-template-columns:26px 1fr 220px;gap:14px;align-items:center;padding:11px 14px;background:var(--panel);border:1px solid var(--line);border-radius:10px;cursor:pointer;transition:border-color .15s}
+.themebar:hover{border-color:#3a4a60}
+.themebar+.themebar{margin-top:9px}
+.vel{font-size:19px;font-weight:800;text-align:center}
+.vel.up{color:var(--up)} .vel.down{color:var(--down)} .vel.flat{color:var(--flat)} .vel.new{color:var(--new)}
+.tname{font-weight:600}
+.tmeta{color:var(--faint);font-size:12px;margin-top:2px}
+.convwrap{display:flex;align-items:center;gap:10px}
+.track{flex:1;height:8px;background:#0e131b;border-radius:6px;overflow:hidden;border:1px solid #202a37}
+.fill{height:100%;border-radius:6px;background:linear-gradient(90deg,#3a6bff,#7c9cff)}
+.cscore{font-variant-numeric:tabular-nums;font-weight:700;width:34px;text-align:right}
+.pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;border:1px solid var(--line);background:var(--chip);color:var(--dim);margin:2px 4px 2px 0;white-space:nowrap}
+.pill.tier1{border-color:#2f6b47;color:#8ef0b6;background:#12251a}
+.pill.tier2{border-color:#6b5a2f;color:#f4d78a;background:#241f12}
+.pill.tier3{border-color:#6b2f3a;color:#ffb0ba;background:#241216}
+.pill.flag{border-color:#7c9cff;color:#bcd0ff;background:#161d2e}
+/* drill */
+.drill{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-top:12px}
+.drill h3{font-size:18px}
+.changelog{border-left:2px solid #2a3646;margin:12px 0 4px;padding-left:16px}
+.cl{position:relative;padding:6px 0}
+.cl:before{content:"";position:absolute;left:-21px;top:11px;width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.cl .d{color:var(--faint);font-size:12px;font-variant-numeric:tabular-nums}
+.cl .t{font-size:14px}
+.srcline{color:var(--dim);font-size:13px;margin-top:8px}
+.reason{background:#101620;border:1px dashed #2c3a4c;border-radius:8px;padding:10px 12px;color:var(--dim);font-size:13px;margin-top:10px}
+/* timeline */
+.tl{position:relative;margin-top:10px}
+.tlrow{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+.tlrow:first-child{border-top:none}
+.tlper{font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
+.tlitem{padding:3px 0}
+.tlitem .src{color:var(--faint);font-size:12px}
+/* predictions */
+table.pred{width:100%;border-collapse:collapse;margin-top:8px;font-size:13.5px}
+table.pred th,table.pred td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+table.pred th{color:var(--faint);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.stat{font-weight:700;font-size:12px;padding:2px 8px;border-radius:6px;white-space:nowrap}
+.stat.hit{background:#12251a;color:#8ef0b6;border:1px solid #2f6b47}
+.stat.miss{background:#241216;color:#ffb0ba;border:1px solid #6b2f3a}
+.stat.pend{background:#20222c;color:#c6cfdb;border:1px solid #39424f}
+.stat.track{background:#241f12;color:#f4d78a;border:1px solid #6b5a2f}
+/* watchlist */
+.wcat{margin-top:20px}
+.wcat h3{font-size:15px;color:var(--accent);display:flex;gap:10px;align-items:baseline}
+.wtable{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px}
+.wtable th,.wtable td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.wtable th{color:var(--faint);font-size:11.5px;text-transform:uppercase;letter-spacing:.5px}
+.tkr{font-weight:700}
+.risk{font-size:11.5px;font-weight:600;padding:1px 7px;border-radius:6px;white-space:nowrap}
+.risk.core{background:#12251a;color:#8ef0b6;border:1px solid #2f6b47}
+.risk.mod{background:#241f12;color:#f4d78a;border:1px solid #6b5a2f}
+.risk.spec{background:#241216;color:#ffb0ba;border:1px solid #6b2f3a}
+/* sources xray */
+.bars .b{display:grid;grid-template-columns:180px 1fr 40px;gap:12px;align-items:center;margin:7px 0}
+.bars .lab{color:var(--dim);font-size:13px}
+.bt{height:14px;background:#0e131b;border:1px solid #202a37;border-radius:5px;overflow:hidden}
+.bf{height:100%;background:linear-gradient(90deg,#c792ff,#7c9cff)}
+.blind{background:#1a1113;border:1px solid #5a2b34;border-radius:10px;padding:14px 16px;margin-top:16px}
+.blind h4{color:#ff9aa6}
+.disc{color:var(--faint);font-size:12px;border-top:1px solid var(--line);margin-top:34px;padding-top:16px}
+.legend{display:flex;gap:16px;flex-wrap:wrap;color:var(--dim);font-size:12.5px;margin:8px 0 18px}
+.legend span b{color:var(--ink)}
+.hint{color:var(--faint);font-size:12px;margin-top:6px}
+@media(max-width:720px){.kpis{grid-template-columns:repeat(2,1fr)}.themebar{grid-template-columns:22px 1fr}.convwrap{display:none}.tlrow{grid-template-columns:70px 1fr}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <h1>CONFLUENZA</h1>
+      <span class="edition">Edition 001 · built 2026-07-20 · 15 transcripts · 13 distinct voices</span>
+    </div>
+    <div class="tag">A living record of where the AI/macro investment thesis stands, how fast each idea is moving, and the data driving the change — distilled from primary-source transcripts, weighted by cross-source confluence, and stress-tested for bias. The edge is in the <em>derivative</em>: catching convergence before it's obvious.</div>
+    <nav class="tabs" id="tabs"></nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="view active" id="v-velocity"></section>
+  <section class="view" id="v-themes"></section>
+  <section class="view" id="v-timeline"></section>
+  <section class="view" id="v-watchlist"></section>
+  <section class="view" id="v-sources"></section>
+  <section class="view" id="v-method"></section>
+</div>
+
+<script>
+/* ============================================================
+   CONFLUENZA — DATA LAYER (the "database")
+   Update this object each batch; the site re-renders from it.
+   conviction 1-10. velocity: up/down/flat/new.
+   Independent-voice counting: one person's repeat appearances = 1 voice.
+   ============================================================ */
+const DATA = {
+  edition: 1,
+  builtOn: "2026-07-20",
+  transcripts: 15,
+  voices: 13,
+
+  themes: [
+    {
+      id:"energy", name:"Energy is the binding constraint", conviction:9.5, velocity:"up",
+      sources:6, opposed:true, tier:"High conviction",
+      tags:["Power","Grid","Data centers","Physical bottleneck"],
+      summary:"The single most-converged idea in the library. Compute is scaling exponentially; usable electricity is not. Six independent voices with opposing incentives all land here — a lab CEO with no energy stake (Hassabis), a data-center owner (Chamath), a chip lifer who frames it as the bubble's natural ceiling (Gelsinger), plus Huang, Musk and Dylan Patel. Chips resolve in ~2-3 yrs; power is a multi-year problem.",
+      reason:"Raised to 9.5 — highest in library. Convergence across genuinely opposed incentives is the strongest possible signal; the latest batch added two independent confirmations (Gelsinger, Chamath) plus hard data (PJM auction shortfall, NY moratorium).",
+      voices:"Visser/Patel, Huang, Hassabis, Musk, Chamath, Gelsinger",
+      log:[
+        {d:"2026-07-12",t:"Enters library via Visser/Dylan Patel — power 'creativity' (diesel/boat/train engines converted for generation); gas-turbine shortage. Conviction 6."},
+        {d:"2026-07-15",t:"Gelsinger: 'energy bounds the bubble' — US grid grew ~1%/yr for a decade, now building to 4-5%; nobody buys GPUs without power. Independent, opposed framing → 8."},
+        {d:"2026-07-17",t:"Chamath: US short ~2.5x California's total energy by 2050; PJM auction needed 7-8GW, got 156MW; ~40% of DC projects mothballed; NY first-ever hyperscale moratorium. → 9."},
+        {d:"2026-07-19",t:"Musk sharpens to a dated call: chip output exceeds ability to turn chips on by end-2026; turbines sold out to 2030, vanes/blades = 3 casting cos. → 9.5."}
+      ]
+    },
+    {
+      id:"token", name:"Token demand is exponential & underestimated", conviction:9.0, velocity:"up",
+      sources:6, opposed:false, tier:"High conviction",
+      tags:["Inference","Compute demand","Jevons"],
+      summary:"One human prompt fans out to dozens–hundreds of model calls (reasoning, retrieval, memory, planning) — software consuming software, so demand compounds rather than grows linearly. Now backed by hard commercial data, not just CEO enthusiasm.",
+      reason:"High and rising on evidence quality: moved from anecdote (Dylan Patel $100K→$11M in 6mo) to hard cross-firm data (Ramp: token spend +21x YoY across its book).",
+      voices:"Chase/LangChain, Huang, Visser, Osika/Lovable, Gelsinger, Ramp data (All-In)",
+      log:[
+        {d:"2026-07-08",t:"Harrison Chase (LangChain CEO): 'I underestimated the demand for intelligence and tokens.' Huang: employees should burn $250K/yr in tokens. Conviction 8."},
+        {d:"2026-07-15",t:"Osika (Lovable): ~1M new apps/week, burning tokens; ~60% of low-tier users blow past caps willingly. Gelsinger: Jevons in play, targets 10,000x cost cut. → 8.5."},
+        {d:"2026-07-17",t:"Ramp data: token spend +21x YoY (not 21%). Hard, cross-firm confirmation. → 9."}
+      ]
+    },
+    {
+      id:"agentic", name:"Agentic inflection is real and recent (~late 2025)", conviction:9.0, velocity:"flat",
+      sources:4, opposed:true, tier:"High conviction",
+      tags:["Agents","Foundational","Timing"],
+      summary:"Four independent voices with different agendas date the shift to roughly Nov 2025 (Opus 4.5 / Claude Code / OpenClaw). This is the foundational premise most other themes sit on.",
+      reason:"Stable-high: foundational and multiply-confirmed. Not moving because it's now consensus among primary sources — the debate has shifted to second-order effects.",
+      voices:"Visser, Huang, Hassabis, Amodei",
+      log:[
+        {d:"2026-07-08",t:"Huang: 'the last six months changed everything… AI is now finally useful.' Independently matches Visser's Opus-4.5 timeline. Conviction 8.5."},
+        {d:"2026-07-15",t:"Hassabis: 'we're in the midst of the agent era now.' Amodei confirms capability curve. → 9, stable."}
+      ]
+    },
+    {
+      id:"opensource", name:"Open-source & inference-cost pressure on premium closed models", conviction:8.5, velocity:"up",
+      sources:6, opposed:true, tier:"High conviction",
+      tags:["Open weights","Margins","Cost","Model layer"],
+      summary:"Near-frontier open models at a fraction of the cost are compressing the premium model layer. Nemotron ≈ Opus on deep-agent benchmarks at ~1/10 the price; price dispersion is 50-100x ($56/M Claude vs ~$0.50/M Chinese). Real margin risk for closed leaders; tailwind for inference optimization and picks-and-shovels.",
+      reason:"Rising fast on hard data. Note: NVDA pushes open models deliberately (commoditize-the-complement) — a book-talk, but the strategy itself is the signal.",
+      voices:"Huang, Visser, Chamath/8090, Osika, Gelsinger, All-In panel",
+      log:[
+        {d:"2026-07-08",t:"Nemotron 3 Ultra 86 vs Opus 87 on LangChain deep-agent bench at ~1/10 cost. Conviction 7."},
+        {d:"2026-07-12",t:"Visser: closed wins discovery, open wins production; enterprise open-source spend dynamics. → 7.5."},
+        {d:"2026-07-15",t:"Gelsinger targets 10,000x token-cost cut; Osika routes to open weights + own post-training. → 8."},
+        {d:"2026-07-17",t:"$56/M vs $0.50/M dispersion (Ramp). → 8.5."},
+        {d:"2026-07-03",t:"8090 test: open model + harness = 16.4x cheaper than Opus alone. Tokens '-90%/yr for 3 yrs.' Holds 8.5."}
+      ]
+    },
+    {
+      id:"sovereignty", name:"AI sovereignty / enterprise data-control / on-prem", conviction:7.8, velocity:"up",
+      sources:6, opposed:false, tier:"High conviction",
+      tags:["Enterprise","On-prem","Data control","Palantir"],
+      summary:"Enterprises are waking up to the risk of feeding proprietary 'alpha' to frontier labs that may later compete with them. The answer: control your compute, models, weights and data — via open models on your own hardware, third-party control planes, or eventually your own fine-tuned models.",
+      reason:"Rising fast and now multi-source. Directly investable via Palantir (sovereign-AI OS), on-prem/edge hardware, and agent-security/control-plane tooling.",
+      voices:"Karp/Palantir, Chamath/8090, Friedberg, Huang (super-agents), Hassabis, Amodei",
+      log:[
+        {d:"2026-07-08",t:"Huang: 'companies built on harnesses, not business processes'; super-agents = crown jewels. Conviction 6.5."},
+        {d:"2026-07-03",t:"Karp/Palantir + Nvidia sovereign-AI OS; own hardware/data/weights. 8090 data. Friedberg: life-sci firms refusing to feed data. → 7.8."}
+      ]
+    },
+    {
+      id:"software", name:"Model layer eats the app layer (wrapper risk)", conviction:7.0, velocity:"up",
+      sources:4, opposed:false, tier:"Contested→firming",
+      tags:["SaaS","App layer","Disruption","Short-watch"],
+      summary:"The 'is SaaS toast?' debate now has a body on the floor. Anthropic launched Claude Code (after watching customer Cursor), then Claude Design (partner Figma −50% YTD), plus Claude Science/Security/Legal/Financial. Microsoft/Google playbook. Real-world resolution from Lovable: undifferentiated seat-based workflow SaaS is exposed; systems-of-record/data layers persist as connected backends.",
+      reason:"Firming from a two-CEO disagreement (Visser 'toast' vs Huang 'tools win') into a bifurcation backed by evidence (Figma casualty; Lovable interop). The tradeable distinction: workflow-seat SaaS at risk, tools-of-record durable.",
+      voices:"All-In (Figma/Cursor), Osika/Lovable, Huang (counter), Amodei",
+      log:[
+        {d:"2026-07-19",t:"Debate opens: Visser 'legacy software toast' (ADBE, CRM) vs Huang 'agents bang on tools → usage skyrockets.' Contested, 5."},
+        {d:"2026-07-15",t:"Lovable data: bespoke replaces Slack/Salesforce internally, but interops under the hood → bifurcation. → 6.5."},
+        {d:"2026-07-03",t:"Figma −50% YTD after Anthropic Claude Design blindside; Claude verticals eating ecosystem. → 7."}
+      ]
+    },
+    {
+      id:"digbio", name:"Digital biology / AI drug discovery", conviction:8.0, velocity:"up",
+      sources:3, opposed:true, tier:"High conviction",
+      tags:["Biotech","AlphaFold","Longevity","Under-priced"],
+      summary:"Two frontier CEOs on separate occasions call the same 2-5 yr inflection; a third (Friedberg) shows a concrete commercial AlphaFold win. Arguably the least priced-in of the high-conviction themes — but direct drug revenue is 2028+, so trade the enablers first.",
+      reason:"Rising, high-quality multi-source. Under-covered vs semis. Caveat: drugs take years — near-term edge is in tools/data/compute owners (Alphabet), not drug approvals.",
+      voices:"Huang, Hassabis, Friedberg (Calico)",
+      log:[
+        {d:"2026-03-19",t:"Huang: 'near the ChatGPT moment of digital biology'; ~5-yr healthcare inflection. Conviction 6."},
+        {d:"2026-07-15",t:"Hassabis: 99% of drug discovery in-silico 'in the next few years'; Isomorphic 18-19 programs, clinical soon. Independent confirm → 7.5."},
+        {d:"2026-07-17",t:"Friedberg/All-In: Calico (Alphabet) + AlphaFold engineered anti-aging enzyme, reversed elderly skin to ~31-yr. Concrete commercial win. → 8."}
+      ]
+    },
+    {
+      id:"memory", name:"Memory / HBM / DRAM scarcity", conviction:8.0, velocity:"up",
+      sources:3, opposed:true, tier:"High conviction",
+      tags:["Memory","HBM","DRAM","Scarcity"],
+      summary:"'AI = memory.' Shortage projections pushed from 'until 2030' to 'beyond 2030'; capacity growing 20-30%/yr vs demand doubling. Confirmed from a non-investor vantage: Musk names memory as his single biggest concern ('DDR prices going ballistic').",
+      reason:"Rising, cross-incentive. Visser talks his book, but Musk (robot/rocket builder) and Gelsinger ('$3T memory companies') confirm independently.",
+      voices:"Visser, Musk, Gelsinger",
+      log:[
+        {d:"2026-07-12",t:"Visser: Samsung ~4x fwd PE on +524% earnings; Micron $100B supply agreement; shortage 'beyond 2030.' Conviction 7."},
+        {d:"2026-02-05",t:"Musk: memory his biggest concern, more than logic; DDR prices ballistic. → 8."}
+      ]
+    },
+    {
+      id:"adoption", name:"Adoption lag / two-gate model (counter-theme)", conviction:8.0, velocity:"up",
+      sources:4, opposed:true, tier:"High conviction (disconfirming)",
+      tags:["Counter-narrative","Diffusion","Timing edge"],
+      summary:"The most valuable against-interest theme: capability is ~here, but diffusion into large orgs is the rate-limiter. Amodei (whose product compresses the timeline) admits it; a 21,000-firm Ramp study shows AI-heavy adopters GREW headcount ~10% and entry-level +12% — the opposite of the doom narrative.",
+      reason:"Rising because it's disconfirming evidence for the hype, and against the speakers' own interest — which is exactly when to weight it heavily. Implication: the tradeable lag is in the diffusion layer, not raw model capability.",
+      voices:"Hall, Amodei, All-In (Ramp study), Friedberg",
+      log:[
+        {d:"2026-06",t:"Wendy Hall: 'technology moving fast, adoption is NOT.' Conviction 6."},
+        {d:"2026-07",t:"Amodei two-gate model: capability ahead of job disruption; diffusion messy/slow. → 7."},
+        {d:"2026-07-03",t:"Ramp/Rellio 21k-firm study: AI-heavy adopters +10% headcount, entry-level +12%. → 8."}
+      ]
+    },
+    {
+      id:"physical", name:"Physical AI / robotics / humanoids", conviction:7.0, velocity:"flat",
+      sources:3, opposed:false, tier:"High conviction",
+      tags:["Robotics","Humanoids","Optimus","China supply chain"],
+      summary:"$50T TAM claim (Huang); Optimus 'infinite money glitch' recursion (Musk). Robots ubiquitous 3-5 yrs. Key dependency: China dominates the motors/rare-earths/magnets supply chain robotics relies on.",
+      reason:"Stable. High ceiling but long-dated and timeline-prone (Musk). China supply-chain dependency is both the bottleneck and the risk.",
+      voices:"Huang, Musk, All-In",
+      log:[
+        {d:"2026-03-19",t:"Huang: physical AI $50T TAM, robots ubiquitous 3-5yr; China owns motors/rare-earths. Conviction 7."},
+        {d:"2026-02-05",t:"Musk: Optimus 3 → 1M units/yr; robots build robots. Holds 7."}
+      ]
+    },
+    {
+      id:"assurance", name:"AI assurance / eval / regulation (SRO)", conviction:7.0, velocity:"up",
+      sources:5, opposed:false, tier:"High conviction",
+      tags:["Regulation","Eval","Cybersecurity","Picks-and-shovels"],
+      summary:"'Mythos' (Anthropic model finding thousands of zero-days) scared banks/Bessent into a US regulatory reversal. Emerging picks-and-shovels category: third-party evals, audit, watermarking, agent identity/access-control. Hassabis's FINRA-style SRO has broad industry buy-in.",
+      reason:"Rising and multi-source, spanning safety + cybersecurity + agent-security. Nascent public-market exposure — mostly private/adjacent today.",
+      voices:"Hassabis, Hall, Musk, All-In (SRO), Mythos trigger",
+      log:[
+        {d:"2026-06",t:"UK AI Security Institute benchmarks; 'AI assurance' as a career/industry. Conviction 6."},
+        {d:"2026-07-03",t:"Hassabis SRO proposal; broad buy-in (Musk/Altman/Anthropic/Sundar/Satya). Mythos → policy reversal. → 7."}
+      ]
+    },
+    {
+      id:"taiwan", name:"Taiwan/TSMC tail risk + US reshoring", conviction:7.0, velocity:"flat",
+      sources:3, opposed:false, tier:"Tail risk",
+      tags:["Geopolitics","TSMC","Reshoring","Hedge"],
+      summary:"Gelsinger's chiller: Taiwan holds <3 weeks of energy reserves. A blockade browns out the island, fabs go dark and don't restart for 90 days — 'economic impact greater than the Great Depression,' no shot fired. US builds only ~18% of leading edge. A tail-risk hedge case + reshoring beneficiary.",
+      reason:"Stable tail risk. Low probability, extreme severity — argues for a hedge sleeve and reshoring/semicap exposure rather than a core bet.",
+      voices:"Huang, Musk, Gelsinger",
+      log:[
+        {d:"2026-03-19",t:"Huang: reindustrialize; diversify to Korea/Japan/Europe; 'demonstrate restraint.' Conviction 6."},
+        {d:"2026-07-15",t:"Gelsinger: Taiwan <3wk energy reserves; China blockaded strait ~7x in 4yrs; brownout = worse than Depression. → 7."}
+      ]
+    },
+    {
+      id:"payments", name:"Crypto rails / stablecoins / payment-network disruption", conviction:6.5, velocity:"up",
+      sources:2, opposed:false, tier:"Contested / single-voice-heavy",
+      tags:["Stablecoins","Payments","Agentic commerce","FLAG: thin sourcing"],
+      summary:"Thesis: agents need financial agency (hold value, transact, verify identity, enforce limits) that legacy banking can't provide at machine speed → crypto/stablecoin rails. The Stripe+Block+Advent $53B PayPal bid independently confirms the Visa/Mastercard-disruption vector Visser flagged.",
+      reason:"Raised from 4 to 6.5 ONLY because the Stripe-PayPal deal gave a second, independent voice (All-In panel) to a thesis that was otherwise 3 Visser entries. Still the library's thinnest-sourced major theme. Open question: do V/MA get disrupted or co-opt the programmable layer?",
+      voices:"Visser (x3 — one voice), All-In (Stripe-PayPal deal)",
+      log:[
+        {d:"2026-07-12",t:"Visser: crypto as 'purest AI trade'; stablecoins; Bessent statecraft. Single voice — conviction 4."},
+        {d:"2026-07-20",t:"Visser essay: agentic-commerce financial layer, Jevons on transactions. Still one voice — 4.5."},
+        {d:"2026-07-17",t:"All-In: Stripe+Block+Advent $53B PayPal bid = funded V/MA-disruption vector. Independent confirm → 6.5."}
+      ]
+    },
+    {
+      id:"edge", name:"Edge / on-prem / distributed inference", conviction:7.0, velocity:"up",
+      sources:4, opposed:false, tier:"High conviction",
+      tags:["Edge","On-prem","Local models","Apple"],
+      summary:"An inference-demand leg beyond hyperscaler capex: DGX Spark/Station, Apple M-series local models (M7 Ultra ~1.5TB RAM → Opus-class on a Mac Studio), home data-center blocks (Sunrun, Span+Nvidia). Enterprises become hardware buyers, not just cloud renters.",
+      reason:"Rising and multi-source. Overlaps sovereignty theme — same driver (control + cost), different form factor.",
+      voices:"Huang, Musk, All-In, Apple (via Calacanis)",
+      log:[
+        {d:"2026-07-08",t:"Huang: super-agents on DGX Spark/Station/private clusters. Conviction 6."},
+        {d:"2026-07-17",t:"Apple M7 Ultra local Opus-class; Sunrun/Span+Nvidia home DC blocks; Friedberg distributed-spoke model. → 7."}
+      ]
+    },
+    {
+      id:"photonics", name:"Silicon photonics / optical interconnect", conviction:5.0, velocity:"new",
+      sources:1, opposed:false, tier:"Emerging watch",
+      tags:["Interconnect","Supply chain","Next bottleneck"],
+      summary:"NVDA's explicitly pre-fetched next bottleneck: investments in Lumentum and Coherent, COUPE co-invented with TSMC. A supply-chain tell worth independent validation.",
+      reason:"Single-source but a concrete, named supply-chain signal from the most credible operator (Huang). Emerging — needs a second voice to promote.",
+      voices:"Huang",
+      log:[{d:"2026-04-15",t:"Huang names silicon photonics as the next swarmed bottleneck; NVDA invested in Lumentum, Coherent. Conviction 5, new."}]
+    },
+    {
+      id:"cyber", name:"AI cybersecurity inflection", conviction:6.5, velocity:"up",
+      sources:3, opposed:false, tier:"Firming",
+      tags:["Cybersecurity","Zero-days","Defense"],
+      summary:"'Mythos' found thousands of high-severity zero-days across every major OS (incl. a 27-yr-old OpenBSD bug). Offensive capability is here → defensive spend must follow. Biorisk flagged as next.",
+      reason:"Firming across three sources; a clear second-order beneficiary (defensive security) of a capability that's already demonstrated.",
+      voices:"Huang, Hassabis, All-In",
+      log:[
+        {d:"2026-04-15",t:"Huang relays Mythos zero-day capability. Conviction 5."},
+        {d:"2026-07",t:"Hassabis: Mythos scared banks/Bessent → policy reversal; biorisk next. All-In discusses. → 6.5."}
+      ]
+    },
+    {
+      id:"quantum", name:"Quantum computing meaningful by ~2030", conviction:4.0, velocity:"flat",
+      sources:2, opposed:true, tier:"CONTESTED",
+      tags:["Quantum","Contested","Speculative"],
+      summary:"Genuinely disputed. Gelsinger (a quantum investor): meaningful results before 2030, multiple modalities + error correction proven, 'now just engineering scale.' Hassabis (mildly): classical neural nets already solve problems presumed to need quantum (AlphaFold) → less near-term necessity.",
+      reason:"Held low and explicitly contested. Pro-source is talking his book; con-source is the field's most credible forecaster. Needs external adjudication before any position.",
+      voices:"Gelsinger (pro, biased) vs Hassabis (con)",
+      log:[
+        {d:"2026-07-15",t:"Gelsinger: quantum supremacy across industries before 2030; Q-day encryption ~2032-33. Conviction 4 (contested)."},
+        {d:"2026-07-15",t:"Hassabis counter: classical suffices for many 'quantum' problems. Net: unresolved."}
+      ]
+    },
+    {
+      id:"consumer", name:"Consumer agents (next wave)", conviction:6.0, velocity:"flat",
+      sources:2, opposed:false, tier:"Watch",
+      tags:["Consumer agents","Apple","Timing"],
+      summary:"Framed as bigger than coding agents; bottleneck is the product/interface layer, not model capability (Meta CTO). When solved, token usage explodes (Goldman: ~24x). Apple positioned as a consumer-agent story.",
+      reason:"Mostly Visser with Huang support; timing ('within 6 months') is a testable pending prediction. Watch for the interface breakthrough as the trigger.",
+      voices:"Visser, Huang",
+      log:[
+        {d:"2026-07-12",t:"Visser: consumer agents next major theme; Apple ATH resilience; Goldman ~24x token est. Conviction 6, flat pending trigger."}
+      ]
+    },
+    {
+      id:"macro", name:"AI-productivity disinflation / deflation macro", conviction:5.0, velocity:"flat",
+      sources:2, opposed:false, tier:"Watch",
+      tags:["Macro","Disinflation","Rates","Duration"],
+      summary:"AI productivity outrunning money-supply growth → disinflation/deflation, lower rates over time. Frames AI/robotics as the only path out of the US debt spiral. Supports a duration/disinflation tilt as backdrop.",
+      reason:"Two sources, both AI-bulls; directionally interesting but macro is noisy and this is a slow-burn backdrop, not a near-term catalyst.",
+      voices:"Visser, Musk",
+      log:[
+        {d:"2026-07-19",t:"Visser: sticky-core/trueflation at new lows; reformist Fed (Warsh). Conviction 5."},
+        {d:"2025-11-30",t:"Musk: goods>money-supply in ~3yr → deflation, rates toward zero. Holds 5."}
+      ]
+    },
+    {
+      id:"liveevents", name:"Live events / human premium as AI-deflation hedge", conviction:4.0, velocity:"new",
+      sources:2, opposed:false, tier:"Emerging watch",
+      tags:["Contrarian","Experiences","Human-in-the-loop"],
+      summary:"As AI makes digital content ~free, the scarce premium good becomes live experiences and human interaction. Klarna reversed its all-AI customer service; 'human-in-the-loop' becomes a paid premium.",
+      reason:"Non-consensus and only two voices, but a genuinely differentiated idea worth tracking — the kind of second-order tile that could become a real theme.",
+      voices:"Musk, Friedberg",
+      log:[{d:"2025-11-30",t:"Musk: live events the scarce premium in an AI-abundant world; 'good to invest in.' Friedberg: human-in-loop premium. Conviction 4, new."}]
+    },
+    {
+      id:"rollups", name:"AI-ification roll-ups of stale digital businesses", conviction:5.0, velocity:"new",
+      sources:1, opposed:false, tier:"Emerging watch",
+      tags:["M&A","Roll-ups","Operator playbook"],
+      summary:"AI-first operators buying mature, founder-departed digital businesses and reviving them with AI/cost cuts: Stripe-PayPal, Cohen-eBay, Bending Spoons (AOL/Vimeo/Evernote), Kushner/General Catalyst accounting roll-ups. M&A 'back on the menu.'",
+      reason:"Single (multi-voice panel) source but a concrete, repeatable playbook. Watch as a pattern for cheap, mismanaged digital-native targets.",
+      voices:"All-In panel",
+      log:[{d:"2026-07-17",t:"All-In: Bending Spoons / Cohen-eBay / Stripe-PayPal as AI-turnaround roll-up pattern. Conviction 5, new."}]
+    }
+  ],
+
+  predictions:[
+    {who:"Huang", date:"2026-03", claim:"China chip-license resumption (Lutnick approvals), NVDA ships to China again", horizon:"mid-2026", status:"hit"},
+    {who:"Huang", date:"2026-04", claim:"Agents 'not good enough at tool use yet' → tool-use inflection coming", horizon:"2026", status:"track", note:"By July, agentic buildout clearly underway"},
+    {who:"Visser", date:"2026-07", claim:"Consumer agents become the dominant theme within ~6 months", horizon:"H2 2026", status:"pend"},
+    {who:"Visser", date:"2026-07", claim:"Crypto breakout — BTC breaks 200-day", horizon:"Q4 2026", status:"pend"},
+    {who:"Musk", date:"2026-02", claim:"Chip output exceeds ability to power/turn on chips", horizon:"end-2026", status:"pend", note:"Corroborated directionally by PJM/energy data"},
+    {who:"Musk", date:"2026-02", claim:"China exceeds 3x US electricity output", horizon:"2026", status:"pend"},
+    {who:"Musk", date:"2026-02", claim:"Space is the cheapest place for AI compute", horizon:"≤36 mo (by ~2029)", status:"pend", note:"Discount heavily — timeline-prone speaker"},
+    {who:"Amodei", date:"~2025", claim:"~50% of entry-level knowledge-worker jobs gone", horizon:"1-5 yrs", status:"track", note:"Tracking AGAINST: Ramp 21k-firm study shows entry-level +12%"},
+    {who:"Hassabis", date:"2026-07", claim:"AGI arrives (~50% probability)", horizon:"~2030", status:"pend", note:"Most credible forecaster; 2010 call on-track"},
+    {who:"Hassabis", date:"2026-07", claim:"99% of drug discovery in-silico; 10yr→months", horizon:"'next few years'", status:"pend"},
+    {who:"Huang", date:"2026-03", claim:"Robots ubiquitous", horizon:"2029-2031", status:"pend"},
+    {who:"Gelsinger", date:"2026-07", claim:"Quantum meaningful / supremacy across industries", horizon:"before 2030", status:"pend", note:"CONTESTED by Hassabis; source is a quantum investor"},
+    {who:"Calacanis/All-In", date:"2026-07", claim:"Token cost falls ~90%/yr", horizon:"next 3 yrs", status:"track"},
+    {who:"Hall/questioner", date:"2026-06", claim:"All Western frontier labs become publicly listed (IPO wave)", horizon:"H2 2026", status:"pend", note:"Anthropic ~$1T→$3T post-IPO (Gavin Baker est.)"}
+  ],
+
+  timeline:[
+    {per:"NOW", items:[
+      {t:"Energy is the active binding constraint; ~40% of data-center projects mothballed for lack of power", src:"Chamath, Gelsinger"},
+      {t:"Agentic buildout underway; open-source cost pressure biting the premium model layer", src:"multi-source"},
+      {t:"Model layer eating app layer (Figma −50%); enterprises moving to sovereign/on-prem AI", src:"All-In"}
+    ]},
+    {per:"H2 2026", items:[
+      {t:"AI-lab IPO wave watch (Anthropic ~$1T→$3T)", src:"Hall / Gavin Baker"},
+      {t:"Consumer-agent interface breakthrough watch", src:"Visser"},
+      {t:"Crypto/BTC 200-day breakout watch (Q4)", src:"Visser"},
+      {t:"Power-constraint bites: chip output > ability to turn on", src:"Musk"},
+      {t:"Vera Rubin rollout → supply-chain 'step-up' earnings", src:"Visser/Huang"}
+    ]},
+    {per:"2027", items:[
+      {t:"Vera Rubin Ultra; Tesla AI5 → Optimus 3 (~1M units/yr path)", src:"Huang, Musk"},
+      {t:"China 'compelling chips' progress; reshoring milestones (AZ/TX fabs)", src:"Gelsinger, Musk"}
+    ]},
+    {per:"2028", items:[
+      {t:"NVDA 'Feynman' architecture; annual ~10x token-cost declines continue", src:"Huang"},
+      {t:"First AlphaFold-assisted drugs reaching later clinical stages", src:"Hassabis"}
+    ]},
+    {per:"2029-31", items:[
+      {t:"Robots ubiquitous (3-5 yr from 2026)", src:"Huang, Musk"},
+      {t:"Digital-biology / healthcare inflection", src:"Huang, Hassabis"},
+      {t:"Space-based compute becomes economic (Musk, discount timeline)", src:"Musk"}
+    ]},
+    {per:"~2030", items:[
+      {t:"AGI (Hassabis ~50%); quantum 'meaningful' (Gelsinger, contested)", src:"Hassabis, Gelsinger"}
+    ]}
+  ],
+
+  watchlist:[
+    {cat:"Semis & compute — the consensus core", note:"Highest-confidence demand, but the most crowded trades in the world. Consensus ≠ safe entry.", rows:[
+      {tkr:"NVDA", name:"Nvidia", theme:"Compute, open models, full-stack", risk:"core", label:"Mega cap · ultra-liquid · extremely crowded/consensus"},
+      {tkr:"TSM", name:"TSMC", theme:"Foundry monopoly", risk:"core", label:"Mega cap · liquid · carries Taiwan tail risk"},
+      {tkr:"AVGO", name:"Broadcom", theme:"Custom silicon / ASIC (Anthropic-Google TPU)", risk:"core", label:"Mega cap · liquid · ASIC beneficiary either way"},
+      {tkr:"ASML", name:"ASML", theme:"EUV chokepoint China lacks", risk:"core", label:"Mega cap · liquid · single-point supply-chain leverage"},
+      {tkr:"MU", name:"Micron", theme:"Memory/HBM scarcity", risk:"mod", label:"Large cap · liquid · memory is cyclical — timing risk"}
+    ]},
+    {cat:"The underrated mega cap", note:"The least-hyped of the giants in these transcripts — and the one a competitor (Musk) named unprompted.", rows:[
+      {tkr:"GOOGL", name:"Alphabet", theme:"DeepMind + TPU + Isomorphic + Calico vertical stack; digital-biology + agents + own silicon", risk:"core", label:"Mega cap · ultra-liquid · least-crowded of the mega-cap AI plays here"},
+      {tkr:"AAPL", name:"Apple", theme:"Consumer agents + local/on-device models", risk:"core", label:"Mega cap · ultra-liquid · consumer-agent optionality"}
+    ]},
+    {cat:"Energy & power — the #1 confluence theme", note:"If energy is the binding constraint, the picks-and-shovels of power generation, grid gear and cooling are the cleanest expression.", rows:[
+      {tkr:"GEV", name:"GE Vernova", theme:"Gas turbines, grid", risk:"mod", label:"Large cap · liquid · has run hard — crowded within the theme"},
+      {tkr:"VRT", name:"Vertiv", theme:"Data-center power & cooling", risk:"mod", label:"Large cap · liquid · high beta to DC capex"},
+      {tkr:"ETN", name:"Eaton", theme:"Electrical infrastructure", risk:"mod", label:"Large cap · liquid"},
+      {tkr:"PWR", name:"Quanta Services", theme:"Grid buildout / electrical construction", risk:"mod", label:"Large cap · liquid"},
+      {tkr:"HWM", name:"Howmet", theme:"Turbine vanes/blades castings (the '3 casting cos' Musk cited)", risk:"mod", label:"Large cap · liquid · specific to the turbine bottleneck"},
+      {tkr:"CEG", name:"Constellation Energy", theme:"Nuclear/baseload for data centers", risk:"mod", label:"Large cap · liquid · power-demand proxy"},
+      {tkr:"BE", name:"Bloom Energy", theme:"Behind-the-meter on-site generation", risk:"spec", label:"Mid cap · lower liquidity · story-driven, higher volatility"}
+    ]},
+    {cat:"Interconnect & networking", note:"The pre-fetched next bottleneck (photonics) and the fabric that scales clusters.", rows:[
+      {tkr:"LITE", name:"Lumentum", theme:"Silicon photonics (NVDA-invested)", risk:"spec", label:"Mid cap · moderate liquidity · single-source thesis so far"},
+      {tkr:"COHR", name:"Coherent", theme:"Optical / photonics (NVDA-invested)", risk:"spec", label:"Mid cap · moderate liquidity"},
+      {tkr:"ANET", name:"Arista", theme:"AI datacenter networking", risk:"mod", label:"Large cap · liquid"},
+      {tkr:"CRDO", name:"Credo", theme:"Connectivity/SerDes", risk:"spec", label:"Small-mid cap · lower liquidity · higher beta"}
+    ]},
+    {cat:"Sovereign AI & app layer", note:"Enterprises owning their intelligence — and the app-layer disruption risk to watch (or avoid).", rows:[
+      {tkr:"PLTR", name:"Palantir", theme:"Sovereign-AI OS (Nvidia-Nemotron partner)", risk:"mod", label:"Large cap · liquid · but very rich valuation — narrative-priced"},
+      {tkr:"FIG", name:"Figma", theme:"App-layer CASUALTY example (−50% on Claude Design)", risk:"spec", label:"Wrapper/app-layer-risk poster child — cautionary, not a buy call"},
+      {tkr:"ADBE / CRM", name:"Adobe / Salesforce", theme:"Legacy-software derating (CONTESTED: Visser 'toast' vs Huang 'tools win')", risk:"spec", label:"Large cap · liquid · contested — bifurcation risk, verify per name"}
+    ]},
+    {cat:"Payments / stablecoins (THIN sourcing — extra caution)", note:"The library's most single-voice-dependent theme. Treat as speculative until more independent corroboration arrives.", rows:[
+      {tkr:"PYPL", name:"PayPal", theme:"In play — Stripe+Block+Advent $53B bid", risk:"mod", label:"Large cap · liquid · deal/arb dynamics; event-driven"},
+      {tkr:"XYZ", name:"Block", theme:"Cash App + stablecoin rails, part of the bid", risk:"mod", label:"Large cap · liquid · higher beta"},
+      {tkr:"CRCL", name:"Circle", theme:"USDC stablecoin issuer", risk:"spec", label:"Newer listing · volatile · rate-sensitive"},
+      {tkr:"V / MA", name:"Visa / Mastercard", theme:"Disruption TARGET — or co-opter (open question)", risk:"mod", label:"Mega cap · liquid · could go either way on the agentic-rails thesis"}
+    ]},
+    {cat:"Digital biology (enablers first; drugs are 2028+)", note:"Trade the tools/data/compute owners ahead of drug approvals. Direct biotech is speculative and long-dated.", rows:[
+      {tkr:"LLY", name:"Eli Lilly", theme:"Pharma AI-adopter; NVDA supercomputer customer", risk:"core", label:"Mega cap · liquid · diversified, not a pure AI bet"},
+      {tkr:"TEM", name:"Tempus AI", theme:"Clinical data / diagnostics", risk:"spec", label:"Small-mid cap · volatile"},
+      {tkr:"RXRX", name:"Recursion", theme:"AI drug discovery platform", risk:"spec", label:"Small cap · low liquidity · high cash-burn, speculative narrative"},
+      {tkr:"SDGR", name:"Schrödinger", theme:"Computational chemistry", risk:"spec", label:"Small cap · volatile"},
+      {tkr:"CRSP / NTLA / BEAM", name:"CRISPR names", theme:"Gene-editing + AlphaGenome mutation-ID convergence", risk:"spec", label:"Small cap · low liquidity · binary/clinical risk"}
+    ]},
+    {cat:"Neoclouds & inference silicon (watch the financing loops)", note:"Real demand, but vendor/circular-financing (NVDA backstops) is a late-cycle risk flag.", rows:[
+      {tkr:"CRWV", name:"CoreWeave", theme:"Neocloud (NVDA-backstopped)", risk:"spec", label:"Volatile · high leverage · circular-financing exposure"},
+      {tkr:"NBIS", name:"Nebius", theme:"Neocloud", risk:"spec", label:"Volatile · smaller · higher beta"},
+      {tkr:"CRWV/private", name:"Cerebras / Groq", theme:"Inference-specialized silicon", risk:"spec", label:"Cerebras recently public; Groq private (NVDA-acquired per transcripts)"}
+    ]},
+    {cat:"Robotics & reshoring", note:"Long-dated, China-supply-chain-dependent; and the tail-risk hedge case.", rows:[
+      {tkr:"TSLA", name:"Tesla", theme:"Optimus / real-world AI / energy vertical", risk:"mod", label:"Mega cap · liquid · valuation embeds huge robot optionality"},
+      {tkr:"Reshoring/CHIPS", name:"US semicap & reshoring basket", theme:"Taiwan tail-risk hedge", risk:"mod", label:"Consider as a hedge sleeve, not a core bet"}
+    ]}
+  ],
+
+  sourceComposition:[
+    {label:"AI-lab / hardware CEOs", pct:46, who:"Huang, Hassabis, Amodei, Chase, Osika, Gelsinger"},
+    {label:"VC / operators (All-In)", pct:23, who:"Chamath, Sacks, Calacanis, Friedberg"},
+    {label:"Macro / thematic AI-bull", pct:15, who:"Visser"},
+    {label:"Government-adjacent", pct:8, who:"Sacks (ex-AI czar)"},
+    {label:"Academic / governance", pct:8, who:"Wendy Hall"}
+  ],
+  blindspots:[
+    "No dedicated bear or short-seller with a thesis of their own.",
+    "No traditional value investor or valuation-discipline voice.",
+    "No credible bubble-caller with a model (only Gelsinger's soft 'energy bounds it').",
+    "No China-domestic perspective (only US views ABOUT China).",
+    "No energy-utility or grid executive (energy is central but only inferred from tech voices).",
+    "No bond/credit skeptic on the vendor-financing / circular-capital loops.",
+    "Directional tilt: overwhelmingly long-AI, pro-open-source, anti-doom."
+  ]
+};
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+const velMap={up:{s:"▲",c:"up",t:"Rising"},down:{s:"▼",c:"down",t:"Falling"},flat:{s:"■",c:"flat",t:"Stable"},new:{s:"✦",c:"new",t:"New / emerging"}};
+const $=(s,el=document)=>el.querySelector(s);
+const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;};
+
+const TABS=[
+  ["velocity","Velocity Board","Home view: every theme ranked by momentum (how fast conviction is moving), not just how high it sits."],
+  ["themes","Themes","Deep-dive on each theme — conviction score, independent voices, why it's moving, and a dated changelog."],
+  ["timeline","Timeline & Predictions","The catalyst roadmap (now → 2030) plus a scorecard grading each dated prediction hit / tracking / pending / miss."],
+  ["watchlist","Watchlist","Tickers mapped to themes, each with an eyes-wide-open label: cap tier, liquidity, and how crowded or speculative."],
+  ["sources","Source X-Ray","The honesty panel: what kinds of voices are in the library and which perspectives are missing (bias check)."],
+  ["method","Methodology","How scoring, velocity, chronology and bias-control actually work — so every number is auditable."]
+];
+const tabsNav=$("#tabs");
+TABS.forEach(([id,label,tip],i)=>{
+  const b=el("button",i===0?"active":"",label);
+  b.title=tip;
+  b.onclick=()=>{
+    document.querySelectorAll("nav.tabs button").forEach(x=>x.classList.remove("active"));
+    document.querySelectorAll("section.view").forEach(x=>x.classList.remove("active"));
+    b.classList.add("active"); $("#v-"+id).classList.add("active"); window.scrollTo(0,0);
+  };
+  tabsNav.appendChild(b);
+});
+
+/* ---- Velocity board (home) ---- */
+function renderVelocity(){
+  const v=$("#v-velocity"); v.innerHTML="";
+  v.appendChild(el("p","lead","<b>The front door.</b> Themes ranked by momentum — how fast conviction is moving and in which direction — not just how high it sits. This is the derivative: where tomorrow's convergence is forming. Click any theme to open its dated changelog."));
+  const k=el("div","kpis");
+  const rising=DATA.themes.filter(t=>t.velocity==="up").length;
+  const high=DATA.themes.filter(t=>t.conviction>=8).length;
+  const contested=DATA.themes.filter(t=>/contested/i.test(t.tier)||/CONTESTED/.test(t.name)).length;
+  [
+    ["‎"+DATA.themes.length,"themes tracked","Total distinct macro/AI themes currently in the library, from high-conviction to emerging watch."],
+    [rising+" ↑","rising this edition","Themes whose conviction moved UP since the last edition — the momentum signal to watch."],
+    [high,"high-conviction (≥8)","Themes scoring 8.0 or higher — multiple independent voices, ideally with opposing incentives."],
+    [DATA.voices,"distinct voices","Number of unique speakers behind the library. Repeat appearances by one person count once."]
+  ].forEach(([n,l,tip])=>{
+    const c=el("div","kpi");c.title=tip;c.appendChild(el("div","n",n));c.appendChild(el("div","l",l));k.appendChild(c);
+  });
+  v.appendChild(k);
+  v.appendChild(el("div","legend",
+    '<span><b class="vel up" style="font-size:13px">▲</b> Rising</span>'+
+    '<span><b style="color:var(--flat)">■</b> Stable</span>'+
+    '<span><b style="color:var(--new)">✦</b> New/emerging</span>'+
+    '<span><b style="color:var(--down)">▼</b> Falling</span>'+
+    '<span class="faint">Bar = conviction 0–10</span>'));
+  const order=[...DATA.themes].sort((a,b)=>{
+    const rank=t=>({up:3,new:2,flat:1,down:0})[t.velocity]*100 + t.conviction;
+    return rank(b)-rank(a);
+  });
+  const holder=el("div");
+  order.forEach(t=>{
+    const row=el("div","themebar");
+    const vm=velMap[t.velocity];
+    row.appendChild(el("div","vel "+vm.c,vm.s));
+    const mid=el("div");
+    mid.appendChild(el("div","tname",t.name+(t.opposed?' <span class="pill flag">cross-incentive</span>':'')));
+    mid.appendChild(el("div","tmeta",`${vm.t} · ${t.sources} independent voice${t.sources>1?'s':''} · ${t.tier}`));
+    row.appendChild(mid);
+    const cw=el("div","convwrap");
+    const tr=el("div","track");const f=el("div","fill");f.style.width=(t.conviction*10)+"%";tr.appendChild(f);
+    cw.appendChild(tr);cw.appendChild(el("div","cscore",t.conviction.toFixed(1)));
+    row.appendChild(cw);
+    row.onclick=()=>{document.querySelectorAll("nav.tabs button")[1].click();setTimeout(()=>{const d=document.getElementById("th-"+t.id);if(d){d.open=true;d.scrollIntoView({behavior:"smooth",block:"start"});}},60);};
+    holder.appendChild(row);
+  });
+  v.appendChild(holder);
+}
+
+/* ---- Themes (drill-downs) ---- */
+function renderThemes(){
+  const v=$("#v-themes");v.innerHTML="";
+  v.appendChild(el("p","lead","Every theme is a living object: a conviction score, the count of <em>independent</em> voices behind it, a plain-English reason for its current direction, and a dated changelog tracing every shift back to the data that caused it. Nothing is overwritten — only appended."));
+  const order=[...DATA.themes].sort((a,b)=>b.conviction-a.conviction);
+  order.forEach(t=>{
+    const d=el("details","drill");d.id="th-"+t.id;
+    const vm=velMap[t.velocity];
+    const sum=el("summary");
+    sum.style.cssText="cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:baseline;flex-wrap:wrap";
+    sum.innerHTML=`<span><span class="vel ${vm.c}" style="font-size:14px">${vm.s}</span> <b style="font-size:16px">${t.name}</b></span>`+
+      `<span class="faint" style="font-variant-numeric:tabular-nums">conviction <b style="color:var(--ink)">${t.conviction.toFixed(1)}</b> · ${t.sources} voice${t.sources>1?'s':''} · ${t.tier}</span>`;
+    d.appendChild(sum);
+    const tagbox=el("div");tagbox.style.margin="10px 0 4px";
+    t.tags.forEach(tag=>{const cls=/FLAG|CONTESTED|thin/i.test(tag)?"pill flag":"pill";tagbox.appendChild(el("span",cls,tag));});
+    d.appendChild(tagbox);
+    d.appendChild(el("p","",t.summary));
+    d.appendChild(el("div","reason","<b>Why it's here / direction:</b> "+t.reason));
+    d.appendChild(el("div","srcline","<b>Voices:</b> "+t.voices));
+    const log=el("div","changelog");
+    t.log.slice().reverse().forEach(e=>{
+      const item=el("div","cl");item.appendChild(el("div","d",e.d));item.appendChild(el("div","t",e.t));log.appendChild(item);
+    });
+    d.appendChild(el("div","faint","<b style='color:var(--dim)'>Changelog</b> (newest first)"));
+    d.appendChild(log);
+    v.appendChild(d);
+  });
+}
+
+/* ---- Timeline & predictions ---- */
+function renderTimeline(){
+  const v=$("#v-timeline");v.innerHTML="";
+  v.appendChild(el("p","lead","The roadmap of catalysts on the 3–12 month horizon and beyond, plus a scorecard that grades every dated prediction hit / miss / pending. Over time the scorecard calibrates <em>which voices to trust</em> — and weights their future calls accordingly."));
+  const tl=el("div","panel");tl.appendChild(el("h3","","Roadmap — catalysts & expected inflections"));
+  const tlbody=el("div","tl");
+  DATA.timeline.forEach(p=>{
+    const row=el("div","tlrow");
+    row.appendChild(el("div","tlper",p.per));
+    const box=el("div");
+    p.items.forEach(it=>{const i=el("div","tlitem",it.t+` <span class="src">— ${it.src}</span>`);box.appendChild(i);});
+    row.appendChild(box);tlbody.appendChild(row);
+  });
+  tl.appendChild(tlbody);v.appendChild(tl);
+
+  const pp=el("div","panel");pp.style.marginTop="16px";
+  pp.appendChild(el("h3","","Prediction scorecard"));
+  pp.appendChild(el("div","hint","Legend: <span class='stat hit'>HIT</span> confirmed · <span class='stat track'>TRACKING</span> trending / partially against · <span class='stat pend'>PENDING</span> not yet due · <span class='stat miss'>MISS</span> falsified"));
+  const tb=el("table","pred");
+  tb.innerHTML="<thead><tr><th>Voice</th><th>Prediction</th><th>Horizon</th><th>Status</th></tr></thead>";
+  const body=el("tbody");
+  const rank={hit:0,miss:1,track:2,pend:3};
+  [...DATA.predictions].sort((a,b)=>rank[a.status]-rank[b.status]).forEach(p=>{
+    const tr=el("tr");
+    tr.appendChild(el("td","","<b>"+p.who+"</b><br><span class='faint' style='font-size:11px'>"+p.date+"</span>"));
+    tr.appendChild(el("td","",p.claim+(p.note?`<br><span class='faint' style='font-size:12px'>${p.note}</span>`:"")));
+    tr.appendChild(el("td","",p.horizon));
+    const sc={hit:"HIT",miss:"MISS",track:"TRACKING",pend:"PENDING"}[p.status];
+    tr.appendChild(el("td","","<span class='stat "+({hit:'hit',miss:'miss',track:'track',pend:'pend'})[p.status]+"'>"+sc+"</span>"));
+    body.appendChild(tr);
+  });
+  tb.appendChild(body);pp.appendChild(tb);v.appendChild(pp);
+}
+
+/* ---- Watchlist ---- */
+function renderWatchlist(){
+  const v=$("#v-watchlist");v.innerHTML="";
+  v.appendChild(el("p","lead","Companies mapped to themes, each with an <b>eyes-wide-open</b> label: market-cap tier, liquidity, and how crowded/speculative the trade is. Full spectrum — mega caps through micro caps and second-order plays — so you can size and pick with clear risk context."));
+  const warn=el("div","blind");
+  warn.innerHTML="<h4>⚠ Read before using</h4><span class='muted'>These are <b>research candidates, not recommendations</b>, derived from what the transcripts point to. Prices, valuations and current positioning are <b>NOT live</b> in this prototype — the next phase is external validation (what's priced in, who benefits first vs second order, valuation, catalysts). Verify everything. This is not financial advice.</span>";
+  v.appendChild(warn);
+  v.appendChild(el("div","legend",
+    "<span><span class='risk core'>CORE</span> liquid, large/mega cap, easier to act on</span>"+
+    "<span><span class='risk mod'>MODERATE</span> mid/large, some timing or crowding risk</span>"+
+    "<span><span class='risk spec'>SPECULATIVE</span> small/low-liquidity/narrative — higher risk</span>"));
+  DATA.watchlist.forEach(c=>{
+    const box=el("div","wcat");
+    box.appendChild(el("h3","",c.cat));
+    box.appendChild(el("div","muted",c.note));
+    const tb=el("table","wtable");
+    tb.innerHTML="<thead><tr><th>Ticker</th><th>Name</th><th>Theme link</th><th>Eyes-wide-open</th></tr></thead>";
+    const body=el("tbody");
+    c.rows.forEach(r=>{
+      const tr=el("tr");
+      tr.appendChild(el("td","","<span class='tkr'>"+r.tkr+"</span>"));
+      tr.appendChild(el("td","",r.name));
+      tr.appendChild(el("td","muted",r.theme));
+      tr.appendChild(el("td","","<span class='risk "+r.risk+"'>"+({core:'CORE',mod:'MODERATE',spec:'SPECULATIVE'})[r.risk]+"</span> <span class='faint' style='font-size:12px'>"+r.label+"</span>"));
+      body.appendChild(tr);
+    });
+    tb.appendChild(body);box.appendChild(tb);v.appendChild(box);
+  });
+}
+
+/* ---- Source x-ray ---- */
+function renderSources(){
+  const v=$("#v-sources");v.innerHTML="";
+  v.appendChild(el("p","lead","The honesty panel. The library inherits the bias of what's fed into it — so this x-ray shows <em>what kinds of voices</em> are represented and, more importantly, which perspectives are missing. When a theme is 'high conviction' but every voice behind it shares the same incentive, treat the number with suspicion."));
+  const p=el("div","panel");
+  p.appendChild(el("h3","","Composition of the "+DATA.voices+" distinct voices"));
+  const bars=el("div","bars");
+  DATA.sourceComposition.forEach(s=>{
+    const row=el("div","b");
+    row.appendChild(el("div","lab",s.label+"<br><span class='faint' style='font-size:11px'>"+s.who+"</span>"));
+    const bt=el("div","bt");const bf=el("div","bf");bf.style.width=s.pct+"%";bt.appendChild(bf);row.appendChild(bt);
+    row.appendChild(el("div","faint",s.pct+"%"));
+    bars.appendChild(row);
+  });
+  p.appendChild(bars);v.appendChild(p);
+  const b=el("div","blind");
+  let h="<h4>Blind spots &amp; directional bias</h4><ul style='margin:8px 0 0;padding-left:18px' class='muted'>";
+  DATA.blindspots.forEach(x=>h+="<li style='margin:4px 0'>"+x+"</li>");
+  h+="</ul><p class='muted' style='margin-top:12px'><b>What to feed next to stress-test the thesis:</b> a credible AI bear/short-seller, a valuation-discipline value investor, a China-domestic voice, an energy-utility executive, and a credit skeptic on the vendor-financing loops. The point is to disconfirm — not just reinforce.</p>";
+  b.innerHTML=h;
+  v.appendChild(b);
+}
+
+/* ---- Methodology ---- */
+function renderMethod(){
+  const v=$("#v-method");v.innerHTML="";
+  v.appendChild(el("p","lead","How the engine works — so every number is auditable."));
+  const p=el("div","panel");
+  p.innerHTML=`
+  <h3>Scoring</h3>
+  <p class="muted">Conviction (0–10) is <b>source-diversity weighted</b>: it rises mainly with the number of <b>independent</b> voices behind a theme. One person's repeat appearances count as a single voice (Visser ×3 = one voice, not three). Agreement across <b>opposed incentives</b> counts double — that's the strongest possible signal. The raw score is then tempered by recency and how priced-in an idea already is, and carries a one-line plain-English reason for its current direction. Rules-based backbone, transparent human adjustment on top.</p>
+  <h3 style="margin-top:16px">Velocity</h3>
+  <p class="muted">The derivative — how fast and in which direction conviction is moving this edition. The Velocity Board ranks by momentum, not level, because the edge is catching convergence <em>before</em> it's obvious.</p>
+  <h3 style="margin-top:16px">Chronology</h3>
+  <p class="muted">Every theme keeps an append-only changelog. Nothing is overwritten. You can always trace where a thesis started, what moved it, and the exact data behind each shift — then read the timeline forward into catalysts and graded predictions.</p>
+  <h3 style="margin-top:16px">Bias control</h3>
+  <p class="muted">The Source X-Ray tracks the composition of voices and flags blind spots, because the person selecting the source material inevitably shapes the conclusions. High-conviction themes built on a single incentive class are flagged, not trusted.</p>
+  <h3 style="margin-top:16px">Update rhythm</h3>
+  <p class="muted">The catalog (the database) is appended every batch of transcripts. The site i
