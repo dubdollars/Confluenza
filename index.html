@@ -721,4 +721,19 @@ function renderMethod(){
   <h3 style="margin-top:16px">Bias control</h3>
   <p class="muted">The Source X-Ray tracks the composition of voices and flags blind spots, because the person selecting the source material inevitably shapes the conclusions. High-conviction themes built on a single incentive class are flagged, not trusted.</p>
   <h3 style="margin-top:16px">Update rhythm</h3>
-  <p class="muted">The catalog (the database) is appended every batch of transcripts. The site i
+  <p class="muted">The catalog (the database) is appended every batch of transcripts. The site is rebuilt into a new dated <b>Edition</b> on request, so week-over-week diffs stay clean and comparable.</p>
+  <h3 style="margin-top:16px">Roadmap for this prototype</h3>
+  <ul class="muted" style="padding-left:18px">
+    <li>External validation layer: live prices/valuations, what's priced in, first- vs second-order beneficiaries, crowdedness.</li>
+    <li>Auto-diff view: highlight exactly what changed between Editions.</li>
+    <li>Feed the disconfirming voices listed in the Source X-Ray.</li>
+    <li>Shareable hosted version for friends.</li>
+  </ul>`;
+  v.appendChild(p);
+  v.appendChild(el("div","disc","<b>Disclaimer.</b> This is a research prototype, not investment advice. Content is distilled from user-provided podcast/interview transcripts and reflects the (biased, self-interested) views of their speakers. Tickers are research candidates only; prices, valuations and positioning are not live and must be independently verified. Claude is not a financial advisor. Do your own diligence before making any investment decision."));
+}
+
+renderVelocity();renderThemes();renderTimeline();renderWatchlist();renderSources();renderMethod();
+</script>
+</body>
+</html>
