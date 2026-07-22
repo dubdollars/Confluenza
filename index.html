@@ -1,107 +1,871 @@
-CONFLUENZA
-Edition 004 · built 2026-07-22 · 32 transcripts · 27 voices
-A living record of where the AI/macro investment thesis stands. Every new transcript is bumped against every prior one to recompute confluence — what survives cross-examination from bulls and bears alike. The edge is in the derivative: catching convergence before it's obvious, and knowing exactly what just changed.
-New Since Last
-Velocity Board
-Themes
-Timeline & Predictions
-Watchlist
-Library
-Source X-Ray
-Methodology
-Batch 4 — Andreessen ×2 + the accelerationist 'Moonshots' wave (Kimi K3, Inkling/Liquid AI, Elon) + the FIRST markets/tape voice (The Compound). 6 transcripts: Andreessen MTS+JRE (1 voice); Moonshots on Kimi K3 (China open-weight 'Sputnik'), on Inkling/Liquid AI/AI-FINRA (+ Ramin Hasani), and Elon (his 3rd appearance = 1 voice); and Brown+Batnick's 'What Are Your Thoughts' — the library's first close-to-the-tape markets read, which independently confirms Alphabet.. This is the delta since your last review — bumped against all 32 transcripts to recompute confluence.
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Confluenza — Living AI/Macro Investment Thesis</title>
+<style>
+:root{
+  --bg:#0b0e13; --panel:#141922; --panel2:#1b212c; --line:#26303d;
+  --ink:#e7edf5; --dim:#93a1b3; --faint:#63707f;
+  --up:#3ddc84; --down:#ff5c6c; --flat:#f4c04f; --new:#5aa9ff; --cont:#c792ff;
+  --accent:#7c9cff; --accent2:#c792ff; --chip:#212a37;
+  --bull:#3ddc84; --bear:#ff5c6c; --contested:#c792ff; --emerging:#5aa9ff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+h1,h2,h3,h4{margin:0 0 .3em;font-weight:650;letter-spacing:.2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px 90px}
+header.top{border-bottom:1px solid var(--line);padding:22px 0 14px;position:sticky;top:0;background:linear-gradient(180deg,#0b0e13 72%,rgba(11,14,19,.92));z-index:20}
+.brand{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.brand h1{font-size:24px;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand .edition{color:var(--faint);font-size:12.5px;font-variant-numeric:tabular-nums}
+.tag{color:var(--dim);font-size:13.5px;margin-top:4px;max-width:840px}
+nav.tabs{display:flex;gap:6px;margin-top:15px;flex-wrap:wrap}
+nav.tabs button{background:var(--panel);color:var(--dim);border:1px solid var(--line);padding:8px 13px;border-radius:8px;cursor:pointer;font-size:13.5px;font-weight:550;position:relative}
+nav.tabs button:hover{color:var(--ink);border-color:#38465a}
+nav.tabs button.active{background:var(--accent);color:#0b0e13;border-color:var(--accent)}
+nav.tabs button .dot{position:absolute;top:-4px;right:-4px;width:9px;height:9px;background:var(--new);border-radius:50%;border:2px solid #0b0e13}
+section.view{display:none;padding-top:24px}
+section.view.active{display:block}
+.lead{color:var(--dim);max-width:880px;margin:2px 0 20px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.panel+.panel{margin-top:14px}
+.muted{color:var(--dim)} .faint{color:var(--faint)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;cursor:help;transition:border-color .15s}
+.kpi:hover{border-color:#3a4a60}
+.kpi .n{font-size:25px;font-weight:700;font-variant-numeric:tabular-nums}
+.kpi .l{color:var(--dim);font-size:12.5px;margin-top:2px}
+.legend{display:flex;gap:16px;flex-wrap:wrap;color:var(--dim);font-size:12.5px;margin:8px 0 18px}
+.pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;border:1px solid var(--line);background:var(--chip);color:var(--dim);margin:2px 4px 2px 0;white-space:nowrap}
+.pill.flag{border-color:#7c9cff;color:#bcd0ff;background:#161d2e}
+.camp{font-size:11px;font-weight:700;padding:1px 8px;border-radius:6px;white-space:nowrap}
+.camp.bull{background:#12251a;color:#8ef0b6;border:1px solid #2f6b47}
+.camp.bear{background:#241216;color:#ffb0ba;border:1px solid #6b2f3a}
+.camp.contested{background:#1c1630;color:#d3b8ff;border:1px solid #5a3f8c}
+.camp.emerging{background:#101c2e;color:#a9cbff;border:1px solid #2f4d7a}
+/* velocity + themes */
+.themebar{display:grid;grid-template-columns:26px 1fr 210px;gap:14px;align-items:center;padding:11px 14px;background:var(--panel);border:1px solid var(--line);border-radius:10px;cursor:pointer;transition:border-color .15s}
+.themebar:hover{border-color:#3a4a60}
+.themebar+.themebar{margin-top:9px}
+.vel{font-size:19px;font-weight:800;text-align:center}
+.vel.up{color:var(--up)} .vel.down{color:var(--down)} .vel.flat{color:var(--flat)} .vel.new{color:var(--new)} .vel.contested{color:var(--cont)}
+.tname{font-weight:600}
+.tmeta{color:var(--faint);font-size:12px;margin-top:2px}
+.convwrap{display:flex;align-items:center;gap:10px}
+.track{flex:1;height:8px;background:#0e131b;border-radius:6px;overflow:hidden;border:1px solid #202a37}
+.fill{height:100%;border-radius:6px;background:linear-gradient(90deg,#3a6bff,#7c9cff)}
+.cscore{font-variant-numeric:tabular-nums;font-weight:700;width:34px;text-align:right}
+.drill{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-top:12px}
+.changelog{border-left:2px solid #2a3646;margin:12px 0 4px;padding-left:16px}
+.cl{position:relative;padding:6px 0}
+.cl:before{content:"";position:absolute;left:-21px;top:11px;width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.cl .d{color:var(--faint);font-size:12px;font-variant-numeric:tabular-nums}
+.reason{background:#101620;border:1px dashed #2c3a4c;border-radius:8px;padding:10px 12px;color:var(--dim);font-size:13px;margin-top:10px}
+.srcline{color:var(--dim);font-size:13px;margin-top:8px}
+/* new since last */
+.nsl-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px}
+.deltacard{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:12px 15px;margin-top:10px}
+.deltacard.new{border-left-color:var(--new)} .deltacard.up{border-left-color:var(--up)} .deltacard.down{border-left-color:var(--down)} .deltacard.contested{border-left-color:var(--cont)}
+.deltacard h4{font-size:14.5px;margin-bottom:3px}
+.deltacard .why{color:var(--dim);font-size:13px}
+.deltacard .src{color:var(--faint);font-size:11.5px;margin-top:5px}
+.sub{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--faint);margin:22px 0 6px}
+/* trade ideas */
+.trade{display:grid;grid-template-columns:70px 1fr 130px;gap:12px;align-items:start;padding:11px 14px;background:var(--panel);border:1px solid var(--line);border-radius:10px}
+.trade+.trade{margin-top:8px}
+.trade .tk{font-weight:800;font-size:15px}
+.trade .dir{font-size:11px;font-weight:700;padding:1px 6px;border-radius:5px;display:inline-block;margin-top:3px}
+.dir.long{background:#12251a;color:#8ef0b6;border:1px solid #2f6b47}
+.dir.short{background:#241216;color:#ffb0ba;border:1px solid #6b2f3a}
+.dir.watch{background:#241f12;color:#f4d78a;border:1px solid #6b5a2f}
+.risk{font-size:11px;font-weight:600;padding:1px 7px;border-radius:6px;white-space:nowrap;display:inline-block}
+.risk.core{background:#12251a;color:#8ef0b6;border:1px solid #2f6b47}
+.risk.mod{background:#241f12;color:#f4d78a;border:1px solid #6b5a2f}
+.risk.spec{background:#241216;color:#ffb0ba;border:1px solid #6b2f3a}
+/* timeline + predictions */
+.tlrow{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+.tlrow:first-child{border-top:none}
+.tlper{font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
+.tlitem .src{color:var(--faint);font-size:12px}
+table.pred{width:100%;border-collapse:collapse;margin-top:8px;font-size:13.5px}
+table.pred th,table.pred td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+table.pred th{color:var(--faint);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.stat{font-weight:700;font-size:12px;padding:2px 8px;border-radius:6px;white-space:nowrap}
+.stat.hit{background:#12251a;color:#8ef0b6;border:1px solid #2f6b47}
+.stat.miss{background:#241216;color:#ffb0ba;border:1px solid #6b2f3a}
+.stat.pend{background:#20222c;color:#c6cfdb;border:1px solid #39424f}
+.stat.track{background:#241f12;color:#f4d78a;border:1px solid #6b5a2f}
+/* watchlist */
+.wcat{margin-top:20px}
+.wcat h3{font-size:15px;color:var(--accent)}
+.wtable{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px}
+.wtable th,.wtable td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.wtable th{color:var(--faint);font-size:11.5px;text-transform:uppercase;letter-spacing:.5px}
+.tkr{font-weight:700}
+/* library */
+.libgrid{display:grid;grid-template-columns:1fr;gap:10px}
+.libcard{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:0;overflow:hidden}
+.libcard>summary{cursor:pointer;list-style:none;padding:13px 16px;display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
+.libcard>summary::-webkit-details-marker{display:none}
+.libcard .lt{font-weight:650}
+.libcard .lm{color:var(--faint);font-size:12px;font-variant-numeric:tabular-nums}
+.libbody{padding:2px 16px 16px;border-top:1px solid var(--line)}
+.exsec{margin-top:11px}
+.exsec .h{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--accent)}
+.exsec .b{color:var(--ink);font-size:13.5px;margin-top:2px}
+.bias{background:#1a1113;border:1px solid #5a2b34;border-radius:7px;padding:7px 10px;color:#ffb9c2;font-size:12px;margin-top:11px}
+/* sources */
+.bars .b{display:grid;grid-template-columns:180px 1fr 40px;gap:12px;align-items:center;margin:7px 0}
+.bars .lab{color:var(--dim);font-size:13px}
+.bt{height:14px;background:#0e131b;border:1px solid #202a37;border-radius:5px;overflow:hidden}
+.bf{height:100%;background:linear-gradient(90deg,#c792ff,#7c9cff)}
+.blind{background:#1a1113;border:1px solid #5a2b34;border-radius:10px;padding:14px 16px;margin-top:16px}
+.blind h4{color:#ff9aa6}
+.disc{color:var(--faint);font-size:12px;border-top:1px solid var(--line);margin-top:34px;padding-top:16px}
+.hint{color:var(--faint);font-size:12px;margin-top:6px}
+@media(max-width:720px){.kpis{grid-template-columns:repeat(2,1fr)}.themebar{grid-template-columns:22px 1fr}.convwrap{display:none}.tlrow{grid-template-columns:70px 1fr}.trade{grid-template-columns:60px 1fr}.trade .rc{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <h1>CONFLUENZA</h1>
+      <span class="edition" id="edtag"></span>
+    </div>
+    <div class="tag">A living record of where the AI/macro investment thesis stands. Every new transcript is bumped against every prior one to recompute <em>confluence</em> — what survives cross-examination from bulls and bears alike. The edge is in the derivative: catching convergence before it's obvious, and knowing exactly what just changed.</div>
+    <nav class="tabs" id="tabs"></nav>
+  </div>
+</header>
+<div class="wrap">
+  <section class="view active" id="v-new"></section>
+  <section class="view" id="v-velocity"></section>
+  <section class="view" id="v-themes"></section>
+  <section class="view" id="v-timeline"></section>
+  <section class="view" id="v-watchlist"></section>
+  <section class="view" id="v-library"></section>
+  <section class="view" id="v-sources"></section>
+  <section class="view" id="v-method"></section>
+</div>
+<script>
+/* ============================================================
+   CONFLUENZA — DATA LAYER (the "database")
+   Rebuilt every transcript. Independent-voice counting: one
+   person's repeat appearances = 1 voice; opposed incentives = 2x.
+   ============================================================ */
+const DATA = {
+  edition: 4,
+  builtOn: "2026-07-22",
+  transcripts: 32,
+  voices: 27,
+  lastBatchLabel: "Batch 4 — Andreessen ×2 + the accelerationist 'Moonshots' wave (Kimi K3, Inkling/Liquid AI, Elon) + the FIRST markets/tape voice (The Compound)",
+  lastBatchRange: "6 transcripts: Andreessen MTS+JRE (1 voice); Moonshots on Kimi K3 (China open-weight 'Sputnik'), on Inkling/Liquid AI/AI-FINRA (+ Ramin Hasani), and Elon (his 3rd appearance = 1 voice); and Brown+Batnick's 'What Are Your Thoughts' — the library's first close-to-the-tape markets read, which independently confirms Alphabet.",
 
-Headline. A big batch (6 transcripts) with two market-moving items. (1) CHINA'S OPEN-WEIGHT 'SPUTNIK': Kimi K3 — a 2.8T-param open-weight model, #1 on frontend code, on the cost-performance frontier at ~1% cost, built UNDER export controls. It reframes the whole AI trade: bearish for the foundation labs' economics, bullish for everyone who ADOPTS. (2) THE LIBRARY'S FIRST MARKETS/TAPE VOICE (Brown+Batnick) independently crowns ALPHABET 'the last clean AI hyperscaler' just as its earnings become the market's swing factor. Around those: Andreessen ×2 (one voice), the accelerationist Moonshots panel (Kimi, Inkling/Liquid AI, Elon×3rd), and a genuine broadening/leverage-washout confirmed from the tape.
-New themes this batch
-China open-weight surge / export-control BACKFIRE (NEW, high-signal)
-Kimi K3 (2.8T open-weight, #1 frontend code, ~1% cost) was built AROUND US export controls (quantization, muon optimizer, Huawei/Alibaba chips) — 'a perishable frontier' now downloadable/fine-tunable by any enterprise or government. Elon (T31) adds the structural leg: China will 'far exceed' the world in AI compute (~3x US electricity by '26; node lead matters less at diminishing returns). Directly challenges the 'export controls work / China can't make chips' assumption — the exact blind spot the Source Watchlist flagged.
-Sources: T29, T31
-Foundation-lab VALUE COMPRESSION (NEW, bearish for the labs specifically)
-If near-frontier open-weight lands at ~1% cost, the pure-API foundation labs' moat and revenue model are in question — the panel guessed the labs are worth ~25-50% of 3 months ago; Gavin Baker (cited): ALL stocks EXCEPT the foundation labs benefit. The tape agrees from the other side — Josh Brown calls Microsoft/Meta/Oracle 'poisoned' and Alphabet the only 'clean' hyperscaler. (Labs counter: Fable 5.1 next; enterprises pay for the best model + reliability.)
-Sources: T29, T30, T32
-AI regulation / frontier-regulator 'AI-FINRA' (NEW, two-sided policy risk)
-Demis (essay), Sam Altman (FT op-ed) and Elon all now call for a FINRA/FCC-style frontier-AI regulator, testing models pre-release, 'by year-end.' Confluence — but the panel's read is regulatory-CAPTURE / a moat vs open-weight + entry labs; plus a leaked White House 'capability framework' pegging US open releases to China's best open model (perverse). A real risk to the labs AND to US open-source competitiveness.
-Sources: T29, T30, T31
-Conviction moves
-▲ Alphabet as underrated AI winner — now MARKET-CONFIRMED
-The first tape voice (Brown+Batnick) independently calls GOOGL 'the last clean AI hyperscaler' and its earnings 'the key to the whole market': record $462B cloud backlog, cloud +63% YoY, margin 17%→32.9%, capex raised to $180-190B, and TPUs shipping to customers' own data centers = a NEW revenue line. Stacks on the competitor-endorsement (Musk), the valuation dean (Damodaran) and the semi specialist's ~$1T TPU value (O'Laughlin). Raised 7.8→8.4.
-Sources: T32 + T11, T16, T20
-▲ Open-source / inference-cost pressure — biggest confirmation yet
-Kimi K3 (China) + Inkling (Mira Murati, US) are near-frontier OPEN-WEIGHT at a fraction of closed-model cost. This is the theme's strongest data point — it's now the mechanism behind foundation-lab compression AND enterprise sovereignty. Raised 8.3→8.7.
-Sources: T29, T30
-▲ Edge / on-prem / local inference — reinforced hard
-Sub-1-bit quantization (Kimi/Samsung/Tencent), Liquid AI's on-device SLMs running on ~$60 chips with named revenue (Mercedes OTA, Shopify, AMD), and Elon's '4-bit→lookup-table, 10-100x' all point the same way: intelligence migrates to every device/car/robot. Raised 7.0→7.6.
-Sources: T29, T30, T31
-■ Energy = binding constraint — reinforced from build-out + the TAPE
-Elon: energy is 'the inner loop,' power (not chips) the binding constraint 'for the next two years' (power>chips crossover ~Q3-26); batteries can double US throughput; nuclear 'bring-your-own-power' (Andreessen). And the market voice CONFIRMS the investable basket: GE Vernova/Vertiv/Eaton/Cummins/Comfort Systems traded (and rallied) in lockstep with semis. Bedrock 9.6 held — now with a tradeable, if crowded, cohort.
-Sources: T31, T28, T32
-■ Melt-up / broadening — confirmed from the tape
-Brown+Batnick: leadership (semis) got crushed (Micron −13%, levered-ETF AUM −$100B) while the S&P held because everything else broadened (financials/healthcare/energy/biotech; % above 200-day highest since 2024; ~zero 52-week lows). The de-leveraging is 'healthy,' not a top-signal — validates holding. Rebuts the bear 'catch-down.'
-Sources: T32 + T26, T24
-Newly contested / debates to resolve
-⇄ Are the foundation labs still the trade — or is it everything-but-the-labs?
-Kimi K3 + Gavin Baker + the tape (Josh: MSFT/META/ORCL 'poisoned,' GOOGL 'clean') push toward: own the ADOPTERS and the clean hyperscaler, not the pure-API labs. Counter: the labs stay ahead on the hardest frontier problems and enterprises pay for best-model reliability. This is the batch's central tradeable fork.
-Sources: T29/T30/T32 vs T21
-⇄ Jobs — expansion (Andreessen) vs white-collar-first-NOW (Elon)
-Andreessen: productivity → MORE jobs. Elon (T31): 'AI can do half of white-collar jobs right now,' only inertia delays it; UHI 'AND social unrest.' They agree capability is here; they split on the endpoint. The near-term-safe (diffusion-lag) call holds; the long-term is genuinely contested.
-Sources: T27 vs T31 + T09
-⇄ K-shaped consumer — struggling (Hunter) vs data-says-fine (the tape)
-Hunter (T26) leaned on a struggling K-shaped consumer. The markets voice rebuts with BANK data (Adam Parker/BofA/PNC): lower-income wage growth reaccelerated (2.9%→4.1%), card delinquencies lowest since Sept-2023, consumption positive — affordability frustration is real, cash-flow deterioration is overstated.
-Sources: T32 vs T26
-New trade ideas
-Research candidates only — verify before acting. Not advice. Prices/valuations are not live. Long/Short/Watch = directional lean; risk tag = cap/liquidity/crowdedness.
-GEV
-LONG
-GE Vernova · Energy binding constraint
-Cleanest expression of the #1 confluence theme (energy). One of only 3 global gas-turbine makers (with Mitsubishi, Siemens); named directly by Eisman. Turbines sold out to 2030.
-T24, T10
-MODERATE
-MU
-LONG
-Micron · Memory (shortage→cycle)
-Memory shortage is real NOW (DRAM +100% possible per O'Laughlin) — but it's a CYCLE. Trade it with eyes open: severe shortage today, demand-destruction/glut later. 'Most obvious leg of the AI trade' AND 'cyclical-peak risk.' Hunter (T26) calls it the textbook late-cycle parabolic (~3.8x in 3-4 mo) — higher, then it cracks.
-T20, T16-T18, T26
-SPECULATIVE
-GOOGL
-LONG
-Alphabet · Alphabet underrated (market-confirmed)
-Least-hyped mega cap: DeepMind + TPU (~$1T value; now shipping to customers' own DCs = new revenue) + Isomorphic + Calico. Named by a competitor (Musk), preferred by the valuation dean (Damodaran), and now crowned 'the last clean AI hyperscaler' by the markets desk — earnings are 'the key to the whole market' ($462B cloud backlog, cloud +63%, margin→32.9%). Near-term catalyst.
-T11, T16, T20, T32
-CORE
-Private-credit / neocloud exposure
-SHORT
-CoreWeave-type & PE-owned software LBOs · Debt systemic risk
-The library's #1 bear theme: DEBT-funded, small/mid AI-infra + PE software LBOs (ServiceNow −50% → those deals halved). Damodaran's societal spillover risk; Eisman's refi crunch. WATCH — not yet triggered.
-T17-T18, T22, T24
-SPECULATIVE
-V / MA
-WATCH
-Visa / Mastercard · Payment disruption
-Stripe+Block+Advent $53B PayPal bid = a funded attempt to bypass the card networks via stablecoin rails. Disruption target OR co-opter — unresolved. Thin-sourced (mostly Visser + one confirmation).
-T12, T13
-MODERATE
-Software (seat/workflow SaaS)
-SHORT
-Undifferentiated workflow SaaS · Software bifurcation
-The bifurcation loser: seat-priced workflow SaaS exposed to agent-built replacements + multiple compression (O'Laughlin: 'priced as if it won't become mainframes'). Eisman: avoid the group till clarity. Systems-of-record/network moats survive.
-T19-T21, T24
-MODERATE
-NVDA
-WATCH
-Nvidia · Compute / scaling fork
-Consensus core; tape still accelerating (+85% rev, Eisman won't short — echoed by Hunter's melt-up). Kimi K3 cuts BOTH ways: cheaper models = MORE silicon demand (Jevons, per the panel + the tape's rally), not less. But the bull case hinges on the CONTESTED scaling fork. Own eyes-open.
-T24, T05, T29, T32
-CORE
-Foundation-lab pure-API exposure
-SHORT
-OpenAI / Anthropic economics (private) · Foundation-lab value compression
-NEW value-compression watch: near-frontier open-weight (Kimi K3, Inkling) at ~1% cost questions the pure-API moat; Gavin Baker: 'everything but the labs' benefits; the tape calls MSFT/META/ORCL 'poisoned,' GOOGL 'clean.' Express via owning ADOPTERS + the clean hyperscaler, not the labs. WATCH private marks / down-rounds. Offset risk: an AI-FINRA moat could re-protect incumbents.
-T29, T30, T32
-SPECULATIVE
-SpaceX
-WATCH
-SpaceX (post-IPO) · IPO supply / lockup
-Supply-overhang trade: staggered lockup takes float 3%→12% within 2 days of the Aug-4 earnings, then ~+7% every 2-3 wks to ~40% by Dec 8 (~$123B potential supply). Fell 225→~123; the markets desk expects 'a chance under $100.' No valuation framework (earnings ~10 yrs out; a TAM story). Research, not advice.
-T32, T18
-SPECULATIVE
-Timing discipline. The structural shift this batch is the OPEN-WEIGHT commoditization of the model layer (Kimi K3) — which, with the first tape read, sharpens the trade: favor the ADOPTERS + the clean hyperscaler (ALPHABET, market-confirmed, with earnings as the near-term catalyst) and the energy/edge picks-and-shovels; treat the pure-API foundation labs (and their ~$1T private valuations) as the newly-exposed leg. Discount the accelerationist DIRECTION (Moonshots/Elon are permanent bulls; Andreessen too) but keep their checkable specifics (China compute dominance, sub-1-bit quantization, power>chips crossover, Liquid AI's real enterprise deals). Watch-items added: AI-FINRA/frontier-regulator (a moat AND a US-competitiveness risk), the unrealized-gains wealth tax, and the SpaceX post-Aug-4 supply overhang. Timing discipline unchanged: the tape says the leverage washout was healthy and breadth is broadening — hold, don't chase; the bears' triggers still haven't fired.
+  newSinceLast: {
+    headline: "A big batch (6 transcripts) with two market-moving items. (1) CHINA'S OPEN-WEIGHT 'SPUTNIK': Kimi K3 — a 2.8T-param open-weight model, #1 on frontend code, on the cost-performance frontier at ~1% cost, built UNDER export controls. It reframes the whole AI trade: bearish for the foundation labs' economics, bullish for everyone who ADOPTS. (2) THE LIBRARY'S FIRST MARKETS/TAPE VOICE (Brown+Batnick) independently crowns ALPHABET 'the last clean AI hyperscaler' just as its earnings become the market's swing factor. Around those: Andreessen ×2 (one voice), the accelerationist Moonshots panel (Kimi, Inkling/Liquid AI, Elon×3rd), and a genuine broadening/leverage-washout confirmed from the tape.",
+    newThemes: [
+      {name:"China open-weight surge / export-control BACKFIRE (NEW, high-signal)", why:"Kimi K3 (2.8T open-weight, #1 frontend code, ~1% cost) was built AROUND US export controls (quantization, muon optimizer, Huawei/Alibaba chips) — 'a perishable frontier' now downloadable/fine-tunable by any enterprise or government. Elon (T31) adds the structural leg: China will 'far exceed' the world in AI compute (~3x US electricity by '26; node lead matters less at diminishing returns). Directly challenges the 'export controls work / China can't make chips' assumption — the exact blind spot the Source Watchlist flagged.", src:"T29, T31"},
+      {name:"Foundation-lab VALUE COMPRESSION (NEW, bearish for the labs specifically)", why:"If near-frontier open-weight lands at ~1% cost, the pure-API foundation labs' moat and revenue model are in question — the panel guessed the labs are worth ~25-50% of 3 months ago; Gavin Baker (cited): ALL stocks EXCEPT the foundation labs benefit. The tape agrees from the other side — Josh Brown calls Microsoft/Meta/Oracle 'poisoned' and Alphabet the only 'clean' hyperscaler. (Labs counter: Fable 5.1 next; enterprises pay for the best model + reliability.)", src:"T29, T30, T32"},
+      {name:"AI regulation / frontier-regulator 'AI-FINRA' (NEW, two-sided policy risk)", why:"Demis (essay), Sam Altman (FT op-ed) and Elon all now call for a FINRA/FCC-style frontier-AI regulator, testing models pre-release, 'by year-end.' Confluence — but the panel's read is regulatory-CAPTURE / a moat vs open-weight + entry labs; plus a leaked White House 'capability framework' pegging US open releases to China's best open model (perverse). A real risk to the labs AND to US open-source competitiveness.", src:"T29, T30, T31"},
+    ],
+    convictionMoves: [
+      {dir:"up", name:"Alphabet as underrated AI winner — now MARKET-CONFIRMED", why:"The first tape voice (Brown+Batnick) independently calls GOOGL 'the last clean AI hyperscaler' and its earnings 'the key to the whole market': record $462B cloud backlog, cloud +63% YoY, margin 17%→32.9%, capex raised to $180-190B, and TPUs shipping to customers' own data centers = a NEW revenue line. Stacks on the competitor-endorsement (Musk), the valuation dean (Damodaran) and the semi specialist's ~$1T TPU value (O'Laughlin). Raised 7.8→8.4.", src:"T32 + T11, T16, T20"},
+      {dir:"up", name:"Open-source / inference-cost pressure — biggest confirmation yet", why:"Kimi K3 (China) + Inkling (Mira Murati, US) are near-frontier OPEN-WEIGHT at a fraction of closed-model cost. This is the theme's strongest data point — it's now the mechanism behind foundation-lab compression AND enterprise sovereignty. Raised 8.3→8.7.", src:"T29, T30"},
+      {dir:"up", name:"Edge / on-prem / local inference — reinforced hard", why:"Sub-1-bit quantization (Kimi/Samsung/Tencent), Liquid AI's on-device SLMs running on ~$60 chips with named revenue (Mercedes OTA, Shopify, AMD), and Elon's '4-bit→lookup-table, 10-100x' all point the same way: intelligence migrates to every device/car/robot. Raised 7.0→7.6.", src:"T29, T30, T31"},
+      {dir:"flat", name:"Energy = binding constraint — reinforced from build-out + the TAPE", why:"Elon: energy is 'the inner loop,' power (not chips) the binding constraint 'for the next two years' (power>chips crossover ~Q3-26); batteries can double US throughput; nuclear 'bring-your-own-power' (Andreessen). And the market voice CONFIRMS the investable basket: GE Vernova/Vertiv/Eaton/Cummins/Comfort Systems traded (and rallied) in lockstep with semis. Bedrock 9.6 held — now with a tradeable, if crowded, cohort.", src:"T31, T28, T32"},
+      {dir:"flat", name:"Melt-up / broadening — confirmed from the tape", why:"Brown+Batnick: leadership (semis) got crushed (Micron −13%, levered-ETF AUM −$100B) while the S&P held because everything else broadened (financials/healthcare/energy/biotech; % above 200-day highest since 2024; ~zero 52-week lows). The de-leveraging is 'healthy,' not a top-signal — validates holding. Rebuts the bear 'catch-down.'", src:"T32 + T26, T24"},
+    ],
+    contested: [
+      {name:"Are the foundation labs still the trade — or is it everything-but-the-labs?", why:"Kimi K3 + Gavin Baker + the tape (Josh: MSFT/META/ORCL 'poisoned,' GOOGL 'clean') push toward: own the ADOPTERS and the clean hyperscaler, not the pure-API labs. Counter: the labs stay ahead on the hardest frontier problems and enterprises pay for best-model reliability. This is the batch's central tradeable fork.", src:"T29/T30/T32 vs T21"},
+      {name:"Jobs — expansion (Andreessen) vs white-collar-first-NOW (Elon)", why:"Andreessen: productivity → MORE jobs. Elon (T31): 'AI can do half of white-collar jobs right now,' only inertia delays it; UHI 'AND social unrest.' They agree capability is here; they split on the endpoint. The near-term-safe (diffusion-lag) call holds; the long-term is genuinely contested.", src:"T27 vs T31 + T09"},
+      {name:"K-shaped consumer — struggling (Hunter) vs data-says-fine (the tape)", why:"Hunter (T26) leaned on a struggling K-shaped consumer. The markets voice rebuts with BANK data (Adam Parker/BofA/PNC): lower-income wage growth reaccelerated (2.9%→4.1%), card delinquencies lowest since Sept-2023, consumption positive — affordability frustration is real, cash-flow deterioration is overstated.", src:"T32 vs T26"},
+    ],
+    timingNote: "The structural shift this batch is the OPEN-WEIGHT commoditization of the model layer (Kimi K3) — which, with the first tape read, sharpens the trade: favor the ADOPTERS + the clean hyperscaler (ALPHABET, market-confirmed, with earnings as the near-term catalyst) and the energy/edge picks-and-shovels; treat the pure-API foundation labs (and their ~$1T private valuations) as the newly-exposed leg. Discount the accelerationist DIRECTION (Moonshots/Elon are permanent bulls; Andreessen too) but keep their checkable specifics (China compute dominance, sub-1-bit quantization, power>chips crossover, Liquid AI's real enterprise deals). Watch-items added: AI-FINRA/frontier-regulator (a moat AND a US-competitiveness risk), the unrealized-gains wealth tax, and the SpaceX post-Aug-4 supply overhang. Timing discipline unchanged: the tape says the leverage washout was healthy and breadth is broadening — hold, don't chase; the bears' triggers still haven't fired."
+  },
+
+  tradeIdeas: [
+    {ticker:"GEV", name:"GE Vernova", dir:"long", risk:"mod", thesis:"Cleanest expression of the #1 confluence theme (energy). One of only 3 global gas-turbine makers (with Mitsubishi, Siemens); named directly by Eisman. Turbines sold out to 2030.", theme:"Energy binding constraint", src:"T24, T10"},
+    {ticker:"MU", name:"Micron", dir:"long", risk:"spec", thesis:"Memory shortage is real NOW (DRAM +100% possible per O'Laughlin) — but it's a CYCLE. Trade it with eyes open: severe shortage today, demand-destruction/glut later. 'Most obvious leg of the AI trade' AND 'cyclical-peak risk.' Hunter (T26) calls it the textbook late-cycle parabolic (~3.8x in 3-4 mo) — higher, then it cracks.", theme:"Memory (shortage→cycle)", src:"T20, T16-T18, T26"},
+    {ticker:"GOOGL", name:"Alphabet", dir:"long", risk:"core", thesis:"Least-hyped mega cap: DeepMind + TPU (~$1T value; now shipping to customers' own DCs = new revenue) + Isomorphic + Calico. Named by a competitor (Musk), preferred by the valuation dean (Damodaran), and now crowned 'the last clean AI hyperscaler' by the markets desk — earnings are 'the key to the whole market' ($462B cloud backlog, cloud +63%, margin→32.9%). Near-term catalyst.", theme:"Alphabet underrated (market-confirmed)", src:"T11, T16, T20, T32"},
+    {ticker:"Private-credit / neocloud exposure", name:"CoreWeave-type & PE-owned software LBOs", dir:"short", risk:"spec", thesis:"The library's #1 bear theme: DEBT-funded, small/mid AI-infra + PE software LBOs (ServiceNow −50% → those deals halved). Damodaran's societal spillover risk; Eisman's refi crunch. WATCH — not yet triggered.", theme:"Debt systemic risk", src:"T17-T18, T22, T24"},
+    {ticker:"V / MA", name:"Visa / Mastercard", dir:"watch", risk:"mod", thesis:"Stripe+Block+Advent $53B PayPal bid = a funded attempt to bypass the card networks via stablecoin rails. Disruption target OR co-opter — unresolved. Thin-sourced (mostly Visser + one confirmation).", theme:"Payment disruption", src:"T12, T13"},
+    {ticker:"Software (seat/workflow SaaS)", name:"Undifferentiated workflow SaaS", dir:"short", risk:"mod", thesis:"The bifurcation loser: seat-priced workflow SaaS exposed to agent-built replacements + multiple compression (O'Laughlin: 'priced as if it won't become mainframes'). Eisman: avoid the group till clarity. Systems-of-record/network moats survive.", theme:"Software bifurcation", src:"T19-T21, T24"},
+    {ticker:"NVDA", name:"Nvidia", dir:"watch", risk:"core", thesis:"Consensus core; tape still accelerating (+85% rev, Eisman won't short — echoed by Hunter's melt-up). Kimi K3 cuts BOTH ways: cheaper models = MORE silicon demand (Jevons, per the panel + the tape's rally), not less. But the bull case hinges on the CONTESTED scaling fork. Own eyes-open.", theme:"Compute / scaling fork", src:"T24, T05, T29, T32"},
+    {ticker:"Foundation-lab pure-API exposure", name:"OpenAI / Anthropic economics (private)", dir:"short", risk:"spec", thesis:"NEW value-compression watch: near-frontier open-weight (Kimi K3, Inkling) at ~1% cost questions the pure-API moat; Gavin Baker: 'everything but the labs' benefits; the tape calls MSFT/META/ORCL 'poisoned,' GOOGL 'clean.' Express via owning ADOPTERS + the clean hyperscaler, not the labs. WATCH private marks / down-rounds. Offset risk: an AI-FINRA moat could re-protect incumbents.", theme:"Foundation-lab value compression", src:"T29, T30, T32"},
+    {ticker:"SpaceX", name:"SpaceX (post-IPO)", dir:"watch", risk:"spec", thesis:"Supply-overhang trade: staggered lockup takes float 3%→12% within 2 days of the Aug-4 earnings, then ~+7% every 2-3 wks to ~40% by Dec 8 (~$123B potential supply). Fell 225→~123; the markets desk expects 'a chance under $100.' No valuation framework (earnings ~10 yrs out; a TAM story). Research, not advice.", theme:"IPO supply / lockup", src:"T32, T18"},
+  ],
+  /*THEMES*/
+  themes: [
+    {id:"energy",name:"Energy is the binding constraint",camp:"bull",conviction:9.6,velocity:"up",sources:8,opposed:true,tier:"Bedrock",tags:["Power","Grid","Physical bottleneck"],
+     summary:"Compute scales exponentially; usable electricity does not. The single most-converged idea in the library — now confirmed by bulls AND bears with opposing incentives.",
+     reason:"Raised to 9.6 — highest. The latest batch had the bears agree: Eisman calls it 'the binding constraint' by name, Grantham frames it as a demand ceiling. Cross-incentive convergence at this breadth is as close to bedrock as this exercise produces.",
+     voices:"Visser/Patel, Huang, Hassabis, Musk, Chamath, Gelsinger, Eisman, Grantham",
+     log:[{d:"2026-07-12",t:"Enters via Visser/Patel (power creativity, turbine shortage). ~6."},{d:"2026-07-17",t:"Chamath: US short 2.5x CA by 2050; 40% of DC projects mothballed. → 9."},{d:"2026-06-01",t:"Eisman independently: 'the binding constraint' (GE Vernova, 3 turbine makers). Grantham: demand ceiling. Bulls+bears converge → 9.6."},{d:"2026-05-19",t:"Andreessen (JRE): data centers should 'bring their own power' (on-site nuclear micro-reactor); new federal policy pushes it; 'can you build anything in America?' permitting bottleneck. Reinforces bedrock, held 9.6."},{d:"2026-01-06",t:"Musk (Moonshots): energy is 'the inner loop,' POWER (not chips) the binding constraint for ~2 yrs (power>chips crossover ~Q3-26); batteries double US throughput. Held 9.6."},{d:"2026-07-21",t:"The tape confirms the investable basket: GEV/VRT/ETN/Cummins/Comfort Systems traded (and rallied) in lockstep with semis — real cohort, but now semi-correlated/crowded. Held 9.6."}]},
+    {id:"token",name:"Token demand exponential & underestimated",camp:"bull",conviction:9.0,velocity:"up",sources:6,opposed:false,tier:"High conviction",tags:["Inference","Jevons"],
+     summary:"One prompt fans out to dozens–hundreds of model calls; agents multiply it. Software consuming software → demand compounds. Backed by hard data (Ramp +21x YoY).",
+     reason:"High and rising on evidence quality — anecdote (Patel $100K→$11M) became cross-firm data. Caveat: the SAME growth is what makes the unit-economics bear case bite.",
+     voices:"Chase, Huang, Visser, Osika, Gelsinger, Ramp data",
+     log:[{d:"2026-07-08",t:"Chase: 'underestimated demand for tokens.' ~8."},{d:"2026-07-17",t:"Ramp: token spend +21x YoY. → 9."}]},
+    {id:"agentic",name:"Agentic inflection is real & recent (~late 2025)",camp:"bull",conviction:9.0,velocity:"flat",sources:5,opposed:true,tier:"High conviction",tags:["Agents","Foundational"],
+     summary:"Five independent voices with different agendas date the shift to ~Nov 2025 (Opus 4.5 / Claude Code / OpenClaw). The premise most other themes sit on.",
+     reason:"Stable-high — now consensus among primary sources incl. Boris Cherny (who built it); debate has moved to second-order effects and monetization.",
+     voices:"Visser, Huang, Hassabis, Amodei, Boris Cherny",
+     log:[{d:"2026-07-08",t:"Huang: 'the last six months changed everything.' ~8.5."},{d:"2026-07-20",t:"Boris Cherny confirms from inside Anthropic; growth driven by model inflections. → 9."}]},
+    {id:"memory",name:"Memory / HBM shortage — real now, but a CYCLE",camp:"bull",conviction:8.5,velocity:"up",sources:4,opposed:true,tier:"High conviction (with cyclical caveat)",tags:["Memory","HBM","Cyclical"],
+     summary:"'AI = memory.' HBM consumes 3-4x the wafer capacity of DRAM; clean rooms take 2 yrs; DRAM could +100%. But O'Laughlin (the cycle specialist) resolved it: real & tradeable NOW, yet it's a cycle that turns (+100% → demand destruction → crash).",
+     reason:"The bull-vs-bear tension got SYNTHESIZED, not just confirmed. Visser's acute shortage and Damodaran's cyclical-peak warning are both right about different parts.",
+     voices:"Visser, Musk, Gelsinger, O'Laughlin",
+     log:[{d:"2026-07-12",t:"Visser: 'AI = memory'; shortage 'beyond 2030'. ~7."},{d:"2026-02-05",t:"Musk: memory his single biggest concern. → 8."},{d:"2026-02-24",t:"O'Laughlin synthesis: real now (DRAM +100%) AND a cycle. Confirms + caveats → 8.5."}]},
+    {id:"software",name:"Software resolves to a BIFURCATION",camp:"bull",conviction:8.2,velocity:"up",sources:5,opposed:false,tier:"Resolved",tags:["SaaS","Bifurcation"],
+     summary:"The 'is SaaS toast?' fight is settled from all sides: undifferentiated seat/workflow SaaS is exposed to agent-built replacements + multiple compression; systems-of-record + network/data moats survive.",
+     reason:"Rising to resolution — confirmed even from inside Anthropic (Boris via 7 Powers: single-moat exposed, multi-moat survives) and by the semi specialist (O'Laughlin: 'consolidation to one-of-each, priced as if it won't').",
+     voices:"Visser, Huang, O'Laughlin, Damodaran, Boris Cherny, Eisman, Andreessen",
+     log:[{d:"2026-07-19",t:"Debate: Visser 'toast' vs Huang 'tools win'. Contested, ~5."},{d:"2026-02-24",t:"O'Laughlin: consolidation + multiple compression mechanism. → 7."},{d:"2026-07-20",t:"Boris (Anthropic, 7 Powers): single-moat exposed, multi-moat durable. Resolution → 8.2."},{d:"2026-05-11",t:"Andreessen: 'builder' convergence (coder+PM+designer→one); a16z non-coders now shipping software. Vibe-coding tailwind, held 8.2."}]},
+    {id:"adoption",name:"Adoption lag / near-term jobs safe (counter-theme)",camp:"bull",conviction:8.2,velocity:"up",sources:6,opposed:true,tier:"High conviction (disconfirming)",tags:["Diffusion","Timing-edge","Against-interest","Cross-incentive"],
+     summary:"Capability is ~here; diffusion into orgs is the rate-limiter. A 21k-firm Ramp study shows AI-heavy adopters GREW headcount ~10% (entry-level +12%). Tasks ≠ jobs. Now the widest cross-incentive convergence in the library.",
+     reason:"Nudged to 8.2 — the voices now span every incentive: a lab CEO against interest (Amodei), a capability skeptic (Marcus), a valuation bear (Damodaran), AND a max-bull VC (Andreessen: 20x coder productivity → MORE demand/comp/jobs, 'AI vampires'). When those four agree jobs aren't collapsing near-term, the 3-12mo call is robust. Caveat: they agree NEAR-term, disagree LONG-term (Andreessen = permanent expansion; Amodei/Marcus = eventual displacement).",
+     voices:"Hall, Amodei, Ramp study, Marcus, Damodaran, Andreessen",
+     log:[{d:"2026-07",t:"Amodei two-gate model; Hall 'adoption not fast'. ~7."},{d:"2026-07-03",t:"Ramp 21k-firm study: adopters +10-12% headcount. → 8."},{d:"2026-05-15",t:"Marcus: tasks vs jobs; Hinton's radiology call still wrong. Holds 8."},{d:"2026-05-11",t:"Andreessen (max-bull VC): productivity→expansion; coders 20x, higher comp/demand. Cross-incentive breadth → 8.2."}]},
+    {id:"alphabet",name:"Alphabet as underrated AI winner",camp:"bull",conviction:8.4,velocity:"up",sources:6,opposed:false,tier:"High conviction (market-confirmed)",tags:["Alphabet","TPU","Under-crowded","Market-confirmed","Catalyst"],
+     summary:"Least-hyped mega cap: DeepMind + TPU (~$1T value; now shipping to customers' own data centers = a NEW revenue line) + Isomorphic + Calico. Vertically integrated across science, agents and its own silicon — and now called 'the last clean AI hyperscaler' by the markets desk (no MSFT SaaS 'poison,' no Meta capex question, no OpenAI-dependency taint).",
+     reason:"Raised to 8.4 — the first close-to-the-tape voice (Brown+Batnick) independently crowns it 'the key to the market': record $462B cloud backlog, cloud +63% YoY, margin 17%→32.9%, capex $180-190B, TPU-to-customers new leg. Stacks on competitor-endorsement (Musk), valuation-dean preference (Damodaran) and the ~$1T TPU (O'Laughlin). Earnings print is a near-term catalyst.",
+     voices:"Hassabis, Musk, Damodaran, O'Laughlin, Friedberg, Brown/Batnick",
+     log:[{d:"2026-07-15",t:"Hassabis: DeepMind+TPU+Isomorphic stack. ~6.5."},{d:"2026-02-24",t:"O'Laughlin: TPU ~$1T, window open now. Damodaran prefers diversified cloud. → 7.8."},{d:"2026-07-21",t:"Brown+Batnick (tape): 'last clean AI hyperscaler,' earnings = 'key to the market'; $462B backlog, cloud +63%, margin→32.9%, TPU-to-customers new revenue. → 8.4."}]},
+    {id:"opensource",name:"Open-source & inference-cost pressure on premium models",camp:"bull",conviction:8.7,velocity:"up",sources:7,opposed:true,tier:"Very high conviction",tags:["Open weights","Margins","Cost","Kimi-K3","China"],
+     summary:"Near-frontier open models at a fraction of the cost compress the premium layer. The proof arrived: Kimi K3 (China, 2.8T open-weight, #1 frontend code, ~1% cost) + Inkling (Mira Murati, US, 975B). Plus Nemotron≈Opus at ~1/10 cost; 8090 test 16.4x cheaper.",
+     reason:"Raised to 8.7 — the strongest data point yet. This is now the MECHANISM behind both foundation-lab value compression and enterprise sovereignty. 'Frontier intelligence is a perishable asset' (shelf life ~weeks).",
+     voices:"Huang, Visser, Chamath/8090, Osika, Gelsinger, All-In, Moonshots panel",
+     log:[{d:"2026-07-08",t:"Nemotron 86 vs Opus 87 at ~1/10 cost. ~7."},{d:"2026-07-03",t:"8090: open+harness 16.4x cheaper; tokens −90%/yr. → 8.3."},{d:"2026-07-19",t:"Kimi K3: 2.8T open-weight, #1 frontend code, on cost-frontier at ~1% cost, built UNDER export controls. + Inkling (US). → 8.7."}]},
+    {id:"digbio",name:"Digital biology / AI drug discovery",camp:"bull",conviction:7.4,velocity:"contested",sources:3,opposed:true,tier:"High conviction (timeline contested)",tags:["Biotech","AlphaFold","Timeline-contested"],
+     summary:"Two frontier CEOs independently call a 2-5yr inflection; Friedberg shows a concrete commercial AlphaFold win (Calico anti-aging enzyme). Arguably least priced-in high-conviction theme.",
+     reason:"Held ~7.4 and now timeline-CONTESTED: Marcus put the first skeptic on it — Dario's 'double lifespan in 10 yrs' is 'insane'; clinical timelines don't compress even if tools are real. Trade the enablers, not drug approvals.",
+     voices:"Huang, Hassabis, Friedberg (bull) vs Marcus (clinical-timeline skeptic)",
+     log:[{d:"2026-03-19",t:"Huang: 'ChatGPT moment of biology'. ~6."},{d:"2026-07-15",t:"Hassabis: 99% in-silico; Isomorphic 18-19 programs. → 7.5."},{d:"2026-05-15",t:"Marcus: clinical timeline 'insane' to compress. Timeline contested, held 7.4."}]},
+    {id:"debt",name:"Debt / private-credit systemic risk",camp:"bear",conviction:7.6,velocity:"up",sources:4,opposed:false,tier:"#1 bear theme",tags:["Debt","Private credit","Systemic","WATCH"],
+     summary:"Unlike equity-funded dot-com, AI capex is heavily DEBT-funded from private credit (small/mid AI-infra + PE software LBOs). A correction 'spills into society,' not just shareholders.",
+     reason:"The library's sharpest bear case and now 4 independent voices. Damodaran frames the societal spillover; O'Laughlin adds the mechanism (supply-of-debt is itself a bottleneck — Oracle's issuance dilutes the whole IG-TMT index); Eisman the PE/refi crunch.",
+     voices:"Damodaran, O'Laughlin, Eisman, Grantham",
+     log:[{d:"2026-06-18",t:"Damodaran: DEBT-funded → 2008-style spillover risk. ~7."},{d:"2026-02-24",t:"O'Laughlin: supply-of-debt bottleneck; Oracle CDS blowout. → 7.3."},{d:"2026-06-01",t:"Eisman: PE software LBOs (ServiceNow −50%) → refi crunch. → 7.6. WATCH — not yet triggered."},{d:"2026-07-17",t:"Hunter (DISCOUNTED): leverage 'worse than 2008'; adds Cayman-basis-trade (~37% of net Treasury issuance) + Japan >200% debt/GDP domino. Reinforces but does NOT bump — held 7.6."}]},
+    {id:"uniteconomics",name:"AI unit economics — 'the buffet is ending'",camp:"bear",conviction:7.5,velocity:"up",sources:4,opposed:false,tier:"High-conviction bear",tags:["Unit economics","Margins","Commoditization"],
+     summary:"Subscription price << real token cost; margins slim/negative, worse with agents. 'Spotify not software' — no scale economies. Shift to token pricing → end users may balk.",
+     reason:"Rising, 4 voices. Marcus's kicker: multiple US+Chinese rivals doing the same thing → no monopoly → no pricing power. Anthropic's first 'profit' only exists via a Musk compute discount.",
+     voices:"Damodaran, O'Laughlin, Marcus, Eisman",
+     log:[{d:"2026-06-18",t:"Damodaran: low-gross-margin, no scale economies ('Spotify'). ~7."},{d:"2026-06-01",t:"Marcus: no monopoly → no pricing power; buffet ending. Anthropic 'profit' = Musk discount. → 7.5."}]},
+    {id:"capex",name:"Capex value-destruction / Mag-7 'cage fight'",camp:"bear",conviction:7.0,velocity:"up",sources:3,opposed:false,tier:"High-conviction bear",tags:["Capex","Mag-7","Competition"],
+     summary:"Growth can be value-DESTRUCTIVE when paired with huge reinvestment + thin margins. Grantham: 7 former easy-monopolies now brawling in ONE market, capital-heavy not capital-light.",
+     reason:"3 independent voices on the hyperscaler-capex-war-destroys-value thesis. Damodaran (Mag-7 character change), O'Laughlin (competitive dynamics), Grantham (cage fight).",
+     voices:"Damodaran, O'Laughlin, Grantham",
+     log:[{d:"2026-06-18",t:"Damodaran: 'growth can be value-destructive'; Mag-7 asset-light→capital-heavy. ~6.5."},{d:"2026-06-18",t:"Grantham: 7-way 'cage fight' in one market; watershed. → 7."}]},
+    {id:"circular",name:"Circular / concentrated revenue risk",camp:"bear",conviction:7.0,velocity:"up",sources:3,opposed:false,tier:"High-conviction bear",tags:["Circular","Concentration","WATCH"],
+     summary:"~50%+ of hyperscaler future revenue traces to Anthropic + OpenAI (private, lossmaking, VC-funded). If VC pulls back or one stumbles, the ecosystem is exposed.",
+     reason:"3 voices quantify it: Damodaran (OpenAI+Anthropic = ~half of MSFT/ORCL/GOOG/AMZN backlogs), Eisman (same), Marcus (Anthropic 'profit' = Musk discount). A named watch-trigger.",
+     voices:"Damodaran, Eisman, Marcus",
+     log:[{d:"2026-05-15",t:"Damodaran: OpenAI+Anthropic ≈ half of hyperscaler backlogs. ~6.5."},{d:"2026-06-01",t:"Eisman: whole ecosystem depends on two private cos. → 7.0. WATCH: VC pullback = trigger."}]}
+    ,
+    {id:"scaling",name:"Scaling: plateau vs accelerating (THE central fork)",camp:"contested",conviction:5.0,velocity:"contested",sources:5,opposed:false,tier:"CONTESTED — pivotal",tags:["CONTESTED","Scaling","Pivotal"],
+     summary:"The single fork everything downstream hinges on. Marcus (×2): returns from bigger models broke Dec 2024; progress now comes from tools/neurosymbolic, so the ~$2T scaling/GPU bet risks unused data centers. Boris/Hassabis/Amodei: scaling holds or accelerates, AGI ~2030.",
+     reason:"Held at the midpoint and flagged CONTESTED. If Marcus is right, the pure-scaling capex trade is the most exposed thing in the market. If the labs are right, the bull case runs. This is where more independent data would move the whole thesis.",
+     voices:"Marcus (plateau) vs Boris Cherny, Hassabis, Amodei, Andreessen (continued)",
+     log:[{d:"2026-05-15",t:"Marcus: Dec-2024 plateau; tools not scaling drive progress. Contested."},{d:"2026-07-20",t:"Boris Cherny: scaling 'seems to be accelerating.' Live fork, ~5."},{d:"2026-05-11",t:"Andreessen: models 'extraordinary' now, 'line of sight' to ramp 'couple years.' Weighty but max-bull; fork stays open, held 5."}]},
+    {id:"sovereignty",name:"AI sovereignty — own your models vs ride the frontier",camp:"contested",conviction:7.0,velocity:"up",sources:6,opposed:false,tier:"CONTESTED (shifting to own-it)",tags:["CONTESTED","On-prem","Enterprise","Open-weight"],
+     summary:"Karp/Chamath: don't feed your 'alpha' to labs who'll compete with you — own open models on-prem. Boris Cherny rebuts: if progress continues, staying on the frontier beats controlling infra.",
+     reason:"Genuinely two-sided (both talk their book). Crux: does frontier progress stay far enough ahead to justify dependence? Ties to the scaling fork. Investable via Palantir + on-prem hardware + agent-security tooling.",
+     voices:"Karp/Palantir, Chamath, Friedberg, Moonshots/Hasani vs Boris Cherny",
+     log:[{d:"2026-07-03",t:"Karp/Palantir+Nvidia sovereign-AI OS; 8090 data. ~7."},{d:"2026-07-20",t:"Boris rebuts: frontier > own-infra if progress continues. Contested → 6.5."},{d:"2026-07-19",t:"Kimi K3 + Inkling + Liquid AI give a concrete roadmap to fine-tune to frontier on-prem (answers Karp) — and if the frontier is 'perishable/weeks,' Boris's rebuttal weakens. Shifts toward OWN-IT → 7.0."}]},
+    {id:"msft",name:"Microsoft — losing the race, or best-positioned?",camp:"contested",conviction:5.5,velocity:"contested",sources:3,opposed:false,tier:"CONTESTED",tags:["CONTESTED","MSFT"],
+     summary:"O'Laughlin: 'Microsoft's not in the race' — execution-losing, 'renting GPUs to the barbarians,' Satya not AGI-pilled. Damodaran prefers MSFT's diversified path.",
+     reason:"Valuation lens (Damodaran, bullish) vs product-execution lens (O'Laughlin, bearish). Both credible; unresolved.",
+     voices:"O'Laughlin (con) vs Damodaran (pro)",
+     log:[{d:"2026-06-18",t:"Damodaran: prefers MSFT's diversified cloud path. ~6."},{d:"2026-02-24",t:"O'Laughlin: MSFT 'most to lose'; own-goal on OpenAI/Azure. Contested → 5.5."}]},
+    {id:"quantum",name:"Quantum computing meaningful by ~2030",camp:"contested",conviction:4.0,velocity:"contested",sources:2,opposed:true,tier:"CONTESTED",tags:["CONTESTED","Quantum","Speculative"],
+     summary:"Gelsinger (a quantum investor): meaningful before 2030, multiple modalities + error correction proven. Hassabis: classical nets already solve 'quantum' problems (AlphaFold) → less near-term necessity.",
+     reason:"Held low and contested. Pro-source talks his book; con-source is the field's best forecaster. Needs external adjudication before any position.",
+     voices:"Gelsinger (pro, biased) vs Hassabis (con)",
+     log:[{d:"2026-07-15",t:"Gelsinger: supremacy before 2030. Hassabis: classical suffices. Unresolved, 4."}]},
+    {id:"physical",name:"Physical AI / robotics / humanoids",camp:"bull",conviction:7.0,velocity:"flat",sources:3,opposed:false,tier:"High conviction",tags:["Robotics","Humanoids","China supply chain"],
+     summary:"$50T TAM claim (Huang); Optimus 'infinite money glitch' recursion (Musk). Robots ubiquitous 3-5 yrs. Key dependency: China dominates motors/rare-earths/magnets.",
+     reason:"Stable — high ceiling, long-dated, timeline-prone (Musk). China supply-chain dependency is both bottleneck and risk.",
+     voices:"Huang, Musk, All-In",
+     log:[{d:"2026-03-19",t:"Huang: physical AI $50T TAM. ~7."},{d:"2026-02-05",t:"Musk: Optimus recursion. Holds 7."}]},
+    {id:"edge",name:"Edge / on-prem / distributed inference",camp:"bull",conviction:7.6,velocity:"up",sources:6,opposed:false,tier:"High conviction",tags:["Edge","On-prem","Local models","Quantization","SLM"],
+     summary:"An inference-demand leg beyond hyperscaler capex — now supercharged by QUANTIZATION: sub-1-bit models (Kimi/Samsung/Tencent), Liquid AI's on-device SLMs on ~$60 chips (Mercedes/Shopify/AMD), Bonsai-27B on a phone, Elon's '4-bit→lookup-table, 10-100x.' Every device/car/robot gets embedded persistent intelligence.",
+     reason:"Raised to 7.6 — the quantization curve + a real B2B edge company (Liquid AI, named revenue) turn this from a form-factor note into a serious inference-demand leg. Overlaps sovereignty (control+cost).",
+     voices:"Huang, Musk, All-In, Apple, Liquid AI/Hasani, Moonshots panel",
+     log:[{d:"2026-07-17",t:"Apple M7 Ultra local Opus-class; Sunrun/Span+Nvidia. → 7."},{d:"2026-07-19",t:"Sub-1-bit quantization (Kimi/Samsung/Tencent); Liquid AI SLMs <1GB on $60 chips (Mercedes OTA, Shopify); Elon 4-bit→lookup → 10-100x. → 7.6."}]},
+    {id:"assurance",name:"AI assurance / eval / cybersecurity",camp:"bull",conviction:7.0,velocity:"up",sources:5,opposed:false,tier:"High conviction",tags:["Regulation","Eval","Cyber","Picks-and-shovels"],
+     summary:"Mythos (zero-day-finding model) scared banks/Bessent into a US regulatory reversal. Emerging picks-and-shovels: third-party eval, audit, watermarking, agent identity. Confirmed by Anthropic (Boris: Mythos/Fable rollout).",
+     reason:"Rising, multi-source across safety + cyber + agent-security. Nascent public-market exposure (mostly private/adjacent).",
+     voices:"Hassabis, Hall, Musk, All-In, Boris Cherny",
+     log:[{d:"2026-07",t:"Mythos → US regulatory reversal; UK AISI benchmarks. ~6."},{d:"2026-07-20",t:"Boris: Mythos zero-days, staggered rollout, safety-as-moat. → 7."}]},
+    {id:"taiwan",name:"Taiwan/TSMC tail risk + reshoring",camp:"bear",conviction:7.0,velocity:"flat",sources:3,opposed:false,tier:"Tail risk (unhedgeable)",tags:["Geopolitics","TSMC","Hedge"],
+     summary:"Taiwan holds <3 weeks of energy reserves (Gelsinger); a blockade browns out the island, fabs dark 90 days — 'worse than the Great Depression,' no shot fired. Damodaran: 'you can't hedge it,' and the market isn't pricing it.",
+     reason:"Stable tail risk — low probability, extreme severity. Argues for a reshoring/semicap hedge sleeve, not a core bet.",
+     voices:"Huang, Musk, Gelsinger, Damodaran",
+     log:[{d:"2026-07-15",t:"Gelsinger: Taiwan <3wk reserves; blockade = worse than Depression. ~7."},{d:"2026-05-15",t:"Damodaran: 'can't hedge it'; market not pricing it. Holds 7."}]},
+    {id:"semiscyc",name:"Semis cyclical-peak risk",camp:"bear",conviction:6.5,velocity:"up",sources:2,opposed:false,tier:"Bear",tags:["Semis","Cyclical","Micron"],
+     summary:"Chips are ~17-25% of the S&P (was single digits). Micron +160% YTD; historically commodity/cyclical. Risk of valuing at a cyclical high / peak earnings.",
+     reason:"Damodaran (valuation) + O'Laughlin (memory cycle) both flag it. Outcome binary: $10T@40% margins → all win; $3T@20% → 'a lot of cleaning up.'",
+     voices:"Damodaran, O'Laughlin",
+     log:[{d:"2026-05-15",t:"Damodaran: chip run 'bulk is done'; Micron cyclical-peak. ~6."},{d:"2026-02-24",t:"O'Laughlin: memory is a cycle that turns. → 6.5."},{d:"2026-07-17",t:"Hunter: Micron the textbook late-cycle parabolic (~3.8x in 3-4 mo) — higher, then it cracks. 3rd (low-signal) tell, held 6.5."}]},
+    {id:"backlash",name:"Data-center backlash / permitting risk",camp:"bear",conviction:6.0,velocity:"flat",sources:3,opposed:false,tier:"Bear",tags:["Permitting","Politics","Adoption-risk"],
+     summary:"Communities pushing back on power/water/noise; NY first-ever hyperscale moratorium. If DCs get delayed, the whole story slows. Alleged foreign-influence funding of the opposition.",
+     reason:"3 sources (All-In, Eisman, Hassabis). A real permitting/political brake on the buildout — and on the energy theme's supply side.",
+     voices:"All-In, Eisman, Hassabis (vs Andreessen on the sentiment leg)",
+     log:[{d:"2026-07-17",t:"NY moratorium; PRC-influence claims. ~6."},{d:"2026-06-01",t:"Eisman: delays would slow the whole story. Holds 6."},{d:"2026-05-11",t:"Andreessen SOFTENS the sentiment leg: behavior>>polls (NPS high, AI ranks #29) — 'AI approval crisis' is a polling artifact. But physical permitting/power untouched. Holds 6."}]},
+    {id:"bmd",name:"Valuation / 'Big Market Delusion'",camp:"bear",conviction:6.0,velocity:"flat",sources:2,opposed:false,tier:"Bear (verdict discounted)",tags:["Valuation","Bubble","discount-verdict"],
+     summary:"Big markets breed collective overreach → correction → cleanup. The tech is real AND the equities can bust (railroads: everyone lost money, tracks remained). SpaceX >100x sales; 90% of value = AI.",
+     reason:"Damodaran (valuation) + Grantham (perma-bear, verdict discounted per user preference — only his SPECIFIC top-signal kept). The bubble-AND-real synthesis is the mature library consensus.",
+     voices:"Damodaran, Grantham",
+     log:[{d:"2026-06-18",t:"Damodaran: Big Market Delusion; NVDA head-start not moat. ~6."},{d:"2026-06-18",t:"Grantham: railroads analogy; bubble AND real. Verdict discounted, keep the top-signal. Holds 6."}]},
+    {id:"crypto",name:"Crypto rails / stablecoins as agent commerce",camp:"emerging",conviction:6.5,velocity:"up",sources:2,opposed:false,tier:"Emerging (thin sourcing)",tags:["Stablecoins","Agentic-commerce","thin-sourcing"],
+     summary:"Agents need financial agency (hold/transact/verify/limit) that legacy banking can't do at machine speed → crypto/stablecoin rails. Stripe+Block+Advent $53B PayPal bid confirms the V/MA-disruption vector.",
+     reason:"Raised to 6.5 only because the Stripe-PayPal deal gave a second independent voice to a thesis that's otherwise 3 Visser entries. Still the library's thinnest-sourced major theme.",
+     voices:"Visser ×3 (one voice), All-In (Stripe-PayPal)",
+     log:[{d:"2026-07-20",t:"Visser essay: agentic-commerce financial layer. Single voice, ~4."},{d:"2026-07-17",t:"All-In: $53B PayPal bid = funded V/MA-disruption. Independent confirm → 6.5."}]},
+    {id:"payments",name:"Payment-network disruption (V/MA)",camp:"emerging",conviction:6.5,velocity:"up",sources:2,opposed:false,tier:"Emerging",tags:["Payments","Stripe-PayPal"],
+     summary:"Stripe+Block+Advent $53B PayPal bid = a funded attempt to bypass card networks via 600-700M consumer accounts + stablecoins. Disruption target OR co-opter — unresolved.",
+     reason:"Rising; the open question is whether Visa/Mastercard get disrupted or co-opt the programmable layer. External data needed to break the tie.",
+     voices:"Visser, All-In",
+     log:[{d:"2026-07-17",t:"$53B PayPal bid; on-us transactions bypass card networks. → 6.5."}]},
+    {id:"consumer",name:"Consumer agents (next wave)",camp:"emerging",conviction:6.0,velocity:"flat",sources:2,opposed:false,tier:"Watch",tags:["Consumer agents","Apple"],
+     summary:"Framed bigger than coding agents; bottleneck is the product/interface layer, not model capability. When solved, token usage explodes. Apple as a consumer-agent story.",
+     reason:"Mostly Visser + Huang; timing ('within 6 months') is a testable pending prediction. Watch the interface breakthrough as trigger.",
+     voices:"Visser, Huang",
+     log:[{d:"2026-07-12",t:"Visser: consumer agents next major theme; Apple. 6, flat pending trigger."}]},
+    {id:"photonics",name:"Silicon photonics / optical interconnect",camp:"emerging",conviction:5.0,velocity:"new",sources:1,opposed:false,tier:"Emerging watch",tags:["Interconnect","Next bottleneck"],
+     summary:"NVDA's pre-fetched next bottleneck: investments in Lumentum & Coherent; COUPE co-invented with TSMC.",
+     reason:"Single-source but a concrete named supply-chain tell from the most credible operator (Huang). Needs a second voice to promote.",
+     voices:"Huang",
+     log:[{d:"2026-04-15",t:"Huang names silicon photonics as next bottleneck; Lumentum/Coherent. New, 5."}]},
+    {id:"rollups",name:"AI-ification roll-ups of stale digital businesses",camp:"emerging",conviction:5.0,velocity:"new",sources:1,opposed:false,tier:"Emerging watch",tags:["M&A","Roll-ups"],
+     summary:"AI-first operators buying mature, founder-departed digital businesses and reviving them: Stripe-PayPal, Cohen-eBay, Bending Spoons, Kushner/GC accounting roll-ups.",
+     reason:"Single (multi-voice panel) source but a concrete, repeatable playbook for cheap, mismanaged digital-native targets.",
+     voices:"All-In panel",
+     log:[{d:"2026-07-17",t:"Bending Spoons / Cohen-eBay pattern. New, 5."}]},
+    {id:"liveevents",name:"Live events / human premium (AI-deflation hedge)",camp:"emerging",conviction:4.5,velocity:"new",sources:3,opposed:false,tier:"Emerging watch",tags:["Contrarian","Experiences","Judgment"],
+     summary:"As AI makes digital content ~free, the scarce premium good becomes live experiences and human interaction (judgment, taste). Klarna reversed its all-AI customer service.",
+     reason:"Non-consensus but now 3 voices (Musk, Friedberg, Odd Lots hosts on 'judgment remains the human edge'). A differentiated second-order tile.",
+     voices:"Musk, Friedberg, Weisenthal/Alloway",
+     log:[{d:"2025-11-30",t:"Musk: live events scarce premium. ~4."},{d:"2026-07-20",t:"Odd Lots hosts: judgment/human edge persists (interview prep beats the model). → 4.5."}]},
+    {id:"macro",name:"AI-productivity disinflation / deflation",camp:"emerging",conviction:5.0,velocity:"flat",sources:3,opposed:false,tier:"Watch (macro backdrop)",tags:["Macro","Disinflation","Duration"],
+     summary:"AI productivity outrunning money-supply growth → disinflation/deflation, lower rates over time. Possible 'great depression of AI' while abundance is absorbed.",
+     reason:"Three voices (Visser, Musk, O'Laughlin). Slow-burn backdrop, not a near-term catalyst; the Fed-independence risk is the factor that could break it.",
+     voices:"Visser, Musk, O'Laughlin",
+     log:[{d:"2026-02-24",t:"O'Laughlin: AI 'massively deflationary'; GDP challenged. Holds 5."},{d:"2026-07-17",t:"Hunter presents the OPPOSITE endgame (debasement → 25% inflation) — logged as a contested fork, discounted. Holds 5."}]},
+    {id:"fedrisk",name:"Fed-independence / institutional risk",camp:"emerging",conviction:4.0,velocity:"new",sources:1,opposed:false,tier:"Off-core macro watch",tags:["Fed","Institutional","Macro-tail","OFF-CORE"],
+     summary:"SCOTUS carved out a Fed exception on a 5-4 with only ~2 justices who think it's coherent → 'unstable equilibrium.' Politicized monetary policy = tail risk to the disinflation/duration thesis.",
+     reason:"Single off-core (legal) source; logged as a macro/institutional watch-item, not a conviction theme. The factor that could break the disinflation backdrop.",
+     voices:"Menand, Tankus",
+     log:[{d:"2026-07-17",t:"Fed exception 5-4, 'endangered species.' Watch-item, 4."}]}
+    ,
+    {id:"meltup",name:"Late-cycle melt-up / timing discipline",camp:"bull",conviction:6.8,velocity:"up",sources:5,opposed:true,tier:"Timing overlay (tape-confirmed)",tags:["Timing","Melt-up","Don't-short-yet","Sentiment-top-signal","Broadening"],
+     summary:"Not a sector call — a discipline. Four cross-incentive voices converge: the tape can run 30-40% further and the top arrives with euphoria, not skepticism. Don't sell/short early; wait for a trigger.",
+     reason:"New but immediately multi-voice and cross-incentive: Eisman (won't short, +85% tape), Grantham (top-signal: leaders fall while index rises), Visser (levered money re-enters slowly), Hunter (melt-up + all-in-sentiment top-signal). Even the bears and the perma-bear agree on the near-term — which is exactly why it's credible.",
+     voices:"Eisman, Grantham, Visser, Hunter, Brown/Batnick",
+     log:[{d:"2026-06-01",t:"Eisman: 'couldn't short — biggest company grew rev 85%, accelerating.' Timing anchor set."},{d:"2026-07-17",t:"Hunter (50-yr contrarian): melt-up +30-40% possible; top comes with euphoria/all-in sentiment, not skepticism. 4th cross-incentive voice → 6.5."},{d:"2026-07-21",t:"The tape (Brown+Batnick): leadership crushed, levered-ETF AUM −$100B, but S&P held on genuine broadening (breadth highest since 2024, ~zero 52-wk lows). De-leveraging 'healthy,' not a top-signal. Confirms → 6.8."}]},
+    {id:"debasement",name:"Debasement / hard-money 25%-inflation (DISCOUNTED)",camp:"bear",conviction:3.5,velocity:"new",sources:1,opposed:false,tier:"Off-core (verdict discounted)",tags:["Gold-bug","Inflation","DISCOUNT-VERDICT","Contradicts-disinflation"],
+     summary:"Hunter: Fed forced to print $20T → 25% inflation by ~2032, gold $7-20k, silver $200-1000. Directly contradicts the better-sourced AI-disinflation theme. Kept only so the tension is visible, not hidden.",
+     reason:"Deliberately low — single voice, gold-bug incentive, Bitcoin-sponsor show; the exact stopped-clock profile you flagged (Burry/Schiff). Logged, not weighted. Could rhyme with 'disinflation first, debasement later' in sequence, but as a standalone verdict it moves nothing.",
+     voices:"Hunter (discounted)",
+     log:[{d:"2026-07-17",t:"Hunter: $20T Fed print → 25% inflation, gold $7-20k. Single low-signal voice; verdict discounted → 3.5."}]}
+    ,
+    {id:"margin",name:"AI-enabled corporate delayering / margin expansion",camp:"emerging",conviction:5.0,velocity:"new",sources:1,opposed:false,tier:"Emerging watch (single voice)",tags:["Margins","SG&A","Bloat","Book-talk","EQUITY-ANGLE"],
+     summary:"Andreessen: 'every major company is 2-4x overstaffed' and '100% NOT optimized for profitability.' AI becomes the trigger/cover for SG&A delayering → margin expansion. Twitter/X cut ~80% and 'runs as good or better.'",
+     reason:"A genuinely tradeable equity angle (margin expansion from headcount delayering) — but a single MAX-BULL VC voice who talks his book, so held at 5.0 until a second, non-promotional source confirms it in actual earnings/margin data. The flip side of his own 'jobs expand' claim: expansion economy-wide, delayering firm-by-firm.",
+     voices:"Andreessen (book-talk)",
+     log:[{d:"2026-05-11",t:"Andreessen: 2-4x bloat, layoffs 'pegged on AI' as scapegoat; both fewer-coders AND more-output true. Single voice → 5.0. WATCH: confirm in margin data."}]}
+    ,
+    {id:"wealthtax",name:"Unrealized-gains wealth/asset tax → capital flight (policy tail)",camp:"bear",conviction:4.5,velocity:"new",sources:1,opposed:false,tier:"Off-core policy tail (single voice)",tags:["Policy","Tax","Capital-flight","Founder-risk","Book-talk"],
+     summary:"A CA ballot prop for a 5% asset tax on UNREALIZED gains (calc'd on greater-of economic-or-voting stake → can bankrupt founders); Warren's 6% federal version; a 45% exit tax to leave the US. Andreessen: founder/capital exodus CA→TX/FL/NV is 'trickle→stream→flood'; a 2028 federal campaign issue.",
+     reason:"Genuinely investment-relevant for an equity investor (tail risk to founder-led tech, CA/NY tax bases, and US risk-asset premium) — but a single, personally-affected, book-talking voice. Held low at 4.5 and logged as a macro/policy WATCH, not a conviction theme. Track the CA ballot result and any federal proposal.",
+     voices:"Andreessen (personally affected)",
+     log:[{d:"2026-05-19",t:"Andreessen (JRE): CA 5% unrealized-gains prop; Warren 6% federal; exit tax 45%; capital flight accelerating. Single voice → 4.5. WATCH ballot + federal."}]},
+    {id:"surveillance",name:"AI surveillance / public-safety civic-tech",camp:"emerging",conviction:4.0,velocity:"new",sources:1,opposed:false,tier:"Emerging watch (a16z book-talk)",tags:["Civic-tech","Surveillance","Public-safety","Privacy-backlash","Book-talk"],
+     summary:"Flock (an a16z company Andreessen discloses) — AI license-plate/vehicle recognition sold to city governments; plus ShotSpotter (gunshot triangulation). A real AI vertical with a privacy-backlash overhang (Austin/Chicago switched systems off, then reconsidered).",
+     reason:"A concrete AI application vertical (civic-tech / public-safety) — but a single, self-interested voice pitching his own portfolio, and it carries a live civil-liberties/backlash risk. Emerging watch, low conviction; needs an independent voice to promote.",
+     voices:"Andreessen (a16z portfolio)",
+     log:[{d:"2026-05-19",t:"Andreessen (JRE): Flock/ShotSpotter solve crimes but face privacy backlash (Austin/Chicago). Portfolio book-talk → 4.0."}]}
+    ,
+    {id:"chinaweight",name:"China open-weight surge / export-control backfire",camp:"contested",conviction:7.5,velocity:"new",sources:3,opposed:false,tier:"NEW — pivotal (closes China blind spot)",tags:["China","Open-weight","Export-controls","Compute","Kimi-K3"],
+     summary:"Kimi K3 (2.8T open-weight, #1 frontend code, ~1% cost) was engineered AROUND US export controls (quantization, muon optimizer, Huawei/Alibaba chips). Elon: China will 'far exceed' the world in AI compute (~3x US electricity by '26; node lead matters less at diminishing returns). Xi backs open-source as a 'public good.'",
+     reason:"New and high-signal — directly challenges the 'export controls work / China can't make chips' assumption (the exact ChinaTalk-shaped blind spot the Source Watchlist flagged). Bearish for the US-lab moat; bullish for global adopters. Caveat: still US-based commentators ON China, not a China-domestic voice.",
+     voices:"Moonshots panel, Musk",
+     log:[{d:"2026-07-19",t:"Kimi K3 open-weight built under export controls; controls 'backfired' (incentivized efficiency). ~7."},{d:"2026-01-06",t:"Musk: China 'far exceeds' in compute (~3x US electricity); will figure out chips. → 7.5."}]},
+    {id:"labvalue",name:"Foundation-lab value compression",camp:"bear",conviction:6.5,velocity:"new",sources:3,opposed:false,tier:"NEW bear (labs-specific)",tags:["OpenAI","Anthropic","Valuation","Open-weight","WATCH"],
+     summary:"If near-frontier open-weight lands at ~1% cost, the pure-API foundation labs' moat + revenue model come into question. Panel: labs worth ~25-50% of 3 months ago; Gavin Baker: everything EXCEPT the labs benefits. The tape agrees from the other side — Josh Brown calls MSFT/META/ORCL 'poisoned,' GOOGL the only 'clean' hyperscaler.",
+     reason:"New bear, specific to OpenAI/Anthropic economics (both ~$1T private). Counter: Fable 5.1 next; enterprises pay for best-model reliability/security. The tradeable expression: own the ADOPTERS + the clean hyperscaler, not the pure-API labs.",
+     voices:"Moonshots/Gavin Baker, Brown/Batnick",
+     log:[{d:"2026-07-19",t:"Kimi K3 → panel: labs ~1/4 of 3mo ago; Gavin Baker: all-but-labs benefit. ~6.5."},{d:"2026-07-21",t:"Tape: MSFT/META/ORCL 'poisoned,' GOOGL the only 'clean' hyperscaler. Confirms the tilt. Holds 6.5."}]},
+    {id:"regulation",name:"AI regulation / frontier-regulator ('AI-FINRA')",camp:"contested",conviction:5.5,velocity:"new",sources:3,opposed:false,tier:"NEW policy (two-sided)",tags:["Regulation","FINRA","Moat","Policy","WATCH"],
+     summary:"Demis (essay), Sam Altman (FT op-ed) and Elon all now call for a FINRA/FCC-style frontier-AI regulator testing models pre-release, 'by year-end.' Panel's read: regulatory-CAPTURE / a moat vs open-weight + entry labs. Plus a leaked White House 'capability framework' pegging US open releases to China's best open model.",
+     reason:"New, genuinely two-sided: a safety backstop AND an incumbent moat AND a risk to US open-source competitiveness. Investment angle: if it passes, it HELPS the incumbent labs (partly offsets value-compression) and HURTS open-weight/entry players. Watch for a body by year-end.",
+     voices:"Hassabis, Altman, Musk vs Moonshots panel",
+     log:[{d:"2026-07-17",t:"Demis FINRA-style frontier regulator 'by year-end'; Altman/Elon echo. Panel: regulatory capture/moat. New → 5.5."}]}
+    ],
+  library: [
+    {id:"T01",title:"Jordi Visser — weekly macro/AI video",date:"2026-07-19",type:"Macro strategist (ex-MS)",bias:"Runs a thematic AI/crypto portfolio and a forthcoming crypto index — talks his book; discount the AI-maximalism.",
+     macro:"Frames AI as the dominant macro force of the cycle. Reads the sharp AI/tech-momentum unwind (MS factor −40% in 18 days) as rotation/deleveraging, not systemic — strong earnings, tight junk spreads, disinflation, a 'reformist' Fed (Warsh).",
+     message:"'AI = memory' — re-buying Micron on a DRAM shortage + long-term contracts; consumer agents and crypto are the next beta, not re-entering AI infrastructure.",
+     opps:"Memory (MU, SK Hynix, Samsung), Vera Rubin/800V-DC supply chain (~25 names), crypto/ETH>BTC, stablecoins (Stripe-PayPal). Legacy software 'toast' (ADBE, CRM).",
+     risks:"Permanent new vol regime from agent-driven trading (speed crashes); levered money re-enters slowly. Talks his own positions."},
+    {id:"T02",title:"Jordi Visser — weekly macro/AI video",date:"2026-07-12",type:"Macro strategist (ex-MS)",bias:"Same as T01 — reinforces, not independent.",
+     macro:"'Short abundance, long scarcity' — short anything code can replicate (software), long physically-constrained supply (memory, semis, power, materials) that AI spenders need.",
+     message:"Capex 'capacity myth' rebuttal: ~$2T hyperscaler backlogs, SemiAnalysis $11.1T capex forecast, GPU rental curves tight; consumer agents = the next major theme; crypto as US financial statecraft (Bessent).",
+     opps:"Samsung (~4x fwd PE on +524% growth), SK Hynix, Micron; consumer-agent plays (Apple, Meta); power bottleneck creativity (turbines).",
+     risks:"Power/turbine bottleneck; open-source eventually eats enterprise production workloads; his crypto thesis is single-voice."},
+    {id:"T03",title:"Jensen Huang w/ Harrison Chase (LangChain)",date:"2026-07-08",type:"NVIDIA CEO — product event",bias:"NVDA commoditizes the model layer to maximize compute demand; announcement-driven. First non-Visser source.",
+     macro:"'The last six months changed everything' — agentic systems hit a flashpoint; every enterprise wants in. Independently corroborates the ~late-2025 agentic inflection.",
+     message:"Open-weight models reach near-frontier (Nemotron 86 vs Opus 87) at ~1/10 cost; enterprises become 'super-agents' built on harnesses; agent security/runtime is the gating factor for deployment.",
+     opps:"NVDA (open-stack strategy), harness/agent-ops tooling, agent identity/access-control (next Okta/CyberArk analog), edge/on-prem inference (DGX Spark/Station).",
+     risks:"Model layer commoditizing → value migrates to compute + tooling + proprietary-data owners; undifferentiated closed-model resellers squeezed."},
+    {id:"T04",title:"Jensen Huang on All-In (GTC special)",date:"2026-03-19",type:"NVIDIA CEO — interview",bias:"Promotional (GTC); 4 months older, so several calls are testable against later transcripts. Talks book throughout.",
+     macro:"Inference explosion: generative→reasoning→agentic = ~10,000x compute in 2 yrs, heading to a 'million-x.' Inference-constrained industry. ~$1T order visibility (Blackwell+Vera Rubin).",
+     message:"NVIDIA is now an 'AI factory company' (Groq acquisition, disaggregated inference). Physical AI = $50T market; digital biology 'near its ChatGPT moment'; enterprise software WINS from agent tool-use (contra 'SaaS toast').",
+     opps:"NVDA, physical-AI/robotics, digital biology (OpenEvidence/Hippocratic), AVs (BYD/Mercedes/Uber), EDA tools (Synopsys/Cadence), reshoring.",
+     risks:"China supply-chain dependency (motors/rare-earths/magnets); AI PR crisis (17% US approval); circular financing ($30B OpenAI, $10B Anthropic)."},
+    {id:"T05",title:"Jensen Huang on Dwarkesh Patel",date:"2026-04-15",type:"NVIDIA CEO — adversarial interview",bias:"Best pushback source on NVDA (TPU threat, CUDA moat, China). China section is lobbying. Talks book.",
+     macro:"Moat = supply-chain lock (~$250B purchase commitments) + ecosystem, not just CUDA. Bottlenecks last only ~2-3 yrs once 'swarmed'; the binding constraint is energy + skilled trades.",
+     message:"Pre-fetches the next bottleneck — silicon photonics (invested in Lumentum, Coherent). Dismisses the TPU/ASIC threat as 'Anthropic, a unique instance, not a trend.'",
+     opps:"NVDA roadmap (Vera Rubin→Feynman), silicon photonics (LITE, COHR), memory/HBM (Micron early partner), neoclouds (CRWV, NBIS), AI-cybersecurity (Mythos zero-days).",
+     risks:"AI labs (majority of revenue) can write own kernels → margin question; circular/vendor financing (CoreWeave backstops) = systemic-risk vector; China chips 'good enough.'"},
+    {id:"T06",title:"Demis Hassabis (DeepMind CEO) interview",date:"2026-07-15",type:"Frontier-lab CEO",bias:"Most consistent/credible AGI forecaster; channel's alarmist framing is editorial, not his.",
+     macro:"AGI ~2030 (on-track since a 2010 call). 'We're in the midst of the agent era now.' Classical compute solved problems presumed to need quantum (AlphaFold) — mild negative for quantum-pure-plays.",
+     message:"Digital-biology inflection: 99% of drug discovery moving in-silico 'in the next few years'; 10 years → months. Materials/energy/environment next AI-for-science domains.",
+     opps:"Alphabet vertical stack (DeepMind+TPU+Isomorphic), AI-native biotech, pharma AI-adopters (LLY), gene-editing + AlphaGenome convergence.",
+     risks:"Timelines compress markets modeling linear progress; AGI-2030 is contested (Marcus) on the skeptic side."},
+    {id:"T07",title:"Demis Hassabis + Dame Wendy Hall (WCIT)",date:"2026-06-15",type:"Frontier-lab CEO + academic",bias:"Hassabis primary; Hall = governance counterweight; UK-centric.",
+     macro:"Mythos triggered a US regulatory reversal (scared banks/Bessent). 'Energy = intelligence, literally' — watts→dollars→tokens (4th independent source on energy).",
+     message:"'AI assurance' as an emerging industry (evals, audit, watermarking). Enterprise AI era beginning; regulated industries will demand guardrail guarantees.",
+     opps:"AI-assurance/eval vendors, agent-governance tooling, deepfake watermarking, AI-lab IPOs (Anthropic 'going IPO').",
+     risks:"Adoption much slower than the tech (Hall); AI resistance/backlash building; UK/EU capital-markets dysfunction."},
+    {id:"T08",title:"Demis Hassabis on 'Huge Conversations' (Cleo Abram)",date:"2026-04-20",type:"Frontier-lab CEO — explainer",bias:"Third Hassabis appearance — reinforces, not independent. Science-focused.",
+     macro:"Concrete drug-discovery pipeline detail: Isomorphic 18-19 active programs (cardio/cancer/immunology), some near clinical; full in-silico loop screens all ~20,000 human proteins in minutes.",
+     message:"AlphaGenome (mutation-causation prediction, incl. the 98% non-coding genome) pairs with CRISPR to identify-then-edit disease drivers. AlphaZero-style generalization to fusion/materials/chip-design.",
+     opps:"Alphabet, AI-drug-discovery enablers, CRISPR names (CRSP/NTLA/BEAM), AI + agriculture genomics, sequencing/data owners.",
+     risks:"Drugs still take years — direct biotech revenue is 2028+; trade the enablers/compute owners ahead of approvals; race compresses (3-6mo lab-to-public lag)."},
+    {id:"T09",title:"Dario Amodei (Anthropic CEO) interview",date:"2026-06-10",type:"Frontier-lab CEO — risk/labor",bias:"Primary source; heavy doom framing is the channel's, not his.",
+     macro:"'Country of geniuses in a datacenter' in 1-2 yrs — but capability runs AHEAD of job disruption because enterprise diffusion is slow/messy (a two-gate model). The tradeable lag is deployment.",
+     message:"Labor disruption sequence: entry-level white-collar + software fastest, then law/finance/consulting/medicine simultaneously — no safe industry to absorb the displaced. No full pause possible (race + geopolitics).",
+     opps:"Diffusion-layer beneficiaries (integration, agent-ops, data plumbing) have longer runway than the commoditizing model layer; AI coding platforms.",
+     risks:"Misalignment 'will definitely go wrong if we go quickly'; surveillance/4th-Amendment erosion; seat-SaaS derating; model-welfare/consciousness questions."}
+    ,
+    {id:"T10",title:"Elon Musk on Dwarkesh Patel",date:"2026-02-05",type:"Founder (SpaceX/Tesla/xAI)",bias:"Biggest book-talker; timelines slip. But his physical-bottleneck detail is concrete and cross-checks other sources.",
+     macro:"Energy is THE near-term binding constraint: 'chip output exceeds ability to turn on chips by end-2026.' Turbines sold out to 2030; vanes/blades = only 3 casting cos. Memory his single biggest concern ('DDR prices ballistic').",
+     message:"Digital human emulation solved ~end-2026 → 'trillions in TAM' (customer service beachhead). Optimus 'infinite money glitch' (robots build robots). China dominates manufacturing/refining.",
+     opps:"Energy/turbine casting (Howmet-type), memory (MU/SK Hynix/Samsung), semicap/ASML chokepoint, robotics (TSLA), reshoring/ore-refining.",
+     risks:"Debt/private-credit financing of buildout; China manufacturing dominance (2x world ore refining, 98% gallium); space-DC timeline speculative; discount his dates."},
+    {id:"T11",title:"Elon Musk on Nikhil Kamath (WTF)",date:"2025-11-30",type:"Founder — philosophical",bias:"Mostly philosophy (simulation, consciousness); low investment density. Rare explicit stock tell.",
+     macro:"Deflation thesis: AI/robotics productivity → goods>money-supply in ~3 yrs → deflation, rates toward zero; 'work optional in <20 yrs.' Energy as the ultimate currency.",
+     message:"Asked what he'd buy outside his own companies: 'Google is going to be pretty valuable… Nvidia is obvious.' AI+robotics+spaceflight 'overwhelmingly all the value.'",
+     opps:"Alphabet (competitor endorsement), NVDA (consensus), live events as an AI-deflation scarcity hedge, AI-generated content/compute.",
+     risks:"Long-dated; labor-disruption/UHI; content-production cost structures under pressure."},
+    {id:"T12",title:"Jordi Visser — Substack essay (AI+Crypto)",date:"2026-07-20",type:"Written essay",bias:"3rd Visser entry; launching a crypto index. Thinnest-sourced major theme in the library.",
+     macro:"'A new digital species' — agents become the unit of economic production; investors mis-measure demand by counting a few frontier customers instead of billions of agents ('McDonald's Billions Served').",
+     message:"Agents need financial agency → crypto rails (programmable wallets, smart-contract escrow, stablecoins, cryptographic identity). Jevons applied to transactions, not just inference.",
+     opps:"Stablecoin issuers (Circle, PYUSD), Stripe-PayPal, tokenization/RWA (JPM/BlackRock/Goldman), agent identity/permissions.",
+     risks:"Single-voice thesis (no independent corroboration until the Stripe-PayPal deal); Visa/Mastercard may co-opt rather than be disrupted; regulatory dependency."},
+    {id:"T13",title:"All-In Podcast (Chamath/Sacks/Calacanis/Friedberg)",date:"2026-07-17",type:"VC/operator panel",bias:"Sacks anti-Anthropic/anti-regulation (in govt); Chamath owns DC assets; Calacanis deal-promoter. Multi-voice = good for convergence.",
+     macro:"Energy scarcity re-confirmed hard: US short ~2.5x California's energy by 2050; PJM auction shortfall; ~40% of DC projects mothballed; NY first-ever hyperscale moratorium.",
+     message:"Stripe+Block+Advent ~$53B PayPal bid = a funded competitor to Visa/Mastercard via stablecoins. AI sovereignty crystallizing (Palantir/Nvidia). Token spend +21x YoY (Ramp).",
+     opps:"PayPal/Block/Circle (payments), Palantir (sovereign AI), Sunrun/Bloom (behind-the-meter power), Bending Spoons-style AI roll-ups, Calico/AlphaFold (Alphabet).",
+     risks:"Data-center backlash/permitting (alleged foreign-influence funding); open-source cost pressure ($56 vs $0.50/M tokens); CFO token-spend shock → possible earnings misses."},
+    {id:"T14",title:"All-In w/ Pat Gelsinger + Anton Osika (Lovable)",date:"2026-07-15",type:"Ex-Intel CEO/VC + Lovable founder",bias:"Gelsinger talks quantum (portfolio) & reshoring; Osika talks vibe-coding book. Both credible operators.",
+     macro:"Gelsinger: 'energy bounds the bubble' (natural ceiling). Taiwan tail risk with a chiller — <3 weeks of energy reserves; a blockade = 'worse than the Great Depression,' no shot fired. Two-decade buildout, not two-year.",
+     message:"Osika (real-world software data): ~1M new apps/week, ~$500M revenue — but bespoke replaces Slack/Salesforce internally WHILE interoperating under the hood → software bifurcation, not extinction.",
+     opps:"Energy (bubble-limiter framing), reshoring/CHIPS beneficiaries, inference-silicon (Cerebras/Groq), Jevons/inference-cost optimization. Quantum (contested).",
+     risks:"Taiwan tail risk (unhedgeable); INTC structurally challenged; quantum-2030 is a biased/contested call; seat-SaaS derating confirmed with real usage."},
+    {id:"T15",title:"All-In Ep. 279 (panel)",date:"2026-07-03",type:"VC/operator panel",bias:"Same voices/biases as T13. (2nd half is US politics — low investment relevance.)",
+     macro:"'Model layer eats the app layer' with a casualty: Anthropic's Claude Design blindsided partner Figma (−50% YTD). Microsoft/Google playbook — a real, tradeable app-layer/wrapper risk.",
+     message:"AI sovereignty (Karp/Palantir): control compute/models/data/'alpha,' don't feed IP to frontier labs. 8090 test: open model + harness = 16.4x cheaper than Opus. Jobs COUNTER-data: AI-heavy adopters +10% headcount, entry-level +12% (Ramp/Rellio).",
+     opps:"Palantir (sovereign AI), open-source/inference-cost optimization, Alphabet (Calico/AlphaFold), human-in-the-loop premium (Klarna reversal).",
+     risks:"App-layer 'wrapper' startups exposed to model-layer absorption; token deflation (−90%/yr) pressures premium closed-model margins."},
+    {id:"T16",title:"Aswath Damodaran — Indian media interview",date:"2026-06-30",type:"Valuation academic — FIRST SKEPTIC",bias:"Very low bias — academic, discloses positions (exited NVDA), rejects backward-looking dot-com pattern-matching. Weight heavily.",
+     macro:"'Big Market Delusion' — expects a correction/cleanup; the AI trade already 'turned sour' (Mag-7 down) yet the broad market held → AI is NOT carrying the whole market (a lazy narrative).",
+     message:"Architecture (chips/DCs/power) is the 'discovered' trade; the money-making winner is UNDISCOVERED — 'it wasn't Cisco, it was Amazon.' Value migrates up the stack to whoever monetizes profitably.",
+     opps:"Products/services layer over infrastructure; power-to-data-center suppliers (tangible); MSFT (diversified path preferred over NVDA).",
+     risks:"THE specific systemic risk = DEBT-funded AI architecture (small/mid cos, private credit) → 'takes some of us down.' The optimistic AI scenario IS the job-loss scenario (bull case = bear case for demand)."},
+    {id:"T17",title:"Aswath Damodaran — 'The Intangible Economy' (deep dive)",date:"2026-06-18",type:"Valuation academic",bias:"Same voice (Damodaran); richest disconfirming content. Owns 5 of Mag 7 — values against his holdings.",
+     macro:"AI unit economics are the whole ballgame and look BAD: 'low-gross-margin by nature' (data centers/power/water don't scale). 'Cost structure = Spotify, not software' — margins DON'T expand with scale.",
+     message:"'Growth can be value-DESTRUCTIVE' with huge reinvestment + thin margins. Debt-financing systemic risk (private credit, not banks) is the sharpest bear case. Semis cyclical-peak risk (chips ~25% of market).",
+     opps:"Apple (restraint-as-edge; caution on over-investing hyperscalers), low-vs-high-end AI bifurcation (DeepSeek point), enablers over drug approvals.",
+     risks:"Mag-7 character change (asset-light→capital-heavy; 10-yr-depreciate/5-yr-obsolete); SpaceX ~$1.3T fair vs $2.7T price; unit economics unproven; rising IP/data costs."}
+    ,
+    {id:"T18",title:"Aswath Damodaran on Prof G Markets (quarterly)",date:"2026-05-15",type:"Valuation academic",bias:"Same voice (Damodaran); chronologically first of three — shows his thesis HARDENING over time. Owns Intel + 5 of Mag 7.",
+     macro:"'It will be WORSE than dot-com' — AI carries the real economy far more (DCs, power, water) AND is DEBT-funded, so a correction is more marketwide with a longer hangover. AI is currently an EARNINGS DRAG for most of the market (capex depreciation).",
+     message:"Circular-revenue quantified: OpenAI+Anthropic commitments ≈ half of MSFT/ORCL/GOOG/AMZN backlogs. Chip run 'bulk is done' (chips 17%→25% of S&P; Micron +160% YTD). Risk-ranking: war > AI-disappointment > debt.",
+     opps:"Intel (US-base premium; he's long), the products/services layer; treasuries at 4-4.5% for cash (don't market-time).",
+     risks:"Banks actively SHEDDING data-center debt (a tell); mega-IPO wave (SpaceX/OpenAI/Anthropic) governance risk; Taiwan 'can't hedge it'; AI-business unit economics unproven."},
+    {id:"T19",title:"Doug O'Laughlin (Fabricated Knowledge) — SemiAnalysis stream",date:"2026-02-20",type:"Semiconductor specialist",bias:"Genuine specialist (granular DC/accelerator data) but INFRA-BULL incentive. Partly rebuts the Damodaran bear case — useful confluence test.",
+     macro:"GPU utilization REBUTS the dot-com dark-fiber-overbuild analogy: utilization 'maxed out,' H100/B200 pricing firmed → demand is real, not speculative capacity.",
+     message:"Amazon $200B capex is real and under-modeled; AWS ramps fastest, ~on-time while others delay. Software → consolidation to 'one-of-each' + multiple compression, 'priced as if it won't become mainframes.'",
+     opps:"AMZN (best-positioned hyperscaler), NVDA (utilization/pricing firm; Trainium shortfall → NVDA), Accenture (Claude Code implementation army).",
+     risks:"Microsoft 'not in the race' (execution-losing) — CONTESTED vs Damodaran; single-moat SaaS exposed."},
+    {id:"T20",title:"Doug O'Laughlin — deep dive (memory + debt)",date:"2026-02-24",type:"Semiconductor specialist",bias:"THE memory-cycle specialist (ex-Bernstein). This transcript is unusually balanced — confirms the shortage AND flags the turn.",
+     macro:"MEMORY SYNTHESIS: just exited the worst NAND/DRAM downturn ever → nobody built clean rooms; now HBM (3-4x the wafer capacity of DRAM) → DRAM could +100%, THEN demand destruction → crash. It's a CYCLE. Context windows capped ~1M for years ('context rationing').",
+     message:"AI capex best analog = RAILROADS (~4.8% of GNP, ~10 yrs, THREE boom-busts), not dot-com → multiple boom-busts, not one crash. New bottleneck: SUPPLY OF DEBT (Oracle's issuance dilutes the whole IG-TMT index).",
+     opps:"Memory 'the most obvious leg' (SK Hynix/Samsung/Micron + semicap); Alphabet TPU (~$1T, share-grab window open now); AMZN.",
+     risks:"Debt-supply bottleneck (Oracle 'own goal', CDS blowout); memory IS a cycle that turns; MSFT 'most to lose' (CONTESTED); AI possibly 'massively deflationary.'"},
+    {id:"T21",title:"Boris Cherny (creator of Claude Code, Anthropic) — Odd Lots",date:"2026-07-20",type:"Anthropic product insider",bias:"ANTHROPIC-INSIDER — talks book, rebuts sovereignty, bullish on scaling. Answers the software/sovereignty debates from the DISRUPTOR's side.",
+     macro:"Software bifurcation confirmed from inside Anthropic (7 Powers): single-moat/switching-cost SaaS exposed; multi-moat (network/system-of-record/scale) survives. Scaling 'seems to be accelerating' (contests Marcus).",
+     message:"Rebuts AI-sovereignty (Karp/Chamath): if progress continues, staying on the FRONTIER beats owning infra. Mythos/Fable staggered rollout; safety/security as the harness moat.",
+     opps:"Anthropic (Claude Code big biz), legacy migration (COBOL, zig→rust in 11 days) → IT-services/Accenture; agent-security/assurance; material-science AI (Claude for discovery).",
+     risks:"Scaling-plateau contested (vs Marcus); model-is-value/harness-thin → where does the moat sit; judgment remains the human edge (hosts)."},
+    {id:"T22",title:"Jeremy Grantham (GMO) on Odd Lots",date:"2026-06-18",type:"Bubble historian / GMO",bias:"⚠ SELF-DESCRIBED PERMA-BEAR ('overpriced since 2000'). Verdict DISCOUNTED per user preference — only his two specific tools kept. Not a pure bear (GMO holds Meta/Microsoft).",
+     macro:"Railroads, not tulips: the tech is real (railroads changed the world after everyone lost money) AND the equities can bust. Admits 'AI capex broke my playbook.'",
+     message:"KEEP #1 — a rare bubble-TOP signal (flashed only 4x since 1925: leaders DECLINE while the index still RISES — 1929/1972/2000/2021). KEEP #2 — the Mag-7 'cage fight': 7 former easy-monopolies now brawling in ONE market, capital-heavy.",
+     opps:"A monitorable top-indicator to wire into the engine (pairs with Visser's factor-unwind). Energy as a demand ceiling.",
+     risks:"His overall bubble verdict is low-signal (stopped clock); NVDA 'head-start not moat'; capex value-destruction; energy demand dwarfs supply."},
+    {id:"T23",title:"Lev Menand + Nathan Tankus — Fed independence (Odd Lots)",date:"2026-07-17",type:"Legal/monetary scholars",bias:"OFF-CORE — constitutional law, not AI/investment. Low density; catalog only the macro-tail thread.",
+     macro:"Fed independence is now legally precarious: SCOTUS carved out a Fed exception on a 5-4 with only ~2 justices who think it's coherent → 'unstable equilibrium,' 'endangered species.'",
+     message:"Politicized monetary policy ('monetary = quasi-fiscal'; access to the money-printing machine) is the deep risk. Ties to the 'reformist Fed / Warsh' thread.",
+     opps:"None direct — a macro/institutional WATCH-item, not a tradeable theme.",
+     risks:"Tail risk that could BREAK the disinflation/duration thesis: credibility loss → higher inflation expectations, weaker USD, higher/volatile long rates, a US-asset risk premium."},
+    {id:"T24",title:"Steve Eisman + Gary Marcus (Real Eisman Playbook)",date:"2026-06-01",type:"'Big Short' investor + AI skeptic",bias:"Eisman = a short-seller who explicitly WON'T short AI (maximally useful). Marcus = specific capability critic, measured ('low probability, not zero'). Both weight heavily.",
+     macro:"Eisman's clean map: winners (NVDA→hyperscalers→networking→memory→POWER 'the binding constraint') vs losers (SaaS apocalypse; PE/private-credit software LBOs; DC backlash; circular revenue). Chips now 16-17% of the S&P.",
+     message:"THE timing anchor: 'I couldn't short this — the biggest company on Earth just grew revenue 85%, accelerating.' Marcus: ~$2T bet on SCALING, but progress comes from TOOLS/neurosymbolic. Viability math: needs ~$1.6T/yr revenue (4x Google's best year).",
+     opps:"Energy/power (GEV + Mitsubishi/Siemens, Eaton/Rockwell/Quanta/Bloom/nuclear), Intel (CPU comeback), enablers over labs.",
+     risks:"Debt/private-credit (ServiceNow −50% → LBOs halved, refi crunch); circular revenue (ecosystem depends on 2 private cos); unit economics ('buffet ending,' no monopoly → no pricing power). Bears counsel: don't short yet."},
+    {id:"T25",title:"Gary Marcus w/ Brian Greene (World Science Festival)",date:"2026-05-15",type:"AI capability skeptic",bias:"Same voice (Marcus); deepens the plateau/neurosymbolic case. More philosophy than markets; measured, specific.",
+     macro:"Scaling has hit an asymptote — 'already moving away from scaling.' Progress driven by neurosymbolic TOOLS, not bigger models → the pure-scaling/GPU capex bet risks unused data centers. Reliability ceiling: hallucination won't hit zero (8% error rate) → limits high-stakes deployment.",
+     message:"Domain-specific, not general: excels only where formally verifiable (math/coding). Tempers digital-biology: Dario's 'double lifespan in 10 yrs' is 'insane' (clinical timelines don't compress). Consciousness claims 'absolutely ludicrous.'",
+     opps:"Supports CPU comeback + medium-model/symbolic-AI thesis; enablers-over-approvals in biotech; accuracy-sensitive human roles durable (judgment premium).",
+     risks:"THE central CONTESTED fork — plateau (Marcus) vs accelerating (Boris/Hassabis/Amodei). If plateau, the scaling capex trade is the most exposed thing in the market. Near-term jobs safe / long-term 'employment crushed.'"}
+    ,
+    {id:"T26",title:"David Hunter (Contrarian Macro Advisors) on Coin Stories",date:"2026-07-17",type:"Contrarian macro strategist (50+ yrs)",bias:"⚠️ STOPPED-CLOCK / GOLD-BUG — the exact profile you flagged (Burry/Schiff). Self-admits calling a 'bust' for 5-6 yrs; gold $7-20k, silver $200-1000, $20T Fed print. Bitcoin-sponsor show. VERDICT DISCOUNTED — harvest the tools, ignore the price targets.",
+     macro:"Melt-up THEN 'global bust.' Near-term aggressively bullish: indexes +30-40% (Dow 70k, S&P 10k, NDX 36k, Russell 4k, SMH 600→800). Then a 70-80% 'global bust' driven by leverage (debt + derivatives, private credit, PE) — 'worse than 2008.' Economy K-shaped, sliding toward recession by year-end; manufacturing/reshoring holding it up.",
+     message:"Two useful tools: (1) DON'T SELL EARLY — the melt-up can run and the FOMO narrative draws you back in near the high; (2) the TOP-SIGNAL is sentiment — when retail AND institutions are all-in 'telling you it has years to run,' get nervous ('markets narrow into the top; price bleeds fundamentals'). Micron = the textbook parabolic. Market has BROADENED (financials/industrials/materials/small caps), contra 'it's only 7 stocks.'",
+     opps:"Near-term melt-up beneficiaries (semis/SMH, financials, industrials, materials, small caps/Russell). The tradeable takeaways are timing/discipline, not new names. Gold/silver only 'next cycle' (discounted).",
+     risks:"DISCOUNTED verdict: $20T print → 25% inflation by ~2032, gold $7-20k (contradicts AI-disinflation); 10-yr to 0% in the bust; housing -30-40%; energy SECTOR 'rolling over' near-term (a lone dissent, but he means the oil tape, not the structural power constraint); Bitcoin 75k→50k ('I don't follow it'). Checkable adds: Cayman funds ~37% of net Treasury issuance; Japan >200% debt/GDP."}
+    ,
+    {id:"T27",title:"Marc Andreessen on 'Monitoring the Situation' (MTS)",date:"2026-05-11",type:"a16z co-founder / VC — max-bull pole",bias:"⚠️ MAXIMALLY book-talking techno-optimist (one of the largest AI investors alive); direction is a permanent 'always bullish,' so discount it. ~60% of the hour is culture-war (SPLC, UFOs, boomer-truth) with zero investment content — only the AI/jobs core is cataloged. Opposite incentive pole from the T16-T26 skeptics; adding him re-tilts the library modestly back toward long-AI.",
+     macro:"Jobs = EXPANSION, not destruction: raise marginal productivity → workers work MORE, earn MORE, and there are MORE jobs. Ground-level: leading-edge programmers '20x more productive than a year ago,' in higher demand at rising comp ('AI vampires'); even non-coders now shipping software via Codex/Claude Code. Rebuts the 'no more junior hires' doom narrative.",
+     message:"Three keepers: (1) BLOAT — 'every major company is 2-4x overstaffed,' not profit-optimized → AI as cover for SG&A delayering → margin expansion (X cut ~80%, 'runs as good'); (2) the 'BUILDER' convergence (coder+PM+designer→one AI-empowered role); (3) models are 'extraordinary' NOW — skeptics hold a lagging view; you must pay ~$200/mo to see the frontier.",
+     opps:"Thematic, not tickers (he names none deliberately): the near-term adoption/jobs window; vibe-coding/'builder' tooling; a margin-expansion/delayering equity screen (confirm in earnings); pay-for-frontier ($200 tiers) as the real usage signal.",
+     risks:"Watch BEHAVIOR not polls: NPS high, usage high, churn shrinking; 'AI approval crisis' (~17%) is a polling artifact; David Shore stack-rank puts AI at issue #29. His DIRECTION is a permanent book — discount it; the long-term jobs picture (expansion vs displacement) is where he splits from Amodei/Marcus. Self-aware jab: the labs run the fear campaign while building the product."}
+    ,
+    {id:"T28",title:"Marc Andreessen on Joe Rogan Experience #2501",date:"2026-05-19",type:"a16z co-founder — 2nd appearance (same voice as T27)",bias:"Same max-bull book-talker; ~2/3 culture-war/politics + a personal Rogan suicide monologue with zero investment content. Same voice → deepens T27, no new independent vote.",
+     macro:"Jobs = EXPANSION not destruction ('AI vampires,' 20x coder productivity → more demand/comp). Models = AGI '~3 months ago'; Turing blown through in 2022. Bots-managing-bots → 1000x; top AI coders make $50M/yr.",
+     message:"Three new threads: (1) unrealized-gains WEALTH/ASSET TAX → founder/capital flight (CA prop, Warren 6% federal, 45% exit tax) = a 2028 issue; (2) nuclear 'bring-your-own-power' for data centers; (3) US way behind China on ROBOTS. Flock (a16z) AI-surveillance; GLP-1 as a trillion-$ economy.",
+     opps:"Adoption/jobs window; vibe-coding/'builder' tooling; margin-expansion/delayering screen; nuclear/energy build-out; digital-bio (GLP-1/peptides). Watch: the wealth-tax capital-flight tail.",
+     risks:"'DCs destroy water' = a myth; the real brake is permitting + a horseshoe (Bernie+Tucker) anti-AI populism. Unrealized-gains wealth tax = a tail risk to founder-led equities + CA/NY tax bases. Direction discounted (permanent bull)."},
+    {id:"T29",title:"Moonshots 'emergency pod' — Kimi K3 / China open-weight 'Sputnik'",date:"2026-07-19",type:"Accelerationist panel (Diamandis, Mostaque, Wissner-Gross, Blundin, Ismail)",bias:"⚠️ MAX-ACCELERATIONIST/abundance pole ('singularity is now'), promotional. Discount the utopian DIRECTION (count as ~1 correlated cluster, not 5 votes). But the technical specifics (architecture, quantization, cost, export-control backfire) are high-signal and checkable — the library's first real China-open-weight coverage.",
+     macro:"Kimi K3 (Moonshot AI, China): 2.8T-param OPEN-WEIGHT multimodal, #1 frontend code, #3 on the cost-performance frontier — built UNDER US export controls, engineered around the compute wall. 'Frontier intelligence is now a perishable asset' (shelf life ~weeks). Export controls BACKFIRED (incentivized Chinese efficiency); Xi backs open-source as a 'public good.'",
+     message:"Foundation-lab VALUE COMPRESSION: panel guesses the labs are worth ~25-50% of 3 months ago; Gavin Baker (cited): all stocks EXCEPT the labs benefit. Semis UP not down (Jevons — silicon demand rises). Sovereignty resolves toward OWN-IT (fine-tune Kimi/Inkling on-prem). Sub-1-bit quantization → intelligence on every device.",
+     opps:"The ADOPTERS + clean hyperscaler over the pure-API labs; inference providers (Fireworks/Modal/Base10); semis/NVDA (Jevons); edge/quantization; Alphabet TPU. Short/watch: OpenAI/Anthropic pure-API economics.",
+     risks:"US policy risk: a FINRA-style frontier regulator, 'know-your-prompter,' possibly blocking Chinese open weights (panel: futile / regulatory capture). Accelerationist direction is book-talk; 'daily frontier models by January' etc. are hype. Talent flight (Kimi founder = CMU PhD → China)."},
+    {id:"T30",title:"Moonshots EP271 — Inkling (Murati) + Liquid AI (Hasani) + Demis' 'AI-FINRA'",date:"2026-07-17",type:"Accelerationist panel + Ramin Hasani (Liquid AI, edge/SLM specialist)",bias:"Same accelerationist cluster (discount direction). Hasani = a genuine specialist with real enterprise revenue (high-signal on edge/SLM); Dave Blundin is a Liquid AI investor (book-talk on that segment).",
+     macro:"AI regulation is the story: Demis wants a FINRA-style frontier-AI regulator by year-end; Altman (FT) + Elon echo. Panel's read: regulatory-CAPTURE / a moat vs open-weight + entry labs. A leaked White House 'capability framework' would peg US open releases to China's best open model (perverse).",
+     message:"Inkling (Mira Murati/Thinking Machines): 975B open-weight, bet on CUSTOMIZATION over leaderboard (fine-tuning-as-a-service). Liquid AI: on-device SLMs <1GB on ~$60 chips — real deals (Mercedes OTA, Shopify, AMD). RSI reality-check: Hasani/Blundin temper the hype (true RSI intractable now; big labs already do it).",
+     opps:"West open-weight + sovereignty (fine-tune on-prem); EDGE/SLM (Liquid AI, automotive/retail); healthcare-AI (GPT-5.6 beats doctors; Meta Muse free to 3.5B); Calico (Alphabet) glycation-reversal longevity.",
+     risks:"AI-FINRA as an incumbent moat (helps big labs, hurts open-weight). Liquid AI may be 'transformer-plus,' not truly post-transformer (Wissner-Gross). Open→closed is the well-worn path (Inkling may follow). Accelerationist direction discounted."},
+    {id:"T31",title:"Moonshots EP220 — Elon Musk (AGI, US-vs-China, jobs, energy, robots)",date:"2026-01-06",type:"Founder (Tesla/SpaceX/xAI) — 3rd appearance (same voice)",bias:"Same Musk book-talk; timelines slip (discount dates). Concrete physical-bottleneck detail cross-checks other sources. Same voice as T10/T11 → deepens, does NOT add an independent vote.",
+     macro:"ENERGY = 'the inner loop'; POWER (not chips) is the binding constraint 'for the next 2 years' (power>chips crossover ~Q3-26 → TSMC's over-build caution is 'valid'). Batteries double US throughput. China will 'FAR EXCEED' the world in AI compute (~3x US electricity by '26; node lead matters less at diminishing returns).",
+     message:"White-collar jobs go FIRST — 'AI can do half of them right now,' only inertia delays it; UHI 'AND social unrest'; prices drop (deflation). Optimus: better surgeon than humans in ~3 yrs; 10B robots by 2040 'a low number.' 4-bit→lookup-table quantization → 10-100x. US 'chip wall' → must build a fab (Intel?).",
+     opps:"Energy/power + storage (bedrock); space-solar/Dyson; edge/quantization; robotics/Optimus; reshoring/US-fab (Intel thread); AI-deflation/duration. Discount the AGI-2026 dates.",
+     risks:"China compute dominance = a US-edge risk; white-collar displacement more bearish-endpoint than Andreessen; 'universal high income AND social unrest' (bumpy 3-7yr transition). Book-talk direction; dates slip."},
+    {id:"T32",title:"The Compound 'What Are Your Thoughts' — Josh Brown + Michael Batnick",date:"2026-07-21",type:"RIA wealth-managers — the library's FIRST markets/tape voice",bias:"Different incentive (close to the tape, not tech founders/perma-bears/accelerationists) → a genuinely independent read on positioning, flows, breadth, earnings. Book-talk: they run Porter House and own several names discussed (energy/data-center picks).",
+     macro:"ALPHABET = 'the key to the whole market' + 'the last clean AI hyperscaler' (no MSFT SaaS poison, no Meta capex question, no OpenAI taint): $462B cloud backlog, cloud +63%, margin→32.9%, capex $180-190B, TPU-to-customers new revenue. Market BROADENING confirmed: leadership crushed, S&P held (breadth highest since 2024, ~zero 52-wk lows); leverage washout 'healthy.'",
+     message:"Own the top-of-the-K + the clean hyperscaler. Energy/data-center picks-and-shovels (GEV/Vertiv/Eaton/Cummins/Comfort Systems) trade as a real cohort (now semi-correlated). Apple = the 'anti-capex' AI stock (China iPhone-AI approval; best 3-wk relative run since 2009). Memory mania washed out (−30%). K-shaped consumer 'fine' per BANK data.",
+     opps:"GOOGL (catalyst), energy picks-and-shovels basket, Apple, insurance/top-of-K (Travelers/Chubb/AFLAC/Hartford), biotech (XBI). SpaceX: supply overhang post-Aug-4 lockup ('chance under $100').",
+     risks:"Rebuts Hunter's K-shaped bear point (bank data: wage growth reaccelerated, delinquencies lowest since Sept-23). Energy basket now crowded/semi-correlated. SpaceX has no valuation framework (earnings ~10 yrs out). Book-talk: they own several of these."}
+  ],
+
+  predictions: [
+    {who:"Huang", date:"2026-03", claim:"China chip-license resumption; NVDA ships to China again", horizon:"mid-2026", status:"hit"},
+    {who:"Huang", date:"2026-04", claim:"Agents 'not good enough at tool use yet' → tool-use inflection coming", horizon:"2026", status:"track", note:"By July agentic buildout clearly underway"},
+    {who:"Musk", date:"2026-02", claim:"Chip output exceeds ability to power/turn on chips", horizon:"end-2026", status:"pend", note:"Corroborated by PJM/energy data + Eisman 'binding constraint'"},
+    {who:"Marcus", date:"2024-12", claim:"Scaling returns break; GPT-5 disappointing & late", horizon:"—", status:"track", note:"GPT-5 was late/underwhelming per Marcus; the plateau claim is the central CONTESTED fork"},
+    {who:"Amodei", date:"~2025", claim:"~50% of entry-level knowledge jobs gone", horizon:"1-5 yrs", status:"track", note:"Tracking AGAINST: Ramp 21k-firm study +12% entry-level; Marcus: radiologists still not replaced"},
+    {who:"Hassabis", date:"2026-07", claim:"AGI arrives (~50% probability)", horizon:"~2030", status:"pend", note:"Most-credible forecaster; contested by Marcus (this century, maybe next)"},
+    {who:"Hassabis/Huang", date:"2026", claim:"Digital-biology inflection; 99% in-silico drug discovery", horizon:"2-5 yrs", status:"pend", note:"Marcus: clinical timeline 'insane' to compress — tools yes, approvals no"},
+    {who:"Damodaran", date:"2026-05", claim:"Chip run 'bulk is done'; correction/consolidation ahead", horizon:"—", status:"pend", note:"Chips ~17-25% of S&P; Micron +160% YTD flagged"},
+    {who:"Eisman", date:"2026-06", claim:"Won't short AI — tape accelerating (NVDA +85%)", horizon:"until a trigger", status:"track", note:"The timing-discipline anchor"},
+    {who:"Gelsinger", date:"2026-07", claim:"Quantum meaningful before 2030", horizon:"<2030", status:"pend", note:"CONTESTED by Hassabis; Gelsinger is a quantum investor"},
+    {who:"Musk", date:"2026-02", claim:"Space cheapest for AI compute", horizon:"≤36 mo", status:"pend", note:"Discount heavily — timeline-prone"},
+    {who:"Hall/questioner", date:"2026-06", claim:"Western frontier labs IPO wave", horizon:"H2 2026", status:"pend", note:"SpaceX IPO'd (>Amazon/MSFT briefly); Anthropic ~$1T→$3T"},
+    {who:"Hunter", date:"2026-07", claim:"Melt-up: indexes +30-40% (S&P 10k, SMH 800)", horizon:"~6 mo", status:"track", note:"Rhymes with Eisman's 'won't short' timing anchor — kept as the melt-up/timing-discipline watch"},
+    {who:"Hunter", date:"2026-07", claim:"'Global bust' −70-80%; $20T Fed print → 25% inflation", horizon:"2027 / ~2032", status:"pend", note:"DISCOUNTED — perma-bear/gold-bug verdict (calling a bust 5-6 yrs); logged, not weighted"},
+    {who:"Andreessen", date:"2026-05", claim:"AI expands jobs (productivity→more work/pay), not mass unemployment", horizon:"ongoing", status:"track", note:"Tracking near-term (Ramp +10-12%, coder comp rising); long-term contested vs Amodei/Marcus displacement"},
+    {who:"Andreessen", date:"2026-05", claim:"Capability keeps ramping dramatically; 'coder' → 'builder'", horizon:"~2 yrs / 10-20 yrs", status:"track", note:"Max-bull book-talk; on the CONTINUED side of the scaling fork vs Marcus's plateau"},
+    {who:"Brown/Batnick", date:"2026-07", claim:"Alphabet earnings = 'the key to the market'; clean AI hyperscaler", horizon:"~July 22 print", status:"pend", note:"Near-term catalyst; $462B backlog, cloud +63%, TPU-to-customers new revenue"},
+    {who:"Moonshots/Baker", date:"2026-07", claim:"Foundation labs worth ~1/4-1/2 of 3mo ago; all-but-labs benefit", horizon:"—", status:"track", note:"Kimi K3 open-weight commoditization; watch OpenAI/Anthropic private marks + any down-round"},
+    {who:"Musk", date:"2026-01", claim:"China will FAR EXCEED the world in AI compute (~3x US power)", horizon:"2026+", status:"track", note:"Reinforces export-control backfire; watch China chip/power buildout"},
+    {who:"Hassabis/Altman", date:"2026-07", claim:"A FINRA-style frontier-AI regulator stood up 'by year-end'", horizon:"end-2026", status:"pend", note:"Two-sided: incumbent moat vs open-source; watch for a body/announcement"},
+    {who:"Brown", date:"2026-07", claim:"SpaceX trades under $100 (post-lockup supply overhang)", horizon:"~H2 2026", status:"pend", note:"Float 3%→12% after Aug-4 earnings, →40% by Dec 8; no valuation framework"},
+  ],
+
+  timeline: [
+    {per:"NOW", items:[
+      {t:"Energy the active binding constraint; ~40% of DC projects mothballed for power (Chamath); Eisman 'binding constraint'", src:"T13,T24"},
+      {t:"Memory shortage acute (DRAM +100% possible) — but it's a cycle (O'Laughlin)", src:"T20"},
+      {t:"Bear bench credible but timing-disciplined: Eisman won't short, tape +85%; Hunter says melt-up can run +30-40%", src:"T24,T26"},
+      {t:"Top-signal to watch: euphoria/all-in sentiment + breadth narrowing (Hunter) + leaders fall while index rises (Grantham)", src:"T26,T22"},
+      {t:"Near-term jobs-safe now has the widest cross-incentive base (VC↔lab↔skeptic↔bear); 'builder' convergence underway", src:"T27,T09,T24"},
+      {t:"Software bifurcation resolved; scaling-plateau fork open (Andreessen weighs the 'continued' side)", src:"T19-T27"}
+    ]},
+    {per:"H2 2026", items:[
+      {t:"AI-lab IPO wave (Anthropic ~$1T→$3T); token-pricing revolt = watch trigger", src:"T18,T24"},
+      {t:"Power-constraint bites: chip output > ability to turn on (Musk)", src:"T10"},
+      {t:"Memory cycle: watch for pull-forward/double-order → eventual glut signal", src:"T20"},
+      {t:"Crypto/BTC 200-day breakout watch (Q4, Visser)", src:"T01"}
+    ]},
+    {per:"2027", items:[
+      {t:"Vera Rubin Ultra; TPU competitive window closes (HBM4); memory cycle likely turning", src:"T05,T20"},
+      {t:"China 'compelling chips' progress; reshoring milestones", src:"T14"},
+      {t:"Scaling-fork resolution likely visible (plateau vs continued)", src:"T24-T25"}
+    ]},
+    {per:"2028-29", items:[
+      {t:"NVDA 'Feynman'; annual ~10x token-cost declines", src:"T05"},
+      {t:"First AlphaFold-assisted drugs later-stage (tools real, approvals slow)", src:"T08,T25"},
+      {t:"Robots ubiquitous begins (3-5yr from 2026)", src:"T04"}
+    ]},
+    {per:"~2030+", items:[
+      {t:"AGI (Hassabis ~50%) vs Marcus (this century, maybe next) — CONTESTED", src:"T06,T25"},
+      {t:"Quantum 'meaningful' (Gelsinger, contested); digital-biology healthcare inflection", src:"T14,T06"}
+    ]}
+  ],
+
+  watchlist: [
+    {cat:"Energy & power — the #1 confluence theme (now bull+bear confirmed)", note:"If energy is the binding constraint, the picks-and-shovels of generation, grid gear and cooling are the cleanest expression. Named by both bulls and bears.", rows:[
+      {tkr:"GEV", name:"GE Vernova", theme:"Gas turbines (1 of 3 makers)", risk:"mod", label:"Large cap · liquid · run hard — crowded within theme"},
+      {tkr:"VRT", name:"Vertiv", theme:"DC power & cooling", risk:"mod", label:"Large cap · liquid · high beta to DC capex"},
+      {tkr:"ETN", name:"Eaton", theme:"Electrification (Eisman-named)", risk:"mod", label:"Large cap · liquid"},
+      {tkr:"PWR", name:"Quanta", theme:"Utility-plant buildout (Eisman-named)", risk:"mod", label:"Large cap · liquid"},
+      {tkr:"HWM", name:"Howmet", theme:"Turbine vanes/blades castings", risk:"mod", label:"Large cap · liquid · specific to the turbine bottleneck"},
+      {tkr:"CEG", name:"Constellation", theme:"Nuclear/baseload", risk:"mod", label:"Large cap · liquid · power-demand proxy"},
+      {tkr:"BE", name:"Bloom Energy", theme:"Behind-the-meter gen", risk:"spec", label:"Mid cap · lower liquidity · story-driven"}
+    ]},
+    {cat:"Semis & compute — consensus core, but watch the scaling fork", note:"Highest-confidence demand; most crowded trades in the world. The bull case hinges on the CONTESTED scaling debate — own eyes-open to that risk.", rows:[
+      {tkr:"NVDA", name:"Nvidia", theme:"Compute (tape +85%, won't-short per Eisman)", risk:"core", label:"Mega cap · ultra-liquid · consensus · exposed to scaling-plateau fork"},
+      {tkr:"TSM", name:"TSMC", theme:"Foundry monopoly", risk:"core", label:"Mega cap · liquid · Taiwan tail risk"},
+      {tkr:"AVGO", name:"Broadcom", theme:"Custom silicon/ASIC (TPU)", risk:"core", label:"Mega cap · liquid"},
+      {tkr:"ASML", name:"ASML", theme:"EUV chokepoint", risk:"core", label:"Mega cap · liquid · single-point leverage"},
+      {tkr:"MU", name:"Micron", theme:"Memory shortage→cycle", risk:"spec", label:"Large cap · liquid · CYCLICAL — timing risk; +160% YTD"},
+      {tkr:"ANET / AMPH", name:"Arista / Amphenol", theme:"AI networking (Eisman-named)", risk:"mod", label:"Large cap · liquid"},
+      {tkr:"INTC", name:"Intel", theme:"CPU comeback (agents need CPU)", risk:"spec", label:"Turnaround · US-base premium · Damodaran/O'Laughlin long"}
+    ]},
+    {cat:"The underrated mega caps", note:"Least-hyped giants; Alphabet named by a competitor and preferred by the valuation dean.", rows:[
+      {tkr:"GOOGL", name:"Alphabet", theme:"DeepMind+TPU(~$1T)+Isomorphic+Calico", risk:"core", label:"Mega cap · ultra-liquid · least-crowded mega-cap AI play"},
+      {tkr:"AAPL", name:"Apple", theme:"Consumer/on-device agents; restraint-as-edge (Damodaran)", risk:"core", label:"Mega cap · ultra-liquid"}
+    ]},
+    {cat:"The bear sleeve — RISKS to watch (not yet triggered)", note:"Credible, multi-source, but the bears counsel patience. Treat as hedge/short-watch pending a trigger.", rows:[
+      {tkr:"Private credit / neoclouds", name:"CoreWeave-type, PE software LBOs", theme:"Debt-funded AI-infra spillover", risk:"spec", label:"#1 bear theme · watch for refi crunch / VC pullback"},
+      {tkr:"FIG", name:"Figma", theme:"App-layer casualty (−50% on Claude Design)", risk:"spec", label:"Cautionary example, not a buy call"},
+      {tkr:"Seat SaaS (CRM/NOW/ADBE)", name:"Workflow SaaS", theme:"Bifurcation loser + multiple compression", risk:"mod", label:"Avoid till clarity (Eisman); verify per name"},
+      {tkr:"ORCL / META", name:"Oracle / Meta", theme:"Capex war 'cage fight'; debt (ORCL) & tolerance (META)", risk:"mod", label:"Market less tolerant of their capex than GOOG/AMZN"}
+    ]},
+    {cat:"Payments / stablecoins (THIN sourcing — extra caution)", note:"Still the most single-voice-dependent theme; one independent confirmation (Stripe-PayPal deal).", rows:[
+      {tkr:"PYPL", name:"PayPal", theme:"In play — $53B Stripe+Block+Advent bid", risk:"mod", label:"Large cap · event-driven"},
+      {tkr:"XYZ", name:"Block", theme:"Cash App + rails, part of bid", risk:"mod", label:"Large cap · higher beta"},
+      {tkr:"CRCL", name:"Circle", theme:"USDC stablecoin", risk:"spec", label:"Newer listing · volatile"},
+      {tkr:"V / MA", name:"Visa / Mastercard", theme:"Disruption target OR co-opter", risk:"mod", label:"Mega cap · could go either way"}
+    ]},
+    {cat:"Digital biology (enablers first; clinical payoff is 2028+)", note:"Two-CEO inflection call, now with a Marcus skeptic on the CLINICAL timeline. Trade enablers/data/compute ahead of drug approvals.", rows:[
+      {tkr:"LLY", name:"Eli Lilly", theme:"Pharma AI-adopter; NVDA supercomputer customer", risk:"core", label:"Mega cap · diversified, not a pure AI bet"},
+      {tkr:"TEM / RXRX / SDGR", name:"Tempus / Recursion / Schrödinger", theme:"AI drug-discovery platforms", risk:"spec", label:"Small-mid · volatile · long-dated · Marcus tempers timeline"},
+      {tkr:"CRSP / NTLA / BEAM", name:"CRISPR names", theme:"Gene-editing + AlphaGenome", risk:"spec", label:"Small cap · binary/clinical risk"}
+    ]}
+  ],
+
+  sourceComposition:[
+    {label:"AI-lab / hardware CEOs + specialists", pct:28, who:"Huang, Hassabis, Amodei, Chase, Osika, Gelsinger, Boris Cherny, Hasani (Liquid AI)"},
+    {label:"Valuation / skeptics / specialists", pct:24, who:"Damodaran ×3, O'Laughlin ×2, Eisman, Marcus ×2, Grantham"},
+    {label:"VC / max-bull operators", pct:20, who:"All-In (Chamath/Sacks/Calacanis/Friedberg) + Andreessen ×2"},
+    {label:"Accelerationist 'Moonshots' panel (correlated cluster)", pct:10, who:"Diamandis, Wissner-Gross, Blundin, Ismail, Mostaque + Musk ×3"},
+    {label:"Macro / thematic AI-bull", pct:8, who:"Visser ×3"},
+    {label:"Markets / tape (NEW)", pct:4, who:"Brown + Batnick (The Compound)"},
+    {label:"Contrarian macro / perma-bear (DISCOUNTED)", pct:3, who:"Hunter — verdict discounted, tools only"},
+    {label:"Academic / governance / legal", pct:3, who:"Hall, Menand, Tankus"}
+  ],
+  blindspots:[
+    "The 'no close-to-the-trade markets voice' gap is now PARTLY CLOSED — Brown+Batnick add a positioning/flows/earnings read (and independently confirmed Alphabet). More of this cohort would help.",
+    "Bear/skeptic side WELL represented (Damodaran, Eisman, Marcus, O'Laughlin, Grantham); the accelerationist wave (Moonshots, Andreessen, Musk) re-tilted the library BACK toward net-long-AI — now with a markets check, but watch the tilt.",
+    "Still NO China-DOMESTIC voice — the Moonshots panel are US commentators ON China (the china-open-weight theme is high-signal but outside-in).",
+    "No dedicated energy-utility/grid executive (energy is central but inferred from tech/finance/markets voices).",
+    "No credit/private-credit practitioner (the #1 bear theme still relies on outside-in analysis).",
+    "Crypto/stablecoin theme still leans heavily on one voice (Visser ×3).",
+    "Accelerationist cluster + max-bull VCs are a CORRELATED bloc — counted modestly (not one-vote-each), direction discounted; the tape voice is the main independent check on their optimism."
+  ],
+
+  method:{}
+};
+
+/* ============================================================ RENDER ============================================================ */
+const velMap={up:{s:"▲",c:"up",t:"Rising"},down:{s:"▼",c:"down",t:"Falling"},flat:{s:"■",c:"flat",t:"Stable"},new:{s:"✦",c:"new",t:"New/emerging"},contested:{s:"⇄",c:"contested",t:"Contested"}};
+const $=(s,el=document)=>el.querySelector(s);
+const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;};
+
+document.getElementById("edtag").textContent="Edition "+String(DATA.edition).padStart(3,"0")+" · built "+DATA.builtOn+" · "+DATA.transcripts+" transcripts · "+DATA.voices+" voices";
+
+const TABS=[
+  ["new","New Since Last","What the latest batch of transcripts changed: new themes, conviction moves, newly-contested items, and fresh trade ideas.",true],
+  ["velocity","Velocity Board","Every theme ranked by momentum — how fast conviction is moving — not just how high it sits.",false],
+  ["themes","Themes","Deep-dive on each theme: conviction, independent voices, camp (bull/bear/contested), why it's moving, dated changelog.",false],
+  ["timeline","Timeline & Predictions","Catalyst roadmap plus a scorecard grading each dated prediction hit / tracking / pending / miss.",false],
+  ["watchlist","Watchlist","Tickers mapped to themes with eyes-wide-open labels: cap tier, liquidity, crowdedness.",false],
+  ["library","Library","Every transcript with its record date and a pro-grade executive summary.",false],
+  ["sources","Source X-Ray","The honesty panel: what voices are in the library and which perspectives are still missing.",false],
+  ["method","Methodology","How scoring, velocity, confluence, chronology and bias-control actually work.",false]
+];
+const tabsNav=$("#tabs");
+TABS.forEach(([id,label,tip,dot],i)=>{
+  const b=el("button",i===0?"active":"",label+(dot?'<span class="dot"></span>':''));
+  b.title=tip;
+  b.onclick=()=>{document.querySelectorAll("nav.tabs button").forEach(x=>x.classList.remove("active"));document.querySelectorAll("section.view").forEach(x=>x.classList.remove("active"));b.classList.add("active");$("#v-"+id).classList.add("active");window.scrollTo(0,0);};
+  tabsNav.appendChild(b);
+});
+
+/* ---- New Since Last (landing) ---- */
+function renderNew(){
+  const v=$("#v-new");v.innerHTML="";
+  const n=DATA.newSinceLast;
+  v.appendChild(el("p","lead","<b>"+DATA.lastBatchLabel+".</b> "+DATA.lastBatchRange+". This is the delta since your last review — bumped against all "+DATA.transcripts+" transcripts to recompute confluence."));
+  v.appendChild(el("div","panel","<b style='color:var(--ink)'>Headline.</b> "+n.headline));
+  v.appendChild(el("div","sub","New themes this batch"));
+  n.newThemes.forEach(x=>{const c=el("div","deltacard new");c.appendChild(el("h4","",x.name));c.appendChild(el("div","why",x.why));c.appendChild(el("div","src","Sources: "+x.src));v.appendChild(c);});
+  v.appendChild(el("div","sub","Conviction moves"));
+  n.convictionMoves.forEach(x=>{const c=el("div","deltacard "+x.dir);const arrow={up:"▲ ",down:"▼ ",contested:"⇄ ",flat:"■ "}[x.dir]||"";c.appendChild(el("h4","",arrow+x.name));c.appendChild(el("div","why",x.why));c.appendChild(el("div","src","Sources: "+x.src));v.appendChild(c);});
+  v.appendChild(el("div","sub","Newly contested / debates to resolve"));
+  n.contested.forEach(x=>{const c=el("div","deltacard contested");c.appendChild(el("h4","","⇄ "+x.name));c.appendChild(el("div","why",x.why));c.appendChild(el("div","src","Sources: "+x.src));v.appendChild(c);});
+  v.appendChild(el("div","sub","New trade ideas"));
+  v.appendChild(el("div","hint","Research candidates only — verify before acting. Not advice. Prices/valuations are not live. <b>Long</b>/<b>Short</b>/<b>Watch</b> = directional lean; risk tag = cap/liquidity/crowdedness."));
+  DATA.tradeIdeas.forEach(t=>{
+    const row=el("div","trade");
+    const left=el("div");left.appendChild(el("div","tk",t.ticker));left.appendChild(el("div","dir "+t.dir,t.dir.toUpperCase()));row.appendChild(left);
+    const mid=el("div");mid.appendChild(el("div","",`<b>${t.name}</b> <span class='faint' style='font-size:12px'>· ${t.theme}</span>`));mid.appendChild(el("div","muted",t.thesis));mid.appendChild(el("div","src",`<span class='faint' style='font-size:11.5px'>${t.src}</span>`));row.appendChild(mid);
+    row.appendChild(el("div","rc","<span class='risk "+t.risk+"'>"+({core:'CORE',mod:'MODERATE',spec:'SPECULATIVE'})[t.risk]+"</span>"));
+    v.appendChild(row);
+  });
+  v.appendChild(el("div","panel","<b style='color:var(--ink)'>Timing discipline.</b> "+n.timingNote));
+}
+
+/* ---- Velocity ---- */
+function renderVelocity(){
+  const v=$("#v-velocity");v.innerHTML="";
+  v.appendChild(el("p","lead","<b>The momentum view.</b> Themes ranked by how fast conviction is moving and in which direction. Camp tags show which side of the thesis each sits on. Click any theme for its changelog."));
+  const k=el("div","kpis");
+  const rising=DATA.themes.filter(t=>t.velocity==="up").length;
+  const bear=DATA.themes.filter(t=>t.camp==="bear").length;
+  const cont=DATA.themes.filter(t=>t.velocity==="contested"||t.camp==="contested").length;
+  [["‎"+DATA.themes.length,"themes tracked","Total distinct themes, from high-conviction to emerging watch."],
+   [rising+" ↑","rising this edition","Themes whose conviction moved up — the momentum signal."],
+   [bear,"bear/risk themes","Credible, multi-source downside themes now tracked as risks."],
+   [cont,"contested debates","Forks where credible voices disagree — flagged, not smoothed."]].forEach(([nn,l,tip])=>{const c=el("div","kpi");c.title=tip;c.appendChild(el("div","n",nn));c.appendChild(el("div","l",l));k.appendChild(c);});
+  v.appendChild(k);
+  v.appendChild(el("div","legend",
+    '<span><b class="vel up" style="font-size:13px">▲</b> Rising</span><span><b style="color:var(--flat)">■</b> Stable</span><span><b style="color:var(--new)">✦</b> New</span><span><b style="color:var(--cont)">⇄</b> Contested</span>'+
+    '<span><span class="camp bull">BULL</span> <span class="camp bear">BEAR</span> <span class="camp contested">CONTESTED</span> <span class="camp emerging">EMERGING</span></span>'));
+  const order=[...DATA.themes].sort((a,b)=>{const rank=t=>({up:3,new:2,contested:2,flat:1,down:0})[t.velocity]*100+t.conviction;return rank(b)-rank(a);});
+  order.forEach(t=>{
+    const row=el("div","themebar");const vm=velMap[t.velocity]||velMap.flat;
+    row.appendChild(el("div","vel "+vm.c,vm.s));
+    const mid=el("div");
+    mid.appendChild(el("div","tname",t.name+' <span class="camp '+t.camp+'">'+t.camp.toUpperCase()+'</span>'+(t.opposed?' <span class="pill flag">cross-incentive</span>':'')));
+    mid.appendChild(el("div","tmeta",`${vm.t} · ${t.sources} independent voice${t.sources>1?'s':''} · ${t.tier}`));
+    row.appendChild(mid);
+    const cw=el("div","convwrap");const tr=el("div","track");const f=el("div","fill");f.style.width=(t.conviction*10)+"%";tr.appendChild(f);cw.appendChild(tr);cw.appendChild(el("div","cscore",t.conviction.toFixed(1)));row.appendChild(cw);
+    row.onclick=()=>{document.querySelectorAll("nav.tabs button")[2].click();setTimeout(()=>{const d=document.getElementById("th-"+t.id);if(d){d.open=true;d.scrollIntoView({behavior:"smooth",block:"start"});}},60);};
+    v.appendChild(row);
+  });
+}
+
+/* ---- Themes ---- */
+function renderThemes(){
+  const v=$("#v-themes");v.innerHTML="";
+  v.appendChild(el("p","lead","Every theme is a living object: conviction, count of <em>independent</em> voices, camp, a plain-English reason for its direction, and an append-only changelog. Nothing overwritten — only appended."));
+  const order=[...DATA.themes].sort((a,b)=>b.conviction-a.conviction);
+  order.forEach(t=>{
+    const d=el("details","drill");d.id="th-"+t.id;const vm=velMap[t.velocity]||velMap.flat;
+    const sum=el("summary");sum.style.cssText="cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:baseline;flex-wrap:wrap";
+    sum.innerHTML=`<span><span class="vel ${vm.c}" style="font-size:14px">${vm.s}</span> <b style="font-size:16px">${t.name}</b> <span class="camp ${t.camp}">${t.camp.toUpperCase()}</span></span><span class="faint" style="font-variant-numeric:tabular-nums">conviction <b style="color:var(--ink)">${t.conviction.toFixed(1)}</b> · ${t.sources} voice${t.sources>1?'s':''} · ${t.tier}</span>`;
+    d.appendChild(sum);
+    const tagbox=el("div");tagbox.style.margin="10px 0 4px";(t.tags||[]).forEach(tag=>{const cls=/FLAG|CONTESTED|thin|discount/i.test(tag)?"pill flag":"pill";tagbox.appendChild(el("span",cls,tag));});d.appendChild(tagbox);
+    d.appendChild(el("p","",t.summary));
+    d.appendChild(el("div","reason","<b>Why it's here / direction:</b> "+t.reason));
+    d.appendChild(el("div","srcline","<b>Voices:</b> "+t.voices));
+    const log=el("div","changelog");(t.log||[]).slice().reverse().forEach(e=>{const item=el("div","cl");item.appendChild(el("div","d",e.d));item.appendChild(el("div","t",e.t));log.appendChild(item);});
+    d.appendChild(el("div","faint","<b style='color:var(--dim)'>Changelog</b> (newest first)"));d.appendChild(log);
+    v.appendChild(d);
+  });
+}
+
+/* ---- Timeline ---- */
+function renderTimeline(){
+  const v=$("#v-timeline");v.innerHTML="";
+  v.appendChild(el("p","lead","The roadmap of catalysts (now → 2030+) plus a scorecard grading every dated prediction. Over time this calibrates which voices to trust."));
+  const tl=el("div","panel");tl.appendChild(el("h3","","Roadmap — catalysts & expected inflections"));
+  DATA.timeline.forEach(p=>{const row=el("div","tlrow");row.appendChild(el("div","tlper",p.per));const box=el("div");p.items.forEach(it=>box.appendChild(el("div","tlitem",it.t+` <span class="src">— ${it.src}</span>`)));row.appendChild(box);tl.appendChild(row);});
+  v.appendChild(tl);
+  const pp=el("div","panel");pp.appendChild(el("h3","","Prediction scorecard"));
+  pp.appendChild(el("div","hint","<span class='stat hit'>HIT</span> confirmed · <span class='stat track'>TRACKING</span> trending/partly against · <span class='stat pend'>PENDING</span> not yet due · <span class='stat miss'>MISS</span> falsified"));
+  const tb=el("table","pred");tb.innerHTML="<thead><tr><th>Voice</th><th>Prediction</th><th>Horizon</th><th>Status</th></tr></thead>";const body=el("tbody");
+  const rank={hit:0,miss:1,track:2,pend:3};
+  [...DATA.predictions].sort((a,b)=>rank[a.status]-rank[b.status]).forEach(p=>{const tr=el("tr");tr.appendChild(el("td","","<b>"+p.who+"</b><br><span class='faint' style='font-size:11px'>"+p.date+"</span>"));tr.appendChild(el("td","",p.claim+(p.note?`<br><span class='faint' style='font-size:12px'>${p.note}</span>`:"")));tr.appendChild(el("td","",p.horizon));const sc={hit:"HIT",miss:"MISS",track:"TRACKING",pend:"PENDING"}[p.status];tr.appendChild(el("td","","<span class='stat "+p.status+"'>"+sc+"</span>"));body.appendChild(tr);});
+  tb.appendChild(body);pp.appendChild(tb);v.appendChild(pp);
+}
+
+/* ---- Watchlist ---- */
+function renderWatchlist(){
+  const v=$("#v-watchlist");v.innerHTML="";
+  v.appendChild(el("p","lead","Companies mapped to themes, each with an <b>eyes-wide-open</b> label: cap tier, liquidity, crowdedness. Full spectrum, so you can size and pick with clear risk context."));
+  const warn=el("div","blind");warn.innerHTML="<h4>⚠ Read before using</h4><span class='muted'><b>Research candidates, not recommendations.</b> Prices, valuations and positioning are <b>NOT live</b>. Verify everything. Not financial advice.</span>";v.appendChild(warn);
+  v.appendChild(el("div","legend","<span><span class='risk core'>CORE</span> liquid mega/large — easier to act</span><span><span class='risk mod'>MODERATE</span> some timing/crowding risk</span><span><span class='risk spec'>SPECULATIVE</span> small/low-liquidity/narrative</span>"));
+  DATA.watchlist.forEach(c=>{const box=el("div","wcat");box.appendChild(el("h3","",c.cat));box.appendChild(el("div","muted",c.note));const tb=el("table","wtable");tb.innerHTML="<thead><tr><th>Ticker</th><th>Name</th><th>Theme link</th><th>Eyes-wide-open</th></tr></thead>";const body=el("tbody");c.rows.forEach(r=>{const tr=el("tr");tr.appendChild(el("td","","<span class='tkr'>"+r.tkr+"</span>"));tr.appendChild(el("td","",r.name));tr.appendChild(el("td","muted",r.theme));tr.appendChild(el("td","","<span class='risk "+r.risk+"'>"+({core:'CORE',mod:'MODERATE',spec:'SPECULATIVE'})[r.risk]+"</span> <span class='faint' style='font-size:12px'>"+r.label+"</span>"));body.appendChild(tr);});tb.appendChild(body);box.appendChild(tb);v.appendChild(box);});
+}
+
+/* ---- Library ---- */
+function renderLibrary(){
+  const v=$("#v-library");v.innerHTML="";
+  v.appendChild(el("p","lead","Every transcript in the library, newest first, with its record date and a professional executive summary — macro trends, primary message, investment opportunities, and key risks — written for an investor hunting edge."));
+  const order=[...DATA.library].sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+  const grid=el("div","libgrid");
+  order.forEach(t=>{
+    const d=el("details","libcard");
+    const sum=el("summary");sum.innerHTML=`<span class="lt">${t.id} · ${t.title}</span><span class="lm">${t.date} · ${t.type}</span>`;d.appendChild(sum);
+    const body=el("div","libbody");
+    if(t.bias)body.appendChild(el("div","bias","<b>Bias flag:</b> "+t.bias));
+    const secs=[["Macro trends",t.macro],["Primary focus / message",t.message],["Investment opportunities",t.opps],["Key risks",t.risks]];
+    secs.forEach(([h,b])=>{if(b){const s=el("div","exsec");s.appendChild(el("div","h",h));s.appendChild(el("div","b",b));body.appendChild(s);}});
+    d.appendChild(body);grid.appendChild(d);
+  });
+  v.appendChild(grid);
+}
+
+/* ---- Sources ---- */
+function renderSources(){
+  const v=$("#v-sources");v.innerHTML="";
+  v.appendChild(el("p","lead","The honesty panel. The library inherits the bias of what's fed in — so this x-ray shows the mix of voices and, more importantly, what's still missing. When a theme is 'high conviction' but every voice shares one incentive, treat the number with suspicion."));
+  const p=el("div","panel");p.appendChild(el("h3","","Composition of the "+DATA.voices+" distinct voices"));
+  const bars=el("div","bars");DATA.sourceComposition.forEach(s=>{const row=el("div","b");row.appendChild(el("div","lab",s.label+"<br><span class='faint' style='font-size:11px'>"+s.who+"</span>"));const bt=el("div","bt");const bf=el("div","bf");bf.style.width=s.pct+"%";bt.appendChild(bf);row.appendChild(bt);row.appendChild(el("div","faint",s.pct+"%"));bars.appendChild(row);});
+  p.appendChild(bars);v.appendChild(p);
+  const b=el("div","blind");let h="<h4>Blind spots &amp; directional bias</h4><ul style='margin:8px 0 0;padding-left:18px' class='muted'>";DATA.blindspots.forEach(x=>h+="<li style='margin:4px 0'>"+x+"</li>");h+="</ul><p class='muted' style='margin-top:12px'><b>What to feed next to keep stress-testing:</b> a China-domestic voice, an energy-utility/grid executive, a private-credit practitioner, and independent corroboration of the crypto-rails theme. Keep disconfirming — not just reinforcing.</p>";b.innerHTML=h;v.appendChild(b);
+}
+
+/* ---- Methodology ---- */
+function renderMethod(){
+  const v=$("#v-method");v.innerHTML="";
+  v.appendChild(el("p","lead","How the engine works — so every number is auditable."));
+  const p=el("div","panel");
+  p.innerHTML=`
+  <h3>Confluence — the core loop</h3>
+  <p class="muted">Every new transcript is <b>bumped against all prior transcripts</b>, not read in isolation. That recomputes which themes just gained an independent voice, which became contested, and which conviction moved. The <b>New Since Last</b> tab surfaces that delta each rebuild. The whole site is re-rendered as a new dated <b>Edition</b>; history lives in each theme's append-only changelog.</p>
+  <h3 style="margin-top:16px">Scoring</h3>
+  <p class="muted">Conviction (0–10) is <b>source-diversity weighted</b>: it rises with the number of <b>independent</b> voices. One person's repeat appearances = one voice (Damodaran ×3 = one voice; Marcus ×2 = one voice). Agreement across <b>opposed incentives</b> counts double — bulls and bears converging is the strongest signal (why 'energy' sits highest). Tempered by recency and how priced-in an idea is; each score carries a one-line reason.</p>
+  <h3 style="margin-top:16px">Camps &amp; contested items</h3>
+  <p class="muted">Themes are tagged BULL / BEAR / CONTESTED / EMERGING so the thesis stays two-sided. Contested forks (scaling plateau, AI sovereignty, Microsoft) are flagged and shown, never smoothed into a false average — because the disagreement is itself the information.</p>
+  <h3 style="margin-top:16px">Velocity &amp; timing</h3>
+  <p class="muted">The Velocity Board ranks by momentum, not level — the edge is catching convergence early. Bear themes are held as RISKS/watch-items, not sell signals, until a specific trigger fires (token-pricing revolt, VC pullback, lab stumble, or a leadership-breakdown top signal).</p>
+  <h3 style="margin-top:16px">Bias control</h3>
+  <p class="muted">The Source X-Ray tracks voice composition and flags blind spots, because the person selecting the source material shapes the conclusions. High-conviction themes built on a single incentive class are flagged, not trusted.</p>`;
+  v.appendChild(p);
+  v.appendChild(el("div","disc","<b>Disclaimer.</b> Research prototype, not investment advice. Content is distilled from user-provided podcast/interview transcripts and reflects the (biased, self-interested) views of their speakers. Tickers are research candidates only; prices, valuations and positioning are not live and must be independently verified. Claude is not a financial advisor. Do your own diligence before making any investment decision."));
+}
+
+renderNew();renderVelocity();renderThemes();renderTimeline();renderWatchlist();renderLibrary();renderSources();renderMethod();
+</script>
+</body>
+</html>
