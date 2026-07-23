@@ -949,30 +949,42 @@ function twFirst(s){const m=(s||"").split(/(?<=[.!?])\s/);return (m[0]||s||"").t
 const TW_KWCASH=[[/alphabet|google|googl/i,"$GOOGL"],[/servicenow/i,"$NOW"],[/vernova/i,"$GEV"],[/micron|memory|\bdram\b|\bhbm\b/i,"$MU"],[/nvidia|\bnvda\b/i,"$NVDA"],[/vertiv|eaton|\bgrid\b|power|energy|turbine/i,"$GEV $VRT"]];
 function twCashText(t){for(const[re,tag]of TW_KWCASH){if(re.test(t))return tag;}return "";}
 function twCashTicker(t){t=(t||"").trim();if(/^[A-Z][A-Z0-9]{0,4}(\s*\/\s*[A-Z][A-Z0-9]{0,4})?$/.test(t)){return (t.match(/\b[A-Z]{1,5}\b/g)||[]).slice(0,3).map(x=>"$"+x).join(" ");}return "";}
-const TW_NFA="NFA — my own synthesis, not advice.";
+const TW_NFA="NFA";
 function twAssemble(lines){return lines.filter(Boolean).join("\n");}
+// Pick the sentence with the most concrete specifics (numbers, %, $, multiples) — that's where the teeth are.
+function twScore(s){let n=0;n+=(s.match(/\d/g)||[]).length*2;n+=(s.match(/[%$]/g)||[]).length*3;n+=(s.match(/\b\d+(\.\d+)?x\b/gi)||[]).length*3;n+=(s.match(/\b(billion|trillion|backlog|margin|renewal|capex|shortage)\b/gi)||[]).length;return n-s.length*0.012;}
+function twClean(x){return x.replace(/\s*(→|~)\s*[\d.]+\.?\s*$/,"").replace(/\s*\([^)]*\)\s*$/,"").trim();}
+function twSentences(pool){const arr=[];(pool||[]).filter(Boolean).forEach(txt=>{txt.replace(/\s+/g," ").split(/(?<=[.!?])\s+/).forEach(x=>{x=twClean(x.trim().replace(/^[—\-•]\s*/,""));if(x.length>=25&&x.length<=400)arr.push(x);});});return arr;}
+function twPunch(pool){const s=twSentences(pool);if(!s.length)return "";s.sort((a,b)=>twScore(b)-twScore(a));return s[0];}
+const TW_HOOK_THEME=["My highest-conviction read:","The confluence nobody has time to find:","Underpriced and converging:","Everyone's distracted — this is the signal:","Hot take after 35 transcripts:","The trade hiding in plain sight:"];
+const TW_HOOK_TRADE=["Where I'd put money to work:","The cleanest expression of this trade:","One name doing the work:","Underhyped, mispriced:"];
+const TW_HOOK_CAT=["New signal:","The tape just confirmed it:","Reality check — delivered:","Fresh data, thesis intact:"];
 
 function buildTweets(){
   const out=[];
-  // 1) Theme spotlights — highest-conviction confluence
-  DATA.themes.filter(t=>t.conviction>=8.0).sort((a,b)=>b.conviction-a.conviction).slice(0,6).forEach(t=>{
+  // 1) Theme spotlights — highest-conviction confluence, led with the sharpest stat
+  const spot=DATA.themes.filter(t=>t.conviction>=8.0).sort((a,b)=>b.conviction-a.conviction).slice(0,6);
+  const hi=spot.length?spot[0].conviction:0;
+  spot.forEach((t,i)=>{
     const cash=twCashText(t.name+" "+t.summary);
-    const why=twSnip(twFirst(t.summary),140);
-    const conv=t.conviction+"/10 across "+t.sources+" independent voices"+(t.opposed?" — even opposed incentives agree":"");
-    out.push({cat:"Theme spotlight", text:twAssemble(["🎯 CONFLUENCE — "+t.name.toUpperCase(), conv, why, cash, TW_NFA])});
+    const punch=twSnip(twPunch([t.summary,t.reason].concat((t.log||[]).map(l=>l.t))),150);
+    const flag=(t.conviction===hi)?" — my highest":(/bedrock/i.test(t.tier||"")?" — bedrock":"");
+    const stance="Conviction "+t.conviction+"/10"+flag+". "+t.sources+" voices"+(t.opposed?", even the bears":"")+".";
+    out.push({cat:"Theme spotlight", text:twAssemble([TW_HOOK_THEME[i%TW_HOOK_THEME.length]+" "+t.name+".", punch, stance, cash, TW_NFA])});
   });
   // 2) Trade ideas — the tradeable setups
-  const dirWord={long:"long",short:"short",watch:"watchlist"};
-  DATA.tradeIdeas.slice(0,7).forEach(ti=>{
+  const dirWord={long:"long",short:"short",watch:"on watch"};
+  DATA.tradeIdeas.slice(0,7).forEach((ti,i)=>{
     const cash=twCashTicker(ti.ticker);
-    const head="💡 "+(cash?ti.ticker:ti.name)+" — "+(dirWord[ti.dir]||ti.dir);
-    const th=twSnip(twFirst(ti.thesis),160);
-    out.push({cat:"Trade idea", text:twAssemble([head, th, cash, TW_NFA])});
+    const label=(cash?ti.ticker:ti.name)+" — "+(dirWord[ti.dir]||ti.dir);
+    const punch=twSnip(ti.thesis,185);
+    out.push({cat:"Trade idea", text:twAssemble([TW_HOOK_TRADE[i%TW_HOOK_TRADE.length]+" "+label+".", punch, cash, TW_NFA])});
   });
   // 3) New catalysts — freshest deltas this edition
-  (DATA.newSinceLast.convictionMoves||[]).filter(m=>m.dir==="up").slice(0,4).forEach(m=>{
+  (DATA.newSinceLast.convictionMoves||[]).filter(m=>m.dir==="up").slice(0,4).forEach((m,i)=>{
     const cash=twCashText(m.name+" "+m.why);
-    out.push({cat:"New catalyst", text:twAssemble(["⚡ NEW — "+m.name, twSnip(twFirst(m.why),150), cash, TW_NFA])});
+    const punch=twSnip(twPunch([m.why]),155);
+    out.push({cat:"New catalyst", text:twAssemble([TW_HOOK_CAT[i%TW_HOOK_CAT.length]+" "+m.name+".", punch, cash, TW_NFA])});
   });
   return out;
 }
@@ -1000,8 +1012,8 @@ function renderTweets(){
   const v=$("#v-tweets");v.innerHTML="";
   const intro=el("div","tw-intro");
   intro.appendChild(el("h2","","🐦 Tweets — turn the confluence into posts"));
-  intro.appendChild(el("p","","Drafts are generated live from your current edition (Ed. "+String(DATA.edition).padStart(3,"0")+" · "+DATA.transcripts+" transcripts), so they refresh every rebuild. Edit any draft in place, watch the 280-character counter, then hit <b>Post to X</b> — X opens in a new tab with the tweet <b>pre-filled</b> so you can eyeball it and click Post. Nothing posts automatically; you're always the last click."));
-  intro.appendChild(el("div","tw-bio","<b>Suggested bio:</b> \"I listen to more AI &amp; macro podcasts than anyone has time for, then surface the confluence and the investable themes. NFA.\""));
+  intro.appendChild(el("p","","Drafts are generated live from your current edition (Ed. "+String(DATA.edition).padStart(3,"0")+" · "+DATA.transcripts+" transcripts) and refresh on every rebuild. Each leads with the sharpest stat, not a vague summary. Edit any draft in place, watch the 280-character counter, then hit <b>Post to X</b> — X opens in a new tab with the tweet <b>pre-filled</b> so you can eyeball it and click Post. Nothing posts automatically; you're always the last click."));
+  intro.appendChild(el("div","tw-bio","<b>Put the full disclaimer in your X bio</b> so every post doesn't have to carry it: <i>\"I listen to more AI &amp; macro podcasts than anyone has time for, then surface the confluence and the investable themes. Not financial advice.\"</i> — tweets append a short <b>NFA</b> as a backstop."));
   v.appendChild(intro);
   const grid=el("div","tw-grid");
   buildTweets().forEach(tw=>grid.appendChild(tweetCard(tw)));
