@@ -132,6 +132,16 @@ table.pred th{color:var(--faint);font-weight:600;font-size:12px;text-transform:u
 .libcard .lt{font-weight:650}
 .libcard .lm{color:var(--faint);font-size:12px;font-variant-numeric:tabular-nums}
 .libbody{padding:2px 16px 16px;border-top:1px solid var(--line)}
+.libsort{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 16px}
+.libsort .sortlab{color:var(--faint);font-size:12px;margin-right:2px}
+.sortbtn{background:var(--panel);color:var(--dim);border:1px solid var(--line);padding:7px 13px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:550;display:inline-flex;align-items:center;gap:6px}
+.sortbtn:hover{color:var(--ink);border-color:#38465a}
+.sortbtn.active{background:var(--accent);color:#0b0e13;border-color:var(--accent)}
+.sortbtn .sarrow{font-size:11px;font-weight:700;opacity:.85}
+.libgrouphd{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin:16px 2px 4px;padding:0 4px 6px;border-bottom:1px solid var(--line)}
+.libgrouphd:first-child{margin-top:0}
+.libgrouphd .gname{font-weight:700;font-size:14.5px;color:var(--ink)}
+.libgrouphd .gcount{font-size:11.5px;color:var(--faint);font-variant-numeric:tabular-nums;white-space:nowrap}
 .exsec{margin-top:11px}
 .exsec .h{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--accent)}
 .exsec .b{color:var(--ink);font-size:13.5px;margin-top:2px}
@@ -856,6 +866,13 @@ const velMap={up:{s:"▲",c:"up",t:"Rising"},down:{s:"▼",c:"down",t:"Falling"}
 const $=(s,el=document)=>el.querySelector(s);
 const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;};
 
+/* canonical source per library card (repeat appearances of one person lumped; multi-guest panels use the show name) */
+const LIBSRC={T01:"Jordi Visser",T02:"Jordi Visser",T03:"Jensen Huang",T04:"Jensen Huang",T05:"Jensen Huang",T06:"Demis Hassabis",T07:"Demis Hassabis",T08:"Demis Hassabis",T09:"Dario Amodei",T10:"Elon Musk",T11:"Elon Musk",T12:"Jordi Visser",T13:"All-In",T14:"All-In",T15:"All-In",T16:"Aswath Damodaran",T17:"Aswath Damodaran",T18:"Aswath Damodaran",T19:"Doug O'Laughlin",T20:"Doug O'Laughlin",T21:"Boris Cherny",T22:"Jeremy Grantham",T23:"Menand & Tankus",T24:"Gary Marcus",T25:"Gary Marcus",T26:"David Hunter",T27:"Marc Andreessen",T28:"Marc Andreessen",T29:"Moonshots (Diamandis)",T30:"Moonshots (Diamandis)",T31:"Elon Musk",T32:"The Compound",T33:"ChinAI (Jeff Ding)",T34:"ServiceNow (earnings)",T35:"Alphabet (earnings)",T36:"Jordi Visser",T37:"Ron & Michael Baron",T38:"Jeremy Eliuveros (SemiAnalysis)",T39:"Bob Sorensen",T40:"Ember",T41:"John Davis",T42:"Marc Rowan",T43:"Marc Lipschultz",T44:"Russell Clark",T45:"Liaquat Ahamed",T46:"Eric (YWR)",T47:"Ben Pulandian",T48:"Sean McGould",T49:"Takahē Capital",T51:"Nick Carter",T52:"Nick Carter",T53:"Austin Campbell",T54:"Austin Campbell",T55:"BG2",T56:"Applied Intuition",T57:"David George",T58:"On the Tape",T59:"Animal Spirits"};
+const srcOf=t=>LIBSRC[t.id]||(t.title||"").split(/ [—–-] | on | w\//)[0].trim();
+const addNum=t=>parseInt(String(t.id).replace(/\D/g,""),10)||0;
+let libMode="added";
+const libRev={added:false,recorded:false,source:false};
+
 document.getElementById("edtag").textContent="Edition "+String(DATA.edition).padStart(3,"0")+" · built "+DATA.builtOn+" · "+DATA.transcripts+" transcripts · "+DATA.voices+" voices";
 
 const TABS=[
@@ -976,21 +993,63 @@ function renderWatchlist(){
 }
 
 /* ---- Library ---- */
+function libCard(t){
+  const d=el("details","libcard");
+  const sum=el("summary");sum.innerHTML=`<span class="lt">${t.id} · ${t.title}</span><span class="lm">${t.date} · ${t.type}</span>`;d.appendChild(sum);
+  const body=el("div","libbody");
+  if(t.bias)body.appendChild(el("div","bias","<b>Bias flag:</b> "+t.bias));
+  const secs=[["Macro trends",t.macro],["Primary focus / message",t.message],["Investment opportunities",t.opps],["Key risks",t.risks]];
+  secs.forEach(([h,b])=>{if(b){const s=el("div","exsec");s.appendChild(el("div","h",h));s.appendChild(el("div","b",b));body.appendChild(s);}});
+  if(t.bottom)body.appendChild(el("div","botline","<b>Bottom line:</b> "+t.bottom));
+  d.appendChild(body);return d;
+}
 function renderLibrary(){
   const v=$("#v-library");v.innerHTML="";
-  v.appendChild(el("p","lead","Every transcript in the library, newest first, with its record date and a professional executive summary — macro trends, primary message, investment opportunities, and key risks — written for an investor hunting edge."));
-  const order=[...DATA.library].sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+  v.appendChild(el("p","lead","Every transcript in the library, with a professional executive summary — macro trends, primary message, investment opportunities, and key risks. Sort by when you added it to Confluenza, by when it was recorded, or group by source. Click the active button again to reverse the order."));
+  const bar=el("div","libsort");
+  bar.appendChild(el("span","sortlab","Sort:"));
+  const mk=(mode,label)=>{
+    const b=el("button","sortbtn"+(libMode===mode?" active":""));
+    let arrow="";
+    if(libMode===mode){
+      if(mode==="source") arrow=libRev.source?"fewest ↑":"most ↓";
+      else arrow=libRev[mode]?"oldest ↑":"newest ↓";
+    }
+    b.innerHTML=label+(arrow?"<span class='sarrow'>"+arrow+"</span>":"");
+    b.onclick=()=>{ if(libMode===mode){libRev[mode]=!libRev[mode];} else {libMode=mode;} renderLibrary(); };
+    bar.appendChild(b);
+  };
+  mk("added","Date added");
+  mk("recorded","Date recorded");
+  mk("source","Source");
+  v.appendChild(bar);
   const grid=el("div","libgrid");
-  order.forEach(t=>{
-    const d=el("details","libcard");
-    const sum=el("summary");sum.innerHTML=`<span class="lt">${t.id} · ${t.title}</span><span class="lm">${t.date} · ${t.type}</span>`;d.appendChild(sum);
-    const body=el("div","libbody");
-    if(t.bias)body.appendChild(el("div","bias","<b>Bias flag:</b> "+t.bias));
-    const secs=[["Macro trends",t.macro],["Primary focus / message",t.message],["Investment opportunities",t.opps],["Key risks",t.risks]];
-    secs.forEach(([h,b])=>{if(b){const s=el("div","exsec");s.appendChild(el("div","h",h));s.appendChild(el("div","b",b));body.appendChild(s);}});
-    if(t.bottom)body.appendChild(el("div","botline","<b>Bottom line:</b> "+t.bottom));
-    d.appendChild(body);grid.appendChild(d);
-  });
+  if(libMode==="source"){
+    const groups={};
+    DATA.library.forEach(t=>{const s=srcOf(t);(groups[s]=groups[s]||[]).push(t);});
+    let keys=Object.keys(groups);
+    keys.sort((a,b)=>{
+      const d=groups[b].length-groups[a].length; if(d) return d;               // most independent inputs first
+      const ra=Math.max(...groups[a].map(x=>Date.parse(x.date||0)||0));
+      const rb=Math.max(...groups[b].map(x=>Date.parse(x.date||0)||0));
+      if(rb!==ra) return rb-ra;                                                // tie → most recent activity first
+      return a.localeCompare(b);
+    });
+    if(libRev.source) keys.reverse();
+    keys.forEach(k=>{
+      const cnt=groups[k].length;
+      const hd=el("div","libgrouphd");
+      hd.innerHTML="<span class='gname'>"+k+"</span><span class='gcount'>"+cnt+" input"+(cnt>1?"s":"")+"</span>";
+      grid.appendChild(hd);
+      groups[k].slice().sort((a,b)=>(b.date||"").localeCompare(a.date||"")).forEach(t=>grid.appendChild(libCard(t)));
+    });
+  } else {
+    let order=[...DATA.library];
+    if(libMode==="added") order.sort((a,b)=>addNum(b)-addNum(a));               // most recently added first
+    else order.sort((a,b)=>(b.date||"").localeCompare(a.date||""));            // most recently recorded first
+    if(libRev[libMode]) order.reverse();
+    order.forEach(t=>grid.appendChild(libCard(t)));
+  }
   v.appendChild(grid);
 }
 
