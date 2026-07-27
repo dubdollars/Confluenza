@@ -46,6 +46,13 @@ section.view.active{display:block}
 .tw-count.over{color:var(--bear);font-weight:700}
 .tw-btn{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;padding:7px 13px;font-size:13px;font-weight:600;cursor:pointer}
 .tw-btn:hover{border-color:#38465a}
+.tw-use{margin-left:auto;display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--faint);cursor:pointer;user-select:none}
+.tw-use:hover{color:var(--dim)}
+.tw-use input{accent-color:var(--accent);cursor:pointer;margin:0}
+.tw-card.tw-used{opacity:.6}
+.tw-card.tw-used .tw-use{color:var(--bull)}
+.tw-arch{margin-top:18px}
+.tw-arch>summary .lt{color:var(--bull)}
 .tw-post{background:var(--accent);color:#0b0e13;border-color:var(--accent);display:inline-flex;align-items:center;gap:6px}
 .tw-post:hover{filter:brightness(1.08)}
 .lead{color:var(--dim);max-width:880px;margin:2px 0 20px}
@@ -1194,11 +1201,23 @@ function renderMethod(){
 
 /* ---- Tweets: served from the hand-curated DATA.tweets set ---- */
 
+/* used/archived state persists in this browser (localStorage) */
+function twKey(tw){const s=tw.text||"";let h=5381;for(let i=0;i<s.length;i++){h=((h<<5)+h+s.charCodeAt(i))>>>0;}return "cz_tw_"+h;}
+function twUsedSet(){try{return new Set(JSON.parse(localStorage.getItem("cz_used_tweets")||"[]"));}catch(e){return new Set();}}
+function twSetUsed(key,on){const set=twUsedSet();if(on)set.add(key);else set.delete(key);try{localStorage.setItem("cz_used_tweets",JSON.stringify([...set]));}catch(e){}}
+function twIsUsed(tw){return twUsedSet().has(twKey(tw));}
+
 function tweetCard(tw,isNew){
-  const c=el("div","tw-card"+(isNew?" tw-fresh":""));
+  const used=twIsUsed(tw);
+  const c=el("div","tw-card"+(isNew&&!used?" tw-fresh":"")+(used?" tw-used":""));
   const head=el("div","tw-head");
   head.appendChild(el("span","tw-cat",tw.cat));
-  if(isNew)head.appendChild(el("span","tw-new","NEW"));
+  if(isNew&&!used)head.appendChild(el("span","tw-new","NEW"));
+  const lbl=el("label","tw-use");lbl.title="Mark as posted → moves to Archived (saved in this browser)";
+  const cb=document.createElement("input");cb.type="checkbox";cb.checked=used;
+  cb.onchange=()=>{twSetUsed(twKey(tw),cb.checked);renderTweets();};
+  lbl.appendChild(cb);lbl.appendChild(el("span",null,used?"Used ✓":"Mark used"));
+  head.appendChild(lbl);
   c.appendChild(head);
   const ta=document.createElement("textarea");ta.value=tw.text;ta.spellcheck=false;c.appendChild(ta);
   const foot=el("div","tw-foot");
@@ -1220,17 +1239,27 @@ function renderTweets(){
   const v=$("#v-tweets");v.innerHTML="";
   const intro=el("div","tw-intro");
   intro.appendChild(el("h2","","🐦 Tweets — turn the confluence into posts"));
-  intro.appendChild(el("p","","Hand-written for this edition (Ed. "+String(DATA.edition).padStart(3,"0")+" · "+DATA.transcripts+" transcripts) — actionable trade cards and under-covered scoops, refreshed each rebuild. Edit any draft in place, watch the 280-character counter, then hit <b>Post to X</b> — X opens in a new tab with the tweet <b>pre-filled</b> so you can eyeball it and click Post. Nothing posts automatically; you're always the last click."));
+  intro.appendChild(el("p","","Hand-written for this edition (Ed. "+String(DATA.edition).padStart(3,"0")+" · "+DATA.transcripts+" transcripts) — actionable trade cards and under-covered scoops, refreshed each rebuild. Edit any draft in place, watch the 280-character counter, then hit <b>Post to X</b> — X opens in a new tab with the tweet <b>pre-filled</b> so you can eyeball it and click Post. Nothing posts automatically; you're always the last click. Tick <b>Mark used</b> on any tweet you've posted and it drops into the <b>Archived</b> section at the bottom (saved in this browser)."));
   intro.appendChild(el("div","tw-bio","<b>Put the full disclaimer in your X bio</b> so every post doesn't have to carry it: <i>\"I listen to more AI &amp; macro podcasts than anyone has time for, then surface the confluence and the investable themes. Not financial advice.\"</i> — directional posts append a short <b>NFA</b> as a backstop."));
   v.appendChild(intro);
   const all=DATA.tweets||[];
-  const fresh=all.filter(t=>t.nw), rest=all.filter(t=>!t.nw);
+  const active=all.filter(t=>!twIsUsed(t)), used=all.filter(t=>twIsUsed(t));
+  const fresh=active.filter(t=>t.nw), rest=active.filter(t=>!t.nw);
   if(fresh.length){
     v.appendChild(el("div","tw-sec","★ New this batch — T60–T69 ("+fresh.length+")"));
     const g1=el("div","tw-grid");fresh.forEach(tw=>g1.appendChild(tweetCard(tw,true)));v.appendChild(g1);
   }
-  v.appendChild(el("div","tw-sec","Earlier posts ("+rest.length+")"));
-  const g2=el("div","tw-grid");rest.forEach(tw=>g2.appendChild(tweetCard(tw)));v.appendChild(g2);
+  if(rest.length){
+    v.appendChild(el("div","tw-sec","Earlier posts ("+rest.length+")"));
+    const g2=el("div","tw-grid");rest.forEach(tw=>g2.appendChild(tweetCard(tw)));v.appendChild(g2);
+  }
+  if(!active.length)v.appendChild(el("div","hint","🎉 Every tweet is marked used. Uncheck any in the Archived section below to bring it back."));
+  if(used.length){
+    const d=el("details","libcard archcard tw-arch");
+    const sum=el("summary");sum.innerHTML='<span class="lt">🗄 Archived — used tweets</span><span class="lm">'+used.length+' posted</span>';d.appendChild(sum);
+    const body=el("div","libbody");const g=el("div","tw-grid");used.forEach(tw=>g.appendChild(tweetCard(tw)));body.appendChild(g);
+    d.appendChild(body);v.appendChild(d);
+  }
 }
 
 renderNew();renderVelocity();renderThemes();renderTimeline();renderWatchlist();renderLibrary();renderTweets();renderSources();renderMethod();
