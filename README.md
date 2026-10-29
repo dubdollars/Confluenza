@@ -6,9 +6,9 @@ Confluenza reads long-form interview and podcast transcripts (investors, operato
 
 Live app: **https://dubdollars.github.io/Confluenza/**
 
-!\[Velocity Board](docs/velocity\_board.png)
+![Velocity Board](velocity_board.png)
 
-\---
+---
 
 ## How this was built
 
@@ -16,7 +16,7 @@ I'm not a software developer. I designed the scoring method, wrote the rules, an
 
 The method is the product. The code is a plain, dependency-free web page so that every number on it can be traced to a rule and a source.
 
-\---
+---
 
 ## What it does
 
@@ -32,30 +32,29 @@ The method is the product. The code is a plain, dependency-free web page so that
 
 **Methodology.** How scoring, velocity, confluence, chronology and bias control work, in plain language.
 
-\---
+---
 
 ## The scoring rules
 
-* **Independent voices, not mentions.** One person appearing three times is one voice.
-* **Opposed incentives count double.** Agreement between a bull and a bear, or between a vendor and a skeptic, is the strongest signal in the system.
-* **Contested stays contested.** Disagreement is shown as a fork, never averaged into a false middle.
-* **Recency and specificity are weighted.** Dated, falsifiable claims outrank vibes.
-* **Bear themes are risks, not sell signals,** until a named trigger fires.
-* **Every edition is bumped against all prior editions,** so the "New Since Last" view shows exactly what moved and why.
+- **Independent voices, not mentions.** One person appearing three times is one voice.
+- **Opposed incentives count double.** Agreement between a bull and a bear, or between a vendor and a skeptic, is the strongest signal in the system.
+- **Contested stays contested.** Disagreement is shown as a fork, never averaged into a false middle.
+- **Recency and specificity are weighted.** Dated, falsifiable claims outrank vibes.
+- **Bear themes are risks, not sell signals,** until a named trigger fires.
+- **Every edition is bumped against all prior editions,** so the "New Since Last" view shows exactly what moved and why.
 
-\---
+---
 
 ## Technical notes
 
 Single self-contained `index.html` (HTML, CSS and vanilla JavaScript; no build step, no dependencies, no network calls). The data layer is a JavaScript object at the top of the file; the views render from it. Hosted on GitHub Pages. Used/archived state for draft posts persists in the browser only.
 
-\---
+---
 
 ## Disclaimer
 
 Research prototype, not investment advice. Content reflects the biased, self-interested views of the transcript speakers. Tickers are research candidates only; prices and valuations are not live. Do your own diligence.
 
-\---
+---
 
 © 2026 Elliott Walter. All rights reserved. Shared for review; not licensed for reuse.
-
