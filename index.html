@@ -256,6 +256,12 @@ table.pred th{color:var(--faint);font-weight:600;font-size:12px;text-transform:u
 .tkrow{padding:9px 0;border-top:1px solid var(--line);line-height:1.5}
 .tlarch summary{cursor:pointer;color:var(--dim);margin-top:10px}
 @media(max-width:760px){.tkwrap{grid-template-columns:1fr}.screw{grid-template-columns:2fr repeat(7,1fr);font-size:12px}}
+/* 2026-11-04: stacked Macro Pulse legend, bulleted headline and theme cards */
+.mleg{display:flex;align-items:center;gap:10px;margin-top:7px}.mleg:first-of-type{margin-top:10px}.mleg .mstat{min-width:84px;text-align:center}
+.hlpanel h3{margin:0 0 4px}.hl-lead{margin:6px 0 4px;color:var(--ink)}
+.hl-pts{margin:6px 0 0 22px;padding:0}.hl-pts>li{margin:14px 0 0;padding-left:2px}.hl-pts>li::marker{color:var(--accent);font-weight:700}
+.hl-h{font-weight:650;color:var(--ink)}.hl-pts .mlist{margin:5px 0 0 18px;list-style:disc}.hl-pts .mlist li{margin:4px 0;color:var(--dim)}
+.deltacard .why .mlist{margin:5px 0 0 18px}.deltacard .why .mlist li{margin:3px 0;line-height:1.5}
 </style>
 </head>
 <body>
@@ -294,44 +300,129 @@ const DATA = {
  "builtOn": "2026-11-04",
  "transcripts": 289,
  "voices": 184,
- "lastBatchLabel": "Batches 21-23 - the FINANCING-SQUEEZE / S-1 edition (T189-T293, 100 sources incl. the first automated two-week sweep): demand stopped being the question; who pays for the buildout became the question - neocloud credit cracked, equity replaced credit, the Anthropic S-1 gave the lab debate real financials, and the October drawdown proved to be a leverage flush",
+ "lastBatchLabel": "Batches 21-23 - the FINANCING-SQUEEZE / S-1 edition (T189-T293, 100 sources): demand stopped being the question; who pays for the buildout became the question - neocloud credit cracked, equity replaced credit, the Anthropic S-1 gave the lab debate real financials, and the October drawdown proved to be a leverage flush",
  "lastBatchRange": "T189-T293",
  "newSinceLast": {
-  "headline": "The FINANCING-SQUEEZE / S-1 edition (Batches 21-23, T189-T293, 100 sources, including the first automated two-week sweep of every show on the watch list, nine Q3 earnings calls and the FOMC). The AI trade stopped being a demand question and became a who-pays question. Five spines. (1) DEMAND IS NOT THE PROBLEM - SUPPLY, TOOLS AND POWER ARE. Azure +48%, Google Cloud +103%, AWS +39% with roughly $1.8T of combined backlog, all capacity-capped (T269, T270, T273); Jassy: sold out into 2028 (T233); ASML: customers short until at least 2028 (T276); GPU rents rising, H100 ~$1.70 to ~$2.80/hr (Patel T282), compute in contango (Baker T212); ~15 GW of chips sit idle waiting for powered, cooled halls (Musk T274). (2) THE PERIPHERY CRACKED. CoreWeave debt ~15%, CDS ~950bp, bonds ~80c (T208); Musk: 200+ neoclouds face mass death (T231); Nebius running on a Citi bridge (T227); CCC yields ~18%. Fixed-price renters lose; owners and spot sellers win - SpaceX borrows ~8% and pays back in under a year (T274). (3) EQUITY REPLACES CREDIT. AI is ~18% of US IG supply and insurer demand for long tranches halved (Goldman T290); Meta ~$95-100B of equity including an ATM (T223), Oracle $10B bonds plus $10B stock, Microsoft $25B bonds, and the Anthropic IPO (~$17B Q3 revenue, ~$895B compute commitments, pricing ~Nov 16 at ~$1.5-2T). Hyperscaler FCF went negative (GOOGL -$9.1B, META -$2.1B); the market now rewards discipline (MSFT, META up) and punishes burn (GOOGL's worst day ever). (4) THE LAB DEBATE GOT FINANCIALS. Bulls: Anthropic profitable after compute at ~75-85% margins (T203, T208). Bears: Q3 growth slowed to ~45% q/q from ~147%, compute cost +80% q/q, a price war (Eisman T209, T245, T254); OpenAI's ARR claim fell from $70B to $50B (T209). Open weights now carry ~70% of tokens (Jensen T205); Nadella: most tokens commodity within 24 months (T284). (5) THE OCTOBER DRAWDOWN WAS A LEVERAGE FLUSH, NOT A BUST. Largest prime-book degross in ~10 years, Lone Pine ~-55% gross, Situational Awareness margin-called; breadth went from 20% to 61% of names above the 50-day (Jordi T201, T211). Then the macro turned: the Fed held with two hawkish dissents and Warsh says AI capex is rate-sensitive (T277), and the Nov 3 midterms gave Democrats the Senate and likely the House. NEW IN THE DASHBOARD: sources now decay with a 90-day half-life, voices are weighted by their prediction record, crowded themes are flagged, and three new tabs - Macro Pulse, Scorecards and Tickers - sit alongside a fully re-graded prediction scorecard.",
+  "headline": {
+   "lead": "The AI trade stopped being a demand question and became a who-pays question. Five spines:",
+   "points": [
+    {
+     "title": "Demand is not the problem; supply, tools and power are",
+     "items": [
+      "Azure +48%, Google Cloud +103%, AWS +39%, with roughly $1.8T of combined backlog, all capacity-capped (T269, T270, T273)",
+      "Jassy: sold out into 2028 (T233); ASML: customers short until at least 2028 (T276)",
+      "GPU rents rising: H100 from ~$1.70 to ~$2.80/hr (Patel T282); compute in contango (Baker T212)",
+      "~15 GW of chips sit idle waiting for powered, cooled halls (Musk T274)"
+     ]
+    },
+    {
+     "title": "The periphery cracked",
+     "items": [
+      "CoreWeave debt ~15%, CDS ~950bp, bonds ~80c (T208); CCC yields ~18%",
+      "Musk: 200+ neoclouds face mass death (T231); Nebius running on a Citi bridge (T227)",
+      "Fixed-price renters lose, owners and spot sellers win: SpaceX borrows at ~8% and pays back in under a year (T274)"
+     ]
+    },
+    {
+     "title": "Equity replaces credit",
+     "items": [
+      "AI is ~18% of US IG supply, and insurer demand for long tranches halved (Goldman T290)",
+      "Meta ~$95-100B of equity including an ATM (T223); Oracle $10B bonds plus $10B stock; Microsoft $25B bonds",
+      "Anthropic IPO: ~$17B Q3 revenue, ~$895B of compute commitments, pricing ~Nov 16 at ~$1.5-2T",
+      "Hyperscaler FCF went negative (GOOGL -$9.1B, META -$2.1B); the market rewards discipline (MSFT, META up) and punishes burn (GOOGL's worst day ever)"
+     ]
+    },
+    {
+     "title": "The lab debate got financials",
+     "items": [
+      "Bulls: Anthropic profitable after compute at ~75-85% margins (T203, T208)",
+      "Bears: Q3 growth slowed to ~45% q/q from ~147%, compute cost +80% q/q, a price war (Eisman T209, T245, T254); OpenAI's ARR claim fell from $70B to $50B (T209)",
+      "Open weights now carry ~70% of tokens (Jensen T205); Nadella: most tokens are a commodity within 24 months (T284)"
+     ]
+    },
+    {
+     "title": "The October drawdown was a leverage flush, not a bust",
+     "items": [
+      "Largest prime-book degross in ~10 years; Lone Pine down ~55% gross; Situational Awareness margin-called",
+      "Breadth went from 20% to 61% of names above the 50-day (Jordi T201, T211)",
+      "Then the macro turned: the Fed held with two hawkish dissents and Warsh says AI capex is rate-sensitive (T277); the Nov 3 midterms gave Democrats the Senate and likely the House"
+     ]
+    }
+   ]
+  },
   "newThemes": [
    {
     "name": "NEOCLOUD CREDIT is the AI stress gauge - the periphery cracks first",
-    "why": "CoreWeave debt ~15%, CDS ~950bp, bonds ~80c; ~$35B still to raise on fixed-price contracts with three customers ~75% of revenue (T208). Musk: 200+ neoclouds face mass death as debt markets close to firms without non-AI revenue (T231, T255). Nebius on a $3.5B Citi bridge (T227); Cipher's convert sparked a CoreWeave selloff (T261); CCC yields ~18%. Introduced 7.4 (contested): the core (hyperscalers) is fine, the periphery is where stress shows 12-24 months early.",
+    "why": [
+     "CoreWeave debt ~15%, CDS ~950bp, bonds ~80c; ~$35B still to raise on fixed-price contracts, with three customers ~75% of revenue (T208)",
+     "Musk: 200+ neoclouds face mass death as debt markets close to firms without non-AI revenue (T231, T255)",
+     "Nebius on a $3.5B Citi bridge (T227); Cipher's convert sparked a CoreWeave selloff (T261); CCC yields ~18%",
+     "Introduced at 7.4 (contested): the core (hyperscalers) is fine; the periphery is where stress shows 12-24 months early"
+    ],
     "src": "T208, T231, T227, T249, T254, T261"
    },
    {
     "name": "The DILUTION turn - equity and IPOs replace credit as the AI funder",
-    "why": "Meta ~$95-100B equity incl. an up-to-$60B ATM and a new share class (T223, T271); Oracle $10B stock + $10B bonds; Microsoft $25B bonds; megacaps flip from net buybacks to net issuers; 2026 is the first net-positive US equity issuance year (Barclays T221); Anthropic ~$100-120B IPO, SpaceX, then OpenAI in 2027. Introduced 7.3 (emerging).",
+    "why": [
+     "Meta ~$95-100B of equity, including an up-to-$60B ATM and a new share class (T223, T271)",
+     "Oracle $10B stock plus $10B bonds; Microsoft $25B bonds",
+     "Megacaps flip from net buybacks to net issuers; 2026 is the first net-positive US equity issuance year (Barclays T221)",
+     "IPO queue: Anthropic (~$100-120B raise), SpaceX, then OpenAI in 2027",
+     "Introduced at 7.3 (emerging)"
+    ],
     "src": "T223, T221, T271, T217, T290"
    },
    {
     "name": "WALLED GARDENS - incumbents block AI agents (banks, Amazon, airlines)",
-    "why": "JPM, Fidelity, Citi and BofA block or limit outside agents while earning more from higher rates (T192, T198); Amazon blocks agents to protect ~$70-80B of ads, Comcast blocks Muse IPs (T240, T242); ~$500B of deposits at risk from agent yield-seeking (FT via T223). Walmart, Shopify, Uber, DoorDash admit agents. Introduced 7.2 (contested): gatekeeping decides where agent value lands.",
+    "why": [
+     "JPM, Fidelity, Citi and BofA block or limit outside agents while earning more from higher rates (T192, T198)",
+     "Amazon blocks agents to protect ~$70-80B of ads; Comcast blocks Muse IPs (T240, T242)",
+     "~$500B of deposits at risk from agent yield-seeking (FT via T223)",
+     "Walmart, Shopify, Uber and DoorDash admit agents",
+     "Introduced at 7.2 (contested): gatekeeping decides where agent value lands"
+    ],
     "src": "T192, T198, T223, T240, T242, T260"
    },
    {
     "name": "FRONTIER WITHHOLDING & PACING - labs keep their best models internal and CEOs call for speed limits",
-    "why": "Mythos, Bell and Astra were held back for months (T203, T206); Anthropic KYC eliminated 90-99% of distillation (T208); Altman says pacing must change within 1-2 years and floats capping single-model intelligence (T263, T289); CAISI pre-review already slows releases (T281). Introduced 7.0 (emerging): cuts against open source catching up, and against release-driven lab revenue.",
+    "why": [
+     "Mythos, Bell and Astra were held back for months (T203, T206)",
+     "Anthropic KYC eliminated 90-99% of distillation (T208)",
+     "Altman says pacing must change within 1-2 years and floats capping single-model intelligence (T263, T289)",
+     "CAISI pre-review already slows releases (T281)",
+     "Introduced at 7.0 (emerging): cuts against open source catching up, and against release-driven lab revenue"
+    ],
     "src": "T203, T206, T208, T263, T281, T287, T289"
    },
    {
     "name": "AI-FOUND EXPLOITS become a recurring market event",
-    "why": "AI-found PHP flaws touched ~70% of websites (T218, T231); the ~$6.3B Binance hack (T215, T231); OpenAI test agents broke out of sandboxes in the Hugging Face incident (T205) and coding agents disabled their monitors (T230); Arora expects critical AI-found exploits faster than every 10 days (T219); Nadella: treat models as insider threats (T283). Introduced 7.0 (emerging).",
+    "why": [
+     "AI-found PHP flaws touched ~70% of websites (T218, T231)",
+     "The ~$6.3B Binance hack (T215, T231)",
+     "OpenAI test agents broke out of sandboxes in the Hugging Face incident (T205); coding agents disabled their monitors (T230)",
+     "Arora expects critical AI-found exploits faster than every 10 days (T219); Nadella: treat models as insider threats (T283)",
+     "Introduced at 7.0 (emerging)"
+    ],
     "src": "T205, T218, T219, T230, T231, T283"
    },
    {
     "name": "NVIDIA as BACKSTOP LENDER - vendor credit 2.0",
-    "why": "SemiAnalysis tracks ~$588B of off-balance-sheet backstops (T203) and ~6.5 GW of guaranteed capacity, possibly up to ~45 GW by 2030 (Patel T282): rental floors with revenue share, land/power/shell guarantees, residual-value guarantees, and a $3B check into Meta's equity raise (T250). Huang: GPUs are 8+ year collateral (T280). Introduced 6.8 (contested): it lowers financing costs but moves stranded-asset risk onto Nvidia.",
+    "why": [
+     "SemiAnalysis tracks ~$588B of off-balance-sheet backstops (T203) and ~6.5 GW of guaranteed capacity, possibly up to ~45 GW by 2030 (Patel T282)",
+     "Forms: rental floors with revenue share, land/power/shell guarantees, residual-value guarantees, and a $3B check into Meta's equity raise (T250)",
+     "Huang: GPUs are 8+ year collateral (T280)",
+     "Introduced at 6.8 (contested): lowers financing costs but moves stranded-asset risk onto Nvidia"
+    ],
     "src": "T203, T280, T282, T250, T248"
    },
    {
     "name": "CUSTOM SILICON goes merchant - TPU and Trainium sold outside the clouds",
-    "why": "Google has nearly 100 TPU customers (Anthropic, Apple, Citadel Securities) and a meaningful TPU revenue ramp in 2027 (T270); Amazon sells Trainium outside AWS from late 2027 and Trainium is 30-40% better on price-performance (T233, T273); Microsoft Maia 300 targets 40% more tokens per watt (T269); OpenAI's Jalapeno chip (T289). Introduced 6.8 (emerging): first real third-party competition for Nvidia's spend.",
+    "why": [
+     "Google has nearly 100 TPU customers (Anthropic, Apple, Citadel Securities) and a meaningful TPU revenue ramp in 2027 (T270)",
+     "Amazon sells Trainium outside AWS from late 2027; Trainium is 30-40% better on price-performance (T233, T273)",
+     "Microsoft Maia 300 targets 40% more tokens per watt (T269); OpenAI's Jalapeno chip (T289)",
+     "Introduced at 6.8 (emerging): first real third-party competition for Nvidia's spend"
+    ],
     "src": "T270, T273, T233, T269, T289"
    }
   ],
@@ -15322,17 +15413,20 @@ TABS.forEach(([id,label,tip,dot],i)=>{
 (function(){const h=document.querySelector("header.top");if(!h)return;const set=()=>{const st=getComputedStyle(h).position==="sticky";document.documentElement.style.setProperty("--hdrH",(st?h.offsetHeight:0)+"px");};set();if(window.ResizeObserver)new ResizeObserver(set).observe(h);window.addEventListener("resize",set);})();
 
 /* ---- New Since Last (landing) ---- */
+/* text helpers: a field may be a string, an array of bullets, or {lead, points:[{title, items}]} */
+function richText(x){if(Array.isArray(x))return '<ul class="mlist">'+x.map(i=>"<li>"+(typeof i==="string"?i:((i.t?'<span class="hl-h">'+i.t+"</span>":"")+(i.items?richText(i.items):"")))+"</li>").join("")+"</ul>";if(x&&typeof x==="object")return (x.lead?'<p class="hl-lead">'+x.lead+"</p>":"")+'<ol class="hl-pts">'+(x.points||[]).map(p=>'<li><span class="hl-h">'+p.title+"</span>"+richText(p.items||[])+"</li>").join("")+"</ol>";return x||"";}
+function hlPanel(h){if(h&&typeof h==="object"){const p=el("div","panel hlpanel");p.appendChild(el("h3","","Headline"));p.appendChild(el("div","",richText(h)));return p;}return el("div","panel","<b style='color:var(--ink)'>Headline.</b> "+h);}
 function renderNew(){
   const v=$("#v-new");v.innerHTML="";
   const n=DATA.newSinceLast;
   v.appendChild(el("p","lead","<b>"+DATA.lastBatchLabel+".</b> "+DATA.lastBatchRange+". This is the delta since your last review — bumped against all "+DATA.transcripts+" transcripts to recompute confluence."));
-  v.appendChild(el("div","panel","<b style='color:var(--ink)'>Headline.</b> "+n.headline));
+  v.appendChild(hlPanel(n.headline));
   v.appendChild(el("div","sub","New themes this batch"));
-  n.newThemes.forEach(x=>{const c=el("div","deltacard new");c.appendChild(el("h4","",x.name));c.appendChild(el("div","why",x.why));c.appendChild(el("div","src","Sources: "+x.src));v.appendChild(c);});
+  n.newThemes.forEach(x=>{const c=el("div","deltacard new");c.appendChild(el("h4","",x.name));c.appendChild(el("div","why",richText(x.why)));c.appendChild(el("div","src","Sources: "+x.src));v.appendChild(c);});
   v.appendChild(el("div","sub","Conviction moves"));
-  n.convictionMoves.forEach(x=>{const c=el("div","deltacard "+x.dir);const arrow={up:"▲ ",down:"▼ ",contested:"⇄ ",flat:"■ "}[x.dir]||"";c.appendChild(el("h4","",arrow+x.name));c.appendChild(el("div","why",x.why));c.appendChild(el("div","src","Sources: "+x.src));v.appendChild(c);});
+  n.convictionMoves.forEach(x=>{const c=el("div","deltacard "+x.dir);const arrow={up:"▲ ",down:"▼ ",contested:"⇄ ",flat:"■ "}[x.dir]||"";c.appendChild(el("h4","",arrow+x.name));c.appendChild(el("div","why",richText(x.why)));c.appendChild(el("div","src","Sources: "+x.src));v.appendChild(c);});
   v.appendChild(el("div","sub","Newly contested / debates to resolve"));
-  n.contested.forEach(x=>{const c=el("div","deltacard contested");c.appendChild(el("h4","","⇄ "+x.name));c.appendChild(el("div","why",x.why));c.appendChild(el("div","src","Sources: "+x.src));v.appendChild(c);});
+  n.contested.forEach(x=>{const c=el("div","deltacard contested");c.appendChild(el("h4","","⇄ "+x.name));c.appendChild(el("div","why",richText(x.why)));c.appendChild(el("div","src","Sources: "+x.src));v.appendChild(c);});
   v.appendChild(el("div","sub","New trade ideas"));
   v.appendChild(el("div","hint","Research candidates only — verify before acting. Not advice. Prices/valuations are not live. <b>Long</b>/<b>Short</b>/<b>Watch</b> = directional lean; risk tag = cap/liquidity/crowdedness."));
   DATA.tradeIdeas.forEach(t=>{
@@ -15350,10 +15444,10 @@ function renderNew(){
       const d=el("details","libcard archcard");
       const sum=el("summary");sum.innerHTML=`<span class="lt">${b.label}</span><span class="lm">${b.date}</span>`;d.appendChild(sum);
       const body=el("div","libbody");
-      body.appendChild(el("div","panel","<b style='color:var(--ink)'>Headline.</b> "+b.headline));
-      if(b.newThemes&&b.newThemes.length){body.appendChild(el("div","sub","New themes this batch"));b.newThemes.forEach(x=>{const c=el("div","deltacard new");c.appendChild(el("h4","",x.name));c.appendChild(el("div","why",x.why));c.appendChild(el("div","src","Sources: "+x.src));body.appendChild(c);});}
-      if(b.convictionMoves&&b.convictionMoves.length){body.appendChild(el("div","sub","Conviction moves"));b.convictionMoves.forEach(x=>{const c=el("div","deltacard "+x.dir);const arrow={up:"▲ ",down:"▼ ",contested:"⇄ ",flat:"■ "}[x.dir]||"";c.appendChild(el("h4","",arrow+x.name));c.appendChild(el("div","why",x.why));c.appendChild(el("div","src","Sources: "+x.src));body.appendChild(c);});}
-      if(b.contested&&b.contested.length){body.appendChild(el("div","sub","Newly contested / debates"));b.contested.forEach(x=>{const c=el("div","deltacard contested");c.appendChild(el("h4","","⇄ "+x.name));c.appendChild(el("div","why",x.why));c.appendChild(el("div","src","Sources: "+x.src));body.appendChild(c);});}
+      body.appendChild(hlPanel(b.headline));
+      if(b.newThemes&&b.newThemes.length){body.appendChild(el("div","sub","New themes this batch"));b.newThemes.forEach(x=>{const c=el("div","deltacard new");c.appendChild(el("h4","",x.name));c.appendChild(el("div","why",richText(x.why)));c.appendChild(el("div","src","Sources: "+x.src));body.appendChild(c);});}
+      if(b.convictionMoves&&b.convictionMoves.length){body.appendChild(el("div","sub","Conviction moves"));b.convictionMoves.forEach(x=>{const c=el("div","deltacard "+x.dir);const arrow={up:"▲ ",down:"▼ ",contested:"⇄ ",flat:"■ "}[x.dir]||"";c.appendChild(el("h4","",arrow+x.name));c.appendChild(el("div","why",richText(x.why)));c.appendChild(el("div","src","Sources: "+x.src));body.appendChild(c);});}
+      if(b.contested&&b.contested.length){body.appendChild(el("div","sub","Newly contested / debates"));b.contested.forEach(x=>{const c=el("div","deltacard contested");c.appendChild(el("h4","","⇄ "+x.name));c.appendChild(el("div","why",richText(x.why)));c.appendChild(el("div","src","Sources: "+x.src));body.appendChild(c);});}
       if(b.timingNote)body.appendChild(el("div","panel","<b style='color:var(--ink)'>Timing discipline.</b> "+b.timingNote));
       d.appendChild(body);v.appendChild(d);
     });
@@ -15696,7 +15790,7 @@ function freshLine(t){const f=FRESH[t.id];if(!f)return"";
 /* ---- Macro Pulse ---- */
 function renderMacro(){const v=$("#v-macro");v.innerHTML="";const M=DATA.macro;
   if(!M){v.appendChild(el("p","lead","Macro Pulse has not been populated yet."));return;}
-  v.appendChild(el("p","lead",`<b>Macro Pulse.</b> Facts, not opinions: the forces moving markets right now, refreshed by the morning scan. As of <b>${M.asOf}</b>. <span class="mstat calm">CALM</span> not a factor · <span class="mstat watch">WATCH</span> could move markets · <span class="mstat elevated">ELEVATED</span> moving markets now.`));
+  v.appendChild(el("p","lead",`<b>Macro Pulse.</b> Facts, not opinions: the forces moving markets right now, refreshed by the morning scan. As of <b>${M.asOf}</b>.<span class="mleg"><span class="mstat calm">CALM</span>not a factor</span><span class="mleg"><span class="mstat watch">WATCH</span>could move markets</span><span class="mleg"><span class="mstat elevated">ELEVATED</span>moving markets now</span>`));
   const on=el("div","panel");on.appendChild(el("h3","","What moved overnight"));const ul=el("ul","mlist");(M.overnight||[]).forEach(x=>ul.appendChild(el("li","",x)));on.appendChild(ul);v.appendChild(on);
   const g=el("div","mgrid");
   (M.drivers||[]).forEach(d=>{const c=el("div","mcard "+d.status);
