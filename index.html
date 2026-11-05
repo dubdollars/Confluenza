@@ -23732,7 +23732,7 @@ function wlPx(v){return v==null?"–":(v>=1000?v.toLocaleString("en-US",{maximum
 function openLib(id){goTab("library");setTimeout(()=>{const d=[...document.querySelectorAll("#v-library details.libcard")].find(x=>{const t=x.querySelector(".lt");return t&&t.textContent.startsWith(id+" ")});if(d){d.open=true;d.scrollIntoView({behavior:"smooth",block:"start"});}},80);}
 function wlVs(x){const p=x.px||{};
   if(p.r==null)return '<span class="faint">'+(p.note||"No price")+'</span>';
-  if(p.graded)return '<span class="wlg '+(p.adj>=0?"up":"dn")+'">'+wlPct(p.adj)+'</span>';
+  if(p.graded)return '<span class="wlg '+(p.adj>=0?"up":"dn")+'" title="'+(p.adj>=0?'Call right':'Call wrong')+': '+(x.stance==='bear'?'Bearish, so it should lag its sector':'Bullish, so it should beat its sector')+'">'+(p.adj>=0?'✓ ':'✗ ')+wlPct(p.rel)+'</span>';
   if(x.stance==="two"||x.stance==="monitor")return '<span class="faint" title="Two-sided and Monitor names are never graded">not graded</span>';
   if(x.status==="retired")return '<span class="faint">retired before grading</span>';
   return '<span class="faint" title="Graded after 90 days on the list">day '+p.days+' of 90</span>';}
@@ -23760,7 +23760,7 @@ function wlRow(x,max){
   const pr=[];
   if(p.r!=null){pr.push("<b>"+x.tkr+"</b>: "+wlPx(p.sincePx)+" on "+wlD(p.sinceDate)+(p.firstAfter?" (first trade)":"")+" → "+wlPx(p.last)+" ("+wlD(p.lastDate)+"), "+wlPct(p.r));
     if(p.rb!=null)pr.push("<b>"+x.benchName+"</b>: "+wlPx(p.benchSince)+" → "+wlPx(p.benchLast)+", "+wlPct(p.rb));
-    if(p.rel!=null)pr.push("Versus its sector: "+wlPct(p.rel)+(x.stance==="bear"?" (a Bearish stance wins when the name lags, so the graded figure is "+wlPct(p.adj)+")":""));
+    if(p.rel!=null)pr.push("Versus its sector: "+wlPct(p.rel)+" ("+(p.rel<0?"lagged":"beat")+" "+x.bench+")"+((x.stance==="bull"||x.stance==="bear")?(p.graded?". Stance is "+(x.stance==="bear"?"Bearish":"Bullish")+", so the call was <b>"+(p.adj>=0?"right":"wrong")+"</b>":". Stance is "+(x.stance==="bear"?"Bearish (right if it lags)":"Bullish (right if it beats)")):""));
     pr.push(p.graded?"Graded: on the list "+p.days+" days":(x.stance==="two"||x.stance==="monitor")?"Not graded: "+(x.stance==="two"?"sources disagree on direction":"a risk to watch, not a directional view"):"Not graded yet: grading starts after 90 days ("+(p.gradeIn||0)+" to go)");}
   else pr.push(p.note||"No price data");
   R.appendChild(el("div","wlh","Performance since added"));R.appendChild(el("div","wlt",'<ul class="mlist libul">'+pr.map(z=>"<li>"+z+"</li>").join("")+"</ul>"));
@@ -23775,7 +23775,7 @@ function renderWatchlist(){
   const k=el("div","kpis");
   const bd=(S.backdrop||[]).filter(b=>["SMH","QQQ","SPY"].includes(b.bench)).map(b=>b.bench+" "+wlPct(b.r)).join(" · ");
   [[String(S.active+S.fading),S.active+" active · "+S.fading+" fading","Names currently on the list. Fading = no new mention in "+W.rules.fade+" days."],
-   [S.graded?S.beating+" of "+S.graded:"–",S.graded?"graded names beating their sector":"grading starts "+wlD(S.nextGrade),"Only Bullish and Bearish names are graded, against their own sector fund, after "+W.rules.grade+" days on the list. A Bearish name scores when it lags its sector."],
+   [S.graded?S.beating+" of "+S.graded:"–",S.graded?"graded calls right vs their sector":"grading starts "+wlD(S.nextGrade),"Only Bullish and Bearish names are graded, against their own sector fund, after "+W.rules.grade+" days on the list. A Bearish name scores when it lags its sector."],
    [bd||"–","sector backdrop, last 30 days","How the broad market and the main sectors moved. Context for the raw price changes below."],
    [String(S.retired),"retired, kept with final numbers","Names with no new mention for "+W.rules.retire+" days. Never deleted; they re-enter if raised again."]]
   .forEach(([n,l,t],i)=>{const c=el("div","kpi");c.title=t;c.appendChild(el("div","n"+(i===2?" wlbd":""),n));c.appendChild(el("div","l",l));k.appendChild(c);});v.appendChild(k);
@@ -23794,7 +23794,7 @@ function renderWatchlist(){
    ["Last mention","Date of the most recent library card or batch that raised the name."],
    ["Added","When the sources started watching the name, or when it re-entered after retiring. Not an entry point or a buy date."],
    ["Since added · sector","The name's price change since the Added date, next to its sector fund over the same period. Gray on purpose: context, not a grade."],
-   ["vs sector","The grade: the name's move relative to its sector fund since it was added. Only Bullish and Bearish names, only after 90 days on the list, and a Bearish name scores when it lags. 'day X of 90' means not graded yet; Two-sided and Monitor are never graded."]
+   ["vs sector","The name's move relative to its sector fund since it was added (−10% means it lagged the sector by 10%). Green ✓ means the move matched the stance: a Bullish name beat its sector, or a Bearish name lagged it. Red ✗ means it went against the stance. Graded only for Bullish and Bearish names after 90 days on the list; 'day X of 90' means not graded yet, and Two-sided and Monitor names are never graded."]
   ].forEach(([lab,tip],i)=>{const sp=el("span","wltip"+(i>=6?" tr":""),lab);sp.dataset.tip=tip;sp.tabIndex=0;hd.appendChild(sp);});
   v.appendChild(hd);
   if(!f.length)v.appendChild(el("div","panel muted","Nothing matches these filters."));
@@ -23811,7 +23811,7 @@ function renderWatchlist(){
     "<b>Falling off:</b> no new mention for "+W.rules.fade+" days and a name shows as Fading; at "+W.rules.retire+" days it retires to the archive with its final numbers. Nothing is deleted, and a retired name re-enters if the sources raise it again. A name can also be retired early at the Sunday review if its thesis breaks.",
     "<b>Getting on:</b> tickers that at least 3 different sources tag in 30 days with a clear lean appear under 'Sources are raising these', and the Sunday review adds or dismisses them.",
     "<b>Stance</b> is the sources' lean, not a recommendation: Bullish, Bearish, Two-sided (they disagree) or Monitor (a risk to watch). The ⚑ flag means recent sources lean against the stance, so it gets reviewed.",
-    "<b>Grading:</b> only Bullish and Bearish names are graded, and only after "+W.rules.grade+" days on the list, against their own sector fund (semis vs SMH, software vs IGV, megacaps vs QQQ and so on). A Bullish name that falls 10% while its sector falls 20% scores +10. A Bearish name scores when it lags. Market and sector timing belong to Themes and Predictions, not to the watchlist.",
+    "<b>Grading:</b> only Bullish and Bearish names are graded, and only after "+W.rules.grade+" days on the list, against their own sector fund (semis vs SMH, software vs IGV, megacaps vs QQQ and so on). A Bullish name that falls 10% while its sector falls 20% shows +12.5% with a green ✓ (it beat its sector, as the stance expected). A Bearish name gets the green ✓ when it lags its sector. The number is always the plain relative move; the ✓ or ✗ says whether that matched the stance. Market and sector timing belong to Themes and Predictions, not to the watchlist.",
     "<b>Added</b> is the date the sources started watching the name, not an entry point. Prices come from Yahoo Finance, refreshed by the daily scan."].map(z=>"<li>"+z+"</li>").join("")+"</ul>"));v.appendChild(h);
 }
 
