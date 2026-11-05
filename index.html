@@ -19,13 +19,21 @@ body{background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMac
 a{color:var(--accent)}
 h1,h2,h3,h4{margin:0 0 .3em;font-weight:650;letter-spacing:.2px}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px 90px}
-header.top{border-bottom:1px solid var(--line);padding:22px 0 14px;position:sticky;top:0;background:linear-gradient(180deg,#0b0e13 72%,rgba(11,14,19,.92));z-index:20}
+header.top{border-bottom:1px solid var(--line);padding:18px 0 14px;position:sticky;top:0;background:#0b0e13;z-index:20}
+header.top .wrap{padding-bottom:0}
+html{scroll-padding-top:calc(var(--hdrH,0px) + 8px)}
 .brand{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
 .brand h1{font-size:24px;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .brand .edition{color:var(--faint);font-size:12.5px;font-variant-numeric:tabular-nums}
 .tag{color:var(--dim);font-size:13.5px;margin-top:4px;max-width:840px}
-nav.tabs{display:flex;gap:6px;margin-top:15px;flex-wrap:wrap}
-nav.tabs button{background:var(--panel);color:var(--dim);border:1px solid var(--line);padding:8px 13px;border-radius:8px;cursor:pointer;font-size:13.5px;font-weight:550;position:relative}
+nav.tabs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:14px}
+nav.tabs button{background:var(--panel);color:var(--dim);border:1px solid var(--line);padding:11px 10px;border-radius:9px;cursor:pointer;font-size:14.5px;font-weight:600;position:relative;text-align:center;white-space:nowrap}
+@media(max-width:900px){nav.tabs{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:600px){nav.tabs{grid-template-columns:repeat(3,1fr)}nav.tabs button{font-size:13px;padding:9px 6px;white-space:normal}header.top{position:static}}
+/* frozen column headers: stick just below the sticky top header */
+table.pred thead th,.wtable thead th{position:sticky;top:var(--hdrH,0px);background:var(--bg);z-index:5;box-shadow:inset 0 -1px 0 var(--line)}
+.panel table.pred thead th{background:var(--panel)}
+.screw.head{position:sticky;top:var(--hdrH,0px);background:var(--bg);z-index:5;border-bottom:1px solid var(--line)}
 nav.tabs button:hover{color:var(--ink);border-color:#38465a}
 nav.tabs button.active{background:var(--accent);color:#0b0e13;border-color:var(--accent)}
 nav.tabs button .dot{position:absolute;top:-4px;right:-4px;width:9px;height:9px;background:var(--new);border-radius:50%;border:2px solid #0b0e13}
@@ -15295,7 +15303,7 @@ const TABS=[
   ["macro","Macro Pulse","Facts, not opinions: the forces moving markets right now (war, energy, rates, credit, policy, AI macro, labor, crypto), refreshed each morning.",false],
   ["velocity","Velocity Board","Every theme ranked by momentum — how fast conviction is moving — not just how high it sits.",false],
   ["themes","Themes","Deep-dive on each theme: conviction, independent voices, camp (bull/bear/contested), why it's moving, dated changelog.",false],
-  ["timeline","Timeline & Predictions","Catalyst roadmap plus a scorecard grading each dated prediction hit / tracking / pending / miss.",false],
+  ["timeline","Timeline & Predictions","Catalyst roadmap plus a scorecard grading each dated prediction hit / trending / pending / miss.",false],
   ["scores","Scorecards","Who has been right: every graded prediction rolled up by voice, with the earned weight each voice now carries.",false],
   ["watchlist","Watchlist","Tickers mapped to themes with eyes-wide-open labels: cap tier, liquidity, crowdedness.",false],
   ["tickers","Tickers","Every ticker mentioned across the library: who said it, when, and which way they leaned.",false],
@@ -15311,6 +15319,7 @@ TABS.forEach(([id,label,tip,dot],i)=>{
   b.onclick=()=>{document.querySelectorAll("nav.tabs button").forEach(x=>x.classList.remove("active"));document.querySelectorAll("section.view").forEach(x=>x.classList.remove("active"));b.classList.add("active");$("#v-"+id).classList.add("active");window.scrollTo(0,0);};
   tabsNav.appendChild(b);
 });
+(function(){const h=document.querySelector("header.top");if(!h)return;const set=()=>{const st=getComputedStyle(h).position==="sticky";document.documentElement.style.setProperty("--hdrH",(st?h.offsetHeight:0)+"px");};set();if(window.ResizeObserver)new ResizeObserver(set).observe(h);window.addEventListener("resize",set);})();
 
 /* ---- New Since Last (landing) ---- */
 function renderNew(){
@@ -15410,10 +15419,10 @@ function renderTimeline(){
   v.appendChild(tl);
   if(DATA.timelineArchive&&DATA.timelineArchive.length){const ar=el("details","tlarch");ar.appendChild(el("summary","","Earlier NOW snapshots ("+DATA.timelineArchive.length+", archived as newer batches arrived)"));const bx=el("div","panel");DATA.timelineArchive.forEach(it=>bx.appendChild(el("div","tlitem",it.t+` <span class="src">— ${it.src}</span>`)));ar.appendChild(bx);v.appendChild(ar);}
   const pp=el("div","panel");pp.appendChild(el("h3","","Prediction scorecard"));
-  pp.appendChild(el("div","hint","<span class='stat hit'>HIT</span> confirmed · <span class='stat track'>TRACKING</span> trending/partly against · <span class='stat pend'>PENDING</span> not yet due · <span class='stat miss'>MISS</span> falsified"));
+  pp.appendChild(el("div","hint","<span class='stat hit'>HIT</span> confirmed · <span class='stat track'>TRENDING</span> evidence building toward a hit, not yet resolved · <span class='stat pend'>PENDING</span> not yet due · <span class='stat miss'>MISS</span> falsified"));
   const tb=el("table","pred");tb.innerHTML="<thead><tr><th>Voice</th><th>Prediction</th><th>Horizon</th><th>Status</th></tr></thead>";const body=el("tbody");
   const rank={hit:0,miss:1,track:2,pend:3};
-  [...DATA.predictions].sort((a,b)=>rank[a.status]-rank[b.status]).forEach(p=>{const tr=el("tr");tr.appendChild(el("td","","<b>"+p.who+"</b><br><span class='faint' style='font-size:11px'>"+p.date+"</span>"));tr.appendChild(el("td","",p.claim+(p.note?`<br><span class='faint' style='font-size:12px'>${p.note}</span>`:"")));tr.appendChild(el("td","",p.horizon));const sc={hit:"HIT",miss:"MISS",track:"TRACKING",pend:"PENDING"}[p.status];tr.appendChild(el("td","","<span class='stat "+p.status+"'>"+sc+"</span>"));body.appendChild(tr);});
+  [...DATA.predictions].sort((a,b)=>rank[a.status]-rank[b.status]).forEach(p=>{const tr=el("tr");tr.appendChild(el("td","","<b>"+p.who+"</b><br><span class='faint' style='font-size:11px'>"+p.date+"</span>"));tr.appendChild(el("td","",p.claim+(p.note?`<br><span class='faint' style='font-size:12px'>${p.note}</span>`:"")));tr.appendChild(el("td","",p.horizon));const sc={hit:"HIT",miss:"MISS",track:"TRENDING",pend:"PENDING"}[p.status];tr.appendChild(el("td","","<span class='stat "+p.status+"'>"+sc+"</span>"));body.appendChild(tr);});
   tb.appendChild(body);pp.appendChild(tb);v.appendChild(pp);
 }
 
@@ -15704,11 +15713,11 @@ function renderMacro(){const v=$("#v-macro");v.innerHTML="";const M=DATA.macro;
 function renderScores(){const v=$("#v-scores");v.innerHTML="";
   v.appendChild(el("p","lead",`<b>Who has been right.</b> Every graded prediction rolls up to the voice that made it. Hit rate counts only resolved calls (hit or miss). <b>Weight</b> is what the dashboard uses when it adds up support for a theme: voices that are right more often count more, whoever they are (0.6x to 1.4x; 1.0x until a voice has resolved calls). Sources also decay with a ${HALFLIFE}-day half-life, so a year-old opinion counts about 6% of a fresh one.`));
   const all=Object.values(VOICESCORE);const hits=all.reduce((s,r)=>s+r.hit,0),miss=all.reduce((s,r)=>s+r.miss,0),trk=all.reduce((s,r)=>s+r.track,0),pend=all.reduce((s,r)=>s+r.pend,0);
-  const k=el("div","kpis");[[all.length,"voices with predictions"],[hits+miss,"resolved calls"],[(hits+miss)?Math.round(100*hits/(hits+miss))+"%":"n/a","overall hit rate"],[trk+" / "+pend,"tracking / pending"]].forEach(([n,l])=>{const c=el("div","kpi");c.appendChild(el("div","n",String(n)));c.appendChild(el("div","l",l));k.appendChild(c);});v.appendChild(k);
+  const k=el("div","kpis");[[all.length,"voices with predictions"],[hits+miss,"resolved calls"],[(hits+miss)?Math.round(100*hits/(hits+miss))+"%":"n/a","overall hit rate"],[trk+" / "+pend,"trending / pending"]].forEach(([n,l])=>{const c=el("div","kpi");c.appendChild(el("div","n",String(n)));c.appendChild(el("div","l",l));k.appendChild(c);});v.appendChild(k);
   const rows=all.slice().sort((a,b)=>((b.hit+b.miss)-(a.hit+a.miss))||(b.weight-a.weight)||(b.list.length-a.list.length));
-  const head=el("div","screw head","<span>Voice</span><span>Calls</span><span>Hit</span><span>Miss</span><span>Tracking</span><span>Pending</span><span>Hit rate</span><span>Weight</span>");v.appendChild(head);
+  const head=el("div","screw head","<span>Voice</span><span>Calls</span><span>Hit</span><span>Miss</span><span>Trending</span><span>Pending</span><span>Hit rate</span><span>Weight</span>");v.appendChild(head);
   rows.forEach(r=>{const d=el("details","scrow");const s=el("summary","screw",`<span><b>${r.name}</b></span><span>${r.list.length}</span><span class="g">${r.hit}</span><span class="r">${r.miss}</span><span>${r.track}</span><span>${r.pend}</span><span>${r.rate==null?"-":Math.round(r.rate*100)+"%"}</span><span><b>${r.weight.toFixed(2)}x</b></span>`);d.appendChild(s);
-    const box=el("div","sclist");r.list.forEach(p=>{const sc={hit:"HIT",miss:"MISS",track:"TRACKING",pend:"PENDING"}[p.status];box.appendChild(el("div","scitem",`<span class="stat ${p.status}">${sc}</span> <span class="faint">${p.date} · ${p.horizon}</span><br>${p.claim}${p.note?`<br><span class="faint" style="font-size:12px">${p.note}</span>`:""}`));});d.appendChild(box);v.appendChild(d);});
+    const box=el("div","sclist");r.list.forEach(p=>{const sc={hit:"HIT",miss:"MISS",track:"TRENDING",pend:"PENDING"}[p.status];box.appendChild(el("div","scitem",`<span class="stat ${p.status}">${sc}</span> <span class="faint">${p.date} · ${p.horizon}</span><br>${p.claim}${p.note?`<br><span class="faint" style="font-size:12px">${p.note}</span>`:""}`));});d.appendChild(box);v.appendChild(d);});
 }
 
 /* ---- Tickers ---- */
