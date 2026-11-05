@@ -282,6 +282,14 @@ table.pred th{color:var(--faint);font-weight:600;font-size:12px;text-transform:u
 .calmore{color:var(--accent);font-size:13px;font-weight:600;cursor:pointer;margin-top:10px;display:inline-block}.calmore:hover{text-decoration:underline}
 @media(max-width:600px){.calrow{grid-template-columns:1fr;gap:4px}.calf.hb{margin-left:0}}
 .libul{margin:4px 0 0 18px}.libul li{margin:4px 0;line-height:1.5}.botline .libul{margin-top:6px}
+/* 2026-11-05: site-wide bullets */
+.bhead{font-weight:650;color:var(--ink);font-size:13px;letter-spacing:.2px;margin:0 0 2px}.blab{color:var(--ink);font-weight:650}
+.tsum{margin:0 0 .7em}.tsum .libul{margin-top:0}
+.pnote{font-size:12px;margin-top:3px}.pnote .libul{margin:2px 0 0 16px}.pnote .libul li{margin:1px 0;line-height:1.45}
+.mmetric .libul{margin:0 0 0 16px}.mmetric .libul li{margin:2px 0}.mchg .libul{margin:2px 0 0 16px}.mchg .libul li{margin:4px 0}
+.cl .t .libul,.tlitem .libul,.reason .libul,.trade .libul{margin:3px 0 0 16px}.cl .t .libul li,.tlitem .libul li,.reason .libul li,.trade .libul li{margin:3px 0}
+.mlist .libul{margin:4px 0 0 16px}.mlist .libul li{margin:3px 0}
+.libul li.bsub{list-style:none;margin-left:-16px;font-weight:650;color:var(--ink);font-size:12.5px;letter-spacing:.2px;margin-top:8px}
 </style>
 </head>
 <body>
@@ -16363,8 +16371,8 @@ TABS.forEach(([id,label,tip,dot],i)=>{
 
 /* ---- New Since Last (landing) ---- */
 /* text helpers: a field may be a string, an array of bullets, or {lead, points:[{title, items}]} */
-function richText(x){if(Array.isArray(x))return '<ul class="mlist">'+x.map(i=>"<li>"+(typeof i==="string"?i:((i.t?'<span class="hl-h">'+i.t+"</span>":"")+(i.items?richText(i.items):"")))+"</li>").join("")+"</ul>";if(x&&typeof x==="object")return (x.lead?'<p class="hl-lead">'+x.lead+"</p>":"")+'<ol class="hl-pts">'+(x.points||[]).map(p=>'<li><span class="hl-h">'+p.title+"</span>"+richText(p.items||[])+"</li>").join("")+"</ol>";return x||"";}
-function hlPanel(h){if(h&&typeof h==="object"){const p=el("div","panel hlpanel");p.appendChild(el("h3","","Headline"));p.appendChild(el("div","",richText(h)));return p;}return el("div","panel","<b style='color:var(--ink)'>Headline.</b> "+h);}
+function richText(x){if(Array.isArray(x))return '<ul class="mlist">'+x.map(i=>"<li>"+(typeof i==="string"?i:((i.t?'<span class="hl-h">'+i.t+"</span>":"")+(i.items?richText(i.items):"")))+"</li>").join("")+"</ul>";if(x&&typeof x==="object")return (x.lead?'<p class="hl-lead">'+x.lead+"</p>":"")+'<ol class="hl-pts">'+(x.points||[]).map(p=>'<li><span class="hl-h">'+p.title+"</span>"+richText(p.items||[])+"</li>").join("")+"</ol>";return x?bulletHTML(x):"";}
+function hlPanel(h){if(h&&typeof h==="object"){const p=el("div","panel hlpanel");p.appendChild(el("h3","","Headline"));p.appendChild(el("div","",richText(h)));return p;}return el("div","panel",bTagged("<b style='color:var(--ink)'>Headline.</b>",h));}
 function renderNew(){
   const v=$("#v-new");v.innerHTML="";
   const n=DATA.newSinceLast;
@@ -16381,11 +16389,11 @@ function renderNew(){
   DATA.tradeIdeas.forEach(t=>{
     const row=el("div","trade");
     const left=el("div");left.appendChild(el("div","tk",t.ticker));left.appendChild(el("div","dir "+t.dir,t.dir.toUpperCase()));row.appendChild(left);
-    const mid=el("div");mid.appendChild(el("div","",`<b>${t.name}</b> <span class='faint' style='font-size:12px'>· ${t.theme}</span>`));mid.appendChild(el("div","muted",t.thesis));mid.appendChild(el("div","src",`<span class='faint' style='font-size:11.5px'>${t.src}</span>`));row.appendChild(mid);
+    const mid=el("div");mid.appendChild(el("div","",`<b>${t.name}</b> <span class='faint' style='font-size:12px'>· ${t.theme}</span>`));mid.appendChild(el("div","muted",bulletHTML(t.thesis)));mid.appendChild(el("div","src",`<span class='faint' style='font-size:11.5px'>${t.src}</span>`));row.appendChild(mid);
     row.appendChild(el("div","rc","<span class='risk "+t.risk+"'>"+({core:'CORE',mod:'MODERATE',spec:'SPECULATIVE'})[t.risk]+"</span>"));
     v.appendChild(row);
   });
-  v.appendChild(el("div","panel","<b style='color:var(--ink)'>Timing discipline.</b> "+n.timingNote));
+  v.appendChild(el("div","panel",bTagged("<b style='color:var(--ink)'>Timing discipline.</b>",n.timingNote)));
   if(DATA.nslArchive && DATA.nslArchive.length){
     v.appendChild(el("div","sub","📁 Archive — previous batches"));
     v.appendChild(el("div","hint","Every prior 'New Since Last' write-up, preserved in full. Each batch keeps its headline, new themes, conviction moves, contested forks and timing note. Click to expand. (Trade ideas above are cumulative, so they're not duplicated here.)"));
@@ -16397,7 +16405,7 @@ function renderNew(){
       if(b.newThemes&&b.newThemes.length){body.appendChild(el("div","sub","New themes this batch"));b.newThemes.forEach(x=>{const c=el("div","deltacard new");c.appendChild(el("h4","",x.name));c.appendChild(el("div","why",richText(x.why)));c.appendChild(el("div","src","Sources: "+x.src));body.appendChild(c);});}
       if(b.convictionMoves&&b.convictionMoves.length){body.appendChild(el("div","sub","Conviction moves"));b.convictionMoves.forEach(x=>{const c=el("div","deltacard "+x.dir);const arrow={up:"▲ ",down:"▼ ",contested:"⇄ ",flat:"■ "}[x.dir]||"";c.appendChild(el("h4","",arrow+x.name));c.appendChild(el("div","why",richText(x.why)));c.appendChild(el("div","src","Sources: "+x.src));body.appendChild(c);});}
       if(b.contested&&b.contested.length){body.appendChild(el("div","sub","Newly contested / debates"));b.contested.forEach(x=>{const c=el("div","deltacard contested");c.appendChild(el("h4","","⇄ "+x.name));c.appendChild(el("div","why",richText(x.why)));c.appendChild(el("div","src","Sources: "+x.src));body.appendChild(c);});}
-      if(b.timingNote)body.appendChild(el("div","panel","<b style='color:var(--ink)'>Timing discipline.</b> "+b.timingNote));
+      if(b.timingNote)body.appendChild(el("div","panel",bTagged("<b style='color:var(--ink)'>Timing discipline.</b>",b.timingNote)));
       d.appendChild(body);v.appendChild(d);
     });
   }
@@ -16444,10 +16452,10 @@ function renderThemes(){
     sum.innerHTML=`<span><span class="vel ${vm.c}" style="font-size:14px">${vm.s}</span> <b style="font-size:16px">${t.name}</b> <span class="camp ${t.camp}">${t.camp.toUpperCase()}</span>${freshBadges(t)}</span><span class="faint" style="font-variant-numeric:tabular-nums">conviction <b style="color:var(--ink)">${t.conviction.toFixed(1)}</b> · ${t.sources} voice${t.sources>1?'s':''} · ${t.tier}</span>`;
     d.appendChild(sum);
     const tagbox=el("div");tagbox.style.margin="10px 0 4px";(t.tags||[]).forEach(tag=>{const cls=/FLAG|CONTESTED|thin|discount/i.test(tag)?"pill flag":"pill";tagbox.appendChild(el("span",cls,tag));});d.appendChild(tagbox);
-    d.appendChild(el("p","",t.summary));
-    d.appendChild(el("div","reason","<b>Why it's here / direction:</b> "+t.reason));
+    d.appendChild(el("div","tsum",bulletHTML(t.summary)));
+    d.appendChild(el("div","reason",bTagged("<b>Why it's here / direction:</b>",t.reason)));
     d.appendChild(el("div","srcline","<b>Voices:</b> "+t.voices));d.appendChild(el("div","srcline",freshLine(t)));
-    const log=el("div","changelog");(t.log||[]).slice().reverse().forEach(e=>{const item=el("div","cl");item.appendChild(el("div","d",e.d));item.appendChild(el("div","t",e.t));log.appendChild(item);});
+    const log=el("div","changelog");(t.log||[]).slice().reverse().forEach(e=>{const item=el("div","cl");item.appendChild(el("div","d",e.d));item.appendChild(el("div","t",bulletHTML(e.t)));log.appendChild(item);});
     d.appendChild(el("div","faint","<b style='color:var(--dim)'>Changelog</b> (newest first)"));d.appendChild(log);
     v.appendChild(d);
   });
@@ -16458,14 +16466,14 @@ function renderTimeline(){
   const v=$("#v-timeline");v.innerHTML="";
   v.appendChild(el("p","lead","The roadmap of catalysts (now → 2030+) plus a scorecard grading every dated prediction. Over time this calibrates which voices to trust."));
   const tl=el("div","panel");tl.appendChild(el("h3","","Roadmap — catalysts & expected inflections"));
-  DATA.timeline.forEach(p=>{const row=el("div","tlrow");row.appendChild(el("div","tlper",p.per));const box=el("div");const its=(p.per==="NEXT 6 WEEKS"&&DATA.calendar)?calTimelineItems():p.items;its.forEach(it=>box.appendChild(el("div","tlitem",it.t+(it.src?` <span class="src">— ${it.src}</span>`:""))));if(p.per==="NEXT 6 WEEKS"&&DATA.calendar){const a=el("div","calmore","High-importance events only. Full calendar →");a.onclick=()=>goTab("calendar");box.appendChild(a);}row.appendChild(box);tl.appendChild(row);});
+  DATA.timeline.forEach(p=>{const row=el("div","tlrow");row.appendChild(el("div","tlper",p.per));const box=el("div");const its=(p.per==="NEXT 6 WEEKS"&&DATA.calendar)?calTimelineItems():p.items;its.forEach(it=>box.appendChild(el("div","tlitem",bulletHTML(it.t)+(it.src?` <span class="src">— ${it.src}</span>`:""))));if(p.per==="NEXT 6 WEEKS"&&DATA.calendar){const a=el("div","calmore","High-importance events only. Full calendar →");a.onclick=()=>goTab("calendar");box.appendChild(a);}row.appendChild(box);tl.appendChild(row);});
   v.appendChild(tl);
-  if(DATA.timelineArchive&&DATA.timelineArchive.length){const ar=el("details","tlarch");ar.appendChild(el("summary","","Earlier NOW snapshots ("+DATA.timelineArchive.length+", archived as newer batches arrived)"));const bx=el("div","panel");DATA.timelineArchive.forEach(it=>bx.appendChild(el("div","tlitem",it.t+` <span class="src">— ${it.src}</span>`)));ar.appendChild(bx);v.appendChild(ar);}
+  if(DATA.timelineArchive&&DATA.timelineArchive.length){const ar=el("details","tlarch");ar.appendChild(el("summary","","Earlier NOW snapshots ("+DATA.timelineArchive.length+", archived as newer batches arrived)"));const bx=el("div","panel");DATA.timelineArchive.forEach(it=>bx.appendChild(el("div","tlitem",bulletHTML(it.t)+` <span class="src">— ${it.src}</span>`)));ar.appendChild(bx);v.appendChild(ar);}
   const pp=el("div","panel");pp.appendChild(el("h3","","Prediction scorecard"));
   pp.appendChild(el("div","hint","<span class='stat hit'>HIT</span> confirmed · <span class='stat track'>TRENDING</span> evidence building toward a hit, not yet resolved · <span class='stat pend'>PENDING</span> not yet due · <span class='stat miss'>MISS</span> falsified"));
   const tb=el("table","pred");tb.innerHTML="<thead><tr><th>Voice</th><th>Prediction</th><th>Horizon</th><th>Status</th></tr></thead>";const body=el("tbody");
   const rank={hit:0,miss:1,track:2,pend:3};
-  [...DATA.predictions].sort((a,b)=>rank[a.status]-rank[b.status]).forEach(p=>{const tr=el("tr");tr.appendChild(el("td","","<b>"+p.who+"</b><br><span class='faint' style='font-size:11px'>"+p.date+"</span>"));tr.appendChild(el("td","",p.claim+(p.note?`<br><span class='faint' style='font-size:12px'>${p.note}</span>`:"")));tr.appendChild(el("td","",p.horizon));const sc={hit:"HIT",miss:"MISS",track:"TRENDING",pend:"PENDING"}[p.status];tr.appendChild(el("td","","<span class='stat "+p.status+"'>"+sc+"</span>"));body.appendChild(tr);});
+  [...DATA.predictions].sort((a,b)=>rank[a.status]-rank[b.status]).forEach(p=>{const tr=el("tr");tr.appendChild(el("td","","<b>"+p.who+"</b><br><span class='faint' style='font-size:11px'>"+p.date+"</span>"));tr.appendChild(el("td","",p.claim+(p.note?`<div class='faint pnote'>${bulletHTML(p.note)}</div>`:"")));tr.appendChild(el("td","",p.horizon));const sc={hit:"HIT",miss:"MISS",track:"TRENDING",pend:"PENDING"}[p.status];tr.appendChild(el("td","","<span class='stat "+p.status+"'>"+sc+"</span>"));body.appendChild(tr);});
   tb.appendChild(body);pp.appendChild(tb);v.appendChild(pp);
 }
 
@@ -16475,7 +16483,7 @@ function renderWatchlist(){
   v.appendChild(el("p","lead","Companies mapped to themes, each with an <b>eyes-wide-open</b> label: cap tier, liquidity, crowdedness. Full spectrum, so you can size and pick with clear risk context."));
   const warn=el("div","blind");warn.innerHTML="<h4>⚠ Read before using</h4><span class='muted'><b>Research candidates, not recommendations.</b> Prices, valuations and positioning are <b>NOT live</b>. Verify everything. Not financial advice.</span>";v.appendChild(warn);
   v.appendChild(el("div","legend","<span><span class='risk core'>CORE</span> liquid mega/large — easier to act</span><span><span class='risk mod'>MODERATE</span> some timing/crowding risk</span><span><span class='risk spec'>SPECULATIVE</span> small/low-liquidity/narrative</span>"));
-  DATA.watchlist.forEach(c=>{const box=el("div","wcat");box.appendChild(el("h3","",c.cat));box.appendChild(el("div","muted",c.note));const tb=el("table","wtable");tb.innerHTML="<thead><tr><th>Ticker</th><th>Name</th><th>Theme link</th><th>Eyes-wide-open</th></tr></thead>";const body=el("tbody");c.rows.forEach(r=>{const tr=el("tr");tr.appendChild(el("td","","<span class='tkr'>"+r.tkr+"</span>"));tr.appendChild(el("td","",r.name));tr.appendChild(el("td","muted",r.theme));tr.appendChild(el("td","","<span class='risk "+r.risk+"'>"+({core:'CORE',mod:'MODERATE',spec:'SPECULATIVE'})[r.risk]+"</span> <span class='faint' style='font-size:12px'>"+r.label+"</span>"));body.appendChild(tr);});tb.appendChild(body);box.appendChild(tb);v.appendChild(box);});
+  DATA.watchlist.forEach(c=>{const box=el("div","wcat");box.appendChild(el("h3","",c.cat));box.appendChild(el("div","muted",bulletHTML(c.note)));const tb=el("table","wtable");tb.innerHTML="<thead><tr><th>Ticker</th><th>Name</th><th>Theme link</th><th>Eyes-wide-open</th></tr></thead>";const body=el("tbody");c.rows.forEach(r=>{const tr=el("tr");tr.appendChild(el("td","","<span class='tkr'>"+r.tkr+"</span>"));tr.appendChild(el("td","",r.name));tr.appendChild(el("td","muted",r.theme));tr.appendChild(el("td","","<span class='risk "+r.risk+"'>"+({core:'CORE',mod:'MODERATE',spec:'SPECULATIVE'})[r.risk]+"</span> <span class='faint' style='font-size:12px'>"+r.label+"</span>"));body.appendChild(tr);});tb.appendChild(body);box.appendChild(tb);v.appendChild(box);});
 }
 
 /* ---- Library ---- */
@@ -16489,6 +16497,7 @@ function bulletize(text){
     if(ch==="("||ch==="[")depth++;else if((ch===")"||ch==="]")&&depth>0)depth--;
     if(depth>0)continue;
     if(ch===";"&&s[i+1]===" "){out.push(cur.slice(0,-1).trim());cur="";i++;continue;}
+    if(ch==="|"&&s[i-1]===" "&&s[i+1]===" "){out.push(cur.slice(0,-1).trim());cur="";i++;continue;}
     if(ch==="."||ch==="!"||ch==="?"){
       let j=i+1;while(j<s.length&&/['"’”)]/.test(s[j])){cur+=s[j];j++;}
       if(s[j]===" "&&j+1<s.length&&/[A-Z0-9"'(~$‘“]/.test(s[j+1])&&!ABBR.test(cur.trim().replace(/['"’”)]+$/,""))&&!/\b[A-Z]\.$/.test(cur.trim())){out.push(cur.trim());cur="";i=j;continue;}
@@ -16496,10 +16505,15 @@ function bulletize(text){
     }
   }
   if(cur.trim())out.push(cur.trim());
-  const merged=[];out.forEach(p=>{if(merged.length&&p.length<22)merged[merged.length-1]+="; "+p;else merged.push(p);});
+  const merged=[];out.forEach(p=>{if(merged.length&&p.length<22)merged[merged.length-1]=merged[merged.length-1].replace(/\.$/,"")+"; "+p;else merged.push(p);});
   return merged.map(p=>{p=p.charAt(0).toUpperCase()+p.slice(1);return /[^.]\.$/.test(p)&&!ABBR.test(p)?p.slice(0,-1):p;});
 }
-function bulletHTML(x){const a=bulletize(x);return a.length>1?'<ul class="mlist libul">'+a.map(p=>"<li>"+p+"</li>").join("")+"</ul>":(a[0]||"");}
+function bLabel(p){p=String(p||"");const m=p.match(/^([^:.;]{2,36}?):\s/);if(m&&m[1].trim().split(/\s+/).length<=6&&(m[1].split("(").length===m[1].split(")").length)&&!/^\d/.test(m[1]))return '<b class="blab">'+m[1]+':</b> '+p.slice(m[0].length);return p;}
+function bIsHead(p){const L=String(p).replace(/[^A-Za-z]/g,"");return L.length>=8&&String(p).length<=110&&L.replace(/[^A-Z]/g,"").length/L.length>0.75;}
+function bItem(p){return bIsHead(p)?'<li class="bsub">'+p+"</li>":"<li>"+bLabel(p)+"</li>";}
+function bulletHTML(x){const a=bulletize(x);if(a.length<=1)return bLabel(a[0]||"");let h="",r=a;if(bIsHead(a[0])){h='<div class="bhead">'+a[0]+'</div>';r=a.slice(1);}return h+(r.length>1?'<ul class="mlist libul">'+r.map(bItem).join("")+"</ul>":(r[0]?"<div>"+bLabel(r[0])+"</div>":""));}
+function bLead(x){const a=bulletize(x);if(a.length<=1)return bLabel(a[0]||"");return bLabel(a[0])+'<ul class="mlist libul">'+a.slice(1).map(bItem).join("")+"</ul>";}
+function bTagged(label,x){const a=bulletize(x);return label+(a.length>1?bulletHTML(x):" "+bLabel(a[0]||""));}
 function libCard(t){
   const d=el("details","libcard");
   const sum=el("summary");sum.innerHTML=`<span class="lt">${t.id} · ${t.title}</span><span class="lm">${t.date} · ${t.type}</span>`;d.appendChild(sum);
@@ -16567,7 +16581,7 @@ function renderSources(){
   const p=el("div","panel");p.appendChild(el("h3","","Composition of the "+DATA.voices+" distinct voices"));
   const bars=el("div","bars");DATA.sourceComposition.forEach(s=>{const row=el("div","b");row.appendChild(el("div","lab",s.label+"<br><span class='faint' style='font-size:11px'>"+s.who+"</span>"));const bt=el("div","bt");const bf=el("div","bf");bf.style.width=s.pct+"%";bt.appendChild(bf);row.appendChild(bt);row.appendChild(el("div","faint",s.pct+"%"));bars.appendChild(row);});
   p.appendChild(bars);v.appendChild(p);
-  const b=el("div","blind");let h="<h4>Blind spots &amp; directional bias</h4><ul style='margin:8px 0 0;padding-left:18px' class='muted'>";DATA.blindspots.forEach(x=>h+="<li style='margin:4px 0'>"+x+"</li>");h+="</ul><p class='muted' style='margin-top:12px'><b>What to feed next to keep stress-testing:</b> a China-domestic voice, an energy-utility/grid executive, a private-credit practitioner, and independent corroboration of the crypto-rails theme. Keep disconfirming — not just reinforcing.</p>";b.innerHTML=h;v.appendChild(b);
+  const b=el("div","blind");let h="<h4>Blind spots &amp; directional bias</h4><ul style='margin:8px 0 0;padding-left:18px' class='muted'>";DATA.blindspots.forEach(x=>h+="<li style='margin:6px 0'>"+bLead(x)+"</li>");h+="</ul><p class='muted' style='margin-top:12px'><b>What to feed next to keep stress-testing:</b> a China-domestic voice, an energy-utility/grid executive, a private-credit practitioner, and independent corroboration of the crypto-rails theme. Keep disconfirming — not just reinforcing.</p>";b.innerHTML=h;v.appendChild(b);
 }
 
 /* ---- Methodology ---- */
@@ -16761,11 +16775,11 @@ function freshLine(t){const f=FRESH[t.id];if(!f)return"";
 function renderMacro(){const v=$("#v-macro");v.innerHTML="";const M=DATA.macro;
   if(!M){v.appendChild(el("p","lead","Macro Pulse has not been populated yet."));return;}
   v.appendChild(el("p","lead",`<b>Macro Pulse.</b> Facts, not opinions: the forces moving markets right now, refreshed by the morning scan. As of <b>${M.asOf}</b>.<span class="mleg"><span class="mstat calm">CALM</span>not a factor</span><span class="mleg"><span class="mstat watch">WATCH</span>could move markets</span><span class="mleg"><span class="mstat elevated">ELEVATED</span>moving markets now</span>`));
-  const on=el("div","panel");on.appendChild(el("h3","","What moved overnight"));const ul=el("ul","mlist");(M.overnight||[]).forEach(x=>ul.appendChild(el("li","",x)));on.appendChild(ul);v.appendChild(on);
+  const on=el("div","panel");on.appendChild(el("h3","","What moved overnight"));const ul=el("ul","mlist");(M.overnight||[]).forEach(x=>ul.appendChild(el("li","",bLead(x))));on.appendChild(ul);v.appendChild(on);
   const g=el("div","mgrid");
   (M.drivers||[]).forEach(d=>{const c=el("div","mcard "+d.status);
     c.appendChild(el("div","mhead",`<span>${d.name}</span><span class="mstat ${d.status}">${String(d.status).toUpperCase()}</span>`));
-    c.appendChild(el("div","mmetric",d.metric));c.appendChild(el("div","mchg",d.changed));
+    c.appendChild(el("div","mmetric",bulletHTML(d.metric)));c.appendChild(el("div","mchg",bulletHTML(d.changed)));
     const tb=el("div","mthemes");(d.themes||[]).forEach(id=>{const t=DATA.themes.find(x=>x.id===id);if(!t)return;const p=el("span","pill link",t.name.split(" - ")[0].slice(0,42));p.title="Open theme: "+t.name;p.onclick=()=>openTheme(id);tb.appendChild(p);});c.appendChild(tb);g.appendChild(c);});
   v.appendChild(g);
   if(DATA.calendar){const t=calToday(),e7=calAdd(t,7);const nx=calSorted().filter(e=>e.date>=t&&e.date<=e7);const cp=el("div","panel");cp.appendChild(el("h3","","Next 7 days"));if(!nx.length)cp.appendChild(el("div","muted","Nothing scheduled."));const bx=el("div","calweek");nx.forEach(e=>bx.appendChild(calRow(e,t)));cp.appendChild(bx);const a=el("div","calmore","Full calendar →");a.onclick=()=>goTab("calendar");cp.appendChild(a);v.appendChild(cp);}else{
@@ -16823,7 +16837,7 @@ function renderScores(){const v=$("#v-scores");v.innerHTML="";
   const rows=all.slice().sort((a,b)=>((b.hit+b.miss)-(a.hit+a.miss))||(b.weight-a.weight)||(b.list.length-a.list.length));
   const head=el("div","screw head","<span>Voice</span><span>Calls</span><span>Hit</span><span>Miss</span><span>Trending</span><span>Pending</span><span>Hit rate</span><span>Weight</span>");v.appendChild(head);
   rows.forEach(r=>{const d=el("details","scrow");const s=el("summary","screw",`<span><b>${r.name}</b></span><span>${r.list.length}</span><span class="g">${r.hit}</span><span class="r">${r.miss}</span><span>${r.track}</span><span>${r.pend}</span><span>${r.rate==null?"-":Math.round(r.rate*100)+"%"}</span><span><b>${r.weight.toFixed(2)}x</b></span>`);d.appendChild(s);
-    const box=el("div","sclist");r.list.forEach(p=>{const sc={hit:"HIT",miss:"MISS",track:"TRENDING",pend:"PENDING"}[p.status];box.appendChild(el("div","scitem",`<span class="stat ${p.status}">${sc}</span> <span class="faint">${p.date} · ${p.horizon}</span><br>${p.claim}${p.note?`<br><span class="faint" style="font-size:12px">${p.note}</span>`:""}`));});d.appendChild(box);v.appendChild(d);});
+    const box=el("div","sclist");r.list.forEach(p=>{const sc={hit:"HIT",miss:"MISS",track:"TRENDING",pend:"PENDING"}[p.status];box.appendChild(el("div","scitem",`<span class="stat ${p.status}">${sc}</span> <span class="faint">${p.date} · ${p.horizon}</span><br>${p.claim}${p.note?`<div class="faint pnote">${bulletHTML(p.note)}</div>`:""}`));});d.appendChild(box);v.appendChild(d);});
 }
 
 /* ---- Tickers ---- */
