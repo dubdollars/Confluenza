@@ -310,6 +310,12 @@ table.pred th{color:var(--faint);font-weight:600;font-size:12px;text-transform:u
 .wlsep{width:1px;height:22px;background:var(--line);margin:0 4px}.wlq{width:200px;margin:0 0 0 auto}
 .wlcand{margin-top:16px}.wlcand h3{margin:0 0 4px}.wlmore{margin:8px 0 0 4px}.kpi .n.wlbd{font-size:15px;line-height:1.5;padding-top:4px}
 @media(max-width:860px){.wlgrid{grid-template-columns:40px 1fr 86px 76px}.wlgrid>span:nth-child(4),.wlgrid>span:nth-child(5),.wlgrid>span:nth-child(6),.wlgrid>span:nth-child(7){display:none}.wlbody{grid-template-columns:1fr;gap:4px}.wlq{width:100%;margin:6px 0 0}.wlsep{display:none}}
+.wltip{position:relative;cursor:help;text-decoration:underline dotted #4a5668;text-underline-offset:3px;outline:none}
+.wltip:hover::after,.wltip:focus::after{content:attr(data-tip);position:absolute;top:calc(100% + 8px);left:-6px;width:270px;padding:9px 11px;background:#1f2633;color:var(--ink);border:1px solid #38465a;border-radius:8px;font-size:12.5px;line-height:1.45;font-weight:500;text-transform:none;letter-spacing:0;white-space:normal;box-shadow:0 8px 24px rgba(0,0,0,.45);z-index:30;pointer-events:none}
+.wltip.tr:hover::after,.wltip.tr:focus::after{left:auto;right:0}
+.wltip:hover::after,.wltip:focus::after{max-width:calc(100vw - 40px)}
+@media(max-width:860px){.wlhead>.wltip:nth-child(8):hover::after,.wlhead>.wltip:nth-child(8):focus::after{left:auto;right:0}.wlhead>.wltip:nth-child(3):hover::after,.wlhead>.wltip:nth-child(3):focus::after{left:-60px}.wlhead{overflow:visible}}
+#v-watchlist{overflow-x:clip}
 </style>
 </head>
 <body>
@@ -23780,7 +23786,17 @@ function renderWatchlist(){
   const q=el("input","tksearch wlq");q.placeholder="Search ticker or name";q.value=wlQ;q.oninput=()=>{wlQ=q.value;const pos=q.selectionStart;renderWatchlist();const n=$(".wlq");if(n){n.focus();n.setSelectionRange(pos,pos);}};bar.appendChild(q);v.appendChild(bar);
   const f=W.items.filter(x=>(wlStatus==="all"||(wlStatus==="on"?x.status!=="retired":x.status===wlStatus))&&(wlStance==="all"||x.stance===wlStance)&&(!wlQ||(x.tkr+" "+x.name).toLowerCase().includes(wlQ.toLowerCase())));
   const max=Math.max(1,...W.items.map(x=>x.score));
-  v.appendChild(el("div","wlgrid wlhead","<span>#</span><span>Name</span><span>Stance</span><span>Watch score</span><span>Last mention</span><span>Added</span><span>Since added · sector</span><span>vs sector</span>"));
+  const hd=el("div","wlgrid wlhead");[
+   ["#","Rank by watch score among the names on the list. ▲ or ▼ shows the move since last week; NEW means added in the last 7 days."],
+   ["Name","Ticker and company. FADING means no new mention in 60+ days (it retires at 90). ⚑ means recent sources lean against the stance, so it gets reviewed on Sunday."],
+   ["Stance","Which way the sources lean, not a recommendation. Bullish, Bearish, Two-sided (the sources disagree) or Monitor (a risk to watch)."],
+   ["Watch score","How strongly the sources are focused on the name right now. Each source counts once, recent mentions count more (90-day half-life), and better track records and high-conviction themes add a little. The bar is relative to the top name."],
+   ["Last mention","Date of the most recent library card or batch that raised the name."],
+   ["Added","When the sources started watching the name, or when it re-entered after retiring. Not an entry point or a buy date."],
+   ["Since added · sector","The name's price change since the Added date, next to its sector fund over the same period. Gray on purpose: context, not a grade."],
+   ["vs sector","The grade: the name's move relative to its sector fund since it was added. Only Bullish and Bearish names, only after 90 days on the list, and a Bearish name scores when it lags. 'day X of 90' means not graded yet; Two-sided and Monitor are never graded."]
+  ].forEach(([lab,tip],i)=>{const sp=el("span","wltip"+(i>=6?" tr":""),lab);sp.dataset.tip=tip;sp.tabIndex=0;hd.appendChild(sp);});
+  v.appendChild(hd);
   if(!f.length)v.appendChild(el("div","panel muted","Nothing matches these filters."));
   f.forEach(x=>v.appendChild(wlRow(x,max)));
   if(wlStatus==="on"&&S.retired)v.appendChild(el("div","calmore wlmore","Show the "+S.retired+" retired names →")).onclick=()=>{wlStatus="retired";renderWatchlist();window.scrollTo(0,0);};
