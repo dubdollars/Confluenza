@@ -290,6 +290,26 @@ table.pred th{color:var(--faint);font-weight:600;font-size:12px;text-transform:u
 .cl .t .libul,.tlitem .libul,.reason .libul,.trade .libul{margin:3px 0 0 16px}.cl .t .libul li,.tlitem .libul li,.reason .libul li,.trade .libul li{margin:3px 0}
 .mlist .libul{margin:4px 0 0 16px}.mlist .libul li{margin:3px 0}
 .libul li.bsub{list-style:none;margin-left:-16px;font-weight:650;color:var(--ink);font-size:12.5px;letter-spacing:.2px;margin-top:8px}
+/* 2026-11-05: single watchlist */
+.wlgrid{display:grid;grid-template-columns:52px minmax(150px,2.1fr) 92px 1.15fr .8fr .7fr 1.35fr .95fr;gap:10px;align-items:center;padding:9px 12px;font-variant-numeric:tabular-nums;font-size:13.5px;list-style:none;cursor:pointer}
+.wlgrid::-webkit-details-marker{display:none}
+.wlhead{font-size:11.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.04em;cursor:default;position:sticky;top:var(--hdrH,0px);background:var(--bg);z-index:5;border-bottom:1px solid var(--line);margin-top:8px}
+.wlrow{border:1px solid var(--line);border-radius:9px;margin:5px 0;background:var(--panel)}.wlrow[open]{border-color:var(--accent)}.wlrow.ret{opacity:.8}
+.wlrk{font-weight:700;color:var(--ink);display:flex;gap:5px;align-items:baseline}.wlup{color:var(--up);font-size:11px;font-weight:700}.wldn{color:var(--down);font-size:11px;font-weight:700}.wlnew{color:var(--new);font-size:10px;font-weight:800}
+.wlnm{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.wlnm b{color:var(--ink)}
+.wlst{display:inline-block;font-size:11px;font-weight:700;border:1px solid;border-radius:6px;padding:1px 7px;white-space:nowrap}
+.wlfade{font-size:9.5px;font-weight:800;color:var(--flat);border:1px dashed #6b5a2f;border-radius:5px;padding:0 4px;margin-left:4px}.wlflag{color:var(--flat);margin-left:4px;cursor:help}
+.wlsc{display:flex;align-items:center;gap:8px}.wlbar{flex:1;height:6px;background:#0e131b;border:1px solid #202a37;border-radius:4px;overflow:hidden}.wlbar span{display:block;height:100%;background:linear-gradient(90deg,#3a6bff,#7c9cff)}.wlsn{width:34px;text-align:right;color:var(--dim);font-size:12.5px}
+.wlc{color:var(--dim);font-size:12.5px}.wlsince{white-space:nowrap}.wlvs{text-align:right;white-space:nowrap}
+.wlg{font-weight:800}.wlg.up{color:var(--up)}.wlg.dn{color:var(--down)}
+.wlbody{display:grid;grid-template-columns:1.1fr 1fr;gap:22px;padding:4px 16px 16px;border-top:1px solid var(--line)}
+.wlh{font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);margin:12px 0 4px}.wlt{font-size:13.5px;color:var(--dim);line-height:1.55}
+.wlwarn{margin-top:10px;font-size:12.5px;color:var(--flat);background:#1d1a10;border:1px solid #4b4022;border-radius:7px;padding:7px 10px}
+.wlhist{margin-top:12px;font-size:12px;color:var(--faint);line-height:1.6}.wlhist .wlh{display:inline;margin:0}
+.wllib{color:var(--accent);cursor:pointer;text-decoration:none;font-weight:600}.wllib:hover{text-decoration:underline}.wlmen li{font-size:12.5px}
+.wlsep{width:1px;height:22px;background:var(--line);margin:0 4px}.wlq{width:200px;margin:0 0 0 auto}
+.wlcand{margin-top:16px}.wlcand h3{margin:0 0 4px}.wlmore{margin:8px 0 0 4px}.kpi .n.wlbd{font-size:15px;line-height:1.5;padding-top:4px}
+@media(max-width:860px){.wlgrid{grid-template-columns:40px 1fr 86px 76px}.wlgrid>span:nth-child(4),.wlgrid>span:nth-child(5),.wlgrid>span:nth-child(6),.wlgrid>span:nth-child(7){display:none}.wlbody{grid-template-columns:1fr;gap:4px}.wlq{width:100%;margin:6px 0 0}.wlsep{display:none}}
 </style>
 </head>
 <body>
@@ -16326,7 +16346,7226 @@ const DATA = {
    "src": "https://www.financecalendar.com/weekly-jobless-claims/"
   }
  ],
- "calendarAsOf": "2026-11-05"
+ "calendarAsOf": "2026-11-05",
+ "watch": {
+  "asOf": "2026-11-05",
+  "pricesAsOf": "2026-11-05",
+  "rules": {
+   "half": 90,
+   "fade": 60,
+   "retire": 90,
+   "grade": 90
+  },
+  "summary": {
+   "active": 56,
+   "fading": 4,
+   "retired": 11,
+   "graded": 32,
+   "beating": 15,
+   "nextGrade": "2026-11-08",
+   "backdrop": [
+    {
+     "bench": "SPY",
+     "name": "S&P 500 (SPY)",
+     "r": -0.0546
+    },
+    {
+     "bench": "QQQ",
+     "name": "Nasdaq-100 (QQQ)",
+     "r": -0.1419
+    },
+    {
+     "bench": "SMH",
+     "name": "Semiconductors (SMH)",
+     "r": -0.2831
+    },
+    {
+     "bench": "IGV",
+     "name": "Software (IGV)",
+     "r": -0.11
+    },
+    {
+     "bench": "BTC-USD",
+     "name": "Bitcoin",
+     "r": -0.1127
+    },
+    {
+     "bench": "AGG",
+     "name": "US bonds (AGG)",
+     "r": 0.0238
+    },
+    {
+     "bench": "XLF",
+     "name": "Financials (XLF)",
+     "r": 0.067
+    },
+    {
+     "bench": "XLV",
+     "name": "Health care (XLV)",
+     "r": 0.1161
+    },
+    {
+     "bench": "XLI",
+     "name": "Industrials (XLI)",
+     "r": -0.0522
+    },
+    {
+     "bench": "XLY",
+     "name": "Consumer discretionary (XLY)",
+     "r": 0.0478
+    },
+    {
+     "bench": "XLU",
+     "name": "Utilities (XLU)",
+     "r": 0.0536
+    },
+    {
+     "bench": "GLD",
+     "name": "Gold (GLD)",
+     "r": -0.0176
+    },
+    {
+     "bench": "SLV",
+     "name": "Silver (SLV)",
+     "r": -0.1484
+    }
+   ]
+  },
+  "candidates": [
+   {
+    "tkr": "TSLA",
+    "houses": 9,
+    "net": 9,
+    "lean": "bull",
+    "ids": [
+     "T189",
+     "T196",
+     "T202",
+     "T207",
+     "T229",
+     "T231"
+    ],
+    "bench": "QQQ"
+   },
+   {
+    "tkr": "WMT",
+    "houses": 5,
+    "net": 5,
+    "lean": "bull",
+    "ids": [
+     "T228",
+     "T240",
+     "T242",
+     "T251",
+     "T260",
+     "T271"
+    ],
+    "bench": "XLP"
+   },
+   {
+    "tkr": "PLTR",
+    "houses": 5,
+    "net": 2,
+    "lean": "bull",
+    "ids": [
+     "T215",
+     "T226",
+     "T228",
+     "T237",
+     "T251",
+     "T252"
+    ],
+    "bench": "IGV"
+   },
+   {
+    "tkr": "NFLX",
+    "houses": 3,
+    "net": -7,
+    "lean": "bear",
+    "ids": [
+     "T223",
+     "T224",
+     "T228",
+     "T244",
+     "T247",
+     "T251"
+    ],
+    "bench": "QQQ"
+   },
+   {
+    "tkr": "T",
+    "houses": 3,
+    "net": -5,
+    "lean": "bear",
+    "ids": [
+     "T231",
+     "T245",
+     "T247",
+     "T249",
+     "T281"
+    ],
+    "bench": "XLC"
+   },
+   {
+    "tkr": "C",
+    "houses": 3,
+    "net": -3,
+    "lean": "bear",
+    "ids": [
+     "T189",
+     "T192",
+     "T202",
+     "T249"
+    ],
+    "bench": "XLF"
+   },
+   {
+    "tkr": "SHOP",
+    "houses": 3,
+    "net": 2,
+    "lean": "bull",
+    "ids": [
+     "T195",
+     "T199",
+     "T242",
+     "T271"
+    ],
+    "bench": "IGV"
+   }
+  ],
+  "items": [
+   {
+    "tkr": "NVDA",
+    "ysym": "NVDA",
+    "name": "Nvidia",
+    "stance": "bull",
+    "risk": "core",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "active",
+    "score": 44.9,
+    "lastMention": "2026-11-04",
+    "quietDays": 1,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Demand >2x supply into 2028; ~15x forward earnings; but ~$588B of guarantees and ~70% of receivables from five customers",
+    "watch": "Watch Nov 17 print and disclosed guarantees",
+    "auto": false,
+    "themes": [
+     {
+      "id": "opensource",
+      "name": "Open-source & inference-cost pressure on premium models"
+     },
+     {
+      "id": "paybackmath",
+      "name": "The PAYBACK MATH"
+     },
+     {
+      "id": "debt",
+      "name": "Debt / private-credit systemic risk"
+     }
+    ],
+    "houses": 59,
+    "mentionCount": 113,
+    "mentions": [
+     {
+      "id": "T294",
+      "date": "2026-11-04",
+      "who": "Animal Spirits (The Compound)",
+      "s": 0
+     },
+     {
+      "id": "T295",
+      "date": "2026-11-04",
+      "who": "Prof G Markets (Tom Lee)",
+      "s": 1
+     },
+     {
+      "id": "T250",
+      "date": "2026-11-03",
+      "who": "Prof G Markets (Elson w/ Foley, Bosa, Zandi)",
+      "s": 0
+     },
+     {
+      "id": "T251",
+      "date": "2026-11-02",
+      "who": "Prof G Markets (Galloway/Elson)",
+      "s": -1
+     },
+     {
+      "id": "T259",
+      "date": "2026-11-02",
+      "who": "Odd Lots (Alex Micalizzi, Nomura)",
+      "s": 0
+     },
+     {
+      "id": "T282",
+      "date": "2026-11-02",
+      "who": "Dylan Patel / SemiAnalysis (Modal Runtime)",
+      "s": 1
+     },
+     {
+      "id": "T211",
+      "date": "2026-11-01",
+      "who": "Jordi Visser",
+      "s": 1
+     },
+     {
+      "id": "T257",
+      "date": "2026-11-01",
+      "who": "Prof G Markets (Misha Laskin, Reflection AI)",
+      "s": 1
+     }
+    ],
+    "lean": 19,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Nvidia"
+     },
+     {
+      "date": "2026-08-31",
+      "label": "Batch 15",
+      "note": "Nvidia - the central bank of AI"
+     },
+     {
+      "date": "2026-09-08",
+      "label": "Batch 16",
+      "note": "Nvidia - physical-AI + simulation compute + fungibility"
+     },
+     {
+      "date": "2026-09-15",
+      "label": "Batch 17",
+      "note": "Toll-taker / compute-monetizers - depreciation bear dead"
+     },
+     {
+      "date": "2026-09-20",
+      "label": "Batch 18",
+      "note": "Own the toll-taker WHILE lab revenue doubles (payback math)"
+     },
+     {
+      "date": "2026-10-05",
+      "label": "Batch 20",
+      "note": "Compute for agents that never sleep"
+     },
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "The toll collector, now also the backstop lender"
+     }
+    ],
+    "px": {
+     "sincePx": 203.28,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 182.525,
+     "lastDate": "2026-11-05",
+     "benchSince": 558.83,
+     "benchLast": 453.445,
+     "r": -0.1021,
+     "rb": -0.1886,
+     "rel": 0.1066,
+     "adj": 0.1066,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 203.28
+    },
+    "rank": 1,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "ANT",
+    "ysym": "ANT",
+    "name": "Anthropic (IPO)",
+    "stance": "two",
+    "risk": "spec",
+    "bench": "QQQ",
+    "benchName": "Nasdaq-100 (QQQ)",
+    "status": "active",
+    "score": 41.08,
+    "lastMention": "2026-11-04",
+    "quietDays": 1,
+    "added": "2026-09-28",
+    "since": "2026-09-28",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "~$17B Q3 revenue, ~85% GM, ~$895B commitments, growth slowing; ~$1.5-2T",
+    "watch": "Price vs Q4 growth; day-one move pre-priced on Hyperliquid",
+    "auto": false,
+    "themes": [
+     {
+      "id": "paybackmath",
+      "name": "The PAYBACK MATH"
+     },
+     {
+      "id": "memory",
+      "name": "Memory / HBM shortage"
+     },
+     {
+      "id": "debt",
+      "name": "Debt / private-credit systemic risk"
+     }
+    ],
+    "houses": 50,
+    "mentionCount": 98,
+    "mentions": [
+     {
+      "id": "T294",
+      "date": "2026-11-04",
+      "who": "Animal Spirits (The Compound)",
+      "s": null
+     },
+     {
+      "id": "T295",
+      "date": "2026-11-04",
+      "who": "Prof G Markets (Tom Lee)",
+      "s": null
+     },
+     {
+      "id": "T296",
+      "date": "2026-11-04",
+      "who": "Invest Like the Best (Martin Casado)",
+      "s": null
+     },
+     {
+      "id": "T226",
+      "date": "2026-11-03",
+      "who": "The Compound (Brown/Batnick)",
+      "s": null
+     },
+     {
+      "id": "T250",
+      "date": "2026-11-03",
+      "who": "Prof G Markets (Elson w/ Foley, Bosa, Zandi)",
+      "s": null
+     },
+     {
+      "id": "T251",
+      "date": "2026-11-02",
+      "who": "Prof G Markets (Galloway/Elson)",
+      "s": null
+     },
+     {
+      "id": "T282",
+      "date": "2026-11-02",
+      "who": "Dylan Patel / SemiAnalysis (Modal Runtime)",
+      "s": null
+     },
+     {
+      "id": "T211",
+      "date": "2026-11-01",
+      "who": "Jordi Visser",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-09-28",
+      "label": "Batch 19",
+      "note": "A price question, not a must-own"
+     },
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "The first public frontier lab"
+     }
+    ],
+    "px": {
+     "note": "Not listed yet",
+     "addPx": null
+    },
+    "rank": 2,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "GOOGL",
+    "ysym": "GOOGL",
+    "name": "Alphabet",
+    "stance": "bull",
+    "risk": "core",
+    "bench": "QQQ",
+    "benchName": "Nasdaq-100 (QQQ)",
+    "status": "active",
+    "score": 31.84,
+    "lastMention": "2026-11-04",
+    "quietDays": 1,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "DeepMind+TPU(~$1T)+Isomorphic+Calico",
+    "watch": "Mega cap · ultra-liquid · least-crowded mega-cap AI play",
+    "auto": false,
+    "themes": [
+     {
+      "id": "consumer",
+      "name": "Consumer agents (next wave)"
+     },
+     {
+      "id": "alphabet",
+      "name": "Alphabet as underrated AI winner"
+     },
+     {
+      "id": "memory",
+      "name": "Memory / HBM shortage"
+     }
+    ],
+    "houses": 46,
+    "mentionCount": 73,
+    "mentions": [
+     {
+      "id": "T294",
+      "date": "2026-11-04",
+      "who": "Animal Spirits (The Compound)",
+      "s": 0
+     },
+     {
+      "id": "T226",
+      "date": "2026-11-03",
+      "who": "The Compound (Brown/Batnick)",
+      "s": 0
+     },
+     {
+      "id": "T250",
+      "date": "2026-11-03",
+      "who": "Prof G Markets (Elson w/ Foley, Bosa, Zandi)",
+      "s": -1
+     },
+     {
+      "id": "T251",
+      "date": "2026-11-02",
+      "who": "Prof G Markets (Galloway/Elson)",
+      "s": 0
+     },
+     {
+      "id": "T272",
+      "date": "2026-11-02",
+      "who": "Apple (earnings)",
+      "s": null
+     },
+     {
+      "id": "T282",
+      "date": "2026-11-02",
+      "who": "Dylan Patel / SemiAnalysis (Modal Runtime)",
+      "s": 1
+     },
+     {
+      "id": "T211",
+      "date": "2026-11-01",
+      "who": "Jordi Visser",
+      "s": -1
+     },
+     {
+      "id": "T257",
+      "date": "2026-11-01",
+      "who": "Prof G Markets (Misha Laskin, Reflection AI)",
+      "s": 0
+     }
+    ],
+    "lean": 3,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Alphabet"
+     }
+    ],
+    "px": {
+     "sincePx": 351.99,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 283.44,
+     "lastDate": "2026-11-05",
+     "benchSince": 696.06,
+     "benchLast": 651.88,
+     "r": -0.1947,
+     "rb": -0.0635,
+     "rel": -0.1402,
+     "adj": -0.1402,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 351.99
+    },
+    "rank": 3,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "SPCX",
+    "ysym": "SPCX",
+    "name": "SpaceX",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "QQQ",
+    "benchName": "Nasdaq-100 (QQQ)",
+    "status": "active",
+    "score": 31.42,
+    "lastMention": "2026-11-04",
+    "quietDays": 1,
+    "added": "2026-08-10",
+    "since": "2026-08-10",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Compute + Starlink cash machine + orbital compute",
+    "watch": "Newly public · volatile · 'value the compute, get space free' (~$100)",
+    "auto": false,
+    "themes": [
+     {
+      "id": "paybackmath",
+      "name": "The PAYBACK MATH"
+     },
+     {
+      "id": "energy",
+      "name": "Energy is the binding constraint"
+     },
+     {
+      "id": "opensource",
+      "name": "Open-source & inference-cost pressure on premium models"
+     }
+    ],
+    "houses": 36,
+    "mentionCount": 60,
+    "mentions": [
+     {
+      "id": "T294",
+      "date": "2026-11-04",
+      "who": "Animal Spirits (The Compound)",
+      "s": 0
+     },
+     {
+      "id": "T295",
+      "date": "2026-11-04",
+      "who": "Prof G Markets (Tom Lee)",
+      "s": 1
+     },
+     {
+      "id": "T296",
+      "date": "2026-11-04",
+      "who": "Invest Like the Best (Martin Casado)",
+      "s": 1
+     },
+     {
+      "id": "T250",
+      "date": "2026-11-03",
+      "who": "Prof G Markets (Elson w/ Foley, Bosa, Zandi)",
+      "s": 0
+     },
+     {
+      "id": "T229",
+      "date": "2026-10-31",
+      "who": "Moonshots (Diamandis)",
+      "s": 1
+     },
+     {
+      "id": "T217",
+      "date": "2026-10-30",
+      "who": "All-In",
+      "s": null
+     },
+     {
+      "id": "T245",
+      "date": "2026-10-30",
+      "who": "Steve Eisman",
+      "s": null
+     },
+     {
+      "id": "T252",
+      "date": "2026-10-30",
+      "who": "Prof G Markets (w/ Josh Brown)",
+      "s": null
+     }
+    ],
+    "lean": 15,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-10",
+      "label": "Batch 12",
+      "note": "SpaceX"
+     }
+    ],
+    "px": {
+     "sincePx": 138.74,
+     "sinceDate": "2026-08-10",
+     "firstAfter": false,
+     "last": 123.35,
+     "lastDate": "2026-11-05",
+     "benchSince": 720.87,
+     "benchLast": 651.88,
+     "r": -0.1109,
+     "rb": -0.0957,
+     "rel": -0.0168,
+     "adj": -0.0168,
+     "days": 87,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 3,
+     "addPx": 138.74
+    },
+    "rank": 4,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "META",
+    "ysym": "META",
+    "name": "Meta",
+    "stance": "bull",
+    "risk": "core",
+    "bench": "QQQ",
+    "benchName": "Nasdaq-100 (QQQ)",
+    "status": "active",
+    "score": 24.5,
+    "lastMention": "2026-11-04",
+    "quietDays": 1,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Clouds capacity-capped and accelerating; market rewards discipline; Meta ATM caps rallies",
+    "watch": "FCF and equity issuance are the tells",
+    "auto": false,
+    "themes": [
+     {
+      "id": "consumer",
+      "name": "Consumer agents (next wave)"
+     },
+     {
+      "id": "opensource",
+      "name": "Open-source & inference-cost pressure on premium models"
+     },
+     {
+      "id": "debt",
+      "name": "Debt / private-credit systemic risk"
+     }
+    ],
+    "houses": 29,
+    "mentionCount": 63,
+    "mentions": [
+     {
+      "id": "T294",
+      "date": "2026-11-04",
+      "who": "Animal Spirits (The Compound)",
+      "s": 0
+     },
+     {
+      "id": "T226",
+      "date": "2026-11-03",
+      "who": "The Compound (Brown/Batnick)",
+      "s": -1
+     },
+     {
+      "id": "T250",
+      "date": "2026-11-03",
+      "who": "Prof G Markets (Elson w/ Foley, Bosa, Zandi)",
+      "s": -1
+     },
+     {
+      "id": "T244",
+      "date": "2026-11-02",
+      "who": "Steve Eisman",
+      "s": 0
+     },
+     {
+      "id": "T251",
+      "date": "2026-11-02",
+      "who": "Prof G Markets (Galloway/Elson)",
+      "s": 0
+     },
+     {
+      "id": "T259",
+      "date": "2026-11-02",
+      "who": "Odd Lots (Alex Micalizzi, Nomura)",
+      "s": 0
+     },
+     {
+      "id": "T257",
+      "date": "2026-11-01",
+      "who": "Prof G Markets (Misha Laskin, Reflection AI)",
+      "s": 0
+     },
+     {
+      "id": "T229",
+      "date": "2026-10-31",
+      "who": "Moonshots (Diamandis)",
+      "s": 0
+     }
+    ],
+    "lean": 2,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Oracle / Meta"
+     },
+     {
+      "date": "2026-09-28",
+      "label": "Batch 19",
+      "note": "The consumer-agent owner (Muse)"
+     },
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Compute owners that fund themselves"
+     }
+    ],
+    "px": {
+     "sincePx": 645.85,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 602.255,
+     "lastDate": "2026-11-05",
+     "benchSince": 696.06,
+     "benchLast": 651.88,
+     "r": -0.0675,
+     "rb": -0.0635,
+     "rel": -0.0043,
+     "adj": -0.0043,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 645.85
+    },
+    "rank": 5,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "AMZN",
+    "ysym": "AMZN",
+    "name": "Amazon",
+    "stance": "bull",
+    "risk": "core",
+    "bench": "QQQ",
+    "benchName": "Nasdaq-100 (QQQ)",
+    "status": "active",
+    "score": 20.97,
+    "lastMention": "2026-11-04",
+    "quietDays": 1,
+    "added": "2026-11-04",
+    "since": "2026-11-04",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Clouds capacity-capped and accelerating; market rewards discipline; Meta ATM caps rallies",
+    "watch": "FCF and equity issuance are the tells",
+    "auto": false,
+    "themes": [
+     {
+      "id": "consumer",
+      "name": "Consumer agents (next wave)"
+     },
+     {
+      "id": "paybackmath",
+      "name": "The PAYBACK MATH"
+     },
+     {
+      "id": "debt",
+      "name": "Debt / private-credit systemic risk"
+     }
+    ],
+    "houses": 27,
+    "mentionCount": 50,
+    "mentions": [
+     {
+      "id": "T294",
+      "date": "2026-11-04",
+      "who": "Animal Spirits (The Compound)",
+      "s": null
+     },
+     {
+      "id": "T226",
+      "date": "2026-11-03",
+      "who": "The Compound (Brown/Batnick)",
+      "s": 1
+     },
+     {
+      "id": "T250",
+      "date": "2026-11-03",
+      "who": "Prof G Markets (Elson w/ Foley, Bosa, Zandi)",
+      "s": -1
+     },
+     {
+      "id": "T251",
+      "date": "2026-11-02",
+      "who": "Prof G Markets (Galloway/Elson)",
+      "s": 0
+     },
+     {
+      "id": "T282",
+      "date": "2026-11-02",
+      "who": "Dylan Patel / SemiAnalysis (Modal Runtime)",
+      "s": -1
+     },
+     {
+      "id": "T217",
+      "date": "2026-10-30",
+      "who": "All-In",
+      "s": 1
+     },
+     {
+      "id": "T221",
+      "date": "2026-10-30",
+      "who": "The Compound (Alex Altmann, Barclays)",
+      "s": -1
+     },
+     {
+      "id": "T245",
+      "date": "2026-10-30",
+      "who": "Steve Eisman",
+      "s": -1
+     }
+    ],
+    "lean": 1,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Compute owners that fund themselves"
+     }
+    ],
+    "px": {
+     "sincePx": 266.03,
+     "sinceDate": "2026-11-04",
+     "firstAfter": false,
+     "last": 259.561,
+     "lastDate": "2026-11-05",
+     "benchSince": 691.95,
+     "benchLast": 651.88,
+     "r": -0.0243,
+     "rb": -0.0579,
+     "rel": 0.0357,
+     "adj": 0.0357,
+     "days": 1,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 89,
+     "addPx": 266.03
+    },
+    "rank": 6,
+    "isNew": true,
+    "delta": null
+   },
+   {
+    "tkr": "MSFT",
+    "ysym": "MSFT",
+    "name": "Microsoft",
+    "stance": "bull",
+    "risk": "core",
+    "bench": "QQQ",
+    "benchName": "Nasdaq-100 (QQQ)",
+    "status": "active",
+    "score": 20.45,
+    "lastMention": "2026-11-04",
+    "quietDays": 1,
+    "added": "2026-11-04",
+    "since": "2026-11-04",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Clouds capacity-capped and accelerating; market rewards discipline; Meta ATM caps rallies",
+    "watch": "FCF and equity issuance are the tells",
+    "auto": false,
+    "themes": [
+     {
+      "id": "everythingtrade",
+      "name": "The EVERYTHING TRADE"
+     },
+     {
+      "id": "debt",
+      "name": "Debt / private-credit systemic risk"
+     },
+     {
+      "id": "paybackmath",
+      "name": "The PAYBACK MATH"
+     }
+    ],
+    "houses": 26,
+    "mentionCount": 42,
+    "mentions": [
+     {
+      "id": "T294",
+      "date": "2026-11-04",
+      "who": "Animal Spirits (The Compound)",
+      "s": null
+     },
+     {
+      "id": "T250",
+      "date": "2026-11-03",
+      "who": "Prof G Markets (Elson w/ Foley, Bosa, Zandi)",
+      "s": 0
+     },
+     {
+      "id": "T251",
+      "date": "2026-11-02",
+      "who": "Prof G Markets (Galloway/Elson)",
+      "s": 1
+     },
+     {
+      "id": "T282",
+      "date": "2026-11-02",
+      "who": "Dylan Patel / SemiAnalysis (Modal Runtime)",
+      "s": -1
+     },
+     {
+      "id": "T211",
+      "date": "2026-11-01",
+      "who": "Jordi Visser",
+      "s": 1
+     },
+     {
+      "id": "T215",
+      "date": "2026-10-31",
+      "who": "Pomp (w/ Jordi Visser)",
+      "s": 0
+     },
+     {
+      "id": "T217",
+      "date": "2026-10-30",
+      "who": "All-In",
+      "s": 1
+     },
+     {
+      "id": "T221",
+      "date": "2026-10-30",
+      "who": "The Compound (Alex Altmann, Barclays)",
+      "s": 1
+     }
+    ],
+    "lean": 13,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Compute owners that fund themselves"
+     }
+    ],
+    "px": {
+     "sincePx": 555.8,
+     "sinceDate": "2026-11-04",
+     "firstAfter": false,
+     "last": 537.32,
+     "lastDate": "2026-11-05",
+     "benchSince": 691.95,
+     "benchLast": 651.88,
+     "r": -0.0332,
+     "rb": -0.0579,
+     "rel": 0.0262,
+     "adj": 0.0262,
+     "days": 1,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 89,
+     "addPx": 555.8
+    },
+    "rank": 7,
+    "isNew": true,
+    "delta": null
+   },
+   {
+    "tkr": "BTC",
+    "ysym": "BTC-USD",
+    "name": "Bitcoin",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "SPY",
+    "benchName": "S&P 500 (SPY)",
+    "status": "active",
+    "score": 18.3,
+    "lastMention": "2026-11-01",
+    "quietDays": 1,
+    "added": "2026-08-28",
+    "since": "2026-08-28",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "BTC ~$76K after the Binance hack and ETF outflows; agent payments on card rails",
+    "watch": "Watch the 200-day and quantum/AI-cryptanalysis headlines",
+    "auto": false,
+    "themes": [
+     {
+      "id": "crypto",
+      "name": "Crypto rails / stablecoins + Bitcoin-as-debasement-hedge"
+     },
+     {
+      "id": "consumer",
+      "name": "Consumer agents (next wave)"
+     },
+     {
+      "id": "positioning",
+      "name": "Positioning / market-structure"
+     }
+    ],
+    "houses": 26,
+    "mentionCount": 46,
+    "mentions": [
+     {
+      "id": "T211",
+      "date": "2026-11-01",
+      "who": "Jordi Visser",
+      "s": 1
+     },
+     {
+      "id": "T215",
+      "date": "2026-10-31",
+      "who": "Pomp (w/ Jordi Visser)",
+      "s": 1
+     },
+     {
+      "id": "T229",
+      "date": "2026-10-31",
+      "who": "Moonshots (Diamandis)",
+      "s": 0
+     },
+     {
+      "id": "T213",
+      "date": "2026-10-25",
+      "who": "Jordi Visser",
+      "s": 1
+     },
+     {
+      "id": "T214",
+      "date": "2026-10-24",
+      "who": "Pomp (w/ Jordi Visser)",
+      "s": 1
+     },
+     {
+      "id": "T266",
+      "date": "2026-10-24",
+      "who": "Sundar Pichai (Big Technology)",
+      "s": 0
+     },
+     {
+      "id": "T231",
+      "date": "2026-10-23",
+      "who": "Moonshots (Diamandis)",
+      "s": 0
+     },
+     {
+      "id": "T232",
+      "date": "2026-10-21",
+      "who": "Moonshots (Diamandis) + Chamath",
+      "s": -1
+     }
+    ],
+    "lean": 5,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-28",
+      "label": "Batch 14",
+      "note": "Bitcoin (+ MicroStrategy)"
+     },
+     {
+      "date": "2026-08-31",
+      "label": "Batch 15",
+      "note": "Bitcoin + gold (+ miners)"
+     },
+     {
+      "date": "2026-09-20",
+      "label": "Batch 18",
+      "note": "Jordis crypto pivot - crypto as the AI-agent rail (his #1)"
+     },
+     {
+      "date": "2026-09-28",
+      "label": "Batch 19",
+      "note": "Bitcoin up through a Fed hike; tokenization rails live"
+     },
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Crypto - deleveraging plus a security overhang"
+     }
+    ],
+    "px": {
+     "sincePx": 77830.2891,
+     "sinceDate": "2026-08-28",
+     "firstAfter": false,
+     "last": 75912.08,
+     "lastDate": "2026-11-05",
+     "benchSince": 769.35,
+     "benchLast": 736.58,
+     "r": -0.0246,
+     "rb": -0.0426,
+     "rel": 0.0187,
+     "adj": 0.0187,
+     "days": 69,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 21,
+     "addPx": 77830.2891
+    },
+    "rank": 8,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "AAPL",
+    "ysym": "AAPL",
+    "name": "Apple",
+    "stance": "bull",
+    "risk": "core",
+    "bench": "QQQ",
+    "benchName": "Nasdaq-100 (QQQ)",
+    "status": "active",
+    "score": 16.28,
+    "lastMention": "2026-11-04",
+    "quietDays": 1,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Consumer/on-device agents; restraint-as-edge (Damodaran)",
+    "watch": "Mega cap · ultra-liquid",
+    "auto": false,
+    "themes": [
+     {
+      "id": "memory",
+      "name": "Memory / HBM shortage"
+     },
+     {
+      "id": "alphabet",
+      "name": "Alphabet as underrated AI winner"
+     },
+     {
+      "id": "consumer",
+      "name": "Consumer agents (next wave)"
+     }
+    ],
+    "houses": 20,
+    "mentionCount": 26,
+    "mentions": [
+     {
+      "id": "T294",
+      "date": "2026-11-04",
+      "who": "Animal Spirits (The Compound)",
+      "s": 0
+     },
+     {
+      "id": "T295",
+      "date": "2026-11-04",
+      "who": "Prof G Markets (Tom Lee)",
+      "s": 0
+     },
+     {
+      "id": "T226",
+      "date": "2026-11-03",
+      "who": "The Compound (Brown/Batnick)",
+      "s": 0
+     },
+     {
+      "id": "T250",
+      "date": "2026-11-03",
+      "who": "Prof G Markets (Elson w/ Foley, Bosa, Zandi)",
+      "s": 1
+     },
+     {
+      "id": "T251",
+      "date": "2026-11-02",
+      "who": "Prof G Markets (Galloway/Elson)",
+      "s": 0
+     },
+     {
+      "id": "T259",
+      "date": "2026-11-02",
+      "who": "Odd Lots (Alex Micalizzi, Nomura)",
+      "s": 0
+     },
+     {
+      "id": "T272",
+      "date": "2026-11-02",
+      "who": "Apple (earnings)",
+      "s": 1
+     },
+     {
+      "id": "T229",
+      "date": "2026-10-31",
+      "who": "Moonshots (Diamandis)",
+      "s": -1
+     }
+    ],
+    "lean": 2,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Apple"
+     }
+    ],
+    "px": {
+     "sincePx": 326.59,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 343.77,
+     "lastDate": "2026-11-05",
+     "benchSince": 696.06,
+     "benchLast": 651.88,
+     "r": 0.0526,
+     "rb": -0.0635,
+     "rel": 0.1239,
+     "adj": 0.1239,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 326.59
+    },
+    "rank": 9,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "CRWV",
+    "ysym": "CRWV",
+    "name": "CoreWeave",
+    "stance": "two",
+    "risk": "spec",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "active",
+    "score": 16,
+    "lastMention": "2026-11-04",
+    "quietDays": 1,
+    "added": "2026-08-18",
+    "since": "2026-08-18",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "~15% debt cost, CDS ~950bp, fixed-price contracts; Nebius reprices on short contracts",
+    "watch": "Prefer secured debt to equity; avoid fixed-price renters",
+    "auto": false,
+    "themes": [
+     {
+      "id": "debt",
+      "name": "Debt / private-credit systemic risk"
+     },
+     {
+      "id": "paybackmath",
+      "name": "The PAYBACK MATH"
+     },
+     {
+      "id": "computeasset",
+      "name": "Compute is becoming a financeable ASSET CLASS"
+     }
+    ],
+    "houses": 17,
+    "mentionCount": 38,
+    "mentions": [
+     {
+      "id": "T294",
+      "date": "2026-11-04",
+      "who": "Animal Spirits (The Compound)",
+      "s": -1
+     },
+     {
+      "id": "T296",
+      "date": "2026-11-04",
+      "who": "Invest Like the Best (Martin Casado)",
+      "s": -1
+     },
+     {
+      "id": "T226",
+      "date": "2026-11-03",
+      "who": "The Compound (Brown/Batnick)",
+      "s": 0
+     },
+     {
+      "id": "T250",
+      "date": "2026-11-03",
+      "who": "Prof G Markets (Elson w/ Foley, Bosa, Zandi)",
+      "s": -1
+     },
+     {
+      "id": "T244",
+      "date": "2026-11-02",
+      "who": "Steve Eisman",
+      "s": -1
+     },
+     {
+      "id": "T251",
+      "date": "2026-11-02",
+      "who": "Prof G Markets (Galloway/Elson)",
+      "s": -1
+     },
+     {
+      "id": "T259",
+      "date": "2026-11-02",
+      "who": "Odd Lots (Alex Micalizzi, Nomura)",
+      "s": -1
+     },
+     {
+      "id": "T282",
+      "date": "2026-11-02",
+      "who": "Dylan Patel / SemiAnalysis (Modal Runtime)",
+      "s": 1
+     }
+    ],
+    "lean": -23,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-18",
+      "label": "Batch 13",
+      "note": "CoreWeave"
+     },
+     {
+      "date": "2026-09-15",
+      "label": "Batch 17",
+      "note": "Toll-taker / compute-monetizers - depreciation bear dead"
+     },
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Neoclouds - the stress gauge"
+     }
+    ],
+    "px": {
+     "sincePx": 93.17,
+     "sinceDate": "2026-08-18",
+     "firstAfter": false,
+     "last": 42.48,
+     "lastDate": "2026-11-05",
+     "benchSince": 569.77,
+     "benchLast": 453.445,
+     "r": -0.5441,
+     "rb": -0.2042,
+     "rel": -0.4271,
+     "adj": -0.4271,
+     "days": 79,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": null,
+     "addPx": 93.17
+    },
+    "rank": 10,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "ORCL",
+    "ysym": "ORCL",
+    "name": "Oracle",
+    "stance": "monitor",
+    "risk": "mod",
+    "bench": "IGV",
+    "benchName": "Software (IGV)",
+    "status": "active",
+    "score": 13.75,
+    "lastMention": "2026-11-04",
+    "quietDays": 1,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Capex war 'cage fight'; debt (ORCL) & tolerance (META)",
+    "watch": "Market less tolerant of their capex than GOOG/AMZN",
+    "auto": false,
+    "themes": [
+     {
+      "id": "ratesmacro",
+      "name": "Rising RATES / financing conditions"
+     },
+     {
+      "id": "capex",
+      "name": "Capex value-destruction + the capex-REWARD reflex breaking"
+     },
+     {
+      "id": "computeasset",
+      "name": "Compute is becoming a financeable ASSET CLASS"
+     }
+    ],
+    "houses": 17,
+    "mentionCount": 24,
+    "mentions": [
+     {
+      "id": "T294",
+      "date": "2026-11-04",
+      "who": "Animal Spirits (The Compound)",
+      "s": -1
+     },
+     {
+      "id": "T251",
+      "date": "2026-11-02",
+      "who": "Prof G Markets (Galloway/Elson)",
+      "s": -1
+     },
+     {
+      "id": "T282",
+      "date": "2026-11-02",
+      "who": "Dylan Patel / SemiAnalysis (Modal Runtime)",
+      "s": 1
+     },
+     {
+      "id": "T211",
+      "date": "2026-11-01",
+      "who": "Jordi Visser",
+      "s": 1
+     },
+     {
+      "id": "T215",
+      "date": "2026-10-31",
+      "who": "Pomp (w/ Jordi Visser)",
+      "s": 1
+     },
+     {
+      "id": "T245",
+      "date": "2026-10-30",
+      "who": "Steve Eisman",
+      "s": -1
+     },
+     {
+      "id": "T253",
+      "date": "2026-10-29",
+      "who": "Prof G Markets (w/ Luria, Gapen)",
+      "s": 0
+     },
+     {
+      "id": "T261",
+      "date": "2026-10-29",
+      "who": "Odd Lots (Alex Altmann, Barclays)",
+      "s": 1
+     }
+    ],
+    "lean": -5,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Oracle / Meta"
+     },
+     {
+      "date": "2026-08-28",
+      "label": "Batch 14",
+      "note": "Oracle"
+     }
+    ],
+    "px": {
+     "sincePx": 121.38,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 114.78,
+     "lastDate": "2026-11-05",
+     "benchSince": 92.98,
+     "benchLast": 98.935,
+     "r": -0.0544,
+     "rb": 0.064,
+     "rel": -0.1113,
+     "adj": -0.1113,
+     "days": 108,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": null,
+     "addPx": 121.38
+    },
+    "rank": 11,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "GLD",
+    "ysym": "GLD",
+    "name": "Gold (GLD)",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "SPY",
+    "benchName": "S&P 500 (SPY)",
+    "status": "active",
+    "score": 13.75,
+    "lastMention": "2026-10-31",
+    "quietDays": 5,
+    "added": "2026-08-28",
+    "since": "2026-08-28",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Own the un-printable (debasement/scarcity)",
+    "watch": "Insurance sleeve - reflexive/narrative bid into higher real rates; size accordingly",
+    "auto": false,
+    "themes": [
+     {
+      "id": "ratesmacro",
+      "name": "Rising RATES / financing conditions"
+     },
+     {
+      "id": "crypto",
+      "name": "Crypto rails / stablecoins + Bitcoin-as-debasement-hedge"
+     },
+     {
+      "id": "debt",
+      "name": "Debt / private-credit systemic risk"
+     }
+    ],
+    "houses": 21,
+    "mentionCount": 26,
+    "mentions": [
+     {
+      "id": "T215",
+      "date": "2026-10-31",
+      "who": "Pomp (w/ Jordi Visser)",
+      "s": null
+     },
+     {
+      "id": "T246",
+      "date": "2026-10-26",
+      "who": "Steve Eisman (w/ Benn Steil)",
+      "s": null
+     },
+     {
+      "id": "T248",
+      "date": "2026-10-19",
+      "who": "Steve Eisman (w/ Danny Moses)",
+      "s": null
+     },
+     {
+      "id": "T179",
+      "date": "2026-10-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T187",
+      "date": "2026-10-15",
+      "who": "The Compound (Chart Kid Matt)",
+      "s": null
+     },
+     {
+      "id": "T198",
+      "date": "2026-10-14",
+      "who": "Bloomberg Businessweek Daily (Moynihan/Whitney)",
+      "s": null
+     },
+     {
+      "id": "T194",
+      "date": "2026-10-09",
+      "who": "Jurrien Timmer (Compound and Friends)",
+      "s": 1
+     },
+     {
+      "id": "T150",
+      "date": "2026-09-15",
+      "who": "Raoul Pal & Jordi Visser",
+      "s": null
+     }
+    ],
+    "lean": 1,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-28",
+      "label": "Batch 14",
+      "note": "Gold + miners"
+     },
+     {
+      "date": "2026-08-31",
+      "label": "Batch 15",
+      "note": "Bitcoin + gold (+ miners)"
+     }
+    ],
+    "px": {
+     "sincePx": 408.89,
+     "sinceDate": "2026-08-28",
+     "firstAfter": false,
+     "last": 375.56,
+     "lastDate": "2026-11-05",
+     "benchSince": 769.35,
+     "benchLast": 736.58,
+     "r": -0.0815,
+     "rb": -0.0426,
+     "rel": -0.0407,
+     "adj": -0.0407,
+     "days": 69,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 21,
+     "addPx": 408.89
+    },
+    "rank": 12,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "INTC",
+    "ysym": "INTC",
+    "name": "Intel",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "active",
+    "score": 13.19,
+    "lastMention": "2026-10-31",
+    "quietDays": 5,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "CPU comeback (agents need CPU) + reshoring hedge vs Taiwan tail",
+    "watch": "Turnaround · US-base premium · Damodaran/O'Laughlin long",
+    "auto": false,
+    "themes": [
+     {
+      "id": "memory",
+      "name": "Memory / HBM shortage"
+     },
+     {
+      "id": "assurance",
+      "name": "AI assurance / agent-governance / cybersecurity"
+     },
+     {
+      "id": "energy",
+      "name": "Energy is the binding constraint"
+     }
+    ],
+    "houses": 16,
+    "mentionCount": 16,
+    "mentions": [
+     {
+      "id": "T215",
+      "date": "2026-10-31",
+      "who": "Pomp (w/ Jordi Visser)",
+      "s": -1
+     },
+     {
+      "id": "T229",
+      "date": "2026-10-31",
+      "who": "Moonshots (Diamandis)",
+      "s": -1
+     },
+     {
+      "id": "T221",
+      "date": "2026-10-30",
+      "who": "The Compound (Alex Altmann, Barclays)",
+      "s": -1
+     },
+     {
+      "id": "T245",
+      "date": "2026-10-30",
+      "who": "Steve Eisman",
+      "s": -1
+     },
+     {
+      "id": "T263",
+      "date": "2026-10-29",
+      "who": "Sam Altman (Cheeky Pint)",
+      "s": 0
+     },
+     {
+      "id": "T233",
+      "date": "2026-10-23",
+      "who": "a16z (Andy Jassy)",
+      "s": -1
+     },
+     {
+      "id": "T265",
+      "date": "2026-10-22",
+      "who": "Dwarkesh Patel (Intel leaders)",
+      "s": 1
+     },
+     {
+      "id": "T275",
+      "date": "2026-10-15",
+      "who": "TSMC (earnings)",
+      "s": 0
+     }
+    ],
+    "lean": -4,
+    "leanFlag": "Recent sources lean negative (-4): review the stance on Sunday",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Intel"
+     },
+     {
+      "date": "2026-08-10",
+      "label": "Batch 12",
+      "note": "Intel"
+     }
+    ],
+    "px": {
+     "sincePx": 97.06,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 53.98,
+     "lastDate": "2026-11-05",
+     "benchSince": 558.83,
+     "benchLast": 453.445,
+     "r": -0.4438,
+     "rb": -0.1886,
+     "rel": -0.3146,
+     "adj": -0.3146,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 97.06
+    },
+    "rank": 13,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "MU",
+    "ysym": "MU",
+    "name": "Micron",
+    "stance": "bull",
+    "risk": "core",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "active",
+    "score": 12.74,
+    "lastMention": "2026-11-04",
+    "quietDays": 1,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Apple: memory pricing unprecedented; contracts to 2030; stocks -30-40% from highs",
+    "watch": "Positioning, not fundamentals; size for volatility",
+    "auto": false,
+    "themes": [
+     {
+      "id": "memory",
+      "name": "Memory / HBM shortage"
+     },
+     {
+      "id": "paybackmath",
+      "name": "The PAYBACK MATH"
+     },
+     {
+      "id": "positioning",
+      "name": "Positioning / market-structure"
+     }
+    ],
+    "houses": 17,
+    "mentionCount": 32,
+    "mentions": [
+     {
+      "id": "T294",
+      "date": "2026-11-04",
+      "who": "Animal Spirits (The Compound)",
+      "s": 0
+     },
+     {
+      "id": "T211",
+      "date": "2026-11-01",
+      "who": "Jordi Visser",
+      "s": 1
+     },
+     {
+      "id": "T252",
+      "date": "2026-10-30",
+      "who": "Prof G Markets (w/ Josh Brown)",
+      "s": 1
+     },
+     {
+      "id": "T263",
+      "date": "2026-10-29",
+      "who": "Sam Altman (Cheeky Pint)",
+      "s": 1
+     },
+     {
+      "id": "T223",
+      "date": "2026-10-28",
+      "who": "Animal Spirits (Batnick/Carlson)",
+      "s": 1
+     },
+     {
+      "id": "T230",
+      "date": "2026-10-28",
+      "who": "Moonshots (Diamandis)",
+      "s": -1
+     },
+     {
+      "id": "T256",
+      "date": "2026-10-26",
+      "who": "Prof G Markets (Galloway/Elson)",
+      "s": 0
+     },
+     {
+      "id": "T213",
+      "date": "2026-10-25",
+      "who": "Jordi Visser",
+      "s": 1
+     }
+    ],
+    "lean": 6,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Micron"
+     },
+     {
+      "date": "2026-10-05",
+      "label": "Batch 20",
+      "note": "Compute for agents that never sleep"
+     },
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Memory - tight fundamentals, broken charts"
+     }
+    ],
+    "px": {
+     "sincePx": 865.46,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 678.11,
+     "lastDate": "2026-11-05",
+     "benchSince": 558.83,
+     "benchLast": 453.445,
+     "r": -0.2165,
+     "rb": -0.1886,
+     "rel": -0.0344,
+     "adj": -0.0344,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 865.46
+    },
+    "rank": 14,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "ASML",
+    "ysym": "ASML",
+    "name": "ASML",
+    "stance": "bull",
+    "risk": "core",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "active",
+    "score": 12.16,
+    "lastMention": "2026-10-29",
+    "quietDays": 7,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "EUV chokepoint — THE ~200GW/yr AI-chip ceiling (SemiAnalysis)",
+    "watch": "Mega cap · liquid · single-point leverage · the deep 2028-30 constraint",
+    "auto": false,
+    "themes": [
+     {
+      "id": "litho",
+      "name": "The ultimate ceiling: EUV / ASML & the chip supply chain (+ a US-sovereignty/TerraFab disruptor)"
+     },
+     {
+      "id": "memory",
+      "name": "Memory / HBM shortage"
+     },
+     {
+      "id": "energy",
+      "name": "Energy is the binding constraint"
+     }
+    ],
+    "houses": 15,
+    "mentionCount": 16,
+    "mentions": [
+     {
+      "id": "T263",
+      "date": "2026-10-29",
+      "who": "Sam Altman (Cheeky Pint)",
+      "s": 0
+     },
+     {
+      "id": "T265",
+      "date": "2026-10-22",
+      "who": "Dwarkesh Patel (Intel leaders)",
+      "s": 1
+     },
+     {
+      "id": "T268",
+      "date": "2026-10-21",
+      "who": "Tesla (earnings)",
+      "s": null
+     },
+     {
+      "id": "T274",
+      "date": "2026-10-20",
+      "who": "SpaceX (earnings)",
+      "s": 1
+     },
+     {
+      "id": "T201",
+      "date": "2026-10-18",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T275",
+      "date": "2026-10-15",
+      "who": "TSMC (earnings)",
+      "s": 1
+     },
+     {
+      "id": "T198",
+      "date": "2026-10-14",
+      "who": "Bloomberg Businessweek Daily (Moynihan/Whitney)",
+      "s": 1
+     },
+     {
+      "id": "T276",
+      "date": "2026-10-14",
+      "who": "ASML (earnings)",
+      "s": 1
+     }
+    ],
+    "lean": 5,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "ASML"
+     }
+    ],
+    "px": {
+     "sincePx": 1739.02,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 1381.93,
+     "lastDate": "2026-11-05",
+     "benchSince": 558.83,
+     "benchLast": 453.445,
+     "r": -0.2053,
+     "rb": -0.1886,
+     "rel": -0.0207,
+     "adj": -0.0207,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 1739.02
+    },
+    "rank": 15,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "NBIS",
+    "ysym": "NBIS",
+    "name": "Nebius",
+    "stance": "two",
+    "risk": "spec",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "active",
+    "score": 10.67,
+    "lastMention": "2026-11-03",
+    "quietDays": 1,
+    "added": "2026-08-18",
+    "since": "2026-08-18",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "~15% debt cost, CDS ~950bp, fixed-price contracts; Nebius reprices on short contracts",
+    "watch": "Prefer secured debt to equity; avoid fixed-price renters",
+    "auto": false,
+    "themes": [
+     {
+      "id": "debt",
+      "name": "Debt / private-credit systemic risk"
+     },
+     {
+      "id": "paybackmath",
+      "name": "The PAYBACK MATH"
+     },
+     {
+      "id": "computeasset",
+      "name": "Compute is becoming a financeable ASSET CLASS"
+     }
+    ],
+    "houses": 12,
+    "mentionCount": 21,
+    "mentions": [
+     {
+      "id": "T226",
+      "date": "2026-11-03",
+      "who": "The Compound (Brown/Batnick)",
+      "s": -1
+     },
+     {
+      "id": "T244",
+      "date": "2026-11-02",
+      "who": "Steve Eisman",
+      "s": -1
+     },
+     {
+      "id": "T251",
+      "date": "2026-11-02",
+      "who": "Prof G Markets (Galloway/Elson)",
+      "s": -1
+     },
+     {
+      "id": "T282",
+      "date": "2026-11-02",
+      "who": "Dylan Patel / SemiAnalysis (Modal Runtime)",
+      "s": 1
+     },
+     {
+      "id": "T221",
+      "date": "2026-10-30",
+      "who": "The Compound (Alex Altmann, Barclays)",
+      "s": -1
+     },
+     {
+      "id": "T245",
+      "date": "2026-10-30",
+      "who": "Steve Eisman",
+      "s": -1
+     },
+     {
+      "id": "T252",
+      "date": "2026-10-30",
+      "who": "Prof G Markets (w/ Josh Brown)",
+      "s": -1
+     },
+     {
+      "id": "T223",
+      "date": "2026-10-28",
+      "who": "Animal Spirits (Batnick/Carlson)",
+      "s": -1
+     }
+    ],
+    "lean": -8,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-18",
+      "label": "Batch 13",
+      "note": "Nebius"
+     },
+     {
+      "date": "2026-09-15",
+      "label": "Batch 17",
+      "note": "Toll-taker / compute-monetizers - depreciation bear dead"
+     },
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Neoclouds - the stress gauge"
+     }
+    ],
+    "px": {
+     "sincePx": 248.43,
+     "sinceDate": "2026-08-18",
+     "firstAfter": false,
+     "last": 118.53,
+     "lastDate": "2026-11-05",
+     "benchSince": 569.77,
+     "benchLast": 453.445,
+     "r": -0.5229,
+     "rb": -0.2042,
+     "rel": -0.4005,
+     "adj": -0.4005,
+     "days": 79,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": null,
+     "addPx": 248.43
+    },
+    "rank": 16,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "TSM",
+    "ysym": "TSM",
+    "name": "TSMC",
+    "stance": "bull",
+    "risk": "core",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "active",
+    "score": 9.52,
+    "lastMention": "2026-10-31",
+    "quietDays": 5,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Foundry monopoly",
+    "watch": "Mega cap · liquid · Taiwan tail risk",
+    "auto": false,
+    "themes": [
+     {
+      "id": "litho",
+      "name": "The ultimate ceiling: EUV / ASML & the chip supply chain (+ a US-sovereignty/TerraFab disruptor)"
+     },
+     {
+      "id": "energy",
+      "name": "Energy is the binding constraint"
+     },
+     {
+      "id": "memory",
+      "name": "Memory / HBM shortage"
+     }
+    ],
+    "houses": 12,
+    "mentionCount": 12,
+    "mentions": [
+     {
+      "id": "T229",
+      "date": "2026-10-31",
+      "who": "Moonshots (Diamandis)",
+      "s": 1
+     },
+     {
+      "id": "T292",
+      "date": "2026-10-27",
+      "who": "Invest Like the Best (Cliff Sosin)",
+      "s": 0
+     },
+     {
+      "id": "T265",
+      "date": "2026-10-22",
+      "who": "Dwarkesh Patel (Intel leaders)",
+      "s": 0
+     },
+     {
+      "id": "T268",
+      "date": "2026-10-21",
+      "who": "Tesla (earnings)",
+      "s": 0
+     },
+     {
+      "id": "T275",
+      "date": "2026-10-15",
+      "who": "TSMC (earnings)",
+      "s": 1
+     },
+     {
+      "id": "T276",
+      "date": "2026-10-14",
+      "who": "ASML (earnings)",
+      "s": 0
+     },
+     {
+      "id": "T205",
+      "date": "2026-10-10",
+      "who": "Jensen Huang (Ezra Klein)",
+      "s": 1
+     },
+     {
+      "id": "T104",
+      "date": "2026-08-15",
+      "who": "Gavin Baker",
+      "s": null
+     }
+    ],
+    "lean": 3,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "TSMC"
+     }
+    ],
+    "px": {
+     "sincePx": 402.3,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 357.52,
+     "lastDate": "2026-11-05",
+     "benchSince": 558.83,
+     "benchLast": 453.445,
+     "r": -0.1113,
+     "rb": -0.1886,
+     "rel": 0.0952,
+     "adj": 0.0952,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 402.3
+    },
+    "rank": 17,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "ETH",
+    "ysym": "ETH-USD",
+    "name": "Ethereum",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "BTC-USD",
+    "benchName": "Bitcoin",
+    "status": "active",
+    "score": 7.82,
+    "lastMention": "2026-10-15",
+    "quietDays": 1,
+    "added": "2026-09-20",
+    "since": "2026-09-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "BTC ~$76K after the Binance hack and ETF outflows; agent payments on card rails",
+    "watch": "Watch the 200-day and quantum/AI-cryptanalysis headlines",
+    "auto": false,
+    "themes": [
+     {
+      "id": "crypto",
+      "name": "Crypto rails / stablecoins + Bitcoin-as-debasement-hedge"
+     },
+     {
+      "id": "consumer",
+      "name": "Consumer agents (next wave)"
+     },
+     {
+      "id": "agentaction",
+      "name": "The AGENT leaves the chatbox"
+     }
+    ],
+    "houses": 11,
+    "mentionCount": 19,
+    "mentions": [
+     {
+      "id": "T179",
+      "date": "2026-10-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T182",
+      "date": "2026-10-15",
+      "who": "Joseph Chalom (SharpLink)",
+      "s": null
+     },
+     {
+      "id": "T199",
+      "date": "2026-10-15",
+      "who": "All-In",
+      "s": -1
+     },
+     {
+      "id": "T202",
+      "date": "2026-10-15",
+      "who": "Pomp x Jordi Visser",
+      "s": 1
+     },
+     {
+      "id": "T206",
+      "date": "2026-10-11",
+      "who": "Moonshots (Diamandis)",
+      "s": -1
+     },
+     {
+      "id": "T190",
+      "date": "2026-10-08",
+      "who": "Vitalik Buterin (OKX keynote)",
+      "s": 1
+     },
+     {
+      "id": "T148",
+      "date": "2026-09-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T156",
+      "date": "2026-09-15",
+      "who": "Jordi Visser",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-09-20",
+      "label": "Batch 18",
+      "note": "Jordis crypto pivot - crypto as the AI-agent rail (his #1)"
+     },
+     {
+      "date": "2026-10-05",
+      "label": "Batch 20",
+      "note": "The trust layer for agentic finance"
+     },
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Crypto - deleveraging plus a security overhang"
+     }
+    ],
+    "px": {
+     "sincePx": 2642.9976,
+     "sinceDate": "2026-09-20",
+     "firstAfter": false,
+     "last": 2249.17,
+     "lastDate": "2026-11-05",
+     "benchSince": 81142.6094,
+     "benchLast": 75912.08,
+     "r": -0.149,
+     "rb": -0.0645,
+     "rel": -0.0904,
+     "adj": -0.0904,
+     "days": 46,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 44,
+     "addPx": 2642.9976
+    },
+    "rank": 18,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "TLT",
+    "ysym": "TLT",
+    "name": "Long Treasuries (TLT)",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "AGG",
+    "benchName": "US bonds (AGG)",
+    "status": "active",
+    "score": 7.54,
+    "lastMention": "2026-11-01",
+    "quietDays": 1,
+    "added": "2026-08-28",
+    "since": "2026-08-28",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "10yr fell ~5.3% to ~4.9% as AI wobbled; December hike risk",
+    "watch": "Hedge, not a growth call",
+    "auto": false,
+    "themes": [
+     {
+      "id": "everythingtrade",
+      "name": "The EVERYTHING TRADE"
+     },
+     {
+      "id": "crypto",
+      "name": "Crypto rails / stablecoins + Bitcoin-as-debasement-hedge"
+     },
+     {
+      "id": "memory",
+      "name": "Memory / HBM shortage"
+     }
+    ],
+    "houses": 8,
+    "mentionCount": 9,
+    "mentions": [
+     {
+      "id": "T211",
+      "date": "2026-11-01",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T223",
+      "date": "2026-10-28",
+      "who": "Animal Spirits (Batnick/Carlson)",
+      "s": null
+     },
+     {
+      "id": "T246",
+      "date": "2026-10-26",
+      "who": "Steve Eisman (w/ Benn Steil)",
+      "s": null
+     },
+     {
+      "id": "T233",
+      "date": "2026-10-23",
+      "who": "a16z (Andy Jassy)",
+      "s": null
+     },
+     {
+      "id": "T188",
+      "date": "2026-10-15",
+      "who": "Animal Spirits",
+      "s": null
+     },
+     {
+      "id": "T194",
+      "date": "2026-10-09",
+      "who": "Jurrien Timmer (Compound and Friends)",
+      "s": null
+     },
+     {
+      "id": "T150",
+      "date": "2026-09-15",
+      "who": "Raoul Pal & Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T116",
+      "date": "2026-08-15",
+      "who": "Arthur Hayes",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-28",
+      "label": "Batch 14",
+      "note": "Long-duration Treasuries (hedge)"
+     },
+     {
+      "date": "2026-10-05",
+      "label": "Batch 20",
+      "note": "Harvest the yield"
+     },
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Bonds as the AI hedge"
+     }
+    ],
+    "px": {
+     "sincePx": 82.88,
+     "sinceDate": "2026-08-28",
+     "firstAfter": false,
+     "last": 82.095,
+     "lastDate": "2026-11-05",
+     "benchSince": 97.49,
+     "benchLast": 96.61,
+     "r": -0.0095,
+     "rb": -0.009,
+     "rel": -0.0004,
+     "adj": -0.0004,
+     "days": 69,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 21,
+     "addPx": 82.88
+    },
+    "rank": 19,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "HOOD",
+    "ysym": "HOOD",
+    "name": "Robinhood",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "XLF",
+    "benchName": "Financials (XLF)",
+    "status": "active",
+    "score": 7.15,
+    "lastMention": "2026-11-04",
+    "quietDays": 1,
+    "added": "2026-09-15",
+    "since": "2026-09-15",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": ">50% of stablecoins and tokenized RWAs; Robinhood/Coinbase/Revolut/ARK/BlackRock build on it",
+    "watch": "ETH cluster is book; watch stablecoin supply, RWAs, ETH/BTC",
+    "auto": false,
+    "themes": [
+     {
+      "id": "memory",
+      "name": "Memory / HBM shortage"
+     },
+     {
+      "id": "debt",
+      "name": "Debt / private-credit systemic risk"
+     },
+     {
+      "id": "paybackmath",
+      "name": "The PAYBACK MATH"
+     }
+    ],
+    "houses": 8,
+    "mentionCount": 17,
+    "mentions": [
+     {
+      "id": "T294",
+      "date": "2026-11-04",
+      "who": "Animal Spirits (The Compound)",
+      "s": 1
+     },
+     {
+      "id": "T227",
+      "date": "2026-10-27",
+      "who": "The Compound (Brown/Batnick)",
+      "s": 0
+     },
+     {
+      "id": "T228",
+      "date": "2026-10-20",
+      "who": "The Compound (Brown/Batnick)",
+      "s": 0
+     },
+     {
+      "id": "T182",
+      "date": "2026-10-15",
+      "who": "Joseph Chalom (SharpLink)",
+      "s": null
+     },
+     {
+      "id": "T188",
+      "date": "2026-10-15",
+      "who": "Animal Spirits",
+      "s": null
+     },
+     {
+      "id": "T189",
+      "date": "2026-10-10",
+      "who": "Jordi Visser",
+      "s": 1
+     },
+     {
+      "id": "T148",
+      "date": "2026-09-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T156",
+      "date": "2026-09-15",
+      "who": "Jordi Visser",
+      "s": null
+     }
+    ],
+    "lean": 2,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-09-15",
+      "label": "Batch 17",
+      "note": "Robinhood-as-nexus + tokenization rails"
+     },
+     {
+      "date": "2026-09-20",
+      "label": "Batch 18",
+      "note": "Jordis crypto pivot - crypto as the AI-agent rail (his #1)"
+     },
+     {
+      "date": "2026-09-28",
+      "label": "Batch 19",
+      "note": "Bitcoin up through a Fed hike; tokenization rails live"
+     },
+     {
+      "date": "2026-10-05",
+      "label": "Batch 20",
+      "note": "The trust layer for agentic finance"
+     }
+    ],
+    "px": {
+     "sincePx": 110.45,
+     "sinceDate": "2026-09-15",
+     "firstAfter": false,
+     "last": 77.06,
+     "lastDate": "2026-11-05",
+     "benchSince": 56.85,
+     "benchLast": 57.63,
+     "r": -0.3023,
+     "rb": 0.0137,
+     "rel": -0.3118,
+     "adj": -0.3118,
+     "days": 51,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 39,
+     "addPx": 110.45
+    },
+    "rank": 20,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "V",
+    "ysym": "V",
+    "name": "Visa",
+    "stance": "two",
+    "risk": "spec",
+    "bench": "XLF",
+    "benchName": "Financials (XLF)",
+    "status": "active",
+    "score": 6.95,
+    "lastMention": "2026-11-04",
+    "quietDays": 1,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "EverQuote -15% x2; App Store 30% on notice; agents strip the vig",
+    "watch": "Underweight/pair vs agent owners; timelines are years",
+    "auto": false,
+    "themes": [
+     {
+      "id": "consumer",
+      "name": "Consumer agents (next wave)"
+     },
+     {
+      "id": "agentaction",
+      "name": "The AGENT leaves the chatbox"
+     },
+     {
+      "id": "capex",
+      "name": "Capex value-destruction + the capex-REWARD reflex breaking"
+     }
+    ],
+    "houses": 9,
+    "mentionCount": 10,
+    "mentions": [
+     {
+      "id": "T294",
+      "date": "2026-11-04",
+      "who": "Animal Spirits (The Compound)",
+      "s": 1
+     },
+     {
+      "id": "T245",
+      "date": "2026-10-30",
+      "who": "Steve Eisman",
+      "s": 1
+     },
+     {
+      "id": "T179",
+      "date": "2026-10-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T242",
+      "date": "2026-10-15",
+      "who": "a16z (Angelos, VGS)",
+      "s": 1
+     },
+     {
+      "id": "T145",
+      "date": "2026-09-15",
+      "who": "Levchin & Rampell",
+      "s": null
+     },
+     {
+      "id": "T183",
+      "date": "2026-08-27",
+      "who": "Tom Lee",
+      "s": null
+     },
+     {
+      "id": "T109",
+      "date": "2026-08-15",
+      "who": "Stripe (Gaybrick)",
+      "s": null
+     },
+     {
+      "id": "T12",
+      "date": "2026-07-20",
+      "who": "Jordi Visser",
+      "s": null
+     }
+    ],
+    "lean": 3,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Visa / Mastercard"
+     },
+     {
+      "date": "2026-08-18",
+      "label": "Batch 13",
+      "note": "Visa / Mastercard"
+     },
+     {
+      "date": "2026-09-08",
+      "label": "Batch 16",
+      "note": "Payment rails for agentic PAYMENTS"
+     },
+     {
+      "date": "2026-09-28",
+      "label": "Batch 19",
+      "note": "The disintermediation shorts"
+     }
+    ],
+    "px": {
+     "sincePx": 360.57,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 426.88,
+     "lastDate": "2026-11-05",
+     "benchSince": 56.04,
+     "benchLast": 57.63,
+     "r": 0.1839,
+     "rb": 0.0284,
+     "rel": 0.1512,
+     "adj": 0.1512,
+     "days": 108,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": null,
+     "addPx": 360.57
+    },
+    "rank": 21,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "LLY",
+    "ysym": "LLY",
+    "name": "Eli Lilly",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "XLV",
+    "benchName": "Health care (XLV)",
+    "status": "active",
+    "score": 6.91,
+    "lastMention": "2026-11-01",
+    "quietDays": 1,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Q3 revenue +39%, guide raised; hit highs during the AI rout",
+    "watch": "Pricing politics under a Democratic Congress",
+    "auto": false,
+    "themes": [
+     {
+      "id": "crypto",
+      "name": "Crypto rails / stablecoins + Bitcoin-as-debasement-hedge"
+     },
+     {
+      "id": "digbio",
+      "name": "Digital biology / AI drug discovery"
+     },
+     {
+      "id": "positioning",
+      "name": "Positioning / market-structure"
+     }
+    ],
+    "houses": 9,
+    "mentionCount": 17,
+    "mentions": [
+     {
+      "id": "T211",
+      "date": "2026-11-01",
+      "who": "Jordi Visser",
+      "s": 1
+     },
+     {
+      "id": "T215",
+      "date": "2026-10-31",
+      "who": "Pomp (w/ Jordi Visser)",
+      "s": 1
+     },
+     {
+      "id": "T245",
+      "date": "2026-10-30",
+      "who": "Steve Eisman",
+      "s": 1
+     },
+     {
+      "id": "T256",
+      "date": "2026-10-26",
+      "who": "Prof G Markets (Galloway/Elson)",
+      "s": 1
+     },
+     {
+      "id": "T213",
+      "date": "2026-10-25",
+      "who": "Jordi Visser",
+      "s": 1
+     },
+     {
+      "id": "T214",
+      "date": "2026-10-24",
+      "who": "Pomp (w/ Jordi Visser)",
+      "s": 1
+     },
+     {
+      "id": "T201",
+      "date": "2026-10-18",
+      "who": "Jordi Visser",
+      "s": 1
+     },
+     {
+      "id": "T206",
+      "date": "2026-10-11",
+      "who": "Moonshots (Diamandis)",
+      "s": null
+     }
+    ],
+    "lean": 7,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Eli Lilly"
+     },
+     {
+      "date": "2026-08-10",
+      "label": "Batch 12",
+      "note": "Eli Lilly"
+     },
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "The non-AI growth rotation"
+     }
+    ],
+    "px": {
+     "sincePx": 1146.9,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 1389.98,
+     "lastDate": "2026-11-05",
+     "benchSince": 159.25,
+     "benchLast": 186.49,
+     "r": 0.2119,
+     "rb": 0.1711,
+     "rel": 0.0349,
+     "adj": 0.0349,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 1146.9
+    },
+    "rank": 22,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "CRM",
+    "ysym": "CRM",
+    "name": "Salesforce",
+    "stance": "bear",
+    "risk": "mod",
+    "bench": "IGV",
+    "benchName": "Software (IGV)",
+    "status": "active",
+    "score": 6.53,
+    "lastMention": "2026-10-31",
+    "quietDays": 5,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Bifurcation loser + multiple compression",
+    "watch": "Avoid till clarity (Eisman); verify per name",
+    "auto": false,
+    "themes": [
+     {
+      "id": "consumer",
+      "name": "Consumer agents (next wave)"
+     },
+     {
+      "id": "semiscyc",
+      "name": "Semis cyclical-peak risk"
+     },
+     {
+      "id": "agentic",
+      "name": "Agentic inflection is real & recent (~late 2025)"
+     }
+    ],
+    "houses": 8,
+    "mentionCount": 11,
+    "mentions": [
+     {
+      "id": "T215",
+      "date": "2026-10-31",
+      "who": "Pomp (w/ Jordi Visser)",
+      "s": -1
+     },
+     {
+      "id": "T239",
+      "date": "2026-10-26",
+      "who": "a16z (OpenAI computer-use leads)",
+      "s": null
+     },
+     {
+      "id": "T192",
+      "date": "2026-10-13",
+      "who": "The Compound (Brown/Batnik)",
+      "s": 0
+     },
+     {
+      "id": "T167",
+      "date": "2026-09-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T130",
+      "date": "2026-08-29",
+      "who": "All-In",
+      "s": null
+     },
+     {
+      "id": "T132",
+      "date": "2026-08-27",
+      "who": "CNBC Halftime/Closing (desk)",
+      "s": null
+     },
+     {
+      "id": "T96",
+      "date": "2026-08-06",
+      "who": "All-In",
+      "s": null
+     },
+     {
+      "id": "T88",
+      "date": "2026-08-05",
+      "who": "Matt McLennan",
+      "s": null
+     }
+    ],
+    "lean": -1,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Workflow SaaS"
+     }
+    ],
+    "px": {
+     "sincePx": 173.79,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 221.234,
+     "lastDate": "2026-11-05",
+     "benchSince": 92.98,
+     "benchLast": 98.935,
+     "r": 0.273,
+     "rb": 0.064,
+     "rel": 0.1964,
+     "adj": -0.1964,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 173.79
+    },
+    "rank": 23,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "HYNIX",
+    "ysym": "000660.KS",
+    "name": "SK Hynix",
+    "stance": "bull",
+    "risk": "core",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "active",
+    "score": 6.06,
+    "lastMention": "2026-11-01",
+    "quietDays": 1,
+    "added": "2026-11-04",
+    "since": "2026-11-04",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Apple: memory pricing unprecedented; contracts to 2030; stocks -30-40% from highs",
+    "watch": "Positioning, not fundamentals; size for volatility",
+    "auto": false,
+    "themes": [
+     {
+      "id": "memory",
+      "name": "Memory / HBM shortage"
+     },
+     {
+      "id": "everythingtrade",
+      "name": "The EVERYTHING TRADE"
+     },
+     {
+      "id": "opensource",
+      "name": "Open-source & inference-cost pressure on premium models"
+     }
+    ],
+    "houses": 11,
+    "mentionCount": 12,
+    "mentions": [
+     {
+      "id": "T211",
+      "date": "2026-11-01",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T261",
+      "date": "2026-10-29",
+      "who": "Odd Lots (Alex Altmann, Barclays)",
+      "s": null
+     },
+     {
+      "id": "T118",
+      "date": "2026-08-15",
+      "who": "Moonshots (Diamandis)",
+      "s": null
+     },
+     {
+      "id": "T83",
+      "date": "2026-07-30",
+      "who": "Amazon (earnings)",
+      "s": null
+     },
+     {
+      "id": "T68",
+      "date": "2026-07-22",
+      "who": "Jensen Huang",
+      "s": null
+     },
+     {
+      "id": "T01",
+      "date": "2026-07-19",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T02",
+      "date": "2026-07-12",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T45",
+      "date": "2026-07-01",
+      "who": "Liaquat Ahamed",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Memory - tight fundamentals, broken charts"
+     }
+    ],
+    "px": {
+     "sincePx": 1396000,
+     "sinceDate": "2026-11-04",
+     "firstAfter": false,
+     "last": 1264000,
+     "lastDate": "2026-11-05",
+     "benchSince": 504.27,
+     "benchLast": 453.445,
+     "r": -0.0946,
+     "rb": -0.1008,
+     "rel": 0.0069,
+     "adj": 0.0069,
+     "days": 1,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 89,
+     "addPx": 1396000
+    },
+    "rank": 24,
+    "isNew": true,
+    "delta": null
+   },
+   {
+    "tkr": "BX",
+    "ysym": "BX",
+    "name": "Blackstone",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "XLF",
+    "benchName": "Financials (XLF)",
+    "status": "active",
+    "score": 5.92,
+    "lastMention": "2026-11-03",
+    "quietDays": 2,
+    "added": "2026-08-18",
+    "since": "2026-08-18",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "AI-factory financiers — origination + securitization ('MBS-1970s')",
+    "watch": "Mega cap · liquid · the toll-takers on the plumbing · verify economics",
+    "auto": false,
+    "themes": [
+     {
+      "id": "computeasset",
+      "name": "Compute is becoming a financeable ASSET CLASS"
+     },
+     {
+      "id": "debt",
+      "name": "Debt / private-credit systemic risk"
+     },
+     {
+      "id": "everythingtrade",
+      "name": "The EVERYTHING TRADE"
+     }
+    ],
+    "houses": 7,
+    "mentionCount": 9,
+    "mentions": [
+     {
+      "id": "T250",
+      "date": "2026-11-03",
+      "who": "Prof G Markets (Elson w/ Foley, Bosa, Zandi)",
+      "s": null
+     },
+     {
+      "id": "T244",
+      "date": "2026-11-02",
+      "who": "Steve Eisman",
+      "s": -1
+     },
+     {
+      "id": "T270",
+      "date": "2026-10-28",
+      "who": "Alphabet (earnings)",
+      "s": null
+     },
+     {
+      "id": "T213",
+      "date": "2026-10-25",
+      "who": "Jordi Visser",
+      "s": 1
+     },
+     {
+      "id": "T247",
+      "date": "2026-10-23",
+      "who": "Steve Eisman",
+      "s": 0
+     },
+     {
+      "id": "T248",
+      "date": "2026-10-19",
+      "who": "Steve Eisman (w/ Danny Moses)",
+      "s": 0
+     },
+     {
+      "id": "T99",
+      "date": "2026-08-08",
+      "who": "Bloomberg (Open Interest)",
+      "s": null
+     },
+     {
+      "id": "T73",
+      "date": "2026-07-25",
+      "who": "Michael Cembalest",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-18",
+      "label": "Batch 13",
+      "note": "BlackRock / Blackstone"
+     }
+    ],
+    "px": {
+     "sincePx": 140.59,
+     "sinceDate": "2026-08-18",
+     "firstAfter": false,
+     "last": 119.99,
+     "lastDate": "2026-11-05",
+     "benchSince": 57.84,
+     "benchLast": 57.63,
+     "r": -0.1465,
+     "rb": -0.0036,
+     "rel": -0.1434,
+     "adj": -0.1434,
+     "days": 79,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 11,
+     "addPx": 140.59
+    },
+    "rank": 25,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "IREN",
+    "ysym": "IREN",
+    "name": "IREN",
+    "stance": "two",
+    "risk": "spec",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "active",
+    "score": 5.53,
+    "lastMention": "2026-11-02",
+    "quietDays": 1,
+    "added": "2026-11-04",
+    "since": "2026-11-04",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "~15% debt cost, CDS ~950bp, fixed-price contracts; Nebius reprices on short contracts",
+    "watch": "Prefer secured debt to equity; avoid fixed-price renters",
+    "auto": false,
+    "themes": [
+     {
+      "id": "paybackmath",
+      "name": "The PAYBACK MATH"
+     },
+     {
+      "id": "debt",
+      "name": "Debt / private-credit systemic risk"
+     },
+     {
+      "id": "energy",
+      "name": "Energy is the binding constraint"
+     }
+    ],
+    "houses": 5,
+    "mentionCount": 5,
+    "mentions": [
+     {
+      "id": "T251",
+      "date": "2026-11-02",
+      "who": "Prof G Markets (Galloway/Elson)",
+      "s": -1
+     },
+     {
+      "id": "T245",
+      "date": "2026-10-30",
+      "who": "Steve Eisman",
+      "s": -1
+     },
+     {
+      "id": "T230",
+      "date": "2026-10-28",
+      "who": "Moonshots (Diamandis)",
+      "s": -1
+     },
+     {
+      "id": "T227",
+      "date": "2026-10-27",
+      "who": "The Compound (Brown/Batnick)",
+      "s": 0
+     },
+     {
+      "id": "T208",
+      "date": "2026-10-15",
+      "who": "All-In",
+      "s": -1
+     }
+    ],
+    "lean": -4,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Neoclouds - the stress gauge"
+     }
+    ],
+    "px": {
+     "sincePx": 21.71,
+     "sinceDate": "2026-11-04",
+     "firstAfter": false,
+     "last": 18.2,
+     "lastDate": "2026-11-05",
+     "benchSince": 504.27,
+     "benchLast": 453.445,
+     "r": -0.1617,
+     "rb": -0.1008,
+     "rel": -0.0677,
+     "adj": -0.0677,
+     "days": 1,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": null,
+     "addPx": 21.71
+    },
+    "rank": 26,
+    "isNew": true,
+    "delta": null
+   },
+   {
+    "tkr": "MA",
+    "ysym": "MA",
+    "name": "Mastercard",
+    "stance": "two",
+    "risk": "spec",
+    "bench": "XLF",
+    "benchName": "Financials (XLF)",
+    "status": "active",
+    "score": 5.47,
+    "lastMention": "2026-11-04",
+    "quietDays": 1,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "EverQuote -15% x2; App Store 30% on notice; agents strip the vig",
+    "watch": "Underweight/pair vs agent owners; timelines are years",
+    "auto": false,
+    "themes": [
+     {
+      "id": "capex",
+      "name": "Capex value-destruction + the capex-REWARD reflex breaking"
+     },
+     {
+      "id": "energy",
+      "name": "Energy is the binding constraint"
+     },
+     {
+      "id": "memory",
+      "name": "Memory / HBM shortage"
+     }
+    ],
+    "houses": 6,
+    "mentionCount": 7,
+    "mentions": [
+     {
+      "id": "T294",
+      "date": "2026-11-04",
+      "who": "Animal Spirits (The Compound)",
+      "s": 1
+     },
+     {
+      "id": "T245",
+      "date": "2026-10-30",
+      "who": "Steve Eisman",
+      "s": 1
+     },
+     {
+      "id": "T179",
+      "date": "2026-10-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T242",
+      "date": "2026-10-15",
+      "who": "a16z (Angelos, VGS)",
+      "s": 1
+     },
+     {
+      "id": "T109",
+      "date": "2026-08-15",
+      "who": "Stripe (Gaybrick)",
+      "s": null
+     },
+     {
+      "id": "T12",
+      "date": "2026-07-20",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T13",
+      "date": "2026-07-17",
+      "who": "All-In",
+      "s": null
+     }
+    ],
+    "lean": 3,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Visa / Mastercard"
+     },
+     {
+      "date": "2026-08-18",
+      "label": "Batch 13",
+      "note": "Visa / Mastercard"
+     },
+     {
+      "date": "2026-09-08",
+      "label": "Batch 16",
+      "note": "Payment rails for agentic PAYMENTS"
+     },
+     {
+      "date": "2026-09-28",
+      "label": "Batch 19",
+      "note": "The disintermediation shorts"
+     }
+    ],
+    "px": {
+     "sincePx": 547.44,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 661.255,
+     "lastDate": "2026-11-05",
+     "benchSince": 56.04,
+     "benchLast": 57.63,
+     "r": 0.2079,
+     "rb": 0.0284,
+     "rel": 0.1746,
+     "adj": 0.1746,
+     "days": 108,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": null,
+     "addPx": 547.44
+    },
+    "rank": 27,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "AVGO",
+    "ysym": "AVGO",
+    "name": "Broadcom",
+    "stance": "bull",
+    "risk": "core",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "active",
+    "score": 5.4,
+    "lastMention": "2026-11-04",
+    "quietDays": 1,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Custom silicon/ASIC (TPU)",
+    "watch": "Mega cap · liquid",
+    "auto": false,
+    "themes": [
+     {
+      "id": "labvalue",
+      "name": "Foundation-lab value compression (now TWO-SIDED)"
+     },
+     {
+      "id": "positioning",
+      "name": "Positioning / market-structure"
+     },
+     {
+      "id": "paybackmath",
+      "name": "The PAYBACK MATH"
+     }
+    ],
+    "houses": 5,
+    "mentionCount": 8,
+    "mentions": [
+     {
+      "id": "T294",
+      "date": "2026-11-04",
+      "who": "Animal Spirits (The Compound)",
+      "s": null
+     },
+     {
+      "id": "T245",
+      "date": "2026-10-30",
+      "who": "Steve Eisman",
+      "s": null
+     },
+     {
+      "id": "T252",
+      "date": "2026-10-30",
+      "who": "Prof G Markets (w/ Josh Brown)",
+      "s": 0
+     },
+     {
+      "id": "T254",
+      "date": "2026-10-28",
+      "who": "Prof G Markets (Elson w/ Eisman)",
+      "s": null
+     },
+     {
+      "id": "T270",
+      "date": "2026-10-28",
+      "who": "Alphabet (earnings)",
+      "s": 1
+     },
+     {
+      "id": "T255",
+      "date": "2026-10-27",
+      "who": "Prof G Markets (Elson w/ Kedrosky, Armstrong)",
+      "s": -1
+     },
+     {
+      "id": "T201",
+      "date": "2026-10-18",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T202",
+      "date": "2026-10-15",
+      "who": "Pomp x Jordi Visser",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Broadcom"
+     }
+    ],
+    "px": {
+     "sincePx": 378.16,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 297.58,
+     "lastDate": "2026-11-05",
+     "benchSince": 558.83,
+     "benchLast": 453.445,
+     "r": -0.2131,
+     "rb": -0.1886,
+     "rel": -0.0302,
+     "adj": -0.0302,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 378.16
+    },
+    "rank": 28,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "COIN",
+    "ysym": "COIN",
+    "name": "Coinbase",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "BTC-USD",
+    "benchName": "Bitcoin",
+    "status": "active",
+    "score": 4.77,
+    "lastMention": "2026-11-04",
+    "quietDays": 1,
+    "added": "2026-09-20",
+    "since": "2026-09-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": ">50% of stablecoins and tokenized RWAs; Robinhood/Coinbase/Revolut/ARK/BlackRock build on it",
+    "watch": "ETH cluster is book; watch stablecoin supply, RWAs, ETH/BTC",
+    "auto": false,
+    "themes": [
+     {
+      "id": "memory",
+      "name": "Memory / HBM shortage"
+     },
+     {
+      "id": "energy",
+      "name": "Energy is the binding constraint"
+     },
+     {
+      "id": "token",
+      "name": "Token demand exponential & underestimated"
+     }
+    ],
+    "houses": 5,
+    "mentionCount": 8,
+    "mentions": [
+     {
+      "id": "T294",
+      "date": "2026-11-04",
+      "who": "Animal Spirits (The Compound)",
+      "s": -1
+     },
+     {
+      "id": "T179",
+      "date": "2026-10-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T208",
+      "date": "2026-10-15",
+      "who": "All-In",
+      "s": 1
+     },
+     {
+      "id": "T189",
+      "date": "2026-10-10",
+      "who": "Jordi Visser",
+      "s": 1
+     },
+     {
+      "id": "T156",
+      "date": "2026-09-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T158",
+      "date": "2026-09-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T164",
+      "date": "2026-09-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T183",
+      "date": "2026-08-27",
+      "who": "Tom Lee",
+      "s": null
+     }
+    ],
+    "lean": 1,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-09-20",
+      "label": "Batch 18",
+      "note": "Jordis crypto pivot - crypto as the AI-agent rail (his #1)"
+     },
+     {
+      "date": "2026-09-28",
+      "label": "Batch 19",
+      "note": "Bitcoin up through a Fed hike; tokenization rails live"
+     },
+     {
+      "date": "2026-10-05",
+      "label": "Batch 20",
+      "note": "The trust layer for agentic finance"
+     }
+    ],
+    "px": {
+     "sincePx": 194.25,
+     "sinceDate": "2026-09-18",
+     "firstAfter": false,
+     "last": 135.535,
+     "lastDate": "2026-11-05",
+     "benchSince": 81142.6094,
+     "benchLast": 75912.08,
+     "r": -0.3023,
+     "rb": -0.0645,
+     "rel": -0.2542,
+     "adj": -0.2542,
+     "days": 46,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 44,
+     "addPx": 194.25
+    },
+    "rank": 29,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "SLV",
+    "ysym": "SLV",
+    "name": "Silver (SLV)",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "SPY",
+    "benchName": "S&P 500 (SPY)",
+    "status": "active",
+    "score": 4.65,
+    "lastMention": "2026-11-03",
+    "quietDays": 2,
+    "added": "2026-08-28",
+    "since": "2026-08-28",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Debasement + AI-mineral cross (a shortage metal)",
+    "watch": "Higher beta than gold · Visser's 'perfect cross'",
+    "auto": false,
+    "themes": [
+     {
+      "id": "agentic",
+      "name": "Agentic inflection is real & recent (~late 2025)"
+     },
+     {
+      "id": "memory",
+      "name": "Memory / HBM shortage"
+     },
+     {
+      "id": "everythingtrade",
+      "name": "The EVERYTHING TRADE"
+     }
+    ],
+    "houses": 6,
+    "mentionCount": 9,
+    "mentions": [
+     {
+      "id": "T258",
+      "date": "2026-11-03",
+      "who": "Odd Lots (Nate Silver)",
+      "s": null
+     },
+     {
+      "id": "T211",
+      "date": "2026-11-01",
+      "who": "Jordi Visser",
+      "s": 1
+     },
+     {
+      "id": "T164",
+      "date": "2026-09-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T115",
+      "date": "2026-08-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T124",
+      "date": "2026-08-15",
+      "who": "Animal Spirits",
+      "s": null
+     },
+     {
+      "id": "T93",
+      "date": "2026-08-03",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T87",
+      "date": "2026-07-30",
+      "who": "David Hunter",
+      "s": null
+     },
+     {
+      "id": "T26",
+      "date": "2026-07-17",
+      "who": "David Hunter",
+      "s": null
+     }
+    ],
+    "lean": 1,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-28",
+      "label": "Batch 14",
+      "note": "Silver + miners"
+     }
+    ],
+    "px": {
+     "sincePx": 60.02,
+     "sinceDate": "2026-08-28",
+     "firstAfter": false,
+     "last": 47.22,
+     "lastDate": "2026-11-05",
+     "benchSince": 769.35,
+     "benchLast": 736.58,
+     "r": -0.2133,
+     "rb": -0.0426,
+     "rel": -0.1783,
+     "adj": -0.1783,
+     "days": 69,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 21,
+     "addPx": 60.02
+    },
+    "rank": 30,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "GEV",
+    "ysym": "GEV",
+    "name": "GE Vernova",
+    "stance": "bull",
+    "risk": "core",
+    "bench": "XLI",
+    "benchName": "Industrials (XLI)",
+    "status": "active",
+    "score": 4.23,
+    "lastMention": "2026-10-30",
+    "quietDays": 1,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "15 GW of chips idle; GEV orders +96%; PWR record $64B backlog; 800V power",
+    "watch": "Policy risk under a Democratic Congress",
+    "auto": false,
+    "themes": [
+     {
+      "id": "energy",
+      "name": "Energy is the binding constraint"
+     },
+     {
+      "id": "computeasset",
+      "name": "Compute is becoming a financeable ASSET CLASS"
+     },
+     {
+      "id": "debt",
+      "name": "Debt / private-credit systemic risk"
+     }
+    ],
+    "houses": 6,
+    "mentionCount": 6,
+    "mentions": [
+     {
+      "id": "T245",
+      "date": "2026-10-30",
+      "who": "Steve Eisman",
+      "s": 1
+     },
+     {
+      "id": "T255",
+      "date": "2026-10-27",
+      "who": "Prof G Markets (Elson w/ Kedrosky, Armstrong)",
+      "s": 0
+     },
+     {
+      "id": "T74",
+      "date": "2026-07-28",
+      "who": "Bloom Energy (earnings)",
+      "s": null
+     },
+     {
+      "id": "T32",
+      "date": "2026-07-21",
+      "who": "The Compound",
+      "s": null
+     },
+     {
+      "id": "T38",
+      "date": "2026-07-15",
+      "who": "Jeremy Eliuveros (SemiAnalysis)",
+      "s": null
+     },
+     {
+      "id": "T24",
+      "date": "2026-06-01",
+      "who": "Gary Marcus",
+      "s": null
+     }
+    ],
+    "lean": 1,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "GE Vernova"
+     },
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Power and cooling - the physical gate"
+     }
+    ],
+    "px": {
+     "sincePx": 1079.1801,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 772.417,
+     "lastDate": "2026-11-05",
+     "benchSince": 178.12,
+     "benchLast": 162.63,
+     "r": -0.2843,
+     "rb": -0.087,
+     "rel": -0.2161,
+     "adj": -0.2161,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 1079.1801
+    },
+    "rank": 31,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "ADBE",
+    "ysym": "ADBE",
+    "name": "Adobe",
+    "stance": "bear",
+    "risk": "mod",
+    "bench": "IGV",
+    "benchName": "Software (IGV)",
+    "status": "active",
+    "score": 3.8,
+    "lastMention": "2026-11-02",
+    "quietDays": 3,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Bifurcation loser + multiple compression",
+    "watch": "Avoid till clarity (Eisman); verify per name",
+    "auto": false,
+    "themes": [
+     {
+      "id": "consumer",
+      "name": "Consumer agents (next wave)"
+     },
+     {
+      "id": "valuemigration",
+      "name": "The MODEL COMMODITIZES"
+     },
+     {
+      "id": "computeasset",
+      "name": "Compute is becoming a financeable ASSET CLASS"
+     }
+    ],
+    "houses": 4,
+    "mentionCount": 7,
+    "mentions": [
+     {
+      "id": "T244",
+      "date": "2026-11-02",
+      "who": "Steve Eisman",
+      "s": 0
+     },
+     {
+      "id": "T220",
+      "date": "2026-10-19",
+      "who": "All-In (Dylan Field)",
+      "s": 0
+     },
+     {
+      "id": "T199",
+      "date": "2026-10-15",
+      "who": "All-In",
+      "s": -1
+     },
+     {
+      "id": "T192",
+      "date": "2026-10-13",
+      "who": "The Compound (Brown/Batnik)",
+      "s": -1
+     },
+     {
+      "id": "T115",
+      "date": "2026-08-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T76",
+      "date": "2026-07-31",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T01",
+      "date": "2026-07-19",
+      "who": "Jordi Visser",
+      "s": null
+     }
+    ],
+    "lean": -2,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Workflow SaaS"
+     }
+    ],
+    "px": {
+     "sincePx": 234.74,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 244.94,
+     "lastDate": "2026-11-05",
+     "benchSince": 92.98,
+     "benchLast": 98.935,
+     "r": 0.0435,
+     "rb": 0.064,
+     "rel": -0.0194,
+     "adj": 0.0194,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 234.74
+    },
+    "rank": 32,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "OKTA",
+    "ysym": "OKTA",
+    "name": "Okta",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "IGV",
+    "benchName": "Software (IGV)",
+    "status": "active",
+    "score": 3.78,
+    "lastMention": "2026-10-07",
+    "quietDays": 29,
+    "added": "2026-08-31",
+    "since": "2026-08-31",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "OpenShell + Sentry; granular agent auth; secure-by-design renaissance",
+    "watch": "The defenders get a standards tailwind",
+    "auto": false,
+    "themes": [
+     {
+      "id": "assurance",
+      "name": "AI assurance / agent-governance / cybersecurity"
+     },
+     {
+      "id": "edge",
+      "name": "Edge / on-prem / distributed inference"
+     },
+     {
+      "id": "agentaction",
+      "name": "The AGENT leaves the chatbox"
+     }
+    ],
+    "houses": 5,
+    "mentionCount": 6,
+    "mentions": [
+     {
+      "id": "T197",
+      "date": "2026-10-07",
+      "who": "Microsoft-Nvidia (Nadella/Huang)",
+      "s": 1
+     },
+     {
+      "id": "T168",
+      "date": "2026-09-15",
+      "who": "Jensen Huang",
+      "s": null
+     },
+     {
+      "id": "T176",
+      "date": "2026-09-15",
+      "who": "Casado, Sinofsky & Levie (a16z)",
+      "s": null
+     },
+     {
+      "id": "T132",
+      "date": "2026-08-27",
+      "who": "CNBC Halftime/Closing (desk)",
+      "s": null
+     },
+     {
+      "id": "T34",
+      "date": "2026-07-15",
+      "who": "ServiceNow (earnings)",
+      "s": null
+     },
+     {
+      "id": "T03",
+      "date": "2026-07-08",
+      "who": "Jensen Huang",
+      "s": null
+     }
+    ],
+    "lean": 1,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-31",
+      "label": "Batch 15",
+      "note": "CrowdStrike / Okta / CyberArk"
+     },
+     {
+      "date": "2026-09-15",
+      "label": "Batch 17",
+      "note": "Defenders - the window is open, $1B behind it"
+     },
+     {
+      "date": "2026-09-28",
+      "label": "Batch 19",
+      "note": "Agent security - swarms break the insider-threat model"
+     }
+    ],
+    "px": {
+     "sincePx": 173.04,
+     "sinceDate": "2026-08-31",
+     "firstAfter": false,
+     "last": 171.125,
+     "lastDate": "2026-11-05",
+     "benchSince": 109.98,
+     "benchLast": 98.935,
+     "r": -0.0111,
+     "rb": -0.1004,
+     "rel": 0.0993,
+     "adj": 0.0993,
+     "days": 66,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 24,
+     "addPx": 173.04
+    },
+    "rank": 33,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "CYBR",
+    "ysym": "CYBR",
+    "name": "CyberArk",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "IGV",
+    "benchName": "Software (IGV)",
+    "status": "active",
+    "score": 3.78,
+    "lastMention": "2026-10-07",
+    "quietDays": 29,
+    "added": "2026-08-31",
+    "since": "2026-08-31",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "OpenShell + Sentry; granular agent auth; secure-by-design renaissance",
+    "watch": "The defenders get a standards tailwind",
+    "auto": false,
+    "themes": [
+     {
+      "id": "assurance",
+      "name": "AI assurance / agent-governance / cybersecurity"
+     },
+     {
+      "id": "edge",
+      "name": "Edge / on-prem / distributed inference"
+     },
+     {
+      "id": "agentaction",
+      "name": "The AGENT leaves the chatbox"
+     }
+    ],
+    "houses": 5,
+    "mentionCount": 6,
+    "mentions": [
+     {
+      "id": "T197",
+      "date": "2026-10-07",
+      "who": "Microsoft-Nvidia (Nadella/Huang)",
+      "s": 1
+     },
+     {
+      "id": "T168",
+      "date": "2026-09-15",
+      "who": "Jensen Huang",
+      "s": null
+     },
+     {
+      "id": "T176",
+      "date": "2026-09-15",
+      "who": "Casado, Sinofsky & Levie (a16z)",
+      "s": null
+     },
+     {
+      "id": "T132",
+      "date": "2026-08-27",
+      "who": "CNBC Halftime/Closing (desk)",
+      "s": null
+     },
+     {
+      "id": "T34",
+      "date": "2026-07-15",
+      "who": "ServiceNow (earnings)",
+      "s": null
+     },
+     {
+      "id": "T03",
+      "date": "2026-07-08",
+      "who": "Jensen Huang",
+      "s": null
+     }
+    ],
+    "lean": 1,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-31",
+      "label": "Batch 15",
+      "note": "CrowdStrike / Okta / CyberArk"
+     },
+     {
+      "date": "2026-09-15",
+      "label": "Batch 17",
+      "note": "Defenders - the window is open, $1B behind it"
+     },
+     {
+      "date": "2026-09-28",
+      "label": "Batch 19",
+      "note": "Agent security - swarms break the insider-threat model"
+     }
+    ],
+    "px": {
+     "note": "No price data",
+     "addPx": null
+    },
+    "rank": 34,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "BLK",
+    "ysym": "BLK",
+    "name": "BlackRock",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "XLF",
+    "benchName": "Financials (XLF)",
+    "status": "active",
+    "score": 3.52,
+    "lastMention": "2026-10-15",
+    "quietDays": 21,
+    "added": "2026-08-18",
+    "since": "2026-08-18",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "AI-factory financiers — origination + securitization ('MBS-1970s')",
+    "watch": "Mega cap · liquid · the toll-takers on the plumbing · verify economics",
+    "auto": false,
+    "themes": [
+     {
+      "id": "debt",
+      "name": "Debt / private-credit systemic risk"
+     },
+     {
+      "id": "litho",
+      "name": "The ultimate ceiling: EUV / ASML & the chip supply chain (+ a US-sovereignty/TerraFab disruptor)"
+     },
+     {
+      "id": "labvalue",
+      "name": "Foundation-lab value compression (now TWO-SIDED)"
+     }
+    ],
+    "houses": 4,
+    "mentionCount": 5,
+    "mentions": [
+     {
+      "id": "T182",
+      "date": "2026-10-15",
+      "who": "Joseph Chalom (SharpLink)",
+      "s": null
+     },
+     {
+      "id": "T198",
+      "date": "2026-10-14",
+      "who": "Bloomberg Businessweek Daily (Moynihan/Whitney)",
+      "s": 0
+     },
+     {
+      "id": "T149",
+      "date": "2026-09-15",
+      "who": "Jensen Huang",
+      "s": null
+     },
+     {
+      "id": "T167",
+      "date": "2026-09-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T12",
+      "date": "2026-07-20",
+      "who": "Jordi Visser",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-18",
+      "label": "Batch 13",
+      "note": "BlackRock / Blackstone"
+     }
+    ],
+    "px": {
+     "sincePx": 1154.35,
+     "sinceDate": "2026-08-18",
+     "firstAfter": false,
+     "last": 1168.1,
+     "lastDate": "2026-11-05",
+     "benchSince": 57.84,
+     "benchLast": 57.63,
+     "r": 0.0119,
+     "rb": -0.0036,
+     "rel": 0.0156,
+     "adj": 0.0156,
+     "days": 79,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 11,
+     "addPx": 1154.35
+    },
+    "rank": 35,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "SNDK",
+    "ysym": "SNDK",
+    "name": "SanDisk",
+    "stance": "bull",
+    "risk": "core",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "active",
+    "score": 3.41,
+    "lastMention": "2026-11-04",
+    "quietDays": 1,
+    "added": "2026-11-04",
+    "since": "2026-11-04",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Apple: memory pricing unprecedented; contracts to 2030; stocks -30-40% from highs",
+    "watch": "Positioning, not fundamentals; size for volatility",
+    "auto": false,
+    "themes": [
+     {
+      "id": "everythingtrade",
+      "name": "The EVERYTHING TRADE"
+     },
+     {
+      "id": "positioning",
+      "name": "Positioning / market-structure"
+     },
+     {
+      "id": "roibroaden",
+      "name": "The ROI must BROADEN to the S&P-493"
+     }
+    ],
+    "houses": 4,
+    "mentionCount": 8,
+    "mentions": [
+     {
+      "id": "T294",
+      "date": "2026-11-04",
+      "who": "Animal Spirits (The Compound)",
+      "s": 0
+     },
+     {
+      "id": "T221",
+      "date": "2026-10-30",
+      "who": "The Compound (Alex Altmann, Barclays)",
+      "s": -1
+     },
+     {
+      "id": "T252",
+      "date": "2026-10-30",
+      "who": "Prof G Markets (w/ Josh Brown)",
+      "s": 1
+     },
+     {
+      "id": "T224",
+      "date": "2026-10-21",
+      "who": "Animal Spirits (Batnick/Carlson)",
+      "s": 0
+     },
+     {
+      "id": "T193",
+      "date": "2026-10-14",
+      "who": "Animal Spirits (Carlson/Batnik)",
+      "s": -1
+     },
+     {
+      "id": "T225",
+      "date": "2026-10-14",
+      "who": "Animal Spirits (Batnick/Carlson)",
+      "s": 0
+     },
+     {
+      "id": "T98",
+      "date": "2026-08-08",
+      "who": "Dylan LeClair",
+      "s": null
+     },
+     {
+      "id": "T75",
+      "date": "2026-07-28",
+      "who": "The Compound",
+      "s": null
+     }
+    ],
+    "lean": -1,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Memory - tight fundamentals, broken charts"
+     }
+    ],
+    "px": {
+     "sincePx": 1037.4,
+     "sinceDate": "2026-11-04",
+     "firstAfter": false,
+     "last": 834.18,
+     "lastDate": "2026-11-05",
+     "benchSince": 504.27,
+     "benchLast": 453.445,
+     "r": -0.1959,
+     "rb": -0.1008,
+     "rel": -0.1058,
+     "adj": -0.1058,
+     "days": 1,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 89,
+     "addPx": 1037.4
+    },
+    "rank": 36,
+    "isNew": true,
+    "delta": null
+   },
+   {
+    "tkr": "CRCL",
+    "ysym": "CRCL",
+    "name": "Circle",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "BTC-USD",
+    "benchName": "Bitcoin",
+    "status": "active",
+    "score": 3.32,
+    "lastMention": "2026-10-31",
+    "quietDays": 5,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "BTC ~$86k, ~60% QoQ with gold flat; DEX bottoming; Robinhood Chain",
+    "watch": "Six book-talking voices - size small; does BTC hold if software rolls over?",
+    "auto": false,
+    "themes": [
+     {
+      "id": "crypto",
+      "name": "Crypto rails / stablecoins + Bitcoin-as-debasement-hedge"
+     },
+     {
+      "id": "consumer",
+      "name": "Consumer agents (next wave)"
+     },
+     {
+      "id": "digbio",
+      "name": "Digital biology / AI drug discovery"
+     }
+    ],
+    "houses": 5,
+    "mentionCount": 9,
+    "mentions": [
+     {
+      "id": "T215",
+      "date": "2026-10-31",
+      "who": "Pomp (w/ Jordi Visser)",
+      "s": null
+     },
+     {
+      "id": "T156",
+      "date": "2026-09-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T158",
+      "date": "2026-09-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T164",
+      "date": "2026-09-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T169",
+      "date": "2026-09-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T116",
+      "date": "2026-08-15",
+      "who": "Arthur Hayes",
+      "s": null
+     },
+     {
+      "id": "T12",
+      "date": "2026-07-20",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T13",
+      "date": "2026-07-17",
+      "who": "All-In",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Circle"
+     },
+     {
+      "date": "2026-08-18",
+      "label": "Batch 13",
+      "note": "Circle"
+     },
+     {
+      "date": "2026-09-20",
+      "label": "Batch 18",
+      "note": "Jordis crypto pivot - crypto as the AI-agent rail (his #1)"
+     },
+     {
+      "date": "2026-09-28",
+      "label": "Batch 19",
+      "note": "Bitcoin up through a Fed hike; tokenization rails live"
+     }
+    ],
+    "px": {
+     "sincePx": 65.45,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 67.08,
+     "lastDate": "2026-11-05",
+     "benchSince": 65230.0273,
+     "benchLast": 75912.08,
+     "r": 0.0249,
+     "rb": 0.1638,
+     "rel": -0.1193,
+     "adj": -0.1193,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 65.45
+    },
+    "rank": 37,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "CRWD",
+    "ysym": "CRWD",
+    "name": "CrowdStrike",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "IGV",
+    "benchName": "Software (IGV)",
+    "status": "active",
+    "score": 3.31,
+    "lastMention": "2026-10-20",
+    "quietDays": 16,
+    "added": "2026-08-31",
+    "since": "2026-08-31",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "OpenShell + Sentry; granular agent auth; secure-by-design renaissance",
+    "watch": "The defenders get a standards tailwind",
+    "auto": false,
+    "themes": [
+     {
+      "id": "software",
+      "name": "Software resolves to a BIFURCATION"
+     },
+     {
+      "id": "assurance",
+      "name": "AI assurance / agent-governance / cybersecurity"
+     },
+     {
+      "id": "labvalue",
+      "name": "Foundation-lab value compression (now TWO-SIDED)"
+     }
+    ],
+    "houses": 4,
+    "mentionCount": 4,
+    "mentions": [
+     {
+      "id": "T293",
+      "date": "2026-10-20",
+      "who": "Invest Like the Best (Christina Cacioppo)",
+      "s": 0
+     },
+     {
+      "id": "T154",
+      "date": "2026-09-15",
+      "who": "Greg Brockman (OpenAI)",
+      "s": null
+     },
+     {
+      "id": "T168",
+      "date": "2026-09-15",
+      "who": "Jensen Huang",
+      "s": null
+     },
+     {
+      "id": "T132",
+      "date": "2026-08-27",
+      "who": "CNBC Halftime/Closing (desk)",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-31",
+      "label": "Batch 15",
+      "note": "CrowdStrike / Okta / CyberArk"
+     },
+     {
+      "date": "2026-09-15",
+      "label": "Batch 17",
+      "note": "Defenders - the window is open, $1B behind it"
+     },
+     {
+      "date": "2026-09-28",
+      "label": "Batch 19",
+      "note": "Agent security - swarms break the insider-threat model"
+     }
+    ],
+    "px": {
+     "sincePx": 231,
+     "sinceDate": "2026-08-31",
+     "firstAfter": false,
+     "last": 217.21,
+     "lastDate": "2026-11-05",
+     "benchSince": 109.98,
+     "benchLast": 98.935,
+     "r": -0.0597,
+     "rb": -0.1004,
+     "rel": 0.0453,
+     "adj": 0.0453,
+     "days": 66,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 24,
+     "addPx": 231
+    },
+    "rank": 38,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "NOW",
+    "ysym": "NOW",
+    "name": "ServiceNow",
+    "stance": "bear",
+    "risk": "mod",
+    "bench": "IGV",
+    "benchName": "Software (IGV)",
+    "status": "active",
+    "score": 3.12,
+    "lastMention": "2026-10-30",
+    "quietDays": 6,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Bifurcation loser + multiple compression",
+    "watch": "Avoid till clarity (Eisman); verify per name",
+    "auto": false,
+    "themes": [
+     {
+      "id": "paybackmath",
+      "name": "The PAYBACK MATH"
+     },
+     {
+      "id": "energy",
+      "name": "Energy is the binding constraint"
+     },
+     {
+      "id": "computeasset",
+      "name": "Compute is becoming a financeable ASSET CLASS"
+     }
+    ],
+    "houses": 4,
+    "mentionCount": 4,
+    "mentions": [
+     {
+      "id": "T221",
+      "date": "2026-10-30",
+      "who": "The Compound (Alex Altmann, Barclays)",
+      "s": -1
+     },
+     {
+      "id": "T245",
+      "date": "2026-10-30",
+      "who": "Steve Eisman",
+      "s": -1
+     },
+     {
+      "id": "T34",
+      "date": "2026-07-15",
+      "who": "ServiceNow (earnings)",
+      "s": null
+     },
+     {
+      "id": "T24",
+      "date": "2026-06-01",
+      "who": "Gary Marcus",
+      "s": null
+     }
+    ],
+    "lean": -2,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Workflow SaaS"
+     }
+    ],
+    "px": {
+     "sincePx": 104.7,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 103.15,
+     "lastDate": "2026-11-05",
+     "benchSince": 92.98,
+     "benchLast": 98.935,
+     "r": -0.0148,
+     "rb": 0.064,
+     "rel": -0.0741,
+     "adj": 0.0741,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 104.7
+    },
+    "rank": 39,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "PANW",
+    "ysym": "PANW",
+    "name": "Palo Alto Networks",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "IGV",
+    "benchName": "Software (IGV)",
+    "status": "active",
+    "score": 2.54,
+    "lastMention": "2026-10-23",
+    "quietDays": 13,
+    "added": "2026-09-28",
+    "since": "2026-09-28",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "OpenShell + Sentry; granular agent auth; secure-by-design renaissance",
+    "watch": "The defenders get a standards tailwind",
+    "auto": false,
+    "themes": [
+     {
+      "id": "opensource",
+      "name": "Open-source & inference-cost pressure on premium models"
+     },
+     {
+      "id": "assurance",
+      "name": "AI assurance / agent-governance / cybersecurity"
+     },
+     {
+      "id": "software",
+      "name": "Software resolves to a BIFURCATION"
+     }
+    ],
+    "houses": 3,
+    "mentionCount": 4,
+    "mentions": [
+     {
+      "id": "T218",
+      "date": "2026-10-23",
+      "who": "All-In (w/ Nikesh Arora)",
+      "s": 1
+     },
+     {
+      "id": "T219",
+      "date": "2026-10-21",
+      "who": "All-In (Krishna/Arora panel)",
+      "s": 1
+     },
+     {
+      "id": "T168",
+      "date": "2026-09-15",
+      "who": "Jensen Huang",
+      "s": null
+     },
+     {
+      "id": "T99",
+      "date": "2026-08-08",
+      "who": "Bloomberg (Open Interest)",
+      "s": null
+     }
+    ],
+    "lean": 2,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-09-28",
+      "label": "Batch 19",
+      "note": "Agent security - swarms break the insider-threat model"
+     }
+    ],
+    "px": {
+     "sincePx": 392.09,
+     "sinceDate": "2026-09-28",
+     "firstAfter": false,
+     "last": 318.11,
+     "lastDate": "2026-11-05",
+     "benchSince": 105.43,
+     "benchLast": 98.935,
+     "r": -0.1887,
+     "rb": -0.0616,
+     "rel": -0.1354,
+     "adj": -0.1354,
+     "days": 38,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 52,
+     "addPx": 392.09
+    },
+    "rank": 40,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "MRVL",
+    "ysym": "MRVL",
+    "name": "Marvell",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "active",
+    "score": 2.44,
+    "lastMention": "2026-11-01",
+    "quietDays": 1,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Corning: ~10x optical per GPU; Lumentum sold out to 2029; Marvell-Lumentum talk",
+    "watch": "Deal risk on MRVL; capacity adds",
+    "auto": false,
+    "themes": [
+     {
+      "id": "positioning",
+      "name": "Positioning / market-structure"
+     },
+     {
+      "id": "crypto",
+      "name": "Crypto rails / stablecoins + Bitcoin-as-debasement-hedge"
+     },
+     {
+      "id": "memory",
+      "name": "Memory / HBM shortage"
+     }
+    ],
+    "houses": 3,
+    "mentionCount": 7,
+    "mentions": [
+     {
+      "id": "T211",
+      "date": "2026-11-01",
+      "who": "Jordi Visser",
+      "s": -1
+     },
+     {
+      "id": "T214",
+      "date": "2026-10-24",
+      "who": "Pomp (w/ Jordi Visser)",
+      "s": 1
+     },
+     {
+      "id": "T201",
+      "date": "2026-10-18",
+      "who": "Jordi Visser",
+      "s": 1
+     },
+     {
+      "id": "T164",
+      "date": "2026-09-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T97",
+      "date": "2026-08-08",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T75",
+      "date": "2026-07-28",
+      "who": "The Compound",
+      "s": null
+     },
+     {
+      "id": "T60",
+      "date": "2026-07-24",
+      "who": "Jordi Visser",
+      "s": null
+     }
+    ],
+    "lean": 1,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Marvell / Applied Optoelectronics"
+     },
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Optics - the next per-GPU multiplier"
+     }
+    ],
+    "px": {
+     "sincePx": 194.94,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 137.55,
+     "lastDate": "2026-11-05",
+     "benchSince": 558.83,
+     "benchLast": 453.445,
+     "r": -0.2944,
+     "rb": -0.1886,
+     "rel": -0.1304,
+     "adj": -0.1304,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 194.94
+    },
+    "rank": 41,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "ABNB",
+    "ysym": "ABNB",
+    "name": "Airbnb",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "XLY",
+    "benchName": "Consumer discretionary (XLY)",
+    "status": "active",
+    "score": 2.35,
+    "lastMention": "2026-10-13",
+    "quietDays": 23,
+    "added": "2026-08-28",
+    "since": "2026-08-28",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "AI search/discovery + dynamic pricing + sponsored-listing ads → ~20% EPS growth",
+    "watch": "Large cap · the poster child for adopter margin expansion",
+    "auto": false,
+    "themes": [
+     {
+      "id": "consumer",
+      "name": "Consumer agents (next wave)"
+     },
+     {
+      "id": "roibroaden",
+      "name": "The ROI must BROADEN to the S&P-493"
+     },
+     {
+      "id": "semiscyc",
+      "name": "Semis cyclical-peak risk"
+     }
+    ],
+    "houses": 3,
+    "mentionCount": 3,
+    "mentions": [
+     {
+      "id": "T192",
+      "date": "2026-10-13",
+      "who": "The Compound (Brown/Batnik)",
+      "s": 1
+     },
+     {
+      "id": "T132",
+      "date": "2026-08-27",
+      "who": "CNBC Halftime/Closing (desk)",
+      "s": null
+     },
+     {
+      "id": "T125",
+      "date": "2026-08-15",
+      "who": "The Compound",
+      "s": null
+     }
+    ],
+    "lean": 1,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-28",
+      "label": "Batch 14",
+      "note": "Airbnb"
+     }
+    ],
+    "px": {
+     "sincePx": 189.43,
+     "sinceDate": "2026-08-28",
+     "firstAfter": false,
+     "last": 168.165,
+     "lastDate": "2026-11-05",
+     "benchSince": 117.21,
+     "benchLast": 117.055,
+     "r": -0.1123,
+     "rb": -0.0013,
+     "rel": -0.1111,
+     "adj": -0.1111,
+     "days": 69,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 21,
+     "addPx": 189.43
+    },
+    "rank": 42,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "PYPL",
+    "ysym": "PYPL",
+    "name": "PayPal",
+    "stance": "monitor",
+    "risk": "mod",
+    "bench": "XLF",
+    "benchName": "Financials (XLF)",
+    "status": "active",
+    "score": 2.22,
+    "lastMention": "2026-10-15",
+    "quietDays": 21,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "In play — $53B Stripe+Block+Advent bid",
+    "watch": "Large cap · event-driven",
+    "auto": false,
+    "themes": [
+     {
+      "id": "consumer",
+      "name": "Consumer agents (next wave)"
+     },
+     {
+      "id": "agentaction",
+      "name": "The AGENT leaves the chatbox"
+     },
+     {
+      "id": "trustlayer",
+      "name": "The TRUST LAYER"
+     }
+    ],
+    "houses": 3,
+    "mentionCount": 5,
+    "mentions": [
+     {
+      "id": "T242",
+      "date": "2026-10-15",
+      "who": "a16z (Angelos, VGS)",
+      "s": 0
+     },
+     {
+      "id": "T167",
+      "date": "2026-09-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T12",
+      "date": "2026-07-20",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T01",
+      "date": "2026-07-19",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T13",
+      "date": "2026-07-17",
+      "who": "All-In",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "PayPal"
+     }
+    ],
+    "px": {
+     "sincePx": 56.82,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 58.81,
+     "lastDate": "2026-11-05",
+     "benchSince": 56.04,
+     "benchLast": 57.63,
+     "r": 0.035,
+     "rb": 0.0284,
+     "rel": 0.0065,
+     "adj": 0.0065,
+     "days": 108,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": null,
+     "addPx": 56.82
+    },
+    "rank": 43,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "LITE",
+    "ysym": "LITE",
+    "name": "Lumentum",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "active",
+    "score": 1.93,
+    "lastMention": "2026-11-01",
+    "quietDays": 1,
+    "added": "2026-11-04",
+    "since": "2026-11-04",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Corning: ~10x optical per GPU; Lumentum sold out to 2029; Marvell-Lumentum talk",
+    "watch": "Deal risk on MRVL; capacity adds",
+    "auto": false,
+    "themes": [
+     {
+      "id": "memory",
+      "name": "Memory / HBM shortage"
+     },
+     {
+      "id": "crypto",
+      "name": "Crypto rails / stablecoins + Bitcoin-as-debasement-hedge"
+     },
+     {
+      "id": "positioning",
+      "name": "Positioning / market-structure"
+     }
+    ],
+    "houses": 3,
+    "mentionCount": 5,
+    "mentions": [
+     {
+      "id": "T211",
+      "date": "2026-11-01",
+      "who": "Jordi Visser",
+      "s": 0
+     },
+     {
+      "id": "T201",
+      "date": "2026-10-18",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T189",
+      "date": "2026-10-10",
+      "who": "Jordi Visser",
+      "s": 1
+     },
+     {
+      "id": "T75",
+      "date": "2026-07-28",
+      "who": "The Compound",
+      "s": null
+     },
+     {
+      "id": "T05",
+      "date": "2026-04-15",
+      "who": "Jensen Huang",
+      "s": null
+     }
+    ],
+    "lean": 1,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Optics - the next per-GPU multiplier"
+     }
+    ],
+    "px": {
+     "sincePx": 626.75,
+     "sinceDate": "2026-11-04",
+     "firstAfter": false,
+     "last": 528.495,
+     "lastDate": "2026-11-05",
+     "benchSince": 504.27,
+     "benchLast": 453.445,
+     "r": -0.1568,
+     "rb": -0.1008,
+     "rel": -0.0623,
+     "adj": -0.0623,
+     "days": 1,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 89,
+     "addPx": 626.75
+    },
+    "rank": 44,
+    "isNew": true,
+    "delta": null
+   },
+   {
+    "tkr": "NVO",
+    "ysym": "NVO",
+    "name": "Novo Nordisk",
+    "stance": "two",
+    "risk": "mod",
+    "bench": "XLV",
+    "benchName": "Health care (XLV)",
+    "status": "active",
+    "score": 1.7,
+    "lastMention": "2026-10-31",
+    "quietDays": 5,
+    "added": "2026-08-10",
+    "since": "2026-08-10",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "The other GLP-1 leader (relative-value pair)",
+    "watch": "Mega cap · liquid · watch share-shift to Lilly's pill",
+    "auto": false,
+    "themes": [
+     {
+      "id": "digbio",
+      "name": "Digital biology / AI drug discovery"
+     },
+     {
+      "id": "ratesmacro",
+      "name": "Rising RATES / financing conditions"
+     },
+     {
+      "id": "crypto",
+      "name": "Crypto rails / stablecoins + Bitcoin-as-debasement-hedge"
+     }
+    ],
+    "houses": 2,
+    "mentionCount": 2,
+    "mentions": [
+     {
+      "id": "T215",
+      "date": "2026-10-31",
+      "who": "Pomp (w/ Jordi Visser)",
+      "s": -1
+     },
+     {
+      "id": "T94",
+      "date": "2026-08-05",
+      "who": "Eli Lilly (earnings)",
+      "s": null
+     }
+    ],
+    "lean": -1,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-10",
+      "label": "Batch 12",
+      "note": "Novo Nordisk"
+     }
+    ],
+    "px": {
+     "sincePx": 47.73,
+     "sinceDate": "2026-08-10",
+     "firstAfter": false,
+     "last": 40.258,
+     "lastDate": "2026-11-05",
+     "benchSince": 168.44,
+     "benchLast": 186.49,
+     "r": -0.1565,
+     "rb": 0.1072,
+     "rel": -0.2382,
+     "adj": -0.2382,
+     "days": 87,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": null,
+     "addPx": 47.73
+    },
+    "rank": 45,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "GLW",
+    "ysym": "GLW",
+    "name": "Corning",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "active",
+    "score": 1.66,
+    "lastMention": "2026-11-01",
+    "quietDays": 1,
+    "added": "2026-11-04",
+    "since": "2026-11-04",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Corning: ~10x optical per GPU; Lumentum sold out to 2029; Marvell-Lumentum talk",
+    "watch": "Deal risk on MRVL; capacity adds",
+    "auto": false,
+    "themes": [
+     {
+      "id": "memory",
+      "name": "Memory / HBM shortage"
+     },
+     {
+      "id": "everythingtrade",
+      "name": "The EVERYTHING TRADE"
+     },
+     {
+      "id": "positioning",
+      "name": "Positioning / market-structure"
+     }
+    ],
+    "houses": 2,
+    "mentionCount": 2,
+    "mentions": [
+     {
+      "id": "T211",
+      "date": "2026-11-01",
+      "who": "Jordi Visser",
+      "s": 1
+     },
+     {
+      "id": "T75",
+      "date": "2026-07-28",
+      "who": "The Compound",
+      "s": null
+     }
+    ],
+    "lean": 1,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Optics - the next per-GPU multiplier"
+     }
+    ],
+    "px": {
+     "sincePx": 118.77,
+     "sinceDate": "2026-11-04",
+     "firstAfter": false,
+     "last": 104.55,
+     "lastDate": "2026-11-05",
+     "benchSince": 504.27,
+     "benchLast": 453.445,
+     "r": -0.1197,
+     "rb": -0.1008,
+     "rel": -0.0211,
+     "adj": -0.0211,
+     "days": 1,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 89,
+     "addPx": 118.77
+    },
+    "rank": 46,
+    "isNew": true,
+    "delta": null
+   },
+   {
+    "tkr": "MSTR",
+    "ysym": "MSTR",
+    "name": "Strategy (MicroStrategy)",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "BTC-USD",
+    "benchName": "Bitcoin",
+    "status": "active",
+    "score": 1.62,
+    "lastMention": "2026-10-18",
+    "quietDays": 18,
+    "added": "2026-08-28",
+    "since": "2026-08-28",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Debasement hedge; 'purest AI trade' (un-disruptable scarcity)",
+    "watch": "Volatile · the tape reclaimed the 200-day · watch real yields",
+    "auto": false,
+    "themes": [
+     {
+      "id": "memory",
+      "name": "Memory / HBM shortage"
+     },
+     {
+      "id": "positioning",
+      "name": "Positioning / market-structure"
+     },
+     {
+      "id": "paybackmath",
+      "name": "The PAYBACK MATH"
+     }
+    ],
+    "houses": 2,
+    "mentionCount": 2,
+    "mentions": [
+     {
+      "id": "T201",
+      "date": "2026-10-18",
+      "who": "Jordi Visser",
+      "s": 0
+     },
+     {
+      "id": "T115",
+      "date": "2026-08-15",
+      "who": "Jordi Visser",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-28",
+      "label": "Batch 14",
+      "note": "Bitcoin (+ MicroStrategy)"
+     }
+    ],
+    "px": {
+     "sincePx": 127.31,
+     "sinceDate": "2026-08-28",
+     "firstAfter": false,
+     "last": 128.219,
+     "lastDate": "2026-11-05",
+     "benchSince": 77830.2891,
+     "benchLast": 75912.08,
+     "r": 0.0071,
+     "rb": -0.0246,
+     "rel": 0.0326,
+     "adj": 0.0326,
+     "days": 69,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 21,
+     "addPx": 127.31
+    },
+    "rank": 47,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "PWR",
+    "ysym": "PWR",
+    "name": "Quanta Services",
+    "stance": "bull",
+    "risk": "core",
+    "bench": "XLI",
+    "benchName": "Industrials (XLI)",
+    "status": "active",
+    "score": 1.49,
+    "lastMention": "2026-10-30",
+    "quietDays": 1,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "15 GW of chips idle; GEV orders +96%; PWR record $64B backlog; 800V power",
+    "watch": "Policy risk under a Democratic Congress",
+    "auto": false,
+    "themes": [
+     {
+      "id": "energy",
+      "name": "Energy is the binding constraint"
+     },
+     {
+      "id": "computeasset",
+      "name": "Compute is becoming a financeable ASSET CLASS"
+     },
+     {
+      "id": "paybackmath",
+      "name": "The PAYBACK MATH"
+     }
+    ],
+    "houses": 2,
+    "mentionCount": 2,
+    "mentions": [
+     {
+      "id": "T245",
+      "date": "2026-10-30",
+      "who": "Steve Eisman",
+      "s": 1
+     },
+     {
+      "id": "T24",
+      "date": "2026-06-01",
+      "who": "Gary Marcus",
+      "s": null
+     }
+    ],
+    "lean": 1,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Quanta"
+     },
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Power and cooling - the physical gate"
+     }
+    ],
+    "px": {
+     "sincePx": 632.56,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 510.77,
+     "lastDate": "2026-11-05",
+     "benchSince": 178.12,
+     "benchLast": 162.63,
+     "r": -0.1925,
+     "rb": -0.087,
+     "rel": -0.1156,
+     "adj": -0.1156,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 632.56
+    },
+    "rank": 48,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "FIG",
+    "ysym": "FIG",
+    "name": "Figma",
+    "stance": "bear",
+    "risk": "spec",
+    "bench": "IGV",
+    "benchName": "Software (IGV)",
+    "status": "active",
+    "score": 1.44,
+    "lastMention": "2026-10-19",
+    "quietDays": 17,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "App-layer casualty (−50% on Claude Design)",
+    "watch": "Cautionary example, not a buy call",
+    "auto": false,
+    "themes": [
+     {
+      "id": "software",
+      "name": "Software resolves to a BIFURCATION"
+     },
+     {
+      "id": "labvalue",
+      "name": "Foundation-lab value compression (now TWO-SIDED)"
+     },
+     {
+      "id": "valuemigration",
+      "name": "The MODEL COMMODITIZES"
+     }
+    ],
+    "houses": 2,
+    "mentionCount": 2,
+    "mentions": [
+     {
+      "id": "T220",
+      "date": "2026-10-19",
+      "who": "All-In (Dylan Field)",
+      "s": 1
+     },
+     {
+      "id": "T15",
+      "date": "2026-07-03",
+      "who": "All-In",
+      "s": null
+     }
+    ],
+    "lean": 1,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Figma"
+     }
+    ],
+    "px": {
+     "sincePx": 24.02,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 18.695,
+     "lastDate": "2026-11-05",
+     "benchSince": 92.98,
+     "benchLast": 98.935,
+     "r": -0.2217,
+     "rb": 0.064,
+     "rel": -0.2685,
+     "adj": 0.2685,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 24.02
+    },
+    "rank": 49,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "CEG",
+    "ysym": "CEG",
+    "name": "Constellation Energy",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "XLU",
+    "benchName": "Utilities (XLU)",
+    "status": "active",
+    "score": 1.4,
+    "lastMention": "2026-10-10",
+    "quietDays": 26,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Nuclear/baseload",
+    "watch": "Large cap · liquid · power-demand proxy",
+    "auto": false,
+    "themes": [
+     {
+      "id": "token",
+      "name": "Token demand exponential & underestimated"
+     },
+     {
+      "id": "memory",
+      "name": "Memory / HBM shortage"
+     },
+     {
+      "id": "crypto",
+      "name": "Crypto rails / stablecoins + Bitcoin-as-debasement-hedge"
+     }
+    ],
+    "houses": 2,
+    "mentionCount": 2,
+    "mentions": [
+     {
+      "id": "T189",
+      "date": "2026-10-10",
+      "who": "Jordi Visser",
+      "s": 1
+     },
+     {
+      "id": "T59",
+      "date": "2026-07-01",
+      "who": "Animal Spirits",
+      "s": null
+     }
+    ],
+    "lean": 1,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Constellation"
+     }
+    ],
+    "px": {
+     "sincePx": 253.5,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 237.18,
+     "lastDate": "2026-11-05",
+     "benchSince": 44.94,
+     "benchLast": 43.365,
+     "r": -0.0644,
+     "rb": -0.035,
+     "rel": -0.0304,
+     "adj": -0.0304,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 253.5
+    },
+    "rank": 50,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "URI",
+    "ysym": "URI",
+    "name": "United Rentals",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "XLI",
+    "benchName": "Industrials (XLI)",
+    "status": "fading",
+    "score": 1.04,
+    "lastMention": "2026-08-15",
+    "quietDays": 79,
+    "added": "2026-08-10",
+    "since": "2026-08-10",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "DC-construction rental, supported through 2030 (Baird)",
+    "watch": "Large cap · liquid · construction sleeve · survives NIMBY",
+    "auto": false,
+    "themes": [],
+    "houses": 2,
+    "mentionCount": 2,
+    "mentions": [
+     {
+      "id": "T111",
+      "date": "2026-08-15",
+      "who": "Ramez Naam",
+      "s": null
+     },
+     {
+      "id": "T100",
+      "date": "2026-08-08",
+      "who": "Bloomberg (Surveillance)",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-10",
+      "label": "Batch 12",
+      "note": "United Rentals / Sunbelt (Ashtead) / EquipmentShare"
+     },
+     {
+      "date": "2026-08-18",
+      "label": "Batch 13",
+      "note": "Equipment-rental"
+     }
+    ],
+    "px": {
+     "sincePx": 1137.52,
+     "sinceDate": "2026-08-10",
+     "firstAfter": false,
+     "last": 1048.045,
+     "lastDate": "2026-11-05",
+     "benchSince": 184.6,
+     "benchLast": 162.63,
+     "r": -0.0787,
+     "rb": -0.119,
+     "rel": 0.0458,
+     "adj": 0.0458,
+     "days": 87,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 3,
+     "addPx": 1137.52
+    },
+    "rank": 51,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "XLU",
+    "ysym": "XLU",
+    "name": "Utilities (XLU)",
+    "stance": "bear",
+    "risk": "mod",
+    "bench": "SPY",
+    "benchName": "S&P 500 (SPY)",
+    "status": "active",
+    "score": 0.85,
+    "lastMention": "2026-10-15",
+    "quietDays": 21,
+    "added": "2026-10-05",
+    "since": "2026-10-05",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Rate-sensitive; XLU 2.94% vs 5.25% 10yr; private-credit redemptions",
+    "watch": "Underweight; reverses if yields roll over",
+    "auto": false,
+    "themes": [],
+    "houses": 1,
+    "mentionCount": 1,
+    "mentions": [
+     {
+      "id": "T187",
+      "date": "2026-10-15",
+      "who": "The Compound (Chart Kid Matt)",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-10-05",
+      "label": "Batch 20",
+      "note": "Where the new lows live"
+     }
+    ],
+    "px": {
+     "sincePx": 39.97,
+     "sinceDate": "2026-10-05",
+     "firstAfter": false,
+     "last": 43.365,
+     "lastDate": "2026-11-05",
+     "benchSince": 774.83,
+     "benchLast": 736.58,
+     "r": 0.0849,
+     "rb": -0.0494,
+     "rel": 0.1413,
+     "adj": -0.1413,
+     "days": 31,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 59,
+     "addPx": 39.97
+    },
+    "rank": 52,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "SOL",
+    "ysym": "SOL-USD",
+    "name": "Solana",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "BTC-USD",
+    "benchName": "Bitcoin",
+    "status": "active",
+    "score": 0.76,
+    "lastMention": "2026-09-15",
+    "quietDays": 46,
+    "added": "2026-09-20",
+    "since": "2026-09-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Built-for-AI-agents; tokenization = the new liquidity; 46-name index at highs (QTD ETH+66/BTC+53/SOL+38)",
+    "watch": "ONE voice, heavy book-talk - size as a speculative/debasement hedge; catalysts = tokenized-stock exemption + Dec-6 23hr",
+    "auto": false,
+    "themes": [],
+    "houses": 2,
+    "mentionCount": 2,
+    "mentions": [
+     {
+      "id": "T178",
+      "date": "2026-09-15",
+      "who": "Raoul Pal & Richard Galvin",
+      "s": null
+     },
+     {
+      "id": "T181",
+      "date": "2025-12-15",
+      "who": "William Mougayar",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-09-20",
+      "label": "Batch 18",
+      "note": "Jordis crypto pivot - crypto as the AI-agent rail (his #1)"
+     }
+    ],
+    "px": {
+     "sincePx": 111.1329,
+     "sinceDate": "2026-09-20",
+     "firstAfter": false,
+     "last": 89.11,
+     "lastDate": "2026-11-05",
+     "benchSince": 81142.6094,
+     "benchLast": 75912.08,
+     "r": -0.1982,
+     "rb": -0.0645,
+     "rel": -0.1429,
+     "adj": -0.1429,
+     "days": 46,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 44,
+     "addPx": 111.1329
+    },
+    "rank": 53,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "ETN",
+    "ysym": "ETN",
+    "name": "Eaton",
+    "stance": "bull",
+    "risk": "core",
+    "bench": "XLI",
+    "benchName": "Industrials (XLI)",
+    "status": "active",
+    "score": 0.74,
+    "lastMention": "2026-07-21",
+    "quietDays": 1,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "15 GW of chips idle; GEV orders +96%; PWR record $64B backlog; 800V power",
+    "watch": "Policy risk under a Democratic Congress",
+    "auto": false,
+    "themes": [],
+    "houses": 2,
+    "mentionCount": 2,
+    "mentions": [
+     {
+      "id": "T32",
+      "date": "2026-07-21",
+      "who": "The Compound",
+      "s": null
+     },
+     {
+      "id": "T24",
+      "date": "2026-06-01",
+      "who": "Gary Marcus",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Eaton"
+     },
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Power and cooling - the physical gate"
+     }
+    ],
+    "px": {
+     "sincePx": 401.41,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 329.47,
+     "lastDate": "2026-11-05",
+     "benchSince": 178.12,
+     "benchLast": 162.63,
+     "r": -0.1792,
+     "rb": -0.087,
+     "rel": -0.101,
+     "adj": -0.101,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 401.41
+    },
+    "rank": 54,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "COHR",
+    "ysym": "COHR",
+    "name": "Coherent",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "active",
+    "score": 0.7,
+    "lastMention": "2026-07-28",
+    "quietDays": 1,
+    "added": "2026-11-04",
+    "since": "2026-11-04",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Corning: ~10x optical per GPU; Lumentum sold out to 2029; Marvell-Lumentum talk",
+    "watch": "Deal risk on MRVL; capacity adds",
+    "auto": false,
+    "themes": [],
+    "houses": 2,
+    "mentionCount": 2,
+    "mentions": [
+     {
+      "id": "T75",
+      "date": "2026-07-28",
+      "who": "The Compound",
+      "s": null
+     },
+     {
+      "id": "T05",
+      "date": "2026-04-15",
+      "who": "Jensen Huang",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Optics - the next per-GPU multiplier"
+     }
+    ],
+    "px": {
+     "sincePx": 195.09,
+     "sinceDate": "2026-11-04",
+     "firstAfter": false,
+     "last": 167.895,
+     "lastDate": "2026-11-05",
+     "benchSince": 504.27,
+     "benchLast": 453.445,
+     "r": -0.1394,
+     "rb": -0.1008,
+     "rel": -0.0429,
+     "adj": -0.0429,
+     "days": 1,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 89,
+     "addPx": 195.09
+    },
+    "rank": 55,
+    "isNew": true,
+    "delta": null
+   },
+   {
+    "tkr": "AAOI",
+    "ysym": "AAOI",
+    "name": "Applied Optoelectronics",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "active",
+    "score": 0.68,
+    "lastMention": "2026-09-15",
+    "quietDays": 51,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Optical/photonics interconnect (Vera Rubin step-up)",
+    "watch": "Mid-large · Visser's top hardware long · book-talk — verify",
+    "auto": false,
+    "themes": [],
+    "houses": 1,
+    "mentionCount": 2,
+    "mentions": [
+     {
+      "id": "T164",
+      "date": "2026-09-15",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T60",
+      "date": "2026-07-24",
+      "who": "Jordi Visser",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Marvell / Applied Optoelectronics"
+     }
+    ],
+    "px": {
+     "sincePx": 103.02,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 47.51,
+     "lastDate": "2026-11-05",
+     "benchSince": 558.83,
+     "benchLast": 453.445,
+     "r": -0.5388,
+     "rb": -0.1886,
+     "rel": -0.4316,
+     "adj": -0.4316,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 103.02
+    },
+    "rank": 56,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "VRT",
+    "ysym": "VRT",
+    "name": "Vertiv",
+    "stance": "bull",
+    "risk": "core",
+    "bench": "XLI",
+    "benchName": "Industrials (XLI)",
+    "status": "active",
+    "score": 0.44,
+    "lastMention": "2026-07-21",
+    "quietDays": 1,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "15 GW of chips idle; GEV orders +96%; PWR record $64B backlog; 800V power",
+    "watch": "Policy risk under a Democratic Congress",
+    "auto": false,
+    "themes": [],
+    "houses": 1,
+    "mentionCount": 1,
+    "mentions": [
+     {
+      "id": "T32",
+      "date": "2026-07-21",
+      "who": "The Compound",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Vertiv"
+     },
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Power and cooling - the physical gate"
+     }
+    ],
+    "px": {
+     "sincePx": 291.67,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 175.665,
+     "lastDate": "2026-11-05",
+     "benchSince": 178.12,
+     "benchLast": 162.63,
+     "r": -0.3977,
+     "rb": -0.087,
+     "rel": -0.3404,
+     "adj": -0.3404,
+     "days": 108,
+     "frozen": false,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 291.67
+    },
+    "rank": 57,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "DAL",
+    "ysym": "DAL",
+    "name": "Delta Air Lines",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "XLI",
+    "benchName": "Industrials (XLI)",
+    "status": "fading",
+    "score": 0,
+    "lastMention": null,
+    "quietDays": 69,
+    "added": "2026-08-28",
+    "since": "2026-08-28",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Ed Bastian: 'AI could lift profitability ~50%' (margins 10→15%); AI fare-setting",
+    "watch": "Cyclical · AI-pricing margin story · verify vs the economy",
+    "auto": false,
+    "themes": [],
+    "houses": 0,
+    "mentionCount": 0,
+    "mentions": [],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-28",
+      "label": "Batch 14",
+      "note": "Delta"
+     }
+    ],
+    "px": {
+     "sincePx": 80.07,
+     "sinceDate": "2026-08-28",
+     "firstAfter": false,
+     "last": 84.455,
+     "lastDate": "2026-11-05",
+     "benchSince": 177.14,
+     "benchLast": 162.63,
+     "r": 0.0548,
+     "rb": -0.0819,
+     "rel": 0.1489,
+     "adj": 0.1489,
+     "days": 69,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 21,
+     "addPx": 80.07
+    },
+    "rank": 58,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "GDX",
+    "ysym": "GDX",
+    "name": "Gold miners (GDX)",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "GLD",
+    "benchName": "Gold (GLD)",
+    "status": "fading",
+    "score": 0,
+    "lastMention": null,
+    "quietDays": 69,
+    "added": "2026-08-28",
+    "since": "2026-08-28",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Debasement; a Treasury gold-revaluation 'nuclear option' (Hayes)",
+    "watch": "Miners did ~3x last year, 'best way to play the upswing'",
+    "auto": false,
+    "themes": [],
+    "houses": 0,
+    "mentionCount": 0,
+    "mentions": [],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-28",
+      "label": "Batch 14",
+      "note": "Gold + miners"
+     }
+    ],
+    "px": {
+     "sincePx": 99.65,
+     "sinceDate": "2026-08-28",
+     "firstAfter": false,
+     "last": 85.04,
+     "lastDate": "2026-11-05",
+     "benchSince": 408.89,
+     "benchLast": 375.56,
+     "r": -0.1466,
+     "rb": -0.0815,
+     "rel": -0.0709,
+     "adj": -0.0709,
+     "days": 69,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 21,
+     "addPx": 99.65
+    },
+    "rank": 59,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "SIL",
+    "ysym": "SIL",
+    "name": "Silver miners (SIL)",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "SLV",
+    "benchName": "Silver (SLV)",
+    "status": "fading",
+    "score": 0,
+    "lastMention": null,
+    "quietDays": 69,
+    "added": "2026-08-28",
+    "since": "2026-08-28",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Debasement + AI-mineral cross (a shortage metal)",
+    "watch": "Higher beta than gold · Visser's 'perfect cross'",
+    "auto": false,
+    "themes": [],
+    "houses": 0,
+    "mentionCount": 0,
+    "mentions": [],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-28",
+      "label": "Batch 14",
+      "note": "Silver + miners"
+     }
+    ],
+    "px": {
+     "sincePx": 99.14,
+     "sinceDate": "2026-08-28",
+     "firstAfter": false,
+     "last": 76.42,
+     "lastDate": "2026-11-05",
+     "benchSince": 60.02,
+     "benchLast": 47.22,
+     "r": -0.2292,
+     "rb": -0.2133,
+     "rel": -0.0202,
+     "adj": -0.0202,
+     "days": 69,
+     "frozen": false,
+     "graded": false,
+     "gradeIn": 21,
+     "addPx": 99.14
+    },
+    "rank": 60,
+    "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "ANET",
+    "ysym": "ANET",
+    "name": "Arista",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "retired",
+    "score": 0.49,
+    "lastMention": "2026-08-05",
+    "quietDays": 92,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": "2026-11-04",
+    "retiredReason": null,
+    "why": "AI networking (Eisman-named)",
+    "watch": "Large cap · liquid",
+    "auto": false,
+    "themes": [],
+    "houses": 1,
+    "mentionCount": 1,
+    "mentions": [
+     {
+      "id": "T88",
+      "date": "2026-08-05",
+      "who": "Matt McLennan",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Arista / Amphenol"
+     }
+    ],
+    "px": {
+     "sincePx": 169.35,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 178.48,
+     "lastDate": "2026-11-04",
+     "benchSince": 558.83,
+     "benchLast": 504.27,
+     "r": 0.0539,
+     "rb": -0.0976,
+     "rel": 0.1679,
+     "adj": 0.1679,
+     "days": 107,
+     "frozen": true,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 169.35
+    }
+   },
+   {
+    "tkr": "BE",
+    "ysym": "BE",
+    "name": "Bloom Energy",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "XLI",
+    "benchName": "Industrials (XLI)",
+    "status": "retired",
+    "score": 1.74,
+    "lastMention": "2026-07-31",
+    "quietDays": 97,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": "2026-10-30",
+    "retiredReason": null,
+    "why": "Behind-the-meter gen",
+    "watch": "Mid cap · lower liquidity · story-driven",
+    "auto": false,
+    "themes": [],
+    "houses": 4,
+    "mentionCount": 4,
+    "mentions": [
+     {
+      "id": "T76",
+      "date": "2026-07-31",
+      "who": "Jordi Visser",
+      "s": null
+     },
+     {
+      "id": "T74",
+      "date": "2026-07-28",
+      "who": "Bloom Energy (earnings)",
+      "s": null
+     },
+     {
+      "id": "T13",
+      "date": "2026-07-17",
+      "who": "All-In",
+      "s": null
+     },
+     {
+      "id": "T47",
+      "date": "2026-07-01",
+      "who": "Ben Pulandian",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Bloom Energy"
+     }
+    ],
+    "px": {
+     "sincePx": 197.06,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 203.17,
+     "lastDate": "2026-10-30",
+     "benchSince": 178.12,
+     "benchLast": 167.4,
+     "r": 0.031,
+     "rb": -0.0602,
+     "rel": 0.097,
+     "adj": 0.097,
+     "days": 102,
+     "frozen": true,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 197.06
+    }
+   },
+   {
+    "tkr": "TEM",
+    "ysym": "TEM",
+    "name": "Tempus AI",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "XBI",
+    "benchName": "Biotech (XBI)",
+    "status": "retired",
+    "score": 0,
+    "lastMention": null,
+    "quietDays": 108,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": "2026-10-19",
+    "retiredReason": null,
+    "why": "AI drug-discovery platforms",
+    "watch": "Small-mid · volatile · long-dated · Marcus tempers timeline",
+    "auto": false,
+    "themes": [],
+    "houses": 0,
+    "mentionCount": 0,
+    "mentions": [],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Tempus / Recursion / Schrödinger"
+     }
+    ],
+    "px": {
+     "sincePx": 48.41,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 64.34,
+     "lastDate": "2026-10-19",
+     "benchSince": 150.94,
+     "benchLast": 147.86,
+     "r": 0.3291,
+     "rb": -0.0204,
+     "rel": 0.3567,
+     "adj": 0.3567,
+     "days": 91,
+     "frozen": true,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 48.41
+    }
+   },
+   {
+    "tkr": "RXRX",
+    "ysym": "RXRX",
+    "name": "Recursion",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "XBI",
+    "benchName": "Biotech (XBI)",
+    "status": "retired",
+    "score": 0,
+    "lastMention": null,
+    "quietDays": 108,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": "2026-10-19",
+    "retiredReason": null,
+    "why": "AI drug-discovery platforms",
+    "watch": "Small-mid · volatile · long-dated · Marcus tempers timeline",
+    "auto": false,
+    "themes": [],
+    "houses": 0,
+    "mentionCount": 0,
+    "mentions": [],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Tempus / Recursion / Schrödinger"
+     }
+    ],
+    "px": {
+     "sincePx": 2.89,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 3.61,
+     "lastDate": "2026-10-19",
+     "benchSince": 150.94,
+     "benchLast": 147.86,
+     "r": 0.2491,
+     "rb": -0.0204,
+     "rel": 0.2752,
+     "adj": 0.2752,
+     "days": 91,
+     "frozen": true,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 2.89
+    }
+   },
+   {
+    "tkr": "SDGR",
+    "ysym": "SDGR",
+    "name": "Schrodinger",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "XBI",
+    "benchName": "Biotech (XBI)",
+    "status": "retired",
+    "score": 0,
+    "lastMention": null,
+    "quietDays": 108,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": "2026-10-19",
+    "retiredReason": null,
+    "why": "AI drug-discovery platforms",
+    "watch": "Small-mid · volatile · long-dated · Marcus tempers timeline",
+    "auto": false,
+    "themes": [],
+    "houses": 0,
+    "mentionCount": 0,
+    "mentions": [],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Tempus / Recursion / Schrödinger"
+     }
+    ],
+    "px": {
+     "sincePx": 15,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 23.12,
+     "lastDate": "2026-10-19",
+     "benchSince": 150.94,
+     "benchLast": 147.86,
+     "r": 0.5413,
+     "rb": -0.0204,
+     "rel": 0.5734,
+     "adj": 0.5734,
+     "days": 91,
+     "frozen": true,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 15
+    }
+   },
+   {
+    "tkr": "CRSP",
+    "ysym": "CRSP",
+    "name": "CRISPR Therapeutics",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "XBI",
+    "benchName": "Biotech (XBI)",
+    "status": "retired",
+    "score": 0.22,
+    "lastMention": "2026-04-20",
+    "quietDays": 108,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": "2026-10-19",
+    "retiredReason": null,
+    "why": "Gene-editing + AlphaGenome",
+    "watch": "Small cap · binary/clinical risk",
+    "auto": false,
+    "themes": [],
+    "houses": 1,
+    "mentionCount": 1,
+    "mentions": [
+     {
+      "id": "T08",
+      "date": "2026-04-20",
+      "who": "Demis Hassabis",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "CRISPR names"
+     }
+    ],
+    "px": {
+     "sincePx": 46.99,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 50.04,
+     "lastDate": "2026-10-19",
+     "benchSince": 150.94,
+     "benchLast": 147.86,
+     "r": 0.0649,
+     "rb": -0.0204,
+     "rel": 0.0871,
+     "adj": 0.0871,
+     "days": 91,
+     "frozen": true,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 46.99
+    }
+   },
+   {
+    "tkr": "NTLA",
+    "ysym": "NTLA",
+    "name": "Intellia",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "XBI",
+    "benchName": "Biotech (XBI)",
+    "status": "retired",
+    "score": 0.22,
+    "lastMention": "2026-04-20",
+    "quietDays": 108,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": "2026-10-19",
+    "retiredReason": null,
+    "why": "Gene-editing + AlphaGenome",
+    "watch": "Small cap · binary/clinical risk",
+    "auto": false,
+    "themes": [],
+    "houses": 1,
+    "mentionCount": 1,
+    "mentions": [
+     {
+      "id": "T08",
+      "date": "2026-04-20",
+      "who": "Demis Hassabis",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "CRISPR names"
+     }
+    ],
+    "px": {
+     "sincePx": 10.92,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 11.58,
+     "lastDate": "2026-10-19",
+     "benchSince": 150.94,
+     "benchLast": 147.86,
+     "r": 0.0604,
+     "rb": -0.0204,
+     "rel": 0.0825,
+     "adj": 0.0825,
+     "days": 91,
+     "frozen": true,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 10.92
+    }
+   },
+   {
+    "tkr": "BEAM",
+    "ysym": "BEAM",
+    "name": "Beam Therapeutics",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "XBI",
+    "benchName": "Biotech (XBI)",
+    "status": "retired",
+    "score": 0,
+    "lastMention": null,
+    "quietDays": 108,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": "2026-10-19",
+    "retiredReason": null,
+    "why": "Gene-editing + AlphaGenome",
+    "watch": "Small cap · binary/clinical risk",
+    "auto": false,
+    "themes": [],
+    "houses": 0,
+    "mentionCount": 0,
+    "mentions": [],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "CRISPR names"
+     }
+    ],
+    "px": {
+     "sincePx": 26.33,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 24.19,
+     "lastDate": "2026-10-19",
+     "benchSince": 150.94,
+     "benchLast": 147.86,
+     "r": -0.0813,
+     "rb": -0.0204,
+     "rel": -0.0621,
+     "adj": -0.0621,
+     "days": 91,
+     "frozen": true,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 26.33
+    }
+   },
+   {
+    "tkr": "XYZ",
+    "ysym": "XYZ",
+    "name": "Block",
+    "stance": "monitor",
+    "risk": "mod",
+    "bench": "XLF",
+    "benchName": "Financials (XLF)",
+    "status": "retired",
+    "score": 0,
+    "lastMention": null,
+    "quietDays": 108,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": "2026-10-19",
+    "retiredReason": null,
+    "why": "Cash App + rails, part of bid",
+    "watch": "Large cap · higher beta",
+    "auto": false,
+    "themes": [],
+    "houses": 0,
+    "mentionCount": 0,
+    "mentions": [],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Block"
+     }
+    ],
+    "px": {
+     "sincePx": 79.29,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 77.5,
+     "lastDate": "2026-10-19",
+     "benchSince": 56.04,
+     "benchLast": 55.06,
+     "r": -0.0226,
+     "rb": -0.0175,
+     "rel": -0.0052,
+     "adj": -0.0052,
+     "days": 91,
+     "frozen": true,
+     "graded": false,
+     "gradeIn": null,
+     "addPx": 79.29
+    }
+   },
+   {
+    "tkr": "APH",
+    "ysym": "APH",
+    "name": "Amphenol",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "retired",
+    "score": 0,
+    "lastMention": null,
+    "quietDays": 108,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": "2026-10-19",
+    "retiredReason": null,
+    "why": "AI networking (Eisman-named)",
+    "watch": "Large cap · liquid",
+    "auto": false,
+    "themes": [],
+    "houses": 0,
+    "mentionCount": 0,
+    "mentions": [],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Arista / Amphenol"
+     }
+    ],
+    "px": {
+     "sincePx": 75.255,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 80.28,
+     "lastDate": "2026-10-19",
+     "benchSince": 558.83,
+     "benchLast": 548.46,
+     "r": 0.0668,
+     "rb": -0.0186,
+     "rel": 0.0869,
+     "adj": 0.0869,
+     "days": 91,
+     "frozen": true,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 75.255
+    }
+   },
+   {
+    "tkr": "HWM",
+    "ysym": "HWM",
+    "name": "Howmet",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "XLI",
+    "benchName": "Industrials (XLI)",
+    "status": "retired",
+    "score": 0.14,
+    "lastMention": "2026-02-05",
+    "quietDays": 108,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": "2026-10-19",
+    "retiredReason": null,
+    "why": "Turbine vanes/blades castings",
+    "watch": "Large cap · liquid · specific to the turbine bottleneck",
+    "auto": false,
+    "themes": [],
+    "houses": 1,
+    "mentionCount": 1,
+    "mentions": [
+     {
+      "id": "T10",
+      "date": "2026-02-05",
+      "who": "Elon Musk",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Howmet"
+     }
+    ],
+    "px": {
+     "sincePx": 271.98,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 220.03,
+     "lastDate": "2026-10-19",
+     "benchSince": 178.12,
+     "benchLast": 166.68,
+     "r": -0.191,
+     "rb": -0.0642,
+     "rel": -0.1355,
+     "adj": -0.1355,
+     "days": 91,
+     "frozen": true,
+     "graded": true,
+     "gradeIn": null,
+     "addPx": 271.98
+    }
+   }
+  ],
+  "movedToThemes": [
+   {
+    "idea": "Levered neoclouds / PE-insurers",
+    "name": "Debt-funded AI-infra + PE-owned life insurers",
+    "theme": "debt",
+    "from": "Batch 14",
+    "themeName": "Debt / private-credit systemic risk"
+   },
+   {
+    "idea": "S&P-493 screen",
+    "name": "AI-adopter margin-expanders",
+    "theme": "roibroaden",
+    "from": "Batch 14",
+    "themeName": "The ROI must BROADEN to the S&P-493"
+   },
+   {
+    "idea": "BTC miners",
+    "name": "Bit Deer / Riot / Hut 8 / IREN",
+    "theme": "crypto",
+    "from": "Batch 14",
+    "themeName": "Crypto rails / stablecoins + Bitcoin-as-debasement-hedge"
+   },
+   {
+    "idea": "Rails, not wrappers",
+    "name": "Payments/data/infra under the software-creation explosion",
+    "theme": "software",
+    "from": "Batch 13",
+    "themeName": "Software resolves to a BIFURCATION"
+   },
+   {
+    "idea": "Batteries / storage",
+    "name": "Grid-scale storage + solar-plus-storage",
+    "theme": "batteries",
+    "from": "Batch 13",
+    "themeName": "Solar + BATTERIES"
+   },
+   {
+    "idea": "T&D / transformers",
+    "name": "Transmission, distribution & grid gear",
+    "theme": "energy",
+    "from": "Batch 13",
+    "themeName": "Energy is the binding constraint"
+   },
+   {
+    "idea": "Compute ETFs / futures",
+    "name": "AI-infra ETFs + compute-futures filing",
+    "theme": "computeasset",
+    "from": "Batch 13",
+    "themeName": "Compute is becoming a financeable ASSET CLASS"
+   },
+   {
+    "idea": "TerraFab (private)",
+    "name": "SpaceX/Tesla TerraFab + Intel",
+    "theme": "litho",
+    "from": "Batch 12",
+    "themeName": "The ultimate ceiling: EUV / ASML & the chip supply chain (+ a US-sovereignty/TerraFab disruptor)"
+   },
+   {
+    "idea": "Private credit / neoclouds",
+    "name": "CoreWeave-type, PE software LBOs",
+    "theme": "debt",
+    "from": "Original list (Jul 20)",
+    "themeName": "Debt / private-credit systemic risk"
+   },
+   {
+    "idea": "Attention / creator",
+    "name": "Durable audience as an asset (concept)",
+    "theme": "liveevents",
+    "from": "Batch 15",
+    "themeName": "Live events / human premium (AI-deflation hedge)"
+   },
+   {
+    "idea": "World-models / robotics",
+    "name": "World-model + robotics-data engines (concept)",
+    "theme": "worldmodels",
+    "from": "Batch 16",
+    "themeName": "WORLD MODELS / physical AI"
+   },
+   {
+    "idea": "Spreads (Oracle CDS / CCC)",
+    "name": "WATCH SPREADS - the circular early-warning (discipline)",
+    "theme": "debt",
+    "from": "Batch 16",
+    "themeName": "Debt / private-credit systemic risk"
+   },
+   {
+    "idea": "Speed-to-power",
+    "name": "Transmission / transformers / gas / packaging (the machine age)",
+    "theme": "energy",
+    "from": "Batch 17",
+    "themeName": "Energy is the binding constraint"
+   },
+   {
+    "idea": "Safety bill (monitor)",
+    "name": "AI-safety bill / cross-lab peer review (policy watch)",
+    "theme": "airegulator",
+    "from": "Batch 17",
+    "themeName": "AI regulation / frontier-regulator ('AI-FINRA')"
+   },
+   {
+    "idea": "DATA/context layer",
+    "name": "Context/ontology is the enterprise unlock, not the frontier",
+    "theme": "contextlayer",
+    "from": "Batch 18",
+    "themeName": "CONTEXT / ONTOLOGY is the enterprise unlock"
+   },
+   {
+    "idea": "RSI four-criteria (monitor)",
+    "name": "The RSI scorecard (Ghodsi vs Aschenbrenner)",
+    "theme": "scaling",
+    "from": "Batch 18",
+    "themeName": "Scaling: plateau vs accelerating (THE central fork)"
+   },
+   {
+    "idea": "Speed-to-power + gas",
+    "name": "The power buildout, de-risked by the community politics",
+    "theme": "energy",
+    "from": "Batch 18",
+    "themeName": "Energy is the binding constraint"
+   },
+   {
+    "idea": "Agent beneficiaries vs inertia basket",
+    "name": "Transactions win, inertia loses",
+    "theme": "agentaction",
+    "from": "Batch 20",
+    "themeName": "The AGENT leaves the chatbox"
+   }
+  ]
+ }
 };
 
 /* ============================================================ RENDER ============================================================ */
@@ -16478,12 +23717,86 @@ function renderTimeline(){
 }
 
 /* ---- Watchlist ---- */
+/* ---- Watchlist: one ranked list (2026-11-05). Data: DATA.watch from _work/build_watchlist.js ---- */
+let wlStatus="on",wlStance="all",wlQ="";
+const WL_ST={bull:["Bullish","#3ddc84"],bear:["Bearish","#ff5c6c"],two:["Two-sided","#c792ff"],monitor:["Monitor","#f4c04f"]};
+function wlPct(x){return x==null?"–":(x>0?"+":x<0?"−":"")+Math.abs(x*100).toFixed(1)+"%";}
+function wlD(s){return s?calParse(s).toLocaleDateString("en-US",{month:"short",day:"numeric"}):"–";}
+function wlPx(v){return v==null?"–":(v>=1000?v.toLocaleString("en-US",{maximumFractionDigits:0}):v.toFixed(2));}
+function openLib(id){goTab("library");setTimeout(()=>{const d=[...document.querySelectorAll("#v-library details.libcard")].find(x=>{const t=x.querySelector(".lt");return t&&t.textContent.startsWith(id+" ")});if(d){d.open=true;d.scrollIntoView({behavior:"smooth",block:"start"});}},80);}
+function wlVs(x){const p=x.px||{};
+  if(p.r==null)return '<span class="faint">'+(p.note||"No price")+'</span>';
+  if(p.graded)return '<span class="wlg '+(p.adj>=0?"up":"dn")+'">'+wlPct(p.adj)+'</span>';
+  if(x.stance==="two"||x.stance==="monitor")return '<span class="faint" title="Two-sided and Monitor names are never graded">not graded</span>';
+  if(x.status==="retired")return '<span class="faint">retired before grading</span>';
+  return '<span class="faint" title="Graded after 90 days on the list">day '+p.days+' of 90</span>';}
+function wlRow(x,max){
+  const st=WL_ST[x.stance]||["–","#93a1b3"],p=x.px||{};
+  const d=el("details","wlrow"+(x.status==="retired"?" ret":""));
+  const mv=x.status==="retired"?"":x.isNew?'<span class="wlnew">NEW</span>':x.delta>0?'<span class="wlup">▲'+x.delta+'</span>':x.delta<0?'<span class="wldn">▼'+(-x.delta)+'</span>':"";
+  const s=el("summary","wlgrid",
+   '<span class="wlrk">'+(x.rank||"–")+mv+'</span>'+
+   '<span class="wlnm"><b>'+x.tkr+'</b> <span class="faint">'+x.name+'</span>'+(x.status==="fading"?' <span class="wlfade" title="No new mention in '+x.quietDays+' days; retires at 90">FADING</span>':"")+(x.leanFlag?' <span class="wlflag" title="'+x.leanFlag+'">⚑</span>':"")+'</span>'+
+   '<span><span class="wlst" style="color:'+st[1]+';border-color:'+st[1]+'66">'+st[0]+'</span></span>'+
+   '<span class="wlsc" title="Watch score '+x.score+'"><span class="wlbar"><span style="width:'+Math.max(3,Math.round(100*x.score/max))+'%"></span></span><span class="wlsn">'+x.score.toFixed(1)+'</span></span>'+
+   '<span class="wlc">'+(x.lastMention?wlD(x.lastMention):"–")+'</span>'+
+   '<span class="wlc">'+wlD(x.since)+'</span>'+
+   '<span class="wlc wlsince">'+(p.r==null?'<span class="faint">–</span>':'<span>'+wlPct(p.r)+'</span><span class="faint"> · '+x.bench+' '+wlPct(p.rb)+'</span>')+'</span>'+
+   '<span class="wlvs">'+wlVs(x)+'</span>');
+  d.appendChild(s);
+  const b=el("div","wlbody");const L=el("div"),R=el("div");
+  L.appendChild(el("div","wlh","Why it's on the list"));L.appendChild(el("div","wlt",bulletHTML(x.why||"–")));
+  if(x.watch){L.appendChild(el("div","wlh","What to watch"));L.appendChild(el("div","wlt",bulletHTML(x.watch)));}
+  if(x.leanFlag)L.appendChild(el("div","wlwarn","⚑ "+x.leanFlag));
+  if(x.retiredOn)L.appendChild(el("div","wlwarn","Retired "+wlD(x.retiredOn)+": "+(x.retiredReason||"no new mention for 90 days")+". Re-enters automatically if the sources raise it again."));
+  if(x.themes&&x.themes.length){const tg=el("div","ctags");x.themes.forEach(t=>{const pl=el("span","pill link",t.name.slice(0,46));pl.title="Open theme";pl.onclick=()=>openTheme(t.id);tg.appendChild(pl);});L.appendChild(el("div","wlh","Linked themes"));L.appendChild(tg);}
+  if(x.history&&x.history.length)L.appendChild(el("div","wlhist",'<span class="wlh">History </span>'+x.history.map(h=>wlD(h.date)+" · "+h.label).join(" → ")));
+  const pr=[];
+  if(p.r!=null){pr.push("<b>"+x.tkr+"</b>: "+wlPx(p.sincePx)+" on "+wlD(p.sinceDate)+(p.firstAfter?" (first trade)":"")+" → "+wlPx(p.last)+" ("+wlD(p.lastDate)+"), "+wlPct(p.r));
+    if(p.rb!=null)pr.push("<b>"+x.benchName+"</b>: "+wlPx(p.benchSince)+" → "+wlPx(p.benchLast)+", "+wlPct(p.rb));
+    if(p.rel!=null)pr.push("Versus its sector: "+wlPct(p.rel)+(x.stance==="bear"?" (a Bearish stance wins when the name lags, so the graded figure is "+wlPct(p.adj)+")":""));
+    pr.push(p.graded?"Graded: on the list "+p.days+" days":(x.stance==="two"||x.stance==="monitor")?"Not graded: "+(x.stance==="two"?"sources disagree on direction":"a risk to watch, not a directional view"):"Not graded yet: grading starts after 90 days ("+(p.gradeIn||0)+" to go)");}
+  else pr.push(p.note||"No price data");
+  R.appendChild(el("div","wlh","Performance since added"));R.appendChild(el("div","wlt",'<ul class="mlist libul">'+pr.map(z=>"<li>"+z+"</li>").join("")+"</ul>"));
+  if(x.mentions&&x.mentions.length){R.appendChild(el("div","wlh","Recent mentions ("+x.mentionCount+" total, "+x.houses+" sources)"));const ul=el("ul","mlist libul wlmen");
+    x.mentions.forEach(m=>{const li=el("li","",'<a class="wllib">'+m.id+'</a> · '+wlD(m.date)+" · "+m.who+(m.s==null?"":m.s>0?' <span class="wlup">leans +</span>':m.s<0?' <span class="wldn">leans −</span>':' <span class="faint">neutral</span>'));li.querySelector("a").onclick=()=>openLib(m.id);ul.appendChild(li);});R.appendChild(ul);}
+  b.appendChild(L);b.appendChild(R);d.appendChild(b);return d;}
 function renderWatchlist(){
-  const v=$("#v-watchlist");v.innerHTML="";
-  v.appendChild(el("p","lead","Companies mapped to themes, each with an <b>eyes-wide-open</b> label: cap tier, liquidity, crowdedness. Full spectrum, so you can size and pick with clear risk context."));
-  const warn=el("div","blind");warn.innerHTML="<h4>⚠ Read before using</h4><span class='muted'><b>Research candidates, not recommendations.</b> Prices, valuations and positioning are <b>NOT live</b>. Verify everything. Not financial advice.</span>";v.appendChild(warn);
-  v.appendChild(el("div","legend","<span><span class='risk core'>CORE</span> liquid mega/large — easier to act</span><span><span class='risk mod'>MODERATE</span> some timing/crowding risk</span><span><span class='risk spec'>SPECULATIVE</span> small/low-liquidity/narrative</span>"));
-  DATA.watchlist.forEach(c=>{const box=el("div","wcat");box.appendChild(el("h3","",c.cat));box.appendChild(el("div","muted",bulletHTML(c.note)));const tb=el("table","wtable");tb.innerHTML="<thead><tr><th>Ticker</th><th>Name</th><th>Theme link</th><th>Eyes-wide-open</th></tr></thead>";const body=el("tbody");c.rows.forEach(r=>{const tr=el("tr");tr.appendChild(el("td","","<span class='tkr'>"+r.tkr+"</span>"));tr.appendChild(el("td","",r.name));tr.appendChild(el("td","muted",r.theme));tr.appendChild(el("td","","<span class='risk "+r.risk+"'>"+({core:'CORE',mod:'MODERATE',spec:'SPECULATIVE'})[r.risk]+"</span> <span class='faint' style='font-size:12px'>"+r.label+"</span>"));body.appendChild(tr);});tb.appendChild(body);box.appendChild(tb);v.appendChild(box);});
+  const v=$("#v-watchlist");v.innerHTML="";const W=DATA.watch;
+  if(!W){v.appendChild(el("p","lead","Watchlist data has not been built yet."));return;}
+  const S=W.summary;
+  v.appendChild(el("p","lead","<b>Watchlist.</b> One ranked list of the names our sources keep coming back to. <b>Being on the list is not a buy signal:</b> it means the sources are watching the name, and the stance says which way they lean. Names climb when different sources keep raising them, fade after "+W.rules.fade+" days without a mention and retire after "+W.rules.retire+". <span class='faint'>Prices as of "+(W.pricesAsOf||"–")+".</span>"));
+  const k=el("div","kpis");
+  const bd=(S.backdrop||[]).filter(b=>["SMH","QQQ","SPY"].includes(b.bench)).map(b=>b.bench+" "+wlPct(b.r)).join(" · ");
+  [[String(S.active+S.fading),S.active+" active · "+S.fading+" fading","Names currently on the list. Fading = no new mention in "+W.rules.fade+" days."],
+   [S.graded?S.beating+" of "+S.graded:"–",S.graded?"graded names beating their sector":"grading starts "+wlD(S.nextGrade),"Only Bullish and Bearish names are graded, against their own sector fund, after "+W.rules.grade+" days on the list. A Bearish name scores when it lags its sector."],
+   [bd||"–","sector backdrop, last 30 days","How the broad market and the main sectors moved. Context for the raw price changes below."],
+   [String(S.retired),"retired, kept with final numbers","Names with no new mention for "+W.rules.retire+" days. Never deleted; they re-enter if raised again."]]
+  .forEach(([n,l,t],i)=>{const c=el("div","kpi");c.title=t;c.appendChild(el("div","n"+(i===2?" wlbd":""),n));c.appendChild(el("div","l",l));k.appendChild(c);});v.appendChild(k);
+  const bar=el("div","calbar");
+  [["on","On the list"],["fading","Fading"],["retired","Retired"],["all","All"]].forEach(([key,lab])=>{const b=el("button","calf"+(wlStatus===key?" on":""),lab);b.onclick=()=>{wlStatus=key;renderWatchlist();};bar.appendChild(b);});
+  bar.appendChild(el("span","wlsep",""));
+  [["all","Any stance"]].concat(Object.entries(WL_ST).map(([key,v])=>[key,v[0]])).forEach(([key,lab])=>{const b=el("button","calf"+(wlStance===key?" on":""),lab);b.onclick=()=>{wlStance=key;renderWatchlist();};bar.appendChild(b);});
+  const q=el("input","tksearch wlq");q.placeholder="Search ticker or name";q.value=wlQ;q.oninput=()=>{wlQ=q.value;const pos=q.selectionStart;renderWatchlist();const n=$(".wlq");if(n){n.focus();n.setSelectionRange(pos,pos);}};bar.appendChild(q);v.appendChild(bar);
+  const f=W.items.filter(x=>(wlStatus==="all"||(wlStatus==="on"?x.status!=="retired":x.status===wlStatus))&&(wlStance==="all"||x.stance===wlStance)&&(!wlQ||(x.tkr+" "+x.name).toLowerCase().includes(wlQ.toLowerCase())));
+  const max=Math.max(1,...W.items.map(x=>x.score));
+  v.appendChild(el("div","wlgrid wlhead","<span>#</span><span>Name</span><span>Stance</span><span>Watch score</span><span>Last mention</span><span>Added</span><span>Since added · sector</span><span>vs sector</span>"));
+  if(!f.length)v.appendChild(el("div","panel muted","Nothing matches these filters."));
+  f.forEach(x=>v.appendChild(wlRow(x,max)));
+  if(wlStatus==="on"&&S.retired)v.appendChild(el("div","calmore wlmore","Show the "+S.retired+" retired names →")).onclick=()=>{wlStatus="retired";renderWatchlist();window.scrollTo(0,0);};
+  if(W.candidates&&W.candidates.length&&wlStatus!=="retired"){const c=el("div","panel wlcand");c.appendChild(el("h3","","Sources are raising these (not on the list yet)"));
+    c.appendChild(el("div","faint","Picked up automatically when at least 3 different sources tag a ticker in 30 days with a clear lean. Reviewed on Sundays: added to the list or dismissed."));
+    const ul=el("ul","mlist libul");W.candidates.forEach(x=>{const li=el("li","","<b>"+x.tkr+"</b> · "+x.houses+" sources in 30 days · leaning "+(x.lean==="bull"?'<span class="wlup">positive</span>':'<span class="wldn">negative</span>')+" ("+(x.net>0?"+":"")+x.net+") · ");x.ids.forEach((id,i)=>{const a=el("a","wllib",id);a.onclick=()=>openLib(id);li.appendChild(a);if(i<x.ids.length-1)li.appendChild(document.createTextNode(", "));});ul.appendChild(li);});c.appendChild(ul);v.appendChild(c);}
+  if(W.movedToThemes&&W.movedToThemes.length){const d=el("details","calpast");d.appendChild(el("summary","","Ideas without a ticker ("+W.movedToThemes.length+") now live in Themes"));const ul=el("ul","mlist libul");
+    W.movedToThemes.forEach(m=>{const li=el("li","",m.idea+" <span class='faint'>(flagged in "+m.from+")</span> → ");const a=el("a","wllib",m.themeName);a.onclick=()=>openTheme(m.theme);li.appendChild(a);ul.appendChild(li);});d.appendChild(ul);v.appendChild(d);}
+  const h=el("details","calpast wlhow");h.appendChild(el("summary","","How the watchlist works"));h.appendChild(el("div","panel",'<ul class="mlist libul">'+[
+    "<b>One row per name.</b> Every time a batch or a source flags a name again, it updates the same row; the History line shows each time it came up.",
+    "<b>Watch score:</b> every library card that mentions the name counts, weighted by how recent it is (a "+W.rules.half+"-day half-life, the same as the rest of the site). Each source counts once however often it repeats itself, sources with better prediction records count a little more, and names tied to high-conviction themes get a modest lift.",
+    "<b>Falling off:</b> no new mention for "+W.rules.fade+" days and a name shows as Fading; at "+W.rules.retire+" days it retires to the archive with its final numbers. Nothing is deleted, and a retired name re-enters if the sources raise it again. A name can also be retired early at the Sunday review if its thesis breaks.",
+    "<b>Getting on:</b> tickers that at least 3 different sources tag in 30 days with a clear lean appear under 'Sources are raising these', and the Sunday review adds or dismisses them.",
+    "<b>Stance</b> is the sources' lean, not a recommendation: Bullish, Bearish, Two-sided (they disagree) or Monitor (a risk to watch). The ⚑ flag means recent sources lean against the stance, so it gets reviewed.",
+    "<b>Grading:</b> only Bullish and Bearish names are graded, and only after "+W.rules.grade+" days on the list, against their own sector fund (semis vs SMH, software vs IGV, megacaps vs QQQ and so on). A Bullish name that falls 10% while its sector falls 20% scores +10. A Bearish name scores when it lags. Market and sector timing belong to Themes and Predictions, not to the watchlist.",
+    "<b>Added</b> is the date the sources started watching the name, not an entry point. Prices come from Yahoo Finance, refreshed by the daily scan."].map(z=>"<li>"+z+"</li>").join("")+"</ul>"));v.appendChild(h);
 }
 
 /* ---- Library ---- */
