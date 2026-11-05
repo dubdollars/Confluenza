@@ -281,6 +281,7 @@ table.pred th{color:var(--faint);font-weight:600;font-size:12px;text-transform:u
 .calpast{margin:12px 0 4px}.calpast>summary{cursor:pointer;color:var(--dim);font-size:13px;margin-bottom:8px}
 .calmore{color:var(--accent);font-size:13px;font-weight:600;cursor:pointer;margin-top:10px;display:inline-block}.calmore:hover{text-decoration:underline}
 @media(max-width:600px){.calrow{grid-template-columns:1fr;gap:4px}.calf.hb{margin-left:0}}
+.libul{margin:4px 0 0 18px}.libul li{margin:4px 0;line-height:1.5}.botline .libul{margin-top:6px}
 </style>
 </head>
 <body>
@@ -16478,14 +16479,35 @@ function renderWatchlist(){
 }
 
 /* ---- Library ---- */
+function bulletize(text){
+  if(Array.isArray(text))return text;
+  const s=String(text||"").trim();if(!s)return [];
+  const ABBR=/\b(?:U\.S|U\.K|U\.N|e\.g|i\.e|vs|Inc|Corp|Co|Ltd|Dr|Mr|Ms|St|No|approx|Jan|Feb|Mar|Apr|Aug|Sept|Sep|Oct|Nov|Dec|Jr|Sr|Univ|Gov|Sen|Rep|est|al)\.$/;
+  const out=[];let cur="",depth=0;
+  for(let i=0;i<s.length;i++){
+    const ch=s[i];cur+=ch;
+    if(ch==="("||ch==="[")depth++;else if((ch===")"||ch==="]")&&depth>0)depth--;
+    if(depth>0)continue;
+    if(ch===";"&&s[i+1]===" "){out.push(cur.slice(0,-1).trim());cur="";i++;continue;}
+    if(ch==="."||ch==="!"||ch==="?"){
+      let j=i+1;while(j<s.length&&/['"’”)]/.test(s[j])){cur+=s[j];j++;}
+      if(s[j]===" "&&j+1<s.length&&/[A-Z0-9"'(~$‘“]/.test(s[j+1])&&!ABBR.test(cur.trim().replace(/['"’”)]+$/,""))&&!/\b[A-Z]\.$/.test(cur.trim())){out.push(cur.trim());cur="";i=j;continue;}
+      i=j-1;
+    }
+  }
+  if(cur.trim())out.push(cur.trim());
+  const merged=[];out.forEach(p=>{if(merged.length&&p.length<22)merged[merged.length-1]+="; "+p;else merged.push(p);});
+  return merged.map(p=>{p=p.charAt(0).toUpperCase()+p.slice(1);return /[^.]\.$/.test(p)&&!ABBR.test(p)?p.slice(0,-1):p;});
+}
+function bulletHTML(x){const a=bulletize(x);return a.length>1?'<ul class="mlist libul">'+a.map(p=>"<li>"+p+"</li>").join("")+"</ul>":(a[0]||"");}
 function libCard(t){
   const d=el("details","libcard");
   const sum=el("summary");sum.innerHTML=`<span class="lt">${t.id} · ${t.title}</span><span class="lm">${t.date} · ${t.type}</span>`;d.appendChild(sum);
   const body=el("div","libbody");
   if(t.bias)body.appendChild(el("div","bias","<b>Bias flag:</b> "+t.bias));
   const secs=[["Macro trends",t.macro],["Primary focus / message",t.message],["Investment opportunities",t.opps],["Key risks",t.risks]];
-  secs.forEach(([h,b])=>{if(b){const s=el("div","exsec");s.appendChild(el("div","h",h));s.appendChild(el("div","b",b));body.appendChild(s);}});
-  if(t.bottom)body.appendChild(el("div","botline","<b>Bottom line:</b> "+t.bottom));
+  secs.forEach(([h,b])=>{if(b){const s=el("div","exsec");s.appendChild(el("div","h",h));s.appendChild(el("div","b",bulletHTML(b)));body.appendChild(s);}});
+  if(t.bottom){const bb=bulletize(t.bottom);body.appendChild(el("div","botline","<b>Bottom line:</b>"+(bb.length>1?bulletHTML(t.bottom):" "+bb[0])));}
   d.appendChild(body);return d;
 }
 function renderLibrary(){
