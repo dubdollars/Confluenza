@@ -26,10 +26,12 @@ html{scroll-padding-top:calc(var(--hdrH,0px) + 8px)}
 .brand h1{font-size:24px;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .brand .edition{color:var(--faint);font-size:12.5px;font-variant-numeric:tabular-nums}
 .tag{color:var(--dim);font-size:13.5px;margin-top:4px;max-width:840px}
-nav.tabs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:14px}
+nav.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+nav.tabs button{flex:1 1 calc((100% - 48px) / 7 - 1px)}
+@media(min-width:1001px){nav.tabs button:nth-child(-n+6){flex-basis:calc((100% - 40px) / 6 - 1px)}}
 nav.tabs button{background:var(--panel);color:var(--dim);border:1px solid var(--line);padding:11px 10px;border-radius:9px;cursor:pointer;font-size:14.5px;font-weight:600;position:relative;text-align:center;white-space:nowrap}
-@media(max-width:900px){nav.tabs{grid-template-columns:repeat(4,1fr)}}
-@media(max-width:600px){nav.tabs{grid-template-columns:repeat(3,1fr)}nav.tabs button{font-size:13px;padding:9px 6px;white-space:normal}header.top{position:static}}
+@media(max-width:1000px){nav.tabs button{flex-basis:calc((100% - 32px) / 5 - 1px)}}
+@media(max-width:600px){nav.tabs button{flex-basis:calc((100% - 16px) / 3 - 1px)}nav.tabs button{font-size:13px;padding:9px 6px;white-space:normal}header.top{position:static}}
 /* frozen column headers: stick just below the sticky top header */
 table.pred thead th,.wtable thead th{position:sticky;top:var(--hdrH,0px);background:var(--bg);z-index:5;box-shadow:inset 0 -1px 0 var(--line)}
 .panel table.pred thead th{background:var(--panel)}
@@ -262,6 +264,23 @@ table.pred th{color:var(--faint);font-weight:600;font-size:12px;text-transform:u
 .hl-pts{margin:6px 0 0 22px;padding:0}.hl-pts>li{margin:14px 0 0;padding-left:2px}.hl-pts>li::marker{color:var(--accent);font-weight:700}
 .hl-h{font-weight:650;color:var(--ink)}.hl-pts .mlist{margin:5px 0 0 18px;list-style:disc}.hl-pts .mlist li{margin:4px 0;color:var(--dim)}
 .deltacard .why .mlist{margin:5px 0 0 18px}.deltacard .why .mlist li{margin:3px 0;line-height:1.5}
+/* 2026-11-05: Calendar tab */
+.calbar{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 6px}
+.calf{background:var(--panel);color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:12.5px;font-weight:600;cursor:pointer}
+.calf span{color:var(--faint);font-weight:500;margin-left:2px}.calf:hover{color:var(--ink);border-color:#38465a}
+.calf.on{background:var(--accent);color:#0b0e13;border-color:var(--accent)}.calf.on span{color:#0b0e13}.calf.hb{margin-left:auto}
+.calweek{display:flex;flex-direction:column;gap:6px}
+.calrow{display:grid;grid-template-columns:132px 1fr;gap:14px;align-items:start;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--line);border-radius:9px;padding:9px 13px}
+.calrow.today{box-shadow:0 0 0 1px var(--accent) inset}.calrow.past{opacity:.85}
+.cdate{font-weight:650;font-size:13px;font-variant-numeric:tabular-nums;color:var(--ink)}
+.ctime{display:block;font-weight:500;font-size:11.5px;color:var(--faint);margin-top:1px}
+.cevent{font-size:13.5px;color:var(--dim);line-height:1.5}.calrow.hi .cevent{color:var(--ink);font-weight:600}
+.ccat{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;border:1px solid;border-radius:5px;padding:0 6px;margin-right:8px;vertical-align:1px}
+.cest{font-size:10.5px;color:var(--flat);border:1px dashed #6b5a2f;border-radius:5px;padding:0 5px;font-weight:600}
+.cres{font-size:12.5px;color:var(--up);margin-top:3px}.csrc{font-size:11px;color:var(--faint);margin-left:4px;text-decoration:none}.csrc:hover{color:var(--accent);text-decoration:underline}.ctags{margin-top:4px}
+.calpast{margin:12px 0 4px}.calpast>summary{cursor:pointer;color:var(--dim);font-size:13px;margin-bottom:8px}
+.calmore{color:var(--accent);font-size:13px;font-weight:600;cursor:pointer;margin-top:10px;display:inline-block}.calmore:hover{text-decoration:underline}
+@media(max-width:600px){.calrow{grid-template-columns:1fr;gap:4px}.calf.hb{margin-left:0}}
 </style>
 </head>
 <body>
@@ -278,6 +297,7 @@ table.pred th{color:var(--faint);font-weight:600;font-size:12px;text-transform:u
 <div class="wrap">
   <section class="view active" id="v-new"></section>
   <section class="view" id="v-macro"></section>
+  <section class="view" id="v-calendar"></section>
   <section class="view" id="v-velocity"></section>
   <section class="view" id="v-themes"></section>
   <section class="view" id="v-timeline"></section>
@@ -12664,76 +12684,7 @@ const DATA = {
   },
   {
    "per": "NEXT 6 WEEKS",
-   "items": [
-    {
-     "t": "2026-11-04 - Treasury Quarterly Refunding policy statement + TBAC minutes (8:30 ET): coupon-size guidance, buyback sizes",
-     "src": "Macro Pulse"
-    },
-    {
-     "t": "2026-11-05 - Weekly initial jobless claims (w/e Oct 31)",
-     "src": "Macro Pulse"
-    },
-    {
-     "t": "2026-11-06 - October jobs report (BLS Employment Situation, 8:30 ET)",
-     "src": "Macro Pulse"
-    },
-    {
-     "t": "2026-11-10 - October CPI (8:30 ET)",
-     "src": "Macro Pulse"
-    },
-    {
-     "t": "2026-11-10 - Expiry of 178 remaining Section 301 China tariff exclusions (some sources say Nov 9); 100% Section 301 tariffs on China ship-to-shore cranes/chassis begin",
-     "src": "Macro Pulse"
-    },
-    {
-     "t": "2026-11-10 - Earliest possible start of the Anthropic IPO roadshow (Nasdaq: ANT); price range expected in an S-1/A before the roadshow",
-     "src": "Macro Pulse"
-    },
-    {
-     "t": "2026-11-10 - Russia-Ukraine peace talks in Abu Dhabi (week of Nov 9; confirmed by Russia Nov 3, exact date TBD)",
-     "src": "Macro Pulse"
-    },
-    {
-     "t": "2026-11-17 - Nvidia fiscal Q3 2027 earnings, after the close (guide $108B +/-2%)",
-     "src": "Macro Pulse"
-    },
-    {
-     "t": "2026-11-25 - October PCE / personal income & outlays (BEA, 8:30 ET)",
-     "src": "Macro Pulse"
-    },
-    {
-     "t": "2026-11-28 - Taiwan 9-in-1 local elections",
-     "src": "Macro Pulse"
-    },
-    {
-     "t": "2026-11-29 - Full OPEC+ meeting: 2027 production quotas",
-     "src": "Macro Pulse"
-    },
-    {
-     "t": "2026-12-02 - PJM one-time reliability procurement results (up to $20B, cap $555/MW-day)",
-     "src": "Macro Pulse"
-    },
-    {
-     "t": "2026-12-04 - November jobs report (expected first-Friday date; not confirmed in sources)",
-     "src": "Macro Pulse"
-    },
-    {
-     "t": "2026-12-09 - FOMC decision + SEP/dot plot (2:00 ET); ~75-79% hike odds as of Nov 3",
-     "src": "Macro Pulse"
-    },
-    {
-     "t": "2026-12-10 - November CPI (8:30 ET)",
-     "src": "Macro Pulse"
-    },
-    {
-     "t": "2026-12-11 - Continuing resolution expires: government shutdown deadline (NFIP also expires)",
-     "src": "Macro Pulse"
-    },
-    {
-     "t": "2026-12-23 - November PCE / personal income & outlays (BEA)",
-     "src": "Macro Pulse"
-    }
-   ]
+   "items": []
   },
   {
    "per": "REST OF 2026",
@@ -15217,76 +15168,6 @@ const DATA = {
     ]
    }
   ],
-  "calendar": [
-   {
-    "date": "2026-11-04",
-    "event": "Treasury Quarterly Refunding policy statement + TBAC minutes (8:30 ET): coupon-size guidance, buyback sizes"
-   },
-   {
-    "date": "2026-11-05",
-    "event": "Weekly initial jobless claims (w/e Oct 31)"
-   },
-   {
-    "date": "2026-11-06",
-    "event": "October jobs report (BLS Employment Situation, 8:30 ET)"
-   },
-   {
-    "date": "2026-11-10",
-    "event": "October CPI (8:30 ET)"
-   },
-   {
-    "date": "2026-11-10",
-    "event": "Expiry of 178 remaining Section 301 China tariff exclusions (some sources say Nov 9); 100% Section 301 tariffs on China ship-to-shore cranes/chassis begin"
-   },
-   {
-    "date": "2026-11-10",
-    "event": "Earliest possible start of the Anthropic IPO roadshow (Nasdaq: ANT); price range expected in an S-1/A before the roadshow"
-   },
-   {
-    "date": "2026-11-10",
-    "event": "Russia-Ukraine peace talks in Abu Dhabi (week of Nov 9; confirmed by Russia Nov 3, exact date TBD)"
-   },
-   {
-    "date": "2026-11-17",
-    "event": "Nvidia fiscal Q3 2027 earnings, after the close (guide $108B +/-2%)"
-   },
-   {
-    "date": "2026-11-25",
-    "event": "October PCE / personal income & outlays (BEA, 8:30 ET)"
-   },
-   {
-    "date": "2026-11-28",
-    "event": "Taiwan 9-in-1 local elections"
-   },
-   {
-    "date": "2026-11-29",
-    "event": "Full OPEC+ meeting: 2027 production quotas"
-   },
-   {
-    "date": "2026-12-02",
-    "event": "PJM one-time reliability procurement results (up to $20B, cap $555/MW-day)"
-   },
-   {
-    "date": "2026-12-04",
-    "event": "November jobs report (expected first-Friday date; not confirmed in sources)"
-   },
-   {
-    "date": "2026-12-09",
-    "event": "FOMC decision + SEP/dot plot (2:00 ET); ~75-79% hike odds as of Nov 3"
-   },
-   {
-    "date": "2026-12-10",
-    "event": "November CPI (8:30 ET)"
-   },
-   {
-    "date": "2026-12-11",
-    "event": "Continuing resolution expires: government shutdown deadline (NFIP also expires)"
-   },
-   {
-    "date": "2026-12-23",
-    "event": "November PCE / personal income & outlays (BEA)"
-   }
-  ],
   "sources": [
    "https://www.foxbusiness.com/markets/us-stock-futures-tumble-democrats-score-key-midterm-election-wins",
    "https://www.cnbc.com/2026/11/03/stock-market-today-live-updates.html",
@@ -15370,7 +15251,1073 @@ const DATA = {
    "https://www.trmlabs.com/resources/blog/north-korea-steals-usd-6-36-billion-from-binance-in-the-largest-hack-in-history",
    "https://www.cnbc.com/2026/10/29/circle-tether-freeze-funds-impacted-by-potential-binance-security-issue.html"
   ]
- }
+ },
+ "calendar": [
+  {
+   "date": "2026-11-04",
+   "time": "",
+   "cat": "policy",
+   "event": "Treasury quarterly refunding statement: $125B, sizes unchanged; next Feb 3, 2027",
+   "tickers": [],
+   "themes": [
+    "ratesmacro"
+   ],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://home.treasury.gov/news/press-releases/sb0678/"
+  },
+  {
+   "date": "2026-11-05",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "Weekly initial jobless claims",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.financecalendar.com/weekly-jobless-claims/"
+  },
+  {
+   "date": "2026-11-05",
+   "time": "AMC",
+   "cat": "earnings",
+   "event": "IREN fiscal Q1 FY27 results; call 5:00 ET",
+   "tickers": [
+    "IREN"
+   ],
+   "themes": [
+    "neocloudcredit"
+   ],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://irisenergy.gcs-web.com/news-releases/news-release-details/iren-release-q1-fy27-results-november-5-2026"
+  },
+  {
+   "date": "2026-11-06",
+   "time": "12:15 ET",
+   "cat": "fed",
+   "event": "Fed Vice Chair for Supervision Bowman discussion, Univ. of Mississippi symposium",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.federalreserve.gov/newsevents/2026-november.htm"
+  },
+  {
+   "date": "2026-11-06",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "October jobs report (Employment Situation)",
+   "tickers": [],
+   "themes": [
+    "ratesmacro"
+   ],
+   "imp": "high",
+   "confirmed": true,
+   "src": "https://www.bls.gov/schedule/news_release/empsit.htm?id=4127"
+  },
+  {
+   "date": "2026-11-06",
+   "time": "10:00 ET",
+   "cat": "data",
+   "event": "UMich consumer sentiment, preliminary November",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://thriveinmarkets.com/market-insights/week-ahead-2026-11-02/"
+  },
+  {
+   "date": "2026-11-09",
+   "time": "1:00 ET",
+   "cat": "data",
+   "event": "Treasury 3-year note auction, $58B (refunding)",
+   "tickers": [],
+   "themes": [
+    "ratesmacro"
+   ],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://home.treasury.gov/news/press-releases/sb0678/"
+  },
+  {
+   "date": "2026-11-09",
+   "time": "11:59 PM ET",
+   "cat": "policy",
+   "event": "178 Section 301 China tariff exclusions expire (entries from Nov 10 lose them); no extension yet",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.lighthill.law/alerts/2026-11-02-china-section-301-exclusions-set-to-expire-november"
+  },
+  {
+   "date": "2026-11-09",
+   "time": "",
+   "cat": "geo",
+   "event": "COP31 climate conference opens in Antalya, Turkey (runs to Nov 20)",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://en.wikipedia.org/wiki/2026_United_Nations_Climate_Change_Conference"
+  },
+  {
+   "date": "2026-11-10",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "October CPI",
+   "tickers": [],
+   "themes": [
+    "ratesmacro"
+   ],
+   "imp": "high",
+   "confirmed": true,
+   "src": "https://www.bls.gov/schedule/news_release/cpi.htm"
+  },
+  {
+   "date": "2026-11-10",
+   "time": "",
+   "cat": "data",
+   "event": "TSMC October monthly revenue (expected date)",
+   "tickers": [
+    "TSM"
+   ],
+   "themes": [
+    "taiwan"
+   ],
+   "imp": "med",
+   "confirmed": false,
+   "src": "https://www.catacal.com/catalyst/tsmc-monthly-sales-report-for-october-2026"
+  },
+  {
+   "date": "2026-11-10",
+   "time": "1:00 ET",
+   "cat": "data",
+   "event": "Treasury 10-year note auction, $42B (refunding)",
+   "tickers": [],
+   "themes": [
+    "ratesmacro"
+   ],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://home.treasury.gov/news/press-releases/sb0678/"
+  },
+  {
+   "date": "2026-11-10",
+   "time": "AMC",
+   "cat": "earnings",
+   "event": "CoreWeave Q3 2026 results; call 5:00 ET",
+   "tickers": [
+    "CRWV"
+   ],
+   "themes": [
+    "neocloudcredit"
+   ],
+   "imp": "high",
+   "confirmed": true,
+   "src": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Announces-Date-of-Third-Quarter-2026-Financial-Results-and-Conference-Call/default.aspx"
+  },
+  {
+   "date": "2026-11-10",
+   "time": "",
+   "cat": "geo",
+   "event": "US-Russia-Ukraine trilateral talks in Abu Dhabi, Nov 10-11",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://meduza.io/en/news/2026/11/03/trilateral-talks-between-russia-ukraine-and-us-set-for-november-10-11-in-abu-dhabi"
+  },
+  {
+   "date": "2026-11-10",
+   "time": "",
+   "cat": "ipo",
+   "event": "Earliest possible Anthropic (ANT, Nasdaq) roadshow start; not announced",
+   "tickers": [
+    "ANT"
+   ],
+   "themes": [
+    "dilution"
+   ],
+   "imp": "med",
+   "confirmed": false,
+   "src": "https://finance.yahoo.com/markets/article/when-is-the-anthropic-ipo-the-stock-could-start-trading-as-soon-as-nov-16-132727631.html"
+  },
+  {
+   "date": "2026-11-11",
+   "time": "",
+   "cat": "geo",
+   "event": "COP31 World Leaders' Summit, Nov 11-12",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://en.wikipedia.org/wiki/2026_United_Nations_Climate_Change_Conference"
+  },
+  {
+   "date": "2026-11-11",
+   "time": "",
+   "cat": "markets",
+   "event": "Veterans Day: US bond market closed (SIFMA), stock market open",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://fedratecalc.com/is-the-stock-market-open-on-veterans-day/"
+  },
+  {
+   "date": "2026-11-11",
+   "time": "",
+   "cat": "markets",
+   "event": "MSCI November index review announcement",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.msci.com/eqb/pressreleases/archive/ir_dates.pdf"
+  },
+  {
+   "date": "2026-11-12",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "Weekly initial jobless claims",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.financecalendar.com/weekly-jobless-claims/"
+  },
+  {
+   "date": "2026-11-12",
+   "time": "1:00 ET",
+   "cat": "data",
+   "event": "Treasury 30-year bond auction, $25B (refunding)",
+   "tickers": [],
+   "themes": [
+    "ratesmacro"
+   ],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://home.treasury.gov/news/press-releases/sb0678/"
+  },
+  {
+   "date": "2026-11-12",
+   "time": "BMO",
+   "cat": "earnings",
+   "event": "Nebius Q3 2026 results; call 8:00 ET",
+   "tickers": [
+    "NBIS"
+   ],
+   "themes": [
+    "neocloudcredit"
+   ],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://nebius.com/newsroom/nebius-group-announces-date-of-third-quarter-2026-results-and-conference-call"
+  },
+  {
+   "date": "2026-11-12",
+   "time": "AMC",
+   "cat": "earnings",
+   "event": "Applied Materials FQ4 2026 results; call 4:30 ET",
+   "tickers": [
+    "AMAT"
+   ],
+   "themes": [
+    "semiscyc"
+   ],
+   "imp": "high",
+   "confirmed": true,
+   "src": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-report-fourth-quarter-and-fiscal-2026-results"
+  },
+  {
+   "date": "2026-11-12",
+   "time": "AMC",
+   "cat": "earnings",
+   "event": "Cisco FQ1 2027 results; call 4:30 ET",
+   "tickers": [
+    "CSCO"
+   ],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-schedules-conference-call-for-q1-fiscal-year-2027-financial-results.html"
+  },
+  {
+   "date": "2026-11-13",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "October PPI",
+   "tickers": [],
+   "themes": [
+    "ratesmacro"
+   ],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.bls.gov/schedule/news_release/ppi.htm"
+  },
+  {
+   "date": "2026-11-13",
+   "time": "",
+   "cat": "ipo",
+   "event": "Earliest possible Anthropic IPO pricing; reports target debut week of Nov 16",
+   "tickers": [
+    "ANT"
+   ],
+   "themes": [
+    "dilution"
+   ],
+   "imp": "high",
+   "confirmed": false,
+   "src": "https://finance.yahoo.com/markets/article/when-is-the-anthropic-ipo-the-stock-could-start-trading-as-soon-as-nov-16-132727631.html"
+  },
+  {
+   "date": "2026-11-16",
+   "time": "",
+   "cat": "ipo",
+   "event": "Earliest possible Anthropic first trade on Nasdaq; date not announced",
+   "tickers": [
+    "ANT"
+   ],
+   "themes": [
+    "dilution"
+   ],
+   "imp": "high",
+   "confirmed": false,
+   "src": "https://finance.yahoo.com/markets/article/when-is-the-anthropic-ipo-the-stock-could-start-trading-as-soon-as-nov-16-132727631.html"
+  },
+  {
+   "date": "2026-11-17",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "October retail sales (advance)",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://census.gov/retail/release_schedule.html"
+  },
+  {
+   "date": "2026-11-17",
+   "time": "BMO",
+   "cat": "earnings",
+   "event": "Home Depot Q3 results; call 9:00 ET",
+   "tickers": [
+    "HD"
+   ],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://ir.homedepot.com/news-releases/2026/11-03-2026-130236805"
+  },
+  {
+   "date": "2026-11-17",
+   "time": "AMC",
+   "cat": "earnings",
+   "event": "Nvidia FQ3 2027 results; call 5:00 ET",
+   "tickers": [
+    "NVDA"
+   ],
+   "themes": [
+    "nvbackstop"
+   ],
+   "imp": "high",
+   "confirmed": true,
+   "src": "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873"
+  },
+  {
+   "date": "2026-11-18",
+   "time": "2:00 ET",
+   "cat": "fed",
+   "event": "FOMC minutes (Oct 27-28 meeting)",
+   "tickers": [],
+   "themes": [
+    "ratesmacro"
+   ],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.federalreserve.gov/newsevents/2026-november.htm"
+  },
+  {
+   "date": "2026-11-18",
+   "time": "BMO",
+   "cat": "earnings",
+   "event": "Target Q3 results; call 8:00 ET",
+   "tickers": [
+    "TGT"
+   ],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://corporate.target.com/investors/events-presentations"
+  },
+  {
+   "date": "2026-11-18",
+   "time": "BMO",
+   "cat": "earnings",
+   "event": "Lowe's Q3 results (company lists date as tentative)",
+   "tickers": [
+    "LOW"
+   ],
+   "themes": [],
+   "imp": "med",
+   "confirmed": false,
+   "src": "https://corporate.lowes.com/investors/news-events/events-presentations"
+  },
+  {
+   "date": "2026-11-18",
+   "time": "",
+   "cat": "geo",
+   "event": "APEC Economic Leaders' Meeting in Shenzhen, China, Nov 18-19",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://news.cgtn.com/news/2025-12-13/2026-APEC-meeting-to-be-held-Nov-18-19-in-Shenzhen-China-1J43L2Fb2w0/share_amp.html"
+  },
+  {
+   "date": "2026-11-19",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "Weekly initial jobless claims",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.financecalendar.com/weekly-jobless-claims/"
+  },
+  {
+   "date": "2026-11-19",
+   "time": "BMO",
+   "cat": "earnings",
+   "event": "Walmart FQ3 2027 results; call 8:00 ET",
+   "tickers": [
+    "WMT"
+   ],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://corporate.walmart.com/news/events/fy2027-q3-earnings-release"
+  },
+  {
+   "date": "2026-11-20",
+   "time": "10:00 ET",
+   "cat": "data",
+   "event": "UMich consumer sentiment, final November",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.thetrading.tools/economic-calendar/consumer-sentiment"
+  },
+  {
+   "date": "2026-11-20",
+   "time": "",
+   "cat": "markets",
+   "event": "Monthly options expiration",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.macroption.com/options-expiration-calendar/"
+  },
+  {
+   "date": "2026-11-24",
+   "time": "AMC",
+   "cat": "earnings",
+   "event": "Dell FQ3 2027 results (estimated, not company-confirmed)",
+   "tickers": [
+    "DELL"
+   ],
+   "themes": [],
+   "imp": "med",
+   "confirmed": false,
+   "src": "https://www.marketbeat.com/stocks/NYSE/DELL/earnings/"
+  },
+  {
+   "date": "2026-11-25",
+   "time": "2:00 ET",
+   "cat": "fed",
+   "event": "Fed Beige Book",
+   "tickers": [],
+   "themes": [
+    "ratesmacro"
+   ],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.federalreserve.gov/newsevents/2026-november.htm"
+  },
+  {
+   "date": "2026-11-25",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "Weekly initial jobless claims (moved to Wed for Thanksgiving)",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.financecalendar.com/weekly-jobless-claims/"
+  },
+  {
+   "date": "2026-11-25",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "Q3 GDP second estimate + corporate profits",
+   "tickers": [],
+   "themes": [
+    "ratesmacro"
+   ],
+   "imp": "high",
+   "confirmed": true,
+   "src": "https://www.bea.gov/index.php/news/schedule/full"
+  },
+  {
+   "date": "2026-11-25",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "October PCE / personal income and outlays",
+   "tickers": [],
+   "themes": [
+    "ratesmacro"
+   ],
+   "imp": "high",
+   "confirmed": true,
+   "src": "https://www.bea.gov/index.php/news/schedule/full"
+  },
+  {
+   "date": "2026-11-26",
+   "time": "",
+   "cat": "markets",
+   "event": "Thanksgiving: US stock markets closed",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://gurufocus.com/stock-market-holidays"
+  },
+  {
+   "date": "2026-11-27",
+   "time": "1:00 ET",
+   "cat": "markets",
+   "event": "Black Friday: US stocks close early at 1:00 ET",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://gurufocus.com/stock-market-holidays"
+  },
+  {
+   "date": "2026-11-28",
+   "time": "",
+   "cat": "geo",
+   "event": "Taiwan nine-in-one local elections",
+   "tickers": [],
+   "themes": [
+    "taiwan"
+   ],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://en.wikipedia.org/wiki/2026_Taiwanese_local_elections"
+  },
+  {
+   "date": "2026-11-29",
+   "time": "",
+   "cat": "geo",
+   "event": "OPEC+ meeting (7-country group); 2027 quotas expected on agenda",
+   "tickers": [],
+   "themes": [
+    "energy"
+   ],
+   "imp": "high",
+   "confirmed": true,
+   "src": "https://opec.org/pr-detail/2033620-1-november-2026.html"
+  },
+  {
+   "date": "2026-11-30",
+   "time": "",
+   "cat": "markets",
+   "event": "MSCI November review changes take effect at close (effective Dec 1)",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.msci.com/eqb/pressreleases/archive/ir_dates.pdf"
+  },
+  {
+   "date": "2026-12-01",
+   "time": "10:00 ET",
+   "cat": "data",
+   "event": "ISM manufacturing PMI, November (rule-based date, not verified on ISM site)",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": false,
+   "src": "https://therighttrader.com/economic-calendar/ism-manufacturing"
+  },
+  {
+   "date": "2026-12-01",
+   "time": "10:00 ET",
+   "cat": "data",
+   "event": "JOLTS job openings, October",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.bls.gov/schedule/2026/12_sched_list.htm"
+  },
+  {
+   "date": "2026-12-01",
+   "time": "AMC",
+   "cat": "earnings",
+   "event": "Marvell FQ3 2027 results (estimated, not company-confirmed)",
+   "tickers": [
+    "MRVL"
+   ],
+   "themes": [
+    "merchantsilicon"
+   ],
+   "imp": "med",
+   "confirmed": false,
+   "src": "https://www.marketbeat.com/stocks/NASDAQ/MRVL/earnings/"
+  },
+  {
+   "date": "2026-12-02",
+   "time": "AMC",
+   "cat": "earnings",
+   "event": "Salesforce FQ3 2027 results (estimated, not company-confirmed)",
+   "tickers": [
+    "CRM"
+   ],
+   "themes": [
+    "software"
+   ],
+   "imp": "med",
+   "confirmed": false,
+   "src": "https://www.marketbeat.com/earnings/reports/2026-12-2-salesforcecom-inc-stock/"
+  },
+  {
+   "date": "2026-12-02",
+   "time": "AMC",
+   "cat": "earnings",
+   "event": "Snowflake FQ3 2027 results; call 5:00 ET",
+   "tickers": [
+    "SNOW"
+   ],
+   "themes": [
+    "software"
+   ],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.snowflake.com/en/news/press-releases/fy27-q3-earnings-date-announcement/"
+  },
+  {
+   "date": "2026-12-03",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "Weekly initial jobless claims",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.financecalendar.com/weekly-jobless-claims/"
+  },
+  {
+   "date": "2026-12-03",
+   "time": "10:00 ET",
+   "cat": "data",
+   "event": "ISM services PMI, November (rule-based date, not verified on ISM site)",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": false,
+   "src": "https://therighttrader.com/economic-calendar/ism-services"
+  },
+  {
+   "date": "2026-12-04",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "November jobs report (Employment Situation)",
+   "tickers": [],
+   "themes": [
+    "ratesmacro"
+   ],
+   "imp": "high",
+   "confirmed": true,
+   "src": "https://www.bls.gov/schedule/news_release/empsit.htm?id=4127"
+  },
+  {
+   "date": "2026-12-04",
+   "time": "10:00 ET",
+   "cat": "data",
+   "event": "UMich consumer sentiment, preliminary December (single third-party source)",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": false,
+   "src": "https://www.financecalendar.com/?p=1345"
+  },
+  {
+   "date": "2026-12-04",
+   "time": "",
+   "cat": "markets",
+   "event": "S&P quarterly rebalance changes announced (typical timing)",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": false,
+   "src": "https://www.tradingcalendar.com/index-rebalance"
+  },
+  {
+   "date": "2026-12-09",
+   "time": "2:00 ET",
+   "cat": "fed",
+   "event": "FOMC decision + SEP/dot plot; Chair press conference 2:30 ET",
+   "tickers": [],
+   "themes": [
+    "ratesmacro"
+   ],
+   "imp": "high",
+   "confirmed": true,
+   "src": "https://www.federalreserve.gov/newsevents/2026-december.htm"
+  },
+  {
+   "date": "2026-12-09",
+   "time": "AMC",
+   "cat": "earnings",
+   "event": "Adobe FQ4 2026 results (estimated, not company-confirmed)",
+   "tickers": [
+    "ADBE"
+   ],
+   "themes": [
+    "software"
+   ],
+   "imp": "med",
+   "confirmed": false,
+   "src": "https://unusualwhales.com/stock/ADBE/earnings"
+  },
+  {
+   "date": "2026-12-09",
+   "time": "",
+   "cat": "policy",
+   "event": "PJM capacity auction (2029/30 BRA) bid window opens; closes Dec 15 (third-party calendar)",
+   "tickers": [],
+   "themes": [
+    "energy"
+   ],
+   "imp": "med",
+   "confirmed": false,
+   "src": "https://www.esaipower.com/capacity-market-auction-calendar/pjm-capacity-auction-calendar/"
+  },
+  {
+   "date": "2026-12-10",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "Weekly initial jobless claims",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.financecalendar.com/weekly-jobless-claims/"
+  },
+  {
+   "date": "2026-12-10",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "November CPI",
+   "tickers": [],
+   "themes": [
+    "ratesmacro"
+   ],
+   "imp": "high",
+   "confirmed": true,
+   "src": "https://www.bls.gov/schedule/news_release/cpi.htm"
+  },
+  {
+   "date": "2026-12-10",
+   "time": "",
+   "cat": "data",
+   "event": "TSMC November monthly revenue (estimated, usual ~10th-of-month pattern)",
+   "tickers": [
+    "TSM"
+   ],
+   "themes": [
+    "taiwan"
+   ],
+   "imp": "med",
+   "confirmed": false,
+   "src": "https://pr.tsmc.com/english/news/3275"
+  },
+  {
+   "date": "2026-12-10",
+   "time": "AMC",
+   "cat": "earnings",
+   "event": "Broadcom FQ4 2026 results (estimated; trackers say Dec 9 or Dec 10)",
+   "tickers": [
+    "AVGO"
+   ],
+   "themes": [
+    "merchantsilicon"
+   ],
+   "imp": "high",
+   "confirmed": false,
+   "src": "https://unusualwhales.com/stock/AVGO/earnings"
+  },
+  {
+   "date": "2026-12-10",
+   "time": "AMC",
+   "cat": "earnings",
+   "event": "Oracle FQ2 2027 results (estimated, not company-confirmed)",
+   "tickers": [
+    "ORCL"
+   ],
+   "themes": [
+    "debt"
+   ],
+   "imp": "high",
+   "confirmed": false,
+   "src": "https://www.financecalendar.com/event/orcl-earnings-december-2026/"
+  },
+  {
+   "date": "2026-12-10",
+   "time": "AMC",
+   "cat": "earnings",
+   "event": "Costco FQ1 2027 results; call 5:00 ET",
+   "tickers": [
+    "COST"
+   ],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://investor.costco.com/events-and-presentations/events/event-details/2026/Q1-2027-Earnings-Call/default.aspx"
+  },
+  {
+   "date": "2026-12-11",
+   "time": "",
+   "cat": "policy",
+   "event": "Continuing resolution expires; government shutdown deadline",
+   "tickers": [],
+   "themes": [],
+   "imp": "high",
+   "confirmed": true,
+   "src": "https://www.aacom.org/news-reports/news/2026/09/08/president-trump-signs-continuing-resolution-to-fund-government-through-december-11"
+  },
+  {
+   "date": "2026-12-11",
+   "time": "",
+   "cat": "markets",
+   "event": "Nasdaq-100 annual reconstitution announcement (typical timing)",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": false,
+   "src": "https://www.tradingcalendar.com/index-rebalance"
+  },
+  {
+   "date": "2026-12-14",
+   "time": "",
+   "cat": "geo",
+   "event": "G20 leaders' summit at Trump National Doral Miami, Dec 14-15",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://en.wikipedia.org/wiki/2026_G20_Miami_summit"
+  },
+  {
+   "date": "2026-12-15",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "November PPI",
+   "tickers": [],
+   "themes": [
+    "ratesmacro"
+   ],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.bls.gov/schedule/news_release/ppi.htm"
+  },
+  {
+   "date": "2026-12-16",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "November retail sales (advance)",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://census.gov/retail/release_schedule.html"
+  },
+  {
+   "date": "2026-12-17",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "Weekly initial jobless claims",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.financecalendar.com/weekly-jobless-claims/"
+  },
+  {
+   "date": "2026-12-17",
+   "time": "AMC",
+   "cat": "earnings",
+   "event": "Nike FQ2 2027 results (estimated, not company-confirmed)",
+   "tickers": [
+    "NKE"
+   ],
+   "themes": [],
+   "imp": "med",
+   "confirmed": false,
+   "src": "https://www.tipranks.com/stocks/nke/earnings"
+  },
+  {
+   "date": "2026-12-18",
+   "time": "10:00 ET",
+   "cat": "data",
+   "event": "UMich consumer sentiment, final December",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.financecalendar.com/?p=1345"
+  },
+  {
+   "date": "2026-12-18",
+   "time": "",
+   "cat": "markets",
+   "event": "Quad witching (quarterly options/futures expiration)",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.macroption.com/options-expiration-calendar/"
+  },
+  {
+   "date": "2026-12-18",
+   "time": "",
+   "cat": "markets",
+   "event": "S&P quarterly rebalance and Nasdaq-100 reconstitution effective after close (expected)",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": false,
+   "src": "https://www.tradingcalendar.com/index-rebalance"
+  },
+  {
+   "date": "2026-12-22",
+   "time": "",
+   "cat": "policy",
+   "event": "PJM 2029/30 Base Residual Auction results posted (third-party calendar)",
+   "tickers": [],
+   "themes": [
+    "energy"
+   ],
+   "imp": "med",
+   "confirmed": false,
+   "src": "https://www.esaipower.com/capacity-market-auction-calendar/pjm-capacity-auction-calendar/"
+  },
+  {
+   "date": "2026-12-23",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "Q3 GDP third estimate",
+   "tickers": [],
+   "themes": [
+    "ratesmacro"
+   ],
+   "imp": "high",
+   "confirmed": true,
+   "src": "https://www.bea.gov/index.php/news/schedule/full"
+  },
+  {
+   "date": "2026-12-23",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "November PCE / personal income and outlays",
+   "tickers": [],
+   "themes": [
+    "ratesmacro"
+   ],
+   "imp": "high",
+   "confirmed": true,
+   "src": "https://www.bea.gov/index.php/news/schedule/full"
+  },
+  {
+   "date": "2026-12-23",
+   "time": "AMC",
+   "cat": "earnings",
+   "event": "Micron FQ1 2027 results (estimate; other trackers say 3rd week of Dec)",
+   "tickers": [
+    "MU"
+   ],
+   "themes": [
+    "memory"
+   ],
+   "imp": "high",
+   "confirmed": false,
+   "src": "https://www.wallstreethorizon.com/micron-earnings-calendar"
+  },
+  {
+   "date": "2026-12-24",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "Weekly initial jobless claims (listed Thu Dec 24; may shift to Wed Dec 23 for holiday)",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": false,
+   "src": "https://www.financecalendar.com/weekly-jobless-claims/"
+  },
+  {
+   "date": "2026-12-24",
+   "time": "1:00 ET",
+   "cat": "markets",
+   "event": "Christmas Eve: US stocks close early at 1:00 ET",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://gurufocus.com/stock-market-holidays"
+  },
+  {
+   "date": "2026-12-25",
+   "time": "",
+   "cat": "markets",
+   "event": "Christmas: US stock markets closed",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://gurufocus.com/stock-market-holidays"
+  },
+  {
+   "date": "2026-12-30",
+   "time": "2:00 ET",
+   "cat": "fed",
+   "event": "FOMC minutes (Dec 8-9 meeting)",
+   "tickers": [],
+   "themes": [
+    "ratesmacro"
+   ],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.federalreserve.gov/newsevents/2026-december.htm"
+  },
+  {
+   "date": "2026-12-31",
+   "time": "8:30 ET",
+   "cat": "data",
+   "event": "Weekly initial jobless claims",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "src": "https://www.financecalendar.com/weekly-jobless-claims/"
+  }
+ ],
+ "calendarAsOf": "2026-11-05"
 };
 
 /* ============================================================ RENDER ============================================================ */
@@ -15392,6 +16339,7 @@ const ARTICLES=[{"date": "AUGUST 27, 2026", "kicker": "MARKET SYNTHESIS", "head"
 const TABS=[
   ["new","New Since Last","What the latest batch of transcripts changed: new themes, conviction moves, newly-contested items, and fresh trade ideas.",true],
   ["macro","Macro Pulse","Facts, not opinions: the forces moving markets right now (war, energy, rates, credit, policy, AI macro, labor, crypto), refreshed each morning.",false],
+  ["calendar","Calendar","Everything scheduled over the next six weeks: Fed, government data, earnings, policy, geopolitics, IPOs and market dates, with the result once each happens.",false],
   ["velocity","Velocity Board","Every theme ranked by momentum — how fast conviction is moving — not just how high it sits.",false],
   ["themes","Themes","Deep-dive on each theme: conviction, independent voices, camp (bull/bear/contested), why it's moving, dated changelog.",false],
   ["timeline","Timeline & Predictions","Catalyst roadmap plus a scorecard grading each dated prediction hit / trending / pending / miss.",false],
@@ -15509,7 +16457,7 @@ function renderTimeline(){
   const v=$("#v-timeline");v.innerHTML="";
   v.appendChild(el("p","lead","The roadmap of catalysts (now → 2030+) plus a scorecard grading every dated prediction. Over time this calibrates which voices to trust."));
   const tl=el("div","panel");tl.appendChild(el("h3","","Roadmap — catalysts & expected inflections"));
-  DATA.timeline.forEach(p=>{const row=el("div","tlrow");row.appendChild(el("div","tlper",p.per));const box=el("div");p.items.forEach(it=>box.appendChild(el("div","tlitem",it.t+` <span class="src">— ${it.src}</span>`)));row.appendChild(box);tl.appendChild(row);});
+  DATA.timeline.forEach(p=>{const row=el("div","tlrow");row.appendChild(el("div","tlper",p.per));const box=el("div");const its=(p.per==="NEXT 6 WEEKS"&&DATA.calendar)?calTimelineItems():p.items;its.forEach(it=>box.appendChild(el("div","tlitem",it.t+(it.src?` <span class="src">— ${it.src}</span>`:""))));if(p.per==="NEXT 6 WEEKS"&&DATA.calendar){const a=el("div","calmore","High-importance events only. Full calendar →");a.onclick=()=>goTab("calendar");box.appendChild(a);}row.appendChild(box);tl.appendChild(row);});
   v.appendChild(tl);
   if(DATA.timelineArchive&&DATA.timelineArchive.length){const ar=el("details","tlarch");ar.appendChild(el("summary","","Earlier NOW snapshots ("+DATA.timelineArchive.length+", archived as newer batches arrived)"));const bx=el("div","panel");DATA.timelineArchive.forEach(it=>bx.appendChild(el("div","tlitem",it.t+` <span class="src">— ${it.src}</span>`)));ar.appendChild(bx);v.appendChild(ar);}
   const pp=el("div","panel");pp.appendChild(el("h3","","Prediction scorecard"));
@@ -15798,10 +16746,52 @@ function renderMacro(){const v=$("#v-macro");v.innerHTML="";const M=DATA.macro;
     c.appendChild(el("div","mmetric",d.metric));c.appendChild(el("div","mchg",d.changed));
     const tb=el("div","mthemes");(d.themes||[]).forEach(id=>{const t=DATA.themes.find(x=>x.id===id);if(!t)return;const p=el("span","pill link",t.name.split(" - ")[0].slice(0,42));p.title="Open theme: "+t.name;p.onclick=()=>openTheme(id);tb.appendChild(p);});c.appendChild(tb);g.appendChild(c);});
   v.appendChild(g);
+  if(DATA.calendar){const t=calToday(),e7=calAdd(t,7);const nx=calSorted().filter(e=>e.date>=t&&e.date<=e7);const cp=el("div","panel");cp.appendChild(el("h3","","Next 7 days"));if(!nx.length)cp.appendChild(el("div","muted","Nothing scheduled."));const bx=el("div","calweek");nx.forEach(e=>bx.appendChild(calRow(e,t)));cp.appendChild(bx);const a=el("div","calmore","Full calendar →");a.onclick=()=>goTab("calendar");cp.appendChild(a);v.appendChild(cp);}else{
   const cal=el("div","panel");cal.appendChild(el("h3","","Calendar - next ~6 weeks"));const tb=el("table","pred");tb.innerHTML="<thead><tr><th style='width:120px'>Date</th><th>Event</th></tr></thead>";const b=el("tbody");
-  (M.calendar||[]).slice().sort((a,c)=>a.date.localeCompare(c.date)).forEach(x=>{const tr=el("tr");tr.appendChild(el("td","","<b>"+x.date+"</b>"));tr.appendChild(el("td","",x.event));b.appendChild(tr);});tb.appendChild(b);cal.appendChild(tb);v.appendChild(cal);
+  (M.calendar||[]).slice().sort((a,c)=>a.date.localeCompare(c.date)).forEach(x=>{const tr=el("tr");tr.appendChild(el("td","","<b>"+x.date+"</b>"));tr.appendChild(el("td","",x.event));b.appendChild(tr);});tb.appendChild(b);cal.appendChild(tb);v.appendChild(cal);}
   if(M.sources&&M.sources.length){const s=el("details","drill");s.appendChild(el("summary","","Sources ("+M.sources.length+")"));const box=el("div","msrc");M.sources.forEach(u=>{const a=document.createElement("a");a.href=u;a.target="_blank";a.rel="noopener";a.textContent=u;box.appendChild(a);});s.appendChild(box);v.appendChild(s);}
 }
+
+/* ---- Calendar ---- */
+const CALCAT={fed:["Fed","#c792ff"],data:["Data","#5aa9ff"],earnings:["Earnings","#3ddc84"],policy:["Policy","#f4c04f"],geo:["Geopolitics","#ff8a65"],ipo:["IPO","#4dd0e1"],markets:["Markets","#93a1b3"]};
+let calFilter="all",calHigh=false;
+function calISO(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
+function calToday(){return calISO(new Date());}
+function calParse(s){const p=s.split("-").map(Number);return new Date(p[0],p[1]-1,p[2]);}
+function calAdd(s,n){const d=calParse(s);d.setDate(d.getDate()+n);return calISO(d);}
+function calMonday(s){const d=calParse(s);d.setDate(d.getDate()-((d.getDay()+6)%7));return calISO(d);}
+function calFmt(s){return calParse(s).toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"});}
+function openTicker(k){tickSel=k;renderTickers();goTab("tickers");}
+function calRow(e,today){
+  const c=CALCAT[e.cat]||["Other","#93a1b3"];
+  const r=el("div","calrow"+(e.imp==="high"?" hi":"")+(e.date===today?" today":"")+(e.date<today?" past":""));r.style.borderLeftColor=c[1];
+  r.appendChild(el("div","cdate",calFmt(e.date)+(e.time?'<span class="ctime">'+e.time+'</span>':"")));
+  const m=el("div","cmain");
+  m.appendChild(el("div","cevent",'<span class="ccat" style="color:'+c[1]+';border-color:'+c[1]+'66">'+c[0]+'</span>'+e.event+(e.confirmed===false?' <span class="cest" title="Date not yet confirmed">est.</span>':"")+(e.src?' <a class="csrc" href="'+e.src+'" target="_blank" rel="noopener" title="Source for this date">source</a>':"")));
+  if(e.result)m.appendChild(el("div","cres","Result: "+e.result));
+  const tg=el("div","ctags");
+  (e.tickers||[]).forEach(t=>{const has=typeof TICK!=="undefined"&&TICK[t];const p=el("span","pill"+(has?" link":""),t);if(has){p.title="Open ticker page";p.onclick=()=>openTicker(t);}tg.appendChild(p);});
+  (e.themes||[]).forEach(id=>{const th=DATA.themes.find(x=>x.id===id);if(!th)return;const p=el("span","pill link",th.name.split(/ [-—] /)[0].slice(0,48));p.title="Open theme: "+th.name;p.onclick=()=>openTheme(id);tg.appendChild(p);});
+  if(tg.childNodes.length)m.appendChild(tg);
+  r.appendChild(m);return r;}
+function calSorted(){return (DATA.calendar||[]).slice().sort((a,b)=>a.date.localeCompare(b.date)||((a.imp==="high"?0:1)-(b.imp==="high"?0:1)));}
+function renderCalendar(){
+  const v=$("#v-calendar");v.innerHTML="";const C=calSorted();const today=calToday();
+  v.appendChild(el("p","lead",'<b>Calendar.</b> What is scheduled over the next six weeks: Fed, government data, earnings, policy, geopolitics, IPOs and market dates. The daily scan keeps it current and adds the result once an event happens. <span class="faint">Updated '+(DATA.calendarAsOf||"-")+'. Times are Eastern; BMO/AMC = before the open / after the close.</span>'));
+  const bar=el("div","calbar");
+  ["all"].concat(Object.keys(CALCAT)).forEach(k=>{const n=k==="all"?C.length:C.filter(e=>e.cat===k).length;if(k!=="all"&&!n)return;const b=el("button","calf"+(calFilter===k?" on":""),(k==="all"?"All":CALCAT[k][0])+' <span>'+n+'</span>');b.onclick=()=>{calFilter=k;renderCalendar();};bar.appendChild(b);});
+  const hb=el("button","calf hb"+(calHigh?" on":""),"High importance only");hb.onclick=()=>{calHigh=!calHigh;renderCalendar();};bar.appendChild(hb);v.appendChild(bar);
+  const F=C.filter(e=>(calFilter==="all"||e.cat===calFilter)&&(!calHigh||e.imp==="high"));
+  const past=F.filter(e=>e.date<today&&e.date>=calAdd(today,-7));
+  const up=F.filter(e=>e.date>=today);
+  if(past.length){const d=el("details","calpast");d.appendChild(el("summary","","Past 7 days ("+past.length+")"+(past.some(e=>e.result)?" · with results":"")));const bx=el("div","calweek");past.slice().reverse().forEach(e=>bx.appendChild(calRow(e,today)));d.appendChild(bx);v.appendChild(d);}
+  if(!up.length){v.appendChild(el("div","panel muted","Nothing scheduled matches this filter."));return;}
+  const horizon=calAdd(today,42),thisMon=calMonday(today),groups=[],later=[];
+  up.forEach(e=>{if(e.date>horizon){later.push(e);return;}const k=calMonday(e.date);let g=groups.find(x=>x.k===k);if(!g){g={k:k,items:[]};groups.push(g);}g.items.push(e);});
+  groups.forEach(g=>{v.appendChild(el("div","sub",(g.k===thisMon?"This week":"Week of "+calParse(g.k).toLocaleDateString("en-US",{month:"short",day:"numeric"}))+' <span class="faint">· '+g.items.length+'</span>'));const bx=el("div","calweek");g.items.forEach(e=>bx.appendChild(calRow(e,today)));v.appendChild(bx);});
+  if(later.length){v.appendChild(el("div","sub","Later"));const bx=el("div","calweek");later.forEach(e=>bx.appendChild(calRow(e,today)));v.appendChild(bx);}
+}
+function calTimelineItems(){const t=calToday(),h=calAdd(t,42);return calSorted().filter(e=>e.date>=t&&e.date<=h&&e.imp==="high").map(e=>({t:calFmt(e.date)+" - "+e.event,src:""}));}
 
 /* ---- Scorecards ---- */
 function renderScores(){const v=$("#v-scores");v.innerHTML="";
@@ -15849,7 +16839,7 @@ function renderMethodAdd(){const v=$("#v-method");if(!v)return;const p=el("div",
   <p><b>Macro Pulse</b> is facts only, kept separate from the opinion-driven themes so you can see when the voices and the news disagree.</p>`;
   v.insertBefore(p,v.firstChild);}
 
-renderNew();renderMacro();renderVelocity();renderThemes();renderTimeline();renderScores();renderWatchlist();renderTickers();renderLibrary();renderSources();renderMethod();renderMethodAdd();renderArticles();
+renderNew();renderMacro();renderCalendar();renderVelocity();renderThemes();renderTimeline();renderScores();renderWatchlist();renderTickers();renderLibrary();renderSources();renderMethod();renderMethodAdd();renderArticles();
 </script>
 </body>
 </html>
