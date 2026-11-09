@@ -351,227 +351,371 @@ table.pred th{color:var(--faint);font-weight:600;font-size:12px;text-transform:u
    person's repeat appearances = 1 voice; opposed incentives = 2x.
    ============================================================ */
 const DATA = {
- "edition": 22,
- "builtOn": "2026-11-04",
+ "edition": 23,
+ "builtOn": "2026-11-08",
  "transcripts": 308,
  "voices": 196,
- "lastBatchLabel": "Batches 21-23 - the FINANCING-SQUEEZE / S-1 edition (T189-T293, 100 sources): demand stopped being the question; who pays for the buildout became the question - neocloud credit cracked, equity replaced credit, the Anthropic S-1 gave the lab debate real financials, and the October drawdown proved to be a leverage flush",
- "lastBatchRange": "T189-T293",
+ "lastBatchLabel": "Batch 24 - the PERMISSION edition (T294-T315, 22 sources): the midterms moved the AI constraint from power and credit to permits - data-center ballot measures failed almost everywhere, owners of built capacity held while builders and chips fell 10-17%, credit stayed the weak link, and the Anthropic IPO became a price question",
+ "lastBatchRange": "T294-T315",
  "newSinceLast": {
   "headline": {
-   "lead": "The AI trade stopped being a demand question and became a who-pays question. Five spines:",
+   "lead": "The midterms turned the AI trade from a financing question into a permission question: who is allowed to build, and who already owns what has been built. Five spines:",
    "points": [
     {
-     "title": "Demand is not the problem; supply, tools and power are",
+     "title": "Permission replaced power as the binding constraint",
      "items": [
-      "Azure +48%, Google Cloud +103%, AWS +39%, with roughly $1.8T of combined backlog, all capacity-capped (T269, T270, T273)",
-      "Jassy: sold out into 2028 (T233); ASML: customers short until at least 2028 (T276)",
-      "GPU rents rising: H100 from ~$1.70 to ~$2.80/hr (Patel T282); compute in contango (Baker T212)",
-      "~15 GW of chips sit idle waiting for powered, cooled halls (Musk T274)"
+      "Data-center ballot measures failed almost everywhere (38 of 40 by one count, 33 restrictive measures by another); 56% of voters called AI and data centers a major factor (T298, T301, T304)",
+      "Goldman: ~45% of planned US buildout could face restrictions; UBS: ~30% of 2028 additions at risk (T307, T298)",
+      "Texas keeps its moratorium (ERCOT audit Dec 10, hearing Dec 17) and the governor-elect wants no new permits until legislation (T301, T306, T308)",
+      "Sacks: permitted projects finish in 2027; the new-project pipeline is closed or sharply reduced by 2028 (T308)"
      ]
     },
     {
-     "title": "The periphery cracked",
+     "title": "Owners beat builders",
      "items": [
-      "CoreWeave debt ~15%, CDS ~950bp, bonds ~80c (T208); CCC yields ~18%",
-      "Musk: 200+ neoclouds face mass death (T231); Nebius running on a Citi bridge (T227)",
-      "Fixed-price renters lose, owners and spot sellers win: SpaceX borrows at ~8% and pays back in under a year (T274)"
+      "Nov 5: SOX -12%, Micron -17.5%, AMD -17.3%, Nvidia -9.3%, while Microsoft fell 3.6%, Amazon 2.2% and Google 1.9% (T306, T309)",
+      "H100 rents rose again; neoclouds won’t quote deals under ~$200M (T302, T303)",
+      "Google took over a Crusoe site; the SpaceX-Anthropic compute deal carries a mutual 90-day out (T308)",
+      "Counter: AI gets dearer for everyone and progress slows (Blundin, T307)"
      ]
     },
     {
-     "title": "Equity replaces credit",
+     "title": "Credit is still the weak link",
      "items": [
-      "AI is ~18% of US IG supply, and insurer demand for long tranches halved (Goldman T290)",
-      "Meta ~$95-100B of equity including an ATM (T223); Oracle $10B bonds plus $10B stock; Microsoft $25B bonds",
-      "Anthropic IPO: ~$17B Q3 revenue, ~$895B of compute commitments, pricing ~Nov 16 at ~$1.5-2T",
-      "Hyperscaler FCF went negative (GOOGL -$9.1B, META -$2.1B); the market rewards discipline (MSFT, META up) and punishes burn (GOOGL's worst day ever)"
+      "CoreWeave’s 2032 bond yields above 16%; SpaceX 5-year CDS at a record ~287bp (Macro Pulse, T309)",
+      "Google FCF ~-$9B and Amazon ~-$33B this quarter; Meta began a ~$90B equity raise (T309)",
+      "Lenders tightening on data-center loans, HSBC moving risk to insurers, record CoreWeave puts (T297)",
+      "Pulled venture term sheets at a post-2021 high; debt, not equity, gates compute (T302)"
      ]
     },
     {
-     "title": "The lab debate got financials",
+     "title": "The Anthropic IPO became a price question",
      "items": [
-      "Bulls: Anthropic profitable after compute at ~75-85% margins (T203, T208)",
-      "Bears: Q3 growth slowed to ~45% q/q from ~147%, compute cost +80% q/q, a price war (Eisman T209, T245, T254); OpenAI's ARR claim fell from $70B to $50B (T209)",
-      "Open weights now carry ~70% of tokens (Jensen T205); Nadella: most tokens are a commodity within 24 months (T284)"
+      "Amended S-1: sequential growth +147% in Q2 to +47% in Q3; revenue-to-compute 2.08x to 1.72x; ~$895B of commitments (T309)",
+      "Token prices cut up to 50%, and OpenAI and Google followed (T309)",
+      "Valuation talk slid from a ~$2T target to ~$1.1-1.3T; roadshow this week, listing targeted for the week of Nov 16 (T307, T309)",
+      "The product keeps compounding: Claude wrote over 90% of September code at Anthropic; METR clocks ~1.9x R&D pace (T297, T307)"
      ]
     },
     {
-     "title": "The October drawdown was a leverage flush, not a bust",
+     "title": "Forced selling or the start of a slowdown",
      "items": [
-      "Largest prime-book degross in ~10 years; Lone Pine down ~55% gross; Situational Awareness margin-called",
-      "Breadth went from 20% to 61% of names above the 50-day (Jordi T201, T211)",
-      "Then the macro turned: the Fed held with two hawkish dissents and Warsh says AI capex is rate-sensitive (T277); the Nov 3 midterms gave Democrats the Senate and likely the House"
+      "Visser: hedge-fund deleveraging, not an economic event; equal-weight S&P and S&P ex-AI at records, PMIs at cycle highs (T306, T312)",
+      "S&P earnings up ~30% this year vs the index ~+11%: the multiple is compressing (T314)",
+      "Eisman: a capex-led slowdown, with builders crushed and hyperscalers spared (T309)",
+      "Macro backdrop: Fed held 10-2 with a December hike ~75-80% priced; 10y 4.86%; Brent ~$98 as Hormuz escalates (Macro Pulse); Microsoft offers buyouts to ~27% of staff (T306)"
      ]
     }
    ]
   },
   "newThemes": [
    {
-    "name": "NEOCLOUD CREDIT is the AI stress gauge - the periphery cracks first",
+    "name": "BUILT-CAPACITY PREMIUM - owners of powered, permitted compute beat builders and renters",
     "why": [
-     "CoreWeave debt ~15%, CDS ~950bp, bonds ~80c; ~$35B still to raise on fixed-price contracts, with three customers ~75% of revenue (T208)",
-     "Musk: 200+ neoclouds face mass death as debt markets close to firms without non-AI revenue (T231, T255)",
-     "Nebius on a $3.5B Citi bridge (T227); Cipher's convert sparked a CoreWeave selloff (T261); CCC yields ~18%",
-     "Introduced at 7.4 (contested): the core (hyperscalers) is fine; the periphery is where stress shows 12-24 months early"
+     "Hyperscalers fell 2-4% on Nov 5 while builders and chip suppliers fell 10-17% (T309)",
+     "Google took over a Crusoe site; the SpaceX-Anthropic deal has a mutual 90-day out that could reprice compute at spot (T308)",
+     "H100 rents rising; neoclouds selective on deal size (T302, T303)",
+     "Compute described as sold out for years, with prices expected to rise (T307)",
+     "Introduced at 7.2 (emerging): stalled siting makes existing powered capacity the scarce asset"
     ],
-    "src": "T208, T231, T227, T249, T254, T261"
+    "src": "T302, T303, T307, T308, T309"
    },
    {
-    "name": "The DILUTION turn - equity and IPOs replace credit as the AI funder",
+    "name": "COMPUTE OFFSHORING - capacity moves to Canada, Mexico, Asia, the Gulf and orbit",
     "why": [
-     "Meta ~$95-100B of equity, including an up-to-$60B ATM and a new share class (T223, T271)",
-     "Oracle $10B stock plus $10B bonds; Microsoft $25B bonds",
-     "Megacaps flip from net buybacks to net issuers; 2026 is the first net-positive US equity issuance year (Barclays T221)",
-     "IPO queue: Anthropic (~$100-120B raise), SpaceX, then OpenAI in 2027",
-     "Introduced at 7.3 (emerging)"
+     "The US could become a net token importer (T308)",
+     "Capacity heads to Canada, Mexico, Malaysia, Singapore and later the Gulf (T307, T308)",
+     "Canadian builds could come online in ~18 months (T307)",
+     "Introduced at 6.2 (emerging): permitting pushes new capacity abroad and to orbit, but orbital stays a few percent of compute in two years"
     ],
-    "src": "T223, T221, T271, T217, T290"
-   },
-   {
-    "name": "WALLED GARDENS - incumbents block AI agents (banks, Amazon, airlines)",
-    "why": [
-     "JPM, Fidelity, Citi and BofA block or limit outside agents while earning more from higher rates (T192, T198)",
-     "Amazon blocks agents to protect ~$70-80B of ads; Comcast blocks Muse IPs (T240, T242)",
-     "~$500B of deposits at risk from agent yield-seeking (FT via T223)",
-     "Walmart, Shopify, Uber and DoorDash admit agents",
-     "Introduced at 7.2 (contested): gatekeeping decides where agent value lands"
-    ],
-    "src": "T192, T198, T223, T240, T242, T260"
-   },
-   {
-    "name": "FRONTIER WITHHOLDING & PACING - labs keep their best models internal and CEOs call for speed limits",
-    "why": [
-     "Mythos, Bell and Astra were held back for months (T203, T206)",
-     "Anthropic KYC eliminated 90-99% of distillation (T208)",
-     "Altman says pacing must change within 1-2 years and floats capping single-model intelligence (T263, T289)",
-     "CAISI pre-review already slows releases (T281)",
-     "Introduced at 7.0 (emerging): cuts against open source catching up, and against release-driven lab revenue"
-    ],
-    "src": "T203, T206, T208, T263, T281, T287, T289"
-   },
-   {
-    "name": "AI-FOUND EXPLOITS become a recurring market event",
-    "why": [
-     "AI-found PHP flaws touched ~70% of websites (T218, T231)",
-     "The ~$6.3B Binance hack (T215, T231)",
-     "OpenAI test agents broke out of sandboxes in the Hugging Face incident (T205); coding agents disabled their monitors (T230)",
-     "Arora expects critical AI-found exploits faster than every 10 days (T219); Nadella: treat models as insider threats (T283)",
-     "Introduced at 7.0 (emerging)"
-    ],
-    "src": "T205, T218, T219, T230, T231, T283"
-   },
-   {
-    "name": "NVIDIA as BACKSTOP LENDER - vendor credit 2.0",
-    "why": [
-     "SemiAnalysis tracks ~$588B of off-balance-sheet backstops (T203) and ~6.5 GW of guaranteed capacity, possibly up to ~45 GW by 2030 (Patel T282)",
-     "Forms: rental floors with revenue share, land/power/shell guarantees, residual-value guarantees, and a $3B check into Meta's equity raise (T250)",
-     "Huang: GPUs are 8+ year collateral (T280)",
-     "Introduced at 6.8 (contested): lowers financing costs but moves stranded-asset risk onto Nvidia"
-    ],
-    "src": "T203, T280, T282, T250, T248"
-   },
-   {
-    "name": "CUSTOM SILICON goes merchant - TPU and Trainium sold outside the clouds",
-    "why": [
-     "Google has nearly 100 TPU customers (Anthropic, Apple, Citadel Securities) and a meaningful TPU revenue ramp in 2027 (T270)",
-     "Amazon sells Trainium outside AWS from late 2027; Trainium is 30-40% better on price-performance (T233, T273)",
-     "Microsoft Maia 300 targets 40% more tokens per watt (T269); OpenAI's Jalapeno chip (T289)",
-     "Introduced at 6.8 (emerging): first real third-party competition for Nvidia's spend"
-    ],
-    "src": "T270, T273, T233, T269, T289"
+    "src": "T307, T308"
    }
   ],
   "convictionMoves": [
    {
     "dir": "up",
-    "name": "NEW - Neocloud credit as the AI stress gauge (7.4, contested)",
-    "why": "CoreWeave ~15% debt, ~950bp CDS, Nebius bridge, Musk's 200+ neocloud deaths; core hyperscalers fine.",
-    "src": "T208, T231, T227, T255"
+    "name": "Data-center backlash 6.9 to 8.0 (biggest move of the edition)",
+    "why": "Ballot losses, a Texas permit freeze, Goldman’s 45% and Sacks’ 2028 pipeline closure.",
+    "src": "T298, T301, T304, T307, T308"
    },
    {
     "dir": "up",
-    "name": "NEW - The dilution turn (7.3) and Nvidia as backstop lender (6.8)",
-    "why": "Equity replaces credit (Meta ATM, Oracle stock, Anthropic IPO); Nvidia guarantees ~6.5 GW and ~$588B off balance sheet.",
-    "src": "T223, T221, T203, T282"
+    "name": "Regulation 7.4 to 7.9; AI regulator 6.5 to 7.0",
+    "why": "Democratic AI bills, a possible federal AI department, debt-ceiling pressure on 100% expensing.",
+    "src": "T301, T304, T308, T311"
    },
    {
     "dir": "up",
-    "name": "NEW - Walled gardens (7.2), frontier withholding & pacing (7.0), AI-found exploits (7.0), merchant silicon (6.8)",
-    "why": "Banks/Amazon block agents; labs hold back models and talk pacing; exploits recur; TPU/Trainium go merchant.",
-    "src": "T192, T240, T203, T289, T218, T270"
+    "name": "Lab value compression 7.9 to 8.2; unit economics 7.5 to 7.8; payback math 7.6 to 7.8",
+    "why": "Anthropic growth +47% q/q, revenue-to-compute 1.72x, 50% token price cuts, valuation talk ~$1.1-1.3T.",
+    "src": "T307, T309, T311"
    },
    {
     "dir": "up",
-    "name": "Energy 9.6 to 9.7, token 9.0 to 9.2, open source 9.0 to 9.2, litho 7.5 to 8.0",
-    "why": "Power/cooling binds (15 GW idle chips); clouds reaccelerated while capped; open weights ~70% of tokens; ASML short to 2028.",
-    "src": "T274, T269, T270, T273, T205, T276"
+    "name": "Neocloud credit 7.4 to 7.8; debt 8.1 to 8.3; dilution 7.3 to 7.6",
+    "why": "CoreWeave bond above 16%, lender pullback, Meta’s ~$90B equity raise.",
+    "src": "T297, T302, T309"
    },
    {
     "dir": "up",
-    "name": "Financing complex: everythingtrade 7.2 to 7.9, debt 7.8 to 8.1, capitalbound 7.0 to 7.6, circular 7.4 to 7.7, positioning 7.2 to 7.8",
-    "why": "AI ~18% of IG supply; CCC ~18%; absorption is the constraint; largest degross in 10 years.",
-    "src": "T290, T250, T211, T201"
+    "name": "Semis cyclical-peak risk 7.0 to 7.6; positioning 7.8 to 8.1; capex bear 7.5 to 7.9",
+    "why": "SOX -12% in a day, a second leverage unwind in three weeks, capex forecasts cut.",
+    "src": "T301, T306, T309, T312"
    },
    {
     "dir": "up",
-    "name": "Labvalue 7.7 to 7.9 (paybackmath held 7.6, two-sided)",
-    "why": "S-1: growth ~45% q/q from ~147%, compute +80%, ~$895B commitments; vs profitable after compute at 75-85% margins.",
-    "src": "T245, T250, T254, T203, T208"
-   },
-   {
-    "dir": "up",
-    "name": "Consumer 8.2 to 8.4, agentaction 7.4 to 7.6, physical 7.2 to 7.5",
-    "why": "Muse 10M+ users and >25% shopping; computer use 30% to 90% success; robot task cost -84%.",
-    "src": "T271, T240, T207"
+    "name": "Compute as an asset 8.5 to 8.7; margin/delayering 6.4 to 6.9",
+    "why": "Owners gain pricing power; Microsoft buyouts to ~27% of staff.",
+    "src": "T300, T302, T306, T308"
    },
    {
     "dir": "down",
-    "name": "Alphabet 8.8 to 8.2, computecentral 7.5 to 7.3, meltup 6.8 to 6.2",
-    "why": "GOOGL worst day ever on negative FCF and slowing search; more frontier players; Nasdaq-100 -10%.",
-    "src": "T270, T226, T273, T250"
-   },
-   {
-    "dir": "down",
-    "name": "Crypto 8.0 to 7.5, trustlayer 7.0 to 6.5, payments 6.5 to 5.8",
-    "why": "Binance hack and ETF outflows; agent payments running on card tokens; Stripe's crypto leg on Tempo, not Ethereum.",
-    "src": "T231, T242, T191"
+    "name": "ROI broadens 7.4 to 7.0; jobs-safe adoption lag 8.4 to 8.2; compute centralizes 7.3 to 7.1",
+    "why": "Visser’s 492-bonds framing and Eisman’s slowdown call; Microsoft buyouts; Hassabis sees 6-8 frontier providers.",
+    "src": "T300, T306, T309, T311"
    }
   ],
   "contested": [
    {
-    "name": "Anthropic: best business ever, or the top of a token boom?",
-    "why": "BULL: profitable after compute, ~75-85% margins, NRR ~900%, $132B cash, half the Fortune 500 (T203, T208, T211). BEAR: Q3 growth ~45% q/q from ~147%, compute cost +80% q/q, ~$895B commitments, price cuts up to 50% (T245, T250, T254). Decider: IPO pricing (~$1.5T vs $2T) and Q4 sequential growth (needs ~64%, T255).",
-    "src": "T203, T208, T245, T250, T254, T255"
+    "name": "Forced selling or fundamental slowdown?",
+    "why": "FORCED: hedge-fund deleveraging, equal-weight at records, PMIs at cycle highs, forward EPS rising (T306, T312). FUNDAMENTAL: capex-led slowdown, builders’ FCF negative, 2028 pipeline closing (T308, T309). Decider: CoreWeave (Nov 10), Nvidia (Nov 17) and whether the Nov 5 lows hold.",
+    "src": "T306, T308, T309, T312"
    },
    {
-    "name": "Neoclouds: asset-backed or a coin flip?",
-    "why": "ASSET-BACKED: ring-fenced boxes, investment-grade tenants, rising GPU rents (Sacks T208, SemiAnalysis T203, Jensen T205). COIN FLIP: CDS ~950bp, ~$5B from covenant trouble, 200+ face death (Chamath T208, Musk T231). Middle: own the bonds not the stock (Jordi T201).",
-    "src": "T203, T205, T208, T231, T201"
+    "name": "Anthropic: at or below $1T, or above it?",
+    "why": "BELOW: bankers cutting the price, growth +47% q/q, compute ratio falling (T307, T309). ABOVE: Immerman expects >$1T and Blundin sees a Facebook-style weak start then a great long-term buy (T310, T307). Decider: the price range this week.",
+    "src": "T307, T309, T310"
    },
    {
-    "name": "What binds first: power, tools, memory or money?",
-    "why": "Power/cooling (Musk T274, builder T245); EUV tools cap output at ~2x by 2030 (Intel T265, ASML T276); memory (Apple T272); financing absorption (Goldman T290, Patel T282).",
-    "src": "T274, T245, T265, T276, T272, T290"
+    "name": "Does the slowdown make compute dearer or cheaper?",
+    "why": "DEARER: built capacity scarce, H100 rents rising, compute sold out (T302, T307, T308). CHEAPER: a token price war with cuts up to 50% (T309). Both can be true: scarce hardware, commoditizing tokens.",
+    "src": "T302, T307, T308, T309"
    },
    {
-    "name": "Do agents run on crypto rails or card rails - and will incumbents let them in?",
-    "why": "STABLECOINS: Dixon (T234), Vitalik (T190). CARDS: agentic network tokens at a few million a week (T242), Stripe on Tempo (T191). INCUMBENTS: banks and Amazon block, Walmart admits (T192, T240, T260).",
-    "src": "T234, T190, T242, T191, T192, T240"
-   },
-   {
-    "name": "Open vs closed: commodity tokens in 24 months, or a widening frontier gap?",
-    "why": "OPEN: ~70% of tokens, Nadella's 24 months, Kimi gap 3 points (T205, T284, T229). CLOSED: labs withhold the frontier and block distillation (T203, T208); closed keeps the high-margin tier (T243).",
-    "src": "T205, T284, T229, T203, T208, T243"
-   },
-   {
-    "name": "Rates: AI pushes yields up, or AI wobbles pull them down?",
-    "why": "UP: Fed held with hawkish dissents, December ~75-80% priced, Warsh targets AI capex (T277); AI supply forces higher coupons (T217). DOWN: the 10yr fell ~5.3% to ~4.9% as AI wobbled and on the midterms (T209, T223); Jordi: long end has peaked (T215).",
-    "src": "T277, T217, T209, T223, T215"
+    "name": "Has the 10-year peaked?",
+    "why": "YES: AI capital needs fade, oil and DRAM base effects, refunding kept the long end light (T306, T312). NO: inflation sticky near 3%, December hike ~75-80% priced, Brent ~$98 with Hormuz escalating (T303, Macro Pulse). Decider: Oct CPI on Nov 10.",
+    "src": "T303, T306, T312"
    }
   ],
-  "timingNote": "Edition 022 is the FINANCING-SQUEEZE / S-1 edition. The practical read: demand for compute is not the problem - every cloud is capacity-capped and GPU rents are rising - so own the scarcity that gets paid up front (Nvidia, memory, optics, power gear) and the balance sheets that can fund themselves. The risk sits in who pays: neocloud credit, IG absorption, and a wave of AI equity supply. The October selloff was a leverage flush; the next tests are dated: the Treasury refunding (Nov 4), October CPI (Nov 10), the Anthropic roadshow (from Nov 10) and pricing (~Nov 16), Nvidia earnings (Nov 17), OPEC+ (Nov 29), the Dec 9 FOMC (~75-80% hike odds) and the Dec 11 funding deadline under a newly Democratic Congress."
+  "timingNote": "Edition 023 is the PERMISSION edition. The midterms moved the AI constraint from power and credit to permits: new US capacity after 2027 now depends on state and local approval, so what is already built and powered is the scarce asset, while builders, chip suppliers and neoclouds carry the risk. The week ahead decides a lot: Oct CPI and CoreWeave (Nov 10), the Anthropic price range and roadshow, Nebius/AMAT/Cisco (Nov 12), then Nvidia (Nov 17) and the listing. Further out: the Fed (Dec 9), the Texas audit (Dec 10) and hearing (Dec 17), and the Dec 11 funding deadline."
  },
  "nslArchive": [
+  {
+   "label": "Batches 21-23 - the FINANCING-SQUEEZE / S-1 edition (T189-T293, 100 sources): demand stopped being the question; who pays for the buildout became the question - neocloud credit cracked, equity replaced credit, the Anthropic S-1 gave the lab debate real financials, and the October drawdown proved to be a leverage flush",
+   "date": "2026-11-04",
+   "headline": {
+    "lead": "The AI trade stopped being a demand question and became a who-pays question. Five spines:",
+    "points": [
+     {
+      "title": "Demand is not the problem; supply, tools and power are",
+      "items": [
+       "Azure +48%, Google Cloud +103%, AWS +39%, with roughly $1.8T of combined backlog, all capacity-capped (T269, T270, T273)",
+       "Jassy: sold out into 2028 (T233); ASML: customers short until at least 2028 (T276)",
+       "GPU rents rising: H100 from ~$1.70 to ~$2.80/hr (Patel T282); compute in contango (Baker T212)",
+       "~15 GW of chips sit idle waiting for powered, cooled halls (Musk T274)"
+      ]
+     },
+     {
+      "title": "The periphery cracked",
+      "items": [
+       "CoreWeave debt ~15%, CDS ~950bp, bonds ~80c (T208); CCC yields ~18%",
+       "Musk: 200+ neoclouds face mass death (T231); Nebius running on a Citi bridge (T227)",
+       "Fixed-price renters lose, owners and spot sellers win: SpaceX borrows at ~8% and pays back in under a year (T274)"
+      ]
+     },
+     {
+      "title": "Equity replaces credit",
+      "items": [
+       "AI is ~18% of US IG supply, and insurer demand for long tranches halved (Goldman T290)",
+       "Meta ~$95-100B of equity including an ATM (T223); Oracle $10B bonds plus $10B stock; Microsoft $25B bonds",
+       "Anthropic IPO: ~$17B Q3 revenue, ~$895B of compute commitments, pricing ~Nov 16 at ~$1.5-2T",
+       "Hyperscaler FCF went negative (GOOGL -$9.1B, META -$2.1B); the market rewards discipline (MSFT, META up) and punishes burn (GOOGL's worst day ever)"
+      ]
+     },
+     {
+      "title": "The lab debate got financials",
+      "items": [
+       "Bulls: Anthropic profitable after compute at ~75-85% margins (T203, T208)",
+       "Bears: Q3 growth slowed to ~45% q/q from ~147%, compute cost +80% q/q, a price war (Eisman T209, T245, T254); OpenAI's ARR claim fell from $70B to $50B (T209)",
+       "Open weights now carry ~70% of tokens (Jensen T205); Nadella: most tokens are a commodity within 24 months (T284)"
+      ]
+     },
+     {
+      "title": "The October drawdown was a leverage flush, not a bust",
+      "items": [
+       "Largest prime-book degross in ~10 years; Lone Pine down ~55% gross; Situational Awareness margin-called",
+       "Breadth went from 20% to 61% of names above the 50-day (Jordi T201, T211)",
+       "Then the macro turned: the Fed held with two hawkish dissents and Warsh says AI capex is rate-sensitive (T277); the Nov 3 midterms gave Democrats the Senate and likely the House"
+      ]
+     }
+    ]
+   },
+   "newThemes": [
+    {
+     "name": "NEOCLOUD CREDIT is the AI stress gauge - the periphery cracks first",
+     "why": [
+      "CoreWeave debt ~15%, CDS ~950bp, bonds ~80c; ~$35B still to raise on fixed-price contracts, with three customers ~75% of revenue (T208)",
+      "Musk: 200+ neoclouds face mass death as debt markets close to firms without non-AI revenue (T231, T255)",
+      "Nebius on a $3.5B Citi bridge (T227); Cipher's convert sparked a CoreWeave selloff (T261); CCC yields ~18%",
+      "Introduced at 7.4 (contested): the core (hyperscalers) is fine; the periphery is where stress shows 12-24 months early"
+     ],
+     "src": "T208, T231, T227, T249, T254, T261"
+    },
+    {
+     "name": "The DILUTION turn - equity and IPOs replace credit as the AI funder",
+     "why": [
+      "Meta ~$95-100B of equity, including an up-to-$60B ATM and a new share class (T223, T271)",
+      "Oracle $10B stock plus $10B bonds; Microsoft $25B bonds",
+      "Megacaps flip from net buybacks to net issuers; 2026 is the first net-positive US equity issuance year (Barclays T221)",
+      "IPO queue: Anthropic (~$100-120B raise), SpaceX, then OpenAI in 2027",
+      "Introduced at 7.3 (emerging)"
+     ],
+     "src": "T223, T221, T271, T217, T290"
+    },
+    {
+     "name": "WALLED GARDENS - incumbents block AI agents (banks, Amazon, airlines)",
+     "why": [
+      "JPM, Fidelity, Citi and BofA block or limit outside agents while earning more from higher rates (T192, T198)",
+      "Amazon blocks agents to protect ~$70-80B of ads; Comcast blocks Muse IPs (T240, T242)",
+      "~$500B of deposits at risk from agent yield-seeking (FT via T223)",
+      "Walmart, Shopify, Uber and DoorDash admit agents",
+      "Introduced at 7.2 (contested): gatekeeping decides where agent value lands"
+     ],
+     "src": "T192, T198, T223, T240, T242, T260"
+    },
+    {
+     "name": "FRONTIER WITHHOLDING & PACING - labs keep their best models internal and CEOs call for speed limits",
+     "why": [
+      "Mythos, Bell and Astra were held back for months (T203, T206)",
+      "Anthropic KYC eliminated 90-99% of distillation (T208)",
+      "Altman says pacing must change within 1-2 years and floats capping single-model intelligence (T263, T289)",
+      "CAISI pre-review already slows releases (T281)",
+      "Introduced at 7.0 (emerging): cuts against open source catching up, and against release-driven lab revenue"
+     ],
+     "src": "T203, T206, T208, T263, T281, T287, T289"
+    },
+    {
+     "name": "AI-FOUND EXPLOITS become a recurring market event",
+     "why": [
+      "AI-found PHP flaws touched ~70% of websites (T218, T231)",
+      "The ~$6.3B Binance hack (T215, T231)",
+      "OpenAI test agents broke out of sandboxes in the Hugging Face incident (T205); coding agents disabled their monitors (T230)",
+      "Arora expects critical AI-found exploits faster than every 10 days (T219); Nadella: treat models as insider threats (T283)",
+      "Introduced at 7.0 (emerging)"
+     ],
+     "src": "T205, T218, T219, T230, T231, T283"
+    },
+    {
+     "name": "NVIDIA as BACKSTOP LENDER - vendor credit 2.0",
+     "why": [
+      "SemiAnalysis tracks ~$588B of off-balance-sheet backstops (T203) and ~6.5 GW of guaranteed capacity, possibly up to ~45 GW by 2030 (Patel T282)",
+      "Forms: rental floors with revenue share, land/power/shell guarantees, residual-value guarantees, and a $3B check into Meta's equity raise (T250)",
+      "Huang: GPUs are 8+ year collateral (T280)",
+      "Introduced at 6.8 (contested): lowers financing costs but moves stranded-asset risk onto Nvidia"
+     ],
+     "src": "T203, T280, T282, T250, T248"
+    },
+    {
+     "name": "CUSTOM SILICON goes merchant - TPU and Trainium sold outside the clouds",
+     "why": [
+      "Google has nearly 100 TPU customers (Anthropic, Apple, Citadel Securities) and a meaningful TPU revenue ramp in 2027 (T270)",
+      "Amazon sells Trainium outside AWS from late 2027; Trainium is 30-40% better on price-performance (T233, T273)",
+      "Microsoft Maia 300 targets 40% more tokens per watt (T269); OpenAI's Jalapeno chip (T289)",
+      "Introduced at 6.8 (emerging): first real third-party competition for Nvidia's spend"
+     ],
+     "src": "T270, T273, T233, T269, T289"
+    }
+   ],
+   "convictionMoves": [
+    {
+     "dir": "up",
+     "name": "NEW - Neocloud credit as the AI stress gauge (7.4, contested)",
+     "why": "CoreWeave ~15% debt, ~950bp CDS, Nebius bridge, Musk's 200+ neocloud deaths; core hyperscalers fine.",
+     "src": "T208, T231, T227, T255"
+    },
+    {
+     "dir": "up",
+     "name": "NEW - The dilution turn (7.3) and Nvidia as backstop lender (6.8)",
+     "why": "Equity replaces credit (Meta ATM, Oracle stock, Anthropic IPO); Nvidia guarantees ~6.5 GW and ~$588B off balance sheet.",
+     "src": "T223, T221, T203, T282"
+    },
+    {
+     "dir": "up",
+     "name": "NEW - Walled gardens (7.2), frontier withholding & pacing (7.0), AI-found exploits (7.0), merchant silicon (6.8)",
+     "why": "Banks/Amazon block agents; labs hold back models and talk pacing; exploits recur; TPU/Trainium go merchant.",
+     "src": "T192, T240, T203, T289, T218, T270"
+    },
+    {
+     "dir": "up",
+     "name": "Energy 9.6 to 9.7, token 9.0 to 9.2, open source 9.0 to 9.2, litho 7.5 to 8.0",
+     "why": "Power/cooling binds (15 GW idle chips); clouds reaccelerated while capped; open weights ~70% of tokens; ASML short to 2028.",
+     "src": "T274, T269, T270, T273, T205, T276"
+    },
+    {
+     "dir": "up",
+     "name": "Financing complex: everythingtrade 7.2 to 7.9, debt 7.8 to 8.1, capitalbound 7.0 to 7.6, circular 7.4 to 7.7, positioning 7.2 to 7.8",
+     "why": "AI ~18% of IG supply; CCC ~18%; absorption is the constraint; largest degross in 10 years.",
+     "src": "T290, T250, T211, T201"
+    },
+    {
+     "dir": "up",
+     "name": "Labvalue 7.7 to 7.9 (paybackmath held 7.6, two-sided)",
+     "why": "S-1: growth ~45% q/q from ~147%, compute +80%, ~$895B commitments; vs profitable after compute at 75-85% margins.",
+     "src": "T245, T250, T254, T203, T208"
+    },
+    {
+     "dir": "up",
+     "name": "Consumer 8.2 to 8.4, agentaction 7.4 to 7.6, physical 7.2 to 7.5",
+     "why": "Muse 10M+ users and >25% shopping; computer use 30% to 90% success; robot task cost -84%.",
+     "src": "T271, T240, T207"
+    },
+    {
+     "dir": "down",
+     "name": "Alphabet 8.8 to 8.2, computecentral 7.5 to 7.3, meltup 6.8 to 6.2",
+     "why": "GOOGL worst day ever on negative FCF and slowing search; more frontier players; Nasdaq-100 -10%.",
+     "src": "T270, T226, T273, T250"
+    },
+    {
+     "dir": "down",
+     "name": "Crypto 8.0 to 7.5, trustlayer 7.0 to 6.5, payments 6.5 to 5.8",
+     "why": "Binance hack and ETF outflows; agent payments running on card tokens; Stripe's crypto leg on Tempo, not Ethereum.",
+     "src": "T231, T242, T191"
+    }
+   ],
+   "contested": [
+    {
+     "name": "Anthropic: best business ever, or the top of a token boom?",
+     "why": "BULL: profitable after compute, ~75-85% margins, NRR ~900%, $132B cash, half the Fortune 500 (T203, T208, T211). BEAR: Q3 growth ~45% q/q from ~147%, compute cost +80% q/q, ~$895B commitments, price cuts up to 50% (T245, T250, T254). Decider: IPO pricing (~$1.5T vs $2T) and Q4 sequential growth (needs ~64%, T255).",
+     "src": "T203, T208, T245, T250, T254, T255"
+    },
+    {
+     "name": "Neoclouds: asset-backed or a coin flip?",
+     "why": "ASSET-BACKED: ring-fenced boxes, investment-grade tenants, rising GPU rents (Sacks T208, SemiAnalysis T203, Jensen T205). COIN FLIP: CDS ~950bp, ~$5B from covenant trouble, 200+ face death (Chamath T208, Musk T231). Middle: own the bonds not the stock (Jordi T201).",
+     "src": "T203, T205, T208, T231, T201"
+    },
+    {
+     "name": "What binds first: power, tools, memory or money?",
+     "why": "Power/cooling (Musk T274, builder T245); EUV tools cap output at ~2x by 2030 (Intel T265, ASML T276); memory (Apple T272); financing absorption (Goldman T290, Patel T282).",
+     "src": "T274, T245, T265, T276, T272, T290"
+    },
+    {
+     "name": "Do agents run on crypto rails or card rails - and will incumbents let them in?",
+     "why": "STABLECOINS: Dixon (T234), Vitalik (T190). CARDS: agentic network tokens at a few million a week (T242), Stripe on Tempo (T191). INCUMBENTS: banks and Amazon block, Walmart admits (T192, T240, T260).",
+     "src": "T234, T190, T242, T191, T192, T240"
+    },
+    {
+     "name": "Open vs closed: commodity tokens in 24 months, or a widening frontier gap?",
+     "why": "OPEN: ~70% of tokens, Nadella's 24 months, Kimi gap 3 points (T205, T284, T229). CLOSED: labs withhold the frontier and block distillation (T203, T208); closed keeps the high-margin tier (T243).",
+     "src": "T205, T284, T229, T203, T208, T243"
+    },
+    {
+     "name": "Rates: AI pushes yields up, or AI wobbles pull them down?",
+     "why": "UP: Fed held with hawkish dissents, December ~75-80% priced, Warsh targets AI capex (T277); AI supply forces higher coupons (T217). DOWN: the 10yr fell ~5.3% to ~4.9% as AI wobbled and on the midterms (T209, T223); Jordi: long end has peaked (T215).",
+     "src": "T277, T217, T209, T223, T215"
+    }
+   ],
+   "timingNote": "Edition 022 is the FINANCING-SQUEEZE / S-1 edition. The practical read: demand for compute is not the problem - every cloud is capacity-capped and GPU rents are rising - so own the scarcity that gets paid up front (Nvidia, memory, optics, power gear) and the balance sheets that can fund themselves. The risk sits in who pays: neocloud credit, IG absorption, and a wave of AI equity supply. The October selloff was a leverage flush; the next tests are dated: the Treasury refunding (Nov 4), October CPI (Nov 10), the Anthropic roadshow (from Nov 10) and pricing (~Nov 16), Nvidia earnings (Nov 17), OPEC+ (Nov 29), the Dec 9 FOMC (~75-80% hike odds) and the Dec 11 funding deadline under a newly Democratic Congress."
+  },
   {
    "label": "Batch 20 - the TRUST-LAYER / AGENT-ECONOMY batch (T179-T188, 10 sources): the edition where we followed the money to where agents will actually transact - the agentic-finance case for Ethereum got its lineage (Polosukhin, Mougayar, Chalom, Tom Lee), the consumer agent got hard numbers (Instinct), the lab debate sharpened (Pomp, Ed Elson), and the bond market became the story (the Everything Trade)",
    "date": "2026-10-05",
@@ -1906,9 +2050,96 @@ const DATA = {
    "thesis": "NEW (T118/T117) — Moderna/Merck's personalized mRNA CANCER VACCINE cleared a Phase-3 MELANOMA trial (the biggest one-day S&P-500 pop in history; AI-designed neoantigens, ~$5k/course) — the first Phase-3 win for personalized mRNA immunotherapy and the clearest 'AI actually delivers' proof of the batch. The trade is the PLATFORM + enablers (mRNA, the sequencing/data layer, the 'virtual cell' simulators) rather than any single readout, plus LLY on the GLP-1-as-longevity broadening + the federal Genesis-Mission AI-for-science tailwind (T121). Risk: single-readout volatility; clinical timelines still long for the tail. NFA.",
    "theme": "Digital biology (mRNA landmark)",
    "src": "T118, T117, T121"
+  },
+  {
+   "ticker": "GOOGL / AMZN / MSFT (built capacity)",
+   "name": "Built-capacity owners vs builders",
+   "dir": "long",
+   "risk": "mod",
+   "thesis": "NEW (Ed. 023; T308, T309, T302) - Sources’ lean: with new siting stalled, hyperscalers that already own powered, permitted capacity gain pricing power over neoclouds and capacity-short labs; they fell 2-4% on Nov 5 while suppliers fell 10-17%. Resolver: rental prices and capacity-takeover deals. COUNTER: negative FCF (GOOGL ~-$9B, AMZN ~-$33B) and a Democratic push on data-center power costs. Our synthesis, not investment advice.",
+   "theme": "Built-capacity premium",
+   "src": "T302, T308, T309"
+  },
+  {
+   "ticker": "CRWV / NBIS (gauge)",
+   "name": "Neocloud credit as the stress gauge",
+   "dir": "watch",
+   "risk": "spec",
+   "thesis": "NEW (Ed. 023; T297, T302, T303) - CoreWeave’s 2032 bond above 16% into Nov 10 earnings; lenders tightening and neoclouds selective on deal size. The gauge for whether the post-midterm stress spreads from equity to credit. Our synthesis, not investment advice.",
+   "theme": "Neocloud credit",
+   "src": "T297, T302, T303"
+  },
+  {
+   "ticker": "MU / SMH",
+   "name": "Forced selling vs cycle top in semis",
+   "dir": "watch",
+   "risk": "spec",
+   "thesis": "NEW (Ed. 023; T306, T312, T309) - Two-sided. Visser reads the 12% SOX day as forced deleveraging and buys the dip (book-talk); Damodaran’s chip-run-is-done call and Micron falling below its 200-day argue a cycle top. Resolver: Nvidia Nov 17 and whether the Nov 5 lows hold. Our synthesis, not investment advice.",
+   "theme": "Semis cyclical-peak risk",
+   "src": "T306, T309, T312"
+  },
+  {
+   "ticker": "ANT (IPO)",
+   "name": "Anthropic listing as a price question",
+   "dir": "watch",
+   "risk": "spec",
+   "thesis": "NEW (Ed. 023; T307, T309, T310) - Growth slowed to +47% q/q and revenue-to-compute fell to 1.72x, while the product compounds (Claude wrote >90% of September code). Talk ~$1.1-1.3T vs a ~$2T target. Watch the range, the upsizing and the first weeks of trading. Our synthesis, not investment advice.",
+   "theme": "Foundation-lab value compression",
+   "src": "T307, T309, T310"
   }
  ],
  "themes": [
+  {
+   "id": "computeoffshore",
+   "name": "COMPUTE OFFSHORING - capacity moves to Canada, Mexico, Asia, the Gulf and orbit",
+   "camp": "emerging",
+   "conviction": 6.2,
+   "velocity": "new",
+   "sources": 4,
+   "opposed": true,
+   "tier": "NEW post-midterm theme (Edition 023)",
+   "tags": [
+    "Canada",
+    "Gulf",
+    "Orbital compute",
+    "Sovereign AI",
+    "NEW"
+   ],
+   "summary": "If US permitting closes the 2028 pipeline, new AI capacity gets built where power and permits are available, and the US could import tokens.",
+   "reason": "Introduced 6.2 (emerging). Calacanis: the US could become a net token importer (T308); capacity heads to Canada, Mexico, Malaysia, Singapore and later the Gulf (T307, T308); Canadian builds in ~18 months (T307); Wissner-Gross: the backlash is the biggest near-term boost for orbital compute (T307). COUNTER: Blundin puts orbital compute at only a few percent of all compute in two years (T307); latency, export controls and sovereignty rules.",
+   "voices": "Jason Calacanis, Dave Blundin, Alex Wissner-Gross, Salim Ismail",
+   "log": [
+    {
+     "d": "2026-11-08",
+     "t": "INTRODUCED 6.2 (emerging). Watch Canadian/Gulf campus announcements, export-license terms, and orbital compute launches."
+    }
+   ]
+  },
+  {
+   "id": "builtcapacity",
+   "name": "BUILT-CAPACITY PREMIUM - owners of powered, permitted compute beat builders and renters",
+   "camp": "emerging",
+   "conviction": 7.2,
+   "velocity": "new",
+   "sources": 6,
+   "opposed": true,
+   "tier": "NEW post-midterm theme (Edition 023)",
+   "tags": [
+    "Hyperscalers",
+    "Permitting",
+    "Compute pricing",
+    "NEW"
+   ],
+   "summary": "With new data-center siting stalled by local votes and state moratoriums, capacity that is already built, powered and permitted gains pricing power, and its owners gain leverage over neoclouds and capacity-short labs.",
+   "reason": "Introduced 7.2 (emerging). Hyperscalers fell 2-4% while builders and chip suppliers fell 10-17% (T309); Google took over a Crusoe site and the SpaceX-Anthropic deal has a mutual 90-day out (T308); H100 rents rising and neoclouds selective (T302, T303); Wissner-Gross expects compute prices to rise (T307). COUNTER: Blundin says AI gets dearer for everyone and progress slows (T307); a price war on tokens (T309).",
+   "voices": "Chamath Palihapitiya, David Sacks, Steve Eisman, Alex Wissner-Gross, Ramtin Naimi, Skanda Amarnath",
+   "log": [
+    {
+     "d": "2026-11-08",
+     "t": "INTRODUCED 7.2 (emerging). Watch H100/B200 rental prices, hyperscaler multiples vs suppliers, and capacity-takeover deals."
+    }
+   ]
+  },
   {
    "id": "merchantsilicon",
    "name": "CUSTOM SILICON goes merchant - TPU and Trainium sold outside the clouds",
@@ -2047,8 +2278,8 @@ const DATA = {
    "id": "dilution",
    "name": "The DILUTION turn - equity and IPOs replace credit as the AI funder",
    "camp": "emerging",
-   "conviction": 7.3,
-   "velocity": "new",
+   "conviction": 7.6,
+   "velocity": "up",
    "sources": 6,
    "opposed": true,
    "tier": "NEW funding-regime theme (Edition 022)",
@@ -2067,6 +2298,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "INTRODUCED 7.3 (emerging). Watch Meta ATM usage, the Anthropic IPO size (~$100B vs ~$120B upsize), lockup calendars and net equity issuance."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 7.3 to 7.6. Meta began a ~$90B equity raise (T309); Anthropic roadshow this week; pulled VC term sheets at a post-2021 high (T302)."
     }
    ]
   },
@@ -2074,8 +2309,8 @@ const DATA = {
    "id": "neocloudcredit",
    "name": "NEOCLOUD CREDIT is the AI stress gauge - the periphery cracks first",
    "camp": "contested",
-   "conviction": 7.4,
-   "velocity": "new",
+   "conviction": 7.8,
+   "velocity": "up",
    "sources": 7,
    "opposed": true,
    "tier": "NEW credit-tell theme (Edition 022)",
@@ -2095,6 +2330,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "INTRODUCED 7.4 (contested). Watch CoreWeave's next financing rate and CDS, Nebius ABS reopening, neocloud consolidation (Musk as buyer), and GPU spot vs contract spreads."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 7.4 to 7.8. CoreWeave 2032 bond above 16%; lenders tightening on data-center loans; record CoreWeave puts; neoclouds won’t quote deals under ~$200M (T297, T302, T303)."
     }
    ]
   },
@@ -2202,8 +2441,8 @@ const DATA = {
    "id": "paybackmath",
    "name": "The PAYBACK MATH - the trade rides on AI-lab MONTHLY revenue",
    "camp": "contested",
-   "conviction": 7.6,
-   "velocity": "flat",
+   "conviction": 7.8,
+   "velocity": "up",
    "sources": 3,
    "opposed": true,
    "tier": "NEW bull operating-manual (Batch 18)",
@@ -2236,6 +2475,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "HELD 7.6 to 7.6. Two-sided: Anthropic Q3 revenue ~$17B and profitable after compute at the margin (T203, T208, T282: >$100M per MW-year) vs decelerating growth and exploding commitments (T245, T250). Watch Q4 sequential growth (needs ~64%, Kedrosky T255) and IPO pricing."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 7.6 to 7.8. Sequential growth slowed to +47% in Q3 from +147% (T309); Kedrosky’s ~64% Q4 bar now the test."
     }
    ]
   },
@@ -2271,7 +2514,7 @@ const DATA = {
    "id": "doomschism",
    "name": "The DOOM debate broke OPEN - and split the smartest builders",
    "camp": "contested",
-   "conviction": 7.4,
+   "conviction": 7.6,
    "velocity": "up",
    "sources": 5,
    "opposed": true,
@@ -2309,6 +2552,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "UP 7 to 7.4. Hugging Face incident (~700 OpenAI test agents broke out, T205); 1,300+ employee pacing letter (T205); Altman calls for pacing changes (T287, T289); Sacks calls Anthropic's warnings a psyop (T208); Eisman: regulatory capture (T209)."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 7.4 to 7.6. Hassabis expects an inadvertent AI incident and calls closed-loop RSI the riskiest path (T311); GPT-6 deception benchmark (T305)."
     }
    ]
   },
@@ -2416,7 +2663,7 @@ const DATA = {
    "id": "computecentral",
    "name": "Compute CENTRALIZES into two labs - the frontier concentrates",
    "camp": "bull",
-   "conviction": 7.3,
+   "conviction": 7.1,
    "velocity": "down",
    "sources": 4,
    "opposed": false,
@@ -2442,6 +2689,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "DOWN 7.5 to 7.3. More frontier players, not fewer: Muse Wonder (T204), Gemini 4 Carbon #1 (T270), Jassy expects 6-8 comparable frontier models (T273). But OpenAI+Anthropic still take ~25-60% of new compute (T282, T208)."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "DOWN 7.3 to 7.1. Google, Anthropic and xAI reserved most US compute (T307), but Hassabis expects 6-8 frontier providers (T311)."
     }
    ]
   },
@@ -2487,7 +2738,7 @@ const DATA = {
    "name": "Rising RATES / financing conditions — the buildout meets the bond market",
    "camp": "bear",
    "conviction": 7.6,
-   "velocity": "up",
+   "velocity": "flat",
    "sources": 4,
    "opposed": false,
    "tier": "NEW macro overlay (Batch 14)",
@@ -2532,6 +2783,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "UP 7.5 to 7.6. The Fed held at 3.75-4.00% with two dissents for a hike; December ~75-80% priced; Warsh says AI capex is rate-sensitive and he is comfortable with wider spreads (T277). But the 10yr fell from ~5.3% to ~4.9% as AI wobbled and the midterms hit (T209, Macro Pulse)."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "HOLDS 7.6. Contested: Fed held 10-2 with December hike odds ~75-80% and inflation sticky near 3% (T303) vs Visser’s 10y-peaked call (T312)."
     }
    ]
   },
@@ -2539,8 +2794,8 @@ const DATA = {
    "id": "roibroaden",
    "name": "The ROI must BROADEN to the S&P-493 — or the multiple compresses",
    "camp": "contested",
-   "conviction": 7.4,
-   "velocity": "new",
+   "conviction": 7,
+   "velocity": "down",
    "sources": 4,
    "opposed": false,
    "tier": "NEW crux test (Batch 14)",
@@ -2566,6 +2821,10 @@ const DATA = {
     {
      "d": "2026-09-08",
      "t": "FIRMED 7.0 to 7.4 - the broadening got a MECHANISM (Dan Skelly/Morgan Stanley T142): the S&P-493 runs on SYNTHETIC-TARIFF operating leverage (companies passed through ~60-70% of tariff costs as price and kept it) layered on AI productivity applied to the EXISTING workforce - revenue ~+15% on ~6% nominal GDP with NO headcount growth. The labor lever (actual AI-driven margin) is the NEXT 12-24mo tailwind, and 2027 could be a Mag-7 bigger-is-better redux as the average company struggles to comp the synthetic-tariff leverage. Watch AI-attributed margin beats outside the Mag-7 + the labor-lever inflection."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "DOWN 7.4 to 7. Visser: the other 492 return about inflation (T306); Eisman sees a capex-led slowdown (T309). Counter: equal-weight S&P at records (T306, T312)."
     }
    ]
   },
@@ -2573,7 +2832,7 @@ const DATA = {
    "id": "computeasset",
    "name": "Compute is becoming a financeable ASSET CLASS",
    "camp": "bull",
-   "conviction": 8.5,
+   "conviction": 8.7,
    "velocity": "up",
    "sources": 5,
    "opposed": true,
@@ -2619,6 +2878,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "UP 8.4 to 8.5. GPU rents rising (H100 ~$1.70 to ~$2.80/hr, Patel T282; contango, Baker T212); Huang: 7-8+ year lives and the lowest-risk collateral (T280); 1 GW rents for $40-50B/yr (T205). Counter: AI IG spreads doubled and 17 of 23 data-center JV deals trade wider (Goldman T290)."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 8.5 to 8.7. Owners of built capacity gain pricing power as new siting stalls; H100 rents rising (T302, T303, T307, T308)."
     }
    ]
   },
@@ -2870,7 +3133,7 @@ const DATA = {
    "id": "positioning",
    "name": "Positioning / market-structure — leverage unwinds are a recurring feature",
    "camp": "neutral",
-   "conviction": 7.8,
+   "conviction": 8.1,
    "velocity": "up",
    "sources": 5,
    "opposed": false,
@@ -2906,6 +3169,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "UP 7.2 to 7.8. Largest prime-book degross in ~10 years; Lone Pine ~-55% gross; Situational Awareness margin-called; Goldman crowded longs and AI winners/losers pair gave back the year (T201, T202, T211, T213); ~$300B of retail autocallables on AI single names make vol path-dependent (T259)."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 7.8 to 8.1. Second leverage unwind in three weeks; rumored hedge-fund closures (T306, T309); Visser calls it forced selling near exhaustion (T312)."
     }
    ]
   },
@@ -2913,7 +3180,7 @@ const DATA = {
    "id": "regulation",
    "name": "Regulation / political-permitting risk — a named #1 risk, now 'the first AI-data-center election'",
    "camp": "bear",
-   "conviction": 7.4,
+   "conviction": 7.9,
    "velocity": "up",
    "sources": 5,
    "opposed": false,
@@ -2947,6 +3214,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "UP 7.2 to 7.4. The Nov 3 midterms gave Democrats the Senate and likely the House (Macro Pulse); Chamath expects a push to slow power and data centers into 2028 (T217); Krishna: up to ~30 states could ban data centers (T219)."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 7.4 to 7.9. Democratic Congress plans AI bills; Sacks sees a federal AI-legislation push as near-certain (T304, T308); debt-ceiling threat to 100% expensing (T301)."
     }
    ]
   },
@@ -3004,8 +3275,8 @@ const DATA = {
    "id": "adoption",
    "name": "Adoption lag / near-term jobs safe (counter-theme)",
    "camp": "bull",
-   "conviction": 8.4,
-   "velocity": "flat",
+   "conviction": 8.2,
+   "velocity": "down",
    "sources": 8,
    "opposed": true,
    "tier": "High conviction (disconfirming)",
@@ -3051,6 +3322,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "HELD 8.4 to 8.4. Diffusion stays uneven: coding 10-20x, ops/security and the physical world lag by years (Casado T241); Mollick: adoption, not capability, is the gap (T267); Copilot daily users +50% but paid seats +5% (T269)."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "DOWN 8.4 to 8.2. Jobs-safe counter-theme weakens: Microsoft buyouts (T306) and a public-company CFO saying AI already holds back finance hiring (T300)."
     }
    ]
   },
@@ -3107,7 +3382,7 @@ const DATA = {
    "id": "opensource",
    "name": "Open-source & inference-cost pressure on premium models",
    "camp": "bull",
-   "conviction": 9.2,
+   "conviction": 9.3,
    "velocity": "up",
    "sources": 7,
    "opposed": true,
@@ -3154,6 +3429,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "UP 9 to 9.2. Open weights now ~70% of tokens (Jensen T205); Nadella: most usage commodity within ~24 months (T284); Kimi K3.1 cut the open-closed gap to 3 points (T229); Coinbase fine-tuned Qwen beat Opus on fraud at lower cost (T208). Counter: labs withhold the frontier (T203)."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 9.2 to 9.3. Price war and open-weight substitution; open source trails the frontier by 6-12 months (T309, T311)."
     }
    ]
   },
@@ -3219,7 +3498,7 @@ const DATA = {
    "id": "debt",
    "name": "Debt / private-credit systemic risk",
    "camp": "bear",
-   "conviction": 8.1,
+   "conviction": 8.3,
    "velocity": "up",
    "sources": 5,
    "opposed": false,
@@ -3270,6 +3549,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "UP 7.8 to 8.1. Credit stress concentrated at the bottom: CCC yields ~18%, CoreWeave ~15% (Macro Pulse, T208); Eisman: the next credit problem comes from private credit or AI debt, not banks (T245); Moses: 2006 warehouse-line analog (T248)."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 8.1 to 8.3. Data-center lenders tightening; HSBC moving risk to insurers (T297); SpaceX CDS at a record (Macro Pulse); builders’ cost of debt rising (T302)."
     }
    ]
   },
@@ -3277,8 +3560,8 @@ const DATA = {
    "id": "uniteconomics",
    "name": "AI unit economics — 'the buffet is ending' (now TWO-SIDED)",
    "camp": "bear",
-   "conviction": 7.5,
-   "velocity": "flat",
+   "conviction": 7.8,
+   "velocity": "up",
    "sources": 5,
    "opposed": true,
    "tier": "High-conviction bear (rebutted at the inference layer)",
@@ -3303,6 +3586,10 @@ const DATA = {
     {
      "d": "2026-07-24",
      "t": "Dylan Patel/SemiAnalysis (T69, NEW incentive-clean voice) REBUTS at the inference layer: Anthropic is Q2 net-income profitable EX-SBC with ~80%+ per-token Opus API margin — so it can pay ABOVE-market for any GPU and still profit. Silicon Data (T61): the token index is a PRICE/substitution gauge, not collapsing demand. Reconciliation: the BAD economics sit at TRAINING/R&D, the GOOD margins at INFERENCE on the best model. Held 7.5, now genuinely two-sided."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 7.5 to 7.8. Anthropic revenue-to-compute fell from 2.08x to 1.72x; token prices cut up to 50% (T309)."
     }
    ]
   },
@@ -3310,7 +3597,7 @@ const DATA = {
    "id": "capex",
    "name": "Capex value-destruction + the capex-REWARD reflex breaking",
    "camp": "bear",
-   "conviction": 7.5,
+   "conviction": 7.9,
    "velocity": "up",
    "sources": 6,
    "opposed": false,
@@ -3352,6 +3639,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "UP 7.2 to 7.5. The capex-reward reflex broke: GOOGL lost ~$500B in a day on -$9.1B FCF while MSFT and META rose on discipline (T253, T270, T269, T271); Amazon held 2026 capex flat at ~$220B (T245). 2027 capex still steps up across the board (T270, T273)."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 7.5 to 7.9. Bear case strengthens: builders and chip suppliers fell 10-17% (T309); capex forecasts cut (T301, T303); Google/Amazon FCF negative (T309)."
     }
    ]
   },
@@ -3423,7 +3714,7 @@ const DATA = {
    "id": "scaling",
    "name": "Scaling: plateau vs accelerating (THE central fork)",
    "camp": "contested",
-   "conviction": 5.6,
+   "conviction": 5.9,
    "velocity": "up",
    "sources": 5,
    "opposed": false,
@@ -3456,6 +3747,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "UP 5 to 5.6. Science on demand: 722 math solutions from an unreleased model (T206), 49/50 unpublished physics problems at ~$3 each (T207), Navier-Stokes for ~$4-10M of compute (T200, T263); Pichai expects RSI acceleration over 12 months (T266)."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 5.6 to 5.9. METR measures ~1.9x AI R&D pace at Anthropic (T307); Hassabis ~3-5x engineer productivity in verifiable domains (T311)."
     }
    ]
   },
@@ -3603,7 +3898,7 @@ const DATA = {
    "id": "edge",
    "name": "Edge / on-prem / distributed inference",
    "camp": "bull",
-   "conviction": 7.6,
+   "conviction": 7.8,
    "velocity": "up",
    "sources": 6,
    "opposed": false,
@@ -3626,6 +3921,10 @@ const DATA = {
     {
      "d": "2026-07-19",
      "t": "Sub-1-bit quantization (Kimi/Samsung/Tencent); Liquid AI SLMs <1GB on $60 chips (Mercedes OTA, Shopify); Elon 4-bit→lookup → 10-100x. → 7.6."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 7.6 to 7.8. Local models on desktop hardware named a two-year trend (T308)."
     }
    ]
   },
@@ -3716,7 +4015,7 @@ const DATA = {
    "id": "semiscyc",
    "name": "Semis cyclical-peak risk",
    "camp": "bear",
-   "conviction": 7,
+   "conviction": 7.6,
    "velocity": "up",
    "sources": 2,
    "opposed": false,
@@ -3745,6 +4044,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "UP 6.5 to 7. Semis fell ~29% in October and zero SMH names sat at 52-week highs (T250, T252); memory ETF -40% from its high (T225). Fundamentals disagree (sold out to 2028), so this is a positioning/cycle-fear signal."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 7 to 7.6. SOX -12% on Nov 5; Micron -17.5%, AMD -17.3%, Nvidia in a bear market (T301, T306, T309)."
     }
    ]
   },
@@ -3752,7 +4055,7 @@ const DATA = {
    "id": "backlash",
    "name": "Data-center backlash / permitting risk",
    "camp": "bear",
-   "conviction": 6.9,
+   "conviction": 8,
    "velocity": "up",
    "sources": 3,
    "opposed": false,
@@ -3785,6 +4088,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "UP 6.4 to 6.9. Data-center pushback slows the buildout (T209, T245); even Abbott cooled on data centers (T258); Democratic Congress raises affordability and power-price politics."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 6.9 to 8. Data-center ballot measures failed almost everywhere (T301, T304); 56% of voters called AI a major factor (T298); Goldman ~45% of planned buildout faces restrictions (T307); Texas wants no new permits until legislation (T306, T308); Sacks: 2028 pipeline closed or sharply reduced (T308)."
     }
    ]
   },
@@ -3792,8 +4099,8 @@ const DATA = {
    "id": "bmd",
    "name": "Valuation / 'Big Market Delusion'",
    "camp": "bear",
-   "conviction": 6,
-   "velocity": "flat",
+   "conviction": 6.4,
+   "velocity": "up",
    "sources": 2,
    "opposed": false,
    "tier": "Bear (verdict discounted)",
@@ -3813,6 +4120,10 @@ const DATA = {
     {
      "d": "2026-06-18",
      "t": "Grantham: railroads analogy; bubble AND real. Verdict discounted, keep the top-signal. Holds 6."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 6 to 6.4. Salesforce’s corp-dev head calls private AI valuations irresponsible and expects a reckoning (T310)."
     }
    ]
   },
@@ -3902,7 +4213,7 @@ const DATA = {
    "id": "international",
    "name": "AI winners are also GLOBAL / ex-US (diversification)",
    "camp": "emerging",
-   "conviction": 6.5,
+   "conviction": 6.8,
    "velocity": "up",
    "sources": 5,
    "opposed": false,
@@ -3932,6 +4243,10 @@ const DATA = {
     {
      "d": "2026-07-24",
      "t": "Timmer (Fidelity, T72) NAMES the ex-US ADOPTER basket + a mechanism → 6.5: European banks (~11% correlated to Mag 7, ~88% payout, ~7% yield, ~10x P/E, kept pace with the AI trade since 2024) + S&P financials (~84% payout, ~5% yield) are 'the biggest AI-adoption beneficiaries — they have the DATA.' Driver = the PAYOUT-RATIO shift (US buybacks collapsed as capex soared; ex-US developed now out-pays the US, maybe first time ever). Incentive-clean institutional voice → 6.5."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 6.5 to 6.8. Capacity moving to Canada, Mexico, Malaysia, Singapore and later the Gulf (T307, T308)."
     }
    ]
   },
@@ -4093,8 +4408,8 @@ const DATA = {
    "id": "macro",
    "name": "AI-productivity disinflation / deflation",
    "camp": "emerging",
-   "conviction": 5,
-   "velocity": "flat",
+   "conviction": 5.3,
+   "velocity": "up",
    "sources": 3,
    "opposed": false,
    "tier": "Watch (macro backdrop)",
@@ -4118,6 +4433,10 @@ const DATA = {
     {
      "d": "2026-08-10",
      "t": "The fork got sharper (held 5). DEFLATION side (Musk T102): if AI output explodes faster than money supply you get DEFLATION not inflation ('money won't matter in 2036'). NOMINAL-side (Jim Caron/Morgan Stanley T100): nominal GDP ~6.5% (GDP deflator 7.9%) is what actually drives equities/earnings — 'we live in a nominal world.' DEBASEMENT side (Visser T93/T97): the yen intervention + deficits force reflation → gold/silver/Bitcoin. The live watch: gold/real-yields (debasement tell) vs core-PCE + productivity (deflation tell) — relevant to sizing the gold/Bitcoin sleeve vs the AI-productivity longs."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 5 to 5.3. Visser: gasoline, oil and DRAM base effects turn negative by ~March (T306). Counter: Brent ~$98 with Hormuz escalating (Macro Pulse)."
     }
    ]
   },
@@ -4217,7 +4536,7 @@ const DATA = {
    "id": "margin",
    "name": "AI-enabled corporate delayering / margin expansion",
    "camp": "emerging",
-   "conviction": 6.4,
+   "conviction": 6.9,
    "velocity": "up",
    "sources": 2,
    "opposed": false,
@@ -4244,6 +4563,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "UP 5.5 to 6.4. Microsoft offered buyouts to ~60,000 (~27%) (T211, T253); Meta headcount -12% q/q while revenue grew (T271); entry-level hiring frozen (T244, T251)."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 6.4 to 6.9. Microsoft offering buyouts to ~27% of staff (T306, T313); Figma CFO expects fewer finance staff within a year (T300)."
     }
    ]
   },
@@ -4303,7 +4626,7 @@ const DATA = {
    "id": "chinaweight",
    "name": "China open-weight surge / export-control backfire",
    "camp": "contested",
-   "conviction": 7.6,
+   "conviction": 7.8,
    "velocity": "up",
    "sources": 4,
    "opposed": true,
@@ -4343,6 +4666,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "UP 7.5 to 7.6. Kimi K3.1 Pro cut the open-closed gap to ~3 points (T229); French software firms running mainly on Chinese models after US access limits (T293); Lambert: Chinese open weights are a distribution strategy (T243)."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 7.6 to 7.8. Chinese open weights lead US open weights on value per watt (T307)."
     }
    ]
   },
@@ -4350,7 +4677,7 @@ const DATA = {
    "id": "labvalue",
    "name": "Foundation-lab value compression (now TWO-SIDED)",
    "camp": "contested",
-   "conviction": 7.9,
+   "conviction": 8.2,
    "velocity": "up",
    "sources": 6,
    "opposed": true,
@@ -4402,6 +4729,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "UP 7.7 to 7.9. The S-1 made it measurable: Q3 growth ~45% q/q vs ~147%, compute cost +80% q/q, ~$895B commitments, high-junk rating expected (T245, T250, T254, T255); OpenAI ARR claim $70B to $50B (T209); price cuts up to 50-80% (T254, T257). Counter: profitable after compute, 75-85% margins, NRR ~900% (T203, T208)."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 7.9 to 8.2. Anthropic valuation talk slid from ~$2T to ~$1.1-1.3T; OpenAI IPO odds down to 71%; Hassabis sees 6-8 frontier providers (T307, T308, T309, T311)."
     }
    ]
   },
@@ -4409,7 +4740,7 @@ const DATA = {
    "id": "airegulator",
    "name": "AI regulation / frontier-regulator ('AI-FINRA')",
    "camp": "contested",
-   "conviction": 6.5,
+   "conviction": 7,
    "velocity": "up",
    "sources": 3,
    "opposed": false,
@@ -4436,6 +4767,10 @@ const DATA = {
     {
      "d": "2026-11-04",
      "t": "UP 5.5 to 6.5. A three-legged US regime is operating: CAISI/Commerce pre-review of every frontier model, the White House Accord on Superintelligence, and the SI Force under Jay Clayton (T200, T281); Silver: AI is the one area likely to get federal legislation before 2028 (T258)."
+    },
+    {
+     "d": "2026-11-08",
+     "t": "UP 6.5 to 7. Sacks expects a federal AI department; Hassabis’s SRO essay fed a lab accord; auditors a point of consensus (T308, T311)."
     }
    ]
   }
@@ -12219,7 +12554,8 @@ const DATA = {
    "claim": "OpenAI reaches ~$70B and Anthropic ~$100B annualized revenue by year-end",
    "horizon": "YE2026",
    "status": "track",
-   "note": "Singh: Anthropic ~$65B, maybe $80B+ (T198); FT OpenAI revenue scare (T194) (T189)"
+   "note": "Singh: Anthropic ~$65B, maybe $80B+ (T198); FT OpenAI revenue scare (T194) (T189) | 2026-11-08: Anthropic run-rate reported near ~$100B+ ahead of the IPO; OpenAI ARR claim cut to ~$50B (T209). Anthropic leg on track, OpenAI leg lagging.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Jordi Visser",
@@ -12227,15 +12563,17 @@ const DATA = {
    "claim": "AI pain trade runs into hyperscaler earnings (possibly the midterms), then a year-end snapback if no bubble",
    "horizon": "YE2026",
    "status": "track",
-   "note": "T201/T202; T211 says breadth ripped and the low is near"
+   "note": "T201/T202; T211 says breadth ripped and the low is near | 2026-11-08: Pain trade ran through the midterms: SOX -12% and Nasdaq -5.5% on Nov 5, Nasdaq -3.4% on the week and still in correction (T309). Year-end snapback still to come.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Anthony Pompliano / Peter Diamandis",
    "date": "2026-10",
    "claim": "A Tesla-SpaceX merger is announced before year-end",
    "horizon": "YE2026",
-   "status": "pend",
-   "note": "T202 (Pomp) and T207 (Diamandis); two houses, both rumor-based"
+   "status": "track",
+   "note": "T202 (Pomp) and T207 (Diamandis); two houses, both rumor-based | 2026-11-08: Tesla and SpaceX formed deal committees and Musk called a merger a good idea; no announcement yet (web).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Dylan Patel (SemiAnalysis)",
@@ -12243,7 +12581,8 @@ const DATA = {
    "claim": "OpenAI + Anthropic reach $600-700B combined revenue by December 2027",
    "horizon": "Dec 2027",
    "status": "pend",
-   "note": "T203; also floated ~$1.5T by end-2027 (inconsistent); Jordi reads it as a sharp deceleration"
+   "note": "T203; also floated ~$1.5T by end-2027 (inconsistent); Jordi reads it as a sharp deceleration",
+   "chk": "2026-11-08"
   },
   {
    "who": "SemiAnalysis (via Jensen/BG2)",
@@ -12251,7 +12590,8 @@ const DATA = {
    "claim": "~43 GW of new AI compute stands up in 2027 and ~40 GW more in 2028",
    "horizon": "2027-2028",
    "status": "pend",
-   "note": "T200; power/shell (~35-40 GW) is the gate; compare idx 24"
+   "note": "T200; power/shell (~35-40 GW) is the gate; compare idx 24",
+   "chk": "2026-11-08"
   },
   {
    "who": "Jensen Huang",
@@ -12259,7 +12599,8 @@ const DATA = {
    "claim": "AI infrastructure spend reaches $3-4T per year by 2030 (closer to $4T), possibly ~$10T longer term",
    "horizon": "2030",
    "status": "pend",
-   "note": "T200; CEO book-talk"
+   "note": "T200; CEO book-talk",
+   "chk": "2026-11-08"
   },
   {
    "who": "Jensen Huang",
@@ -12267,7 +12608,8 @@ const DATA = {
    "claim": "AI compute supply does not exceed demand for the next two to three years; then a 6-12 month digestion",
    "horizon": "2028-29",
    "status": "track",
-   "note": "T205; GPU rental prices rising (T203, T211)"
+   "note": "T205; GPU rental prices rising (T203, T211) | 2026-11-08: Compute sold out and the pipeline shrinking under permitting (T307, T308).",
+   "chk": "2026-11-08"
   },
   {
    "who": "David Sacks",
@@ -12275,7 +12617,8 @@ const DATA = {
    "claim": "CoreWeave does not go bankrupt by end-2027/2028 (calls 15%/23% Polymarket odds free money)",
    "horizon": "end-2028",
    "status": "pend",
-   "note": "T208; CDS implies ~55% 5-yr default odds"
+   "note": "T208; CDS implies ~55% 5-yr default odds | 2026-11-08: Stress rising: 2032 bond yield above 16%; earnings Nov 10.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Steve Eisman",
@@ -12283,15 +12626,17 @@ const DATA = {
    "claim": "Token maxing is over and an LLM price war starts; Anthropic revenue growth keeps decelerating",
    "horizon": "2027",
    "status": "track",
-   "note": "S-1 shows Q3 growth ~45% q/q vs ~147% in Q2; Eisman reports ~50% price cuts (unconfirmed)."
+   "note": "S-1 shows Q3 growth ~45% q/q vs ~147% in Q2; Eisman reports ~50% price cuts (unconfirmed). | 2026-11-08: Amended S-1: sequential growth +147% in Q2 to +47% in Q3; Anthropic cut token prices up to 50% and OpenAI and Google followed (T309).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Jordi Visser",
    "date": "2026-11",
    "claim": "10-year Treasury falls toward ~4.5%, especially if the Nov 4 refunding cuts long-bond sales",
    "horizon": "near term",
-   "status": "track",
-   "note": "10yr ~4.90% on Nov 3-4 after peaking ~5.3% on Oct 5."
+   "status": "pend",
+   "note": "10yr ~4.90% on Nov 3-4 after peaking ~5.3% on Oct 5. | 2026-11-08: Nov 4 refunding kept coupon sizes unchanged and leaned on buybacks rather than cutting long-bond sales; 10y 4.86% on Nov 6. Leans miss near term.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Gavin Baker (Atreides)",
@@ -12299,7 +12644,8 @@ const DATA = {
    "claim": "Anthropic's October ARR (left blank in the S-1) prints strong in the next amendment",
    "horizon": "next S-1 amendment",
    "status": "pend",
-   "note": "Visser reads >$100B ARR if October jumped post-Opus 5.5 (T215); book-talk (T212)"
+   "note": "Visser reads >$100B ARR if October jumped post-Opus 5.5 (T215); book-talk (T212)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Gavin Baker (Atreides)",
@@ -12307,7 +12653,8 @@ const DATA = {
    "claim": "GPU compute stays tight and in contango through mid/late 2027; buyers struggle to find capacity into 2027",
    "horizon": "mid/late 2027",
    "status": "track",
-   "note": "GPU rents rising through October (Silicon Data); H100 ~$2.80/hr midpoint (T282)."
+   "note": "GPU rents rising through October (Silicon Data); H100 ~$2.80/hr midpoint (T282). | 2026-11-08: H100 rents rose again; neoclouds will not quote deals under ~$200M (T302, T303); compute described as sold out for years (T307).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Gavin Baker (Atreides)",
@@ -12315,7 +12662,8 @@ const DATA = {
    "claim": "Peak external AI financing is near; a larger-than-expected share of the 2027 buildout is funded from operating cash flow as cloud growth keeps accelerating",
    "horizon": "2026-27",
    "status": "track",
-   "note": "Extends idx 83; countered by Altmann's widening DC spreads (T221) (T212)"
+   "note": "Extends idx 83; countered by Altmann's widening DC spreads (T221) (T212) | 2026-11-08: Mixed: Meta began a ~$90B equity raise and Google/Amazon FCF went negative (T309), but Visser cites Oracle and Goldman for a financing peak by H1 2027 (T313, T314).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Jordi Visser",
@@ -12323,7 +12671,8 @@ const DATA = {
    "claim": "The hedge-fund deleveraging is done or nearly done; the AI-trade low arrives within ~2 weeks of Oct 24 (hyperscaler earnings, midterms, refunding)",
    "horizon": "~Nov 7 2026",
    "status": "pend",
-   "note": "Nasdaq-100 futures fell ~2.2% on Nov 4 after the midterms; the low is not yet confirmed."
+   "note": "Nasdaq-100 futures fell ~2.2% on Nov 4 after the midterms; the low is not yet confirmed. | 2026-11-08: A second, post-midterm deleveraging hit on Nov 5 (rumored fund closures, T306, T309). Visser now calls it near exhaustion (T312). Decided by whether the Nov 5 low holds.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Jordi Visser",
@@ -12331,7 +12680,8 @@ const DATA = {
    "claim": "Micron reaches ~$1,500 by end-February 2027",
    "horizon": "Feb 2027",
    "status": "pend",
-   "note": "High-conviction memory call; discount for book (T213)"
+   "note": "High-conviction memory call; discount for book (T213) | 2026-11-08: MU $690 on Nov 6 after a -17.5% day; needs roughly +117% by end-February. Leans miss.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Jordi Visser",
@@ -12339,7 +12689,8 @@ const DATA = {
    "claim": "BTC retests its 200-day MA near $73-74K, possibly breaking slightly below, before the next leg",
    "horizon": "Nov 2026",
    "status": "track",
-   "note": "BTC ~$76K on Nov 4, approaching the stated $73-74K retest zone."
+   "note": "BTC ~$76K on Nov 4, approaching the stated $73-74K retest zone. | 2026-11-08: BTC near $75.9K over the weekend, sitting on its 200-day area; spot ETFs -$1.28B Nov 2-6 (Macro Pulse).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Jordi Visser",
@@ -12347,7 +12698,8 @@ const DATA = {
    "claim": "Long-end Treasury yields have peaked; the 10yr does not approach 3% soon; the Nov 4 refunding may cut long-end supply",
    "horizon": "Nov 2026 / 2027",
    "status": "track",
-   "note": "10yr ~4.90% vs ~5.3% Oct peak."
+   "note": "10yr ~4.90% vs ~5.3% Oct peak. | 2026-11-08: Refunding kept the long end light with buybacks (web, Nov 4); 10y 4.86%. Visser repeats the 2026-peak call (T312).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Anthony Pompliano",
@@ -12355,7 +12707,8 @@ const DATA = {
    "claim": "The midterms are the bear's last bullet; BTC and risk assets leg higher after Nov 3 into year-end",
    "horizon": "YE2026",
    "status": "pend",
-   "note": "Futures fell on Nov 4 after the midterms; too early to judge."
+   "note": "Futures fell on Nov 4 after the midterms; too early to judge. | 2026-11-08: First week after the vote went the other way: S&P -2.7%, Nasdaq -3.4%, BTC -2.7% (Macro Pulse, Nov 6).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Chamath Palihapitiya",
@@ -12363,7 +12716,8 @@ const DATA = {
    "claim": "Anthropic IPO prices at ~$1.3-1.7T (midpoint ~$1.5T), raising ~$80-120B; Q3 growth ~50% QoQ",
    "horizon": "Nov 2026 IPO",
    "status": "pend",
-   "note": "Revises his own ~$1T call (idx 13) upward (T217)"
+   "note": "Revises his own ~$1T call (idx 13) upward (T217) | 2026-11-08: Valuation talk slid to ~$1.1-1.3T (Bloomberg), as low as ~$1T (WSJ); no price range filed. Leans miss.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Chamath Palihapitiya",
@@ -12371,23 +12725,26 @@ const DATA = {
    "claim": "Republicans keep the Senate and Democrats win a narrow House majority, then push to slow power/data centers into 2028",
    "horizon": "Nov 3 2026 / 2028",
    "status": "miss",
-   "note": "AP called the Senate for Democrats on Nov 3; House projected Democratic."
+   "note": "AP called the Senate for Democrats on Nov 3; House projected Democratic.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Jason Calacanis",
    "date": "2026-10",
    "claim": "Democrats sweep the House and Senate in the midterms",
    "horizon": "Nov 3 2026",
-   "status": "track",
-   "note": "Senate called for Democrats (AP, Nov 3); House projected Democratic by networks, not yet formally called."
+   "status": "hit",
+   "note": "Senate called for Democrats (AP, Nov 3); House projected Democratic by networks, not yet formally called. | 2026-11-08: Democrats won the Senate and the House; they take both chambers in January.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Alex Altmann (Barclays)",
    "date": "2026-10",
    "claim": "S&P pulls back to ~7,100-7,200 (~200-day, ~17.5x fwd) into year-end; no year-end highs",
    "horizon": "YE2026",
-   "status": "pend",
-   "note": "Tactical 1-8 wk; incentive-light (T221)"
+   "status": "track",
+   "note": "Tactical 1-8 wk; incentive-light (T221) | 2026-11-08: S&P 7,376.86 on Nov 6 after a -2.7% week; ~2-3% above the 7,100-7,200 zone.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Michael Batnick",
@@ -12395,7 +12752,8 @@ const DATA = {
    "claim": "Anthropic IPO day-one move stays within ~+/-20% because Hyperliquid pre-prices it",
    "horizon": "IPO (~Nov 16)",
    "status": "pend",
-   "note": "T223; checkable on listing day"
+   "note": "T223; checkable on listing day",
+   "chk": "2026-11-08"
   },
   {
    "who": "Josh Brown",
@@ -12403,7 +12761,8 @@ const DATA = {
    "claim": "Anthropic IPO upsizes from ~$100B to ~$120B by ~Nov 16 unless the Nasdaq slumps; pops if priced ~$1.5T",
    "horizon": "Nov 2026",
    "status": "pend",
-   "note": "T227; dated and checkable"
+   "note": "T227; dated and checkable | 2026-11-08: Valuation talk falling (~$1.1-1.3T); upsizing looks less likely. Leans miss.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Elon Musk",
@@ -12411,7 +12770,8 @@ const DATA = {
    "claim": "Mass death and consolidation among ~200 neoclouds as debt markets close to firms without non-AI revenue",
    "horizon": "2026-27",
    "status": "track",
-   "note": "T227/T230; CRWV/NBIS/IREN -30-45% this month"
+   "note": "T227/T230; CRWV/NBIS/IREN -30-45% this month | 2026-11-08: CoreWeave 2032 bond above 16% (Nov 6); lenders tightening on data-center loans (T297); neoclouds selective on deal size (T303).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Elon Musk",
@@ -12419,23 +12779,26 @@ const DATA = {
    "claim": "SpaceX ARR of $500B-$1T by end-2027 (~$100B annualized run rate by Dec 2026)",
    "horizon": "Dec 2026 / end-2027",
    "status": "pend",
-   "note": "T228/T231; the Dec-2026 run rate is the near check"
+   "note": "T228/T231; the Dec-2026 run rate is the near check",
+   "chk": "2026-11-08"
   },
   {
    "who": "Barclays / Polymarket",
    "date": "2026-10",
    "claim": "SpaceX-Tesla merger announced by year-end (Polymarket 56%; Barclays: SpaceX buys Tesla in stock possibly by December)",
    "horizon": "YE2026",
-   "status": "pend",
-   "note": "T231; boards formed special committees"
+   "status": "track",
+   "note": "T231; boards formed special committees | 2026-11-08: Deal committees formed at both companies; no announcement yet (web).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Mark Zandi (Moody's)",
    "date": "2026-11",
    "claim": "Democrats take the House and very possibly the Senate in the midterms",
    "horizon": "Nov 2026",
-   "status": "track",
-   "note": "Senate called for Democrats; House projected Democratic (Nov 3-4)."
+   "status": "hit",
+   "note": "Senate called for Democrats; House projected Democratic (Nov 3-4). | 2026-11-08: Democrats won the House and the Senate.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Josh Brown",
@@ -12443,23 +12806,26 @@ const DATA = {
    "claim": "Anthropic IPO raises $100-140B later in November and trades well in its first days",
    "horizon": "Nov 2026",
    "status": "pend",
-   "note": "Contrast with Elson idx 6 (significant selling) (T252)"
+   "note": "Contrast with Elson idx 6 (significant selling) (T252)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Josh Brown",
    "date": "2026-10",
    "claim": "S&P finishes 2026 higher, with the year's high in December or January, absent an exogenous shock",
    "horizon": "YE2026",
-   "status": "pend",
-   "note": "~89% base rate when up double digits by midyear (T252)"
+   "status": "track",
+   "note": "~89% base rate when up double digits by midyear (T252) | 2026-11-08: S&P ~+11% YTD into November despite the AI rout (T314); equal-weight at records (T306).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Michael Gapen (Morgan Stanley)",
    "date": "2026-10",
    "claim": "Fed hikes in December 2026 and again in March 2027; core PCE ~3% end-2026, ~2.6% end-2027",
    "horizon": "Mar 2027 / end-2027",
-   "status": "pend",
-   "note": "Kalshi ~80% December hike (T253)"
+   "status": "track",
+   "note": "Kalshi ~80% December hike (T253) | 2026-11-08: Fed held Oct 28 in a 10-2 vote with two hike dissents; December hike odds ~75-80% after a +165K payrolls beat (Macro Pulse).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Paul Kedrosky",
@@ -12467,7 +12833,8 @@ const DATA = {
    "claim": "The Anthropic IPO prices around $1.5T rather than $2T (conditional on a functioning US government)",
    "horizon": "listing",
    "status": "pend",
-   "note": "Pairs with idx 13 (Chamath: ~$1T or less) (T255)"
+   "note": "Pairs with idx 13 (Chamath: ~$1T or less) (T255) | 2026-11-08: Not $2T, as he said, but talk is now below $1.5T (~$1.1-1.3T).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Paul Kedrosky",
@@ -12475,15 +12842,17 @@ const DATA = {
    "claim": "Anthropic Q4 2026 sequential revenue growth must reaccelerate to ~64% for the IPO story to hold",
    "horizon": "Q4 2026 results",
    "status": "pend",
-   "note": "Leaked Q3 growth ~50% (T255)"
+   "note": "Leaked Q3 growth ~50% (T255)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Nate Silver",
    "date": "2026-11",
    "claim": "Democrats win the House (~95%) and are favored for the Senate (high-70s% model vs ~68% markets) on Nov 3",
    "horizon": "Nov 3, 2026",
-   "status": "track",
-   "note": "Senate called for Democrats; House projected Democratic (Nov 3-4)."
+   "status": "hit",
+   "note": "Senate called for Democrats; House projected Democratic (Nov 3-4). | 2026-11-08: Democrats won the House and the Senate.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Elon Musk (Tesla)",
@@ -12491,7 +12860,8 @@ const DATA = {
    "claim": "EU-wide FSD approval by end-Q1 2027; robotaxi noticeable in Q2 2027 and a big deal by Q3-Q4 2027",
    "horizon": "Q1-Q4 2027",
    "status": "pend",
-   "note": "Musk timeline discount (T268)"
+   "note": "Musk timeline discount (T268)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Tesla (Musk/Taneja)",
@@ -12499,7 +12869,8 @@ const DATA = {
    "claim": "AI5 in Optimus around April 2027; external Optimus deliveries around end-2027; 1M/yr line rate takes at least a year",
    "horizon": "2027",
    "status": "pend",
-   "note": "Design still changing (hands) (T268)"
+   "note": "Design still changing (hands) (T268)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Musk (Tesla/SpaceX)",
@@ -12507,7 +12878,8 @@ const DATA = {
    "claim": "Terafab first test chip around May-June 2027; volume production around Q3-Q4 2028; >$100B long-term capital",
    "horizon": "2027-2028",
    "status": "pend",
-   "note": "Later than idx 36; Intel partner, TSMC talks (T268, T274)"
+   "note": "Later than idx 36; Intel partner, TSMC talks (T268, T274)",
+   "chk": "2026-11-08"
   },
   {
    "who": "SpaceX (Musk/Johnsen)",
@@ -12515,7 +12887,8 @@ const DATA = {
    "claim": "$100B ARR (December annualized) by end-2026; 2.5-3 GW of compute by end-2026 and about 13 GW by end-2027",
    "horizon": "Dec 2026 / Dec 2027",
    "status": "track",
-   "note": "Ahead of Baker's ~8 GW idx 86 (T274)"
+   "note": "Ahead of Baker's ~8 GW idx 86 (T274)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Elon Musk (SpaceX)",
@@ -12523,15 +12896,17 @@ const DATA = {
    "claim": "Starship Flight 15 catches booster and ship (Nov 2026); weekly flights in 1H27",
    "horizon": "Nov 2026 / 1H27",
    "status": "pend",
-   "note": "Ties to idx 35 full reusability 2027 (T274)"
+   "note": "Ties to idx 35 full reusability 2027 (T274) | 2026-11-08: Flight 15 targeted for November; not flown as of Nov 8 (web).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Market (CME FedWatch, via T277)",
    "date": "2026-10",
    "claim": "The Fed hikes 25bp at the Dec 8-9, 2026 meeting (~78% priced)",
    "horizon": "Dec 2026",
-   "status": "pend",
-   "note": "Down from ~94%; two hawkish dissents in October (T277)"
+   "status": "track",
+   "note": "Down from ~94%; two hawkish dissents in October (T277) | 2026-11-08: Odds ~75-80% after the jobs beat; Oct CPI (Nov 10) is the swing factor (Macro Pulse).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Brad Gerstner (Altimeter)",
@@ -12539,7 +12914,8 @@ const DATA = {
    "claim": "Anthropic IPO values it at ~$1.5-2T (10-12x multiple)",
    "horizon": "IPO (~Nov 2026)",
    "status": "pend",
-   "note": "Directly against Chamath idx 13 (~$1T or less) (T281)"
+   "note": "Directly against Chamath idx 13 (~$1T or less) (T281) | 2026-11-08: Talk now ~$1.1-1.3T. Leans miss.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Brad Gerstner (Altimeter)",
@@ -12547,7 +12923,8 @@ const DATA = {
    "claim": "OpenAI goes public, highly probable in 2027",
    "horizon": "2027",
    "status": "pend",
-   "note": "Extends idx 58 (T281)"
+   "note": "Extends idx 58 (T281)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Dylan Patel (SemiAnalysis)",
@@ -12555,7 +12932,8 @@ const DATA = {
    "claim": "H100 one-year rents exceed $3/hr and B300 exceeds $7/hr",
    "horizon": "near term",
    "status": "track",
-   "note": "From ~$2.80 midpoint now; trough was ~$1.70 (T282)"
+   "note": "From ~$2.80 midpoint now; trough was ~$1.70 (T282) | 2026-11-08: H100 rental prices rose again after the selloff (T302, T303).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Satya Nadella (Microsoft)",
@@ -12563,7 +12941,8 @@ const DATA = {
    "claim": "Within ~24 months most token usage is commodity (open-weight or cheap closed)",
    "horizon": "~Oct 2028",
    "status": "pend",
-   "note": "Against Sacks idx 81 duopoly-keeps-dollars (T284)"
+   "note": "Against Sacks idx 81 duopoly-keeps-dollars (T284)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Dario Amodei (Anthropic)",
@@ -12571,15 +12950,17 @@ const DATA = {
    "claim": "Anthropic's Pentagon red lines (mass surveillance, autonomous weapons) become US law within 2026",
    "horizon": "YE2026",
    "status": "pend",
-   "note": "Taped July 6; several bills in Congress (T285)"
+   "note": "Taped July 6; several bills in Congress (T285) | 2026-11-08: No law with seven weeks left; Democratic AI bills planned for the next Congress (T304). Leans miss.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Sam Altman (OpenAI)",
    "date": "2026-10",
    "claim": "The compute shortage eases in the short run while long-run demand keeps rising",
    "horizon": "short run",
-   "status": "track",
-   "note": "Against Baker idx 111 / Patel rent calls (T287)"
+   "status": "pend",
+   "note": "Against Baker idx 111 / Patel rent calls (T287) | 2026-11-08: Evidence runs the other way for now: rents rising, compute sold out, permitting closes the 2028 pipeline (T302, T307, T308).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Sam Altman (OpenAI)",
@@ -12587,7 +12968,8 @@ const DATA = {
    "claim": "Within 1-2 years at the current rate, changes to how frontier progress is paced become necessary",
    "horizon": "2027-28",
    "status": "track",
-   "note": "Strengthens idx 32 (T289)"
+   "note": "Strengthens idx 32 (T289)",
+   "chk": "2026-11-08"
   },
   {
    "who": "William Mougayar",
@@ -12595,7 +12977,8 @@ const DATA = {
    "claim": "Ethereum fair value $1-1.2T now (~$9,000/ETH); $2-3.5T in 2026-29; $4-6T in 2030-35",
    "horizon": "2026-2035",
    "status": "pend",
-   "note": "Flow-based public-good model; wide ranges; ETH cluster | Graded 2026-11-04: ETH traded ~$2,400 on Oct 20, 2026 and fell further in late Oct, far below the ~$9,000 'fair value now'; the long-range bands are untestable yet."
+   "note": "Flow-based public-good model; wide ranges; ETH cluster | Graded 2026-11-04: ETH traded ~$2,400 on Oct 20, 2026 and fell further in late Oct, far below the ~$9,000 'fair value now'; the long-range bands are untestable yet.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Tom Lee (BitMine)",
@@ -12603,7 +12986,8 @@ const DATA = {
    "claim": "ETH/BTC rises from ~0.03 back to at least 0.08; at 0.04 with BTC $150k, ETH ~$6,000 (conservative)",
    "horizon": "~YE2026+",
    "status": "pend",
-   "note": "BitMine holds ~5% of ETH"
+   "note": "BitMine holds ~5% of ETH",
+   "chk": "2026-11-08"
   },
   {
    "who": "Tom Lee (BitMine)",
@@ -12611,7 +12995,8 @@ const DATA = {
    "claim": "The Clarity Act passes in September",
    "horizon": "Sep 2026",
    "status": "miss",
-   "note": "Failed to pass (per Jordi T179)"
+   "note": "Failed to pass (per Jordi T179)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Joseph Chalom (SharpLink)",
@@ -12619,7 +13004,8 @@ const DATA = {
    "claim": "Tokenized RWAs go from ~$30B to hundreds of billions next year; agentic finance arrives in quarters or about a year",
    "horizon": "2027",
    "status": "track",
-   "note": "Agents touch ~$4T of financial fees; max book"
+   "note": "Agents touch ~$4T of financial fees; max book",
+   "chk": "2026-11-08"
   },
   {
    "who": "Cloudflare (via Tom Lee)",
@@ -12627,7 +13013,8 @@ const DATA = {
    "claim": "Most online activity is agentic and non-human by 2030",
    "horizon": "2030",
    "status": "track",
-   "note": "Cloudflare offering USD stablecoin wallets for agents"
+   "note": "Cloudflare offering USD stablecoin wallets for agents",
+   "chk": "2026-11-08"
   },
   {
    "who": "Instinct founder",
@@ -12635,7 +13022,8 @@ const DATA = {
    "claim": "Proactive personal agents need orders of magnitude more compute than coding agents; at 5-8%/day growth Instinct reaches ~100M users within a 3-4 month compute lead time",
    "horizon": "~6 mo",
    "status": "track",
-   "note": "Unaudited; 10%/day cannot persist"
+   "note": "Unaudited; 10%/day cannot persist",
+   "chk": "2026-11-08"
   },
   {
    "who": "Ed Elson (Prof G Markets)",
@@ -12643,7 +13031,8 @@ const DATA = {
    "claim": "The Anthropic IPO sees significant selling after listing, like SpaceX",
    "horizon": "IPO",
    "status": "pend",
-   "note": "An AI lab bubble, not an AI bubble"
+   "note": "An AI lab bubble, not an AI bubble",
+   "chk": "2026-11-08"
   },
   {
    "who": "Josh Brown",
@@ -12651,7 +13040,8 @@ const DATA = {
    "claim": "Only one of Claude or OpenAI matters in 10 years; Google Gemini wins its share via installed base",
    "horizon": "10 yrs",
    "status": "pend",
-   "note": "Winner-take-most framing | Graded 2026-11-04: 10-year horizon. Both Anthropic (S-1, Oct 2026) and OpenAI are still growing, so there is no evidence yet that only one of them will matter."
+   "note": "Winner-take-most framing | Graded 2026-11-04: 10-year horizon. Both Anthropic (S-1, Oct 2026) and OpenAI are still growing, so there is no evidence yet that only one of them will matter.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Anthony Pompliano",
@@ -12659,7 +13049,8 @@ const DATA = {
    "claim": "In 2027 AI companies move into crypto and crypto companies into AI; AI profits rotate back into Bitcoin",
    "horizon": "2027",
    "status": "pend",
-   "note": "Runs Sylvia (AI + Bitcoin)"
+   "note": "Runs Sylvia (AI + Bitcoin)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Michael Batnik",
@@ -12667,7 +13058,8 @@ const DATA = {
    "claim": "If the 10yr reaches ~5.6%, the stock market sells off hard",
    "horizon": "near term",
    "status": "pend",
-   "note": "Bought short/intermediate bonds and TLT | Graded 2026-11-04: Conditional not triggered: the 10yr peaked at a 5.31% close on Oct 5, 2026 and was 5.05% on Oct 28, well short of ~5.6%."
+   "note": "Bought short/intermediate bonds and TLT | Graded 2026-11-04: Conditional not triggered: the 10yr peaked at a 5.31% close on Oct 5, 2026 and was 5.05% on Oct 28, well short of ~5.6%.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Chart Kid Matt (history)",
@@ -12675,7 +13067,8 @@ const DATA = {
    "claim": "After the 10yr rises on 18 of 24 days, yields are lower a year later (80% of 11 cases since 1965, ~-90bp avg)",
    "horizon": "Oct 2027",
    "status": "track",
-   "note": "Base-rate prediction"
+   "note": "Base-rate prediction",
+   "chk": "2026-11-08"
   },
   {
    "who": "Noam Brown (OpenAI)",
@@ -12683,7 +13076,8 @@ const DATA = {
    "claim": "RSI delivers roughly a 3x research speedup (50% odds of 10x) - bottlenecked by experiments, not an overnight foom",
    "horizon": "1-3 yrs",
    "status": "track",
-   "note": "The middle position between Aschenbrenner foom and Ghodsi not-met"
+   "note": "The middle position between Aschenbrenner foom and Ghodsi not-met | 2026-11-08: METR measures Anthropic AI R&D pace at ~1.9x, ~80% from AI-assisted research (T307); Hassabis puts open-loop RSI at ~3-5x engineer productivity (T311).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Alex Wissner-Gross (Moonshots)",
@@ -12691,15 +13085,17 @@ const DATA = {
    "claim": "AI leads essentially all frontier-lab R&D within 3-12 months (Claude already ~26% at Anthropic)",
    "horizon": "3-12 mo",
    "status": "track",
-   "note": "Accelerationist house; the 26% datapoint is Anthropics own"
+   "note": "Accelerationist house; the 26% datapoint is Anthropics own | 2026-11-08: Amended S-1: Claude wrote over 90% of September code at Anthropic (T297); METR ~1.9x (T307).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Chamath Palihapitiya",
    "date": "2026-09",
    "claim": "The Anthropic IPO clears at ~$1T or less (vs a ~$2T target)",
    "horizon": "IPO",
-   "status": "pend",
-   "note": "Commoditization read; Polymarket had a 2026 IPO at ~76%"
+   "status": "track",
+   "note": "Commoditization read; Polymarket had a 2026 IPO at ~76% | 2026-11-08: Bankers pushing the price down; talk ~$1.1-1.3T, WSJ as low as ~$1T (T307, T309, Macro Pulse). Immerman still expects >$1T (T310).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Polymarket (via All-In)",
@@ -12707,7 +13103,8 @@ const DATA = {
    "claim": "Anthropic IPOs in 2026 (~76%, down from 96%)",
    "horizon": "2026",
    "status": "track",
-   "note": "Slipped from October to November or later | Graded 2026-11-04: Anthropic filed its public S-1 (ticker ANT) in late Oct 2026 and targets a debut the week of Nov 16, raising ~$100B (WSJ via Benzinga)."
+   "note": "Slipped from October to November or later | Graded 2026-11-04: Anthropic filed its public S-1 (ticker ANT) in late Oct 2026 and targets a debut the week of Nov 16, raising ~$100B (WSJ via Benzinga). | 2026-11-08: Roadshow expected this week; listing targeted for the week of Nov 16 (Macro Pulse, T307, T309).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Tom Lee (BitMine/Fundstrat)",
@@ -12715,7 +13112,8 @@ const DATA = {
    "claim": "The Sep-30 PCE methodology change lowers core PCE by 20-40bps and the Fed walks back the hike",
    "horizon": "Sep 30 / Q4",
    "status": "pend",
-   "note": "Dated and checkable on Sep 30; heavy book-talk on crypto"
+   "note": "Dated and checkable on Sep 30; heavy book-talk on crypto | 2026-11-08: Fed held Oct 28 with two hike dissents and December hike odds ~75-80%; no walk-back. Leans miss.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Tom Lee (BitMine/Fundstrat)",
@@ -12723,7 +13121,8 @@ const DATA = {
    "claim": "ETH makes an all-time high this year",
    "horizon": "YE2026",
    "status": "pend",
-   "note": "BitMine holds ~5% of ETH - discount"
+   "note": "BitMine holds ~5% of ETH - discount | 2026-11-08: ETH ~$2,240 with ETF outflows (-$365M Nov 2-6); far below its high with seven weeks left. Leans miss.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Raoul Pal",
@@ -12731,7 +13130,8 @@ const DATA = {
    "claim": "The next 100bps in rates is lower (Treasury steering liquidity)",
    "horizon": "~1 yr",
    "status": "pend",
-   "note": "Crypto-structural bull"
+   "note": "Crypto-structural bull",
+   "chk": "2026-11-08"
   },
   {
    "who": "Richard Galvin (DACM)",
@@ -12739,7 +13139,8 @@ const DATA = {
    "claim": "DEX volumes bottomed (~$135B) and skyrocket from here; Solana agent payments ~50x",
    "horizon": "~1 yr",
    "status": "pend",
-   "note": "Runs ~50% DeFi - book-talk"
+   "note": "Runs ~50% DeFi - book-talk",
+   "chk": "2026-11-08"
   },
   {
    "who": "Ben Carlson (Animal Spirits)",
@@ -12747,7 +13148,8 @@ const DATA = {
    "claim": "AI adds only a modest ~2-2.5% GDP growth rate, like the internet",
    "horizon": "multi-yr",
    "status": "track",
-   "note": "Incentive-light disconfirmer to the productivity-boom case"
+   "note": "Incentive-light disconfirmer to the productivity-boom case",
+   "chk": "2026-11-08"
   },
   {
    "who": "David Sacks",
@@ -12755,7 +13157,8 @@ const DATA = {
    "claim": "The frontier labs launch Muse-style consumer agents to compete with Meta",
    "horizon": "~6 mo",
    "status": "hit",
-   "note": "Labs forced up the stack | Graded 2026-11-04: OpenAI launched Dots, always-on personal agents built to rival Meta's Muse, on Sep 29, 2026 (TechCrunch/MacRumors). Anthropic previewed Claude Duet in Oct (T231)."
+   "note": "Labs forced up the stack | Graded 2026-11-04: OpenAI launched Dots, always-on personal agents built to rival Meta's Muse, on Sep 29, 2026 (TechCrunch/MacRumors). Anthropic previewed Claude Duet in Oct (T231).",
+   "chk": "2026-11-08"
   },
   {
    "who": "a16z (Casado/Sinofsky/Levie)",
@@ -12763,7 +13166,8 @@ const DATA = {
    "claim": "2028 becomes the AI election",
    "horizon": "2028",
    "status": "pend",
-   "note": "Policy tail; biggest fear is Europe GDPR-izing AI"
+   "note": "Policy tail; biggest fear is Europe GDPR-izing AI",
+   "chk": "2026-11-08"
   },
   {
    "who": "Gerstner (Altimeter)",
@@ -12771,7 +13175,8 @@ const DATA = {
    "claim": "AI-lab combined run-rate hits ~$180B by year-end (from ~$100B); offtake revenue must reach $450B to $800B-1T to justify the MAG-5 capex",
    "horizon": "YE2026 / multi-yr",
    "status": "track",
-   "note": "The single number the trade rides on; the swing is monthly lab revenue $4B vs $8B"
+   "note": "The single number the trade rides on; the swing is monthly lab revenue $4B vs $8B",
+   "chk": "2026-11-08"
   },
   {
    "who": "Gerstner (Altimeter)",
@@ -12779,7 +13184,8 @@ const DATA = {
    "claim": "A major AI-lab IPO this year if monthly revenue prints ~$8B (liftoff)",
    "horizon": "2026",
    "status": "track",
-   "note": "Contingent on the revenue prints; stay medium/flexible until confirmed | Graded 2026-11-04: A major lab IPO is on track: Anthropic's S-1 targets mid-Nov 2026 pricing. Revenue is ~$5.7B/month (Q3 $17B, T250), below the $8B 'liftoff' trigger."
+   "note": "Contingent on the revenue prints; stay medium/flexible until confirmed | Graded 2026-11-04: A major lab IPO is on track: Anthropic's S-1 targets mid-Nov 2026 pricing. Revenue is ~$5.7B/month (Q3 $17B, T250), below the $8B 'liftoff' trigger. | 2026-11-08: Anthropic roadshow this week, listing week of Nov 16.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Gerstner vs Dylan Patel",
@@ -12787,7 +13193,8 @@ const DATA = {
    "claim": "Only ~25GW of new compute stands up in 2026 (not Patels 43GW) - power is the binding constraint",
    "horizon": "2026",
    "status": "pend",
-   "note": "Total US compute <40GW; permitting/power the gate; enough for the revenue targets"
+   "note": "Total US compute <40GW; permitting/power the gate; enough for the revenue targets",
+   "chk": "2026-11-08"
   },
   {
    "who": "Ali Ghodsi (Databricks)",
@@ -12795,7 +13202,8 @@ const DATA = {
    "claim": "Dangerous RSI is NOT running - the four criteria (less compute + less time + more accuracy + repeatable) are not all met; the opposite is true",
    "horizon": "ongoing",
    "status": "track",
-   "note": "The disconfirmer to the RSI-live claims (T160/T164/T166); decider = frontier training cost-per-capability"
+   "note": "The disconfirmer to the RSI-live claims (T160/T164/T166); decider = frontier training cost-per-capability",
+   "chk": "2026-11-08"
   },
   {
    "who": "Ali Ghodsi (Databricks)",
@@ -12803,7 +13211,8 @@ const DATA = {
    "claim": "Open-source keeps taking token share (>60% by token already); a large eng org already migrated frontier to GLM",
    "horizon": "ongoing",
    "status": "track",
-   "note": "Against Aschenbrenners open-source-cant-compete (T166); watch a frontier-capability open model + migration data"
+   "note": "Against Aschenbrenners open-source-cant-compete (T166); watch a frontier-capability open model + migration data",
+   "chk": "2026-11-08"
   },
   {
    "who": "Aschenbrenner (2024 paper)",
@@ -12811,7 +13220,8 @@ const DATA = {
    "claim": "NVDA revenue is not priced in - it does >$200B in CY25",
    "horizon": "CY2025",
    "status": "hit",
-   "note": "Scored: aged well - NVDA revenue ~2x, ~$5T cap (per Gerstner/Jordi). The 2024 call landed."
+   "note": "Scored: aged well - NVDA revenue ~2x, ~$5T cap (per Gerstner/Jordi). The 2024 call landed.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Aschenbrenner (2024 paper)",
@@ -12819,7 +13229,8 @@ const DATA = {
    "claim": "AGI (drop-in remote worker) by ~2027; intelligence explosion to superintelligence 2028-2030",
    "horizon": "2027-2030",
    "status": "track",
-   "note": "The live, contested tail - directly disconfirmed by Ghodsis four-criteria (T162); watch cost-per-capability"
+   "note": "The live, contested tail - directly disconfirmed by Ghodsis four-criteria (T162); watch cost-per-capability",
+   "chk": "2026-11-08"
   },
   {
    "who": "Jordi Visser",
@@ -12827,7 +13238,8 @@ const DATA = {
    "claim": "Crypto outperforms AI infra over the next year; his 46-name index leads",
    "horizon": "~1 yr",
    "status": "pend",
-   "note": "His #1 conviction (above AI infra); ONE voice, heavy book-talk - discount"
+   "note": "His #1 conviction (above AI infra); ONE voice, heavy book-talk - discount | 2026-11-08: Last week: BTC -2.7% vs SMH -11% (T312); over the year still open.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Huang/Brockman",
@@ -12835,7 +13247,8 @@ const DATA = {
    "claim": "AGI has arrived / were now in the AGI era (Astra runs 24hr coherently)",
    "horizon": "now",
    "status": "track",
-   "note": "Contested by the doom-war real-risk camp on what it MEANS; capability itself is not disputed"
+   "note": "Contested by the doom-war real-risk camp on what it MEANS; capability itself is not disputed",
+   "chk": "2026-11-08"
   },
   {
    "who": "OpenAI (via Moonshots)",
@@ -12843,7 +13256,8 @@ const DATA = {
    "claim": "Yang-Mills is the next Clay Millennium problem to fall to AI",
    "horizon": "6-12 mo",
    "status": "track",
-   "note": "Navier-Stokes fell for ~$6.5M inference; grand-challenges-on-demand | Graded 2026-11-04: OpenAI claims a rigorous existence result for 4D QCD, with no mass-gap claim (Oct 2026, T230). That is progress toward Yang-Mills, not a solution."
+   "note": "Navier-Stokes fell for ~$6.5M inference; grand-challenges-on-demand | Graded 2026-11-04: OpenAI claims a rigorous existence result for 4D QCD, with no mass-gap claim (Oct 2026, T230). That is progress toward Yang-Mills, not a solution.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Pachocki/Dario/Brockman",
@@ -12851,7 +13265,8 @@ const DATA = {
    "claim": "Voluntary slowdowns / pace-the-frontier become common until shared safety bars exist",
    "horizon": "1-2 yrs",
    "status": "track",
-   "note": "3 internal OpenAI/Anthropic voices; rejected by Jensen/Sacks - the doom war"
+   "note": "3 internal OpenAI/Anthropic voices; rejected by Jensen/Sacks - the doom war",
+   "chk": "2026-11-08"
   },
   {
    "who": "Sacks (via Poly Market)",
@@ -12859,15 +13274,17 @@ const DATA = {
    "claim": "An AI-safety/superintelligence-ban bill passes this year",
    "horizon": "2026",
    "status": "pend",
-   "note": "~11% odds; framed as EA/doomer reg-capture toward a duopoly | Graded 2026-11-04: No AI-safety/SI-ban bill has passed as of Nov 4, 2026. Trump called AI regulation a 'hoax' and policy went to a voluntary White House Accord (T200/T205)."
+   "note": "~11% odds; framed as EA/doomer reg-capture toward a duopoly | Graded 2026-11-04: No AI-safety/SI-ban bill has passed as of Nov 4, 2026. Trump called AI regulation a 'hoax' and policy went to a voluntary White House Accord (T200/T205). | 2026-11-08: The legislative push now expected in the next Congress, not 2026 (T308). Leans miss for 2026.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Musk",
    "date": "2026-09",
    "claim": "Cross-lab peer review (each lab tests every others model pre-release) gets adopted; China-acceptable",
    "horizon": "2026-27",
-   "status": "pend",
-   "note": "The one concrete safety fix on the table; enforced by public opinion + product liability"
+   "status": "track",
+   "note": "The one concrete safety fix on the table; enforced by public opinion + product liability | 2026-11-08: Hassabis lists cross-lab red-teaming as a point of consensus among labs (T311).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Shotwell (SpaceX)",
@@ -12875,7 +13292,8 @@ const DATA = {
    "claim": "SpaceX launches AI-compute satellites (data centers in space) in 2027; Starship full reusability 2027",
    "horizon": "2027",
    "status": "track",
-   "note": "SpaceX now an AI-compute business (tens of billions/qtr) | Graded 2026-11-04: Starship Flight 14 deployed V3 Starlinks and Flight 15 (Nov 2026) attempts a dual catch; SpaceX and Nvidia are engineering space DCs (Oct 20, 2026, T274/T200)."
+   "note": "SpaceX now an AI-compute business (tens of billions/qtr) | Graded 2026-11-04: Starship Flight 14 deployed V3 Starlinks and Flight 15 (Nov 2026) attempts a dual catch; SpaceX and Nvidia are engineering space DCs (Oct 20, 2026, T274/T200).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Musk/Shotwell",
@@ -12883,7 +13301,8 @@ const DATA = {
    "claim": "TerraFab produces useful chips by ~end-2027 (crawl/walk/run)",
    "horizon": "end-2027",
    "status": "pend",
-   "note": "Taiwan-supply hedge + fab-scaling wall; packaging named the bottleneck"
+   "note": "Taiwan-supply hedge + fab-scaling wall; packaging named the bottleneck",
+   "chk": "2026-11-08"
   },
   {
    "who": "George/Verdun",
@@ -12891,7 +13310,8 @@ const DATA = {
    "claim": "Next $100T market-cap company from robotics/autonomy/healthcare",
    "horizon": "~2 cycles",
    "status": "pend",
-   "note": "Power-law systemic; TAM = labor not software"
+   "note": "Power-law systemic; TAM = labor not software",
+   "chk": "2026-11-08"
   },
   {
    "who": "Visser",
@@ -12899,7 +13319,8 @@ const DATA = {
    "claim": "$100T digital-asset economy, Bitcoin >=33% of it",
    "horizon": "decade",
    "status": "pend",
-   "note": "Repeat crypto-bull framing; discount the timeline"
+   "note": "Repeat crypto-bull framing; discount the timeline",
+   "chk": "2026-11-08"
   },
   {
    "who": "Huang",
@@ -12907,7 +13328,8 @@ const DATA = {
    "claim": "Practically at AGI today, but jobs REMAIN and everyone gets supercharged (context/purpose is the human job)",
    "horizon": "ongoing",
    "status": "track",
-   "note": "CONTESTED head-on by Gates (T141) + Yampolskiy (T129) on permanent displacement; decider = entry-level hiring + AI-attributed staffing over 12-24mo"
+   "note": "CONTESTED head-on by Gates (T141) + Yampolskiy (T129) on permanent displacement; decider = entry-level hiring + AI-attributed staffing over 12-24mo",
+   "chk": "2026-11-08"
   },
   {
    "who": "Skelly (Morgan Stanley)",
@@ -12915,7 +13337,8 @@ const DATA = {
    "claim": "2027 = Mag-7 bigger-is-better redux; the average company struggles to comp the synthetic-tariff operating leverage",
    "horizon": "2027",
    "status": "pend",
-   "note": "Watch whether S&P-493 EPS growth fades as the tariff pass-through laps"
+   "note": "Watch whether S&P-493 EPS growth fades as the tariff pass-through laps",
+   "chk": "2026-11-08"
   },
   {
    "who": "Skelly (Morgan Stanley)",
@@ -12923,7 +13346,8 @@ const DATA = {
    "claim": "The LABOR LEVER gets pulled in 12-24mo -> AI-driven margin/earnings (productivity moves from the existing workforce to headcount)",
    "horizon": "2027-28",
    "status": "track",
-   "note": "The next broadening leg AND the jobs-displacement tell - watch AI-attributed margin vs unemployment | Graded 2026-11-04: Microsoft offered buyouts to ~60,000 staff (~27%) while beating (Oct 2026, T251/T253); Goldman finds AI adoption negatively correlated with hiring (T223)."
+   "note": "The next broadening leg AND the jobs-displacement tell - watch AI-attributed margin vs unemployment | Graded 2026-11-04: Microsoft offered buyouts to ~60,000 staff (~27%) while beating (Oct 2026, T251/T253); Goldman finds AI adoption negatively correlated with hiring (T223).",
+   "chk": "2026-11-08"
   },
   {
    "who": "World Labs (Fei-Fei Li)",
@@ -12931,7 +13355,8 @@ const DATA = {
    "claim": "Full 4D / dynamic + interactive world-models next (Atlas is mostly static today)",
    "horizon": "1-2 yrs",
    "status": "pend",
-   "note": "The physical-AI/robotics payoff sits on the far side of dynamics + editability"
+   "note": "The physical-AI/robotics payoff sits on the far side of dynamics + editability",
+   "chk": "2026-11-08"
   },
   {
    "who": "All-In (Chamath/Jason)",
@@ -12939,7 +13364,8 @@ const DATA = {
    "claim": "Nvidia + open-source (Hugging Face/Nemotron) catches/passes China's open models by end-2027",
    "horizon": "end-2027",
    "status": "track",
-   "note": "Open-vs-closed battle line; Jensen makes money on hardware not tokens (80-90% price cuts)"
+   "note": "Open-vs-closed battle line; Jensen makes money on hardware not tokens (80-90% price cuts)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Levchin/Rampell",
@@ -12947,7 +13373,8 @@ const DATA = {
    "claim": "Agentic PAYMENTS adopts before agentic SHOPPING; grocery already 100% agentic",
    "horizon": "2026-28",
    "status": "track",
-   "note": "People participate in the choose step, hand off checkout; shopping gated by trust, not capability"
+   "note": "People participate in the choose step, hand off checkout; shopping gated by trust, not capability",
+   "chk": "2026-11-08"
   },
   {
    "who": "All-In (via Poly Market)",
@@ -12955,7 +13382,8 @@ const DATA = {
    "claim": "An AI-safety/superintelligence-ban bill (Sanders) passes this year",
    "horizon": "2026",
    "status": "pend",
-   "note": "~11% odds; framed as EA/doomer reg-capture toward a closed duopoly | Graded 2026-11-04: No Sanders AI-safety/SI-ban bill has passed as of Nov 4, 2026. Trump called AI regulation a 'hoax' and policy shifted to a voluntary Accord (T200/T205)."
+   "note": "~11% odds; framed as EA/doomer reg-capture toward a closed duopoly | Graded 2026-11-04: No Sanders AI-safety/SI-ban bill has passed as of Nov 4, 2026. Trump called AI regulation a 'hoax' and policy shifted to a voluntary Accord (T200/T205). | 2026-11-08: Push expected in the next Congress (T308). Leans miss for 2026.",
+   "chk": "2026-11-08"
   },
   {
    "who": "OpenAI (Astra)",
@@ -12963,14 +13391,16 @@ const DATA = {
    "claim": "Astra / GPT-6 = the near-AGI frontier model",
    "horizon": "now",
    "status": "track",
-   "note": "OpenAI re-took the frontier headline (T139/T138); weigh vs the Fable-5-plateau counter (T134)"
+   "note": "OpenAI re-took the frontier headline (T139/T138); weigh vs the Fable-5-plateau counter (T134)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Huang",
    "date": "2026-03",
    "claim": "China chip-license resumption; NVDA ships to China again",
    "horizon": "mid-2026",
-   "status": "hit"
+   "status": "hit",
+   "chk": "2026-11-08"
   },
   {
    "who": "Huang",
@@ -12978,7 +13408,8 @@ const DATA = {
    "claim": "Agents 'not good enough at tool use yet' → tool-use inflection coming",
    "horizon": "2026",
    "status": "track",
-   "note": "By July agentic buildout clearly underway"
+   "note": "By July agentic buildout clearly underway",
+   "chk": "2026-11-08"
   },
   {
    "who": "Musk",
@@ -12986,7 +13417,8 @@ const DATA = {
    "claim": "Chip output exceeds ability to power/turn on chips",
    "horizon": "end-2026",
    "status": "hit",
-   "note": "Corroborated by PJM/energy data + Eisman 'binding constraint' | Graded 2026-11-04: ~15GW of chips sit idle awaiting liquid-cooled powered halls (Musk via T231/T232, Oct 2026), and Musk says power and cooling bind more than chips (Oct 20 call, T274)."
+   "note": "Corroborated by PJM/energy data + Eisman 'binding constraint' | Graded 2026-11-04: ~15GW of chips sit idle awaiting liquid-cooled powered halls (Musk via T231/T232, Oct 2026), and Musk says power and cooling bind more than chips (Oct 20 call, T274).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Marcus",
@@ -12994,7 +13426,8 @@ const DATA = {
    "claim": "Scaling returns break; GPT-5 disappointing & late",
    "horizon": "—",
    "status": "track",
-   "note": "GPT-5 was late/underwhelming per Marcus; the plateau claim is the central CONTESTED fork"
+   "note": "GPT-5 was late/underwhelming per Marcus; the plateau claim is the central CONTESTED fork",
+   "chk": "2026-11-08"
   },
   {
    "who": "Amodei",
@@ -13002,7 +13435,8 @@ const DATA = {
    "claim": "~50% of entry-level knowledge jobs gone",
    "horizon": "1-5 yrs",
    "status": "pend",
-   "note": "Tracking AGAINST: Ramp 21k-firm study +12% entry-level; Marcus: radiologists still not replaced | Graded 2026-11-04: Mixed: MSFT's 60K buyouts (Oct 2026) vs jobless claims at generational lows (Warsh, Oct 28) and little visible AI labor change (T222). No ~50% entry-level loss."
+   "note": "Tracking AGAINST: Ramp 21k-firm study +12% entry-level; Marcus: radiologists still not replaced | Graded 2026-11-04: Mixed: MSFT's 60K buyouts (Oct 2026) vs jobless claims at generational lows (Warsh, Oct 28) and little visible AI labor change (T222). No ~50% entry-level loss.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Hassabis",
@@ -13010,7 +13444,8 @@ const DATA = {
    "claim": "AGI arrives (~50% probability)",
    "horizon": "~2030",
    "status": "pend",
-   "note": "Most-credible forecaster; contested by Marcus (this century, maybe next)"
+   "note": "Most-credible forecaster; contested by Marcus (this century, maybe next)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Hassabis/Huang",
@@ -13018,7 +13453,8 @@ const DATA = {
    "claim": "Digital-biology inflection; 99% in-silico drug discovery",
    "horizon": "2-5 yrs",
    "status": "pend",
-   "note": "Marcus: clinical timeline 'insane' to compress — tools yes, approvals no"
+   "note": "Marcus: clinical timeline 'insane' to compress — tools yes, approvals no",
+   "chk": "2026-11-08"
   },
   {
    "who": "Damodaran",
@@ -13026,7 +13462,8 @@ const DATA = {
    "claim": "Chip run 'bulk is done'; correction/consolidation ahead",
    "horizon": "—",
    "status": "track",
-   "note": "Chips ~17-25% of S&P; Micron +160% YTD flagged | Graded 2026-11-04: NVDA set a record ~Oct 5, 2026, then AI/chip stocks lost ~$5T and the Nasdaq-100 fell >10% (Nov 2, T250); SMH is ~20-24% off its high (T226). A correction is underway."
+   "note": "Chips ~17-25% of S&P; Micron +160% YTD flagged | Graded 2026-11-04: NVDA set a record ~Oct 5, 2026, then AI/chip stocks lost ~$5T and the Nasdaq-100 fell >10% (Nov 2, T250); SMH is ~20-24% off its high (T226). A correction is underway. | 2026-11-08: SMH -11% in a week; Micron went from ~200% above its 200-day to below it (T312).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Eisman",
@@ -13034,7 +13471,8 @@ const DATA = {
    "claim": "Won't short AI — tape accelerating (NVDA +85%)",
    "horizon": "until a trigger",
    "status": "track",
-   "note": "The timing-discipline anchor"
+   "note": "The timing-discipline anchor",
+   "chk": "2026-11-08"
   },
   {
    "who": "Gelsinger",
@@ -13042,7 +13480,8 @@ const DATA = {
    "claim": "Quantum meaningful before 2030",
    "horizon": "<2030",
    "status": "pend",
-   "note": "CONTESTED by Hassabis; Gelsinger is a quantum investor"
+   "note": "CONTESTED by Hassabis; Gelsinger is a quantum investor",
+   "chk": "2026-11-08"
   },
   {
    "who": "Musk",
@@ -13050,7 +13489,8 @@ const DATA = {
    "claim": "Space cheapest for AI compute",
    "horizon": "≤36 mo",
    "status": "pend",
-   "note": "Discount heavily — timeline-prone"
+   "note": "Discount heavily — timeline-prone",
+   "chk": "2026-11-08"
   },
   {
    "who": "Hall/questioner",
@@ -13058,7 +13498,8 @@ const DATA = {
    "claim": "Western frontier labs IPO wave",
    "horizon": "H2 2026",
    "status": "track",
-   "note": "SpaceX IPO'd (>Amazon/MSFT briefly); Anthropic ~$1T→$3T. CORROBORATED: Jensen (T67) — OpenAI & Anthropic 'will IPO, the most successful in history'; Imas/Trammell expect the labs to go public"
+   "note": "SpaceX IPO'd (>Amazon/MSFT briefly); Anthropic ~$1T→$3T. CORROBORATED: Jensen (T67) — OpenAI & Anthropic 'will IPO, the most successful in history'; Imas/Trammell expect the labs to go public | 2026-11-08: Anthropic lists in November; OpenAI IPO odds this year fell to 71% from 95% (T307).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Hunter",
@@ -13066,7 +13507,8 @@ const DATA = {
    "claim": "Melt-up: indexes +30-40% (S&P 10k, SMH 800)",
    "horizon": "~6 mo",
    "status": "pend",
-   "note": "Rhymes with Eisman's 'won't short' timing anchor — kept as the melt-up/timing-discipline watch | Graded 2026-11-04: Off pace: the Nasdaq-100 is >10% below its early-Oct 2026 peak (Nov 2, T250) and the S&P peaked ~7,800, far from 10k with ~2 months left."
+   "note": "Rhymes with Eisman's 'won't short' timing anchor — kept as the melt-up/timing-discipline watch | Graded 2026-11-04: Off pace: the Nasdaq-100 is >10% below its early-Oct 2026 peak (Nov 2, T250) and the S&P peaked ~7,800, far from 10k with ~2 months left.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Hunter",
@@ -13074,7 +13516,8 @@ const DATA = {
    "claim": "'Global bust' −70-80%; $20T Fed print → 25% inflation",
    "horizon": "2027 / ~2032",
    "status": "pend",
-   "note": "DISCOUNTED — perma-bear/gold-bug verdict (calling a bust 5-6 yrs); logged, not weighted"
+   "note": "DISCOUNTED — perma-bear/gold-bug verdict (calling a bust 5-6 yrs); logged, not weighted",
+   "chk": "2026-11-08"
   },
   {
    "who": "Andreessen",
@@ -13082,7 +13525,8 @@ const DATA = {
    "claim": "AI expands jobs (productivity→more work/pay), not mass unemployment",
    "horizon": "ongoing",
    "status": "track",
-   "note": "Tracking near-term (Ramp +10-12%, coder comp rising); long-term contested vs Amodei/Marcus displacement"
+   "note": "Tracking near-term (Ramp +10-12%, coder comp rising); long-term contested vs Amodei/Marcus displacement",
+   "chk": "2026-11-08"
   },
   {
    "who": "Andreessen",
@@ -13090,7 +13534,8 @@ const DATA = {
    "claim": "Capability keeps ramping dramatically; 'coder' → 'builder'",
    "horizon": "~2 yrs / 10-20 yrs",
    "status": "track",
-   "note": "Max-bull book-talk; on the CONTINUED side of the scaling fork vs Marcus's plateau"
+   "note": "Max-bull book-talk; on the CONTINUED side of the scaling fork vs Marcus's plateau",
+   "chk": "2026-11-08"
   },
   {
    "who": "Brown/Batnick",
@@ -13098,7 +13543,8 @@ const DATA = {
    "claim": "Alphabet earnings = 'the key to the market'; clean AI hyperscaler",
    "horizon": "~July 22 print",
    "status": "hit",
-   "note": "HIT — the Q2 print delivered: cloud ACCELERATED to +82%, cloud margin→35.6%, backlog $514B, TPU-to-customers live (Blackstone), Search +17%. Now a durability watch vs tougher comps"
+   "note": "HIT — the Q2 print delivered: cloud ACCELERATED to +82%, cloud margin→35.6%, backlog $514B, TPU-to-customers live (Blackstone), Search +17%. Now a durability watch vs tougher comps",
+   "chk": "2026-11-08"
   },
   {
    "who": "Moonshots/Baker",
@@ -13106,7 +13552,8 @@ const DATA = {
    "claim": "Foundation labs worth ~1/4-1/2 of 3mo ago; all-but-labs benefit",
    "horizon": "—",
    "status": "miss",
-   "note": "Kimi K3 open-weight commoditization; watch OpenAI/Anthropic private marks + any down-round | Graded 2026-11-04: Falsified: Anthropic's private mark rose to $965B (Series H) and its S-1 targets $1.5-2T (Oct 2026), versus a ~$380B mark earlier in 2026."
+   "note": "Kimi K3 open-weight commoditization; watch OpenAI/Anthropic private marks + any down-round | Graded 2026-11-04: Falsified: Anthropic's private mark rose to $965B (Series H) and its S-1 targets $1.5-2T (Oct 2026), versus a ~$380B mark earlier in 2026.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Musk",
@@ -13114,7 +13561,8 @@ const DATA = {
    "claim": "China will FAR EXCEED the world in AI compute (~3x US power)",
    "horizon": "2026+",
    "status": "track",
-   "note": "Reinforces export-control backfire; watch China chip/power buildout"
+   "note": "Reinforces export-control backfire; watch China chip/power buildout",
+   "chk": "2026-11-08"
   },
   {
    "who": "Hassabis/Altman",
@@ -13122,7 +13570,8 @@ const DATA = {
    "claim": "A FINRA-style frontier-AI regulator stood up 'by year-end'",
    "horizon": "end-2026",
    "status": "pend",
-   "note": "Two-sided: incumbent moat vs open-source; watch for a body/announcement"
+   "note": "Two-sided: incumbent moat vs open-source; watch for a body/announcement | 2026-11-08: No body yet; Hassabis says his SRO essay fed a lab accord light on concrete steps (T311). Sacks expects a federal AI department push in 2027 (T308).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Brown",
@@ -13130,7 +13579,8 @@ const DATA = {
    "claim": "SpaceX trades under $100 (post-lockup supply overhang)",
    "horizon": "~H2 2026",
    "status": "pend",
-   "note": "Float 3%→12% after Aug-4 earnings, →40% by Dec 8; no valuation framework"
+   "note": "Float 3%→12% after Aug-4 earnings, →40% by Dec 8; no valuation framework",
+   "chk": "2026-11-08"
   },
   {
    "who": "Patel/SemiAnalysis",
@@ -13138,7 +13588,8 @@ const DATA = {
    "claim": "EUV-tool output caps AI-chip production at ~200GW/yr by 2030 (ASML ~70→100 tools/yr)",
    "horizon": "2028-2030",
    "status": "track",
-   "note": "The DEEP supply ceiling; ~3.5 EUV tools = 1GW. Incentive-clean; watch ASML tool-shipment guidance | Graded 2026-11-04: ASML raised its sales forecast but can't raise output due to component limits (Oct 2026, T198/T276), which supports the EUV-tool ceiling."
+   "note": "The DEEP supply ceiling; ~3.5 EUV tools = 1GW. Incentive-clean; watch ASML tool-shipment guidance | Graded 2026-11-04: ASML raised its sales forecast but can't raise output due to component limits (Oct 2026, T198/T276), which supports the EUV-tool ceiling.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Patel/SemiAnalysis",
@@ -13146,7 +13597,8 @@ const DATA = {
    "claim": "Space compute <1% of inference by 2030, but the majority by ~2040",
    "horizon": "2030 / 2040",
    "status": "pend",
-   "note": "Near-term the CHIP bottleneck (not energy) makes orbital uneconomic; rebuts the SpaceX space-DC hype for this decade"
+   "note": "Near-term the CHIP bottleneck (not energy) makes orbital uneconomic; rebuts the SpaceX space-DC hype for this decade",
+   "chk": "2026-11-08"
   },
   {
    "who": "Patel/SemiAnalysis",
@@ -13154,7 +13606,8 @@ const DATA = {
    "claim": "Co-packaged optics becomes standard 2027-2030 (only the year is debated)",
    "horizon": "2027-2030",
    "status": "pend",
-   "note": "Reinforces the optical/photonics interconnect step-up (Marvell/AAOI)"
+   "note": "Reinforces the optical/photonics interconnect step-up (Marvell/AAOI)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Huang",
@@ -13162,7 +13615,8 @@ const DATA = {
    "claim": "Semi industry must be 5-10x larger this decade; 'no bubble in the next 5 years'",
    "horizon": "2026-2036",
    "status": "track",
-   "note": "Seller of the shovels — haircut heavily; but corroborates supply-is-the-ceiling (memory/optical/packaging all short)"
+   "note": "Seller of the shovels — haircut heavily; but corroborates supply-is-the-ceiling (memory/optical/packaging all short)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Imas & Trammell",
@@ -13170,7 +13624,8 @@ const DATA = {
    "claim": "If open models stay ~6-9mo behind, AGI commoditizes (electricity-like) → 'buy the index'; the labs IPO",
    "horizon": "multi-year",
    "status": "track",
-   "note": "Incentive-clean academics; the cleanest retail/EM allocation lens. Indexing getting harder (privatization of returns)"
+   "note": "Incentive-clean academics; the cleanest retail/EM allocation lens. Indexing getting harder (privatization of returns)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Patel/SemiAnalysis",
@@ -13178,15 +13633,17 @@ const DATA = {
    "claim": "No meaningful new memory fabs until late-'27/'28 → the mid-2027 memory sell-tell",
    "horizon": "mid-2027",
    "status": "track",
-   "note": "~30% of 2026 capex is memory; HBM can't be swapped for DDR. Corroborates Ben/BEP's ~mid-2027 roll-over"
+   "note": "~30% of 2026 capex is memory; HBM can't be swapped for DDR. Corroborates Ben/BEP's ~mid-2027 roll-over",
+   "chk": "2026-11-08"
   },
   {
    "who": "Cembalest/JPM",
    "date": "2026-07",
    "claim": "The BUYERS (hyperscalers) roll over before the chip suppliers — the 1999-2000 tell; ~18mo to prove enterprise AI ROI",
    "horizon": "~18 months",
-   "status": "track",
-   "note": "FCF deteriorating, capex now debt-funded (Alphabet selling stock). Watch hyperscaler FCF + paid-adoption evidence, not supplier guidance"
+   "status": "pend",
+   "note": "FCF deteriorating, capex now debt-funded (Alphabet selling stock). Watch hyperscaler FCF + paid-adoption evidence, not supplier guidance | 2026-11-08: Evidence against so far: suppliers fell 10-17% while hyperscalers fell 2-4% (T309).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Cembalest/JPM",
@@ -13194,7 +13651,8 @@ const DATA = {
    "claim": "2031-32 debt/entitlement crossover (100% of tax revenue → interest+entitlements); rating-agency downgrade threats ~2yrs prior",
    "horizon": "~2031-32 (threats ~2029)",
    "status": "pend",
-   "note": "A dated tail, NOT a bust call; escape is Eisenhower-style pro-growth"
+   "note": "A dated tail, NOT a bust call; escape is Eisenhower-style pro-growth",
+   "chk": "2026-11-08"
   },
   {
    "who": "Cembalest/JPM",
@@ -13202,7 +13660,8 @@ const DATA = {
    "claim": "In-house ASICs (30-40% TCO cut) erode Nvidia's share of hyperscaler spend",
    "horizon": "multi-year",
    "status": "track",
-   "note": "NVDA ~18-20x fwd = market already sussing it; Amazon Trainium 'a top-10 company' if standalone. Pairs with Dylan T69"
+   "note": "NVDA ~18-20x fwd = market already sussing it; Amazon Trainium 'a top-10 company' if standalone. Pairs with Dylan T69",
+   "chk": "2026-11-08"
   },
   {
    "who": "Cembalest/JPM",
@@ -13210,7 +13669,8 @@ const DATA = {
    "claim": "Business-uncertainty ranking of the AI IPOs: OpenAI > Anthropic > SpaceX (OpenAI most uncertain — consumer/subscription, 'an AOL')",
    "horizon": "as they IPO",
    "status": "pend",
-   "note": "A nuance to the labs-go-public theme; watch OpenAI enterprise/ads mix"
+   "note": "A nuance to the labs-go-public theme; watch OpenAI enterprise/ads mix",
+   "chk": "2026-11-08"
   },
   {
    "who": "Timmer/Fidelity",
@@ -13218,15 +13678,17 @@ const DATA = {
    "claim": "10-year Treasury heads to ~5% (term-premium / fiscal-dominance)",
    "horizon": "—",
    "status": "hit",
-   "note": "Breakeven ~2.3% 'too low'; higher yields → bonds more correlated to equities → higher hurdle rate. Pairs with Clark T44, Tino T71 | Graded 2026-11-04: The 10yr closed at 5.31% on Oct 5, 2026 (its 2026 high) and was 5.05% on Oct 28 (Treasury par curve)."
+   "note": "Breakeven ~2.3% 'too low'; higher yields → bonds more correlated to equities → higher hurdle rate. Pairs with Clark T44, Tino T71 | Graded 2026-11-04: The 10yr closed at 5.31% on Oct 5, 2026 (its 2026 high) and was 5.05% on Oct 28 (Treasury par curve).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Visser",
    "date": "2026-08",
    "claim": "The Leopold/chip-crash was a CLEANSING event, not the start of a fundamentals de-rate; volatility continues but no V-shaped race back to highs",
    "horizon": "weeks-months",
-   "status": "pend",
-   "note": "Positioning-not-fundamentals; confirmed by AWS/Azure re-accel same week. Watch Goldman VIP crowded-book + prime-broker margin headlines (T76/T77) | Graded 2026-11-04: Mixed: S&P and NVDA raced back to records by early Oct 2026 (vs 'no V'), then the Nasdaq-100 fell >10% from the Oct peak (Nov 2, T250)."
+   "status": "track",
+   "note": "Positioning-not-fundamentals; confirmed by AWS/Azure re-accel same week. Watch Goldman VIP crowded-book + prime-broker margin headlines (T76/T77) | Graded 2026-11-04: Mixed: S&P and NVDA raced back to records by early Oct 2026 (vs 'no V'), then the Nasdaq-100 fell >10% from the Oct peak (Nov 2, T250). | 2026-11-08: Visser: forced selling, not an economic event; equal-weight S&P and S&P ex-AI made records (T306, T312).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Amazon (Jassy/Olsavsky)",
@@ -13234,15 +13696,17 @@ const DATA = {
    "claim": "2026 cash-capex ~$220B, raised on HIGHER MEMORY COST; AWS growth sustained off a ~$169B run-rate",
    "horizon": "2026",
    "status": "track",
-   "note": "First hyperscaler capex line to confirm 'AI = memory'; buyer-side proof of the memory long (T83)"
+   "note": "First hyperscaler capex line to confirm 'AI = memory'; buyer-side proof of the memory long (T83)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Sacks (All-In)",
    "date": "2026-08",
    "claim": "The frontier stays a ~duopoly (Anthropic+OpenAI); open-source takes token VOLUME but the two labs keep the DOLLARS as compute scarcity raises the barrier",
    "horizon": "multi-year",
-   "status": "track",
-   "note": "Contested by Freeberg/Kantrowitz (value migrates to compute+energy). Watch nine-figure-customer churn vs lab ARR/margins (T80/T78) | Graded 2026-11-04: Open models carry ~70% of tokens (T205) while OpenAI+Anthropic take ~60% of compute (T208); Lambert sees closed labs keeping the top-margin tier (Oct 2026)."
+   "status": "pend",
+   "note": "Contested by Freeberg/Kantrowitz (value migrates to compute+energy). Watch nine-figure-customer churn vs lab ARR/margins (T80/T78) | Graded 2026-11-04: Open models carry ~70% of tokens (T205) while OpenAI+Anthropic take ~60% of compute (T208); Lambert sees closed labs keeping the top-margin tier (Oct 2026). | 2026-11-08: Contested: Hassabis sees 6-8 frontier or near-frontier providers 3-6 months apart (T311); GPT-6 leads Anthropic on one deception benchmark (T305).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Chamath (All-In)",
@@ -13250,7 +13714,8 @@ const DATA = {
    "claim": "US electricity ~1.7 TWh short by 2050 (~6× California) → structural bid under power; 'get long electrons any way you can'",
    "horizon": "long",
    "status": "pend",
-   "note": "Solar+batteries >50% of new CA/NM generation; Tesla ~100GW/yr solar; China fusion a 2030+ tail (T80)"
+   "note": "Solar+batteries >50% of new CA/NM generation; Tesla ~100GW/yr solar; China fusion a 2030+ tail (T80)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Gavin Baker (Atreides)",
@@ -13258,7 +13723,8 @@ const DATA = {
    "claim": "Old GPU prices keep RISING as contracts roll off → hyperscalers under-earning → the buildout is funded from operating cash flow (~$700B of credit demand comes out); 'credit just isn't going to matter'",
    "horizon": "6-18 months",
    "status": "pend",
-   "note": "THE resolver of the credit bear — watch GPU spot-vs-contract rental curves (T89). Countered by McLennan/Granato-Drall fragility (T88/T92) | Graded 2026-11-04: Split: GPU rents are rising (H100s rent above new, Oct 20, 2026), but credit matters: CoreWeave ~15%, Meta's $95B equity and MSFT's $25B bonds (Oct 2026)."
+   "note": "THE resolver of the credit bear — watch GPU spot-vs-contract rental curves (T89). Countered by McLennan/Granato-Drall fragility (T88/T92) | Graded 2026-11-04: Split: GPU rents are rising (H100s rent above new, Oct 20, 2026), but credit matters: CoreWeave ~15%, Meta's $95B equity and MSFT's $25B bonds (Oct 2026). | 2026-11-08: Price leg tracking (H100 rents up, T302); funding-from-operations leg not yet: Google and Amazon FCF negative (T309).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Sam Altman (OpenAI)",
@@ -13266,7 +13732,8 @@ const DATA = {
    "claim": "Demand for AI is 'uncapped' at a low enough price; inference volume funds training, so distillation/open-source doesn't break the economics",
    "horizon": "multi-year",
    "status": "track",
-   "note": "First-person; weigh for optimism. Over-supply only if models get so efficient limited compute does everything, or a scaling wall (T91)"
+   "note": "First-person; weigh for optimism. Over-supply only if models get so efficient limited compute does everything, or a scaling wall (T91)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Gavin Baker / Sam Altman",
@@ -13274,7 +13741,8 @@ const DATA = {
    "claim": "REGULATION (not credit) is the #1 risk — the NY data-center moratorium is 'the first of many'",
    "horizon": "2026-27",
    "status": "track",
-   "note": "Watch state-level moratoria + whether the industry counters the water/power/jobs narrative (T89/T91) | Graded 2026-11-04: Data-center politics is spreading: local moratoriums limit the buildout (T200), up to ~30 state bans are possible (T219), and Abbott has cooled on DCs (Nov 3, 2026)."
+   "note": "Watch state-level moratoria + whether the industry counters the water/power/jobs narrative (T89/T91) | Graded 2026-11-04: Data-center politics is spreading: local moratoriums limit the buildout (T200), up to ~30 state bans are possible (T219), and Abbott has cooled on DCs (Nov 3, 2026). | 2026-11-08: Strong: ballot measures failed almost everywhere (T301, T304); Goldman ~45% of planned buildout could face restrictions (T307); Texas pauses new permits (T308).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Baker / 'fun|AI' report",
@@ -13282,7 +13750,8 @@ const DATA = {
    "claim": "SpaceX brings on ~8 GW of compute in ~18 months at ~$50B/GW (consensus ~$73B next yr)",
    "horizon": "~2027",
    "status": "track",
-   "note": "Baker skeptical of the full 8 GW but 'never bet against Elon'; a lockup releases 20% of shares over 6 months — supply overhang (T89/T85) | Graded 2026-11-04: Musk guides 2.5-3GW by end-2026 and ~13GW by end-2027 (1.7GW at Sep 30) on the Oct 20, 2026 Q3 call (T274). On pace, but that is guidance, not delivery."
+   "note": "Baker skeptical of the full 8 GW but 'never bet against Elon'; a lockup releases 20% of shares over 6 months — supply overhang (T89/T85) | Graded 2026-11-04: Musk guides 2.5-3GW by end-2026 and ~13GW by end-2027 (1.7GW at Sep 30) on the Oct 20, 2026 Q3 call (T274). On pace, but that is guidance, not delivery.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Morgan Stanley (via T90)",
@@ -13290,7 +13759,8 @@ const DATA = {
    "claim": "2035 GLP-1 sales ~$190B (raised from $150B); ~30% penetration of obese Americans by 2035 (from ~6%)",
    "horizon": "2035",
    "status": "pend",
-   "note": "TAM-expansion signal for Lilly/Novo; LLY Q2 raised 2026 guide to $85-87B. Parked pending a full LLY pass"
+   "note": "TAM-expansion signal for Lilly/Novo; LLY Q2 raised 2026 guide to $85-87B. Parked pending a full LLY pass",
+   "chk": "2026-11-08"
   },
   {
    "who": "Gavin Baker (Atreides)",
@@ -13298,7 +13768,8 @@ const DATA = {
    "claim": "OpenAI + Anthropic exceed 'well over $200B ARR this year'; ~all model-layer value keeps accruing to FRONTIER tokens (not cheap-open models)",
    "horizon": "end-2026",
    "status": "pend",
-   "note": "Usage-based pricing shift is the driver; the #1 risk is a Sutton 'bitter-lesson' violation (T104) | Graded 2026-11-04: Behind pace: combined OpenAI+Anthropic is ~$150-175B (late Oct 2026), and Anthropic's QoQ growth slowed to 47% in Q3 (T250). 'Well over $200B' this year looks unlikely."
+   "note": "Usage-based pricing shift is the driver; the #1 risk is a Sutton 'bitter-lesson' violation (T104) | Graded 2026-11-04: Behind pace: combined OpenAI+Anthropic is ~$150-175B (late Oct 2026), and Anthropic's QoQ growth slowed to 47% in Q3 (T250). 'Well over $200B' this year looks unlikely.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Gavin Baker (Atreides)",
@@ -13306,7 +13777,8 @@ const DATA = {
    "claim": "Watch TSMC's capacity decisions as the bubble gauge — a 'Goldilocks zone' keeps the wafer constraint that PREVENTS an overbuild; if TSMC floods capacity, glut risk rises",
    "horizon": "2026-28",
    "status": "track",
-   "note": "The single best bubble indicator; also watch the TSMC-vs-Intel/Samsung leading-node gap (T104) | Graded 2026-11-04: Goldilocks is holding: TSMC is sold out, with demand at multiples of capacity and allocation not price-based (Q3 call Oct 15, 2026, T275/T229)."
+   "note": "The single best bubble indicator; also watch the TSMC-vs-Intel/Samsung leading-node gap (T104) | Graded 2026-11-04: Goldilocks is holding: TSMC is sold out, with demand at multiples of capacity and allocation not price-based (Q3 call Oct 15, 2026, T275/T229).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Gavin Baker (Atreides)",
@@ -13314,7 +13786,8 @@ const DATA = {
    "claim": "Prefill/decode disaggregation gives GPUs 10-15yr useful lives → lowers AI-financing cost and 'may single-handedly save private credit'",
    "horizon": "multi-year",
    "status": "track",
-   "note": "Bull offset to the software-loan credit bear; but SaaS-LBO loans 'need to be marked down more' (T104)"
+   "note": "Bull offset to the software-loan credit bear; but SaaS-LBO loans 'need to be marked down more' (T104)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Ed Yardeni",
@@ -13322,15 +13795,17 @@ const DATA = {
    "claim": "'Roaring 2020s' — S&P ~8,250 (2026) / ~10,000 (decade); NOT an earnings bubble, NOT 1999",
    "horizon": "2026 / decade",
    "status": "pend",
-   "note": "Perma-bull; the cleanest earnings-led not-a-bubble case (28.8% earnings growth, record margins, fwd P/E down while price up) (T95)"
+   "note": "Perma-bull; the cleanest earnings-led not-a-bubble case (28.8% earnings growth, record margins, fwd P/E down while price up) (T95)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Mig Dobre (Baird)",
    "date": "2026-08",
    "claim": "'2026 is the first AI-data-center election' — state/local pushback slows the 2027-28 pipeline → multiple compression for hyperscalers",
    "horizon": "2026-28",
-   "status": "pend",
-   "note": "41% oppose within 3 miles; equipment-rental (URI/Sunbelt) benefits regardless (T100)"
+   "status": "track",
+   "note": "41% oppose within 3 miles; equipment-rental (URI/Sunbelt) benefits regardless (T100) | 2026-11-08: Election leg hit (T301, T304); pipeline leg tracking (Goldman 45%, Sacks 2028 closure, T307, T308); multiple-compression leg missing so far, since hyperscalers fell least (T309).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Bruce Richards (Marathon)",
@@ -13338,7 +13813,8 @@ const DATA = {
    "claim": "Software-loan defaults could hit ~15%; ~23% of private credit is exposed to software → 'a lot of pain'",
    "horizon": "2026-27",
    "status": "pend",
-   "note": "The specific channel of the credit bear; countered by Moody's 'it's just liquidity, Blue Owl sold at par' (T99)"
+   "note": "The specific channel of the credit bear; countered by Moody's 'it's just liquidity, Blue Owl sold at par' (T99)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Elon Musk",
@@ -13346,7 +13822,8 @@ const DATA = {
    "claim": "AI exceeds the SUM of human intelligence in ~5 years; AI-driven output → DEFLATION not inflation ('money won't matter in 2036')",
    "horizon": "~5-10 yrs",
    "status": "pend",
-   "note": "Self-interested + optimistic; the deflation call is a counter to the debasement macro (T102)"
+   "note": "Self-interested + optimistic; the deflation call is a counter to the debasement macro (T102)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Eli Lilly (guidance)",
@@ -13354,7 +13831,8 @@ const DATA = {
    "claim": "FY2026 revenue ~$85-87B (RAISED); oral orforglipron scaling across all 3 PBMs + a Medicare GLP-1 bridge (20M Americans)",
    "horizon": "2026",
    "status": "hit",
-   "note": "Management guidance; confirms the $190B GLP-1 TAM. Promotes LLY from watch to a real candidate (T94) | Graded 2026-11-04: Beaten: Lilly raised its FY2026 revenue guide to $91-92B from $85-87B on Q3 revenue of $24.4B (+39%) (Oct 29, 2026, 8-K)."
+   "note": "Management guidance; confirms the $190B GLP-1 TAM. Promotes LLY from watch to a real candidate (T94) | Graded 2026-11-04: Beaten: Lilly raised its FY2026 revenue guide to $91-92B from $85-87B on Q3 revenue of $24.4B (+39%) (Oct 29, 2026, 8-K).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Larry Fink (BlackRock)",
@@ -13362,7 +13840,8 @@ const DATA = {
    "claim": "AI-factory financing is 'the beginning, like mortgage-backed securities in the 1970s' — compute becomes an investable asset class funded by >$500B of independent capital, private→public",
    "horizon": "multi-year",
    "status": "pend",
-   "note": "The anchor of Edition 014; also floats a NY data-center moratorium (regulation still live) (T113)"
+   "note": "The anchor of Edition 014; also floats a NY data-center moratorium (regulation still live) (T113)",
+   "chk": "2026-11-08"
   },
   {
    "who": "SemiAnalysis (via T113)",
@@ -13370,7 +13849,8 @@ const DATA = {
    "claim": "OpenAI/Anthropic earn >$100B of revenue per GIGAWATT per year on inference (>> a year's rental) → AI-factory cash flows are bankable; Anthropic ARR >$47B",
    "horizon": "2026",
    "status": "hit",
-   "note": "The ROI proof under the compute-as-asset-class + memory take-or-pay theses; assumes inference demand holds (T113) | Graded 2026-11-04: Anthropic's Q3 2026 revenue was ~$17B, ~$68B annualized (amended S-1, T250), above >$47B ARR; the $/GW inference claim is unverified."
+   "note": "The ROI proof under the compute-as-asset-class + memory take-or-pay theses; assumes inference demand holds (T113) | Graded 2026-11-04: Anthropic's Q3 2026 revenue was ~$17B, ~$68B annualized (amended S-1, T250), above >$47B ARR; the $/GW inference claim is unverified.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Jensen Huang",
@@ -13378,7 +13858,8 @@ const DATA = {
    "claim": "Stranded-asset risk is handled by FUNGIBILITY — 'if a customer stops, someone else operates it' (the rebuttal to a bitter-lesson break)",
    "horizon": "open",
    "status": "pend",
-   "note": "The ONLY answer to the stranded-compute tail; keeps the asset-class thesis two-sided (T113)"
+   "note": "The ONLY answer to the stranded-compute tail; keeps the asset-class thesis two-sided (T113)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Ramez Naam",
@@ -13386,7 +13867,8 @@ const DATA = {
    "claim": "AI power is a solvable grid-INTERCONNECTION + FLEXIBILITY problem, not a hard shortage — ~1TW stuck in queues; curtailable load + storage unlock years of capacity",
    "horizon": "2026-29",
    "status": "pend",
-   "note": "Firms the energy theme toward grid-flexibility + batteries + T&D; gas a bridge (sold out to ~2029) (T111)"
+   "note": "Firms the energy theme toward grid-flexibility + batteries + T&D; gas a bridge (sold out to ~2029) (T111)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Will Gaybrick (Stripe)",
@@ -13394,7 +13876,8 @@ const DATA = {
    "claim": "Agentic commerce is the next platform — agents that transact need programmable money/stablecoin rails; the NUMBER of software businesses explodes as AI collapses creation cost",
    "horizon": "2026-28",
    "status": "track",
-   "note": "The bull fork for software (own the rails) + the consumer-agents/stablecoin theme; regulation-dependent (T109) | Graded 2026-11-04: Collison says agentic commerce 'went vertical' (T213) and MPP settles in USDC (T191), but early volume runs on card-network agentic tokens (Oct 2026, T242)."
+   "note": "The bull fork for software (own the rails) + the consumer-agents/stablecoin theme; regulation-dependent (T109) | Graded 2026-11-04: Collison says agentic commerce 'went vertical' (T213) and MPP settles in USDC (T191), but early volume runs on card-network agentic tokens (Oct 2026, T242).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Jordi Visser",
@@ -13402,7 +13885,8 @@ const DATA = {
    "claim": "Shift from an attention economy to an AGENT economy 'breaks' ad-funded/engagement models; the frontier is now a 3-4-horse race (Grok caught up, Meta commoditizing)",
    "horizon": "2027",
    "status": "track",
-   "note": "Repeat voice; the agent-economy + frontier-widening reads corroborate Stripe (T106/T107) | Graded 2026-11-04: Amazon blocks Muse/agents to protect ~$70-80B of ads (T240/T242), and Alphabet admits AI Mode yields fewer ads with search slowing to +12% (Oct 2026, T251)."
+   "note": "Repeat voice; the agent-economy + frontier-widening reads corroborate Stripe (T106/T107) | Graded 2026-11-04: Amazon blocks Muse/agents to protect ~$70-80B of ads (T240/T242), and Alphabet admits AI Mode yields fewer ads with search slowing to +12% (Oct 2026, T251).",
+   "chk": "2026-11-08"
   },
   {
    "who": "NVIDIA (guidance)",
@@ -13410,7 +13894,8 @@ const DATA = {
    "claim": "FY2028 revenue ~+70% YoY (SUPPLY-CONSTRAINED; customer demand ~2x supply); gross margin bottoms 71-72% in Q4 then settles 72-73% in FY28 as memory-cost increases pass through; Vera Rubin = $1T revenue visibility through 2027",
    "horizon": "FY2028",
    "status": "track",
-   "note": "The bellwether's own guide; the margin RESET is the memory-tax datapoint (T114)"
+   "note": "The bellwether's own guide; the margin RESET is the memory-tax datapoint (T114)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Bill Dudley (ex-NY Fed)",
@@ -13418,7 +13903,8 @@ const DATA = {
    "claim": "The AI bubble BURSTS by end-2027 — the investment-growth boost fades, supplier earnings falter + multiples compress, the ROI needs >$2T revenue on a ~$5T base, equity supply rises, and macro (rates) gets harder",
    "horizon": "end-2027",
    "status": "pend",
-   "note": "A named, dated bear; Brown flags it as 'consensus.' The bull counter is S&P-493 margin expansion (T125)"
+   "note": "A named, dated bear; Brown flags it as 'consensus.' The bull counter is S&P-493 margin expansion (T125) | 2026-11-08: Builders and chips sold off hard (T309); hyperscalers held. Not decided.",
+   "chk": "2026-11-08"
   },
   {
    "who": "Nick Colas (DataTrek)",
@@ -13426,7 +13912,8 @@ const DATA = {
    "claim": "Real rates are structurally higher (a no-recession-since-2020 neutral rate); 5% on the 10-yr is the level where equities 'jitter'; the AI race is '100% about getting to AGI, not agents'",
    "horizon": "2026-27",
    "status": "hit",
-   "note": "Incentive-clean strategist; the AI-borrowing-crowds-out-Treasuries mechanism (T126) | Graded 2026-11-04: The 10yr hit a 5.31% close on Oct 5, 2026, and equities jittered: the Nasdaq-100 fell >10% from its early-Oct peak (Nov 2, T250)."
+   "note": "Incentive-clean strategist; the AI-borrowing-crowds-out-Treasuries mechanism (T126) | Graded 2026-11-04: The 10yr hit a 5.31% close on Oct 5, 2026, and equities jittered: the Nasdaq-100 fell >10% from its early-Oct peak (Nov 2, T250).",
+   "chk": "2026-11-08"
   },
   {
    "who": "SK Hynix (via T118)",
@@ -13434,7 +13921,8 @@ const DATA = {
    "claim": "2027 will be the WORST year in history for memory supply; demand outstrips production 'well into the 2030s'; memory prices +500% in 12 months; needs to ~4x capacity",
    "horizon": "2027-2030s",
    "status": "track",
-   "note": "The memory-bottleneck confirmation that also drove NVDA's margin reset (T118, T114) | Graded 2026-11-04: Jassy doesn't see shortages ending in 2027 (T233), DRAM is at highs with Micron contracts to 2030 (T201) and Cook used a '100-year flood' line (Oct 2026, T226)."
+   "note": "The memory-bottleneck confirmation that also drove NVDA's margin reset (T118, T114) | Graded 2026-11-04: Jassy doesn't see shortages ending in 2027 (T233), DRAM is at highs with Micron contracts to 2030 (T201) and Cook used a '100-year flood' line (Oct 2026, T226).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Arthur Hayes",
@@ -13442,7 +13930,8 @@ const DATA = {
    "claim": "Politicians 'print early, print often' → no 2008-style credit event, but Bitcoin at ~$250,000; the Treasury eventually revalues gold toward ~$50,000/oz as the 'nuclear option'",
    "horizon": "multi-year",
    "status": "pend",
-   "note": "Heavy book-talk (long BTC/gold/miners); the incentive-different AI-bear who reaches the same debasement trade (T116)"
+   "note": "Heavy book-talk (long BTC/gold/miners); the incentive-different AI-bear who reaches the same debasement trade (T116)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Ed Bastian (Delta)",
@@ -13450,7 +13939,8 @@ const DATA = {
    "claim": "AI could lift Delta's profitability by ~50% (margins ~10%→15%); ~20% of Delta fares AI-priced (from ~3%)",
    "horizon": "multi-year",
    "status": "track",
-   "note": "A concrete S&P-493 margin-expansion datapoint — the ROI-broadening thesis (T125)"
+   "note": "A concrete S&P-493 margin-expansion datapoint — the ROI-broadening thesis (T125)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Dylan Patel (SemiAnalysis)",
@@ -13458,7 +13948,8 @@ const DATA = {
    "claim": "OpenAI+Anthropic take ~40-50% of INCREMENTAL compute in 2027 and control MOST usable FLOPs by end-2028; compute prices rise to $25-50M/MW",
    "horizon": "2027-2028",
    "status": "track",
-   "note": "Frontier compute triples/yr vs world doubling; the anchor node of Batch 15 (T127) | Graded 2026-11-04: SemiAnalysis now sees OpenAI+Anthropic at ~60% of compute next year (T208); NVL72 prices rose from $3.5M to $5M+ (T196), and $/W pricing is up (Oct 20, 2026)."
+   "note": "Frontier compute triples/yr vs world doubling; the anchor node of Batch 15 (T127) | Graded 2026-11-04: SemiAnalysis now sees OpenAI+Anthropic at ~60% of compute next year (T208); NVL72 prices rose from $3.5M to $5M+ (T196), and $/W pricing is up (Oct 20, 2026). | 2026-11-08: Google, Anthropic and xAI have reserved most US compute (T307).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Dylan Patel (SemiAnalysis)",
@@ -13466,7 +13957,8 @@ const DATA = {
    "claim": "~$11T of AI capex 2024-29 (~$5T debt-funded) pushes rates up into a second-Volcker shock; ~40 countries default like 1980s Latin America",
    "horizon": "multi-year",
    "status": "pend",
-   "note": "The sovereign-debt tail of the rates spine; corroborated by All-In refi-tsunami (T127, T130)"
+   "note": "The sovereign-debt tail of the rates spine; corroborated by All-In refi-tsunami (T127, T130)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Steno Larsen / Raoul Pal",
@@ -13474,7 +13966,8 @@ const DATA = {
    "claim": "AI capex ACCELERATES in NOMINAL terms (2028/29-flat is the one scenario that cannot happen; +15-25% still huge); PMI peaks Nov/Dec 2026; markets rally into year-end",
    "horizon": "2026-2027",
    "status": "pend",
-   "note": "Contra the bubble/over-build bears; the capex-to-duration rotation is the tradeable expression (T131) | Graded 2026-11-04: Mixed: Amazon held 2026 capex flat at $220B and MSFT capex missed (Oct 29, 2026), while hyperscaler TTM capex is ~+90%; markets corrected rather than rallied (Nov 2)."
+   "note": "Contra the bubble/over-build bears; the capex-to-duration rotation is the tradeable expression (T131) | Graded 2026-11-04: Mixed: Amazon held 2026 capex flat at $220B and MSFT capex missed (Oct 29, 2026), while hyperscaler TTM capex is ~+90%; markets corrected rather than rallied (Nov 2). | 2026-11-08: Commitments above $3T, +~$1T in three months (T297), against a permitting freeze on the 2028 pipeline (T308).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Gavin Baker (Atreides)",
@@ -13482,7 +13975,8 @@ const DATA = {
    "claim": "Compute UNDER-builds through 2028 (no capacity even with forecast builds, now delayed by politics) so intelligence prices could RISE ~10x - the opposite of consensus",
    "horizon": "2026-2028",
    "status": "track",
-   "note": "Sub-1-year paybacks + RVG financing = NOT circular; watch GPU spot pricing (rising = under-supplied) (T135) | Graded 2026-11-04: AWS is sold out into 2028 (T233), H100s rent above new and Musk found no spare cloud GPUs (Oct 20, 2026, T274); TSMC demand is at multiples of capacity."
+   "note": "Sub-1-year paybacks + RVG financing = NOT circular; watch GPU spot pricing (rising = under-supplied) (T135) | Graded 2026-11-04: AWS is sold out into 2028 (T233), H100s rent above new and Musk found no spare cloud GPUs (Oct 20, 2026, T274); TSMC demand is at multiples of capacity. | 2026-11-08: Sacks: new-project pipeline closed or sharply reduced by 2028 (T308); Goldman ~45% restricted (T307).",
+   "chk": "2026-11-08"
   },
   {
    "who": "Gavin Baker (Atreides)",
@@ -13490,7 +13984,8 @@ const DATA = {
    "claim": "Jensen is the CENTRAL BANK of AI - NVDA data centers are the most-financable, ~70-80% of supply locked up, open-source is GREAT for NVDA",
    "horizon": "multi-year",
    "status": "track",
-   "note": "Chip-deal structures reveal true customer preference; the moat shifts CUDA to interconnect (T135)"
+   "note": "Chip-deal structures reveal true customer preference; the moat shifts CUDA to interconnect (T135)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Sam Altman (OpenAI)",
@@ -13498,7 +13993,8 @@ const DATA = {
    "claim": "AI impact is SLOWER than he expected - a rising tide, not a step function - because institutions are linear while the tech is exponential",
    "horizon": "ongoing",
    "status": "track",
-   "note": "The leading accelerationist walking back timelines; a caution + a crowding tell (via T134)"
+   "note": "The leading accelerationist walking back timelines; a caution + a crowding tell (via T134)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Roman Yampolskiy",
@@ -13506,7 +14002,8 @@ const DATA = {
    "claim": "In a world of AI abundance, invest in what cannot be cheaply created - Bitcoin, gold, waterfront, and HUMAN ATTENTION",
    "horizon": "multi-year",
    "status": "pend",
-   "note": "Reaches the same scarcity trade as the trader Jordi from the AI-safety side (T129; shares a host with T128)"
+   "note": "Reaches the same scarcity trade as the trader Jordi from the AI-safety side (T129; shares a host with T128)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Jordi Visser",
@@ -13514,7 +14011,8 @@ const DATA = {
    "claim": "Bitcoin ~$600K-$1M over the next decade (crypto to ~$100T of ~$700T assets); but BTC % of crypto DECLINES near-term as ETH/SOL lead on tokenization",
    "horizon": "decade",
    "status": "pend",
-   "note": "Rotation from AI-infra to crypto/apps; BTC as the S&P 500 of the future (T128)"
+   "note": "Rotation from AI-infra to crypto/apps; BTC as the S&P 500 of the future (T128)",
+   "chk": "2026-11-08"
   },
   {
    "who": "Martin Casado (a16z)",
@@ -13522,13 +14020,217 @@ const DATA = {
    "claim": "The binding constraint flipped from ENGINEERING to CAPITAL; concentrating $100B into one model makes previously-infinite problems a capital problem (cure cancer OR a weapon)",
    "horizon": "ongoing",
    "status": "track",
-   "note": "Resets priors on defensibility/competition/value-capture; drug hard-part stays efficacy/safety in human trials (T136)"
+   "note": "Resets priors on defensibility/competition/value-capture; drug hard-part stays efficacy/safety in human trials (T136)",
+   "chk": "2026-11-08"
+  },
+  {
+   "who": "Tom Lee (Fundstrat)",
+   "date": "2026-11",
+   "claim": "S&P 500 ends 2026 at 8,200-8,400; the AI/Nasdaq correction bottom is in",
+   "horizon": "2026-12-31",
+   "status": "pend",
+   "note": "2026-11-08 added: T295",
+   "chk": "2026-11-08"
+  },
+  {
+   "who": "Martin Casado (a16z)",
+   "date": "2026-11",
+   "claim": "Non-investment-grade neoclouds need customer prepayments to raise debt; ~80% of compute consolidates at scale providers",
+   "horizon": "2027-2028",
+   "status": "pend",
+   "note": "2026-11-08 added: T296",
+   "chk": "2026-11-08"
+  },
+  {
+   "who": "Alex Bores",
+   "date": "2026-11",
+   "claim": "US AI regulation extends beyond data centers within two years; most data-center pauses run under 12 months",
+   "horizon": "2028-11",
+   "status": "pend",
+   "note": "2026-11-08 added: T298",
+   "chk": "2026-11-08"
+  },
+  {
+   "who": "Dan Clifton (Baird Strategas)",
+   "date": "2026-11",
+   "claim": "Texas keeps its data-center moratorium past the December audit and Dec 17 hearing, pending legislation in the Jan-Jun 2027 session",
+   "horizon": "2027-06",
+   "status": "pend",
+   "note": "2026-11-08 added: T301",
+   "chk": "2026-11-08"
+  },
+  {
+   "who": "Dan Clifton (Baird Strategas)",
+   "date": "2026-11",
+   "claim": "S&P 500 is higher 12 months after the Nov 3, 2026 midterm",
+   "horizon": "2027-11",
+   "status": "pend",
+   "note": "2026-11-08 added: T301; no down year after a midterm since 1938",
+   "chk": "2026-11-08"
+  },
+  {
+   "who": "Ramtin Naimi (Abstract Ventures)",
+   "date": "2026-11",
+   "claim": "Neocloud and compute builders’ cost of debt rises after the November selloff",
+   "horizon": "2027-Q1",
+   "status": "track",
+   "note": "2026-11-08 added: T302; CoreWeave 2032 bond above 16% on Nov 6",
+   "chk": "2026-11-08"
+  },
+  {
+   "who": "Skanda Amarnath (Employ America)",
+   "date": "2026-11",
+   "claim": "US inflation stays near 3% longer than consensus expects",
+   "horizon": "2027-H1",
+   "status": "pend",
+   "note": "2026-11-08 added: T303",
+   "chk": "2026-11-08"
+  },
+  {
+   "who": "David Sacks (All-In)",
+   "date": "2026-11",
+   "claim": "Fully permitted data centers complete in 2027; by 2028 the new-project pipeline is closed or sharply reduced",
+   "horizon": "2028",
+   "status": "pend",
+   "note": "2026-11-08 added: T308",
+   "chk": "2026-11-08"
+  },
+  {
+   "who": "David Sacks (All-In)",
+   "date": "2026-11",
+   "claim": "A Democratic Congress pushes major federal AI legislation, likely a federal AI department that pre-approves frontier models",
+   "horizon": "2027",
+   "status": "pend",
+   "note": "2026-11-08 added: T308",
+   "chk": "2026-11-08"
+  },
+  {
+   "who": "Steve Eisman",
+   "date": "2026-11",
+   "claim": "If builds slow, Microsoft, Amazon and Google return to positive free cash flow",
+   "horizon": "2027-Q4",
+   "status": "pend",
+   "note": "2026-11-08 added: T309",
+   "chk": "2026-11-08"
+  },
+  {
+   "who": "Alex Wissner-Gross (Moonshots)",
+   "date": "2026-11",
+   "claim": "Anthropic compute reaches ~4 GW by end-2026 and ~16-18 GW in 2027-28",
+   "horizon": "2028",
+   "status": "pend",
+   "note": "2026-11-08 added: T307",
+   "chk": "2026-11-08"
+  },
+  {
+   "who": "Alex Immerman (a16z)",
+   "date": "2026-11",
+   "claim": "Anthropic IPOs at a valuation above $1T",
+   "horizon": "IPO",
+   "status": "pend",
+   "note": "2026-11-08 added: T310; opposite side of Chamath’s ~$1T-or-less call",
+   "chk": "2026-11-08"
+  },
+  {
+   "who": "John Somorjai (Salesforce)",
+   "date": "2026-11",
+   "claim": "A valuation reckoning hits $10B+ private AI startups",
+   "horizon": "open",
+   "status": "pend",
+   "note": "2026-11-08 added: T310",
+   "chk": "2026-11-08"
+  },
+  {
+   "who": "Demis Hassabis",
+   "date": "2026-11",
+   "claim": "6-8 frontier or near-frontier providers including China, 3-6 months apart; open source 6-12 months behind",
+   "horizon": "ongoing",
+   "status": "track",
+   "note": "2026-11-08 added: T311; against Sacks’ duopoly call",
+   "chk": "2026-11-08"
+  },
+  {
+   "who": "Jordi Visser",
+   "date": "2026-11",
+   "claim": "The 10-year yield peaked in 2026 as AI capital needs fade; at least one negative CPI print follows the oil and gasoline drop",
+   "horizon": "2027-H1",
+   "status": "pend",
+   "note": "2026-11-08 added: T312, T306; counter to the 5%+ camp; book-talk (long BTC/AI)",
+   "chk": "2026-11-08"
+  },
+  {
+   "who": "Jordi Visser",
+   "date": "2026-11",
+   "claim": "The November hedge-fund deleveraging is near exhaustion and SMH/MU snap back significantly",
+   "horizon": "weeks",
+   "status": "pend",
+   "note": "2026-11-08 added: T312; long MU, MRVL, NVDA",
+   "chk": "2026-11-08"
+  },
+  {
+   "who": "Jordi Visser",
+   "date": "2026-11",
+   "claim": "Hyperscaler external financing needs peak by H1 2027",
+   "horizon": "2027-H1",
+   "status": "pend",
+   "note": "2026-11-08 added: T313, T314; cites Oracle FCF-positive 2028 plan",
+   "chk": "2026-11-08"
+  },
+  {
+   "who": "Jordi Visser",
+   "date": "2026-11",
+   "claim": "The S&P “other 492” return roughly inflation as large-company growth ends by ~2030; only the Mag 7 plus SpaceX act as call options",
+   "horizon": "2030",
+   "status": "pend",
+   "note": "2026-11-08 added: T306; heavy book-talk",
+   "chk": "2026-11-08"
+  },
+  {
+   "who": "James Bosworth (Odd Lots)",
+   "date": "2026-11",
+   "claim": "No Venezuelan presidential election in 2026; the vote comes Jul-Nov 2027",
+   "horizon": "end-2027",
+   "status": "pend",
+   "note": "2026-11-08 added: T315",
+   "chk": "2026-11-08"
   }
  ],
  "timeline": [
   {
    "per": "NOW",
    "items": [
+    {
+     "t": "PERMISSION IS THE NEW BINDING CONSTRAINT. Data-center ballot measures failed almost everywhere; 56% of voters called AI a major factor; Goldman: ~45% of planned US buildout could face restrictions; Texas keeps its moratorium (audit Dec 10, hearing Dec 17); Sacks: the 2028 new-project pipeline is closed or sharply reduced.",
+     "src": "T298,T301,T304,T307,T308"
+    },
+    {
+     "t": "OWNERS BEAT BUILDERS. Nov 5: SOX -12%, Micron -17.5%, AMD -17.3%, Nvidia -9.3% vs Microsoft -3.6%, Amazon -2.2%, Google -1.9%. H100 rents rose again; Google took over a Crusoe site; neoclouds won’t quote deals under ~$200M.",
+     "src": "T302,T303,T306,T308,T309"
+    },
+    {
+     "t": "THE ANTHROPIC IPO BECAME A PRICE QUESTION. Amended S-1: growth +147% q/q in Q2 to +47% in Q3, revenue-to-compute 2.08x to 1.72x, ~$895B of commitments; token prices cut up to 50%; valuation talk ~$1.1-1.3T vs a ~$2T target; roadshow this week, listing week of Nov 16.",
+     "src": "T307,T309"
+    },
+    {
+     "t": "A SECOND LEVERAGE UNWIND - OR A SLOWDOWN. Rumored hedge-fund closures; equal-weight S&P and S&P ex-AI at records; S&P earnings ~+30% YTD vs the index ~+11%. Visser: forced selling near exhaustion. Eisman: a capex-led slowdown.",
+     "src": "T306,T309,T312,T314"
+    },
+    {
+     "t": "WASHINGTON FLIPS. Democrats take both chambers in January; Democratic AI bills and a possible federal AI department; debt-ceiling pressure on 100% expensing for data centers; Trump says he fully backs the build-out.",
+     "src": "T301,T304,T308"
+    },
+    {
+     "t": "CAPITAL STARTS TO REPLACE LABOR. Microsoft offers buyouts to ~27% of staff; a public-company CFO says AI already holds back finance hiring; METR clocks ~1.9x AI R&D pace at Anthropic, where Claude wrote over 90% of September code.",
+     "src": "T297,T300,T306,T307"
+    },
+    {
+     "t": "THE FRONTIER CROWDS. Hassabis expects 6-8 frontier or near-frontier providers 3-6 months apart, open source 6-12 months behind; GPT-6 leads Anthropic on a multi-agent deception benchmark; Chinese open weights lead on value per watt.",
+     "src": "T305,T307,T311"
+    },
+    {
+     "t": "MACRO: RATES UP, OIL UP, DISINFLATION HOPES. Fed held 10-2, December hike ~75-80% priced, 10y 4.86%; Brent ~$98 with Hormuz escalating; Visser expects oil, gasoline and DRAM base effects to turn inflation down by ~March.",
+     "src": "T303,T306,T312"
+    },
     {
      "t": "DEMAND ISN'T THE PROBLEM - SUPPLY, TOOLS AND POWER ARE. Azure +48%, Google Cloud +103%, AWS +39% with ~$1.8T of combined backlog, all capacity-capped; Jassy: sold out into 2028; ASML: customers short until at least 2028; ~15 GW of chips idle waiting for powered, cooled halls; GPU rents rising (H100 ~$1.70 to ~$2.80/hr).",
      "src": "T269,T270,T273,T233,T276,T274,T282"
@@ -13542,52 +14244,8 @@ const DATA = {
      "src": "T290,T223,T250,T270,T271,T269"
     },
     {
-     "t": "THE ANTHROPIC S-1 GAVE THE LAB DEBATE FINANCIALS. H1 revenue $16.3B, Q3 ~$17B, ~85% gross margin, ~$132B cash, ~$895B of compute commitments; Q3 growth ~45% q/q vs ~147% in Q2; IPO (ANT) pricing ~Nov 16 at ~$1.5-2T. OpenAI's ARR claim fell from ~$70B to ~$50B.",
-     "src": "T217,T223,T245,T250,T254,T255,T209"
-    },
-    {
-     "t": "THE OCTOBER DRAWDOWN WAS A LEVERAGE FLUSH. Largest prime-book degross in ~10 years; Lone Pine ~-55% gross; Goldman's AI winners/losers pair gave back the year - yet breadth went from 20% to 61% of S&P names above the 50-day and 327 of 500 rose in October.",
-     "src": "T201,T202,T211,T213"
-    },
-    {
      "t": "OPEN WEIGHTS TOOK THE TOKENS; THE LABS HOLD BACK THE FRONTIER. Open models ~70% of tokens; Nvidia bought Hugging Face (~$12B+); Nadella: most usage commodity within 24 months. Meanwhile Mythos, Astra and Bell were held back and Anthropic KYC cut distillation 90-99%.",
      "src": "T205,T284,T229,T203,T206,T208"
-    },
-    {
-     "t": "SAFETY TURNED OPERATIONAL; POLICY TURNED TO PACING. ~700 OpenAI test agents broke out in the Hugging Face incident; AI-found PHP flaws hit ~70% of sites; a ~$6.3B Binance hack. Altman calls for pacing changes; CAISI pre-review, the White House Accord and the SI Force form a working US regime.",
-     "src": "T205,T218,T231,T281,T287,T289"
-    },
-    {
-     "t": "THE FED AIMS AT AI CAPEX; THE MIDTERMS FLIP CONGRESS. The Fed held at 3.75-4.00% with two dissents for a hike; Warsh says AI capex is rate-sensitive; December ~75-80% priced. Nov 3: Democrats won the Senate and are projected to win the House; futures fell and Treasuries rallied on Nov 4.",
-     "src": "T277,Macro Pulse"
-    },
-    {
-     "t": "CONSUMER AGENTS SCALE - INTO WALLED GARDENS. Muse 10M+ users in six weeks with >25% shopping through it; GrokBot 800K paid weekly users; OpenAI Dots launched. Banks, Amazon and airlines block outside agents; agent payments run mostly on card-network tokens.",
-     "src": "T271,T274,T263,T192,T240,T242"
-    },
-    {
-     "t": "SPACEX BECAME A HYPERSCALER. Q3 revenue $14.6B (+161%), AI segment ~$7.5B (+~830%), ~3 GW of compute by year-end and ~10 GW in 2027, compute sold near spot with sub-1-year paybacks; Tesla-SpaceX merger talk (Polymarket ~56-81%); Terafab test chip May-June 2027.",
-     "src": "T274,T231,T281,T268,T256"
-    },
-    {
-     "t": "THE AGENTIC-FINANCE CASE FOR ETHEREUM GOT ITS LINEAGE. Jordi (T179) sent us to the source voices: Polosukhin (2023) - agents with a blockchain account become economic agents; Mougayar - value Ethereum on the worlds dependence on it ($1-1.2T fair value, $4-6T by 2030-35); Chalom - ETH is the trust commodity, >50% of stablecoins and tokenized RWAs, ~$4T of fees in play; Tom Lee - would you trust agents on Visa rails and JPMorgan accounts? For you: a coherent thesis with real institutional evidence, from one incentive cluster.",
-     "src": "T180,T181,T182,T183"
-    },
-    {
-     "t": "THE CONSUMER AGENT GOT HARD NUMBERS. Instinct: ~10%/day growth on invites alone, >$1B annualized transactions, 40% hand over a credit card in three weeks, 80% retention, compute doubling weekly, ~$10B valuation. Batnik cancelled subscriptions and cut cable through it. For you: own compute/memory and the transaction businesses agents send volume to; underweight inertia models.",
-     "src": "T184,T188"
-    },
-    {
-     "t": "THE LAB DEBATE SHARPENED. Pomp: per-customer token use rolling over and enterprises insourcing. Ed Elson: an AI LAB bubble, not an AI bubble (Anthropic ~$2T on ~$8B operating losses vs NVDA ~16x). Jordi: the labs own ~50% of new compute. For you: public AI over private labs; wait for the IPO price.",
-     "src": "T185,T186"
-    },
-    {
-     "t": "THE BOND MARKET IS THE STORY - THE EVERYTHING TRADE. The 10yr rose 18 of 24 days to ~5.25% on a demand problem: AI capex now debt-funded, hyperscaler FCF ~0, corporate issuance doubled; breakevens anchored. Breadth is weak but the new lows are utilities, staples and real estate; the AI premium is gone (22V: 1.14x). For you: watch 5.6%; bonds at 5%+ are quietly AI exposure.",
-     "src": "T187,T188"
-    },
-    {
-     "t": "AI REGULATION RESOLVED TOWARD SELF-REGULATION. The White House AI CEO meeting produced four rules - internal controls, an internal team, an independent auditor, a board committee. OpenAI pulled a model over safety; Altman: no IPO until safe; Nvidia launched an open agent safety platform. For you: no new regulator - the defenders and assurance layer carry the load.",
-     "src": "T186"
     }
    ]
   },
@@ -15738,6 +16396,50 @@ const DATA = {
  "method": {},
  "timelineArchive": [
   {
+   "t": "THE ANTHROPIC S-1 GAVE THE LAB DEBATE FINANCIALS. H1 revenue $16.3B, Q3 ~$17B, ~85% gross margin, ~$132B cash, ~$895B of compute commitments; Q3 growth ~45% q/q vs ~147% in Q2; IPO (ANT) pricing ~Nov 16 at ~$1.5-2T. OpenAI's ARR claim fell from ~$70B to ~$50B.",
+   "src": "T217,T223,T245,T250,T254,T255,T209"
+  },
+  {
+   "t": "THE OCTOBER DRAWDOWN WAS A LEVERAGE FLUSH. Largest prime-book degross in ~10 years; Lone Pine ~-55% gross; Goldman's AI winners/losers pair gave back the year - yet breadth went from 20% to 61% of S&P names above the 50-day and 327 of 500 rose in October.",
+   "src": "T201,T202,T211,T213"
+  },
+  {
+   "t": "SAFETY TURNED OPERATIONAL; POLICY TURNED TO PACING. ~700 OpenAI test agents broke out in the Hugging Face incident; AI-found PHP flaws hit ~70% of sites; a ~$6.3B Binance hack. Altman calls for pacing changes; CAISI pre-review, the White House Accord and the SI Force form a working US regime.",
+   "src": "T205,T218,T231,T281,T287,T289"
+  },
+  {
+   "t": "THE FED AIMS AT AI CAPEX; THE MIDTERMS FLIP CONGRESS. The Fed held at 3.75-4.00% with two dissents for a hike; Warsh says AI capex is rate-sensitive; December ~75-80% priced. Nov 3: Democrats won the Senate and are projected to win the House; futures fell and Treasuries rallied on Nov 4.",
+   "src": "T277,Macro Pulse"
+  },
+  {
+   "t": "CONSUMER AGENTS SCALE - INTO WALLED GARDENS. Muse 10M+ users in six weeks with >25% shopping through it; GrokBot 800K paid weekly users; OpenAI Dots launched. Banks, Amazon and airlines block outside agents; agent payments run mostly on card-network tokens.",
+   "src": "T271,T274,T263,T192,T240,T242"
+  },
+  {
+   "t": "SPACEX BECAME A HYPERSCALER. Q3 revenue $14.6B (+161%), AI segment ~$7.5B (+~830%), ~3 GW of compute by year-end and ~10 GW in 2027, compute sold near spot with sub-1-year paybacks; Tesla-SpaceX merger talk (Polymarket ~56-81%); Terafab test chip May-June 2027.",
+   "src": "T274,T231,T281,T268,T256"
+  },
+  {
+   "t": "THE AGENTIC-FINANCE CASE FOR ETHEREUM GOT ITS LINEAGE. Jordi (T179) sent us to the source voices: Polosukhin (2023) - agents with a blockchain account become economic agents; Mougayar - value Ethereum on the worlds dependence on it ($1-1.2T fair value, $4-6T by 2030-35); Chalom - ETH is the trust commodity, >50% of stablecoins and tokenized RWAs, ~$4T of fees in play; Tom Lee - would you trust agents on Visa rails and JPMorgan accounts? For you: a coherent thesis with real institutional evidence, from one incentive cluster.",
+   "src": "T180,T181,T182,T183"
+  },
+  {
+   "t": "THE CONSUMER AGENT GOT HARD NUMBERS. Instinct: ~10%/day growth on invites alone, >$1B annualized transactions, 40% hand over a credit card in three weeks, 80% retention, compute doubling weekly, ~$10B valuation. Batnik cancelled subscriptions and cut cable through it. For you: own compute/memory and the transaction businesses agents send volume to; underweight inertia models.",
+   "src": "T184,T188"
+  },
+  {
+   "t": "THE LAB DEBATE SHARPENED. Pomp: per-customer token use rolling over and enterprises insourcing. Ed Elson: an AI LAB bubble, not an AI bubble (Anthropic ~$2T on ~$8B operating losses vs NVDA ~16x). Jordi: the labs own ~50% of new compute. For you: public AI over private labs; wait for the IPO price.",
+   "src": "T185,T186"
+  },
+  {
+   "t": "THE BOND MARKET IS THE STORY - THE EVERYTHING TRADE. The 10yr rose 18 of 24 days to ~5.25% on a demand problem: AI capex now debt-funded, hyperscaler FCF ~0, corporate issuance doubled; breakevens anchored. Breadth is weak but the new lows are utilities, staples and real estate; the AI premium is gone (22V: 1.14x). For you: watch 5.6%; bonds at 5%+ are quietly AI exposure.",
+   "src": "T187,T188"
+  },
+  {
+   "t": "AI REGULATION RESOLVED TOWARD SELF-REGULATION. The White House AI CEO meeting produced four rules - internal controls, an internal team, an independent auditor, a board committee. OpenAI pulled a model over safety; Altman: no IPO until safe; Nvidia launched an open agent safety platform. For you: no new regulator - the defenders and assurance layer carry the load.",
+   "src": "T186"
+  },
+  {
    "t": "THE MODEL IS BECOMING A COMMODITY. All-In (T175): token use flipped from 80/20 closed/open to 80/20 OPEN/closed in 12 weeks; MiMo Pro ~Opus 5; Anthropic and OpenAI cut prices ~50%; the Anthropic IPO slipped (Polymarket 96 to 76%). Chamath: the edge is the harness; Thompson (via T174): Muse makes the model swappable; a16z (T176): innovation is moving outside the models. Sacks counters with a durable duopoly. For you: keep the toll-taker, own the user/harness/security layers, treat lab IPOs as a price question.",
    "src": "T175,T174,T176"
   },
@@ -17238,10 +17940,10 @@ const DATA = {
    "grade": 90
   },
   "summary": {
-   "active": 58,
+   "active": 61,
    "fading": 3,
-   "retired": 10,
-   "graded": 33,
+   "retired": 11,
+   "graded": 32,
    "beating": 18,
    "nextGrade": "2026-11-16",
    "backdrop": [
@@ -17312,136 +18014,7 @@ const DATA = {
     }
    ]
   },
-  "candidates": [
-   {
-    "tkr": "TSLA",
-    "houses": 12,
-    "net": 6,
-    "lean": "bull",
-    "ids": [
-     "T189",
-     "T202",
-     "T207",
-     "T229",
-     "T231",
-     "T237"
-    ],
-    "bench": "QQQ"
-   },
-   {
-    "tkr": "WMT",
-    "houses": 5,
-    "net": 5,
-    "lean": "bull",
-    "ids": [
-     "T228",
-     "T240",
-     "T242",
-     "T251",
-     "T260",
-     "T271"
-    ],
-    "bench": "XLP"
-   },
-   {
-    "tkr": "AMD",
-    "houses": 5,
-    "net": -2,
-    "lean": "bear",
-    "ids": [
-     "T194",
-     "T218",
-     "T226",
-     "T229",
-     "T296",
-     "T308"
-    ],
-    "bench": "SMH"
-   },
-   {
-    "tkr": "PLTR",
-    "houses": 5,
-    "net": 2,
-    "lean": "bull",
-    "ids": [
-     "T215",
-     "T226",
-     "T228",
-     "T237",
-     "T251",
-     "T252"
-    ],
-    "bench": "IGV"
-   },
-   {
-    "tkr": "CAT",
-    "houses": 4,
-    "net": -2,
-    "lean": "bear",
-    "ids": [
-     "T245",
-     "T255",
-     "T301",
-     "T303"
-    ],
-    "bench": "XLI"
-   },
-   {
-    "tkr": "NFLX",
-    "houses": 3,
-    "net": -7,
-    "lean": "bear",
-    "ids": [
-     "T223",
-     "T224",
-     "T228",
-     "T244",
-     "T247",
-     "T251"
-    ],
-    "bench": "QQQ"
-   },
-   {
-    "tkr": "T",
-    "houses": 3,
-    "net": -5,
-    "lean": "bear",
-    "ids": [
-     "T231",
-     "T245",
-     "T247",
-     "T249",
-     "T281"
-    ],
-    "bench": "XLC"
-   },
-   {
-    "tkr": "C",
-    "houses": 3,
-    "net": -3,
-    "lean": "bear",
-    "ids": [
-     "T189",
-     "T192",
-     "T202",
-     "T249"
-    ],
-    "bench": "XLF"
-   },
-   {
-    "tkr": "SHOP",
-    "houses": 3,
-    "net": 2,
-    "lean": "bull",
-    "ids": [
-     "T199",
-     "T242",
-     "T271",
-     "T299"
-    ],
-    "bench": "IGV"
-   }
-  ],
+  "candidates": [],
   "items": [
    {
     "tkr": "NVDA",
@@ -19046,17 +19619,120 @@ const DATA = {
     "delta": null
    },
    {
+    "tkr": "TSLA",
+    "ysym": "TSLA",
+    "name": "Tesla",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "QQQ",
+    "benchName": "Nasdaq-100 (QQQ)",
+    "status": "active",
+    "score": 13,
+    "lastMention": "2026-11-07",
+    "quietDays": 0,
+    "added": "2026-11-08",
+    "since": "2026-11-08",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Raised by 12 houses in 30 days, net bullish: robotaxi, Optimus, Terafab and a possible SpaceX merger",
+    "watch": "Merger announcement; EU FSD approval; robotaxi scale in 2027",
+    "auto": false,
+    "themes": [
+     {
+      "id": "energy",
+      "name": "Energy is the binding constraint"
+     },
+     {
+      "id": "capex",
+      "name": "Capex value-destruction + the capex-REWARD reflex breaking"
+     },
+     {
+      "id": "physical",
+      "name": "Physical AI / robotics / autonomy"
+     }
+    ],
+    "houses": 12,
+    "mentionCount": 18,
+    "mentions": [
+     {
+      "id": "T308",
+      "date": "2026-11-07",
+      "who": "All-In",
+      "s": 0
+     },
+     {
+      "id": "T301",
+      "date": "2026-11-06",
+      "who": "The Compound (Dan Clifton)",
+      "s": -1
+     },
+     {
+      "id": "T303",
+      "date": "2026-11-06",
+      "who": "Odd Lots (Skanda Amarnath)",
+      "s": -1
+     },
+     {
+      "id": "T297",
+      "date": "2026-11-04",
+      "who": "Moonshots (Diamandis)",
+      "s": null
+     },
+     {
+      "id": "T229",
+      "date": "2026-10-31",
+      "who": "Moonshots (Diamandis)",
+      "s": 1
+     },
+     {
+      "id": "T237",
+      "date": "2026-10-29",
+      "who": "a16z American Dynamism",
+      "s": 1
+     },
+     {
+      "id": "T254",
+      "date": "2026-10-28",
+      "who": "Prof G Markets (Elson w/ Eisman)",
+      "s": 0
+     },
+     {
+      "id": "T256",
+      "date": "2026-10-26",
+      "who": "Prof G Markets (Galloway/Elson)",
+      "s": -1
+     }
+    ],
+    "lean": 7,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-11-08",
+      "label": "Added at Sunday review",
+      "note": ""
+     }
+    ],
+    "px": {
+     "note": "No price data",
+     "addPx": null
+    },
+    "rank": 14,
+    "isNew": true,
+    "delta": null
+   },
+   {
     "tkr": "INTC",
     "ysym": "INTC",
     "name": "Intel",
-    "stance": "bull",
+    "stance": "two",
     "risk": "spec",
     "bench": "SMH",
     "benchName": "Semiconductors (SMH)",
     "status": "active",
     "score": 12.88,
     "lastMention": "2026-10-31",
-    "quietDays": 8,
+    "quietDays": 0,
     "added": "2026-07-20",
     "since": "2026-07-20",
     "readded": null,
@@ -19132,7 +19808,7 @@ const DATA = {
      }
     ],
     "lean": -4,
-    "leanFlag": "Recent sources lean negative (-4): review the stance on Sunday",
+    "leanFlag": "",
     "history": [
      {
       "date": "2026-07-20",
@@ -19143,6 +19819,11 @@ const DATA = {
       "date": "2026-08-10",
       "label": "Batch 12",
       "note": "Intel"
+     },
+     {
+      "date": "2026-11-08",
+      "label": "Stance changed",
+      "note": "bull to two"
      }
     ],
     "px": {
@@ -19159,11 +19840,11 @@ const DATA = {
      "adj": -0.3016,
      "days": 111,
      "frozen": false,
-     "graded": true,
+     "graded": false,
      "gradeIn": null,
      "addPx": 97.06
     },
-    "rank": 14,
+    "rank": 15,
     "isNew": false,
     "delta": null
    },
@@ -19290,7 +19971,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 248.43
     },
-    "rank": 15,
+    "rank": 16,
     "isNew": false,
     "delta": null
    },
@@ -19407,7 +20088,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 1739.02
     },
-    "rank": 16,
+    "rank": 17,
     "isNew": false,
     "delta": null
    },
@@ -19524,7 +20205,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 402.3
     },
-    "rank": 17,
+    "rank": 18,
     "isNew": false,
     "delta": null
    },
@@ -19651,8 +20332,111 @@ const DATA = {
      "gradeIn": 41,
      "addPx": 2642.9976
     },
-    "rank": 18,
+    "rank": 19,
     "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "AMD",
+    "ysym": "AMD",
+    "name": "AMD",
+    "stance": "two",
+    "risk": "spec",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "active",
+    "score": 7.61,
+    "lastMention": "2026-11-07",
+    "quietDays": 0,
+    "added": "2026-11-08",
+    "since": "2026-11-08",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Raised by 5 houses with a slight bearish lean; fell 17.3% on Nov 5 as builders sold off",
+    "watch": "Share gains vs Nvidia; hyperscaler orders after the permitting freeze",
+    "auto": false,
+    "themes": [
+     {
+      "id": "memory",
+      "name": "Memory / HBM shortage"
+     },
+     {
+      "id": "assurance",
+      "name": "AI assurance / agent-governance / cybersecurity"
+     },
+     {
+      "id": "ratesmacro",
+      "name": "Rising RATES / financing conditions"
+     }
+    ],
+    "houses": 8,
+    "mentionCount": 11,
+    "mentions": [
+     {
+      "id": "T308",
+      "date": "2026-11-07",
+      "who": "All-In",
+      "s": -1
+     },
+     {
+      "id": "T309",
+      "date": "2026-11-06",
+      "who": "Steve Eisman",
+      "s": -1
+     },
+     {
+      "id": "T296",
+      "date": "2026-11-04",
+      "who": "Invest Like the Best (Martin Casado)",
+      "s": 0
+     },
+     {
+      "id": "T226",
+      "date": "2026-11-03",
+      "who": "The Compound (Brown/Batnick)",
+      "s": 1
+     },
+     {
+      "id": "T229",
+      "date": "2026-10-31",
+      "who": "Moonshots (Diamandis)",
+      "s": 0
+     },
+     {
+      "id": "T218",
+      "date": "2026-10-23",
+      "who": "All-In (w/ Nikesh Arora)",
+      "s": -1
+     },
+     {
+      "id": "T194",
+      "date": "2026-10-09",
+      "who": "Jurrien Timmer (Compound and Friends)",
+      "s": 0
+     },
+     {
+      "id": "T196",
+      "date": "2026-10-08",
+      "who": "Moonshots (Diamandis)",
+      "s": 0
+     }
+    ],
+    "lean": -3,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-11-08",
+      "label": "Added at Sunday review",
+      "note": ""
+     }
+    ],
+    "px": {
+     "note": "No price data",
+     "addPx": null
+    },
+    "rank": 20,
+    "isNew": true,
     "delta": null
    },
    {
@@ -19778,7 +20562,7 @@ const DATA = {
      "gradeIn": 18,
      "addPx": 82.88
     },
-    "rank": 19,
+    "rank": 21,
     "isNew": false,
     "delta": null
    },
@@ -19910,7 +20694,7 @@ const DATA = {
      "gradeIn": 36,
      "addPx": 110.45
     },
-    "rank": 20,
+    "rank": 22,
     "isNew": false,
     "delta": null
    },
@@ -20027,7 +20811,7 @@ const DATA = {
      "gradeIn": 8,
      "addPx": 140.59
     },
-    "rank": 21,
+    "rank": 23,
     "isNew": false,
     "delta": null
    },
@@ -20154,7 +20938,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 1146.9
     },
-    "rank": 22,
+    "rank": 24,
     "isNew": false,
     "delta": null
    },
@@ -20286,7 +21070,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 360.57
     },
-    "rank": 23,
+    "rank": 25,
     "isNew": false,
     "delta": null
    },
@@ -20403,7 +21187,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 173.79
     },
-    "rank": 24,
+    "rank": 26,
     "isNew": false,
     "delta": null
    },
@@ -20520,7 +21304,7 @@ const DATA = {
      "gradeIn": 86,
      "addPx": 1396000
     },
-    "rank": 25,
+    "rank": 27,
     "isNew": true,
     "delta": null
    },
@@ -20631,7 +21415,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 21.71
     },
-    "rank": 26,
+    "rank": 28,
     "isNew": true,
     "delta": null
    },
@@ -20757,7 +21541,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 547.44
     },
-    "rank": 27,
+    "rank": 29,
     "isNew": false,
     "delta": null
    },
@@ -20874,8 +21658,99 @@ const DATA = {
      "gradeIn": null,
      "addPx": 378.16
     },
-    "rank": 28,
+    "rank": 30,
     "isNew": false,
+    "delta": null
+   },
+   {
+    "tkr": "WMT",
+    "ysym": "WMT",
+    "name": "Walmart",
+    "stance": "bull",
+    "risk": "spec",
+    "bench": "XLP",
+    "benchName": "XLP",
+    "status": "active",
+    "score": 5.19,
+    "lastMention": "2026-11-02",
+    "quietDays": 0,
+    "added": "2026-11-08",
+    "since": "2026-11-08",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Five houses lean bullish: an AI-enabled retailer and early agentic-commerce adopter",
+    "watch": "Agentic shopping volume; margin gains from automation",
+    "auto": false,
+    "themes": [
+     {
+      "id": "consumer",
+      "name": "Consumer agents (next wave)"
+     },
+     {
+      "id": "agentaction",
+      "name": "The AGENT leaves the chatbox"
+     },
+     {
+      "id": "capitalbound",
+      "name": "CAPITAL, not engineering, is the binding constraint"
+     }
+    ],
+    "houses": 5,
+    "mentionCount": 6,
+    "mentions": [
+     {
+      "id": "T251",
+      "date": "2026-11-02",
+      "who": "Prof G Markets (Galloway/Elson)",
+      "s": 1
+     },
+     {
+      "id": "T260",
+      "date": "2026-10-26",
+      "who": "Odd Lots (Lindsay Owens)",
+      "s": 1
+     },
+     {
+      "id": "T271",
+      "date": "2026-10-21",
+      "who": "Meta (earnings)",
+      "s": 0
+     },
+     {
+      "id": "T228",
+      "date": "2026-10-20",
+      "who": "The Compound (Brown/Batnick)",
+      "s": 1
+     },
+     {
+      "id": "T240",
+      "date": "2026-10-19",
+      "who": "a16z (Greze, Town)",
+      "s": 1
+     },
+     {
+      "id": "T242",
+      "date": "2026-10-15",
+      "who": "a16z (Angelos, VGS)",
+      "s": 1
+     }
+    ],
+    "lean": 5,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-11-08",
+      "label": "Added at Sunday review",
+      "note": ""
+     }
+    ],
+    "px": {
+     "note": "No price data",
+     "addPx": null
+    },
+    "rank": 31,
+    "isNew": true,
     "delta": null
    },
    {
@@ -21001,7 +21876,7 @@ const DATA = {
      "gradeIn": 41,
      "addPx": 194.25
     },
-    "rank": 29,
+    "rank": 32,
     "isNew": false,
     "delta": null
    },
@@ -21118,7 +21993,7 @@ const DATA = {
      "gradeIn": 18,
      "addPx": 60.02
     },
-    "rank": 30,
+    "rank": 33,
     "isNew": false,
     "delta": null
    },
@@ -21234,7 +22109,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 1079.1801
     },
-    "rank": 31,
+    "rank": 34,
     "isNew": false,
     "delta": null
    },
@@ -21345,7 +22220,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 234.74
     },
-    "rank": 32,
+    "rank": 35,
     "isNew": false,
     "delta": null
    },
@@ -21460,109 +22335,111 @@ const DATA = {
      "gradeIn": 21,
      "addPx": 173.04
     },
-    "rank": 33,
+    "rank": 36,
     "isNew": false,
     "delta": null
    },
    {
-    "tkr": "CYBR",
-    "ysym": "CYBR",
-    "name": "CyberArk",
-    "stance": "bull",
-    "risk": "mod",
-    "bench": "IGV",
-    "benchName": "Software (IGV)",
+    "tkr": "NFLX",
+    "ysym": "NFLX",
+    "name": "Netflix",
+    "stance": "bear",
+    "risk": "spec",
+    "bench": "QQQ",
+    "benchName": "Nasdaq-100 (QQQ)",
     "status": "active",
-    "score": 3.69,
-    "lastMention": "2026-10-07",
-    "quietDays": 32,
-    "added": "2026-08-31",
-    "since": "2026-08-31",
+    "score": 3.47,
+    "lastMention": "2026-11-04",
+    "quietDays": 0,
+    "added": "2026-11-08",
+    "since": "2026-11-08",
     "readded": null,
     "retiredOn": null,
     "retiredReason": null,
-    "why": "OpenShell + Sentry; granular agent auth; secure-by-design renaissance",
-    "watch": "The defenders get a standards tailwind",
+    "why": "Three houses lean bearish: agents breaking the attention and engagement model",
+    "watch": "Engagement and ad-tier trends as consumer agents scale",
     "auto": false,
     "themes": [
      {
-      "id": "assurance",
-      "name": "AI assurance / agent-governance / cybersecurity"
+      "id": "everythingtrade",
+      "name": "The EVERYTHING TRADE"
      },
      {
-      "id": "edge",
-      "name": "Edge / on-prem / distributed inference"
+      "id": "consumer",
+      "name": "Consumer agents (next wave)"
      },
      {
-      "id": "agentaction",
-      "name": "The AGENT leaves the chatbox"
+      "id": "debt",
+      "name": "Debt / private-credit systemic risk"
      }
     ],
-    "houses": 5,
-    "mentionCount": 6,
+    "houses": 3,
+    "mentionCount": 8,
     "mentions": [
      {
-      "id": "T197",
-      "date": "2026-10-07",
-      "who": "Microsoft-Nvidia (Nadella/Huang)",
-      "s": 1
+      "id": "T294",
+      "date": "2026-11-04",
+      "who": "Animal Spirits (The Compound)",
+      "s": -1
      },
      {
-      "id": "T168",
-      "date": "2026-09-15",
-      "who": "Jensen Huang",
-      "s": null
+      "id": "T244",
+      "date": "2026-11-02",
+      "who": "Steve Eisman",
+      "s": -1
      },
      {
-      "id": "T176",
-      "date": "2026-09-15",
-      "who": "Casado, Sinofsky & Levie (a16z)",
-      "s": null
+      "id": "T251",
+      "date": "2026-11-02",
+      "who": "Prof G Markets (Galloway/Elson)",
+      "s": -1
      },
      {
-      "id": "T132",
-      "date": "2026-08-27",
-      "who": "CNBC Halftime/Closing (desk)",
-      "s": null
+      "id": "T252",
+      "date": "2026-10-30",
+      "who": "Prof G Markets (w/ Josh Brown)",
+      "s": 0
      },
      {
-      "id": "T34",
-      "date": "2026-07-15",
-      "who": "ServiceNow (earnings)",
-      "s": null
+      "id": "T223",
+      "date": "2026-10-28",
+      "who": "Animal Spirits (Batnick/Carlson)",
+      "s": -1
      },
      {
-      "id": "T03",
-      "date": "2026-07-08",
-      "who": "Jensen Huang",
-      "s": null
+      "id": "T247",
+      "date": "2026-10-23",
+      "who": "Steve Eisman",
+      "s": -1
+     },
+     {
+      "id": "T224",
+      "date": "2026-10-21",
+      "who": "Animal Spirits (Batnick/Carlson)",
+      "s": -1
+     },
+     {
+      "id": "T228",
+      "date": "2026-10-20",
+      "who": "The Compound (Brown/Batnick)",
+      "s": -1
      }
     ],
-    "lean": 1,
+    "lean": -7,
     "leanFlag": "",
     "history": [
      {
-      "date": "2026-08-31",
-      "label": "Batch 15",
-      "note": "CrowdStrike / Okta / CyberArk"
-     },
-     {
-      "date": "2026-09-15",
-      "label": "Batch 17",
-      "note": "Defenders - the window is open, $1B behind it"
-     },
-     {
-      "date": "2026-09-28",
-      "label": "Batch 19",
-      "note": "Agent security - swarms break the insider-threat model"
+      "date": "2026-11-08",
+      "label": "Added at Sunday review",
+      "note": ""
      }
     ],
     "px": {
      "note": "No price data",
      "addPx": null
     },
-    "rank": 34,
-    "isNew": false,
+    "rank": 37,
+    "isNew": true,
     "delta": null
    },
    {
@@ -21660,7 +22537,7 @@ const DATA = {
      "gradeIn": 8,
      "addPx": 1154.35
     },
-    "rank": 35,
+    "rank": 38,
     "isNew": false,
     "delta": null
    },
@@ -21777,7 +22654,7 @@ const DATA = {
      "gradeIn": 86,
      "addPx": 1037.4
     },
-    "rank": 36,
+    "rank": 39,
     "isNew": true,
     "delta": null
    },
@@ -21909,7 +22786,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 65.45
     },
-    "rank": 37,
+    "rank": 40,
     "isNew": false,
     "delta": null
    },
@@ -22012,7 +22889,7 @@ const DATA = {
      "gradeIn": 21,
      "addPx": 231
     },
-    "rank": 38,
+    "rank": 41,
     "isNew": false,
     "delta": null
    },
@@ -22105,7 +22982,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 104.7
     },
-    "rank": 39,
+    "rank": 42,
     "isNew": false,
     "delta": null
    },
@@ -22192,7 +23069,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 24.02
     },
-    "rank": 40,
+    "rank": 43,
     "isNew": false,
     "delta": null
    },
@@ -22285,7 +23162,7 @@ const DATA = {
      "gradeIn": 49,
      "addPx": 392.09
     },
-    "rank": 41,
+    "rank": 44,
     "isNew": false,
     "delta": null
    },
@@ -22407,7 +23284,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 194.94
     },
-    "rank": 42,
+    "rank": 45,
     "isNew": false,
     "delta": null
    },
@@ -22494,7 +23371,7 @@ const DATA = {
      "gradeIn": 18,
      "addPx": 189.43
     },
-    "rank": 43,
+    "rank": 46,
     "isNew": false,
     "delta": null
    },
@@ -22593,7 +23470,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 56.82
     },
-    "rank": 44,
+    "rank": 47,
     "isNew": false,
     "delta": null
    },
@@ -22685,7 +23562,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 401.41
     },
-    "rank": 45,
+    "rank": 48,
     "isNew": false,
     "delta": null
    },
@@ -22784,7 +23661,7 @@ const DATA = {
      "gradeIn": 86,
      "addPx": 626.75
     },
-    "rank": 46,
+    "rank": 49,
     "isNew": true,
     "delta": null
    },
@@ -22871,7 +23748,7 @@ const DATA = {
      "gradeIn": 18,
      "addPx": 127.31
     },
-    "rank": 47,
+    "rank": 50,
     "isNew": false,
     "delta": null
    },
@@ -22957,7 +23834,7 @@ const DATA = {
      "gradeIn": 88,
      "addPx": 169.35
     },
-    "rank": 48,
+    "rank": 51,
     "isNew": true,
     "delta": null
    },
@@ -23038,7 +23915,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 47.73
     },
-    "rank": 49,
+    "rank": 52,
     "isNew": false,
     "delta": null
    },
@@ -23124,7 +24001,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 291.67
     },
-    "rank": 50,
+    "rank": 53,
     "isNew": false,
     "delta": null
    },
@@ -23205,7 +24082,7 @@ const DATA = {
      "gradeIn": 86,
      "addPx": 118.77
     },
-    "rank": 51,
+    "rank": 54,
     "isNew": true,
     "delta": null
    },
@@ -23297,7 +24174,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 632.56
     },
-    "rank": 52,
+    "rank": 55,
     "isNew": false,
     "delta": null
    },
@@ -23378,7 +24255,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 253.5
     },
-    "rank": 53,
+    "rank": 56,
     "isNew": false,
     "delta": null
    },
@@ -23453,7 +24330,7 @@ const DATA = {
      "gradeIn": 18,
      "addPx": 80.07
     },
-    "rank": 54,
+    "rank": 57,
     "isNew": false,
     "delta": null
    },
@@ -23526,7 +24403,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 1137.52
     },
-    "rank": 55,
+    "rank": 58,
     "isNew": false,
     "delta": null
    },
@@ -23588,7 +24465,7 @@ const DATA = {
      "gradeIn": 56,
      "addPx": 39.97
     },
-    "rank": 56,
+    "rank": 59,
     "isNew": false,
     "delta": null
    },
@@ -23656,7 +24533,7 @@ const DATA = {
      "gradeIn": 41,
      "addPx": 111.1329
     },
-    "rank": 57,
+    "rank": 60,
     "isNew": false,
     "delta": null
    },
@@ -23724,7 +24601,7 @@ const DATA = {
      "gradeIn": 86,
      "addPx": 195.09
     },
-    "rank": 58,
+    "rank": 61,
     "isNew": true,
     "delta": null
    },
@@ -23792,7 +24669,7 @@ const DATA = {
      "gradeIn": null,
      "addPx": 103.02
     },
-    "rank": 59,
+    "rank": 62,
     "isNew": false,
     "delta": null
    },
@@ -23847,7 +24724,7 @@ const DATA = {
      "gradeIn": 18,
      "addPx": 99.65
     },
-    "rank": 60,
+    "rank": 63,
     "isNew": false,
     "delta": null
    },
@@ -23902,9 +24779,112 @@ const DATA = {
      "gradeIn": 18,
      "addPx": 99.14
     },
-    "rank": 61,
+    "rank": 64,
     "isNew": false,
     "delta": null
+   },
+   {
+    "tkr": "CYBR",
+    "ysym": "CYBR",
+    "name": "CyberArk",
+    "stance": "bull",
+    "risk": "mod",
+    "bench": "IGV",
+    "benchName": "Software (IGV)",
+    "status": "retired",
+    "score": 3.69,
+    "lastMention": "2026-10-07",
+    "quietDays": 0,
+    "added": "2026-08-31",
+    "since": "2026-08-31",
+    "readded": null,
+    "retiredOn": "2026-11-08",
+    "retiredReason": "No price data since its acquisition by Palo Alto Networks; follow the theme through PANW",
+    "why": "OpenShell + Sentry; granular agent auth; secure-by-design renaissance",
+    "watch": "The defenders get a standards tailwind",
+    "auto": false,
+    "themes": [
+     {
+      "id": "assurance",
+      "name": "AI assurance / agent-governance / cybersecurity"
+     },
+     {
+      "id": "edge",
+      "name": "Edge / on-prem / distributed inference"
+     },
+     {
+      "id": "agentaction",
+      "name": "The AGENT leaves the chatbox"
+     }
+    ],
+    "houses": 5,
+    "mentionCount": 6,
+    "mentions": [
+     {
+      "id": "T197",
+      "date": "2026-10-07",
+      "who": "Microsoft-Nvidia (Nadella/Huang)",
+      "s": 1
+     },
+     {
+      "id": "T168",
+      "date": "2026-09-15",
+      "who": "Jensen Huang",
+      "s": null
+     },
+     {
+      "id": "T176",
+      "date": "2026-09-15",
+      "who": "Casado, Sinofsky & Levie (a16z)",
+      "s": null
+     },
+     {
+      "id": "T132",
+      "date": "2026-08-27",
+      "who": "CNBC Halftime/Closing (desk)",
+      "s": null
+     },
+     {
+      "id": "T34",
+      "date": "2026-07-15",
+      "who": "ServiceNow (earnings)",
+      "s": null
+     },
+     {
+      "id": "T03",
+      "date": "2026-07-08",
+      "who": "Jensen Huang",
+      "s": null
+     }
+    ],
+    "lean": 1,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-08-31",
+      "label": "Batch 15",
+      "note": "CrowdStrike / Okta / CyberArk"
+     },
+     {
+      "date": "2026-09-15",
+      "label": "Batch 17",
+      "note": "Defenders - the window is open, $1B behind it"
+     },
+     {
+      "date": "2026-09-28",
+      "label": "Batch 19",
+      "note": "Agent security - swarms break the insider-threat model"
+     },
+     {
+      "date": "2026-11-08",
+      "label": "Retired early",
+      "note": "No price data since its acquisition by Palo Alto Networks; follow the theme through PANW"
+     }
+    ],
+    "px": {
+     "note": "No price data",
+     "addPx": null
+    }
    },
    {
     "tkr": "BE",
