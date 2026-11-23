@@ -319,6 +319,7 @@ table.pred th{color:var(--faint);font-weight:600;font-size:12px;text-transform:u
 .scbio{padding:10px 0 9px;font-size:14px;color:var(--dim);border-bottom:1px solid var(--line)}.scbio b{color:var(--ink)}.scname{cursor:pointer}
 .wlsub{font-size:11.5px;margin:6px 0 2px}
 .kpi.kclick{cursor:pointer}.kpi.on{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}.velfbar{margin:0 0 12px;color:var(--dim);font-size:13.5px}.velfbar .calmore{margin:0 0 0 6px}
+.predpanel .calbar{margin:12px 0 6px}
 </style>
 </head>
 <body>
@@ -32862,16 +32863,16 @@ const ARTICLES=[{"date":"AUGUST 27, 2026","kicker":"MARKET SYNTHESIS","head":"Co
 
 const TABS=[
   ["macro","Macro Pulse","Facts, not opinions: the forces moving markets right now (war, energy, rates, credit, policy, AI macro, labor, crypto), refreshed each morning.",false],
-  ["new","Weekly Synthesis","The weekly write-up: what the latest edition's sources changed, with new themes, conviction moves, open debates and trade ideas.",true],
+  ["new","Weekly Synthesis","The weekly write-up: what the latest edition's sources changed, with new themes, conviction moves, open debates and trade ideas.",false],
   ["calendar","Calendar","Everything scheduled over the next six weeks: Fed, government data, earnings, policy, geopolitics, IPOs and market dates, with the result once each happens.",false],
+  ["articles","Newsletters","Every Confluenza Labs newsletter we have published, newest first: read the full text or open the square image.",false],
+  ["timeline","Timeline","The roadmap of catalysts and expected turning points, from now to 2030 and beyond.",false],
+  ["tickers","Tickers","Every ticker mentioned across the library: who said it, when, and which way they leaned.",false],
   ["velocity","Velocity Board","Every theme ranked by momentum — how fast conviction is moving — not just how high it sits.",false],
   ["themes","Themes","Deep-dive on each theme: conviction, independent voices, camp (bull/bear/contested), why it's moving, dated changelog.",false],
-  ["timeline","Timeline & Predictions","Catalyst roadmap plus a scorecard grading each dated prediction hit / trending / pending / miss.",false],
-  ["scores","Scorecards","Who has been right: every graded prediction rolled up by voice, with the earned weight each voice now carries.",false],
+  ["scores","Scorecards","Who has been right: every dated prediction graded hit, miss, trending or pending, rolled up by the voice that made it.",false],
   ["watchlist","Watchlist","Tickers mapped to themes with eyes-wide-open labels: cap tier, liquidity, crowdedness.",false],
-  ["tickers","Tickers","Every ticker mentioned across the library: who said it, when, and which way they leaned.",false],
   ["library","Library","Every transcript with its record date and a pro-grade executive summary.",false],
-  ["articles","Newsletters","Every Confluenza Labs newsletter we have published, newest first: read the full text or open the square image.",false],
   ["sources","Source X-Ray","The honesty panel: what voices are in the library and which perspectives are still missing.",false],
   ["method","Methodology","How scoring, velocity, confluence, chronology and bias-control actually work.",false]
 ];
@@ -32982,17 +32983,11 @@ function renderThemes(){
 /* ---- Timeline ---- */
 function renderTimeline(){
   const v=$("#v-timeline");v.innerHTML="";
-  v.appendChild(el("p","lead","The roadmap of catalysts (now → 2030+) plus a scorecard grading every dated prediction. Over time this calibrates which voices to trust."));
+  v.appendChild(el("p","lead","The roadmap of catalysts and expected turning points, from now to 2030 and beyond. Every dated prediction is graded on the Scorecards tab."));
   const tl=el("div","panel");tl.appendChild(el("h3","","Roadmap — catalysts & expected inflections"));
   DATA.timeline.forEach(p=>{const row=el("div","tlrow");row.appendChild(el("div","tlper",p.per));const box=el("div");const its=(p.per==="NEXT 6 WEEKS"&&DATA.calendar)?calTimelineItems():p.items;its.forEach(it=>box.appendChild(el("div","tlitem",bulletHTML(it.t)+(it.src?` <span class="src">— ${it.src}</span>`:""))));if(p.per==="NEXT 6 WEEKS"&&DATA.calendar){const a=el("div","calmore","High-importance events only. Full calendar →");a.onclick=()=>goTab("calendar");box.appendChild(a);}row.appendChild(box);tl.appendChild(row);});
   v.appendChild(tl);
   if(DATA.timelineArchive&&DATA.timelineArchive.length){const ar=el("details","tlarch");ar.appendChild(el("summary","","Earlier NOW snapshots ("+DATA.timelineArchive.length+", archived as newer batches arrived)"));const bx=el("div","panel");DATA.timelineArchive.forEach(it=>bx.appendChild(el("div","tlitem",bulletHTML(it.t)+` <span class="src">— ${it.src}</span>`)));ar.appendChild(bx);v.appendChild(ar);}
-  const pp=el("div","panel");pp.appendChild(el("h3","","Prediction scorecard"));
-  pp.appendChild(el("div","hint","<span class='stat hit'>HIT</span> confirmed · <span class='stat track'>TRENDING</span> evidence building toward a hit, not yet resolved · <span class='stat pend'>PENDING</span> not yet due · <span class='stat miss'>MISS</span> falsified"));
-  const tb=el("table","pred");tb.innerHTML="<thead><tr><th>Voice</th><th>Prediction</th><th>Horizon</th><th>Status</th></tr></thead>";const body=el("tbody");
-  const rank={hit:0,miss:1,track:2,pend:3};
-  [...DATA.predictions].sort((a,b)=>rank[a.status]-rank[b.status]).forEach(p=>{const tr=el("tr");tr.appendChild(el("td","","<b>"+p.who+"</b><br><span class='faint' style='font-size:11px'>"+p.date+"</span>"));tr.appendChild(el("td","",p.claim+(p.note?`<div class='faint pnote'>${bulletHTML(p.note)}</div>`:"")));tr.appendChild(el("td","",p.horizon));const sc={hit:"HIT",miss:"MISS",track:"TRENDING",pend:"PENDING"}[p.status];tr.appendChild(el("td","","<span class='stat "+p.status+"'>"+sc+"</span>"));body.appendChild(tr);});
-  tb.appendChild(body);pp.appendChild(tb);v.appendChild(pp);
 }
 
 /* ---- Watchlist ---- */
@@ -33437,6 +33432,17 @@ function renderCalendar(){
 function calTimelineItems(){const t=calToday(),h=calAdd(t,42);return calSorted().filter(e=>e.date>=t&&e.date<=h&&e.imp==="high").map(e=>({t:calFmt(e.date)+" - "+e.event,src:""}));}
 
 /* ---- Scorecards ---- */
+let predFilter="all";
+function renderPredTable(v,replace){
+  const pp=el("div","panel predpanel");pp.appendChild(el("h3","","Every prediction ("+DATA.predictions.length+")"));
+  pp.appendChild(el("div","hint","<span class='stat hit'>HIT</span> confirmed · <span class='stat track'>TRENDING</span> evidence building toward a hit, not yet resolved · <span class='stat pend'>PENDING</span> not yet due · <span class='stat miss'>MISS</span> falsified"));
+  const bar=el("div","calbar");[["all","All"],["hit","Hit"],["miss","Miss"],["track","Trending"],["pend","Pending"]].forEach(([k,l])=>{const n=k==="all"?DATA.predictions.length:DATA.predictions.filter(p=>p.status===k).length;const b=el("button","calf"+(predFilter===k?" on":""),l+" <span>"+n+"</span>");b.onclick=()=>{predFilter=k;const old=document.querySelector("#v-scores .predpanel");const y=old?old.getBoundingClientRect().top:0;renderPredTable($("#v-scores"),old);};bar.appendChild(b);});pp.appendChild(bar);
+  const tb=el("table","pred");tb.innerHTML="<thead><tr><th>Voice</th><th>Prediction</th><th>Horizon</th><th>Status</th></tr></thead>";const body=el("tbody");
+  const rank={hit:0,miss:1,track:2,pend:3};
+  [...DATA.predictions].filter(p=>predFilter==="all"||p.status===predFilter).sort((a,b)=>rank[a.status]-rank[b.status]).forEach(p=>{const tr=el("tr");tr.appendChild(el("td","","<b>"+p.who+"</b><br><span class='faint' style='font-size:11px'>"+p.date+"</span>"));tr.appendChild(el("td","",p.claim+(p.note?`<div class='faint pnote'>${bulletHTML(p.note)}</div>`:"")));tr.appendChild(el("td","",p.horizon));const sc={hit:"HIT",miss:"MISS",track:"TRENDING",pend:"PENDING"}[p.status];tr.appendChild(el("td","","<span class='stat "+p.status+"'>"+sc+"</span>"));body.appendChild(tr);});
+  tb.appendChild(body);pp.appendChild(tb);if(replace)replace.replaceWith(pp);else v.appendChild(pp);
+}
+
 function renderScores(){const v=$("#v-scores");v.innerHTML="";
   v.appendChild(el("p","lead",`<b>Who has been right.</b> Every graded prediction rolls up to the voice that made it. Hit rate counts only resolved calls (hit or miss). <b>Weight</b> is what the dashboard uses when it adds up support for a theme: voices that are right more often count more, whoever they are (0.6x to 1.4x; 1.0x until a voice has resolved calls). Sources also decay with a ${HALFLIFE}-day half-life, so a year-old opinion counts about 6% of a fresh one.`));
   const all=Object.values(VOICESCORE);const hits=all.reduce((s,r)=>s+r.hit,0),miss=all.reduce((s,r)=>s+r.miss,0),trk=all.reduce((s,r)=>s+r.track,0),pend=all.reduce((s,r)=>s+r.pend,0);
@@ -33445,6 +33451,7 @@ function renderScores(){const v=$("#v-scores");v.innerHTML="";
   const head=el("div","screw head","<span>Voice</span><span>Calls</span><span>Hit</span><span>Miss</span><span>Trending</span><span>Pending</span><span>Hit rate</span><span>Weight</span>");v.appendChild(head);
   rows.forEach(r=>{const bio=(DATA.voiceBios||{})[r.key]||"";const d=el("details","scrow");const s=el("summary","screw",`<span class="scname"${bio?` title="${bio.replace(/"/g,"&quot;")}"`:""}><b>${r.name}</b></span><span>${r.list.length}</span><span class="g">${r.hit}</span><span class="r">${r.miss}</span><span>${r.track}</span><span>${r.pend}</span><span>${r.rate==null?"-":Math.round(r.rate*100)+"%"}</span><span><b>${r.weight.toFixed(2)}x</b></span>`);d.appendChild(s);
     const box=el("div","sclist");if(bio)box.appendChild(el("div","scbio","<b>"+r.name+"</b> — "+bio));r.list.forEach(p=>{const sc={hit:"HIT",miss:"MISS",track:"TRENDING",pend:"PENDING"}[p.status];box.appendChild(el("div","scitem",`<span class="stat ${p.status}">${sc}</span> <span class="faint">${p.date} · ${p.horizon}</span><br>${p.claim}${p.note?`<div class="faint pnote">${bulletHTML(p.note)}</div>`:""}`));});d.appendChild(box);v.appendChild(d);});
+  renderPredTable(v);
 }
 
 /* ---- Tickers ---- */
