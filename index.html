@@ -21046,24 +21046,24 @@ const DATA = {
   }
  ],
  "macro": {
-  "asOf": "2026-11-22",
+  "asOf": "2026-11-23",
   "overnight": [
-   "Weekend, markets closed. Stocks last closed Friday with the S&P 500 at 6,910 (-3.7%) and in a correction. The Nasdaq fell 5.3% and the VIX closed at 35.89.",
-   "Bitcoin slid to about $55,100 overnight Saturday, its lowest since September 2024. It then bounced to about $59,000 by Sunday morning. ETH recovered to about $1,650.",
-   "Iran struck Bahrain on Saturday. Bahrain says a civilian industrial site near the Bapco refinery on Sitra caught fire, with no casualties. Two more tankers were hit near Hormuz.",
-   "Iran is reportedly readying 14 oil tankers to test the US naval blockade. A tracking firm says one 'line-breaker' tanker signal was fake. Hormuz traffic is about 65% below pre-war levels.",
-   "Qatari envoys held talks in Tehran Friday night. Iran's foreign minister said talks deserve a chance, but Iran's demands still include ending the US blockade and lifting oil sanctions.",
-   "Washington: no deal yet to avoid a shutdown when funding runs out at 11:59 pm on Dec 11. Some Democrats want to use the deadline to push back on the Iran war.",
-   "This week is short. PCE inflation and revised GDP come Wednesday at 8:30 ET, with the Beige Book at 2:00. Markets are shut Thursday for Thanksgiving and close at 1:00 ET Friday.",
-   "Earnings this week: HPE and Zoom on Monday; Dell, HP, Workday and Analog Devices on Tuesday; Deere on Wednesday."
+   "US stock futures bounced hard before Monday's open. S&P 500 futures were up about 2.5% and Nasdaq-100 futures about 3%, after Friday's close at 6,910 left the S&P in a correction.",
+   "Chip and AI stocks led the rebound before the open. Nvidia rose more than 9%, with Micron, AMD and Broadcom up about 6% and CoreWeave, Nebius and IREN up about 10%.",
+   "Asia split. Korea's Kospi fell about 5% to a 10-month low while Taiwan rose about 2%. Tokyo was closed for a holiday.",
+   "Asian governments stepped in. Taiwan tightened short-selling rules, China eased margin rules, and Korea's finance minister said he is ready to steady the market.",
+   "Oil fell despite weekend attacks. Brent dropped about 1.8% to near $90.90 and WTI to about $82. Houthis claimed a hit on a Saudi refinery (unconfirmed), Iran struck Bahrain, and more tankers were hit near Hormuz.",
+   "Bitcoin was back near $61,000 after a Saturday low of about $55,500. It has fallen seven weeks in a row, the second-longest losing streak on record. Spot bitcoin ETFs lost $1.79 billion last week.",
+   "The dollar index is above 104, a 20-month high. The yen briefly weakened past 159 per dollar. Markets still price about a 96% chance of a December rate hike.",
+   "Short week ahead. NY Fed President Williams speaks today. PCE inflation and GDP come Wednesday, markets close Thursday and close early Friday."
   ],
   "drivers": [
    {
     "id": "geo",
     "name": "War & geopolitics",
     "status": "elevated",
-    "metric": "Iran struck Bahrain (Sitra industrial site fire, no casualties, Nov 21); 2 tankers hit near Hormuz; Iran readying 14 tankers to test US blockade (blockade day ~130); Hormuz traffic ~65% below pre-war; Qatar talks in Tehran; Iran says it downed a US drone over Qeshm",
-    "changed": "Iran hit targets in Bahrain on Saturday and claimed strikes on US bases. Two more tankers were hit near Hormuz. Iran says it will send 14 tankers through the US blockade, which raises the risk of a direct clash. Qatar is trying to restart talks.",
+    "metric": "Houthis claim strike on a Saudi refinery (unconfirmed); Iran hit an industrial site in Bahrain (Nov 21); more tankers hit near Hormuz and Khasab; Iran readying 14 tankers to test US blockade; Hormuz traffic ~65% below pre-war; COP31 talks collapsed Sunday",
+    "changed": "Attacks spread over the weekend. Houthis claimed a strike on a Saudi refinery, Iran hit Bahrain, and more ships were hit near Hormuz. Qatar is pushing for talks, but Iran's demands are unchanged.",
     "themes": [
      "energy",
      "taiwan",
@@ -21074,8 +21074,8 @@ const DATA = {
     "id": "energy",
     "name": "Oil & energy",
     "status": "watch",
-    "metric": "Brent Jan ~$92 (-3.4% wk, 3rd weekly drop, ~-20% in Nov); WTI Dec ~$83.5; Hormuz flows ~65% below pre-war; OPEC+ sets 2027 quotas Nov 29",
-    "changed": "Oil is closed for the weekend after a third weekly loss. The Bahrain strike near a refinery and Iran's plan to run the blockade could lift prices when trading reopens Sunday evening. OPEC+ meets Nov 29.",
+    "metric": "Brent Jan ~$90.90 (-1.8% Mon AM; -4% last wk); WTI Jan ~$82.0 (-1.6%); 4th straight down move despite Gulf attacks; OPEC+ sets 2027 quotas Nov 29",
+    "changed": "Oil fell again Monday even after weekend attacks on a Saudi refinery and Gulf shipping. Too much supply outweighs the war risk for now. OPEC+ meets Sunday.",
     "themes": [
      "energy",
      "batteries",
@@ -21086,8 +21086,8 @@ const DATA = {
     "id": "rates",
     "name": "Rates, Fed & Treasury",
     "status": "elevated",
-    "metric": "10y 4.92% (-12bp Fri, -23bp wk); 2y 4.63% (-13bp, -25bp wk); 30y 5.31% (-9bp); 2s10s 29bp; Dec 9 25bp hike ~90% (Kalshi); fed funds 3.75-4.00%; VIX 35.89 (+26%, highest since March)",
-    "changed": "Bonds rallied hard as money fled stocks, and the 10-year dropped back under 5%. Fed officials kept talking up a December hike: Cook warned against waiting, and Paulson is open to hikes at back-to-back meetings. Markets still price a December hike at about 90%.",
+    "metric": "10y ~4.91-4.95% (yields edged up Mon AM after Friday's -12bp); Dec 9 25bp hike ~96% (CME FedWatch); hikes also priced for Jan and Mar; Williams speaks Mon; PCE Wed 8:30 ET; DXY >104 (20-month high)",
+    "changed": "Bond yields edged back up as stocks bounced. Markets see a December hike as close to certain, and they now price more hikes in January and March. The dollar hit a 20-month high.",
     "themes": [
      "ratesmacro",
      "everythingtrade",
@@ -21127,8 +21127,8 @@ const DATA = {
     "id": "aimacro",
     "name": "AI macro",
     "status": "elevated",
-    "metric": "Nasdaq 22,618 (-5.3%, -10.0% wk, 2026 gain erased); NDX -18% since Oct 1; SOX -10.7% Fri, ~-17% wk; NVDA $125.53 (-14.0%, -22.9% wk); AVGO -12.2%; MU -13.9%; AMD -13.2%; ANT $88.30 (low $83.05 vs $83 IPO); TAIEX -17.5% wk (record)",
-    "changed": "Chip stocks had their worst day in years. Nvidia fell 14% on the SEC report, and Broadcom fell 12% on a report that Google cut its Broadcom AI chip plans. Anthropic briefly touched its IPO price before closing at $88.30. The Nasdaq 100 is close to a bear market.",
+    "metric": "Futures Mon AM: NDX ~+3%, S&P ~+2.5%; NVDA ~+9% premarket (Fri $125.53, -23% wk); MU/AMD/AVGO ~+6%; CRWV/NBIS/IREN ~+10%; Kospi ~-5% (10-mo low); Taiex ~+2%; Hong Kong AI index ~-60% YTD",
+    "changed": "AI and chip stocks bounced before the open after their worst week in years. Korea kept falling, but Taiwan steadied after its regulator limited short selling. Nvidia is still run by interim CEO Colette Kress after Jensen Huang resigned Nov 12.",
     "themes": [
      "capex",
      "paybackmath",
@@ -21154,8 +21154,8 @@ const DATA = {
     "id": "crypto",
     "name": "Crypto",
     "status": "elevated",
-    "metric": "BTC ~$59K Sun AM (low ~$55.1K Sat, lowest since Sep 2024; -14% wk); ETH ~$1,650 (low near $1,550); total crypto ~$2.0T; spot BTC ETFs ~-$3.5B in Nov",
-    "changed": "Bitcoin hit about $55,100 overnight Saturday, more than 55% below its record. It bounced about 6% by Sunday morning. Crypto trades all weekend, so it is the first read on risk mood before stocks reopen.",
+    "metric": "BTC ~$61K (low ~$55.5K Sat; 7 straight down weeks, 2nd-longest ever); ETH ~$1,720; spot BTC ETFs -$1.79B last wk (4th straight outflow week); Fear & Greed 6",
+    "changed": "Bitcoin bounced back to about $61,000 with stocks. It is still down seven weeks in a row, and ETF investors keep pulling money. The crypto fear gauge is at 6 out of 100, near extreme panic.",
     "themes": [
      "crypto",
      "trustlayer",
@@ -21164,17 +21164,14 @@ const DATA = {
    }
   ],
   "sources": [
-   "https://www.tipranks.com/news/the-week-that-was-the-week-ahead-macro-and-markets-november-22",
-   "https://naveraresearch.substack.com/p/week-that-was-nvidia-cash-flow-credit-spreads-november-22-2026",
-   "https://www.share-talk.com/share-talk-weekly-stock-market-news-review-sunday-22nd-november-2026/",
-   "https://coincodex.com/article/95777/daily-market-update-for-november-22-2026/",
-   "https://gulfnews.com/world/mena/middle-east-conflict-bahrain-intercepts-iranian-attacks-as-tehran-prepares-14-oil-tankers-to-breach-us-naval-blockade-1.500756662",
+   "https://www.foxbusiness.com/markets/stocks-november-23-2026",
+   "https://finance.yahoo.com/markets/stocks/articles/us-futures-bounce-while-asia-234419517.html",
+   "https://www.tipranks.com/news/stock-market-today-nov-23-markets-see-a-boost-after-last-weeks-ai-selloff",
+   "https://www.cornerstonefuturesllc.com/post/morning-highlights-oil-falls-despite-weekend-attacks-on-shipping-a-saudi-refinery-and-bahrain-as-f",
+   "https://www.coindesk.com/daybook-us/2026/11/23/bitcoin-s-losing-streak-is-second-longest-ever-and-some-observers-see-more-downside",
+   "https://www.cnbc.com/2026/11/23/treasury-yields-bonds-fed.html",
    "https://www.manilatimes.net/2026/11/22/world/bahrain-says-iran-struck-industrial-site-as-tankers-hit-in-hormuz/2475616",
-   "https://www.euronews.com/2026/11/22/tracking-site-says-iranian-tanker-reportedly-sailing-through-strait-of-hormuz-does-not-exi",
-   "https://www.latintimes.com/us-government-shutdown-risk-december-funding-deadline-601593",
-   "https://www.cnbc.com/amp/2026/11/21/two-tanker-attacks-reported-near-omans-khasab-ukmto-says.html",
-   "https://leprivatebanker.com/2026/11/20/ai-credit-gauges-worsen-as-coreweave-default-swaps-widen-toward-1233-basis-points-and-oracle-hits-a-one-month-high/",
-   "https://www.socialnews.xyz/2026/11/20/sec-probing-nvidias-accounting-reuters-reports-huang-agrees-to-testify-before-senate/"
+   "https://www.latintimes.com/us-government-shutdown-risk-december-funding-deadline-601593"
   ]
  },
  "calendar": [
@@ -23028,7 +23025,7 @@ const DATA = {
    "src": "https://www.financecalendar.com/weekly-jobless-claims/"
   }
  ],
- "calendarAsOf": "2026-11-22",
+ "calendarAsOf": "2026-11-23",
  "watch": {
   "asOf": "2026-11-22",
   "pricesAsOf": "2026-11-22",
