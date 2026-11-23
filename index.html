@@ -320,6 +320,7 @@ table.pred th{color:var(--faint);font-weight:600;font-size:12px;text-transform:u
 .wlsub{font-size:11.5px;margin:6px 0 2px}
 .kpi.kclick{cursor:pointer}.kpi.on{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}.velfbar{margin:0 0 12px;color:var(--dim);font-size:13.5px}.velfbar .calmore{margin:0 0 0 6px}
 .predpanel .calbar{margin:12px 0 6px}
+.tlsub{display:block;font-size:11.5px;font-weight:500;color:var(--faint);margin-top:2px}.tlhd{font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);margin:10px 0 4px}.tlhd:first-child{margin-top:0}
 </style>
 </head>
 <body>
@@ -32985,7 +32986,22 @@ function renderTimeline(){
   const v=$("#v-timeline");v.innerHTML="";
   v.appendChild(el("p","lead","The roadmap of catalysts and expected turning points, from now to 2030 and beyond. Every dated prediction is graded on the Scorecards tab."));
   const tl=el("div","panel");tl.appendChild(el("h3","","Roadmap — catalysts & expected inflections"));
-  DATA.timeline.forEach(p=>{const row=el("div","tlrow");row.appendChild(el("div","tlper",p.per));const box=el("div");const its=(p.per==="NEXT 6 WEEKS"&&DATA.calendar)?calTimelineItems():p.items;its.forEach(it=>box.appendChild(el("div","tlitem",bulletHTML(it.t)+(it.src?` <span class="src">— ${it.src}</span>`:""))));if(p.per==="NEXT 6 WEEKS"&&DATA.calendar){const a=el("div","calmore","High-importance events only. Full calendar →");a.onclick=()=>goTab("calendar");box.appendChild(a);}row.appendChild(box);tl.appendChild(row);});
+  // Date-aware rows (2026-11-23): windows are worked out from today, so rows never overlap.
+  const today=calToday(),wEnd=calAdd(today,42),yr=+today.slice(0,4),yEnd=yr+"-12-31",fmt=d=>calParse(d).toLocaleDateString("en-US",{month:"short",day:"numeric"});
+  const yearInWindow=yEnd<=wEnd;const restThis=DATA.timeline.find(p=>p.per==="REST OF "+yr);
+  const item=(box,it)=>box.appendChild(el("div","tlitem",bulletHTML(it.t)+(it.src?` <span class="src">— ${it.src}</span>`:"")));
+  DATA.timeline.forEach(p=>{const per=String(p.per);let label=per,sub="",its=p.items,extra=null;
+    const mRest=per.match(/^REST OF (\d{4})$/),mYear=per.match(/^(\d{4})$/);
+    if(per==="NEXT 6 WEEKS"){sub=fmt(today)+" – "+fmt(wEnd);its=DATA.calendar?calTimelineItems():p.items;if(yearInWindow&&restThis&&restThis.items.length)extra=restThis.items;}
+    else if(mRest){const y=+mRest[1];if(y<yr||(y===yr&&yearInWindow))return;sub=fmt(calAdd(wEnd,1))+" – Dec 31";}
+    else if(mYear){const y=+mYear[1];if(y<yr)return;if(y===yr){label="REST OF "+y;sub=fmt(calAdd(wEnd,1))+" – Dec 31";}else if(y===yr+1&&wEnd>=y+"-01-01"){label="REST OF "+y;sub="from "+fmt(calAdd(wEnd,1))+", "+y;}}
+    const row=el("div","tlrow");row.appendChild(el("div","tlper",label+(sub?'<span class="tlsub">'+sub+'</span>':"")));const box=el("div");
+    if(per==="NEXT 6 WEEKS"&&DATA.calendar)box.appendChild(el("div","tlhd","Scheduled"));
+    its.forEach(it=>item(box,it));
+    if(per==="NEXT 6 WEEKS"&&DATA.calendar&&!its.length)box.appendChild(el("div","tlitem","Nothing high-importance on the calendar in this window."));
+    if(per==="NEXT 6 WEEKS"&&DATA.calendar){const a=el("div","calmore","High-importance events only. Full calendar →");a.onclick=()=>goTab("calendar");box.appendChild(a);}
+    if(extra){box.appendChild(el("div","tlhd","To settle by year-end"));extra.forEach(it=>item(box,it));}
+    row.appendChild(box);tl.appendChild(row);});
   v.appendChild(tl);
   if(DATA.timelineArchive&&DATA.timelineArchive.length){const ar=el("details","tlarch");ar.appendChild(el("summary","","Earlier NOW snapshots ("+DATA.timelineArchive.length+", archived as newer batches arrived)"));const bx=el("div","panel");DATA.timelineArchive.forEach(it=>bx.appendChild(el("div","tlitem",bulletHTML(it.t)+` <span class="src">— ${it.src}</span>`)));ar.appendChild(bx);v.appendChild(ar);}
 }
