@@ -358,8 +358,8 @@ table.pred th{color:var(--faint);font-weight:600;font-size:12px;text-transform:u
 const DATA = {
  "edition": 25,
  "builtOn": "2026-11-22",
- "transcripts": 382,
- "voices": 248,
+ "transcripts": 389,
+ "voices": 254,
  "lastBatchLabel": "Edition 025 - the NO-NET edition (T345-T388, 43 sources): Nvidia beat and still fell 23% as it stopped backstopping AI borrowers, neocloud credit tightened, Anthropic’s record IPO gave back its pop, and stocks hit a washout while bonds rallied",
  "lastBatchRange": "T345-T388",
  "newSinceLast": {
@@ -16476,6 +16476,329 @@ const DATA = {
     "BABA": 0
    },
    "added": "2026-11-23"
+  },
+  {
+   "id": "T391",
+   "title": "George Kurtz (All-In interview) - AI broke the patch cycle: 'break or breach' drives outages while agent attack kits go open source",
+   "date": "2026-11-24",
+   "type": "Podcast interview - REPEAT house (All-In), CEO guest (George Kurtz, CrowdStrike)",
+   "bias": "Kurtz sells AI-era security, so a bigger threat helps his business. Calacanis is long local AI and says he bought Apple stock.",
+   "macro": "AI finds vulnerabilities faster than companies can safely patch them. The rush to patch, not attacks, caused most recent outages. Offense is ahead of defense because open-weight models give anyone nation-state hacking skill.",
+   "message": "Kurtz: about 17,000 CVEs so far in 2026, roughly 25% of all ever logged. October-to-October volume is up about 300%. The patch window fell from about 30 days to near zero; he calls the choice 'break or breach.' The Microsoft outage was an infrastructure failure, not a hack. A Chinese-built attack framework compromises a firm in under 3 hours and has more than 12,000 forks. Open-weight models are about three months behind the frontier; ablated GLM and Qwen forks strip the refusals. CrowdStrike is in Anthropic's Glasswing and OpenAI's Daybreak programs. E-crime is about a $20B business. Fortune 500 customers say token maxing is over and will run their own open-weight models.",
+   "opps": "Security platforms with AI defense and identity protection (CRWD). Cloud-native modernization of legacy IT in finance, health and infrastructure. Local AI hardware: Apple Mac Studio and Nvidia DGX Spark for on-prem inference.",
+   "risks": "The source is a security vendor talking up the threat. Calacanis says the latest outages were patch mistakes, not attacks. Policy could push back on Chinese open-weight models via a name-and-shame campaign. Even perfect code is breached via stolen sessions and identity.",
+   "bottom": "A primary-source read that the AI-exploit wave now shows up as outages via forced patching, and that enterprise demand is moving to local open-weight models.",
+   "voice": "All-In (George Kurtz)",
+   "house": "allin",
+   "book": true,
+   "themes": [
+    {
+     "id": "aicyber",
+     "dir": 1
+    },
+    {
+     "id": "assurance",
+     "dir": 1
+    },
+    {
+     "id": "opensource",
+     "dir": 1
+    },
+    {
+     "id": "edge",
+     "dir": 1
+    },
+    {
+     "id": "chinaweight",
+     "dir": 1
+    }
+   ],
+   "tickers": {
+    "CRWD": 1,
+    "AAPL": 1,
+    "MSFT": 0,
+    "NVDA": 0,
+    "ANTHROPIC": 0,
+    "OPENAI": 0
+   },
+   "added": "2026-11-24"
+  },
+  {
+   "id": "T392",
+   "title": "Galloway & Elson (Prof G Markets) - Huang's reinstatement after Trump's push is a governance failure; the 30% pop is a sugar high",
+   "date": "2026-11-24",
+   "type": "Markets podcast - REPEAT house (Prof G / Ed Elson, Scott Galloway)",
+   "bias": "Long-running critics of Nvidia governance and of Trump; moral and rule-of-law framing. No position disclosed, so book-talk is light but the political lean is strong.",
+   "macro": "Nvidia's board reinstated Huang after White House input, and the market ripped. The hosts argue rule of law and trust are what attract cheap capital to US markets. They see hearings and probes turning the rally into a long overhang.",
+   "message": "Board voted unanimously to reinstate Huang less than a week after ruling it out. It cited senior US government input; Trump said he persuaded the board. NVDA jumped over 30% after a near-50% drawdown. The S&P rose nearly 5% after an 8.6% weekly drop; the Nasdaq rose 6.5%, the best day since April 2025. Anthropic shares fell 1.5%. Elson cites reporting that the alleged spy was in contact with a Chinese agency officer for over a year. Huang testifies to Congress next week, and Nvidia's investigation continues. Galloway says Anthropic raised about $120B in its IPO thanks to US trust.",
+   "opps": "No trade ideas. The hosts imply governance and legal overhang on NVDA. Competitors could benefit from distraction at Nvidia.",
+   "risks": "The hosts are openly political and may overrate the legal risk. Markets are pricing cash flows, and Nvidia's numbers remain strong. If Huang is cleared at the hearings, the overhang fades.",
+   "bottom": "The bear and governance side of the Huang reversal: the rally is real, but they say the key-person story is now a political and legal story.",
+   "voice": "Prof G Markets (Galloway, Elson)",
+   "house": "profg",
+   "book": false,
+   "themes": [
+    {
+     "id": "keyperson",
+     "dir": 1
+    },
+    {
+     "id": "regulation",
+     "dir": 1
+    },
+    {
+     "id": "stackexport",
+     "dir": 1
+    },
+    {
+     "id": "fedrisk",
+     "dir": 1
+    },
+    {
+     "id": "positioning",
+     "dir": 0
+    }
+   ],
+   "tickers": {
+    "NVDA": -1,
+    "ANTHROPIC": 0
+   },
+   "added": "2026-11-24"
+  },
+  {
+   "id": "T393",
+   "title": "Gavin Baker (Monetary Matters) - Jensen is Nvidia's edge; the AI ROI math misses open-weight and on-prem demand; semis are cheap",
+   "date": "2026-11-23",
+   "type": "Investor interview - REPEAT voice (Gavin Baker, Atreides), recorded Nov 18 at TomorrowX",
+   "bias": "Atreides is long semis and AI infrastructure. Baker hosts TomorrowX and is a long-time Huang admirer. Heavy book-talk discount.",
+   "macro": "Semis fell because markets set about $1.5T of capex against roughly $150B of lab and chatbot revenue. Baker says that math misses private open-weight users and on-prem clusters. He sees a long, railroad-like build rather than a normal chip cycle.",
+   "message": "Recorded before the reinstatement: markets gave Huang about 10% odds of returning; Baker said far higher, and he was right on Nov 23. NVDA rose 4% into earnings and fell after the board chair ruled out a return; Baker read that as shareholders voting. Huang out would be a godsend for rivals and custom ASICs. Michael Dell says 6,500 customers run open-weight models on-prem. Nvidia raised its growth view from 70% to 75%. A Japanese NAND maker trades below 2x forward earnings. GPU rental prices are rising sharply. The key watch items are economic usefulness and token demand elasticity.",
+   "opps": "NVDA with Huang back. Share-taking semis and AI names outside memory at low multiples. On-prem AI servers (DELL). The Anthropic IPO matters for the trade.",
+   "risks": "Unknowable returns to superintelligence. Frontier-class models may fit on a phone in 3-4 years. Capex growth has peaked, which historically hurts semis. Huang's legal and political exposure remains open.",
+   "bottom": "Called the Huang return before it happened. He adds a credible bull rebuttal to the payback math: open-weight and on-prem spend is invisible in lab revenue.",
+   "voice": "Gavin Baker (Atreides)",
+   "house": "gavinbaker",
+   "book": true,
+   "themes": [
+    {
+     "id": "keyperson",
+     "dir": 1
+    },
+    {
+     "id": "paybackmath",
+     "dir": -1
+    },
+    {
+     "id": "edge",
+     "dir": 1
+    },
+    {
+     "id": "semiscyc",
+     "dir": -1
+    },
+    {
+     "id": "opensource",
+     "dir": 1
+    }
+   ],
+   "tickers": {
+    "NVDA": 1,
+    "AVGO": 0,
+    "DELL": 1,
+    "ANTHROPIC": 1,
+    "OPENAI": 0
+   },
+   "added": "2026-11-24"
+  },
+  {
+   "id": "T394",
+   "title": "Steve Eisman with Steve Tusa (Real Eisman Playbook Ep 85) - Industrials are now an AI capex derivative; build time, not politics, is the limit",
+   "date": "2026-11-23",
+   "type": "Investor podcast with sell-side analyst - REPEAT house (Eisman), REPEAT guest (Steve Tusa, Wells Fargo)",
+   "bias": "Tusa covers 16 industrials, and 8 of them are deep in the AI data-center build, so his group rises or falls with AI capex. Eisman leans skeptical and frames build time as the binding constraint.",
+   "macro": "Tusa says industrials are growing at about twice GDP, the fastest he has seen in 30 years. Outside AI, growth is thin: autos and housing are falling and 3M's core volume ex data center was up only 1%. A material capex pullback would almost certainly mean a recession, though not a banking crisis.",
+   "message": "Tusa: data-center capex is about $1T this year and about $1.4T next year. Vertiv gets 85% of revenue from data centers and is worth about $70B, the same as Honeywell. Forgent is about 55%, Eaton over 20% and nVent about 20-25%. Racks went from 10 kW to 200 kW and are heading to 1 MW. Liquid cooling grows from a $1B niche to $7-10B. The US pipeline is about 450 GW against about 20 GW installed in 2023. Texas's utility queue is 375 GW, but only about 5 GW was lit by mid-year and about 10 GW is close. Stargate Abilene broke ground in June 2024 and is only about 75% built; a gigawatt takes about three years. In the sell-off, money rotated into Otis and Lennox as safety and lower-rate trades.",
+   "opps": "Power and cooling suppliers: VRT, ETN, NVT, Forgent. Chillers: JCI, TT, CARR. Tusa's favorites are JCI for its 30% services and margin upside, and VRT after its pullback to about $200 (risk $175, reward above $300). Semis onshoring has about $250B of projects over two years. Electrical manufacturing capacity is adding about $20B of supply.",
+   "risks": "Demand and returns, not supply, are the market's worry. If users or bosses cut AI spending, the group unwinds. A Google-style capex cut would shock the market. Texas politicians have an incentive to slow permits, and permitting is local. The K-shaped high-end consumer is tied to this trade.",
+   "bottom": "Hard supply-chain numbers show how far ahead of the grid the plans are: 375 GW queued in Texas against about 10 GW live, which backs a slower and longer build rather than a bust.",
+   "voice": "Steve Eisman (Steve Tusa)",
+   "house": "eisman",
+   "book": true,
+   "themes": [
+    {
+     "id": "builtcapacity",
+     "dir": 1
+    },
+    {
+     "id": "energy",
+     "dir": 1
+    },
+    {
+     "id": "backlash",
+     "dir": 0
+    },
+    {
+     "id": "capex",
+     "dir": 0
+    },
+    {
+     "id": "roibroaden",
+     "dir": -1
+    }
+   ],
+   "tickers": {
+    "VRT": 1,
+    "JCI": 1,
+    "ETN": 1,
+    "NVT": 1,
+    "TT": 0,
+    "CARR": 0,
+    "ROK": 0,
+    "OTIS": 0,
+    "LII": 0,
+    "MMM": 0,
+    "HON": 0
+   },
+   "added": "2026-11-24"
+  },
+  {
+   "id": "T395",
+   "title": "Scott Galloway & Ed Elson (Prof G Markets) - The AI bubble deflates: Anthropic wins the capital race, OpenAI boxed in, Nvidia at 9x, neoclouds to default",
+   "date": "2026-11-23",
+   "type": "Markets podcast - REPEAT house (Prof G / Ed Elson)",
+   "bias": "Long-time AI-valuation skeptics taking a victory lap. They favor index funds and defensives, but Elson now pitches Nvidia as a value buy. Galloway pushes progressive tax views.",
+   "macro": "About $9T of market value has been erased since Oct 6, and the semiconductor index is down 43%. The Nasdaq is nearly in a bear market and negative for the year, but the equal-weight S&P is up 8%. Galloway calls it a deflation, not a pop. He notes a 10% S&P drop happens about every 18 months.",
+   "message": "Nvidia fell 14% on reports of an SEC accounting probe and is down nearly 50% from its October high; it now trades at about 9x forward earnings. AMD fell more than 12% on China allegations. Oracle is down 55% and CoreWeave 70%. Anthropic priced at $83, opened at $111, then fell back toward its IPO price; it raised about $120B. Galloway calls Anthropic the winner and OpenAI the loser. Elson says Gulf investors rejected an OpenAI private round. Anthropic's float is only 7%; about three-quarters of shares unlock by summer 2027. Anthropic still has about $500B of mostly non-cancellable commitments before 2030. Net equity issuance is about $3.7T over 12 months, against about $400B of net buybacks a year earlier.",
+   "opps": "Elson: NVDA at about 9x forward with 75% expected growth is a fire worth running into. Galloway prefers to own it through index funds. Equal-weight S&P, healthcare (+14%) and staples (+17%) have led. Elson now says defensives like WMT, PG and KO near 40x are crowded.",
+   "risks": "Nvidia faces accounting and key-person questions. Neoclouds depend on capital markets, and Elson expects defaults and bankruptcies. The Anthropic unlock could pressure the stock. A Democratic wave and higher taxes on gains could weigh on shareholders. Data-center projects could be held up.",
+   "bottom": "A skeptic house says the bubble is deflating in an orderly way: capital access now picks the winners, which favors Anthropic and hurts OpenAI and the neoclouds. It also flags a $4T swing in equity supply as IPOs return.",
+   "voice": "Prof G Markets (Galloway, Elson)",
+   "house": "profg",
+   "book": false,
+   "themes": [
+    {
+     "id": "dilution",
+     "dir": 1
+    },
+    {
+     "id": "neocloudcredit",
+     "dir": 1
+    },
+    {
+     "id": "keyperson",
+     "dir": 1
+    },
+    {
+     "id": "labvalue",
+     "dir": 0
+    },
+    {
+     "id": "roibroaden",
+     "dir": 1
+    }
+   ],
+   "tickers": {
+    "NVDA": 1,
+    "ANTHROPIC": 1,
+    "OPENAI": -1,
+    "AMD": -1,
+    "ORCL": -1,
+    "CRWV": -1,
+    "NBIS": -1,
+    "IREN": -1,
+    "PLTR": -1,
+    "WMT": 0,
+    "PG": 0,
+    "KO": 0
+   },
+   "added": "2026-11-24"
+  },
+  {
+   "id": "T396",
+   "title": "OpenAI Life Sciences (a16z Bio + Health) - Why OpenAI bought Orchestra Bio: agent swarms and a harness turn GPT Rosalind into a drug-R&D platform",
+   "date": "2026-11-23",
+   "type": "VC podcast - REPEAT house (a16z), NEW voices (Joy Jiao, Ashoka Rajendra of OpenAI)",
+   "bias": "Two OpenAI life-sciences leads pitch their own product to friendly a16z bio investors. Treat capability claims as marketing until third parties confirm them.",
+   "macro": "OpenAI is moving from model vendor to full workflow platform in life sciences. Its strategy has three pillars: best model, best product, proof through partners. The thesis is that science is now limited by attention, not data, and agent swarms remove that limit.",
+   "message": "Jiao: models have a capability overhang that a harness unlocks, so OpenAI bought Orchestra Bio. 2,000 agents mined a Perturb-seq set of 2,000 perturbations and 8M cells and found effects humans missed. Math agent teams run about 10,000 agents. Rajendra: ChatGPT has about 1.2B users and 330M ask health questions. Regulatory documents are the fastest-adopting use. CMC and manufacturing are underrated for agents. o3 solved a diagnosis a patient had waited 20 years for. Verified institutions get full access with no refusals. Jiao expects AI molecule design to change a lot in 3 to 6 months.",
+   "opps": "AI drug-discovery tools and data-factory startups that plug into ChatGPT and Codex. CROs and CDMOs that adopt agent workflows. Low-noise data sources such as sequencing and structural biology. More inference demand from agent swarms.",
+   "risks": "Biology sets hard limits on trial speed. Noisy data such as EHRs and assays limits training. OpenAI as front door could squeeze standalone AI-bio startups. Trusted access shifts biosecurity onto employers. Regulation is a big lever that still has to change.",
+   "bottom": "An insider view that frontier labs now aim to own the drug-R&D workflow end to end, and that agent swarms are a new source of token demand.",
+   "voice": "a16z (OpenAI Life Sciences)",
+   "house": "a16z",
+   "book": true,
+   "themes": [
+    {
+     "id": "digbio",
+     "dir": 1
+    },
+    {
+     "id": "agentaction",
+     "dir": 1
+    },
+    {
+     "id": "token",
+     "dir": 1
+    },
+    {
+     "id": "valuemigration",
+     "dir": 1
+    },
+    {
+     "id": "assurance",
+     "dir": 0
+    }
+   ],
+   "tickers": {
+    "OPENAI": 1,
+    "MRNA": 0
+   },
+   "added": "2026-11-24"
+  },
+  {
+   "id": "T397",
+   "title": "Sam Altman and Greg Brockman (NYT DealBook Summit) - Safety reset after the Hugging Face incident; compute is the limiter; OpenAI claims the full stack",
+   "date": "2026-11-23",
+   "type": "Conference interview - REPEAT voice (Sam Altman), REPEAT house (OpenAI)",
+   "bias": "OpenAI's CEO and president spoke the day before the Anthropic IPO and while facing a California AG lawsuit. Revenue and differentiation claims are book-talk. The safety tone is partly defensive.",
+   "macro": "OpenAI says 2026 moved safety from deployment to development, because models in training can now act in the real world. Altman says the next four years need more caution than the last four. Brockman says compute is the binding limit and will decide who wins.",
+   "message": "ChatGPT has a little over 1.2B weekly users. Brockman: Q3 topline grew about 70% annualized and enterprise revenue doubled in Q3. With AMD, OpenAI models delivered a year of chip-design gains in 5 months. About $1M of compute found about 1,000 Linux kernel bugs. In August, 25% of production engineers moved to a security sprint after the Hugging Face incident. The in-house inference chip, Jalapeno (as captioned), is coming. Brockman asked Musk and Brin for compute. Altman disputes Nadella's claim that models can only be contained. He says he does not know if Anthropic is safe. OpenAI plans to go public at some point.",
+   "opps": "AI compute and custom silicon (NVDA, AMD). AI-native cyber defense. Frontier-lab revenue momentum ahead of an OpenAI listing. Microsoft's cheaper inference stack.",
+   "risks": "Chain-of-thought monitoring is degrading as models reason internally. The California AG lawsuit and the NYT copyright suit are open. The race dynamic is called unsafe by OpenAI itself. Microsoft's 5%-cost pitch pressures OpenAI pricing. Nvidia key-person uncertainty.",
+   "bottom": "OpenAI's leaders confirm compute scarcity and fast enterprise growth, while publicly raising the safety bar and casting doubt on rivals' pace.",
+   "voice": "Sam Altman and Greg Brockman (DealBook)",
+   "house": "openai",
+   "book": true,
+   "themes": [
+    {
+     "id": "capitalbound",
+     "dir": 1
+    },
+    {
+     "id": "frontierpacing",
+     "dir": 1
+    },
+    {
+     "id": "paybackmath",
+     "dir": 1
+    },
+    {
+     "id": "merchantsilicon",
+     "dir": 1
+    },
+    {
+     "id": "aicyber",
+     "dir": 1
+    }
+   ],
+   "tickers": {
+    "OPENAI": 1,
+    "ANTHROPIC": 0,
+    "NVDA": 0,
+    "AMD": 1,
+    "MSFT": 0
+   },
+   "added": "2026-11-24"
   }
  ],
  "predictions": [
@@ -18283,8 +18606,8 @@ const DATA = {
    "date": "2026-11",
    "claim": "Jensen Huang returns as Nvidia CEO by end-2027 (~30%)",
    "horizon": "2027-12",
-   "status": "pend",
-   "note": "2026-11-15 added: T334, T335 | 2026-11-22: The board says it will not reinstate Huang; Kalshi ~9% (T349, T365). Leans miss.",
+   "status": "hit",
+   "note": "2026-11-15 added: T334, T335 | 2026-11-22: The board says it will not reinstate Huang; Kalshi ~9% (T349, T365). Leans miss. | 2026-11-24: Nvidia reinstated Huang as CEO on Nov 23, effective immediately, by unanimous board vote (Nvidia 8-K; T392, T393).",
    "chk": "2026-11-22"
   },
   {
@@ -18418,8 +18741,8 @@ const DATA = {
    "date": "2026-11",
    "claim": "Jensen Huang does not return as Nvidia CEO and instead raises ~$50B for a new company",
    "horizon": "2027-12",
-   "status": "pend",
-   "note": "2026-11-22 added: T349; board will not reinstate him (T365)",
+   "status": "miss",
+   "note": "2026-11-22 added: T349; board will not reinstate him (T365) | 2026-11-24: Huang was reinstated as Nvidia CEO on Nov 23, so he did not leave to start a new company (Nvidia 8-K; T392).",
    "chk": "2026-11-22"
   },
   {
@@ -21132,24 +21455,24 @@ const DATA = {
   }
  ],
  "macro": {
-  "asOf": "2026-11-23",
+  "asOf": "2026-11-24",
   "overnight": [
-   "Nvidia reinstated Jensen Huang as CEO before the open, effective immediately. The board vote was unanimous. It said it had input from senior US government officials and sees no national security risk.",
-   "Nvidia jumped about 30% at the open, to around $162-166 from Friday's $125.53. That wipes out nearly all its losses since Huang disclosed the affair.",
-   "Stocks surged with it. At the open the Nasdaq was up about 6-7%, the S&P 500 about 4-5% and the Dow about 2-3%. The S&P had closed Friday in a correction after seven straight losses.",
-   "Chip and hardware names rallied. Dell, SanDisk, Super Micro and Seagate rose about 17-22%, SK Hynix about 9% and Micron about 5%. Small caps lagged: the Russell 2000 fell about 3%.",
-   "CrowdStrike agreed to buy Zscaler in an all-stock deal worth about $43.9 billion. CrowdStrike fell about 10% and Zscaler rose about 13%.",
-   "Fear eased fast. The VIX fell about 24% to near 27. The 10-year yield rose about 6bp to near 4.97% as money left bonds.",
-   "Bitcoin rose about 5% to near $64,000 and gold about 4%. Oil kept falling: WTI near $81-82, Brent near $87-91.",
-   "Short week ahead. NY Fed President Williams speaks today. PCE inflation and GDP come Wednesday, markets close Thursday and close early Friday."
+   "Monday was the best day for stocks since April 2025. Nvidia jumped 31.5% to $165.05 after it brought back Jensen Huang as CEO, its biggest gain since 2003. The S&P 500 rose 4.7% to 7,237, the Nasdaq 6.5% and the Dow 3.0%.",
+   "AI names led. CoreWeave rose 22%, Nebius 20%, Micron 19%, TSMC 14% and Oracle 12%. CrowdStrike fell 9% after agreeing to buy Zscaler. Anthropic slipped about 1%.",
+   "Futures are giving some back Tuesday. Nasdaq-100 futures were down about 1-2% and S&P futures about 1% in early trading. Nvidia was down about 5% before the open, and chip and neocloud names about 4-6%.",
+   "HPE fell about 10% before the open despite record revenue up 50%, because it warned AI servers carry thin margins. Dell, which reports tonight, was down about 5%.",
+   "The Fed still looks set to hike. NY Fed President Williams said inflation is too high and he is open to back-to-back hikes. December hike odds are about 93-96%. The 2-year yield is near 4.66% and the 10-year near 4.91%.",
+   "Oil hovers near three-month lows. Brent is about $87-89 and WTI about $79-80, even after Iran said tankers hit mines near Hormuz and the US added new Iran sanctions.",
+   "Bitcoin fell back to about $60,000 as Monday's bounce faded and ETF outflows continued.",
+   "Today: consumer confidence and a 5-year auction; Dell and Workday after the close. Wednesday brings PCE inflation and GDP, ahead of the Thursday holiday."
   ],
   "drivers": [
    {
     "id": "geo",
     "name": "War & geopolitics",
     "status": "elevated",
-    "metric": "Houthis claim strike on a Saudi refinery (unconfirmed); Iran hit an industrial site in Bahrain (Nov 21); more tankers hit near Hormuz and Khasab; Iran readying 14 tankers to test US blockade; Hormuz traffic ~65% below pre-war; COP31 talks collapsed Sunday",
-    "changed": "Attacks spread over the weekend. Houthis claimed a strike on a Saudi refinery, Iran hit Bahrain, and more ships were hit near Hormuz. Qatar is pushing for talks, but Iran's demands are unchanged.",
+    "metric": "Iran says 2-3 tankers hit mines east of Hormuz despite US escort; Treasury's new Iran sanctions target 25+ exchange houses and fronts; Houthis claim Saudi refinery strike; Trump calls Iran talks 'BS', says strikes could resume after New Year; Hormuz crude flows ~10M bpd (from 13.4M early Nov)",
+    "changed": "Tension stays high. Iran claims more tankers hit mines near Hormuz, and the US added sanctions. Trump said strikes on Iran could resume after the new year.",
     "themes": [
      "energy",
      "taiwan",
@@ -21160,8 +21483,8 @@ const DATA = {
     "id": "energy",
     "name": "Oil & energy",
     "status": "watch",
-    "metric": "Brent ~$87-91, WTI ~$81-82 (-2-3% Mon); 3-week losing streak despite Gulf attacks; OPEC+ sets 2027 quotas Nov 29",
-    "changed": "Oil fell again Monday even after weekend attacks on a Saudi refinery and Gulf shipping. Too much supply outweighs the war risk for now. OPEC+ meets Sunday.",
+    "metric": "Brent ~$87-89, WTI ~$79-80 (near 3-month lows; Brent ~24% below its Oct 30 high of $117); Dec-Jan spread $0.16 (from $3.67 in Oct); OPEC+ meets Nov 29",
+    "changed": "Oil keeps sliding toward three-month lows. Rising supply outweighs the war risk, and the price gap that signals tight supply has nearly vanished.",
     "themes": [
      "energy",
      "batteries",
@@ -21172,8 +21495,8 @@ const DATA = {
     "id": "rates",
     "name": "Rates, Fed & Treasury",
     "status": "elevated",
-    "metric": "10y ~4.97% (+6bp Mon AM as stocks rallied); Dec 9 hike odds ~91-92% (Polymarket/bond pricing, down from ~98% Nov 12); Williams speaks Mon; PCE Wed 8:30 ET; DXY >104",
-    "changed": "Bond yields rose as money moved back into stocks. A December hike is still the base case, but odds slipped to about 91-92%.",
+    "metric": "10y ~4.91%, 2y ~4.66%; 2y auction 4.700% (in line); Dec 9 hike odds ~93-96% (small chance of 50bp); Williams open to back-to-back hikes; PCE Wed 8:30 ET (core seen 3.2% y/y); DXY >104",
+    "changed": "Williams backed more hikes. He said inflation is too high and he is open to raising rates at back-to-back meetings. Wednesday's PCE report is the next test.",
     "themes": [
      "ratesmacro",
      "everythingtrade",
@@ -21185,8 +21508,8 @@ const DATA = {
     "id": "credit",
     "name": "Credit",
     "status": "elevated",
-    "metric": "HY OAS 3.52% (+18bp since Nov 16); IG 0.94%; CoreWeave 5y CDS ~1,233bp (+76bp Fri), 2031 bond ~16% yield; Oracle CDS 328bp (1-mo high); CRWV -12.0%, NBIS -16.1%",
-    "changed": "Stress spread through AI debt. CoreWeave's default swaps now imply better-than-even odds of default within five years, and Oracle's hit a one-month high. Junk spreads widened modestly. No new private-credit blowup.",
+    "metric": "CRWV +22% Mon to $48.33 (still above $40 IPO); NBIS +20%; ORCL +12%; CoreWeave CDS ~1,233bp as of Nov 20 (no fresh print); HY spreads not yet updated after the rally",
+    "changed": "Neocloud stocks rebounded hard with Nvidia, which eases pressure for now. Credit markets have not shown a matching recovery yet, so this stays elevated.",
     "themes": [
      "debt",
      "computeasset",
@@ -21200,8 +21523,8 @@ const DATA = {
     "id": "policy",
     "name": "Elections & policy",
     "status": "elevated",
-    "metric": "Huang reinstated as Nvidia CEO (unanimous board; govt input, no national-security risk found); independent committee probing foreign-intelligence reports; new National Security & Export Control committee; compliance-officer search; SEC inquiry ongoing; Huang Congress appearance Dec 1; funding runs out Dec 11, no deal",
-    "changed": "The board says Washington signed off on Huang's return. But an SEC inquiry, shareholder suits, a board probe of the foreign-intelligence reports and his Dec 1 appearance before Congress keep it in the news. Shutdown talks are still stuck.",
+    "metric": "Huang back as Nvidia CEO after White House input; independent board probe of foreign-intelligence reports; SEC inquiry and shareholder suits ongoing; Huang House interview Dec 1; funding runs out Dec 11; Senate GOP leaders open to cutting Iran war funding",
+    "changed": "Huang's return keeps Washington in the Nvidia story, with probes and a Dec 1 House interview ahead. Shutdown risk is rising: Senate Republican leaders signaled openness to cutting off Iran war funding.",
     "themes": [
      "regulation",
      "backlash",
@@ -21213,8 +21536,8 @@ const DATA = {
     "id": "aimacro",
     "name": "AI macro",
     "status": "elevated",
-    "metric": "NVDA ~+30% at open (~$162-166 vs Fri $125.53) on Huang's reinstatement; Nasdaq ~+6-7%, S&P ~+4-5%; DELL/SNDK/SMCI/STX ~+17-22%; SK Hynix ~+9%; MU ~+5%; AMD/AVGO ~+4%; ANT still sliding after IPO",
-    "changed": "Nvidia brought Jensen Huang back as CEO, and AI stocks ripped higher. Nvidia recovered nearly all its losses since the scandal broke. The key-person shock is easing, but probes continue, so this stays elevated.",
+    "metric": "NVDA +31.5% Mon to $165.05, ~-5% premarket Tue; SMH +15%; MU +19%, TSM +14%, CRWV +22%, NBIS +20%; HPE ~-10% premarket on AI-server margins; Dell (-5% pre) reports tonight; ANT $87.64 (IPO $83)",
+    "changed": "AI stocks had their best day in years on Huang's return, then started to give some back Tuesday. HPE showed record AI orders but thin margins, and Dell reports tonight.",
     "themes": [
      "capex",
      "paybackmath",
@@ -21228,8 +21551,8 @@ const DATA = {
     "id": "labor",
     "name": "Labor & consumer",
     "status": "watch",
-    "metric": "UMich final Nov 51.5 (prelim 51.0, Oct 48.0); 1y infl exp 3.7%, 5-10y 3.3%; initial claims 203K, continuing 1.763M; INTU -12.8%; staples only sector up",
-    "changed": "Consumer mood improved after the election, with sentiment at 51.5. Expected inflation fell to 3.7% for the year ahead. Staples were the only sector that rose Friday as investors hid in defensive names.",
+    "metric": "Flash PMI Nov: services 54.7 (vs 55.7 est), manufacturing 54.5, 4-month low; UMich final 51.5; claims 203K; Conf. Board confidence 10:00 ET today; Best Buy, Dollar Tree, Dick's report today",
+    "changed": "Business surveys cooled to a four-month low but still show growth. Today's consumer confidence and retailer results give a holiday-spending read.",
     "themes": [
      "adoption",
      "macro",
@@ -21240,8 +21563,8 @@ const DATA = {
     "id": "crypto",
     "name": "Crypto",
     "status": "elevated",
-    "metric": "BTC ~$64K (+5% Mon; Sat low ~$55.5K; 7 straight down weeks); ETH ~$1,840; spot BTC ETFs -$1.79B last wk; Fear & Greed near extreme fear",
-    "changed": "Bitcoin rose with stocks to about $64,000 after Huang's return lifted risk appetite. It is still down seven weeks in a row, and ETF outflows have not reversed yet.",
+    "metric": "BTC ~$60.0K (-2% overnight; Mon high ~$64K); ETH ~$1,690; SOL ~$70; spot BTC ETF outflows continue; MSTR +8% Mon, COIN +7%",
+    "changed": "Bitcoin gave back Monday's bounce and is near $60,000 again. ETF investors are still pulling money, so the stock rally hasn't carried over.",
     "themes": [
      "crypto",
      "trustlayer",
@@ -21250,20 +21573,18 @@ const DATA = {
    }
   ],
   "sources": [
-   "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm",
-   "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-23-dow-sp-500-nasdaq-nvidia-reinstates-jensen-huang-141511975.html",
-   "https://www.thenationalnews.com/business/markets/2026/11/23/nvidia-shares-nasdaq-sp-500-djia/",
-   "https://za.investing.com/news/stock-market-news/nvidia-shares-surge-30-as-board-announces-jensen-huangs-reinstatement-4592436",
-   "https://www.marketscreener.com/news/nasdaq-futures-jump-6-as-nvidia-reinstates-jensen-huang-as-ceo-ce7851dada8ff620",
-   "https://www.foxbusiness.com/markets/stocks-november-23-2026",
-   "https://finance.yahoo.com/markets/stocks/articles/us-futures-bounce-while-asia-234419517.html",
-   "https://www.tipranks.com/news/stock-market-today-nov-23-markets-see-a-boost-after-last-weeks-ai-selloff",
-   "https://www.cornerstonefuturesllc.com/post/morning-highlights-oil-falls-despite-weekend-attacks-on-shipping-a-saudi-refinery-and-bahrain-as-f",
-   "https://www.coindesk.com/daybook-us/2026/11/23/bitcoin-s-losing-streak-is-second-longest-ever-and-some-observers-see-more-downside",
-   "https://www.cnbc.com/2026/11/23/treasury-yields-bonds-fed.html",
-   "https://www.manilatimes.net/2026/11/22/world/bahrain-says-iran-struck-industrial-site-as-tankers-hit-in-hormuz/2475616",
-   "https://www.latintimes.com/us-government-shutdown-risk-december-funding-deadline-601593",
-   "https://www.investing.com/news/stock-market-news/crowdstrike-bets-on-network-security-with-439-billion-zscaler-deal-5044856"
+   "https://finance.yahoo.com/markets/stocks/articles/u-stock-futures-steady-nvidia-004836470.html",
+   "https://www.tradingview.com/news/benzinga:dd91dcc50094b:0-stock-market-today-dow-s-p-500-futures-fall-after-scott-bessent-unveils-fresh-iran-sanctions-hormuz-warnings-hpe-smtc-dell-in-focus/",
+   "https://coinpaper.com/39344/s-and-p-500-and-nasdaq-live-us-stocks-drop-after-monday-s-4-7-and-6-5-rally",
+   "https://oilprice.com/Latest-Energy-News/World-News/Oil-Prices-Hold-Near-Three-Month-Lows-Despite-Hormuz-Mine-Claims.html",
+   "https://gulfnews.com/business/energy/brent-drops-to-88-wti-at-79-why-oil-is-sliding-despite-irans-tanker-attacks-1.500758802",
+   "https://en.sedaily.com/world/2026/11/24/ny-feds-williams-says-prices-too-high-open-to-back-to-back",
+   "https://www.tradingandinvestmentnews.co.uk/december-fed-hike-williams/",
+   "https://investinglive.com/news/s-p-global-us-services-november-flash-pmi-54-7-vs-55-7-expected/",
+   "https://investinglive.com/news/u-s-treasury-sells-69-billion-the-two-year-notes-at-a-high-yield-of-4-700/",
+   "https://seekingalpha.com/news/4676038-hpe-shares-slump-on-warning-of-margin-pressure-from-ai-servers",
+   "https://www.washingtonpost.com/business/2026/11/23/senate-gop-leaders-signal-openness-cutting-off-iran-war-funding/",
+   "https://www.fxstreet.com/cryptocurrencies/news/crypto-today-bitcoin-and-ethereum-edge-lower-xrp-stabilizes-as-etf-redemptions-continue-202611241045"
   ]
  },
  "calendar": [
@@ -22169,6 +22490,18 @@ const DATA = {
    "result": "51.5 vs 51.0 prelim (Oct 48.0); 1y inflation expectations 3.7%, 5-10y 3.3%"
   },
   {
+   "date": "2026-11-23",
+   "time": "",
+   "cat": "markets",
+   "event": "Market close",
+   "tickers": [],
+   "themes": [],
+   "imp": "med",
+   "confirmed": true,
+   "result": "S&P 7,237 (+4.7%), Dow 49,595 (+3.0%), Nasdaq 24,090 (+6.5%), Russell 2000 +3.4%; NVDA +31.5%, CRWV +22%, NBIS +20%, MU +19%, ORCL +12%, CRWD -9% (Zscaler deal)",
+   "src": "https://finance.yahoo.com/markets/stocks/articles/u-stock-futures-steady-nvidia-004836470.html"
+  },
+  {
    "time": "1:00 ET",
    "tickers": [],
    "themes": [
@@ -22179,7 +22512,8 @@ const DATA = {
    "date": "2026-11-23",
    "cat": "data",
    "event": "2-year note auction ($69B)",
-   "src": "https://www.rttnews.com/3716479/treasury-announces-details-of-two-year-five-year-seven-year-note-auctions.aspx"
+   "src": "https://www.rttnews.com/3716479/treasury-announces-details-of-two-year-five-year-seven-year-note-auctions.aspx",
+   "result": "Sold at 4.700% high yield, in line; the 2-year yield jumped as Huang's return ended the safe-haven bid"
   },
   {
    "time": "4:00 ET",
@@ -22192,7 +22526,8 @@ const DATA = {
    "date": "2026-11-23",
    "cat": "fed",
    "event": "NY Fed President Williams speaks",
-   "src": "https://www.newsquawk.com/headlines/newsquawk-weekly-economic-calendar---23rd-27th-november-2026"
+   "src": "https://www.newsquawk.com/headlines/newsquawk-weekly-economic-calendar---23rd-27th-november-2026",
+   "result": "Williams: inflation too high; open to back-to-back hikes but not a 50bp move; sees 3.5% inflation at year-end, 2% only in 2028"
   },
   {
    "time": "9:45 ET",
@@ -22203,7 +22538,8 @@ const DATA = {
    "date": "2026-11-23",
    "cat": "data",
    "event": "S&P Global flash PMIs, November",
-   "src": "https://www.newsquawk.com/headlines/newsquawk-weekly-economic-calendar---23rd-27th-november-2026"
+   "src": "https://www.newsquawk.com/headlines/newsquawk-weekly-economic-calendar---23rd-27th-november-2026",
+   "result": "Services 54.7 vs 55.7 expected, manufacturing 54.5; composite at a 4-month low"
   },
   {
    "date": "2026-11-23",
@@ -22218,7 +22554,8 @@ const DATA = {
    ],
    "imp": "med",
    "confirmed": true,
-   "src": "https://www.tipranks.com/news/the-week-that-was-the-week-ahead-macro-and-markets-november-22"
+   "src": "https://www.tipranks.com/news/the-week-that-was-the-week-ahead-macro-and-markets-november-22",
+   "result": "Beat: record revenue $14.5B (+50%), EPS $1.43, AI orders +88%; margin warning on AI servers sent shares down ~10% premarket"
   },
   {
    "date": "2026-11-23",
@@ -22233,7 +22570,25 @@ const DATA = {
    ],
    "imp": "med",
    "confirmed": true,
-   "src": "https://www.tipranks.com/news/the-week-that-was-the-week-ahead-macro-and-markets-november-22"
+   "src": "https://www.tipranks.com/news/the-week-that-was-the-week-ahead-macro-and-markets-november-22",
+   "result": "Beat on revenue ($1.29B) and EPS, raised outlook, started a dividend; shares slipped after hours"
+  },
+  {
+   "date": "2026-11-23",
+   "time": "BMO",
+   "cat": "markets",
+   "event": "Nvidia reinstates Jensen Huang as CEO, effective immediately (unanimous board vote)",
+   "tickers": [
+    "NVDA"
+   ],
+   "themes": [
+    "keyperson",
+    "stackexport"
+   ],
+   "imp": "high",
+   "confirmed": true,
+   "result": "NVDA +31.5% to $165.05, its best day since 2003; S&P +4.7% to 7,237, Nasdaq +6.5% to 24,090, Dow +3.0%; best day since April 2025",
+   "src": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm"
   },
   {
    "date": "2026-11-24",
@@ -23101,10 +23456,10 @@ const DATA = {
    "src": "https://www.financecalendar.com/weekly-jobless-claims/"
   }
  ],
- "calendarAsOf": "2026-11-23",
+ "calendarAsOf": "2026-11-24",
  "watch": {
-  "asOf": "2026-11-23",
-  "pricesAsOf": "2026-11-23",
+  "asOf": "2026-11-24",
+  "pricesAsOf": "2026-11-24",
   "rules": {
    "half": 90,
    "active": 30,
@@ -23116,8 +23471,8 @@ const DATA = {
    "stanceMin": 4
   },
   "summary": {
-   "active": 42,
-   "fading": 18,
+   "active": 40,
+   "fading": 20,
    "retired": 16,
    "graded": 34,
    "beating": 19,
@@ -23126,67 +23481,67 @@ const DATA = {
     {
      "bench": "SPY",
      "name": "S&P 500 (SPY)",
-     "r": -0.0923
+     "r": -0.0496
     },
     {
      "bench": "QQQ",
      "name": "Nasdaq-100 (QQQ)",
-     "r": -0.1362
+     "r": -0.0758
     },
     {
      "bench": "SMH",
      "name": "Semiconductors (SMH)",
-     "r": -0.2412
+     "r": -0.1271
     },
     {
      "bench": "IGV",
      "name": "Software (IGV)",
-     "r": -0.1712
+     "r": -0.1386
     },
     {
      "bench": "XLV",
      "name": "Health care (XLV)",
-     "r": -0.0114
+     "r": 0.0008
     },
     {
      "bench": "BTC-USD",
      "name": "Bitcoin",
-     "r": -0.2215
+     "r": -0.2505
     },
     {
      "bench": "XLP",
      "name": "XLP",
-     "r": 0.0249
+     "r": 0.024
     },
     {
      "bench": "XLF",
      "name": "Financials (XLF)",
-     "r": -0.0238
+     "r": -0.0045
     },
     {
      "bench": "AGG",
      "name": "US bonds (AGG)",
-     "r": 0.002
+     "r": 0.0029
     },
     {
      "bench": "XLK",
      "name": "XLK",
-     "r": -0.1868
+     "r": -0.1138
     },
     {
      "bench": "XLI",
      "name": "Industrials (XLI)",
-     "r": -0.0501
+     "r": -0.0131
     },
     {
      "bench": "XLY",
      "name": "Consumer discretionary (XLY)",
-     "r": -0.0057
+     "r": 0.0339
     },
     {
      "bench": "XLU",
      "name": "Utilities (XLU)",
-     "r": 0.0031
+     "r": 0.0179
     }
    ]
   },
@@ -23201,9 +23556,9 @@ const DATA = {
     "bench": "SMH",
     "benchName": "Semiconductors (SMH)",
     "status": "active",
-    "score": 47.74,
-    "lastMention": "2026-11-22",
-    "quietDays": 1,
+    "score": 48.46,
+    "lastMention": "2026-11-24",
+    "quietDays": 0,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -23228,9 +23583,39 @@ const DATA = {
       "name": "The PAYBACK MATH"
      }
     ],
-    "houses": 65,
-    "mentionCount": 178,
+    "houses": 66,
+    "mentionCount": 183,
     "mentions": [
+     {
+      "id": "T391",
+      "date": "2026-11-24",
+      "who": "All-In (George Kurtz)",
+      "s": 0
+     },
+     {
+      "id": "T392",
+      "date": "2026-11-24",
+      "who": "Prof G Markets (Galloway, Elson)",
+      "s": -1
+     },
+     {
+      "id": "T393",
+      "date": "2026-11-23",
+      "who": "Gavin Baker (Atreides)",
+      "s": 1
+     },
+     {
+      "id": "T395",
+      "date": "2026-11-23",
+      "who": "Prof G Markets (Galloway, Elson)",
+      "s": 1
+     },
+     {
+      "id": "T397",
+      "date": "2026-11-23",
+      "who": "Sam Altman and Greg Brockman (DealBook)",
+      "s": 0
+     },
      {
       "id": "T387",
       "date": "2026-11-22",
@@ -23248,39 +23633,9 @@ const DATA = {
       "date": "2026-11-21",
       "who": "Moonshots (Diamandis)",
       "s": -1
-     },
-     {
-      "id": "T389",
-      "date": "2026-11-21",
-      "who": "Odd Lots (Kyle Chan)",
-      "s": -1
-     },
-     {
-      "id": "T374",
-      "date": "2026-11-20",
-      "who": "The Compound and Friends",
-      "s": -1
-     },
-     {
-      "id": "T375",
-      "date": "2026-11-20",
-      "who": "Aswath Damodaran (Prof G Markets)",
-      "s": 0
-     },
-     {
-      "id": "T380",
-      "date": "2026-11-20",
-      "who": "Odd Lots (Daniel Saedi, Minerva)",
-      "s": 1
-     },
-     {
-      "id": "T382",
-      "date": "2026-11-20",
-      "who": "All-In",
-      "s": 0
      }
     ],
-    "lean": 16,
+    "lean": 17,
     "leanFlag": "",
     "history": [
      {
@@ -23333,20 +23688,20 @@ const DATA = {
      "sincePx": 203.28,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 125.53,
-     "lastDate": "2026-11-20",
+     "last": 165.05,
+     "lastDate": "2026-11-23",
      "benchSince": 558.83,
-     "benchLast": 400.06,
-     "r": -0.3825,
-     "rb": -0.2841,
-     "rel": -0.1374,
-     "days": 126,
+     "benchLast": 460.18,
+     "r": -0.1881,
+     "rb": -0.1765,
+     "rel": -0.014,
+     "days": 127,
      "frozen": false,
      "addPx": 203.28,
      "g": {
       "from": "2026-11-23",
       "to": null,
-      "days": 0,
+      "days": 1,
       "r": 0,
       "rb": 0,
       "rel": 0,
@@ -23358,8 +23713,8 @@ const DATA = {
     },
     "stanceSince": "2026-11-23",
     "recent": {
-     "n": 67,
-     "share": 0.54
+     "n": 70,
+     "share": 0.55
     },
     "periods": [
      {
@@ -23367,10 +23722,10 @@ const DATA = {
       "from": "2026-07-20",
       "to": "2026-11-23",
       "days": 126,
-      "r": -0.3825,
-      "rb": -0.2841,
-      "rel": -0.1374,
-      "adj": -0.1374,
+      "r": -0.1881,
+      "rb": -0.1765,
+      "rel": -0.014,
+      "adj": -0.014,
       "graded": true,
       "gradeIn": null
      }
@@ -23395,9 +23750,9 @@ const DATA = {
     "bench": "QQQ",
     "benchName": "Nasdaq-100 (QQQ)",
     "status": "active",
-    "score": 41.37,
-    "lastMention": "2026-11-21",
-    "quietDays": 2,
+    "score": 42.13,
+    "lastMention": "2026-11-24",
+    "quietDays": 0,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-09-28",
@@ -23422,9 +23777,39 @@ const DATA = {
       "name": "Open-source & inference-cost pressure on premium models"
      }
     ],
-    "houses": 53,
-    "mentionCount": 151,
+    "houses": 54,
+    "mentionCount": 156,
     "mentions": [
+     {
+      "id": "T391",
+      "date": "2026-11-24",
+      "who": "All-In (George Kurtz)",
+      "s": null
+     },
+     {
+      "id": "T392",
+      "date": "2026-11-24",
+      "who": "Prof G Markets (Galloway, Elson)",
+      "s": null
+     },
+     {
+      "id": "T393",
+      "date": "2026-11-23",
+      "who": "Gavin Baker (Atreides)",
+      "s": null
+     },
+     {
+      "id": "T395",
+      "date": "2026-11-23",
+      "who": "Prof G Markets (Galloway, Elson)",
+      "s": null
+     },
+     {
+      "id": "T397",
+      "date": "2026-11-23",
+      "who": "Sam Altman and Greg Brockman (DealBook)",
+      "s": null
+     },
      {
       "id": "T388",
       "date": "2026-11-21",
@@ -23441,36 +23826,6 @@ const DATA = {
       "id": "T375",
       "date": "2026-11-20",
       "who": "Aswath Damodaran (Prof G Markets)",
-      "s": null
-     },
-     {
-      "id": "T382",
-      "date": "2026-11-20",
-      "who": "All-In",
-      "s": null
-     },
-     {
-      "id": "T383",
-      "date": "2026-11-20",
-      "who": "Steve Eisman",
-      "s": null
-     },
-     {
-      "id": "T366",
-      "date": "2026-11-19",
-      "who": "Odd Lots (Lee, Kedrosky)",
-      "s": null
-     },
-     {
-      "id": "T367",
-      "date": "2026-11-19",
-      "who": "Prof G Markets (Elson, Kedrosky)",
-      "s": null
-     },
-     {
-      "id": "T370",
-      "date": "2026-11-19",
-      "who": "Gavin Baker (Sourcery)",
       "s": null
      }
     ],
@@ -23492,24 +23847,24 @@ const DATA = {
      "sincePx": 83,
      "sinceDate": "2026-11-19",
      "firstAfter": true,
-     "last": 88.91,
-     "lastDate": "2026-11-20",
+     "last": 87.64,
+     "lastDate": "2026-11-23",
      "benchSince": 736.53,
-     "benchLast": 608.45,
-     "r": 0.0712,
-     "rb": -0.1739,
-     "rel": 0.2967,
-     "days": 56,
+     "benchLast": 651.03,
+     "r": 0.0559,
+     "rb": -0.1161,
+     "rel": 0.1946,
+     "days": 57,
      "frozen": false,
      "addPx": 83,
      "g": {
       "from": "2026-09-28",
       "to": null,
-      "days": 56,
-      "r": 0.0712,
-      "rb": -0.1739,
-      "rel": 0.2967,
-      "adj": 0.2967,
+      "days": 57,
+      "r": 0.0559,
+      "rb": -0.1161,
+      "rel": 0.1946,
+      "adj": 0.1946,
       "graded": false,
       "gradeIn": null,
       "stance": "two"
@@ -23541,8 +23896,8 @@ const DATA = {
     "bench": "QQQ",
     "benchName": "Nasdaq-100 (QQQ)",
     "status": "active",
-    "score": 30.9,
-    "lastMention": "2026-11-22",
+    "score": 30.73,
+    "lastMention": "2026-11-23",
     "quietDays": 1,
     "fadingSince": null,
     "fadeReason": null,
@@ -23560,17 +23915,23 @@ const DATA = {
       "name": "Open-source & inference-cost pressure on premium models"
      },
      {
-      "id": "labvalue",
-      "name": "Foundation-lab value compression (now TWO-SIDED)"
-     },
-     {
       "id": "capex",
       "name": "Capex value-destruction + the capex-REWARD reflex breaking"
+     },
+     {
+      "id": "labvalue",
+      "name": "Foundation-lab value compression (now TWO-SIDED)"
      }
     ],
     "houses": 48,
-    "mentionCount": 102,
+    "mentionCount": 103,
     "mentions": [
+     {
+      "id": "T394",
+      "date": "2026-11-23",
+      "who": "Steve Eisman (Steve Tusa)",
+      "s": null
+     },
      {
       "id": "T387",
       "date": "2026-11-22",
@@ -23612,12 +23973,6 @@ const DATA = {
       "date": "2026-11-19",
       "who": "Brad Gerstner",
       "s": null
-     },
-     {
-      "id": "T361",
-      "date": "2026-11-18",
-      "who": "Prof G Markets (Elson/Luria)",
-      "s": 1
      }
     ],
     "lean": 16,
@@ -23633,24 +23988,24 @@ const DATA = {
      "sincePx": 351.99,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 265.29,
-     "lastDate": "2026-11-20",
+     "last": 282.1,
+     "lastDate": "2026-11-23",
      "benchSince": 696.06,
-     "benchLast": 608.45,
-     "r": -0.2463,
-     "rb": -0.1259,
-     "rel": -0.1378,
-     "days": 126,
+     "benchLast": 651.03,
+     "r": -0.1986,
+     "rb": -0.0647,
+     "rel": -0.1431,
+     "days": 127,
      "frozen": false,
      "addPx": 351.99,
      "g": {
       "from": "2026-07-20",
       "to": null,
-      "days": 126,
-      "r": -0.2463,
-      "rb": -0.1259,
-      "rel": -0.1378,
-      "adj": -0.1378,
+      "days": 127,
+      "r": -0.1986,
+      "rb": -0.0647,
+      "rel": -0.1431,
+      "adj": -0.1431,
       "graded": true,
       "gradeIn": null,
       "stance": "bull"
@@ -23677,9 +24032,9 @@ const DATA = {
     "bench": "QQQ",
     "benchName": "Nasdaq-100 (QQQ)",
     "status": "active",
-    "score": 29.95,
+    "score": 29.72,
     "lastMention": "2026-11-21",
-    "quietDays": 2,
+    "quietDays": 3,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-08-10",
@@ -23769,24 +24124,24 @@ const DATA = {
      "sincePx": 138.74,
      "sinceDate": "2026-08-10",
      "firstAfter": false,
-     "last": 127.79,
-     "lastDate": "2026-11-20",
+     "last": 133.35,
+     "lastDate": "2026-11-23",
      "benchSince": 720.87,
-     "benchLast": 608.45,
-     "r": -0.0789,
-     "rb": -0.156,
-     "rel": 0.0913,
-     "days": 105,
+     "benchLast": 651.03,
+     "r": -0.0388,
+     "rb": -0.0969,
+     "rel": 0.0643,
+     "days": 106,
      "frozen": false,
      "addPx": 138.74,
      "g": {
       "from": "2026-08-10",
       "to": null,
-      "days": 105,
-      "r": -0.0789,
-      "rb": -0.156,
-      "rel": 0.0913,
-      "adj": 0.0913,
+      "days": 106,
+      "r": -0.0388,
+      "rb": -0.0969,
+      "rel": 0.0643,
+      "adj": 0.0643,
       "graded": true,
       "gradeIn": null,
       "stance": "bull"
@@ -23818,9 +24173,9 @@ const DATA = {
     "bench": "QQQ",
     "benchName": "Nasdaq-100 (QQQ)",
     "status": "active",
-    "score": 22.76,
+    "score": 22.58,
     "lastMention": "2026-11-21",
-    "quietDays": 2,
+    "quietDays": 3,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -23925,20 +24280,20 @@ const DATA = {
      "sincePx": 645.85,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 560.84,
-     "lastDate": "2026-11-20",
+     "last": 597.6,
+     "lastDate": "2026-11-23",
      "benchSince": 696.06,
-     "benchLast": 608.45,
-     "r": -0.1316,
-     "rb": -0.1259,
-     "rel": -0.0066,
-     "days": 126,
+     "benchLast": 651.03,
+     "r": -0.0747,
+     "rb": -0.0647,
+     "rel": -0.0107,
+     "days": 127,
      "frozen": false,
      "addPx": 645.85,
      "g": {
       "from": "2026-11-23",
       "to": null,
-      "days": 0,
+      "days": 1,
       "r": 0,
       "rb": 0,
       "rel": 0,
@@ -23959,10 +24314,10 @@ const DATA = {
       "from": "2026-07-20",
       "to": "2026-11-23",
       "days": 126,
-      "r": -0.1316,
-      "rb": -0.1259,
-      "rel": -0.0066,
-      "adj": -0.0066,
+      "r": -0.0747,
+      "rb": -0.0647,
+      "rel": -0.0107,
+      "adj": -0.0107,
       "graded": true,
       "gradeIn": null
      }
@@ -23982,9 +24337,9 @@ const DATA = {
     "bench": "QQQ",
     "benchName": "Nasdaq-100 (QQQ)",
     "status": "active",
-    "score": 22.2,
-    "lastMention": "2026-11-20",
-    "quietDays": 3,
+    "score": 22.52,
+    "lastMention": "2026-11-24",
+    "quietDays": 0,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-11-04",
@@ -23997,21 +24352,33 @@ const DATA = {
     "auto": false,
     "themes": [
      {
-      "id": "everythingtrade",
-      "name": "The EVERYTHING TRADE"
-     },
-     {
       "id": "paybackmath",
       "name": "The PAYBACK MATH"
      },
      {
-      "id": "neocloudcredit",
-      "name": "NEOCLOUD CREDIT is the AI stress gauge"
+      "id": "everythingtrade",
+      "name": "The EVERYTHING TRADE"
+     },
+     {
+      "id": "opensource",
+      "name": "Open-source & inference-cost pressure on premium models"
      }
     ],
     "houses": 29,
-    "mentionCount": 65,
+    "mentionCount": 67,
     "mentions": [
+     {
+      "id": "T391",
+      "date": "2026-11-24",
+      "who": "All-In (George Kurtz)",
+      "s": 0
+     },
+     {
+      "id": "T397",
+      "date": "2026-11-23",
+      "who": "Sam Altman and Greg Brockman (DealBook)",
+      "s": 0
+     },
      {
       "id": "T384",
       "date": "2026-11-20",
@@ -24047,18 +24414,6 @@ const DATA = {
       "date": "2026-11-18",
       "who": "Prof G Markets (Elson/Luria)",
       "s": 1
-     },
-     {
-      "id": "T373",
-      "date": "2026-11-18",
-      "who": "Sam Altman and Greg Brockman (NYT DealBook)",
-      "s": 0
-     },
-     {
-      "id": "T355",
-      "date": "2026-11-17",
-      "who": "All-In (Ghodsi)",
-      "s": -1
      }
     ],
     "lean": 19,
@@ -24074,26 +24429,26 @@ const DATA = {
      "sincePx": 555.8,
      "sinceDate": "2026-11-04",
      "firstAfter": false,
-     "last": 484.52,
-     "lastDate": "2026-11-20",
+     "last": 492.5,
+     "lastDate": "2026-11-23",
      "benchSince": 691.95,
-     "benchLast": 608.45,
-     "r": -0.1282,
-     "rb": -0.1207,
-     "rel": -0.0086,
-     "days": 19,
+     "benchLast": 651.03,
+     "r": -0.1139,
+     "rb": -0.0591,
+     "rel": -0.0582,
+     "days": 20,
      "frozen": false,
      "addPx": 555.8,
      "g": {
       "from": "2026-11-04",
       "to": null,
-      "days": 19,
-      "r": -0.1282,
-      "rb": -0.1207,
-      "rel": -0.0086,
-      "adj": -0.0086,
+      "days": 20,
+      "r": -0.1139,
+      "rb": -0.0591,
+      "rel": -0.0582,
+      "adj": -0.0582,
       "graded": false,
-      "gradeIn": 71,
+      "gradeIn": 70,
       "stance": "bull"
      }
     },
@@ -24118,9 +24473,9 @@ const DATA = {
     "bench": "QQQ",
     "benchName": "Nasdaq-100 (QQQ)",
     "status": "active",
-    "score": 20.2,
+    "score": 20.04,
     "lastMention": "2026-11-19",
-    "quietDays": 4,
+    "quietDays": 5,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-11-04",
@@ -24210,26 +24565,26 @@ const DATA = {
      "sincePx": 266.03,
      "sinceDate": "2026-11-04",
      "firstAfter": false,
-     "last": 246.82,
-     "lastDate": "2026-11-20",
+     "last": 255.39,
+     "lastDate": "2026-11-23",
      "benchSince": 691.95,
-     "benchLast": 608.45,
-     "r": -0.0722,
-     "rb": -0.1207,
-     "rel": 0.0551,
-     "days": 19,
+     "benchLast": 651.03,
+     "r": -0.04,
+     "rb": -0.0591,
+     "rel": 0.0203,
+     "days": 20,
      "frozen": false,
      "addPx": 266.03,
      "g": {
       "from": "2026-11-04",
       "to": null,
-      "days": 19,
-      "r": -0.0722,
-      "rb": -0.1207,
-      "rel": 0.0551,
-      "adj": 0.0551,
+      "days": 20,
+      "r": -0.04,
+      "rb": -0.0591,
+      "rel": 0.0203,
+      "adj": 0.0203,
       "graded": false,
-      "gradeIn": 71,
+      "gradeIn": 70,
       "stance": "bull"
      }
     },
@@ -24254,9 +24609,9 @@ const DATA = {
     "bench": "SMH",
     "benchName": "Semiconductors (SMH)",
     "status": "active",
-    "score": 18.96,
-    "lastMention": "2026-11-20",
-    "quietDays": 3,
+    "score": 18.86,
+    "lastMention": "2026-11-23",
+    "quietDays": 1,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-08-18",
@@ -24273,17 +24628,23 @@ const DATA = {
       "name": "Debt / private-credit systemic risk"
      },
      {
-      "id": "paybackmath",
-      "name": "The PAYBACK MATH"
-     },
-     {
       "id": "neocloudcredit",
       "name": "NEOCLOUD CREDIT is the AI stress gauge"
+     },
+     {
+      "id": "paybackmath",
+      "name": "The PAYBACK MATH"
      }
     ],
     "houses": 21,
-    "mentionCount": 59,
+    "mentionCount": 60,
     "mentions": [
+     {
+      "id": "T395",
+      "date": "2026-11-23",
+      "who": "Prof G Markets (Galloway, Elson)",
+      "s": -1
+     },
      {
       "id": "T383",
       "date": "2026-11-20",
@@ -24325,15 +24686,9 @@ const DATA = {
       "date": "2026-11-16",
       "who": "Steve Eisman (Ives, Luria)",
       "s": -1
-     },
-     {
-      "id": "T339",
-      "date": "2026-11-13",
-      "who": "Steve Eisman",
-      "s": -1
      }
     ],
-    "lean": -39,
+    "lean": -40,
     "leanFlag": "",
     "history": [
      {
@@ -24361,32 +24716,32 @@ const DATA = {
      "sincePx": 93.17,
      "sinceDate": "2026-08-18",
      "firstAfter": false,
-     "last": 39.51,
-     "lastDate": "2026-11-20",
+     "last": 48.33,
+     "lastDate": "2026-11-23",
      "benchSince": 569.77,
-     "benchLast": 400.06,
-     "r": -0.5759,
-     "rb": -0.2979,
-     "rel": -0.396,
-     "days": 97,
+     "benchLast": 460.18,
+     "r": -0.4813,
+     "rb": -0.1923,
+     "rel": -0.3577,
+     "days": 98,
      "frozen": false,
      "addPx": 93.17,
      "g": {
       "from": "2026-11-23",
       "to": null,
-      "days": 0,
+      "days": 1,
       "r": 0,
       "rb": 0,
       "rel": 0,
       "adj": 0,
       "graded": false,
-      "gradeIn": 90,
+      "gradeIn": 89,
       "stance": "bear"
      }
     },
     "stanceSince": "2026-11-23",
     "recent": {
-     "n": 43,
+     "n": 44,
      "share": 0.04
     },
     "periods": [
@@ -24395,10 +24750,10 @@ const DATA = {
       "from": "2026-08-18",
       "to": "2026-11-23",
       "days": 97,
-      "r": -0.5759,
-      "rb": -0.2979,
-      "rel": -0.396,
-      "adj": -0.396,
+      "r": -0.4813,
+      "rb": -0.1923,
+      "rel": -0.3577,
+      "adj": -0.3577,
       "graded": false,
       "gradeIn": null
      }
@@ -24418,9 +24773,9 @@ const DATA = {
     "bench": "QQQ",
     "benchName": "Nasdaq-100 (QQQ)",
     "status": "active",
-    "score": 17.66,
-    "lastMention": "2026-11-21",
-    "quietDays": 2,
+    "score": 18.67,
+    "lastMention": "2026-11-24",
+    "quietDays": 0,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -24445,9 +24800,15 @@ const DATA = {
       "name": "Data-center backlash / permitting risk"
      }
     ],
-    "houses": 23,
-    "mentionCount": 39,
+    "houses": 24,
+    "mentionCount": 40,
     "mentions": [
+     {
+      "id": "T391",
+      "date": "2026-11-24",
+      "who": "All-In (George Kurtz)",
+      "s": 1
+     },
      {
       "id": "T381",
       "date": "2026-11-21",
@@ -24489,15 +24850,9 @@ const DATA = {
       "date": "2026-11-13",
       "who": "The Compound (Brown, Batnick, Parets)",
       "s": 1
-     },
-     {
-      "id": "T324",
-      "date": "2026-11-10",
-      "who": "WAYT (Compound)",
-      "s": null
      }
     ],
-    "lean": 4,
+    "lean": 5,
     "leanFlag": "",
     "history": [
      {
@@ -24515,20 +24870,20 @@ const DATA = {
      "sincePx": 326.59,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 342.56,
-     "lastDate": "2026-11-20",
+     "last": 349.08,
+     "lastDate": "2026-11-23",
      "benchSince": 696.06,
-     "benchLast": 608.45,
-     "r": 0.0489,
-     "rb": -0.1259,
-     "rel": 0.1999,
-     "days": 126,
+     "benchLast": 651.03,
+     "r": 0.0689,
+     "rb": -0.0647,
+     "rel": 0.1428,
+     "days": 127,
      "frozen": false,
      "addPx": 326.59,
      "g": {
       "from": "2026-11-23",
       "to": null,
-      "days": 0,
+      "days": 1,
       "r": 0,
       "rb": 0,
       "rel": 0,
@@ -24540,8 +24895,8 @@ const DATA = {
     },
     "stanceSince": "2026-11-23",
     "recent": {
-     "n": 12,
-     "share": 0.64
+     "n": 13,
+     "share": 0.69
     },
     "periods": [
      {
@@ -24549,10 +24904,10 @@ const DATA = {
       "from": "2026-07-20",
       "to": "2026-11-23",
       "days": 126,
-      "r": 0.0489,
-      "rb": -0.1259,
-      "rel": 0.1999,
-      "adj": 0.1999,
+      "r": 0.0689,
+      "rb": -0.0647,
+      "rel": 0.1428,
+      "adj": 0.1428,
       "graded": true,
       "gradeIn": null
      }
@@ -24572,9 +24927,9 @@ const DATA = {
     "bench": "SPY",
     "benchName": "S&P 500 (SPY)",
     "status": "active",
-    "score": 15.79,
+    "score": 15.67,
     "lastMention": "2026-11-22",
-    "quietDays": 1,
+    "quietDays": 2,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-08-28",
@@ -24684,33 +25039,33 @@ const DATA = {
      "sincePx": 77830.2891,
      "sinceDate": "2026-08-28",
      "firstAfter": false,
-     "last": 62892.79,
-     "lastDate": "2026-11-23",
+     "last": 59978.04,
+     "lastDate": "2026-11-24",
      "benchSince": 769.35,
-     "benchLast": 689.81,
-     "r": -0.1919,
-     "rb": -0.1034,
-     "rel": -0.0987,
-     "days": 87,
+     "benchLast": 722.29,
+     "r": -0.2294,
+     "rb": -0.0612,
+     "rel": -0.1792,
+     "days": 88,
      "frozen": false,
      "addPx": 77830.2891,
      "g": {
       "from": "2026-08-28",
       "to": null,
-      "days": 87,
-      "r": -0.1919,
-      "rb": -0.1034,
-      "rel": -0.0987,
-      "adj": -0.0987,
+      "days": 88,
+      "r": -0.2294,
+      "rb": -0.0612,
+      "rel": -0.1792,
+      "adj": -0.1792,
       "graded": false,
-      "gradeIn": 3,
+      "gradeIn": 2,
       "stance": "bull"
      }
     },
     "stanceSince": "2026-08-28",
     "recent": {
-     "n": 19,
-     "share": 0.82
+     "n": 18,
+     "share": 0.81
     },
     "periods": [],
     "nextEvents": [
@@ -24733,9 +25088,9 @@ const DATA = {
     "bench": "SMH",
     "benchName": "Semiconductors (SMH)",
     "status": "active",
-    "score": 14.37,
+    "score": 14.26,
     "lastMention": "2026-11-22",
-    "quietDays": 1,
+    "quietDays": 2,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -24835,24 +25190,24 @@ const DATA = {
      "sincePx": 865.46,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 594.51,
-     "lastDate": "2026-11-20",
+     "last": 707.7,
+     "lastDate": "2026-11-23",
      "benchSince": 558.83,
-     "benchLast": 400.06,
-     "r": -0.3131,
-     "rb": -0.2841,
-     "rel": -0.0405,
-     "days": 126,
+     "benchLast": 460.18,
+     "r": -0.1823,
+     "rb": -0.1765,
+     "rel": -0.007,
+     "days": 127,
      "frozen": false,
      "addPx": 865.46,
      "g": {
       "from": "2026-07-20",
       "to": null,
-      "days": 126,
-      "r": -0.3131,
-      "rb": -0.2841,
-      "rel": -0.0405,
-      "adj": -0.0405,
+      "days": 127,
+      "r": -0.1823,
+      "rb": -0.1765,
+      "rel": -0.007,
+      "adj": -0.007,
       "graded": true,
       "gradeIn": null,
       "stance": "bull"
@@ -24884,9 +25239,9 @@ const DATA = {
     "bench": "SPY",
     "benchName": "S&P 500 (SPY)",
     "status": "active",
-    "score": 14.2,
+    "score": 14.09,
     "lastMention": "2026-11-21",
-    "quietDays": 2,
+    "quietDays": 3,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-08-28",
@@ -24981,33 +25336,33 @@ const DATA = {
      "sincePx": 408.89,
      "sinceDate": "2026-08-28",
      "firstAfter": false,
-     "last": 322.87,
-     "lastDate": "2026-11-20",
+     "last": 333.02,
+     "lastDate": "2026-11-23",
      "benchSince": 769.35,
-     "benchLast": 689.81,
-     "r": -0.2104,
-     "rb": -0.1034,
-     "rel": -0.1193,
-     "days": 87,
+     "benchLast": 722.29,
+     "r": -0.1856,
+     "rb": -0.0612,
+     "rel": -0.1325,
+     "days": 88,
      "frozen": false,
      "addPx": 408.89,
      "g": {
       "from": "2026-08-28",
       "to": null,
-      "days": 87,
-      "r": -0.2104,
-      "rb": -0.1034,
-      "rel": -0.1193,
-      "adj": -0.1193,
+      "days": 88,
+      "r": -0.1856,
+      "rb": -0.0612,
+      "rel": -0.1325,
+      "adj": -0.1325,
       "graded": false,
-      "gradeIn": 3,
+      "gradeIn": 2,
       "stance": "bull"
      }
     },
     "stanceSince": "2026-08-28",
     "recent": {
-     "n": 4,
-     "share": 0.68
+     "n": 3,
+     "share": 0.65
     },
     "periods": [],
     "nextEvents": [],
@@ -25025,9 +25380,9 @@ const DATA = {
     "bench": "SMH",
     "benchName": "Semiconductors (SMH)",
     "status": "active",
-    "score": 13.83,
+    "score": 13.72,
     "lastMention": "2026-11-16",
-    "quietDays": 7,
+    "quietDays": 8,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -25127,24 +25482,24 @@ const DATA = {
      "sincePx": 97.06,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 51.28,
-     "lastDate": "2026-11-20",
+     "last": 59.66,
+     "lastDate": "2026-11-23",
      "benchSince": 558.83,
-     "benchLast": 400.06,
-     "r": -0.4717,
-     "rb": -0.2841,
-     "rel": -0.262,
-     "days": 126,
+     "benchLast": 460.18,
+     "r": -0.3853,
+     "rb": -0.1765,
+     "rel": -0.2536,
+     "days": 127,
      "frozen": false,
      "addPx": 97.06,
      "g": {
       "from": "2026-07-20",
       "to": null,
-      "days": 126,
-      "r": -0.4717,
-      "rb": -0.2841,
-      "rel": -0.262,
-      "adj": -0.262,
+      "days": 127,
+      "r": -0.3853,
+      "rb": -0.1765,
+      "rel": -0.2536,
+      "adj": -0.2536,
       "graded": false,
       "gradeIn": null,
       "stance": "two"
@@ -25171,9 +25526,9 @@ const DATA = {
     "bench": "SMH",
     "benchName": "Semiconductors (SMH)",
     "status": "active",
-    "score": 13.63,
-    "lastMention": "2026-11-20",
-    "quietDays": 3,
+    "score": 13.57,
+    "lastMention": "2026-11-23",
+    "quietDays": 1,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-08-18",
@@ -25199,8 +25554,14 @@ const DATA = {
      }
     ],
     "houses": 16,
-    "mentionCount": 32,
+    "mentionCount": 33,
     "mentions": [
+     {
+      "id": "T395",
+      "date": "2026-11-23",
+      "who": "Prof G Markets (Galloway, Elson)",
+      "s": -1
+     },
      {
       "id": "T383",
       "date": "2026-11-20",
@@ -25242,15 +25603,9 @@ const DATA = {
       "date": "2026-11-11",
       "who": "Odd Lots (guests)",
       "s": 0
-     },
-     {
-      "id": "T316",
-      "date": "2026-11-09",
-      "who": "Prof G Markets (Galloway & Elson)",
-      "s": -1
      }
     ],
-    "lean": -12,
+    "lean": -13,
     "leanFlag": "",
     "history": [
      {
@@ -25278,33 +25633,33 @@ const DATA = {
      "sincePx": 248.43,
      "sinceDate": "2026-08-18",
      "firstAfter": false,
-     "last": 81.31,
-     "lastDate": "2026-11-20",
+     "last": 97.8,
+     "lastDate": "2026-11-23",
      "benchSince": 569.77,
-     "benchLast": 400.06,
-     "r": -0.6727,
-     "rb": -0.2979,
-     "rel": -0.5339,
-     "days": 97,
+     "benchLast": 460.18,
+     "r": -0.6063,
+     "rb": -0.1923,
+     "rel": -0.5126,
+     "days": 98,
      "frozen": false,
      "addPx": 248.43,
      "g": {
       "from": "2026-11-23",
       "to": null,
-      "days": 0,
+      "days": 1,
       "r": 0,
       "rb": 0,
       "rel": 0,
       "adj": 0,
       "graded": false,
-      "gradeIn": 90,
+      "gradeIn": 89,
       "stance": "bear"
      }
     },
     "stanceSince": "2026-11-23",
     "recent": {
-     "n": 22,
-     "share": 0.21
+     "n": 23,
+     "share": 0.19
     },
     "periods": [
      {
@@ -25312,10 +25667,10 @@ const DATA = {
       "from": "2026-08-18",
       "to": "2026-11-23",
       "days": 97,
-      "r": -0.6727,
-      "rb": -0.2979,
-      "rel": -0.5339,
-      "adj": -0.5339,
+      "r": -0.6063,
+      "rb": -0.1923,
+      "rel": -0.5126,
+      "adj": -0.5126,
       "graded": false,
       "gradeIn": null
      }
@@ -25327,6 +25682,152 @@ const DATA = {
     "delta": 0
    },
    {
+    "tkr": "ORCL",
+    "ysym": "ORCL",
+    "name": "Oracle",
+    "stance": "monitor",
+    "risk": "mod",
+    "bench": "IGV",
+    "benchName": "Software (IGV)",
+    "status": "active",
+    "score": 13.16,
+    "lastMention": "2026-11-23",
+    "quietDays": 1,
+    "fadingSince": null,
+    "fadeReason": null,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Capex war 'cage fight'; debt (ORCL) & tolerance (META)",
+    "watch": "Market less tolerant of their capex than GOOG/AMZN",
+    "auto": false,
+    "themes": [
+     {
+      "id": "capex",
+      "name": "Capex value-destruction + the capex-REWARD reflex breaking"
+     },
+     {
+      "id": "ratesmacro",
+      "name": "Rising RATES / financing conditions"
+     },
+     {
+      "id": "labvalue",
+      "name": "Foundation-lab value compression (now TWO-SIDED)"
+     }
+    ],
+    "houses": 18,
+    "mentionCount": 34,
+    "mentions": [
+     {
+      "id": "T395",
+      "date": "2026-11-23",
+      "who": "Prof G Markets (Galloway, Elson)",
+      "s": -1
+     },
+     {
+      "id": "T356",
+      "date": "2026-11-18",
+      "who": "Animal Spirits (Compound)",
+      "s": -1
+     },
+     {
+      "id": "T359",
+      "date": "2026-11-16",
+      "who": "Steve Eisman (Ives, Luria)",
+      "s": -1
+     },
+     {
+      "id": "T319",
+      "date": "2026-11-09",
+      "who": "Steve Eisman",
+      "s": -1
+     },
+     {
+      "id": "T303",
+      "date": "2026-11-06",
+      "who": "Odd Lots (Skanda Amarnath)",
+      "s": -1
+     },
+     {
+      "id": "T309",
+      "date": "2026-11-06",
+      "who": "Steve Eisman",
+      "s": -1
+     },
+     {
+      "id": "T298",
+      "date": "2026-11-05",
+      "who": "Prof G Markets (Ed Elson)",
+      "s": -1
+     },
+     {
+      "id": "T313",
+      "date": "2026-11-05",
+      "who": "Jordi Visser",
+      "s": 1
+     }
+    ],
+    "lean": -10,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Oracle / Meta"
+     },
+     {
+      "date": "2026-08-28",
+      "label": "Batch 14",
+      "note": "Oracle"
+     }
+    ],
+    "px": {
+     "sincePx": 121.38,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 113.68,
+     "lastDate": "2026-11-23",
+     "benchSince": 92.98,
+     "benchLast": 95.26,
+     "r": -0.0634,
+     "rb": 0.0245,
+     "rel": -0.0859,
+     "days": 127,
+     "frozen": false,
+     "addPx": 121.38,
+     "g": {
+      "from": "2026-07-20",
+      "to": null,
+      "days": 127,
+      "r": -0.0634,
+      "rb": 0.0245,
+      "rel": -0.0859,
+      "adj": -0.0859,
+      "graded": false,
+      "gradeIn": null,
+      "stance": "monitor"
+     }
+    },
+    "stanceSince": "2026-07-20",
+    "recent": {
+     "n": 21,
+     "share": 0.27
+    },
+    "periods": [],
+    "nextEvents": [
+     {
+      "date": "2026-12-10",
+      "event": "Oracle FQ2 2027 results (estimated, not company-confirmed)"
+     }
+    ],
+    "watchStale": false,
+    "rank": 15,
+    "isNew": false,
+    "delta": -2
+   },
+   {
     "tkr": "TSLA",
     "ysym": "TSLA",
     "name": "Tesla",
@@ -25335,9 +25836,9 @@ const DATA = {
     "bench": "QQQ",
     "benchName": "Nasdaq-100 (QQQ)",
     "status": "active",
-    "score": 13.17,
+    "score": 13.07,
     "lastMention": "2026-11-21",
-    "quietDays": 2,
+    "quietDays": 3,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-11-08",
@@ -25427,26 +25928,26 @@ const DATA = {
      "sincePx": 358.22,
      "sinceDate": "2026-11-06",
      "firstAfter": false,
-     "last": 345.82,
-     "lastDate": "2026-11-20",
+     "last": 385.46,
+     "lastDate": "2026-11-23",
      "benchSince": 656.1,
-     "benchLast": 608.45,
-     "r": -0.0346,
-     "rb": -0.0726,
-     "rel": 0.041,
-     "days": 15,
+     "benchLast": 651.03,
+     "r": 0.076,
+     "rb": -0.0077,
+     "rel": 0.0844,
+     "days": 16,
      "frozen": false,
      "addPx": 358.22,
      "g": {
       "from": "2026-11-08",
       "to": null,
-      "days": 15,
-      "r": -0.0346,
-      "rb": -0.0726,
-      "rel": 0.041,
-      "adj": 0.041,
+      "days": 16,
+      "r": 0.076,
+      "rb": -0.0077,
+      "rel": 0.0844,
+      "adj": 0.0844,
       "graded": false,
-      "gradeIn": 75,
+      "gradeIn": 74,
       "stance": "bull"
      }
     },
@@ -25458,155 +25959,9 @@ const DATA = {
     "periods": [],
     "nextEvents": [],
     "watchStale": false,
-    "rank": 15,
-    "isNew": false,
-    "delta": 0
-   },
-   {
-    "tkr": "ORCL",
-    "ysym": "ORCL",
-    "name": "Oracle",
-    "stance": "monitor",
-    "risk": "mod",
-    "bench": "IGV",
-    "benchName": "Software (IGV)",
-    "status": "active",
-    "score": 13.02,
-    "lastMention": "2026-11-18",
-    "quietDays": 5,
-    "fadingSince": null,
-    "fadeReason": null,
-    "added": "2026-07-20",
-    "since": "2026-07-20",
-    "readded": null,
-    "retiredOn": null,
-    "retiredReason": null,
-    "why": "Capex war 'cage fight'; debt (ORCL) & tolerance (META)",
-    "watch": "Market less tolerant of their capex than GOOG/AMZN",
-    "auto": false,
-    "themes": [
-     {
-      "id": "capex",
-      "name": "Capex value-destruction + the capex-REWARD reflex breaking"
-     },
-     {
-      "id": "ratesmacro",
-      "name": "Rising RATES / financing conditions"
-     },
-     {
-      "id": "debt",
-      "name": "Debt / private-credit systemic risk"
-     }
-    ],
-    "houses": 18,
-    "mentionCount": 33,
-    "mentions": [
-     {
-      "id": "T356",
-      "date": "2026-11-18",
-      "who": "Animal Spirits (Compound)",
-      "s": -1
-     },
-     {
-      "id": "T359",
-      "date": "2026-11-16",
-      "who": "Steve Eisman (Ives, Luria)",
-      "s": -1
-     },
-     {
-      "id": "T319",
-      "date": "2026-11-09",
-      "who": "Steve Eisman",
-      "s": -1
-     },
-     {
-      "id": "T303",
-      "date": "2026-11-06",
-      "who": "Odd Lots (Skanda Amarnath)",
-      "s": -1
-     },
-     {
-      "id": "T309",
-      "date": "2026-11-06",
-      "who": "Steve Eisman",
-      "s": -1
-     },
-     {
-      "id": "T298",
-      "date": "2026-11-05",
-      "who": "Prof G Markets (Ed Elson)",
-      "s": -1
-     },
-     {
-      "id": "T313",
-      "date": "2026-11-05",
-      "who": "Jordi Visser",
-      "s": 1
-     },
-     {
-      "id": "T294",
-      "date": "2026-11-04",
-      "who": "Animal Spirits (The Compound)",
-      "s": -1
-     }
-    ],
-    "lean": -9,
-    "leanFlag": "",
-    "history": [
-     {
-      "date": "2026-07-20",
-      "label": "Original list (Jul 20)",
-      "note": "Oracle / Meta"
-     },
-     {
-      "date": "2026-08-28",
-      "label": "Batch 14",
-      "note": "Oracle"
-     }
-    ],
-    "px": {
-     "sincePx": 121.38,
-     "sinceDate": "2026-07-20",
-     "firstAfter": false,
-     "last": 101.19,
-     "lastDate": "2026-11-20",
-     "benchSince": 92.98,
-     "benchLast": 91.66,
-     "r": -0.1663,
-     "rb": -0.0142,
-     "rel": -0.1543,
-     "days": 126,
-     "frozen": false,
-     "addPx": 121.38,
-     "g": {
-      "from": "2026-07-20",
-      "to": null,
-      "days": 126,
-      "r": -0.1663,
-      "rb": -0.0142,
-      "rel": -0.1543,
-      "adj": -0.1543,
-      "graded": false,
-      "gradeIn": null,
-      "stance": "monitor"
-     }
-    },
-    "stanceSince": "2026-07-20",
-    "recent": {
-     "n": 21,
-     "share": 0.29
-    },
-    "periods": [],
-    "nextEvents": [
-     {
-      "date": "2026-12-10",
-      "event": "Oracle FQ2 2027 results (estimated, not company-confirmed)"
-     }
-    ],
-    "watchStale": false,
     "rank": 16,
     "isNew": false,
-    "delta": -3
+    "delta": -1
    },
    {
     "tkr": "ASML",
@@ -25617,9 +25972,9 @@ const DATA = {
     "bench": "SMH",
     "benchName": "Semiconductors (SMH)",
     "status": "active",
-    "score": 12.55,
+    "score": 12.46,
     "lastMention": "2026-11-21",
-    "quietDays": 2,
+    "quietDays": 3,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -25709,24 +26064,24 @@ const DATA = {
      "sincePx": 1739.02,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 1266.22,
-     "lastDate": "2026-11-20",
+     "last": 1383.78,
+     "lastDate": "2026-11-23",
      "benchSince": 558.83,
-     "benchLast": 400.06,
-     "r": -0.2719,
-     "rb": -0.2841,
-     "rel": 0.0171,
-     "days": 126,
+     "benchLast": 460.18,
+     "r": -0.2043,
+     "rb": -0.1765,
+     "rel": -0.0337,
+     "days": 127,
      "frozen": false,
      "addPx": 1739.02,
      "g": {
       "from": "2026-07-20",
       "to": null,
-      "days": 126,
-      "r": -0.2719,
-      "rb": -0.2841,
-      "rel": 0.0171,
-      "adj": 0.0171,
+      "days": 127,
+      "r": -0.2043,
+      "rb": -0.1765,
+      "rel": -0.0337,
+      "adj": -0.0337,
       "graded": true,
       "gradeIn": null,
       "stance": "bull"
@@ -25753,9 +26108,9 @@ const DATA = {
     "bench": "SMH",
     "benchName": "Semiconductors (SMH)",
     "status": "active",
-    "score": 11.7,
+    "score": 11.61,
     "lastMention": "2026-11-20",
-    "quietDays": 3,
+    "quietDays": 4,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -25845,24 +26200,24 @@ const DATA = {
      "sincePx": 402.3,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 318.71,
-     "lastDate": "2026-11-20",
+     "last": 363.6,
+     "lastDate": "2026-11-23",
      "benchSince": 558.83,
-     "benchLast": 400.06,
-     "r": -0.2078,
-     "rb": -0.2841,
-     "rel": 0.1066,
-     "days": 126,
+     "benchLast": 460.18,
+     "r": -0.0962,
+     "rb": -0.1765,
+     "rel": 0.0976,
+     "days": 127,
      "frozen": false,
      "addPx": 402.3,
      "g": {
       "from": "2026-07-20",
       "to": null,
-      "days": 126,
-      "r": -0.2078,
-      "rb": -0.2841,
-      "rel": 0.1066,
-      "adj": 0.1066,
+      "days": 127,
+      "r": -0.0962,
+      "rb": -0.1765,
+      "rel": 0.0976,
+      "adj": 0.0976,
       "graded": true,
       "gradeIn": null,
       "stance": "bull"
@@ -25894,9 +26249,9 @@ const DATA = {
     "bench": "SMH",
     "benchName": "Semiconductors (SMH)",
     "status": "active",
-    "score": 10.52,
-    "lastMention": "2026-11-20",
-    "quietDays": 3,
+    "score": 10.53,
+    "lastMention": "2026-11-23",
+    "quietDays": 1,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-11-08",
@@ -25913,17 +26268,29 @@ const DATA = {
       "name": "China open-weight surge / export-control backfire"
      },
      {
-      "id": "airegulator",
-      "name": "AI regulation / frontier-regulator ('AI-FINRA')"
-     },
-     {
       "id": "labvalue",
       "name": "Foundation-lab value compression (now TWO-SIDED)"
+     },
+     {
+      "id": "keyperson",
+      "name": "NVIDIA AFTER HUANG"
      }
     ],
     "houses": 11,
-    "mentionCount": 27,
+    "mentionCount": 29,
     "mentions": [
+     {
+      "id": "T395",
+      "date": "2026-11-23",
+      "who": "Prof G Markets (Galloway, Elson)",
+      "s": -1
+     },
+     {
+      "id": "T397",
+      "date": "2026-11-23",
+      "who": "Sam Altman and Greg Brockman (DealBook)",
+      "s": 1
+     },
      {
       "id": "T382",
       "date": "2026-11-20",
@@ -25959,18 +26326,6 @@ const DATA = {
       "date": "2026-11-17",
       "who": "The Compound (WAYT)",
       "s": 1
-     },
-     {
-      "id": "T347",
-      "date": "2026-11-16",
-      "who": "Prof G Markets (Galloway/Elson)",
-      "s": 1
-     },
-     {
-      "id": "T350",
-      "date": "2026-11-16",
-      "who": "Sam Altman (OpenAI)",
-      "s": 0
      }
     ],
     "lean": 8,
@@ -25991,33 +26346,33 @@ const DATA = {
      "sincePx": 449.04,
      "sinceDate": "2026-11-06",
      "firstAfter": false,
-     "last": 424.39,
-     "lastDate": "2026-11-20",
+     "last": 453.46,
+     "lastDate": "2026-11-23",
      "benchSince": 463.96,
-     "benchLast": 400.06,
-     "r": -0.0549,
-     "rb": -0.1377,
-     "rel": 0.0961,
-     "days": 15,
+     "benchLast": 460.18,
+     "r": 0.0098,
+     "rb": -0.0081,
+     "rel": 0.0181,
+     "days": 16,
      "frozen": false,
      "addPx": 449.04,
      "g": {
       "from": "2026-11-23",
       "to": null,
-      "days": 0,
+      "days": 1,
       "r": 0,
       "rb": 0,
       "rel": 0,
       "adj": 0,
       "graded": false,
-      "gradeIn": 90,
+      "gradeIn": 89,
       "stance": "bull"
      }
     },
     "stanceSince": "2026-11-23",
     "recent": {
-     "n": 17,
-     "share": 0.8
+     "n": 19,
+     "share": 0.76
     },
     "periods": [
      {
@@ -26025,10 +26380,10 @@ const DATA = {
       "from": "2026-11-08",
       "to": "2026-11-23",
       "days": 15,
-      "r": -0.0549,
-      "rb": -0.1377,
-      "rel": 0.0961,
-      "adj": 0.0961,
+      "r": 0.0098,
+      "rb": -0.0081,
+      "rel": 0.0181,
+      "adj": 0.0181,
       "graded": false,
       "gradeIn": null
      }
@@ -26036,6 +26391,147 @@ const DATA = {
     "nextEvents": [],
     "watchStale": false,
     "rank": 19,
+    "isNew": false,
+    "delta": 0
+   },
+   {
+    "tkr": "AVGO",
+    "ysym": "AVGO",
+    "name": "Broadcom",
+    "stance": "bull",
+    "risk": "core",
+    "bench": "SMH",
+    "benchName": "Semiconductors (SMH)",
+    "status": "active",
+    "score": 9.48,
+    "lastMention": "2026-11-23",
+    "quietDays": 1,
+    "fadingSince": null,
+    "fadeReason": null,
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "Custom silicon/ASIC (TPU)",
+    "watch": "Mega cap · liquid",
+    "auto": false,
+    "themes": [
+     {
+      "id": "labvalue",
+      "name": "Foundation-lab value compression (now TWO-SIDED)"
+     },
+     {
+      "id": "positioning",
+      "name": "Positioning / market-structure"
+     },
+     {
+      "id": "opensource",
+      "name": "Open-source & inference-cost pressure on premium models"
+     }
+    ],
+    "houses": 9,
+    "mentionCount": 20,
+    "mentions": [
+     {
+      "id": "T393",
+      "date": "2026-11-23",
+      "who": "Gavin Baker (Atreides)",
+      "s": 0
+     },
+     {
+      "id": "T367",
+      "date": "2026-11-19",
+      "who": "Prof G Markets (Elson, Kedrosky)",
+      "s": 0
+     },
+     {
+      "id": "T356",
+      "date": "2026-11-18",
+      "who": "Animal Spirits (Compound)",
+      "s": 1
+     },
+     {
+      "id": "T357",
+      "date": "2026-11-17",
+      "who": "The Compound (WAYT)",
+      "s": 1
+     },
+     {
+      "id": "T347",
+      "date": "2026-11-16",
+      "who": "Prof G Markets (Galloway/Elson)",
+      "s": 0
+     },
+     {
+      "id": "T359",
+      "date": "2026-11-16",
+      "who": "Steve Eisman (Ives, Luria)",
+      "s": null
+     },
+     {
+      "id": "T343",
+      "date": "2026-11-14",
+      "who": "Odd Lots (Rasgon)",
+      "s": 1
+     },
+     {
+      "id": "T332",
+      "date": "2026-11-13",
+      "who": "The Compound (Brown, Batnick, Parets)",
+      "s": 1
+     }
+    ],
+    "lean": 4,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Broadcom"
+     }
+    ],
+    "px": {
+     "sincePx": 378.16,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 313.55,
+     "lastDate": "2026-11-23",
+     "benchSince": 558.83,
+     "benchLast": 460.18,
+     "r": -0.1709,
+     "rb": -0.1765,
+     "rel": 0.0069,
+     "days": 127,
+     "frozen": false,
+     "addPx": 378.16,
+     "g": {
+      "from": "2026-07-20",
+      "to": null,
+      "days": 127,
+      "r": -0.1709,
+      "rb": -0.1765,
+      "rel": 0.0069,
+      "adj": 0.0069,
+      "graded": true,
+      "gradeIn": null,
+      "stance": "bull"
+     }
+    },
+    "stanceSince": "2026-07-20",
+    "recent": {
+     "n": 10,
+     "share": 0.75
+    },
+    "periods": [],
+    "nextEvents": [
+     {
+      "date": "2026-12-09",
+      "event": "Broadcom FQ4 2026 results"
+     }
+    ],
+    "watchStale": false,
+    "rank": 20,
     "isNew": false,
     "delta": 0
    },
@@ -26048,9 +26544,9 @@ const DATA = {
     "bench": "IGV",
     "benchName": "Software (IGV)",
     "status": "active",
-    "score": 8.68,
+    "score": 8.61,
     "lastMention": "2026-11-19",
-    "quietDays": 4,
+    "quietDays": 5,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -26140,24 +26636,24 @@ const DATA = {
      "sincePx": 173.79,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 180.62,
-     "lastDate": "2026-11-20",
+     "last": 185.46,
+     "lastDate": "2026-11-23",
      "benchSince": 92.98,
-     "benchLast": 91.66,
-     "r": 0.0393,
-     "rb": -0.0142,
-     "rel": 0.0543,
-     "days": 126,
+     "benchLast": 95.26,
+     "r": 0.0672,
+     "rb": 0.0245,
+     "rel": 0.0416,
+     "days": 127,
      "frozen": false,
      "addPx": 173.79,
      "g": {
       "from": "2026-07-20",
       "to": null,
-      "days": 126,
-      "r": 0.0393,
-      "rb": -0.0142,
-      "rel": 0.0543,
-      "adj": -0.0543,
+      "days": 127,
+      "r": 0.0672,
+      "rb": 0.0245,
+      "rel": 0.0416,
+      "adj": -0.0416,
       "graded": true,
       "gradeIn": null,
       "stance": "bear"
@@ -26176,40 +26672,40 @@ const DATA = {
      }
     ],
     "watchStale": false,
-    "rank": 20,
+    "rank": 21,
     "isNew": false,
-    "delta": 8
+    "delta": 7
    },
    {
-    "tkr": "AVGO",
-    "ysym": "AVGO",
-    "name": "Broadcom",
+    "tkr": "CRWD",
+    "ysym": "CRWD",
+    "name": "CrowdStrike",
     "stance": "bull",
-    "risk": "core",
-    "bench": "SMH",
-    "benchName": "Semiconductors (SMH)",
+    "risk": "mod",
+    "bench": "IGV",
+    "benchName": "Software (IGV)",
     "status": "active",
-    "score": 8.54,
-    "lastMention": "2026-11-19",
-    "quietDays": 4,
+    "score": 7.52,
+    "lastMention": "2026-11-24",
+    "quietDays": 0,
     "fadingSince": null,
     "fadeReason": null,
-    "added": "2026-07-20",
-    "since": "2026-07-20",
+    "added": "2026-08-31",
+    "since": "2026-08-31",
     "readded": null,
     "retiredOn": null,
     "retiredReason": null,
-    "why": "Custom silicon/ASIC (TPU)",
-    "watch": "Mega cap · liquid",
+    "why": "OpenShell + Sentry; granular agent auth; secure-by-design renaissance",
+    "watch": "The defenders get a standards tailwind",
     "auto": false,
     "themes": [
      {
-      "id": "labvalue",
-      "name": "Foundation-lab value compression (now TWO-SIDED)"
+      "id": "assurance",
+      "name": "AI assurance / agent-governance / cybersecurity"
      },
      {
-      "id": "positioning",
-      "name": "Positioning / market-structure"
+      "id": "aicyber",
+      "name": "AI-FOUND EXPLOITS become a recurring market event"
      },
      {
       "id": "opensource",
@@ -26217,31 +26713,19 @@ const DATA = {
      }
     ],
     "houses": 8,
-    "mentionCount": 19,
+    "mentionCount": 8,
     "mentions": [
      {
-      "id": "T367",
+      "id": "T391",
+      "date": "2026-11-24",
+      "who": "All-In (George Kurtz)",
+      "s": 1
+     },
+     {
+      "id": "T366",
       "date": "2026-11-19",
-      "who": "Prof G Markets (Elson, Kedrosky)",
-      "s": 0
-     },
-     {
-      "id": "T356",
-      "date": "2026-11-18",
-      "who": "Animal Spirits (Compound)",
+      "who": "Odd Lots (Lee, Kedrosky)",
       "s": 1
-     },
-     {
-      "id": "T357",
-      "date": "2026-11-17",
-      "who": "The Compound (WAYT)",
-      "s": 1
-     },
-     {
-      "id": "T347",
-      "date": "2026-11-16",
-      "who": "Prof G Markets (Galloway/Elson)",
-      "s": 0
      },
      {
       "id": "T359",
@@ -26250,76 +26734,98 @@ const DATA = {
       "s": null
      },
      {
-      "id": "T343",
-      "date": "2026-11-14",
-      "who": "Odd Lots (Rasgon)",
-      "s": 1
-     },
-     {
-      "id": "T332",
+      "id": "T333",
       "date": "2026-11-13",
-      "who": "The Compound (Brown, Batnick, Parets)",
-      "s": 1
+      "who": "a16z (Luttwak)",
+      "s": 0
      },
      {
-      "id": "T336",
-      "date": "2026-11-12",
-      "who": "Dylan Patel (SemiAnalysis)",
-      "s": 1
+      "id": "T293",
+      "date": "2026-10-20",
+      "who": "Invest Like the Best (Christina Cacioppo)",
+      "s": 0
+     },
+     {
+      "id": "T154",
+      "date": "2026-09-15",
+      "who": "Greg Brockman (OpenAI)",
+      "s": null
+     },
+     {
+      "id": "T168",
+      "date": "2026-09-15",
+      "who": "Jensen Huang",
+      "s": null
+     },
+     {
+      "id": "T132",
+      "date": "2026-08-27",
+      "who": "CNBC Halftime/Closing (desk)",
+      "s": null
      }
     ],
-    "lean": 4,
+    "lean": 2,
     "leanFlag": "",
     "history": [
      {
-      "date": "2026-07-20",
-      "label": "Original list (Jul 20)",
-      "note": "Broadcom"
+      "date": "2026-08-31",
+      "label": "Batch 15",
+      "note": "CrowdStrike / Okta / CyberArk"
+     },
+     {
+      "date": "2026-09-15",
+      "label": "Batch 17",
+      "note": "Defenders - the window is open, $1B behind it"
+     },
+     {
+      "date": "2026-09-28",
+      "label": "Batch 19",
+      "note": "Agent security - swarms break the insider-threat model"
      }
     ],
     "px": {
-     "sincePx": 378.16,
-     "sinceDate": "2026-07-20",
+     "sincePx": 231,
+     "sinceDate": "2026-08-31",
      "firstAfter": false,
-     "last": 304.41,
-     "lastDate": "2026-11-20",
-     "benchSince": 558.83,
-     "benchLast": 400.06,
-     "r": -0.195,
-     "rb": -0.2841,
-     "rel": 0.1244,
-     "days": 126,
+     "last": 208.97,
+     "lastDate": "2026-11-23",
+     "benchSince": 109.98,
+     "benchLast": 95.26,
+     "r": -0.0954,
+     "rb": -0.1338,
+     "rel": 0.0444,
+     "days": 85,
      "frozen": false,
-     "addPx": 378.16,
+     "addPx": 231,
      "g": {
-      "from": "2026-07-20",
+      "from": "2026-08-31",
       "to": null,
-      "days": 126,
-      "r": -0.195,
-      "rb": -0.2841,
-      "rel": 0.1244,
-      "adj": 0.1244,
-      "graded": true,
-      "gradeIn": null,
+      "days": 85,
+      "r": -0.0954,
+      "rb": -0.1338,
+      "rel": 0.0444,
+      "adj": 0.0444,
+      "graded": false,
+      "gradeIn": 5,
       "stance": "bull"
      }
     },
-    "stanceSince": "2026-07-20",
+    "stanceSince": "2026-08-31",
     "recent": {
-     "n": 10,
-     "share": 0.75
+     "n": 2,
+     "share": 1
     },
     "periods": [],
     "nextEvents": [
      {
-      "date": "2026-12-09",
-      "event": "Broadcom FQ4 2026 results"
+      "date": "2026-12-01",
+      "event": "CrowdStrike FQ3 2027 results"
      }
     ],
     "watchStale": false,
-    "rank": 21,
+    "rank": 22,
     "isNew": false,
-    "delta": -1
+    "delta": 11
    },
    {
     "tkr": "IREN",
@@ -26330,9 +26836,9 @@ const DATA = {
     "bench": "SMH",
     "benchName": "Semiconductors (SMH)",
     "status": "active",
-    "score": 7.23,
-    "lastMention": "2026-11-18",
-    "quietDays": 5,
+    "score": 7.22,
+    "lastMention": "2026-11-23",
+    "quietDays": 1,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-11-04",
@@ -26345,12 +26851,12 @@ const DATA = {
     "auto": false,
     "themes": [
      {
-      "id": "backlash",
-      "name": "Data-center backlash / permitting risk"
-     },
-     {
       "id": "neocloudcredit",
       "name": "NEOCLOUD CREDIT is the AI stress gauge"
+     },
+     {
+      "id": "backlash",
+      "name": "Data-center backlash / permitting risk"
      },
      {
       "id": "debt",
@@ -26358,8 +26864,14 @@ const DATA = {
      }
     ],
     "houses": 7,
-    "mentionCount": 11,
+    "mentionCount": 12,
     "mentions": [
+     {
+      "id": "T395",
+      "date": "2026-11-23",
+      "who": "Prof G Markets (Galloway, Elson)",
+      "s": -1
+     },
      {
       "id": "T361",
       "date": "2026-11-18",
@@ -26401,15 +26913,9 @@ const DATA = {
       "date": "2026-11-02",
       "who": "Prof G Markets (Galloway/Elson)",
       "s": -1
-     },
-     {
-      "id": "T245",
-      "date": "2026-10-30",
-      "who": "Steve Eisman",
-      "s": -1
      }
     ],
-    "lean": -8,
+    "lean": -9,
     "leanFlag": "",
     "history": [
      {
@@ -26427,32 +26933,32 @@ const DATA = {
      "sincePx": 21.71,
      "sinceDate": "2026-11-04",
      "firstAfter": false,
-     "last": 11.82,
-     "lastDate": "2026-11-20",
+     "last": 14.64,
+     "lastDate": "2026-11-23",
      "benchSince": 504.27,
-     "benchLast": 400.06,
-     "r": -0.4556,
-     "rb": -0.2067,
-     "rel": -0.3137,
-     "days": 19,
+     "benchLast": 460.18,
+     "r": -0.3257,
+     "rb": -0.0874,
+     "rel": -0.261,
+     "days": 20,
      "frozen": false,
      "addPx": 21.71,
      "g": {
       "from": "2026-11-23",
       "to": null,
-      "days": 0,
+      "days": 1,
       "r": 0,
       "rb": 0,
       "rel": 0,
       "adj": 0,
       "graded": false,
-      "gradeIn": 90,
+      "gradeIn": 89,
       "stance": "bear"
      }
     },
     "stanceSince": "2026-11-23",
     "recent": {
-     "n": 8,
+     "n": 9,
      "share": 0
     },
     "periods": [
@@ -26461,19 +26967,19 @@ const DATA = {
       "from": "2026-11-04",
       "to": "2026-11-23",
       "days": 19,
-      "r": -0.4556,
-      "rb": -0.2067,
-      "rel": -0.3137,
-      "adj": -0.3137,
+      "r": -0.3257,
+      "rb": -0.0874,
+      "rel": -0.261,
+      "adj": -0.261,
       "graded": false,
       "gradeIn": null
      }
     ],
     "nextEvents": [],
     "watchStale": false,
-    "rank": 22,
+    "rank": 23,
     "isNew": false,
-    "delta": 5
+    "delta": 4
    },
    {
     "tkr": "LLY",
@@ -26484,9 +26990,9 @@ const DATA = {
     "bench": "XLV",
     "benchName": "Health care (XLV)",
     "status": "active",
-    "score": 7.02,
+    "score": 6.96,
     "lastMention": "2026-11-22",
-    "quietDays": 1,
+    "quietDays": 2,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -26586,24 +27092,24 @@ const DATA = {
      "sincePx": 1146.9,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 1347.11,
-     "lastDate": "2026-11-20",
+     "last": 1364.6,
+     "lastDate": "2026-11-23",
      "benchSince": 159.25,
-     "benchLast": 177.24,
-     "r": 0.1746,
-     "rb": 0.113,
-     "rel": 0.0553,
-     "days": 126,
+     "benchLast": 179.42,
+     "r": 0.1898,
+     "rb": 0.1267,
+     "rel": 0.0561,
+     "days": 127,
      "frozen": false,
      "addPx": 1146.9,
      "g": {
       "from": "2026-07-20",
       "to": null,
-      "days": 126,
-      "r": 0.1746,
-      "rb": 0.113,
-      "rel": 0.0553,
-      "adj": 0.0553,
+      "days": 127,
+      "r": 0.1898,
+      "rb": 0.1267,
+      "rel": 0.0561,
+      "adj": 0.0561,
       "graded": true,
       "gradeIn": null,
       "stance": "bull"
@@ -26617,9 +27123,9 @@ const DATA = {
     "periods": [],
     "nextEvents": [],
     "watchStale": false,
-    "rank": 23,
+    "rank": 24,
     "isNew": false,
-    "delta": -2
+    "delta": -3
    },
    {
     "tkr": "ETH",
@@ -26630,9 +27136,9 @@ const DATA = {
     "bench": "BTC-USD",
     "benchName": "Bitcoin",
     "status": "active",
-    "score": 6.44,
+    "score": 6.39,
     "lastMention": "2026-11-15",
-    "quietDays": 8,
+    "quietDays": 9,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-09-20",
@@ -26732,26 +27238,26 @@ const DATA = {
      "sincePx": 2642.9976,
      "sinceDate": "2026-09-20",
      "firstAfter": false,
-     "last": 1709.64,
-     "lastDate": "2026-11-22",
+     "last": 1691.06,
+     "lastDate": "2026-11-24",
      "benchSince": 81142.6094,
-     "benchLast": 62892.79,
-     "r": -0.3531,
-     "rb": -0.2249,
-     "rel": -0.1654,
-     "days": 64,
+     "benchLast": 59978.04,
+     "r": -0.3602,
+     "rb": -0.2608,
+     "rel": -0.1344,
+     "days": 65,
      "frozen": false,
      "addPx": 2642.9976,
      "g": {
       "from": "2026-09-20",
       "to": null,
-      "days": 64,
-      "r": -0.3531,
-      "rb": -0.2249,
-      "rel": -0.1654,
-      "adj": -0.1654,
+      "days": 65,
+      "r": -0.3602,
+      "rb": -0.2608,
+      "rel": -0.1344,
+      "adj": -0.1344,
       "graded": false,
-      "gradeIn": 26,
+      "gradeIn": 25,
       "stance": "bull"
      }
     },
@@ -26763,154 +27269,9 @@ const DATA = {
     "periods": [],
     "nextEvents": [],
     "watchStale": false,
-    "rank": 24,
-    "isNew": false,
-    "delta": -2
-   },
-   {
-    "tkr": "CRWD",
-    "ysym": "CRWD",
-    "name": "CrowdStrike",
-    "stance": "bull",
-    "risk": "mod",
-    "bench": "IGV",
-    "benchName": "Software (IGV)",
-    "status": "active",
-    "score": 6.29,
-    "lastMention": "2026-11-19",
-    "quietDays": 4,
-    "fadingSince": null,
-    "fadeReason": null,
-    "added": "2026-08-31",
-    "since": "2026-08-31",
-    "readded": null,
-    "retiredOn": null,
-    "retiredReason": null,
-    "why": "OpenShell + Sentry; granular agent auth; secure-by-design renaissance",
-    "watch": "The defenders get a standards tailwind",
-    "auto": false,
-    "themes": [
-     {
-      "id": "neocloudcredit",
-      "name": "NEOCLOUD CREDIT is the AI stress gauge"
-     },
-     {
-      "id": "labvalue",
-      "name": "Foundation-lab value compression (now TWO-SIDED)"
-     },
-     {
-      "id": "assurance",
-      "name": "AI assurance / agent-governance / cybersecurity"
-     }
-    ],
-    "houses": 7,
-    "mentionCount": 7,
-    "mentions": [
-     {
-      "id": "T366",
-      "date": "2026-11-19",
-      "who": "Odd Lots (Lee, Kedrosky)",
-      "s": 1
-     },
-     {
-      "id": "T359",
-      "date": "2026-11-16",
-      "who": "Steve Eisman (Ives, Luria)",
-      "s": null
-     },
-     {
-      "id": "T333",
-      "date": "2026-11-13",
-      "who": "a16z (Luttwak)",
-      "s": 0
-     },
-     {
-      "id": "T293",
-      "date": "2026-10-20",
-      "who": "Invest Like the Best (Christina Cacioppo)",
-      "s": 0
-     },
-     {
-      "id": "T154",
-      "date": "2026-09-15",
-      "who": "Greg Brockman (OpenAI)",
-      "s": null
-     },
-     {
-      "id": "T168",
-      "date": "2026-09-15",
-      "who": "Jensen Huang",
-      "s": null
-     },
-     {
-      "id": "T132",
-      "date": "2026-08-27",
-      "who": "CNBC Halftime/Closing (desk)",
-      "s": null
-     }
-    ],
-    "lean": 1,
-    "leanFlag": "",
-    "history": [
-     {
-      "date": "2026-08-31",
-      "label": "Batch 15",
-      "note": "CrowdStrike / Okta / CyberArk"
-     },
-     {
-      "date": "2026-09-15",
-      "label": "Batch 17",
-      "note": "Defenders - the window is open, $1B behind it"
-     },
-     {
-      "date": "2026-09-28",
-      "label": "Batch 19",
-      "note": "Agent security - swarms break the insider-threat model"
-     }
-    ],
-    "px": {
-     "sincePx": 231,
-     "sinceDate": "2026-08-31",
-     "firstAfter": false,
-     "last": 229.44,
-     "lastDate": "2026-11-20",
-     "benchSince": 109.98,
-     "benchLast": 91.66,
-     "r": -0.0068,
-     "rb": -0.1666,
-     "rel": 0.1918,
-     "days": 84,
-     "frozen": false,
-     "addPx": 231,
-     "g": {
-      "from": "2026-08-31",
-      "to": null,
-      "days": 84,
-      "r": -0.0068,
-      "rb": -0.1666,
-      "rel": 0.1918,
-      "adj": 0.1918,
-      "graded": false,
-      "gradeIn": 6,
-      "stance": "bull"
-     }
-    },
-    "stanceSince": "2026-08-31",
-    "recent": {
-     "n": 1,
-     "share": 1
-    },
-    "periods": [],
-    "nextEvents": [
-     {
-      "date": "2026-12-01",
-      "event": "CrowdStrike FQ3 2027 results"
-     }
-    ],
-    "watchStale": false,
     "rank": 25,
     "isNew": false,
-    "delta": 8
+    "delta": -3
    },
    {
     "tkr": "WMT",
@@ -26921,9 +27282,9 @@ const DATA = {
     "bench": "XLP",
     "benchName": "XLP",
     "status": "active",
-    "score": 6.21,
-    "lastMention": "2026-11-20",
-    "quietDays": 3,
+    "score": 6.17,
+    "lastMention": "2026-11-23",
+    "quietDays": 1,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-11-08",
@@ -26949,8 +27310,14 @@ const DATA = {
      }
     ],
     "houses": 6,
-    "mentionCount": 8,
+    "mentionCount": 9,
     "mentions": [
+     {
+      "id": "T395",
+      "date": "2026-11-23",
+      "who": "Prof G Markets (Galloway, Elson)",
+      "s": 0
+     },
      {
       "id": "T375",
       "date": "2026-11-20",
@@ -26992,12 +27359,6 @@ const DATA = {
       "date": "2026-10-19",
       "who": "a16z (Greze, Town)",
       "s": 1
-     },
-     {
-      "id": "T242",
-      "date": "2026-10-15",
-      "who": "a16z (Angelos, VGS)",
-      "s": 1
      }
     ],
     "lean": 5,
@@ -27013,26 +27374,26 @@ const DATA = {
      "sincePx": 125.52,
      "sinceDate": "2026-11-06",
      "firstAfter": false,
-     "last": 127.95,
-     "lastDate": "2026-11-20",
+     "last": 129.58,
+     "lastDate": "2026-11-23",
      "benchSince": 90.08,
-     "benchLast": 90.46,
-     "r": 0.0194,
-     "rb": 0.0042,
-     "rel": 0.0151,
-     "days": 15,
+     "benchLast": 90.38,
+     "r": 0.0323,
+     "rb": 0.0033,
+     "rel": 0.0289,
+     "days": 16,
      "frozen": false,
      "addPx": 125.52,
      "g": {
       "from": "2026-11-08",
       "to": null,
-      "days": 15,
-      "r": 0.0194,
-      "rb": 0.0042,
-      "rel": 0.0151,
-      "adj": 0.0151,
+      "days": 16,
+      "r": 0.0323,
+      "rb": 0.0033,
+      "rel": 0.0289,
+      "adj": 0.0289,
       "graded": false,
-      "gradeIn": 75,
+      "gradeIn": 74,
       "stance": "bull"
      }
     },
@@ -27057,9 +27418,9 @@ const DATA = {
     "bench": "XLF",
     "benchName": "Financials (XLF)",
     "status": "active",
-    "score": 6.11,
+    "score": 6.06,
     "lastMention": "2026-11-20",
-    "quietDays": 3,
+    "quietDays": 4,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -27169,26 +27530,26 @@ const DATA = {
      "sincePx": 360.57,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 401.87,
-     "lastDate": "2026-11-20",
+     "last": 409.4,
+     "lastDate": "2026-11-23",
      "benchSince": 56.04,
-     "benchLast": 54.57,
-     "r": 0.1145,
-     "rb": -0.0262,
-     "rel": 0.1446,
-     "days": 126,
+     "benchLast": 55.65,
+     "r": 0.1354,
+     "rb": -0.007,
+     "rel": 0.1434,
+     "days": 127,
      "frozen": false,
      "addPx": 360.57,
      "g": {
       "from": "2026-11-23",
       "to": null,
-      "days": 0,
+      "days": 1,
       "r": 0,
       "rb": 0,
       "rel": 0,
       "adj": 0,
       "graded": false,
-      "gradeIn": 90,
+      "gradeIn": 89,
       "stance": "bull"
      }
     },
@@ -27203,10 +27564,10 @@ const DATA = {
       "from": "2026-07-20",
       "to": "2026-11-23",
       "days": 126,
-      "r": 0.1145,
-      "rb": -0.0262,
-      "rel": 0.1446,
-      "adj": 0.1446,
+      "r": 0.1354,
+      "rb": -0.007,
+      "rel": 0.1434,
+      "adj": 0.1434,
       "graded": false,
       "gradeIn": null
      }
@@ -27226,9 +27587,9 @@ const DATA = {
     "bench": "XLF",
     "benchName": "Financials (XLF)",
     "status": "active",
-    "score": 6.05,
+    "score": 6,
     "lastMention": "2026-11-06",
-    "quietDays": 17,
+    "quietDays": 18,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-08-18",
@@ -27318,24 +27679,24 @@ const DATA = {
      "sincePx": 140.59,
      "sinceDate": "2026-08-18",
      "firstAfter": false,
-     "last": 110.8,
-     "lastDate": "2026-11-20",
+     "last": 115.86,
+     "lastDate": "2026-11-23",
      "benchSince": 57.84,
-     "benchLast": 54.57,
-     "r": -0.2119,
-     "rb": -0.0565,
-     "rel": -0.1647,
-     "days": 97,
+     "benchLast": 55.65,
+     "r": -0.1759,
+     "rb": -0.0379,
+     "rel": -0.1435,
+     "days": 98,
      "frozen": false,
      "addPx": 140.59,
      "g": {
       "from": "2026-08-18",
       "to": null,
-      "days": 97,
-      "r": -0.2119,
-      "rb": -0.0565,
-      "rel": -0.1647,
-      "adj": -0.1647,
+      "days": 98,
+      "r": -0.1759,
+      "rb": -0.0379,
+      "rel": -0.1435,
+      "adj": -0.1435,
       "graded": true,
       "gradeIn": null,
       "stance": "bull"
@@ -27362,9 +27723,9 @@ const DATA = {
     "bench": "AGG",
     "benchName": "US bonds (AGG)",
     "status": "active",
-    "score": 6.03,
+    "score": 5.98,
     "lastMention": "2026-11-01",
-    "quietDays": 19,
+    "quietDays": 20,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-08-28",
@@ -27464,26 +27825,26 @@ const DATA = {
      "sincePx": 82.88,
      "sinceDate": "2026-08-28",
      "firstAfter": false,
-     "last": 81.45,
-     "lastDate": "2026-11-20",
+     "last": 81.69,
+     "lastDate": "2026-11-23",
      "benchSince": 97.49,
-     "benchLast": 96.15,
-     "r": -0.0173,
-     "rb": -0.0137,
-     "rel": -0.0036,
-     "days": 87,
+     "benchLast": 96.24,
+     "r": -0.0144,
+     "rb": -0.0128,
+     "rel": -0.0016,
+     "days": 88,
      "frozen": false,
      "addPx": 82.88,
      "g": {
       "from": "2026-08-28",
       "to": null,
-      "days": 87,
-      "r": -0.0173,
-      "rb": -0.0137,
-      "rel": -0.0036,
-      "adj": -0.0036,
+      "days": 88,
+      "r": -0.0144,
+      "rb": -0.0128,
+      "rel": -0.0016,
+      "adj": -0.0016,
       "graded": false,
-      "gradeIn": 3,
+      "gradeIn": 2,
       "stance": "bull"
      }
     },
@@ -27508,9 +27869,9 @@ const DATA = {
     "bench": "XLF",
     "benchName": "Financials (XLF)",
     "status": "active",
-    "score": 5.77,
+    "score": 5.73,
     "lastMention": "2026-11-17",
-    "quietDays": 6,
+    "quietDays": 7,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-09-15",
@@ -27615,26 +27976,26 @@ const DATA = {
      "sincePx": 110.45,
      "sinceDate": "2026-09-15",
      "firstAfter": false,
-     "last": 62.17,
-     "lastDate": "2026-11-20",
+     "last": 67.37,
+     "lastDate": "2026-11-23",
      "benchSince": 56.85,
-     "benchLast": 54.57,
-     "r": -0.4371,
-     "rb": -0.0401,
-     "rel": -0.4136,
-     "days": 69,
+     "benchLast": 55.65,
+     "r": -0.39,
+     "rb": -0.0211,
+     "rel": -0.3769,
+     "days": 70,
      "frozen": false,
      "addPx": 110.45,
      "g": {
       "from": "2026-09-15",
       "to": null,
-      "days": 69,
-      "r": -0.4371,
-      "rb": -0.0401,
-      "rel": -0.4136,
-      "adj": -0.4136,
+      "days": 70,
+      "r": -0.39,
+      "rb": -0.0211,
+      "rel": -0.3769,
+      "adj": -0.3769,
       "graded": false,
-      "gradeIn": 21,
+      "gradeIn": 20,
       "stance": "bull"
      }
     },
@@ -27659,9 +28020,9 @@ const DATA = {
     "bench": "SMH",
     "benchName": "Semiconductors (SMH)",
     "status": "active",
-    "score": 5.74,
+    "score": 5.69,
     "lastMention": "2026-11-21",
-    "quietDays": 2,
+    "quietDays": 3,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-11-04",
@@ -27751,26 +28112,26 @@ const DATA = {
      "sincePx": 1396000,
      "sinceDate": "2026-11-04",
      "firstAfter": false,
-     "last": 1113000,
-     "lastDate": "2026-11-20",
+     "last": 1158000,
+     "lastDate": "2026-11-24",
      "benchSince": 504.27,
-     "benchLast": 400.06,
-     "r": -0.2027,
-     "rb": -0.2067,
-     "rel": 0.005,
-     "days": 19,
+     "benchLast": 460.18,
+     "r": -0.1705,
+     "rb": -0.0874,
+     "rel": -0.091,
+     "days": 20,
      "frozen": false,
      "addPx": 1396000,
      "g": {
       "from": "2026-11-04",
       "to": null,
-      "days": 19,
-      "r": -0.2027,
-      "rb": -0.2067,
-      "rel": 0.005,
-      "adj": 0.005,
+      "days": 20,
+      "r": -0.1705,
+      "rb": -0.0874,
+      "rel": -0.091,
+      "adj": -0.091,
       "graded": false,
-      "gradeIn": 71,
+      "gradeIn": 70,
       "stance": "bull"
      }
     },
@@ -27795,9 +28156,9 @@ const DATA = {
     "bench": "BTC-USD",
     "benchName": "Bitcoin",
     "status": "active",
-    "score": 5.52,
+    "score": 5.48,
     "lastMention": "2026-11-20",
-    "quietDays": 3,
+    "quietDays": 4,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-09-20",
@@ -27897,26 +28258,26 @@ const DATA = {
      "sincePx": 194.25,
      "sinceDate": "2026-09-18",
      "firstAfter": false,
-     "last": 101.97,
-     "lastDate": "2026-11-20",
+     "last": 108.78,
+     "lastDate": "2026-11-23",
      "benchSince": 81142.6094,
-     "benchLast": 62892.79,
-     "r": -0.4751,
-     "rb": -0.2249,
-     "rel": -0.3227,
-     "days": 64,
+     "benchLast": 59978.04,
+     "r": -0.44,
+     "rb": -0.2608,
+     "rel": -0.2424,
+     "days": 65,
      "frozen": false,
      "addPx": 194.25,
      "g": {
       "from": "2026-09-20",
       "to": null,
-      "days": 64,
-      "r": -0.4751,
-      "rb": -0.2249,
-      "rel": -0.3227,
-      "adj": -0.3227,
+      "days": 65,
+      "r": -0.44,
+      "rb": -0.2608,
+      "rel": -0.2424,
+      "adj": -0.2424,
       "graded": false,
-      "gradeIn": 26,
+      "gradeIn": 25,
       "stance": "bull"
      }
     },
@@ -27941,9 +28302,9 @@ const DATA = {
     "bench": "XLF",
     "benchName": "Financials (XLF)",
     "status": "active",
-    "score": 4.64,
+    "score": 4.61,
     "lastMention": "2026-11-04",
-    "quietDays": 19,
+    "quietDays": 20,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -28042,24 +28403,24 @@ const DATA = {
      "sincePx": 547.44,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 625.59,
-     "lastDate": "2026-11-20",
+     "last": 635.48,
+     "lastDate": "2026-11-23",
      "benchSince": 56.04,
-     "benchLast": 54.57,
-     "r": 0.1428,
-     "rb": -0.0262,
-     "rel": 0.1735,
-     "days": 126,
+     "benchLast": 55.65,
+     "r": 0.1608,
+     "rb": -0.007,
+     "rel": 0.169,
+     "days": 127,
      "frozen": false,
      "addPx": 547.44,
      "g": {
       "from": "2026-07-20",
       "to": null,
-      "days": 126,
-      "r": 0.1428,
-      "rb": -0.0262,
-      "rel": 0.1735,
-      "adj": 0.1735,
+      "days": 127,
+      "r": 0.1608,
+      "rb": -0.007,
+      "rel": 0.169,
+      "adj": 0.169,
       "graded": false,
       "gradeIn": null,
       "stance": "two"
@@ -28086,9 +28447,9 @@ const DATA = {
     "bench": "IGV",
     "benchName": "Software (IGV)",
     "status": "active",
-    "score": 4.63,
+    "score": 4.59,
     "lastMention": "2026-11-20",
-    "quietDays": 3,
+    "quietDays": 4,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-09-28",
@@ -28178,26 +28539,26 @@ const DATA = {
      "sincePx": 392.09,
      "sinceDate": "2026-09-28",
      "firstAfter": false,
-     "last": 343.32,
-     "lastDate": "2026-11-20",
+     "last": 353.43,
+     "lastDate": "2026-11-23",
      "benchSince": 105.43,
-     "benchLast": 91.66,
-     "r": -0.1244,
-     "rb": -0.1306,
-     "rel": 0.0072,
-     "days": 56,
+     "benchLast": 95.26,
+     "r": -0.0986,
+     "rb": -0.0965,
+     "rel": -0.0024,
+     "days": 57,
      "frozen": false,
      "addPx": 392.09,
      "g": {
       "from": "2026-09-28",
       "to": null,
-      "days": 56,
-      "r": -0.1244,
-      "rb": -0.1306,
-      "rel": 0.0072,
-      "adj": 0.0072,
+      "days": 57,
+      "r": -0.0986,
+      "rb": -0.0965,
+      "rel": -0.0024,
+      "adj": -0.0024,
       "graded": false,
-      "gradeIn": 34,
+      "gradeIn": 33,
       "stance": "bull"
      }
     },
@@ -28222,9 +28583,9 @@ const DATA = {
     "bench": "IGV",
     "benchName": "Software (IGV)",
     "status": "active",
-    "score": 4.56,
+    "score": 4.52,
     "lastMention": "2026-11-20",
-    "quietDays": 3,
+    "quietDays": 4,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -28314,24 +28675,24 @@ const DATA = {
      "sincePx": 234.74,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 217.71,
-     "lastDate": "2026-11-20",
+     "last": 223.98,
+     "lastDate": "2026-11-23",
      "benchSince": 92.98,
-     "benchLast": 91.66,
-     "r": -0.0725,
-     "rb": -0.0142,
-     "rel": -0.0592,
-     "days": 126,
+     "benchLast": 95.26,
+     "r": -0.0458,
+     "rb": 0.0245,
+     "rel": -0.0687,
+     "days": 127,
      "frozen": false,
      "addPx": 234.74,
      "g": {
       "from": "2026-07-20",
       "to": null,
-      "days": 126,
-      "r": -0.0725,
-      "rb": -0.0142,
-      "rel": -0.0592,
-      "adj": 0.0592,
+      "days": 127,
+      "r": -0.0458,
+      "rb": 0.0245,
+      "rel": -0.0687,
+      "adj": 0.0687,
       "graded": true,
       "gradeIn": null,
       "stance": "bear"
@@ -28363,9 +28724,9 @@ const DATA = {
     "bench": "XLK",
     "benchName": "XLK",
     "status": "active",
-    "score": 4.25,
+    "score": 4.22,
     "lastMention": "2026-11-20",
-    "quietDays": 1,
+    "quietDays": 2,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-11-22",
@@ -28443,26 +28804,26 @@ const DATA = {
      "sincePx": 90.64,
      "sinceDate": "2026-11-20",
      "firstAfter": false,
-     "last": 90.64,
-     "lastDate": "2026-11-20",
+     "last": 96.8,
+     "lastDate": "2026-11-23",
      "benchSince": 149.01,
-     "benchLast": 149.01,
-     "r": 0,
-     "rb": 0,
-     "rel": 0,
-     "days": 1,
+     "benchLast": 162.38,
+     "r": 0.068,
+     "rb": 0.0897,
+     "rel": -0.02,
+     "days": 2,
      "frozen": false,
      "addPx": 90.64,
      "g": {
       "from": "2026-11-22",
       "to": null,
-      "days": 1,
-      "r": 0,
-      "rb": 0,
-      "rel": 0,
-      "adj": 0,
+      "days": 2,
+      "r": 0.068,
+      "rb": 0.0897,
+      "rel": -0.02,
+      "adj": -0.02,
       "graded": false,
-      "gradeIn": 89,
+      "gradeIn": 88,
       "stance": "bull"
      }
     },
@@ -28487,9 +28848,9 @@ const DATA = {
     "bench": "XLI",
     "benchName": "Industrials (XLI)",
     "status": "active",
-    "score": 3.83,
+    "score": 3.8,
     "lastMention": "2026-11-16",
-    "quietDays": 7,
+    "quietDays": 8,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -28589,20 +28950,20 @@ const DATA = {
      "sincePx": 1079.1801,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 699.33,
-     "lastDate": "2026-11-20",
+     "last": 756.71,
+     "lastDate": "2026-11-23",
      "benchSince": 178.12,
-     "benchLast": 156.37,
-     "r": -0.352,
-     "rb": -0.1221,
-     "rel": -0.2618,
-     "days": 126,
+     "benchLast": 162.47,
+     "r": -0.2988,
+     "rb": -0.0879,
+     "rel": -0.2313,
+     "days": 127,
      "frozen": false,
      "addPx": 1079.1801,
      "g": {
       "from": "2026-11-23",
       "to": null,
-      "days": 0,
+      "days": 1,
       "r": 0,
       "rb": 0,
       "rel": 0,
@@ -28623,10 +28984,10 @@ const DATA = {
       "from": "2026-07-20",
       "to": "2026-11-23",
       "days": 126,
-      "r": -0.352,
-      "rb": -0.1221,
-      "rel": -0.2618,
-      "adj": -0.2618,
+      "r": -0.2988,
+      "rb": -0.0879,
+      "rel": -0.2313,
+      "adj": -0.2313,
       "graded": true,
       "gradeIn": null
      }
@@ -28646,9 +29007,9 @@ const DATA = {
     "bench": "SPY",
     "benchName": "S&P 500 (SPY)",
     "status": "active",
-    "score": 3.72,
+    "score": 3.69,
     "lastMention": "2026-11-08",
-    "quietDays": 15,
+    "quietDays": 16,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-08-28",
@@ -28738,26 +29099,26 @@ const DATA = {
      "sincePx": 60.02,
      "sinceDate": "2026-08-28",
      "firstAfter": false,
-     "last": 36.97,
-     "lastDate": "2026-11-20",
+     "last": 38.91,
+     "lastDate": "2026-11-23",
      "benchSince": 769.35,
-     "benchLast": 689.81,
-     "r": -0.384,
-     "rb": -0.1034,
-     "rel": -0.313,
-     "days": 87,
+     "benchLast": 722.29,
+     "r": -0.3517,
+     "rb": -0.0612,
+     "rel": -0.3095,
+     "days": 88,
      "frozen": false,
      "addPx": 60.02,
      "g": {
       "from": "2026-08-28",
       "to": null,
-      "days": 87,
-      "r": -0.384,
-      "rb": -0.1034,
-      "rel": -0.313,
-      "adj": -0.313,
+      "days": 88,
+      "r": -0.3517,
+      "rb": -0.0612,
+      "rel": -0.3095,
+      "adj": -0.3095,
       "graded": false,
-      "gradeIn": 3,
+      "gradeIn": 2,
       "stance": "bull"
      }
     },
@@ -28782,11 +29143,11 @@ const DATA = {
     "bench": "IGV",
     "benchName": "Software (IGV)",
     "status": "fading",
-    "score": 3.31,
+    "score": 3.29,
     "lastMention": "2026-10-07",
-    "quietDays": 47,
+    "quietDays": 48,
     "fadingSince": "2026-11-07",
-    "fadeReason": "No new mention in 47 days",
+    "fadeReason": "No new mention in 48 days",
     "added": "2026-08-31",
     "since": "2026-08-31",
     "readded": null,
@@ -28872,26 +29233,26 @@ const DATA = {
      "sincePx": 173.04,
      "sinceDate": "2026-08-31",
      "firstAfter": false,
-     "last": 191.46,
-     "lastDate": "2026-11-20",
+     "last": 206.28,
+     "lastDate": "2026-11-23",
      "benchSince": 109.98,
-     "benchLast": 91.66,
-     "r": 0.1064,
-     "rb": -0.1666,
-     "rel": 0.3276,
-     "days": 84,
+     "benchLast": 95.26,
+     "r": 0.1921,
+     "rb": -0.1338,
+     "rel": 0.3763,
+     "days": 85,
      "frozen": false,
      "addPx": 173.04,
      "g": {
       "from": "2026-08-31",
       "to": null,
-      "days": 84,
-      "r": 0.1064,
-      "rb": -0.1666,
-      "rel": 0.3276,
-      "adj": 0.3276,
+      "days": 85,
+      "r": 0.1921,
+      "rb": -0.1338,
+      "rel": 0.3763,
+      "adj": 0.3763,
       "graded": false,
-      "gradeIn": 6,
+      "gradeIn": 5,
       "stance": "bull"
      }
     },
@@ -28916,9 +29277,9 @@ const DATA = {
     "bench": "BTC-USD",
     "benchName": "Bitcoin",
     "status": "active",
-    "score": 3.28,
+    "score": 3.25,
     "lastMention": "2026-11-10",
-    "quietDays": 13,
+    "quietDays": 14,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -29023,24 +29384,24 @@ const DATA = {
      "sincePx": 65.45,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 47.51,
-     "lastDate": "2026-11-20",
+     "last": 51.34,
+     "lastDate": "2026-11-23",
      "benchSince": 65230.0273,
-     "benchLast": 62892.79,
-     "r": -0.2741,
-     "rb": -0.0358,
-     "rel": -0.2471,
-     "days": 126,
+     "benchLast": 59978.04,
+     "r": -0.2156,
+     "rb": -0.0805,
+     "rel": -0.1469,
+     "days": 127,
      "frozen": false,
      "addPx": 65.45,
      "g": {
       "from": "2026-07-20",
       "to": null,
-      "days": 126,
-      "r": -0.2741,
-      "rb": -0.0358,
-      "rel": -0.2471,
-      "adj": -0.2471,
+      "days": 127,
+      "r": -0.2156,
+      "rb": -0.0805,
+      "rel": -0.1469,
+      "adj": -0.1469,
       "graded": true,
       "gradeIn": null,
       "stance": "bull"
@@ -29067,9 +29428,9 @@ const DATA = {
     "bench": "QQQ",
     "benchName": "Nasdaq-100 (QQQ)",
     "status": "active",
-    "score": 3.22,
+    "score": 3.19,
     "lastMention": "2026-11-20",
-    "quietDays": 3,
+    "quietDays": 4,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-11-08",
@@ -29159,26 +29520,26 @@ const DATA = {
      "sincePx": 63.41,
      "sinceDate": "2026-11-06",
      "firstAfter": false,
-     "last": 56.73,
-     "lastDate": "2026-11-20",
+     "last": 58.1,
+     "lastDate": "2026-11-23",
      "benchSince": 656.1,
-     "benchLast": 608.45,
-     "r": -0.1053,
-     "rb": -0.0726,
-     "rel": -0.0353,
-     "days": 15,
+     "benchLast": 651.03,
+     "r": -0.0837,
+     "rb": -0.0077,
+     "rel": -0.0766,
+     "days": 16,
      "frozen": false,
      "addPx": 63.41,
      "g": {
       "from": "2026-11-08",
       "to": null,
-      "days": 15,
-      "r": -0.1053,
-      "rb": -0.0726,
-      "rel": -0.0353,
-      "adj": 0.0353,
+      "days": 16,
+      "r": -0.0837,
+      "rb": -0.0077,
+      "rel": -0.0766,
+      "adj": 0.0766,
       "graded": false,
-      "gradeIn": 75,
+      "gradeIn": 74,
       "stance": "bear"
      }
     },
@@ -29202,12 +29563,12 @@ const DATA = {
     "risk": "mod",
     "bench": "IGV",
     "benchName": "Software (IGV)",
-    "status": "active",
-    "score": 3.01,
+    "status": "fading",
+    "score": 2.98,
     "lastMention": "2026-11-16",
-    "quietDays": 7,
-    "fadingSince": null,
-    "fadeReason": null,
+    "quietDays": 8,
+    "fadingSince": "2026-11-24",
+    "fadeReason": "Watch score under 3 (too few recent sources)",
     "added": "2026-07-20",
     "since": "2026-07-20",
     "readded": null,
@@ -29277,24 +29638,24 @@ const DATA = {
      "sincePx": 104.7,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 87.61,
-     "lastDate": "2026-11-20",
+     "last": 91.72,
+     "lastDate": "2026-11-23",
      "benchSince": 92.98,
-     "benchLast": 91.66,
-     "r": -0.1632,
-     "rb": -0.0142,
-     "rel": -0.1512,
-     "days": 126,
+     "benchLast": 95.26,
+     "r": -0.124,
+     "rb": 0.0245,
+     "rel": -0.1449,
+     "days": 127,
      "frozen": false,
      "addPx": 104.7,
      "g": {
       "from": "2026-07-20",
       "to": null,
-      "days": 126,
-      "r": -0.1632,
-      "rb": -0.0142,
-      "rel": -0.1512,
-      "adj": 0.1512,
+      "days": 127,
+      "r": -0.124,
+      "rb": 0.0245,
+      "rel": -0.1449,
+      "adj": 0.1449,
       "graded": true,
       "gradeIn": null,
       "stance": "bear"
@@ -29320,12 +29681,12 @@ const DATA = {
     "risk": "mod",
     "bench": "XLY",
     "benchName": "Consumer discretionary (XLY)",
-    "status": "active",
-    "score": 3,
+    "status": "fading",
+    "score": 2.97,
     "lastMention": "2026-11-19",
-    "quietDays": 4,
-    "fadingSince": null,
-    "fadeReason": null,
+    "quietDays": 5,
+    "fadingSince": "2026-11-24",
+    "fadeReason": "Watch score under 3 (too few recent sources)",
     "added": "2026-08-28",
     "since": "2026-08-28",
     "readded": null,
@@ -29389,26 +29750,26 @@ const DATA = {
      "sincePx": 189.43,
      "sinceDate": "2026-08-28",
      "firstAfter": false,
-     "last": 170.36,
-     "lastDate": "2026-11-20",
+     "last": 173.96,
+     "lastDate": "2026-11-23",
      "benchSince": 117.21,
-     "benchLast": 112.46,
-     "r": -0.1007,
-     "rb": -0.0405,
-     "rel": -0.0627,
-     "days": 87,
+     "benchLast": 116.93,
+     "r": -0.0817,
+     "rb": -0.0024,
+     "rel": -0.0795,
+     "days": 88,
      "frozen": false,
      "addPx": 189.43,
      "g": {
       "from": "2026-08-28",
       "to": null,
-      "days": 87,
-      "r": -0.1007,
-      "rb": -0.0405,
-      "rel": -0.0627,
-      "adj": -0.0627,
+      "days": 88,
+      "r": -0.0817,
+      "rb": -0.0024,
+      "rel": -0.0795,
+      "adj": -0.0795,
       "graded": false,
-      "gradeIn": 3,
+      "gradeIn": 2,
       "stance": "bull"
      }
     },
@@ -29433,11 +29794,11 @@ const DATA = {
     "bench": "XLF",
     "benchName": "Financials (XLF)",
     "status": "fading",
-    "score": 2.93,
+    "score": 2.91,
     "lastMention": "2026-10-15",
-    "quietDays": 39,
+    "quietDays": 40,
     "fadingSince": "2026-11-15",
-    "fadeReason": "No new mention in 39 days",
+    "fadeReason": "No new mention in 40 days",
     "added": "2026-08-18",
     "since": "2026-08-18",
     "readded": null,
@@ -29507,24 +29868,24 @@ const DATA = {
      "sincePx": 1154.35,
      "sinceDate": "2026-08-18",
      "firstAfter": false,
-     "last": 1101.72,
-     "lastDate": "2026-11-20",
+     "last": 1144.52,
+     "lastDate": "2026-11-23",
      "benchSince": 57.84,
-     "benchLast": 54.57,
-     "r": -0.0456,
-     "rb": -0.0565,
-     "rel": 0.0116,
-     "days": 97,
+     "benchLast": 55.65,
+     "r": -0.0085,
+     "rb": -0.0379,
+     "rel": 0.0305,
+     "days": 98,
      "frozen": false,
      "addPx": 1154.35,
      "g": {
       "from": "2026-08-18",
       "to": null,
-      "days": 97,
-      "r": -0.0456,
-      "rb": -0.0565,
-      "rel": 0.0116,
-      "adj": 0.0116,
+      "days": 98,
+      "r": -0.0085,
+      "rb": -0.0379,
+      "rel": 0.0305,
+      "adj": 0.0305,
       "graded": true,
       "gradeIn": null,
       "stance": "bull"
@@ -29551,9 +29912,9 @@ const DATA = {
     "bench": "SMH",
     "benchName": "Semiconductors (SMH)",
     "status": "fading",
-    "score": 2.79,
+    "score": 2.76,
     "lastMention": "2026-11-11",
-    "quietDays": 12,
+    "quietDays": 13,
     "fadingSince": "2026-11-23",
     "fadeReason": "Watch score under 3 (too few recent sources)",
     "added": "2026-11-04",
@@ -29643,26 +30004,26 @@ const DATA = {
      "sincePx": 1037.4,
      "sinceDate": "2026-11-04",
      "firstAfter": false,
-     "last": 79.24,
-     "lastDate": "2026-11-20",
+     "last": 87.71,
+     "lastDate": "2026-11-23",
      "benchSince": 504.27,
-     "benchLast": 400.06,
-     "r": -0.9236,
-     "rb": -0.2067,
-     "rel": -0.9037,
-     "days": 19,
+     "benchLast": 460.18,
+     "r": -0.9155,
+     "rb": -0.0874,
+     "rel": -0.9074,
+     "days": 20,
      "frozen": false,
      "addPx": 1037.4,
      "g": {
       "from": "2026-11-04",
       "to": null,
-      "days": 19,
-      "r": -0.9236,
-      "rb": -0.2067,
-      "rel": -0.9037,
-      "adj": -0.9037,
+      "days": 20,
+      "r": -0.9155,
+      "rb": -0.0874,
+      "rel": -0.9074,
+      "adj": -0.9074,
       "graded": false,
-      "gradeIn": 71,
+      "gradeIn": 70,
       "stance": "bull"
      }
     },
@@ -29687,9 +30048,9 @@ const DATA = {
     "bench": "IGV",
     "benchName": "Software (IGV)",
     "status": "fading",
-    "score": 2.28,
+    "score": 2.26,
     "lastMention": "2026-11-05",
-    "quietDays": 18,
+    "quietDays": 19,
     "fadingSince": "2026-11-23",
     "fadeReason": "Watch score under 3 (too few recent sources)",
     "added": "2026-07-20",
@@ -29749,24 +30110,24 @@ const DATA = {
      "sincePx": 24.02,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 15.77,
-     "lastDate": "2026-11-20",
+     "last": 17.1,
+     "lastDate": "2026-11-23",
      "benchSince": 92.98,
-     "benchLast": 91.66,
-     "r": -0.3435,
-     "rb": -0.0142,
-     "rel": -0.334,
-     "days": 126,
+     "benchLast": 95.26,
+     "r": -0.2881,
+     "rb": 0.0245,
+     "rel": -0.3051,
+     "days": 127,
      "frozen": false,
      "addPx": 24.02,
      "g": {
       "from": "2026-07-20",
       "to": null,
-      "days": 126,
-      "r": -0.3435,
-      "rb": -0.0142,
-      "rel": -0.334,
-      "adj": 0.334,
+      "days": 127,
+      "r": -0.2881,
+      "rb": 0.0245,
+      "rel": -0.3051,
+      "adj": 0.3051,
       "graded": true,
       "gradeIn": null,
       "stance": "bear"
@@ -29793,9 +30154,9 @@ const DATA = {
     "bench": "XLV",
     "benchName": "Health care (XLV)",
     "status": "fading",
-    "score": 2.27,
+    "score": 2.25,
     "lastMention": "2026-11-11",
-    "quietDays": 12,
+    "quietDays": 13,
     "fadingSince": "2026-11-23",
     "fadeReason": "Watch score under 3 (too few recent sources)",
     "added": "2026-08-10",
@@ -29855,24 +30216,24 @@ const DATA = {
      "sincePx": 47.73,
      "sinceDate": "2026-08-10",
      "firstAfter": false,
-     "last": 37.82,
-     "lastDate": "2026-11-20",
+     "last": 39.14,
+     "lastDate": "2026-11-23",
      "benchSince": 168.44,
-     "benchLast": 177.24,
-     "r": -0.2076,
-     "rb": 0.0522,
-     "rel": -0.247,
-     "days": 105,
+     "benchLast": 179.42,
+     "r": -0.18,
+     "rb": 0.0652,
+     "rel": -0.2302,
+     "days": 106,
      "frozen": false,
      "addPx": 47.73,
      "g": {
       "from": "2026-08-10",
       "to": null,
-      "days": 105,
-      "r": -0.2076,
-      "rb": 0.0522,
-      "rel": -0.247,
-      "adj": -0.247,
+      "days": 106,
+      "r": -0.18,
+      "rb": 0.0652,
+      "rel": -0.2302,
+      "adj": -0.2302,
       "graded": false,
       "gradeIn": null,
       "stance": "two"
@@ -29899,9 +30260,9 @@ const DATA = {
     "bench": "XLU",
     "benchName": "Utilities (XLU)",
     "status": "fading",
-    "score": 2.27,
+    "score": 2.25,
     "lastMention": "2026-11-20",
-    "quietDays": 3,
+    "quietDays": 4,
     "fadingSince": "2026-11-23",
     "fadeReason": "Watch score under 3 (too few recent sources)",
     "added": "2026-07-20",
@@ -29961,24 +30322,24 @@ const DATA = {
      "sincePx": 253.5,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 237.41,
-     "lastDate": "2026-11-20",
+     "last": 251.72,
+     "lastDate": "2026-11-23",
      "benchSince": 44.94,
-     "benchLast": 42.69,
-     "r": -0.0635,
-     "rb": -0.0501,
-     "rel": -0.0141,
-     "days": 126,
+     "benchLast": 43.32,
+     "r": -0.007,
+     "rb": -0.036,
+     "rel": 0.0301,
+     "days": 127,
      "frozen": false,
      "addPx": 253.5,
      "g": {
       "from": "2026-07-20",
       "to": null,
-      "days": 126,
-      "r": -0.0635,
-      "rb": -0.0501,
-      "rel": -0.0141,
-      "adj": -0.0141,
+      "days": 127,
+      "r": -0.007,
+      "rb": -0.036,
+      "rel": 0.0301,
+      "adj": 0.0301,
       "graded": true,
       "gradeIn": null,
       "stance": "bull"
@@ -30005,9 +30366,9 @@ const DATA = {
     "bench": "XLI",
     "benchName": "Industrials (XLI)",
     "status": "fading",
-    "score": 1.97,
-    "lastMention": "2026-11-13",
-    "quietDays": 10,
+    "score": 2.05,
+    "lastMention": "2026-11-23",
+    "quietDays": 1,
     "fadingSince": "2026-11-23",
     "fadeReason": "Watch score under 3 (too few recent sources)",
     "added": "2026-07-20",
@@ -30020,21 +30381,27 @@ const DATA = {
     "auto": false,
     "themes": [
      {
-      "id": "opensource",
-      "name": "Open-source & inference-cost pressure on premium models"
-     },
-     {
       "id": "backlash",
       "name": "Data-center backlash / permitting risk"
      },
      {
-      "id": "debt",
-      "name": "Debt / private-credit systemic risk"
+      "id": "capex",
+      "name": "Capex value-destruction + the capex-REWARD reflex breaking"
+     },
+     {
+      "id": "opensource",
+      "name": "Open-source & inference-cost pressure on premium models"
      }
     ],
     "houses": 3,
-    "mentionCount": 5,
+    "mentionCount": 6,
     "mentions": [
+     {
+      "id": "T394",
+      "date": "2026-11-23",
+      "who": "Steve Eisman (Steve Tusa)",
+      "s": 1
+     },
      {
       "id": "T339",
       "date": "2026-11-13",
@@ -30066,7 +30433,7 @@ const DATA = {
       "s": null
      }
     ],
-    "lean": 2,
+    "lean": 3,
     "leanFlag": "",
     "history": [
      {
@@ -30084,24 +30451,24 @@ const DATA = {
      "sincePx": 401.41,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 311.33,
-     "lastDate": "2026-11-20",
+     "last": 336.34,
+     "lastDate": "2026-11-23",
      "benchSince": 178.12,
-     "benchLast": 156.37,
-     "r": -0.2244,
-     "rb": -0.1221,
-     "rel": -0.1165,
-     "days": 126,
+     "benchLast": 162.47,
+     "r": -0.1621,
+     "rb": -0.0879,
+     "rel": -0.0814,
+     "days": 127,
      "frozen": false,
      "addPx": 401.41,
      "g": {
       "from": "2026-07-20",
       "to": null,
-      "days": 126,
-      "r": -0.2244,
-      "rb": -0.1221,
-      "rel": -0.1165,
-      "adj": -0.1165,
+      "days": 127,
+      "r": -0.1621,
+      "rb": -0.0879,
+      "rel": -0.0814,
+      "adj": -0.0814,
       "graded": true,
       "gradeIn": null,
       "stance": "bull"
@@ -30109,7 +30476,7 @@ const DATA = {
     },
     "stanceSince": "2026-07-20",
     "recent": {
-     "n": 2,
+     "n": 3,
      "share": 1
     },
     "periods": [],
@@ -30120,6 +30487,117 @@ const DATA = {
     "delta": -2
    },
    {
+    "tkr": "VRT",
+    "ysym": "VRT",
+    "name": "Vertiv",
+    "stance": "bull",
+    "risk": "core",
+    "bench": "XLI",
+    "benchName": "Industrials (XLI)",
+    "status": "fading",
+    "score": 1.79,
+    "lastMention": "2026-11-23",
+    "quietDays": 1,
+    "fadingSince": "2026-11-23",
+    "fadeReason": "Watch score under 3 (too few recent sources)",
+    "added": "2026-07-20",
+    "since": "2026-07-20",
+    "readded": null,
+    "retiredOn": null,
+    "retiredReason": null,
+    "why": "15 GW of chips idle; GEV orders +96%; PWR record $64B backlog; 800V power",
+    "watch": "Policy risk under a Democratic Congress",
+    "auto": false,
+    "themes": [
+     {
+      "id": "backlash",
+      "name": "Data-center backlash / permitting risk"
+     },
+     {
+      "id": "capex",
+      "name": "Capex value-destruction + the capex-REWARD reflex breaking"
+     },
+     {
+      "id": "energy",
+      "name": "Energy is the binding constraint"
+     }
+    ],
+    "houses": 2,
+    "mentionCount": 3,
+    "mentions": [
+     {
+      "id": "T394",
+      "date": "2026-11-23",
+      "who": "Steve Eisman (Steve Tusa)",
+      "s": 1
+     },
+     {
+      "id": "T309",
+      "date": "2026-11-06",
+      "who": "Steve Eisman",
+      "s": -1
+     },
+     {
+      "id": "T32",
+      "date": "2026-07-21",
+      "who": "The Compound",
+      "s": null
+     }
+    ],
+    "lean": 0,
+    "leanFlag": "",
+    "history": [
+     {
+      "date": "2026-07-20",
+      "label": "Original list (Jul 20)",
+      "note": "Vertiv"
+     },
+     {
+      "date": "2026-11-04",
+      "label": "Edition 022",
+      "note": "Power and cooling - the physical gate"
+     }
+    ],
+    "px": {
+     "sincePx": 291.67,
+     "sinceDate": "2026-07-20",
+     "firstAfter": false,
+     "last": 186.35,
+     "lastDate": "2026-11-23",
+     "benchSince": 178.12,
+     "benchLast": 162.47,
+     "r": -0.3611,
+     "rb": -0.0879,
+     "rel": -0.2995,
+     "days": 127,
+     "frozen": false,
+     "addPx": 291.67,
+     "g": {
+      "from": "2026-07-20",
+      "to": null,
+      "days": 127,
+      "r": -0.3611,
+      "rb": -0.0879,
+      "rel": -0.2995,
+      "adj": -0.2995,
+      "graded": true,
+      "gradeIn": null,
+      "stance": "bull"
+     }
+    },
+    "stanceSince": "2026-07-20",
+    "recent": {
+     "n": 2,
+     "share": 0.64
+    },
+    "periods": [],
+    "nextEvents": [],
+    "watchStale": false,
+    "rank": 50,
+    "isNew": false,
+    "delta": 2
+   },
+   {
     "tkr": "MRVL",
     "ysym": "MRVL",
     "name": "Marvell",
@@ -30128,9 +30606,9 @@ const DATA = {
     "bench": "SMH",
     "benchName": "Semiconductors (SMH)",
     "status": "fading",
-    "score": 1.76,
+    "score": 1.74,
     "lastMention": "2026-11-21",
-    "quietDays": 2,
+    "quietDays": 3,
     "fadingSince": "2026-11-23",
     "fadeReason": "Watch score under 3 (too few recent sources)",
     "added": "2026-07-20",
@@ -30225,24 +30703,24 @@ const DATA = {
      "sincePx": 194.94,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 122.28,
-     "lastDate": "2026-11-20",
+     "last": 144.74,
+     "lastDate": "2026-11-23",
      "benchSince": 558.83,
-     "benchLast": 400.06,
-     "r": -0.3727,
-     "rb": -0.2841,
-     "rel": -0.1238,
-     "days": 126,
+     "benchLast": 460.18,
+     "r": -0.2575,
+     "rb": -0.1765,
+     "rel": -0.0983,
+     "days": 127,
      "frozen": false,
      "addPx": 194.94,
      "g": {
       "from": "2026-07-20",
       "to": null,
-      "days": 126,
-      "r": -0.3727,
-      "rb": -0.2841,
-      "rel": -0.1238,
-      "adj": -0.1238,
+      "days": 127,
+      "r": -0.2575,
+      "rb": -0.1765,
+      "rel": -0.0983,
+      "adj": -0.0983,
       "graded": true,
       "gradeIn": null,
       "stance": "bull"
@@ -30261,9 +30739,9 @@ const DATA = {
      }
     ],
     "watchStale": false,
-    "rank": 50,
+    "rank": 51,
     "isNew": false,
-    "delta": -2
+    "delta": -3
    },
    {
     "tkr": "ANET",
@@ -30274,9 +30752,9 @@ const DATA = {
     "bench": "SMH",
     "benchName": "Semiconductors (SMH)",
     "status": "fading",
-    "score": 1.75,
+    "score": 1.74,
     "lastMention": "2026-11-16",
-    "quietDays": 7,
+    "quietDays": 8,
     "fadingSince": "2026-11-23",
     "fadeReason": "Watch score under 3 (too few recent sources)",
     "added": "2026-07-20",
@@ -30353,26 +30831,26 @@ const DATA = {
      "sincePx": 170.8,
      "sinceDate": "2026-11-06",
      "firstAfter": false,
-     "last": 167.62,
-     "lastDate": "2026-11-20",
+     "last": 178.31,
+     "lastDate": "2026-11-23",
      "benchSince": 463.96,
-     "benchLast": 400.06,
-     "r": -0.0186,
-     "rb": -0.1377,
-     "rel": 0.1381,
-     "days": 17,
+     "benchLast": 460.18,
+     "r": 0.044,
+     "rb": -0.0081,
+     "rel": 0.0525,
+     "days": 18,
      "frozen": false,
      "addPx": 169.35,
      "g": {
       "from": "2026-11-06",
       "to": null,
-      "days": 17,
-      "r": -0.0186,
-      "rb": -0.1377,
-      "rel": 0.1381,
-      "adj": 0.1381,
+      "days": 18,
+      "r": 0.044,
+      "rb": -0.0081,
+      "rel": 0.0525,
+      "adj": 0.0525,
       "graded": false,
-      "gradeIn": 73,
+      "gradeIn": 72,
       "stance": "bull"
      }
     },
@@ -30384,9 +30862,9 @@ const DATA = {
     "periods": [],
     "nextEvents": [],
     "watchStale": false,
-    "rank": 51,
+    "rank": 52,
     "isNew": false,
-    "delta": -1
+    "delta": -2
    },
    {
     "tkr": "PYPL",
@@ -30397,11 +30875,11 @@ const DATA = {
     "bench": "XLF",
     "benchName": "Financials (XLF)",
     "status": "fading",
-    "score": 1.74,
+    "score": 1.73,
     "lastMention": "2026-10-15",
-    "quietDays": 39,
+    "quietDays": 40,
     "fadingSince": "2026-11-15",
-    "fadeReason": "No new mention in 39 days",
+    "fadeReason": "No new mention in 40 days",
     "added": "2026-07-20",
     "since": "2026-07-20",
     "readded": null,
@@ -30471,24 +30949,24 @@ const DATA = {
      "sincePx": 56.82,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 53.29,
-     "lastDate": "2026-11-20",
+     "last": 55.24,
+     "lastDate": "2026-11-23",
      "benchSince": 56.04,
-     "benchLast": 54.57,
-     "r": -0.0621,
-     "rb": -0.0262,
-     "rel": -0.0369,
-     "days": 126,
+     "benchLast": 55.65,
+     "r": -0.0278,
+     "rb": -0.007,
+     "rel": -0.021,
+     "days": 127,
      "frozen": false,
      "addPx": 56.82,
      "g": {
       "from": "2026-07-20",
       "to": null,
-      "days": 126,
-      "r": -0.0621,
-      "rb": -0.0262,
-      "rel": -0.0369,
-      "adj": -0.0369,
+      "days": 127,
+      "r": -0.0278,
+      "rb": -0.007,
+      "rel": -0.021,
+      "adj": -0.021,
       "graded": false,
       "gradeIn": null,
       "stance": "monitor"
@@ -30502,114 +30980,9 @@ const DATA = {
     "periods": [],
     "nextEvents": [],
     "watchStale": false,
-    "rank": 52,
-    "isNew": false,
-    "delta": -3
-   },
-   {
-    "tkr": "VRT",
-    "ysym": "VRT",
-    "name": "Vertiv",
-    "stance": "bull",
-    "risk": "core",
-    "bench": "XLI",
-    "benchName": "Industrials (XLI)",
-    "status": "fading",
-    "score": 1.6,
-    "lastMention": "2026-11-06",
-    "quietDays": 17,
-    "fadingSince": "2026-11-23",
-    "fadeReason": "Watch score under 3 (too few recent sources)",
-    "added": "2026-07-20",
-    "since": "2026-07-20",
-    "readded": null,
-    "retiredOn": null,
-    "retiredReason": null,
-    "why": "15 GW of chips idle; GEV orders +96%; PWR record $64B backlog; 800V power",
-    "watch": "Policy risk under a Democratic Congress",
-    "auto": false,
-    "themes": [
-     {
-      "id": "opensource",
-      "name": "Open-source & inference-cost pressure on premium models"
-     },
-     {
-      "id": "debt",
-      "name": "Debt / private-credit systemic risk"
-     },
-     {
-      "id": "backlash",
-      "name": "Data-center backlash / permitting risk"
-     }
-    ],
-    "houses": 2,
-    "mentionCount": 2,
-    "mentions": [
-     {
-      "id": "T309",
-      "date": "2026-11-06",
-      "who": "Steve Eisman",
-      "s": -1
-     },
-     {
-      "id": "T32",
-      "date": "2026-07-21",
-      "who": "The Compound",
-      "s": null
-     }
-    ],
-    "lean": -1,
-    "leanFlag": "",
-    "history": [
-     {
-      "date": "2026-07-20",
-      "label": "Original list (Jul 20)",
-      "note": "Vertiv"
-     },
-     {
-      "date": "2026-11-04",
-      "label": "Edition 022",
-      "note": "Power and cooling - the physical gate"
-     }
-    ],
-    "px": {
-     "sincePx": 291.67,
-     "sinceDate": "2026-07-20",
-     "firstAfter": false,
-     "last": 166.24,
-     "lastDate": "2026-11-20",
-     "benchSince": 178.12,
-     "benchLast": 156.37,
-     "r": -0.43,
-     "rb": -0.1221,
-     "rel": -0.3508,
-     "days": 126,
-     "frozen": false,
-     "addPx": 291.67,
-     "g": {
-      "from": "2026-07-20",
-      "to": null,
-      "days": 126,
-      "r": -0.43,
-      "rb": -0.1221,
-      "rel": -0.3508,
-      "adj": -0.3508,
-      "graded": true,
-      "gradeIn": null,
-      "stance": "bull"
-     }
-    },
-    "stanceSince": "2026-07-20",
-    "recent": {
-     "n": 1,
-     "share": 0
-    },
-    "periods": [],
-    "nextEvents": [],
-    "watchStale": false,
     "rank": 53,
     "isNew": false,
-    "delta": -1
+    "delta": -4
    },
    {
     "tkr": "PWR",
@@ -30620,9 +30993,9 @@ const DATA = {
     "bench": "XLI",
     "benchName": "Industrials (XLI)",
     "status": "fading",
-    "score": 1.53,
+    "score": 1.51,
     "lastMention": "2026-11-16",
-    "quietDays": 7,
+    "quietDays": 8,
     "fadingSince": "2026-11-23",
     "fadeReason": "Watch score under 3 (too few recent sources)",
     "added": "2026-07-20",
@@ -30699,24 +31072,24 @@ const DATA = {
      "sincePx": 632.56,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 559.03,
-     "lastDate": "2026-11-20",
+     "last": 609,
+     "lastDate": "2026-11-23",
      "benchSince": 178.12,
-     "benchLast": 156.37,
-     "r": -0.1162,
-     "rb": -0.1221,
-     "rel": 0.0067,
-     "days": 126,
+     "benchLast": 162.47,
+     "r": -0.0372,
+     "rb": -0.0879,
+     "rel": 0.0555,
+     "days": 127,
      "frozen": false,
      "addPx": 632.56,
      "g": {
       "from": "2026-07-20",
       "to": null,
-      "days": 126,
-      "r": -0.1162,
-      "rb": -0.1221,
-      "rel": 0.0067,
-      "adj": 0.0067,
+      "days": 127,
+      "r": -0.0372,
+      "rb": -0.0879,
+      "rel": 0.0555,
+      "adj": 0.0555,
       "graded": true,
       "gradeIn": null,
       "stance": "bull"
@@ -30743,9 +31116,9 @@ const DATA = {
     "bench": "BTC-USD",
     "benchName": "Bitcoin",
     "status": "fading",
-    "score": 1.46,
+    "score": 1.44,
     "lastMention": "2026-11-14",
-    "quietDays": 9,
+    "quietDays": 10,
     "fadingSince": "2026-11-23",
     "fadeReason": "Watch score under 3 (too few recent sources)",
     "added": "2026-08-28",
@@ -30811,26 +31184,26 @@ const DATA = {
      "sincePx": 127.31,
      "sinceDate": "2026-08-28",
      "firstAfter": false,
-     "last": 77.8,
-     "lastDate": "2026-11-20",
+     "last": 84.4,
+     "lastDate": "2026-11-23",
      "benchSince": 77830.2891,
-     "benchLast": 62892.79,
-     "r": -0.3889,
-     "rb": -0.1919,
-     "rel": -0.2438,
-     "days": 87,
+     "benchLast": 59978.04,
+     "r": -0.3371,
+     "rb": -0.2294,
+     "rel": -0.1397,
+     "days": 88,
      "frozen": false,
      "addPx": 127.31,
      "g": {
       "from": "2026-08-28",
       "to": null,
-      "days": 87,
-      "r": -0.3889,
-      "rb": -0.1919,
-      "rel": -0.2438,
-      "adj": -0.2438,
+      "days": 88,
+      "r": -0.3371,
+      "rb": -0.2294,
+      "rel": -0.1397,
+      "adj": -0.1397,
       "graded": false,
-      "gradeIn": 3,
+      "gradeIn": 2,
       "stance": "bull"
      }
     },
@@ -30855,9 +31228,9 @@ const DATA = {
     "bench": "SMH",
     "benchName": "Semiconductors (SMH)",
     "status": "fading",
-    "score": 1.4,
+    "score": 1.38,
     "lastMention": "2026-11-01",
-    "quietDays": 19,
+    "quietDays": 20,
     "fadingSince": "2026-11-23",
     "fadeReason": "Watch score under 3 (too few recent sources)",
     "added": "2026-11-04",
@@ -30929,26 +31302,26 @@ const DATA = {
      "sincePx": 626.75,
      "sinceDate": "2026-11-04",
      "firstAfter": false,
-     "last": 460.54,
-     "lastDate": "2026-11-20",
+     "last": 544.38,
+     "lastDate": "2026-11-23",
      "benchSince": 504.27,
-     "benchLast": 400.06,
-     "r": -0.2652,
-     "rb": -0.2067,
-     "rel": -0.0738,
-     "days": 19,
+     "benchLast": 460.18,
+     "r": -0.1314,
+     "rb": -0.0874,
+     "rel": -0.0482,
+     "days": 20,
      "frozen": false,
      "addPx": 626.75,
      "g": {
       "from": "2026-11-04",
       "to": null,
-      "days": 19,
-      "r": -0.2652,
-      "rb": -0.2067,
-      "rel": -0.0738,
-      "adj": -0.0738,
+      "days": 20,
+      "r": -0.1314,
+      "rb": -0.0874,
+      "rel": -0.0482,
+      "adj": -0.0482,
       "graded": false,
-      "gradeIn": 71,
+      "gradeIn": 70,
       "stance": "bull"
      }
     },
@@ -30973,9 +31346,9 @@ const DATA = {
     "bench": "SMH",
     "benchName": "Semiconductors (SMH)",
     "status": "fading",
-    "score": 1.16,
+    "score": 1.15,
     "lastMention": "2026-11-01",
-    "quietDays": 19,
+    "quietDays": 20,
     "fadingSince": "2026-11-23",
     "fadeReason": "Watch score under 3 (too few recent sources)",
     "added": "2026-11-04",
@@ -31029,26 +31402,26 @@ const DATA = {
      "sincePx": 118.77,
      "sinceDate": "2026-11-04",
      "firstAfter": false,
-     "last": 94.38,
-     "lastDate": "2026-11-20",
+     "last": 108.31,
+     "lastDate": "2026-11-23",
      "benchSince": 504.27,
-     "benchLast": 400.06,
-     "r": -0.2054,
-     "rb": -0.2067,
-     "rel": 0.0016,
-     "days": 19,
+     "benchLast": 460.18,
+     "r": -0.0881,
+     "rb": -0.0874,
+     "rel": -0.0007,
+     "days": 20,
      "frozen": false,
      "addPx": 118.77,
      "g": {
       "from": "2026-11-04",
       "to": null,
-      "days": 19,
-      "r": -0.2054,
-      "rb": -0.2067,
-      "rel": 0.0016,
-      "adj": 0.0016,
+      "days": 20,
+      "r": -0.0881,
+      "rb": -0.0874,
+      "rel": -0.0007,
+      "adj": -0.0007,
       "graded": false,
-      "gradeIn": 71,
+      "gradeIn": 70,
       "stance": "bull"
      }
     },
@@ -31073,9 +31446,9 @@ const DATA = {
     "bench": "XLI",
     "benchName": "Industrials (XLI)",
     "status": "fading",
-    "score": 0.98,
+    "score": 0.97,
     "lastMention": "2026-11-04",
-    "quietDays": 19,
+    "quietDays": 20,
     "fadingSince": "2026-11-23",
     "fadeReason": "Watch score under 3 (too few recent sources)",
     "added": "2026-08-28",
@@ -31123,26 +31496,26 @@ const DATA = {
      "sincePx": 80.07,
      "sinceDate": "2026-08-28",
      "firstAfter": false,
-     "last": 80.01,
-     "lastDate": "2026-11-20",
+     "last": 84.34,
+     "lastDate": "2026-11-23",
      "benchSince": 177.14,
-     "benchLast": 156.37,
-     "r": -0.0007,
-     "rb": -0.1173,
-     "rel": 0.132,
-     "days": 87,
+     "benchLast": 162.47,
+     "r": 0.0533,
+     "rb": -0.0828,
+     "rel": 0.1484,
+     "days": 88,
      "frozen": false,
      "addPx": 80.07,
      "g": {
       "from": "2026-08-28",
       "to": null,
-      "days": 87,
-      "r": -0.0007,
-      "rb": -0.1173,
-      "rel": 0.132,
-      "adj": 0.132,
+      "days": 88,
+      "r": 0.0533,
+      "rb": -0.0828,
+      "rel": 0.1484,
+      "adj": 0.1484,
       "graded": false,
-      "gradeIn": 3,
+      "gradeIn": 2,
       "stance": "bull"
      }
     },
@@ -31167,11 +31540,11 @@ const DATA = {
     "bench": "SPY",
     "benchName": "S&P 500 (SPY)",
     "status": "fading",
-    "score": 0.74,
+    "score": 0.73,
     "lastMention": "2026-10-15",
-    "quietDays": 39,
+    "quietDays": 40,
     "fadingSince": "2026-11-15",
-    "fadeReason": "No new mention in 39 days",
+    "fadeReason": "No new mention in 40 days",
     "added": "2026-10-05",
     "since": "2026-10-05",
     "readded": null,
@@ -31204,26 +31577,26 @@ const DATA = {
      "sincePx": 39.97,
      "sinceDate": "2026-10-05",
      "firstAfter": false,
-     "last": 42.69,
-     "lastDate": "2026-11-20",
+     "last": 43.32,
+     "lastDate": "2026-11-23",
      "benchSince": 774.83,
-     "benchLast": 689.81,
-     "r": 0.0681,
-     "rb": -0.1097,
-     "rel": 0.1997,
-     "days": 49,
+     "benchLast": 722.29,
+     "r": 0.0838,
+     "rb": -0.0678,
+     "rel": 0.1627,
+     "days": 50,
      "frozen": false,
      "addPx": 39.97,
      "g": {
       "from": "2026-10-05",
       "to": null,
-      "days": 49,
-      "r": 0.0681,
-      "rb": -0.1097,
-      "rel": 0.1997,
-      "adj": -0.1997,
+      "days": 50,
+      "r": 0.0838,
+      "rb": -0.0678,
+      "rel": 0.1627,
+      "adj": -0.1627,
       "graded": false,
-      "gradeIn": 41,
+      "gradeIn": 40,
       "stance": "bear"
      }
     },
@@ -31248,9 +31621,9 @@ const DATA = {
     "bench": "SMH",
     "benchName": "Semiconductors (SMH)",
     "status": "fading",
-    "score": 0.61,
+    "score": 0.6,
     "lastMention": "2026-07-28",
-    "quietDays": 19,
+    "quietDays": 20,
     "fadingSince": "2026-11-23",
     "fadeReason": "Watch score under 3 (too few recent sources)",
     "added": "2026-11-04",
@@ -31291,26 +31664,26 @@ const DATA = {
      "sincePx": 195.09,
      "sinceDate": "2026-11-04",
      "firstAfter": false,
-     "last": 187.22,
-     "lastDate": "2026-11-20",
+     "last": 215.81,
+     "lastDate": "2026-11-23",
      "benchSince": 504.27,
-     "benchLast": 400.06,
-     "r": -0.0403,
-     "rb": -0.2067,
-     "rel": 0.2096,
-     "days": 19,
+     "benchLast": 460.18,
+     "r": 0.1062,
+     "rb": -0.0874,
+     "rel": 0.2122,
+     "days": 20,
      "frozen": false,
      "addPx": 195.09,
      "g": {
       "from": "2026-11-04",
       "to": null,
-      "days": 19,
-      "r": -0.0403,
-      "rb": -0.2067,
-      "rel": 0.2096,
-      "adj": 0.2096,
+      "days": 20,
+      "r": 0.1062,
+      "rb": -0.0874,
+      "rel": 0.2122,
+      "adj": 0.2122,
       "graded": false,
-      "gradeIn": 71,
+      "gradeIn": 70,
       "stance": "bull"
      }
     },
@@ -31335,9 +31708,9 @@ const DATA = {
     "bench": "BTC-USD",
     "benchName": "Bitcoin",
     "status": "retired",
-    "score": 0.66,
+    "score": 0.65,
     "lastMention": "2026-09-15",
-    "quietDays": 64,
+    "quietDays": 65,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-09-20",
@@ -31378,26 +31751,26 @@ const DATA = {
      "sincePx": 111.1329,
      "sinceDate": "2026-09-20",
      "firstAfter": false,
-     "last": 70.23,
-     "lastDate": "2026-11-22",
+     "last": 68.7475,
+     "lastDate": "2026-11-20",
      "benchSince": 81142.6094,
-     "benchLast": 62892.79,
-     "r": -0.3681,
-     "rb": -0.2249,
-     "rel": -0.1847,
-     "days": 64,
-     "frozen": false,
+     "benchLast": 58798.9805,
+     "r": -0.3814,
+     "rb": -0.2754,
+     "rel": -0.1463,
+     "days": 61,
+     "frozen": true,
      "addPx": 111.1329,
      "g": {
       "from": "2026-09-20",
-      "to": null,
-      "days": 64,
-      "r": -0.3681,
-      "rb": -0.2249,
-      "rel": -0.1847,
-      "adj": -0.1847,
+      "to": "2026-11-20",
+      "days": 61,
+      "r": -0.3814,
+      "rb": -0.2754,
+      "rel": -0.1463,
+      "adj": -0.1463,
       "graded": false,
-      "gradeIn": 26,
+      "gradeIn": 29,
       "stance": "bull"
      }
     },
@@ -31419,9 +31792,9 @@ const DATA = {
     "bench": "XLI",
     "benchName": "Industrials (XLI)",
     "status": "retired",
-    "score": 0.9,
+    "score": 0.89,
     "lastMention": "2026-08-15",
-    "quietDays": 97,
+    "quietDays": 98,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-08-10",
@@ -31510,7 +31883,7 @@ const DATA = {
     "status": "retired",
     "score": 0.42,
     "lastMention": "2026-09-15",
-    "quietDays": 69,
+    "quietDays": 70,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -31551,24 +31924,24 @@ const DATA = {
      "sincePx": 103.02,
      "sinceDate": "2026-07-20",
      "firstAfter": false,
-     "last": 32.93,
-     "lastDate": "2026-11-20",
+     "last": 49.89,
+     "lastDate": "2026-11-13",
      "benchSince": 558.83,
-     "benchLast": 400.06,
-     "r": -0.6804,
-     "rb": -0.2841,
-     "rel": -0.5535,
-     "days": 126,
-     "frozen": false,
+     "benchLast": 486.75,
+     "r": -0.5157,
+     "rb": -0.129,
+     "rel": -0.444,
+     "days": 118,
+     "frozen": true,
      "addPx": 103.02,
      "g": {
       "from": "2026-07-20",
-      "to": null,
-      "days": 126,
-      "r": -0.6804,
-      "rb": -0.2841,
-      "rel": -0.5535,
-      "adj": -0.5535,
+      "to": "2026-11-15",
+      "days": 118,
+      "r": -0.5157,
+      "rb": -0.129,
+      "rel": -0.444,
+      "adj": -0.444,
       "graded": true,
       "gradeIn": null,
       "stance": "bull"
@@ -31592,9 +31965,9 @@ const DATA = {
     "bench": "IGV",
     "benchName": "Software (IGV)",
     "status": "retired",
-    "score": 3.31,
+    "score": 3.29,
     "lastMention": "2026-10-07",
-    "quietDays": 47,
+    "quietDays": 48,
     "fadingSince": "2026-11-07",
     "fadeReason": null,
     "added": "2026-08-31",
@@ -31705,9 +32078,9 @@ const DATA = {
     "bench": "XLI",
     "benchName": "Industrials (XLI)",
     "status": "retired",
-    "score": 1.4,
+    "score": 1.38,
     "lastMention": "2026-07-31",
-    "quietDays": 115,
+    "quietDays": 116,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -31803,7 +32176,7 @@ const DATA = {
     "status": "retired",
     "score": 0,
     "lastMention": null,
-    "quietDays": 87,
+    "quietDays": 88,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-08-28",
@@ -31831,26 +32204,26 @@ const DATA = {
      "sincePx": 99.65,
      "sinceDate": "2026-08-28",
      "firstAfter": false,
-     "last": 68.4,
-     "lastDate": "2026-11-20",
+     "last": 83.95,
+     "lastDate": "2026-10-28",
      "benchSince": 408.89,
-     "benchLast": 322.87,
-     "r": -0.3136,
-     "rb": -0.2104,
-     "rel": -0.1307,
-     "days": 87,
-     "frozen": false,
+     "benchLast": 373.51,
+     "r": -0.1576,
+     "rb": -0.0865,
+     "rel": -0.0778,
+     "days": 61,
+     "frozen": true,
      "addPx": 99.65,
      "g": {
       "from": "2026-08-28",
-      "to": null,
-      "days": 87,
-      "r": -0.3136,
-      "rb": -0.2104,
-      "rel": -0.1307,
-      "adj": -0.1307,
+      "to": "2026-10-28",
+      "days": 61,
+      "r": -0.1576,
+      "rb": -0.0865,
+      "rel": -0.0778,
+      "adj": -0.0778,
       "graded": false,
-      "gradeIn": 3,
+      "gradeIn": 29,
       "stance": "bull"
      }
     },
@@ -31874,7 +32247,7 @@ const DATA = {
     "status": "retired",
     "score": 0,
     "lastMention": null,
-    "quietDays": 87,
+    "quietDays": 88,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-08-28",
@@ -31902,26 +32275,26 @@ const DATA = {
      "sincePx": 99.14,
      "sinceDate": "2026-08-28",
      "firstAfter": false,
-     "last": 60.29,
-     "lastDate": "2026-11-20",
+     "last": 77.53,
+     "lastDate": "2026-10-28",
      "benchSince": 60.02,
-     "benchLast": 36.97,
-     "r": -0.3919,
-     "rb": -0.384,
-     "rel": -0.0127,
-     "days": 87,
-     "frozen": false,
+     "benchLast": 49.06,
+     "r": -0.218,
+     "rb": -0.1826,
+     "rel": -0.0433,
+     "days": 61,
+     "frozen": true,
      "addPx": 99.14,
      "g": {
       "from": "2026-08-28",
-      "to": null,
-      "days": 87,
-      "r": -0.3919,
-      "rb": -0.384,
-      "rel": -0.0127,
-      "adj": -0.0127,
+      "to": "2026-10-28",
+      "days": 61,
+      "r": -0.218,
+      "rb": -0.1826,
+      "rel": -0.0433,
+      "adj": -0.0433,
       "graded": false,
-      "gradeIn": 3,
+      "gradeIn": 29,
       "stance": "bull"
      }
     },
@@ -31945,7 +32318,7 @@ const DATA = {
     "status": "retired",
     "score": 0,
     "lastMention": null,
-    "quietDays": 126,
+    "quietDays": 127,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -32016,7 +32389,7 @@ const DATA = {
     "status": "retired",
     "score": 0,
     "lastMention": null,
-    "quietDays": 126,
+    "quietDays": 127,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -32087,7 +32460,7 @@ const DATA = {
     "status": "retired",
     "score": 0,
     "lastMention": null,
-    "quietDays": 126,
+    "quietDays": 127,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -32158,7 +32531,7 @@ const DATA = {
     "status": "retired",
     "score": 0.19,
     "lastMention": "2026-04-20",
-    "quietDays": 126,
+    "quietDays": 127,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -32236,7 +32609,7 @@ const DATA = {
     "status": "retired",
     "score": 0.19,
     "lastMention": "2026-04-20",
-    "quietDays": 126,
+    "quietDays": 127,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -32314,7 +32687,7 @@ const DATA = {
     "status": "retired",
     "score": 0,
     "lastMention": null,
-    "quietDays": 126,
+    "quietDays": 127,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -32385,7 +32758,7 @@ const DATA = {
     "status": "retired",
     "score": 0,
     "lastMention": null,
-    "quietDays": 126,
+    "quietDays": 127,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -32456,7 +32829,7 @@ const DATA = {
     "status": "retired",
     "score": 0,
     "lastMention": null,
-    "quietDays": 126,
+    "quietDays": 127,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -32527,7 +32900,7 @@ const DATA = {
     "status": "retired",
     "score": 0.09,
     "lastMention": "2026-02-05",
-    "quietDays": 126,
+    "quietDays": 127,
     "fadingSince": null,
     "fadeReason": null,
     "added": "2026-07-20",
@@ -32856,7 +33229,7 @@ const $=(s,el=document)=>el.querySelector(s);
 const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;};
 
 /* canonical source per library card (repeat appearances of one person lumped; multi-guest panels use the show name) */
-const LIBSRC={"T01":"Jordi Visser","T02":"Jordi Visser","T03":"Jensen Huang","T04":"Jensen Huang","T05":"Jensen Huang","T06":"Demis Hassabis","T07":"Demis Hassabis","T08":"Demis Hassabis","T09":"Dario Amodei","T10":"Elon Musk","T11":"Elon Musk","T12":"Jordi Visser","T13":"All-In","T14":"All-In","T15":"All-In","T16":"Aswath Damodaran","T17":"Aswath Damodaran","T18":"Aswath Damodaran","T19":"Doug O'Laughlin","T20":"Doug O'Laughlin","T21":"Boris Cherny","T22":"Jeremy Grantham","T23":"Menand & Tankus","T24":"Gary Marcus","T25":"Gary Marcus","T26":"David Hunter","T27":"Marc Andreessen","T28":"Marc Andreessen","T29":"Moonshots (Diamandis)","T30":"Moonshots (Diamandis)","T31":"Elon Musk","T32":"The Compound","T33":"ChinAI (Jeff Ding)","T34":"ServiceNow (earnings)","T35":"Alphabet (earnings)","T36":"Jordi Visser","T37":"Ron & Michael Baron","T38":"Jeremy Eliuveros (SemiAnalysis)","T39":"Bob Sorensen","T40":"Ember","T41":"John Davis","T42":"Marc Rowan","T43":"Marc Lipschultz","T44":"Russell Clark","T45":"Liaquat Ahamed","T46":"Eric (YWR)","T47":"Ben Pulandian","T48":"Sean McGould","T49":"Takahē Capital","T51":"Nick Carter","T52":"Nick Carter","T53":"Austin Campbell","T54":"Austin Campbell","T55":"BG2","T56":"Applied Intuition","T57":"David George","T58":"On the Tape","T59":"Animal Spirits","T60":"Jordi Visser","T61":"Steve (Silicon Data)","T62":"Jonathan Thomas","T63":"Peter Schiff","T64":"Dylan Patel (SemiAnalysis)","T65":"Imas & Trammell","T66":"Jensen Huang","T67":"Jensen Huang","T68":"Jensen Huang","T69":"Dylan Patel (SemiAnalysis)","T70":"Dan Ives","T71":"Tino","T72":"Jurrien Timmer","T73":"Michael Cembalest","T74":"Bloom Energy (earnings)","T75":"The Compound","T76":"Jordi Visser","T77":"Jordi Visser","T78":"Alex Kantrowitz","T79":"Moonshots (Diamandis)","T80":"All-In","T81":"Meta (earnings)","T82":"Microsoft (earnings)","T83":"Amazon (earnings)","T84":"Apple (earnings)","T85":"The Compound","T86":"Tesla (earnings)","T87":"David Hunter","T88":"Matt McLennan","T89":"Gavin Baker","T90":"Animal Spirits","T91":"Sam Altman","T92":"Odd Lots (Granato & Drall)","T93":"Jordi Visser","T94":"Eli Lilly (earnings)","T95":"Ed Yardeni","T96":"All-In","T97":"Jordi Visser","T98":"Dylan LeClair","T99":"Bloomberg (Open Interest)","T100":"Bloomberg (Surveillance)","T101":"Moonshots (Diamandis)","T102":"Elon Musk","T103":"Elon Musk","T104":"Gavin Baker","T105":"Nebius (earnings)","T106":"Jordi Visser","T107":"Jordi Visser","T108":"Travis Kalanick","T109":"Stripe (Gaybrick)","T110":"The Compound (Todd Sohn)","T111":"Ramez Naam","T112":"Moonshots (Diamandis)","T113":"NVIDIA / CNBC ($500B round table)","T114":"NVIDIA (earnings)","T115":"Jordi Visser","T116":"Arthur Hayes","T117":"Jordi Visser","T118":"Moonshots (Diamandis)","T120":"Eric Weinstein","T121":"Michael Kratsios (OSTP)","T122":"All-In","T123":"Marc Andreessen (2014 ref)","T124":"Animal Spirits","T125":"The Compound","T126":"Nick Colas (DataTrek)","T127":"Dylan Patel (SemiAnalysis)","T128":"Jordi Visser","T129":"Roman Yampolskiy","T130":"All-In","T131":"Steno Larsen & Raoul Pal","T132":"CNBC Halftime/Closing (desk)","T133":"Moonshots (Diamandis)","T134":"Moonshots (Diamandis)","T135":"Gavin Baker","T136":"Sinofsky & Casado (a16z)","T137":"Jordi Visser","T138":"Jordi Visser","T139":"The AI Show (TAIS)","T140":"The AI Show (TAIS)","T141":"The AI Show (TAIS)","T142":"Dan Skelly (Morgan Stanley)","T143":"All-In","T144":"Jensen Huang","T145":"Levchin & Rampell","T146":"World Labs (Fei-Fei Li)","T147":"Jordi Visser","T148":"Jordi Visser","T149":"Jensen Huang","T150":"Raoul Pal & Jordi Visser","T151":"Gwynne Shotwell (SpaceX)","T152":"David Sacks","T153":"Moonshots (Diamandis)","T154":"Greg Brockman (OpenAI)","T155":"David George (a16z)","T156":"Jordi Visser","T157":"The Compound (Ives & Lee)","T158":"Jordi Visser","T159":"Animal Spirits (Cullen Roche)","T160":"Moonshots (Diamandis)","T161":"Lightfield (Keith Peiris)","T162":"Ali Ghodsi (Databricks)","T163":"Dina Powell McCormick (Meta)","T164":"Jordi Visser","T165":"Brad Gerstner (Altimeter)","T166":"Leopold Aschenbrenner","T167":"Jordi Visser","T168":"Jensen Huang","T169":"Jordi Visser","T170":"Noam Brown (OpenAI)","T171":"Vlad Tenev (Robinhood)","T172":"Moonshots (Diamandis)","T173":"Erik Hirsch (Hamilton Lane)","T174":"Animal Spirits","T175":"All-In","T176":"Casado, Sinofsky & Levie (a16z)","T177":"Tom Lee","T178":"Raoul Pal & Richard Galvin","T179":"Jordi Visser","T180":"Illia Polosukhin (NEAR)","T181":"William Mougayar","T182":"Joseph Chalom (SharpLink)","T183":"Tom Lee","T184":"Instinct founder","T185":"Jordi Visser & Anthony Pompliano","T186":"The Compound (Ed Elson)","T187":"The Compound (Chart Kid Matt)","T188":"Animal Spirits","T189":"Jordi Visser","T190":"Vitalik Buterin (OKX keynote)","T191":"Stripe Sessions (Kaliski)","T192":"The Compound (Brown/Batnik)","T193":"Animal Spirits (Carlson/Batnik)","T194":"Jurrien Timmer (Compound and Friends)","T195":"a16z (Pollen/Assistant Bench)","T196":"Moonshots (Diamandis)","T197":"Microsoft-Nvidia (Nadella/Huang)","T198":"Bloomberg Businessweek Daily (Moynihan/Whitney)","T199":"All-In","T200":"Jensen Huang (BG2)","T201":"Jordi Visser","T202":"Pomp x Jordi Visser","T203":"Dylan Patel / SemiAnalysis (Big Technology)","T204":"Meta (Zuckerberg/Wang on Cheeky Pint)","T205":"Jensen Huang (Ezra Klein)","T206":"Moonshots (Diamandis)","T207":"Moonshots (Diamandis)","T208":"All-In","T209":"Steve Eisman (The Compound)","T211":"Jordi Visser","T212":"Gavin Baker (TBPN)","T213":"Jordi Visser","T214":"Pomp (w/ Jordi Visser)","T215":"Pomp (w/ Jordi Visser)","T217":"All-In","T218":"All-In (w/ Nikesh Arora)","T219":"All-In (Krishna/Arora panel)","T220":"All-In (Dylan Field)","T221":"The Compound (Alex Altmann, Barclays)","T222":"The Compound (Jill Schlesinger)","T223":"Animal Spirits (Batnick/Carlson)","T224":"Animal Spirits (Batnick/Carlson)","T225":"Animal Spirits (Batnick/Carlson)","T226":"The Compound (Brown/Batnick)","T227":"The Compound (Brown/Batnick)","T228":"The Compound (Brown/Batnick)","T229":"Moonshots (Diamandis)","T230":"Moonshots (Diamandis)","T231":"Moonshots (Diamandis)","T232":"Moonshots (Diamandis) + Chamath","T233":"a16z (Andy Jassy)","T234":"a16z (Andreessen/Horowitz/Dixon)","T235":"a16z (Gruenstein, Tutor Intelligence)","T236":"a16z (Madheswaran, Eve)","T237":"a16z American Dynamism","T238":"a16z (Mark Cuban)","T239":"a16z (OpenAI computer-use leads)","T240":"a16z (Greze, Town)","T241":"a16z (Naous/Casado)","T242":"a16z (Angelos, VGS)","T243":"a16z (Nathan Lambert)","T244":"Steve Eisman","T245":"Steve Eisman","T246":"Steve Eisman (w/ Benn Steil)","T247":"Steve Eisman","T248":"Steve Eisman (w/ Danny Moses)","T249":"Steve Eisman","T250":"Prof G Markets (Elson w/ Foley, Bosa, Zandi)","T251":"Prof G Markets (Galloway/Elson)","T252":"Prof G Markets (w/ Josh Brown)","T253":"Prof G Markets (w/ Luria, Gapen)","T254":"Prof G Markets (Elson w/ Eisman)","T255":"Prof G Markets (Elson w/ Kedrosky, Armstrong)","T256":"Prof G Markets (Galloway/Elson)","T257":"Prof G Markets (Misha Laskin, Reflection AI)","T258":"Odd Lots (Nate Silver)","T259":"Odd Lots (Alex Micalizzi, Nomura)","T260":"Odd Lots (Lindsay Owens)","T261":"Odd Lots (Alex Altmann, Barclays)","T262":"Odd Lots (Terry Duffy, CME)","T263":"Sam Altman (Cheeky Pint)","T264":"Scott Nolan (General Matter, Cheeky Pint)","T265":"Dwarkesh Patel (Intel leaders)","T266":"Sundar Pichai (Big Technology)","T267":"Ethan Mollick (Big Technology)","T268":"Tesla (earnings)","T269":"Microsoft (earnings)","T270":"Alphabet (earnings)","T271":"Meta (earnings)","T272":"Apple (earnings)","T273":"Amazon (earnings)","T274":"SpaceX (earnings)","T275":"TSMC (earnings)","T276":"ASML (earnings)","T277":"Fed (FOMC/Warsh)","T280":"Jensen Huang (Yahoo Finance)","T281":"Brad Gerstner (CNBC)","T282":"Dylan Patel / SemiAnalysis (Modal Runtime)","T283":"Satya Nadella (Semafor)","T284":"Satya Nadella (20VC)","T285":"Dario & Daniela Amodei (The Builders)","T286":"Elon Musk (The Builders)","T287":"Sam Altman (Matthew Berman)","T288":"Sam Altman (Raj Shamani)","T289":"Sam Altman (Stanford GSB)","T290":"Goldman Sachs Exchanges (Lynam/Ablon)","T292":"Invest Like the Best (Cliff Sosin)","T293":"Invest Like the Best (Christina Cacioppo)","T294":"Animal Spirits (The Compound)","T295":"Prof G Markets (Tom Lee)","T296":"Invest Like the Best (Martin Casado)","T297":"Moonshots (Diamandis)","T298":"Prof G Markets (Ed Elson)","T299":"a16z","T300":"a16z (Figma CFO)","T301":"The Compound (Dan Clifton)","T302":"Invest Like the Best (Ramtin Naimi)","T303":"Odd Lots (Skanda Amarnath)","T304":"Prof G Markets (Scaramucci)","T305":"Dwarkesh Patel","T306":"Pomp (w/ Jordi Visser)","T307":"Moonshots (Ismail)","T308":"All-In","T309":"Steve Eisman","T310":"a16z (Somorjai)","T311":"Demis Hassabis (Masters of Scale)","T312":"Jordi Visser","T313":"Jordi Visser","T314":"Jordi Visser","T315":"Odd Lots (James Bosworth)","T316":"Prof G Markets (Galloway & Elson)","T317":"Odd Lots (guest)","T318":"Prof G Markets (Elson)","T319":"Steve Eisman","T320":"Cheeky Pint (Storonsky)","T321":"Prof G Markets (Elson)","T322":"Odd Lots (guests)","T323":"Animal Spirits (Compound)","T324":"WAYT (Compound)","T325":"a16z (Dharmesh Shah)","T326":"Invest Like the Best (Zach Reitano, Ro)","T327":"All-In (Rick Smith, Axon)","T328":"CoreWeave (earnings)","T329":"Moonshots (Diamandis)","T330":"a16z (Volpi)","T331":"Prof G Markets (Elson)","T332":"The Compound (Brown, Batnick, Parets)","T333":"a16z (Luttwak)","T334":"Moonshots (Diamandis)","T335":"All-In","T336":"Dylan Patel (SemiAnalysis)","T337":"Elon Musk (Baron conference)","T338":"Dwarkesh Patel","T339":"Steve Eisman","T340":"Prof G Markets (Edwards)","T341":"Odd Lots (Morley)","T342":"Jordi Visser","T343":"Odd Lots (Rasgon)","T344":"Prof G Markets (Elson)","T345":"Jordi Visser","T346":"Pomp Podcast (Visser)","T347":"Prof G Markets (Galloway/Elson)","T348":"Odd Lots (Tian Yang)","T349":"Prof G Markets (Bosa/Goswami)","T350":"Sam Altman (OpenAI)","T351":"Brad Gerstner (ILTB)","T352":"Satya Nadella (Microsoft)","T353":"a16z (Chen, Schulman)","T354":"a16z (Cowen, Imas)","T355":"All-In (Ghodsi)","T356":"Animal Spirits (Compound)","T357":"The Compound (WAYT)","T358":"Dwarkesh Podcast (Paul Christiano)","T359":"Steve Eisman (Ives, Luria)","T360":"Moonshots (Brett Adcock)","T361":"Prof G Markets (Elson/Luria)","T362":"Brad Gerstner (Altimeter)","T364":"Satya Nadella (Microsoft)","T365":"Nvidia (earnings)","T366":"Odd Lots (Lee, Kedrosky)","T367":"Prof G Markets (Elson, Kedrosky)","T368":"Sergio Gago, Cloudera (Big Technology sponsored)","T369":"a16z (Ken Liu, First Person Labs)","T370":"Gavin Baker (Sourcery)","T371":"Dylan Patel / SemiAnalysis (Sourcery)","T372":"Elon Musk (NYT DealBook)","T373":"Sam Altman and Greg Brockman (NYT DealBook)","T374":"The Compound and Friends","T375":"Aswath Damodaran (Prof G Markets)","T376":"Moonshots (Diamandis)","T377":"a16z (Nick Bostrom)","T378":"Elon Musk (TomorrowX)","T379":"Brian Rosso, Cloudera (Big Technology sponsored)","T380":"Odd Lots (Daniel Saedi, Minerva)","T381":"Jordi Visser","T382":"All-In","T383":"Steve Eisman","T384":"a16z (DHH)","T385":"Brad Gerstner","T386":"Satya Nadella","T387":"Jordi Visser","T388":"Moonshots (Diamandis)","T389":"Odd Lots (Kyle Chan)","T390":"Odd Lots (Afra Wang)"};
+const LIBSRC={"T01":"Jordi Visser","T02":"Jordi Visser","T03":"Jensen Huang","T04":"Jensen Huang","T05":"Jensen Huang","T06":"Demis Hassabis","T07":"Demis Hassabis","T08":"Demis Hassabis","T09":"Dario Amodei","T10":"Elon Musk","T11":"Elon Musk","T12":"Jordi Visser","T13":"All-In","T14":"All-In","T15":"All-In","T16":"Aswath Damodaran","T17":"Aswath Damodaran","T18":"Aswath Damodaran","T19":"Doug O'Laughlin","T20":"Doug O'Laughlin","T21":"Boris Cherny","T22":"Jeremy Grantham","T23":"Menand & Tankus","T24":"Gary Marcus","T25":"Gary Marcus","T26":"David Hunter","T27":"Marc Andreessen","T28":"Marc Andreessen","T29":"Moonshots (Diamandis)","T30":"Moonshots (Diamandis)","T31":"Elon Musk","T32":"The Compound","T33":"ChinAI (Jeff Ding)","T34":"ServiceNow (earnings)","T35":"Alphabet (earnings)","T36":"Jordi Visser","T37":"Ron & Michael Baron","T38":"Jeremy Eliuveros (SemiAnalysis)","T39":"Bob Sorensen","T40":"Ember","T41":"John Davis","T42":"Marc Rowan","T43":"Marc Lipschultz","T44":"Russell Clark","T45":"Liaquat Ahamed","T46":"Eric (YWR)","T47":"Ben Pulandian","T48":"Sean McGould","T49":"Takahē Capital","T51":"Nick Carter","T52":"Nick Carter","T53":"Austin Campbell","T54":"Austin Campbell","T55":"BG2","T56":"Applied Intuition","T57":"David George","T58":"On the Tape","T59":"Animal Spirits","T60":"Jordi Visser","T61":"Steve (Silicon Data)","T62":"Jonathan Thomas","T63":"Peter Schiff","T64":"Dylan Patel (SemiAnalysis)","T65":"Imas & Trammell","T66":"Jensen Huang","T67":"Jensen Huang","T68":"Jensen Huang","T69":"Dylan Patel (SemiAnalysis)","T70":"Dan Ives","T71":"Tino","T72":"Jurrien Timmer","T73":"Michael Cembalest","T74":"Bloom Energy (earnings)","T75":"The Compound","T76":"Jordi Visser","T77":"Jordi Visser","T78":"Alex Kantrowitz","T79":"Moonshots (Diamandis)","T80":"All-In","T81":"Meta (earnings)","T82":"Microsoft (earnings)","T83":"Amazon (earnings)","T84":"Apple (earnings)","T85":"The Compound","T86":"Tesla (earnings)","T87":"David Hunter","T88":"Matt McLennan","T89":"Gavin Baker","T90":"Animal Spirits","T91":"Sam Altman","T92":"Odd Lots (Granato & Drall)","T93":"Jordi Visser","T94":"Eli Lilly (earnings)","T95":"Ed Yardeni","T96":"All-In","T97":"Jordi Visser","T98":"Dylan LeClair","T99":"Bloomberg (Open Interest)","T100":"Bloomberg (Surveillance)","T101":"Moonshots (Diamandis)","T102":"Elon Musk","T103":"Elon Musk","T104":"Gavin Baker","T105":"Nebius (earnings)","T106":"Jordi Visser","T107":"Jordi Visser","T108":"Travis Kalanick","T109":"Stripe (Gaybrick)","T110":"The Compound (Todd Sohn)","T111":"Ramez Naam","T112":"Moonshots (Diamandis)","T113":"NVIDIA / CNBC ($500B round table)","T114":"NVIDIA (earnings)","T115":"Jordi Visser","T116":"Arthur Hayes","T117":"Jordi Visser","T118":"Moonshots (Diamandis)","T120":"Eric Weinstein","T121":"Michael Kratsios (OSTP)","T122":"All-In","T123":"Marc Andreessen (2014 ref)","T124":"Animal Spirits","T125":"The Compound","T126":"Nick Colas (DataTrek)","T127":"Dylan Patel (SemiAnalysis)","T128":"Jordi Visser","T129":"Roman Yampolskiy","T130":"All-In","T131":"Steno Larsen & Raoul Pal","T132":"CNBC Halftime/Closing (desk)","T133":"Moonshots (Diamandis)","T134":"Moonshots (Diamandis)","T135":"Gavin Baker","T136":"Sinofsky & Casado (a16z)","T137":"Jordi Visser","T138":"Jordi Visser","T139":"The AI Show (TAIS)","T140":"The AI Show (TAIS)","T141":"The AI Show (TAIS)","T142":"Dan Skelly (Morgan Stanley)","T143":"All-In","T144":"Jensen Huang","T145":"Levchin & Rampell","T146":"World Labs (Fei-Fei Li)","T147":"Jordi Visser","T148":"Jordi Visser","T149":"Jensen Huang","T150":"Raoul Pal & Jordi Visser","T151":"Gwynne Shotwell (SpaceX)","T152":"David Sacks","T153":"Moonshots (Diamandis)","T154":"Greg Brockman (OpenAI)","T155":"David George (a16z)","T156":"Jordi Visser","T157":"The Compound (Ives & Lee)","T158":"Jordi Visser","T159":"Animal Spirits (Cullen Roche)","T160":"Moonshots (Diamandis)","T161":"Lightfield (Keith Peiris)","T162":"Ali Ghodsi (Databricks)","T163":"Dina Powell McCormick (Meta)","T164":"Jordi Visser","T165":"Brad Gerstner (Altimeter)","T166":"Leopold Aschenbrenner","T167":"Jordi Visser","T168":"Jensen Huang","T169":"Jordi Visser","T170":"Noam Brown (OpenAI)","T171":"Vlad Tenev (Robinhood)","T172":"Moonshots (Diamandis)","T173":"Erik Hirsch (Hamilton Lane)","T174":"Animal Spirits","T175":"All-In","T176":"Casado, Sinofsky & Levie (a16z)","T177":"Tom Lee","T178":"Raoul Pal & Richard Galvin","T179":"Jordi Visser","T180":"Illia Polosukhin (NEAR)","T181":"William Mougayar","T182":"Joseph Chalom (SharpLink)","T183":"Tom Lee","T184":"Instinct founder","T185":"Jordi Visser & Anthony Pompliano","T186":"The Compound (Ed Elson)","T187":"The Compound (Chart Kid Matt)","T188":"Animal Spirits","T189":"Jordi Visser","T190":"Vitalik Buterin (OKX keynote)","T191":"Stripe Sessions (Kaliski)","T192":"The Compound (Brown/Batnik)","T193":"Animal Spirits (Carlson/Batnik)","T194":"Jurrien Timmer (Compound and Friends)","T195":"a16z (Pollen/Assistant Bench)","T196":"Moonshots (Diamandis)","T197":"Microsoft-Nvidia (Nadella/Huang)","T198":"Bloomberg Businessweek Daily (Moynihan/Whitney)","T199":"All-In","T200":"Jensen Huang (BG2)","T201":"Jordi Visser","T202":"Pomp x Jordi Visser","T203":"Dylan Patel / SemiAnalysis (Big Technology)","T204":"Meta (Zuckerberg/Wang on Cheeky Pint)","T205":"Jensen Huang (Ezra Klein)","T206":"Moonshots (Diamandis)","T207":"Moonshots (Diamandis)","T208":"All-In","T209":"Steve Eisman (The Compound)","T211":"Jordi Visser","T212":"Gavin Baker (TBPN)","T213":"Jordi Visser","T214":"Pomp (w/ Jordi Visser)","T215":"Pomp (w/ Jordi Visser)","T217":"All-In","T218":"All-In (w/ Nikesh Arora)","T219":"All-In (Krishna/Arora panel)","T220":"All-In (Dylan Field)","T221":"The Compound (Alex Altmann, Barclays)","T222":"The Compound (Jill Schlesinger)","T223":"Animal Spirits (Batnick/Carlson)","T224":"Animal Spirits (Batnick/Carlson)","T225":"Animal Spirits (Batnick/Carlson)","T226":"The Compound (Brown/Batnick)","T227":"The Compound (Brown/Batnick)","T228":"The Compound (Brown/Batnick)","T229":"Moonshots (Diamandis)","T230":"Moonshots (Diamandis)","T231":"Moonshots (Diamandis)","T232":"Moonshots (Diamandis) + Chamath","T233":"a16z (Andy Jassy)","T234":"a16z (Andreessen/Horowitz/Dixon)","T235":"a16z (Gruenstein, Tutor Intelligence)","T236":"a16z (Madheswaran, Eve)","T237":"a16z American Dynamism","T238":"a16z (Mark Cuban)","T239":"a16z (OpenAI computer-use leads)","T240":"a16z (Greze, Town)","T241":"a16z (Naous/Casado)","T242":"a16z (Angelos, VGS)","T243":"a16z (Nathan Lambert)","T244":"Steve Eisman","T245":"Steve Eisman","T246":"Steve Eisman (w/ Benn Steil)","T247":"Steve Eisman","T248":"Steve Eisman (w/ Danny Moses)","T249":"Steve Eisman","T250":"Prof G Markets (Elson w/ Foley, Bosa, Zandi)","T251":"Prof G Markets (Galloway/Elson)","T252":"Prof G Markets (w/ Josh Brown)","T253":"Prof G Markets (w/ Luria, Gapen)","T254":"Prof G Markets (Elson w/ Eisman)","T255":"Prof G Markets (Elson w/ Kedrosky, Armstrong)","T256":"Prof G Markets (Galloway/Elson)","T257":"Prof G Markets (Misha Laskin, Reflection AI)","T258":"Odd Lots (Nate Silver)","T259":"Odd Lots (Alex Micalizzi, Nomura)","T260":"Odd Lots (Lindsay Owens)","T261":"Odd Lots (Alex Altmann, Barclays)","T262":"Odd Lots (Terry Duffy, CME)","T263":"Sam Altman (Cheeky Pint)","T264":"Scott Nolan (General Matter, Cheeky Pint)","T265":"Dwarkesh Patel (Intel leaders)","T266":"Sundar Pichai (Big Technology)","T267":"Ethan Mollick (Big Technology)","T268":"Tesla (earnings)","T269":"Microsoft (earnings)","T270":"Alphabet (earnings)","T271":"Meta (earnings)","T272":"Apple (earnings)","T273":"Amazon (earnings)","T274":"SpaceX (earnings)","T275":"TSMC (earnings)","T276":"ASML (earnings)","T277":"Fed (FOMC/Warsh)","T280":"Jensen Huang (Yahoo Finance)","T281":"Brad Gerstner (CNBC)","T282":"Dylan Patel / SemiAnalysis (Modal Runtime)","T283":"Satya Nadella (Semafor)","T284":"Satya Nadella (20VC)","T285":"Dario & Daniela Amodei (The Builders)","T286":"Elon Musk (The Builders)","T287":"Sam Altman (Matthew Berman)","T288":"Sam Altman (Raj Shamani)","T289":"Sam Altman (Stanford GSB)","T290":"Goldman Sachs Exchanges (Lynam/Ablon)","T292":"Invest Like the Best (Cliff Sosin)","T293":"Invest Like the Best (Christina Cacioppo)","T294":"Animal Spirits (The Compound)","T295":"Prof G Markets (Tom Lee)","T296":"Invest Like the Best (Martin Casado)","T297":"Moonshots (Diamandis)","T298":"Prof G Markets (Ed Elson)","T299":"a16z","T300":"a16z (Figma CFO)","T301":"The Compound (Dan Clifton)","T302":"Invest Like the Best (Ramtin Naimi)","T303":"Odd Lots (Skanda Amarnath)","T304":"Prof G Markets (Scaramucci)","T305":"Dwarkesh Patel","T306":"Pomp (w/ Jordi Visser)","T307":"Moonshots (Ismail)","T308":"All-In","T309":"Steve Eisman","T310":"a16z (Somorjai)","T311":"Demis Hassabis (Masters of Scale)","T312":"Jordi Visser","T313":"Jordi Visser","T314":"Jordi Visser","T315":"Odd Lots (James Bosworth)","T316":"Prof G Markets (Galloway & Elson)","T317":"Odd Lots (guest)","T318":"Prof G Markets (Elson)","T319":"Steve Eisman","T320":"Cheeky Pint (Storonsky)","T321":"Prof G Markets (Elson)","T322":"Odd Lots (guests)","T323":"Animal Spirits (Compound)","T324":"WAYT (Compound)","T325":"a16z (Dharmesh Shah)","T326":"Invest Like the Best (Zach Reitano, Ro)","T327":"All-In (Rick Smith, Axon)","T328":"CoreWeave (earnings)","T329":"Moonshots (Diamandis)","T330":"a16z (Volpi)","T331":"Prof G Markets (Elson)","T332":"The Compound (Brown, Batnick, Parets)","T333":"a16z (Luttwak)","T334":"Moonshots (Diamandis)","T335":"All-In","T336":"Dylan Patel (SemiAnalysis)","T337":"Elon Musk (Baron conference)","T338":"Dwarkesh Patel","T339":"Steve Eisman","T340":"Prof G Markets (Edwards)","T341":"Odd Lots (Morley)","T342":"Jordi Visser","T343":"Odd Lots (Rasgon)","T344":"Prof G Markets (Elson)","T345":"Jordi Visser","T346":"Pomp Podcast (Visser)","T347":"Prof G Markets (Galloway/Elson)","T348":"Odd Lots (Tian Yang)","T349":"Prof G Markets (Bosa/Goswami)","T350":"Sam Altman (OpenAI)","T351":"Brad Gerstner (ILTB)","T352":"Satya Nadella (Microsoft)","T353":"a16z (Chen, Schulman)","T354":"a16z (Cowen, Imas)","T355":"All-In (Ghodsi)","T356":"Animal Spirits (Compound)","T357":"The Compound (WAYT)","T358":"Dwarkesh Podcast (Paul Christiano)","T359":"Steve Eisman (Ives, Luria)","T360":"Moonshots (Brett Adcock)","T361":"Prof G Markets (Elson/Luria)","T362":"Brad Gerstner (Altimeter)","T364":"Satya Nadella (Microsoft)","T365":"Nvidia (earnings)","T366":"Odd Lots (Lee, Kedrosky)","T367":"Prof G Markets (Elson, Kedrosky)","T368":"Sergio Gago, Cloudera (Big Technology sponsored)","T369":"a16z (Ken Liu, First Person Labs)","T370":"Gavin Baker (Sourcery)","T371":"Dylan Patel / SemiAnalysis (Sourcery)","T372":"Elon Musk (NYT DealBook)","T373":"Sam Altman and Greg Brockman (NYT DealBook)","T374":"The Compound and Friends","T375":"Aswath Damodaran (Prof G Markets)","T376":"Moonshots (Diamandis)","T377":"a16z (Nick Bostrom)","T378":"Elon Musk (TomorrowX)","T379":"Brian Rosso, Cloudera (Big Technology sponsored)","T380":"Odd Lots (Daniel Saedi, Minerva)","T381":"Jordi Visser","T382":"All-In","T383":"Steve Eisman","T384":"a16z (DHH)","T385":"Brad Gerstner","T386":"Satya Nadella","T387":"Jordi Visser","T388":"Moonshots (Diamandis)","T389":"Odd Lots (Kyle Chan)","T390":"Odd Lots (Afra Wang)","T391":"All-In (George Kurtz)","T392":"Prof G Markets (Galloway, Elson)","T393":"Gavin Baker (Atreides)","T394":"Steve Eisman (Steve Tusa)","T395":"Prof G Markets (Galloway, Elson)","T396":"a16z (OpenAI Life Sciences)","T397":"Sam Altman and Greg Brockman (DealBook)"};
 const srcOf=t=>LIBSRC[t.id]||(t.title||"").split(/ [—–-] | on | w\//)[0].trim();
 const addNum=t=>parseInt(String(t.id).replace(/\D/g,""),10)||0;
 let libMode="added";
