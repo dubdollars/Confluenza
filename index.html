@@ -188,6 +188,7 @@ table.pred th{color:var(--faint);font-weight:600;font-size:12px;text-transform:u
 .bars .b{display:grid;grid-template-columns:180px 1fr 40px;gap:12px;align-items:center;margin:7px 0}
 .bars .lab{color:var(--dim);font-size:13px}
 .bt{height:14px;background:#0e131b;border:1px solid #202a37;border-radius:5px;overflow:hidden}
+.xrhint{margin:-4px 0 10px;font-size:12.5px}.xrrow{display:grid;grid-template-columns:18px minmax(0,320px) 1fr 46px;gap:12px;align-items:center;padding:8px 6px;border-radius:8px;cursor:pointer}.xrrow:hover,.xrg.open .xrrow{background:#151c27}.xrrow:focus-visible{outline:2px solid #7c9cff}.xrcar{color:#7c9cff;font-size:14px;transition:transform .15s;display:inline-block;text-align:center}.xrg.open .xrcar{transform:rotate(180deg)}.xrname{color:var(--ink);font-size:14px;font-weight:600}.xrn{font-size:12px;font-weight:400}.xrpct{text-align:right;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}.xrdet{margin:4px 0 12px 30px;padding:10px 14px;border-left:2px solid #2a3546;font-size:13px}.xrh{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--dim);margin:12px 0 4px}.xrvo{line-height:1.7;color:var(--ink)}.xrnotes{margin:4px 0 0;padding-left:18px}.xrnotes li{margin:7px 0}.xrnl{color:var(--ink)}@media(max-width:640px){.xrrow{grid-template-columns:18px 1fr 46px;grid-template-areas:"c n p" "c b b";row-gap:6px}.xrcar{grid-area:c}.xrname{grid-area:n}.xrbar{grid-area:b}.xrpct{grid-area:p}.xrdet{margin-left:8px}}
 .bf{height:100%;background:linear-gradient(90deg,#c792ff,#7c9cff)}
 .blind{background:#1a1113;border:1px solid #5a2b34;border-radius:10px;padding:14px 16px;margin-top:16px}
 .blind h4{color:#ff9aa6}
@@ -21223,247 +21224,296 @@ const DATA = {
   {
    "label": "Primary data - nine Q3 earnings calls, the FOMC and the Anthropic S-1 (NEW, Edition 022)",
    "pct": 10,
-   "who": "Tesla, Microsoft, Alphabet, Meta, Apple, Amazon, SpaceX, TSMC, ASML calls (T268-T276) and the Oct 28 FOMC (T277), plus the Anthropic S-1 via multiple houses. Incentive-light on facts, promotional on guidance"
+   "who": "Tesla, Microsoft, Alphabet, Meta, Apple, Amazon, SpaceX, TSMC, ASML calls (T268-T276) and the Oct 28 FOMC (T277), plus the Anthropic S-1 via multiple houses. Incentive-light on facts, promotional on guidance",
+   "grp": "earn"
   },
   {
    "label": "The skeptic bloc grew (NEW, Edition 022)",
    "pct": 12,
-   "who": "Steve Eisman (T209, T244-T249), Prof G Markets / Ed Elson / Scott Galloway (T250-T257), Odd Lots (T258-T262), Paul Kedrosky, Danny Moses. Finally a real counterweight to the bull houses - the crowding alerts depend on it"
+   "who": "Steve Eisman (T209, T244-T249), Prof G Markets / Ed Elson / Scott Galloway (T250-T257), Odd Lots (T258-T262), Paul Kedrosky, Danny Moses. Finally a real counterweight to the bull houses - the crowding alerts depend on it",
+   "grp": "skeptic"
   },
   {
    "label": "The ETH trust-layer cluster (NEW, Batch 20)",
    "pct": 5,
-   "who": "Illia Polosukhin/NEAR (T180, 2023 reference with a strong AI hit rate), William Mougayar (T181, Ethereum adviser), Joseph Chalom/SharpLink (T182, ETH treasury CEO), Tom Lee/BitMine (T183, ~5% of ETH). One incentive - all hold ETH; weigh the lineage and institutional evidence over the targets"
+   "who": "Illia Polosukhin/NEAR (T180, 2023 reference with a strong AI hit rate), William Mougayar (T181, Ethereum adviser), Joseph Chalom/SharpLink (T182, ETH treasury CEO), Tom Lee/BitMine (T183, ~5% of ETH). One incentive - all hold ETH; weigh the lineage and institutional evidence over the targets",
+   "grp": "crypto"
   },
   {
    "label": "Operator primary source - the consumer agent (NEW, Batch 20)",
    "pct": 3,
-   "who": "The Instinct founder on Invest Like the Best (T184): growth, transactions, trust ladder, take-rate model, compute scarcity, safety architecture. Promotional and unaudited, but the hardest consumer-agent data in the corpus"
+   "who": "The Instinct founder on Invest Like the Best (T184): growth, transactions, trust ladder, take-rate model, compute scarcity, safety architecture. Promotional and unaudited, but the hardest consumer-agent data in the corpus",
+   "grp": "vc"
   },
   {
    "label": "The Compound house x3 + Jordi x2 (Batch 20)",
    "pct": 5,
-   "who": "Ed Elson (T186, the batchs skeptic: an AI lab bubble), Chart Kid Matt (T187: breadth, Treasury demand, the Everything Trade), Animal Spirits (T188: doubt not fear, bonds, real Instinct use) - one house, incentive-light. Jordi (T179) and Jordi x Pomp (T185) - one vote; Pomps lab-bear data cuts against his book"
+   "who": "Ed Elson (T186, the batchs skeptic: an AI lab bubble), Chart Kid Matt (T187: breadth, Treasury demand, the Everything Trade), Animal Spirits (T188: doubt not fear, bonds, real Instinct use) - one house, incentive-light. Jordi (T179) and Jordi x Pomp (T185) - one vote; Pomps lab-bear data cuts against his book",
+   "grp": "markets"
   },
   {
    "label": "Frontier-lab primary source (NEW, Batch 19)",
    "pct": 3,
-   "who": "Noam Brown/OpenAI x Dwarkesh (T170): RSI real and sooner but ~3x and experiment-bottlenecked, the fullest Hugging Face account, CoT monitoring degrading. OpenAI incentive discounted, but candid under adversarial questioning - the batchs highest-signal voice"
+   "who": "Noam Brown/OpenAI x Dwarkesh (T170): RSI real and sooner but ~3x and experiment-bottlenecked, the fullest Hugging Face account, CoT monitoring degrading. OpenAI incentive discounted, but candid under adversarial questioning - the batchs highest-signal voice",
+   "grp": "lab"
   },
   {
    "label": "VC/operator houses - the commoditization datapoints (Batch 19)",
    "pct": 5,
-   "who": "All-In (T175: the 80/20 open flip, price cuts, IPO slip, Sacks duopoly counter), a16z Casado/Sinofsky/Levie (T176: swarms break infosec, Jev), Moonshots x2 incl. Vlad Tenev (T171/T172, one house: tokenization, 26% R&D), Jensen (T168: OpenShell/Sentry - sells the fix), Animal Spirits + Hamilton Lane (T173/T174, one house: NVDA 16x, Thompson, private credit dispersion)"
+   "who": "All-In (T175: the 80/20 open flip, price cuts, IPO slip, Sacks duopoly counter), a16z Casado/Sinofsky/Levie (T176: swarms break infosec, Jev), Moonshots x2 incl. Vlad Tenev (T171/T172, one house: tokenization, 26% R&D), Jensen (T168: OpenShell/Sentry - sells the fix), Animal Spirits + Hamilton Lane (T173/T174, one house: NVDA 16x, Thompson, private credit dispersion)",
+   "grp": "vc"
   },
   {
    "label": "Crypto cluster - all book-talk (Batch 19)",
    "pct": 4,
-   "who": "Jordi Visser x2 (T167/T169, one vote), Tom Lee (T177, BitMine ~5% of ETH), Raoul Pal + Richard Galvin (T178, crypto funds), Vlad Tenev (T171, Robinhood Chain). Six voices, one incentive - weigh the behavior (BTC up through a hike) over the targets"
+   "who": "Jordi Visser x2 (T167/T169, one vote), Tom Lee (T177, BitMine ~5% of ETH), Raoul Pal + Richard Galvin (T178, crypto funds), Vlad Tenev (T171, Robinhood Chain). Six voices, one incentive - weigh the behavior (BTC up through a hike) over the targets",
+   "grp": "crypto"
   },
   {
    "label": "Public-markets investor - the batchs operating framework (NEW, Batch 18)",
    "pct": 4,
-   "who": "Brad Gerstner/Altimeter (T165): the payback math - the trade rides on AI-lab monthly revenue, offtake $200B to $1T to justify MAG-5 capex, NVDA ~14x = not-2000, stay medium/flexible. Long-the-trade - discount the conclusions, keep the checkable framework"
+   "who": "Brad Gerstner/Altimeter (T165): the payback math - the trade rides on AI-lab monthly revenue, offtake $200B to $1T to justify MAG-5 capex, NVDA ~14x = not-2000, stay medium/flexible. Long-the-trade - discount the conclusions, keep the checkable framework",
+   "grp": "vc"
   },
   {
    "label": "Operator primary-sources + the origin text (NEW, Batch 18)",
    "pct": 5,
-   "who": "Ali Ghodsi/Databricks (T162: the RSI four-criteria disconfirmer + context-not-frontier + open-source cost - long-the-trade, but the sharpest frameworks) + Dina Powell McCormick/Meta (T163: the data-center community mechanism - talks her book hard) + Aschenbrenner Situational Awareness (T166: the 2024 RSI/intelligence-explosion origin text - author now runs an AI fund). Harvest the frameworks, discount the books"
+   "who": "Ali Ghodsi/Databricks (T162: the RSI four-criteria disconfirmer + context-not-frontier + open-source cost - long-the-trade, but the sharpest frameworks) + Dina Powell McCormick/Meta (T163: the data-center community mechanism - talks her book hard) + Aschenbrenner Situational Awareness (T166: the 2024 RSI/intelligence-explosion origin text - author now runs an AI fund). Harvest the frameworks, discount the books",
+   "grp": "vc"
   },
   {
    "label": "Macro-crypto repeat + the bulls + a macro read (Batch 18)",
    "pct": 4,
-   "who": "Jordi Visser x3 (T156/T158/T164, ONE voice - the crypto-as-#1 pivot, heavy book-talk) + Dan Ives/Tom Lee (T157, two perma-bulls - demand-is-real corroboration) + Animal Spirits/Cullen Roche (T159, incentive-lighter macro/plumbing read) + Lightfield/Keith Peiris (T161, operator - business-world-model) + Moonshots (T160, repeat accelerationist house). Repeats = corroboration; discount the bulls"
+   "who": "Jordi Visser x3 (T156/T158/T164, ONE voice - the crypto-as-#1 pivot, heavy book-talk) + Dan Ives/Tom Lee (T157, two perma-bulls - demand-is-real corroboration) + Animal Spirits/Cullen Roche (T159, incentive-lighter macro/plumbing read) + Lightfield/Keith Peiris (T161, operator - business-world-model) + Moonshots (T160, repeat accelerationist house). Repeats = corroboration; discount the bulls",
+   "grp": "macro"
   },
   {
    "label": "Administration + primary-source builders (NEW, Batch 17)",
    "pct": 5,
-   "who": "David Sacks/White House (T152: doom = panic + reg-capture - incentive-laden, the policy counterpart to Kratsios) + Greg Brockman/OpenAI (T154: the AGI era, serve-constraint, defender window - book-talk) + Gwynne Shotwell/SpaceX (T151: SpaceX-as-compute, data centers in space, TerraFab - operator book-talk). Weigh the obvious books; harvest the frames"
+   "who": "David Sacks/White House (T152: doom = panic + reg-capture - incentive-laden, the policy counterpart to Kratsios) + Greg Brockman/OpenAI (T154: the AGI era, serve-constraint, defender window - book-talk) + Gwynne Shotwell/SpaceX (T151: SpaceX-as-compute, data centers in space, TerraFab - operator book-talk). Weigh the obvious books; harvest the frames",
+   "grp": "earn"
   },
   {
    "label": "The DOOM-WAR poles (Batch 17)",
    "pct": 4,
-   "who": "REAL-RISK: Pachocki/OpenAI (An Alien Mind, T153) + Elon (Dario is right, T151) + Brockman (pace the frontier, T154). HOAX/CAPTURE: Jensen (p(doom) made up, T149) + Trump (its a hoax) + Sacks (reg-capture, T152). Both accept the incident was real - the split is over meaning + policy; weight neither pole as settled"
+   "who": "REAL-RISK: Pachocki/OpenAI (An Alien Mind, T153) + Elon (Dario is right, T151) + Brockman (pace the frontier, T154). HOAX/CAPTURE: Jensen (p(doom) made up, T149) + Trump (its a hoax) + Sacks (reg-capture, T152). Both accept the incident was real - the split is over meaning + policy; weight neither pole as settled",
+   "grp": "safety"
   },
   {
    "label": "Macro-crypto repeat + LP-allocator lens (Batch 17)",
    "pct": 4,
-   "who": "Jordi Visser x3 (T147/T148/T150, ONE voice - the depreciation-bear killer + tokenization) + Raoul Pal (T150, aligned node cf. T131 - discount conclusions) + David George/LP panel (T155, a16z long-the-trade + a new allocator lens - power-law-systemic, TAM-is-labor, speed-to-power). Repeats = corroboration"
+   "who": "Jordi Visser x3 (T147/T148/T150, ONE voice - the depreciation-bear killer + tokenization) + Raoul Pal (T150, aligned node cf. T131 - discount conclusions) + David George/LP panel (T155, a16z long-the-trade + a new allocator lens - power-law-systemic, TAM-is-labor, speed-to-power). Repeats = corroboration",
+   "grp": "macro"
   },
   {
    "label": "Institutional wealth-desk strategist - the incentive-lighter batch voice (NEW, Batch 16)",
    "pct": 3,
-   "who": "Dan Skelly/Morgan Stanley (T142): the synthetic-tariff earnings mechanism, the not-1999 quality-of-spenders case, and the watch-the-spreads circular tell. Sell-side/wealth-manager (talks the house book somewhat), but the incentive-lighter keeper - the wealth-desk counterpart to Colas"
+   "who": "Dan Skelly/Morgan Stanley (T142): the synthetic-tariff earnings mechanism, the not-1999 quality-of-spenders case, and the watch-the-spreads circular tell. Sell-side/wealth-manager (talks the house book somewhat), but the incentive-lighter keeper - the wealth-desk counterpart to Colas",
+   "grp": "macro"
   },
   {
    "label": "Physical-AI / world-model primary sources (NEW, Batch 16)",
    "pct": 4,
-   "who": "Jensen Huang at the G20 (T144: AI-as-infrastructure, five-layer cake, fungibility, AGI-but-jobs-remain - sells the shovels) + World Labs/Fei-Fei Li, Johnson, Mildenhall (T146: Atlas, new-view prediction, DATA-is-the-robotics-constraint - founders on their own launch). Heavy book-talk - harvest the frames, discount the superlatives"
+   "who": "Jensen Huang at the G20 (T144: AI-as-infrastructure, five-layer cake, fungibility, AGI-but-jobs-remain - sells the shovels) + World Labs/Fei-Fei Li, Johnson, Mildenhall (T146: Atlas, new-view prediction, DATA-is-the-robotics-constraint - founders on their own launch). Heavy book-talk - harvest the frames, discount the superlatives",
+   "grp": "lab"
   },
   {
    "label": "Fintech operator + VC (NEW, Batch 16)",
    "pct": 2,
-   "who": "Max Levchin (Affirm) + Alex Rampell (a16z) (T145): agentic payments vs agentic shopping; neg-CAC / own-the-customer fintech template. Talk their book (Affirm + a16z) - keep the payments-vs-shopping scalpel"
+   "who": "Max Levchin (Affirm) + Alex Rampell (a16z) (T145): agentic payments vs agentic shopping; neg-CAC / own-the-customer fintech template. Talk their book (Affirm + a16z) - keep the payments-vs-shopping scalpel",
+   "grp": "vc"
   },
   {
    "label": "AI-industry podcast house + repeat VC panel (Batch 16)",
    "pct": 4,
-   "who": "The AI Show/TAIS (T139/T140/T141) counted as ONE incentive-clean-ish house (Astra = +1 vote; AI Answers + the Hugging Face deep-dive reinforcing) + All-In (T143, one house of VCs long the trade - the Hugging Face DEBUNK is the keeper) + Jordi Visser x2 (T137/T138, repeat book-talk - the rate-insensitivity nuance is the keeper)"
+   "who": "The AI Show/TAIS (T139/T140/T141) counted as ONE incentive-clean-ish house (Astra = +1 vote; AI Answers + the Hugging Face deep-dive reinforcing) + All-In (T143, one house of VCs long the trade - the Hugging Face DEBUNK is the keeper) + Jordi Visser x2 (T137/T138, repeat book-talk - the rate-insensitivity nuance is the keeper)",
+   "grp": "vc"
   },
   {
    "label": "Supply-chain DATA desk - the ANCHOR node (NEW, Batch 15)",
    "pct": 4,
-   "who": "Dylan Patel/SemiAnalysis x Dwarkesh (T127): compute centralizes into two labs, the $6B-fab to $1T-revenue ROI, and the sovereign-debt tail. Incentive-clean-ish (sells data); ONE house-view - do not double-count vs prior SemiAnalysis"
+   "who": "Dylan Patel/SemiAnalysis x Dwarkesh (T127): compute centralizes into two labs, the $6B-fab to $1T-revenue ROI, and the sovereign-debt tail. Incentive-clean-ish (sells data); ONE house-view - do not double-count vs prior SemiAnalysis",
+   "grp": "data"
   },
   {
    "label": "Real Vision macro - the treasury PLUMBING (NEW, Batch 15)",
    "pct": 4,
-   "who": "Andreas Steno Larsen + Raoul Pal (T131): the Bessent basis-trade/repo/SLR/buybacks = QE-in-practice mechanism + the capex-to-duration rotation. Two aligned research-sellers = ONE node; Raoul structurally crypto-bullish - discount conclusions, keep the plumbing"
+   "who": "Andreas Steno Larsen + Raoul Pal (T131): the Bessent basis-trade/repo/SLR/buybacks = QE-in-practice mechanism + the capex-to-duration rotation. Two aligned research-sellers = ONE node; Raoul structurally crypto-bullish - discount conclusions, keep the plumbing",
+   "grp": "macro"
   },
   {
    "label": "AI-safety researcher + a16z framework voices (NEW, Batch 15)",
    "pct": 4,
-   "who": "Roman Yampolskiy (T129 - the scarcity/attention leg from the AI-safety side; off-core, do not score as a market vote) + Sinofsky/Casado (T136 - capital-not-engineering + concentrate-capital-into-a-model). a16z is long-the-trade - harvest the frames, discount the conclusions"
+   "who": "Roman Yampolskiy (T129 - the scarcity/attention leg from the AI-safety side; off-core, do not score as a market vote) + Sinofsky/Casado (T136 - capital-not-engineering + concentrate-capital-into-a-model). a16z is long-the-trade - harvest the frames, discount the conclusions",
+   "grp": "safety"
   },
   {
    "label": "Accelerationist Moonshots x2 + a16z bull mechanics + consensus CNBC desk (Batch 15)",
    "pct": 5,
-   "who": "TWO Moonshots pods (T133/T134) = ONE house (the circular-financing bear framing + the SMB jobs data + Altman timeline); Gavin Baker (T135, cf. T104) = the bull-mechanics counterweight (discount long-the-trade); the CNBC desk (T132) = consensus/crowding caution + the agent-security node. The batch tilts long - weight the incentive-clean desks above these"
+   "who": "TWO Moonshots pods (T133/T134) = ONE house (the circular-financing bear framing + the SMB jobs data + Altman timeline); Gavin Baker (T135, cf. T104) = the bull-mechanics counterweight (discount long-the-trade); the CNBC desk (T132) = consensus/crowding caution + the agent-security node. The batch tilts long - weight the incentive-clean desks above these",
+   "grp": "vc"
   },
   {
    "label": "AI-lab / hardware CEOs + specialists",
    "pct": 16,
-   "who": "Huang ×6 (counted once), Hassabis, Amodei, Chase, Osika, Gelsinger, Boris Cherny, Hasani, Ben/BEP, Ben Pulandian"
+   "who": "Huang ×6 (counted once), Hassabis, Amodei, Chase, Osika, Gelsinger, Boris Cherny, Hasani, Ben/BEP, Ben Pulandian",
+   "grp": "lab"
   },
   {
    "label": "Supply-chain & AI-compute DATA desks (incentive-clean, NEW)",
    "pct": 7,
-   "who": "Dylan Patel/SemiAnalysis ×2, Silicon Data (Steve) — sell data/hedging, not a stock book. NB: SemiAnalysis = ONE house-view across Doug/Jeremy/Dylan — don't triple-count"
+   "who": "Dylan Patel/SemiAnalysis ×2, Silicon Data (Steve) — sell data/hedging, not a stock book. NB: SemiAnalysis = ONE house-view across Doug/Jeremy/Dylan — don't triple-count",
+   "grp": "data"
   },
   {
    "label": "Valuation / skeptics / specialists",
    "pct": 12,
-   "who": "Damodaran ×3, O'Laughlin ×2, Eisman, Marcus ×2, Grantham"
+   "who": "Damodaran ×3, O'Laughlin ×2, Eisman, Marcus ×2, Grantham",
+   "grp": "skeptic"
   },
   {
    "label": "AGI-economics academics (incentive-clean, NEW)",
    "pct": 4,
-   "who": "Alex Imas (DeepMind/UChicago) + Phil Trammell (Epoch/Stanford)"
+   "who": "Alex Imas (DeepMind/UChicago) + Phil Trammell (Epoch/Stanford)",
+   "grp": "safety"
   },
   {
    "label": "Institutional macro strategists + value allocators (incentive-clean, narrative-debunkers)",
    "pct": 8,
-   "who": "Jurrien Timmer (Fidelity), Michael Cembalest (JPM ~$4T), Matt McLennan (First Eagle Global Value, NEW — capex-at-natural-limits + software survivors); Dan Ives folded in as a DISCOUNTED bull"
+   "who": "Jurrien Timmer (Fidelity), Michael Cembalest (JPM ~$4T), Matt McLennan (First Eagle Global Value, NEW — capex-at-natural-limits + software survivors); Dan Ives folded in as a DISCOUNTED bull",
+   "grp": "macro"
   },
   {
    "label": "AI-credit / systemic-risk academics (NEW — incentive-clean, primary research)",
    "pct": 3,
-   "who": "Granato (UT Austin) + Drall (Yale) via Odd Lots — how PE socializes AI-credit risk through insurers (guaranty-fund backstop + shadow reinsurance)"
+   "who": "Granato (UT Austin) + Drall (Yale) via Odd Lots — how PE socializes AI-credit risk through insurers (guaranty-fund backstop + shadow reinsurance)",
+   "grp": "safety"
   },
   {
    "label": "Frontier-lab CEO (first-person primary source, NEW)",
    "pct": 2,
-   "who": "Sam Altman (OpenAI) — demand-uncapped, inference-funds-training, the sandbox-escape/pacing story; weigh for max-optimist book-talk"
+   "who": "Sam Altman (OpenAI) — demand-uncapped, inference-funds-training, the sandbox-escape/pacing story; weigh for max-optimist book-talk",
+   "grp": "lab"
   },
   {
    "label": "Energy / infrastructure specialists (blind spot CLOSED)",
    "pct": 8,
-   "who": "Jeremy/SemiAnalysis, Ember (Rangelova/Fulghum), John Davis (TX wind landowner), Ben/BEP (Bloom/powered-land)"
+   "who": "Jeremy/SemiAnalysis, Ember (Rangelova/Fulghum), John Davis (TX wind landowner), Ben/BEP (Bloom/powered-land)",
+   "grp": "data"
   },
   {
    "label": "Private-credit / finance practitioners + allocator (blind spot CLOSED)",
    "pct": 8,
-   "who": "Rowan (Apollo), Lipschultz (Blue Owl), McGould (Lighthouse), Campbell ×2, Jonathan Thomas (American Century/Avantis)"
+   "who": "Rowan (Apollo), Lipschultz (Blue Owl), McGould (Lighthouse), Campbell ×2, Jonathan Thomas (American Century/Avantis)",
+   "grp": "capital"
   },
   {
    "label": "VC / growth / max-bull operators",
    "pct": 11,
-   "who": "All-In (Chamath/Sacks/Calacanis/Friedberg), Andreessen ×2, BG2 (Gerstner/Baker), David George (a16z growth), Applied Intuition"
+   "who": "All-In (Chamath/Sacks/Calacanis/Friedberg), Andreessen ×2, BG2 (Gerstner/Baker), David George (a16z growth), Applied Intuition",
+   "grp": "vc"
   },
   {
    "label": "Long-term / growth investors",
    "pct": 4,
-   "who": "Ron & Michael Baron (SpaceX/Tesla/proprietary-data software)"
+   "who": "Ron & Michael Baron (SpaceX/Tesla/proprietary-data software)",
+   "grp": "capital"
   },
   {
    "label": "Macro / rates / historian",
    "pct": 7,
-   "who": "Clark (rates/inflation), Ahamed (1873/historian), Eric/YWR (nominal melt-up), Takahē (trend/CTA)"
+   "who": "Clark (rates/inflation), Ahamed (1873/historian), Eric/YWR (nominal melt-up), Takahē (trend/CTA)",
+   "grp": "macro"
   },
   {
    "label": "Accelerationist 'Moonshots' panel (correlated cluster)",
    "pct": 5,
-   "who": "Diamandis, Wissner-Gross, Blundin, Ismail, Mostaque + Musk ×3"
+   "who": "Diamandis, Wissner-Gross, Blundin, Ismail, Mostaque + Musk ×3",
+   "grp": "vc"
   },
   {
    "label": "Macro / thematic AI-bull (repeat voice)",
    "pct": 4,
-   "who": "Visser ×10 (incl. the two unwind post-mortems + the Batch-12 solo/interview pair) — counted once; the book's market-structure/positioning conscience"
+   "who": "Visser ×10 (incl. the two unwind post-mortems + the Batch-12 solo/interview pair) — counted once; the book's market-structure/positioning conscience",
+   "grp": "macro"
   },
   {
    "label": "Elite tech investor — the ANCHOR (repeat, no new vote)",
    "pct": 5,
-   "who": "Gavin Baker (Atreides) ×6 — Invest Like the Best + BG2 + Moonshots relays; the '$11B ARR/month,' WATTS-vs-WAFERS and returns-to-the-frontier frameworks that structure the synthesis. Talks his book (long the trade)"
+   "who": "Gavin Baker (Atreides) ×6 — Invest Like the Best + BG2 + Moonshots relays; the '$11B ARR/month,' WATTS-vs-WAFERS and returns-to-the-frontier frameworks that structure the synthesis. Talks his book (long the trade)",
+   "grp": "vc"
   },
   {
    "label": "Veteran strategist + pharma ground-truth (NEW, Batch 12)",
    "pct": 5,
-   "who": "Ed Yardeni (cleanest earnings-led not-a-bubble case; perma-bull lean) + Eli Lilly Q2 (GLP-1 raised guidance + oral pill; management-biased, numbers are the check)"
+   "who": "Ed Yardeni (cleanest earnings-led not-a-bubble case; perma-bull lean) + Eli Lilly Q2 (GLP-1 raised guidance + oral pill; management-biased, numbers are the check)",
+   "grp": "macro"
   },
   {
    "label": "Bloomberg markets desks — multi-analyst real-time texture (NEW, Batch 12)",
    "pct": 6,
-   "who": "Jim Caron/Morgan Stanley (nominal-GDP), Emily Bannister/Wellington (AI-financing selectivity), Mig Dobre/Baird (data-centers-as-election), Mark Pinto/Moody's + Bruce Richards/Marathon (private-credit stress), Aaron Kennon (memory bear nuance), Sarah Kunst (Google bull), Yie-Hsin Hung/State Street"
+   "who": "Jim Caron/Morgan Stanley (nominal-GDP), Emily Bannister/Wellington (AI-financing selectivity), Mig Dobre/Baird (data-centers-as-election), Mark Pinto/Moody's + Bruce Richards/Marathon (private-credit stress), Aaron Kennon (memory bear nuance), Sarah Kunst (Google bull), Yie-Hsin Hung/State Street",
+   "grp": "markets"
   },
   {
    "label": "Company earnings — ground-truth (mega-caps + Tesla)",
    "pct": 9,
-   "who": "Tesla Q2-26 (energy build-out + TerraFab memory/EUV) + Meta/Microsoft/Amazon/Apple Q2-26, plus ServiceNow, Alphabet, Bloom (management-biased; the numbers are the check)"
+   "who": "Tesla Q2-26 (energy build-out + TerraFab memory/EUV) + Meta/Microsoft/Amazon/Apple Q2-26, plus ServiceNow, Alphabet, Bloom (management-biased; the numbers are the check)",
+   "grp": "earn"
   },
   {
    "label": "Markets / tape + tech reporting (close-to-the-trade)",
    "pct": 6,
-   "who": "Alex Kantrowitz (Big Technology, NEW), Brown+Batnick (The Compound ×2), Collins/Daniel ('Big Short' desk), Batnick/Carlson (Animal Spirits)"
+   "who": "Alex Kantrowitz (Big Technology, NEW), Brown+Batnick (The Compound ×2), Collins/Daniel ('Big Short' desk), Batnick/Carlson (Animal Spirits)",
+   "grp": "markets"
   },
   {
    "label": "Crypto/quantum essayist + China-domestic",
    "pct": 4,
-   "who": "Nick Carter ×2 (quantum/crypto), ChinAI / Jeff Ding"
+   "who": "Nick Carter ×2 (quantum/crypto), ChinAI / Jeff Ding",
+   "grp": "crypto"
   },
   {
    "label": "Quantum specialist",
    "pct": 2,
-   "who": "Bob Sorensen (Hyperion) — quantum realist"
+   "who": "Bob Sorensen (Hyperion) — quantum realist",
+   "grp": "data"
   },
   {
    "label": "Contrarian macro / perma-bears + a day-trader (DISCOUNTED)",
    "pct": 2,
-   "who": "Hunter + Peter Schiff + 'Tino' (livestream trader) — verdicts discounted; harvest checkable specifics only"
+   "who": "Hunter + Peter Schiff + 'Tino' (livestream trader) — verdicts discounted; harvest checkable specifics only",
+   "grp": "skeptic"
   },
   {
    "label": "AI-factory FINANCIERS + payments/energy operators (NEW, Batch 13)",
    "pct": 6,
-   "who": "Larry Fink (BlackRock) + Jon Gray (Blackstone) + the $500B round-table financiers (compute-as-asset-class); Will Gaybrick (Stripe — agentic commerce + stablecoin rails); Ramez Naam (grid-flexibility, incentive-lean clean-energy analyst); Todd Sohn (ETF/flows — compute financialization); Travis Kalanick (physical-AI, off-core/low). Principals talk their books — weigh the structure + numbers, discount the boosterism"
+   "who": "Larry Fink (BlackRock) + Jon Gray (Blackstone) + the $500B round-table financiers (compute-as-asset-class); Will Gaybrick (Stripe — agentic commerce + stablecoin rails); Ramez Naam (grid-flexibility, incentive-lean clean-energy analyst); Todd Sohn (ETF/flows — compute financialization); Travis Kalanick (physical-AI, off-core/low). Principals talk their books — weigh the structure + numbers, discount the boosterism",
+   "grp": "capital"
   },
   {
    "label": "Neocloud earnings — the self-funds ground-truth (NEW, Batch 13)",
    "pct": 3,
-   "who": "Nebius Q2 (prepay + asset-backed on contracted IG cash flows, 41% margins) — the live test of the credit/circular fork; management-biased, the cash-flow + financing terms are the check"
+   "who": "Nebius Q2 (prepay + asset-backed on contracted IG cash flows, 41% margins) — the live test of the credit/circular fork; management-biased, the cash-flow + financing terms are the check",
+   "grp": "earn"
   },
   {
    "label": "Markets-desk STRATEGISTS — the FINANCING read (NEW, Batch 14)",
    "pct": 6,
-   "who": "Nick Colas (DataTrek — incentive-clean-ish research; the real-rates decomposition + 'AI-race-is-about-AGI'), the Compound/Brown+Batnick (Bill Dudley's 'bubble bursts by 2027' + the NVDA anticipatory/semis-cyclical read), Animal Spirits (the debasement/bonds-are-most-hated read). The counterweight the book lacked: a rates/discount-rate lens on the operator/lab enthusiasm"
+   "who": "Nick Colas (DataTrek — incentive-clean-ish research; the real-rates decomposition + 'AI-race-is-about-AGI'), the Compound/Brown+Batnick (Bill Dudley's 'bubble bursts by 2027' + the NVDA anticipatory/semis-cyclical read), Animal Spirits (the debasement/bonds-are-most-hated read). The counterweight the book lacked: a rates/discount-rate lens on the operator/lab enthusiasm",
+   "grp": "markets"
   },
   {
    "label": "NVIDIA earnings — the bellwether (NEW earnings, Batch 14)",
    "pct": 4,
-   "who": "NVDA Q2 FY2027 (Jensen + Colette Kress): the memory-driven GROSS-MARGIN RESET + the take-or-pay/revenue-share NeoCloud financing + 'we see it differently' on circular financing. Management-biased; the numbers + the newly-explicit financing structure are the check"
+   "who": "NVDA Q2 FY2027 (Jensen + Colette Kress): the memory-driven GROSS-MARGIN RESET + the take-or-pay/revenue-share NeoCloud financing + 'we see it differently' on circular financing. Management-biased; the numbers + the newly-explicit financing structure are the check",
+   "grp": "earn"
   },
   {
    "label": "Crypto-macro + policy voices (NEW, Batch 14)",
    "pct": 4,
-   "who": "Arthur Hayes (BitMEX/Maelstrom — the AI-capex BEAR who reaches the same debasement trade; heavy book-talk); Michael Kratsios/OSTP (AI-for-science 'Genesis Mission' + quantum/fusion + the EUV-chokepoint policy read); Eric Weinstein (off-core science/UAP, weighted LOW). Incentive-loaded/policy sources — harvest the mechanisms, not the verdicts"
+   "who": "Arthur Hayes (BitMEX/Maelstrom — the AI-capex BEAR who reaches the same debasement trade; heavy book-talk); Michael Kratsios/OSTP (AI-for-science 'Genesis Mission' + quantum/fusion + the EUV-chokepoint policy read); Eric Weinstein (off-core science/UAP, weighted LOW). Incentive-loaded/policy sources — harvest the mechanisms, not the verdicts",
+   "grp": "crypto"
   }
  ],
  "blindspots": [
@@ -33945,7 +33995,321 @@ const DATA = {
   "dave blundin": "Venture investor at Link Ventures and Moonshots podcast regular",
   "emad mostaque": "Founder of Stability AI; now runs Intelligent Internet",
   "paul christiano": "AI safety researcher; formerly at OpenAI, later led safety work at the US AI Safety Institute"
- }
+ },
+ "voiceGroups": {
+  "Jordi Visser": "macro",
+  "Jensen Huang": "lab",
+  "Demis Hassabis": "lab",
+  "Dario Amodei": "lab",
+  "Elon Musk": "lab",
+  "All-In": "vc",
+  "Aswath Damodaran": "skeptic",
+  "Doug O'Laughlin": "data",
+  "Boris Cherny": "lab",
+  "Jeremy Grantham": "skeptic",
+  "Menand & Tankus": "safety",
+  "Gary Marcus": "skeptic",
+  "David Hunter": "skeptic",
+  "Marc Andreessen": "vc",
+  "Moonshots (Diamandis)": "vc",
+  "The Compound": "markets",
+  "ChinAI (Jeff Ding)": "data",
+  "ServiceNow (earnings)": "earn",
+  "Alphabet (earnings)": "earn",
+  "Ron & Michael Baron": "capital",
+  "Jeremy Eliuveros (SemiAnalysis)": "data",
+  "Bob Sorensen": "data",
+  "Ember": "data",
+  "John Davis": "data",
+  "Marc Rowan": "capital",
+  "Marc Lipschultz": "capital",
+  "Russell Clark": "macro",
+  "Liaquat Ahamed": "macro",
+  "Eric (YWR)": "macro",
+  "Ben Pulandian": "data",
+  "Sean McGould": "capital",
+  "Takahē Capital": "capital",
+  "Nick Carter": "crypto",
+  "Austin Campbell": "crypto",
+  "BG2": "vc",
+  "Applied Intuition": "vc",
+  "David George": "vc",
+  "On the Tape": "skeptic",
+  "Animal Spirits": "markets",
+  "Steve (Silicon Data)": "data",
+  "Jonathan Thomas": "capital",
+  "Peter Schiff": "skeptic",
+  "Dylan Patel (SemiAnalysis)": "data",
+  "Imas & Trammell": "safety",
+  "Dan Ives": "macro",
+  "Tino": "skeptic",
+  "Jurrien Timmer": "macro",
+  "Michael Cembalest": "macro",
+  "Bloom Energy (earnings)": "earn",
+  "Alex Kantrowitz": "markets",
+  "Meta (earnings)": "earn",
+  "Microsoft (earnings)": "earn",
+  "Amazon (earnings)": "earn",
+  "Apple (earnings)": "earn",
+  "Tesla (earnings)": "earn",
+  "Matt McLennan": "capital",
+  "Gavin Baker": "vc",
+  "Sam Altman": "lab",
+  "Odd Lots (Granato & Drall)": "safety",
+  "Eli Lilly (earnings)": "earn",
+  "Ed Yardeni": "macro",
+  "Dylan LeClair": "crypto",
+  "Bloomberg (Open Interest)": "markets",
+  "Bloomberg (Surveillance)": "markets",
+  "Nebius (earnings)": "earn",
+  "Travis Kalanick": "vc",
+  "Stripe (Gaybrick)": "vc",
+  "The Compound (Todd Sohn)": "markets",
+  "Ramez Naam": "data",
+  "NVIDIA / CNBC ($500B round table)": "earn",
+  "NVIDIA (earnings)": "earn",
+  "Arthur Hayes": "crypto",
+  "Eric Weinstein": "safety",
+  "Michael Kratsios (OSTP)": "earn",
+  "Marc Andreessen (2014 ref)": "crypto",
+  "Nick Colas (DataTrek)": "macro",
+  "Roman Yampolskiy": "safety",
+  "Steno Larsen & Raoul Pal": "macro",
+  "CNBC Halftime/Closing (desk)": "markets",
+  "Sinofsky & Casado (a16z)": "vc",
+  "The AI Show (TAIS)": "vc",
+  "Dan Skelly (Morgan Stanley)": "macro",
+  "Levchin & Rampell": "vc",
+  "World Labs (Fei-Fei Li)": "lab",
+  "Raoul Pal & Jordi Visser": "macro",
+  "Gwynne Shotwell (SpaceX)": "lab",
+  "David Sacks": "earn",
+  "Greg Brockman (OpenAI)": "lab",
+  "David George (a16z)": "vc",
+  "The Compound (Ives & Lee)": "markets",
+  "Animal Spirits (Cullen Roche)": "markets",
+  "Lightfield (Keith Peiris)": "vc",
+  "Ali Ghodsi (Databricks)": "vc",
+  "Dina Powell McCormick (Meta)": "lab",
+  "Brad Gerstner (Altimeter)": "vc",
+  "Leopold Aschenbrenner": "safety",
+  "Noam Brown (OpenAI)": "lab",
+  "Vlad Tenev (Robinhood)": "vc",
+  "Erik Hirsch (Hamilton Lane)": "capital",
+  "Casado, Sinofsky & Levie (a16z)": "vc",
+  "Tom Lee": "crypto",
+  "Raoul Pal & Richard Galvin": "crypto",
+  "Illia Polosukhin (NEAR)": "crypto",
+  "William Mougayar": "crypto",
+  "Joseph Chalom (SharpLink)": "crypto",
+  "Instinct founder": "vc",
+  "Jordi Visser & Anthony Pompliano": "macro",
+  "The Compound (Ed Elson)": "markets",
+  "The Compound (Chart Kid Matt)": "markets",
+  "Vitalik Buterin (OKX keynote)": "crypto",
+  "Stripe Sessions (Kaliski)": "vc",
+  "The Compound (Brown/Batnik)": "markets",
+  "Animal Spirits (Carlson/Batnik)": "markets",
+  "Jurrien Timmer (Compound and Friends)": "macro",
+  "a16z (Pollen/Assistant Bench)": "vc",
+  "Microsoft-Nvidia (Nadella/Huang)": "earn",
+  "Bloomberg Businessweek Daily (Moynihan/Whitney)": "capital",
+  "Jensen Huang (BG2)": "lab",
+  "Pomp x Jordi Visser": "macro",
+  "Dylan Patel / SemiAnalysis (Big Technology)": "data",
+  "Meta (Zuckerberg/Wang on Cheeky Pint)": "lab",
+  "Jensen Huang (Ezra Klein)": "lab",
+  "Steve Eisman (The Compound)": "skeptic",
+  "Gavin Baker (TBPN)": "vc",
+  "Pomp (w/ Jordi Visser)": "macro",
+  "All-In (w/ Nikesh Arora)": "vc",
+  "All-In (Krishna/Arora panel)": "vc",
+  "All-In (Dylan Field)": "vc",
+  "The Compound (Alex Altmann, Barclays)": "macro",
+  "The Compound (Jill Schlesinger)": "markets",
+  "Animal Spirits (Batnick/Carlson)": "markets",
+  "The Compound (Brown/Batnick)": "markets",
+  "Moonshots (Diamandis) + Chamath": "vc",
+  "a16z (Andy Jassy)": "vc",
+  "a16z (Andreessen/Horowitz/Dixon)": "vc",
+  "a16z (Gruenstein, Tutor Intelligence)": "vc",
+  "a16z (Madheswaran, Eve)": "vc",
+  "a16z American Dynamism": "vc",
+  "a16z (Mark Cuban)": "vc",
+  "a16z (OpenAI computer-use leads)": "lab",
+  "a16z (Greze, Town)": "vc",
+  "a16z (Naous/Casado)": "vc",
+  "a16z (Angelos, VGS)": "vc",
+  "a16z (Nathan Lambert)": "vc",
+  "Steve Eisman": "skeptic",
+  "Steve Eisman (w/ Benn Steil)": "skeptic",
+  "Steve Eisman (w/ Danny Moses)": "skeptic",
+  "Prof G Markets (Elson w/ Foley, Bosa, Zandi)": "markets",
+  "Prof G Markets (Galloway/Elson)": "markets",
+  "Prof G Markets (w/ Josh Brown)": "markets",
+  "Prof G Markets (w/ Luria, Gapen)": "markets",
+  "Prof G Markets (Elson w/ Eisman)": "skeptic",
+  "Prof G Markets (Elson w/ Kedrosky, Armstrong)": "skeptic",
+  "Prof G Markets (Misha Laskin, Reflection AI)": "markets",
+  "Odd Lots (Nate Silver)": "macro",
+  "Odd Lots (Alex Micalizzi, Nomura)": "macro",
+  "Odd Lots (Lindsay Owens)": "macro",
+  "Odd Lots (Alex Altmann, Barclays)": "macro",
+  "Odd Lots (Terry Duffy, CME)": "macro",
+  "Sam Altman (Cheeky Pint)": "lab",
+  "Scott Nolan (General Matter, Cheeky Pint)": "vc",
+  "Dwarkesh Patel (Intel leaders)": "data",
+  "Sundar Pichai (Big Technology)": "lab",
+  "Ethan Mollick (Big Technology)": "safety",
+  "SpaceX (earnings)": "earn",
+  "TSMC (earnings)": "earn",
+  "ASML (earnings)": "earn",
+  "Fed (FOMC/Warsh)": "earn",
+  "Jensen Huang (Yahoo Finance)": "lab",
+  "Brad Gerstner (CNBC)": "vc",
+  "Dylan Patel / SemiAnalysis (Modal Runtime)": "data",
+  "Satya Nadella (Semafor)": "lab",
+  "Satya Nadella (20VC)": "lab",
+  "Dario & Daniela Amodei (The Builders)": "lab",
+  "Elon Musk (The Builders)": "lab",
+  "Sam Altman (Matthew Berman)": "lab",
+  "Sam Altman (Raj Shamani)": "lab",
+  "Sam Altman (Stanford GSB)": "lab",
+  "Goldman Sachs Exchanges (Lynam/Ablon)": "macro",
+  "Invest Like the Best (Cliff Sosin)": "capital",
+  "Invest Like the Best (Christina Cacioppo)": "vc",
+  "Animal Spirits (The Compound)": "markets",
+  "Prof G Markets (Tom Lee)": "crypto",
+  "Invest Like the Best (Martin Casado)": "vc",
+  "Prof G Markets (Ed Elson)": "markets",
+  "a16z": "vc",
+  "a16z (Figma CFO)": "vc",
+  "The Compound (Dan Clifton)": "markets",
+  "Invest Like the Best (Ramtin Naimi)": "vc",
+  "Odd Lots (Skanda Amarnath)": "macro",
+  "Prof G Markets (Scaramucci)": "markets",
+  "Dwarkesh Patel": "vc",
+  "Moonshots (Ismail)": "vc",
+  "a16z (Somorjai)": "vc",
+  "Demis Hassabis (Masters of Scale)": "lab",
+  "Odd Lots (James Bosworth)": "macro",
+  "Prof G Markets (Galloway & Elson)": "markets",
+  "Odd Lots (guest)": "macro",
+  "Prof G Markets (Elson)": "markets",
+  "Cheeky Pint (Storonsky)": "vc",
+  "Odd Lots (guests)": "macro",
+  "Animal Spirits (Compound)": "markets",
+  "WAYT (Compound)": "markets",
+  "a16z (Dharmesh Shah)": "vc",
+  "Invest Like the Best (Zach Reitano, Ro)": "vc",
+  "All-In (Rick Smith, Axon)": "vc",
+  "CoreWeave (earnings)": "earn",
+  "a16z (Volpi)": "vc",
+  "The Compound (Brown, Batnick, Parets)": "markets",
+  "a16z (Luttwak)": "vc",
+  "Elon Musk (Baron conference)": "lab",
+  "Prof G Markets (Edwards)": "markets",
+  "Odd Lots (Morley)": "macro",
+  "Odd Lots (Rasgon)": "data",
+  "Pomp Podcast (Visser)": "macro",
+  "Odd Lots (Tian Yang)": "macro",
+  "Prof G Markets (Bosa/Goswami)": "markets",
+  "Sam Altman (OpenAI)": "lab",
+  "Brad Gerstner (ILTB)": "vc",
+  "Satya Nadella (Microsoft)": "lab",
+  "a16z (Chen, Schulman)": "vc",
+  "a16z (Cowen, Imas)": "safety",
+  "All-In (Ghodsi)": "vc",
+  "The Compound (WAYT)": "markets",
+  "Dwarkesh Podcast (Paul Christiano)": "safety",
+  "Steve Eisman (Ives, Luria)": "skeptic",
+  "Moonshots (Brett Adcock)": "vc",
+  "Prof G Markets (Elson/Luria)": "markets",
+  "Nvidia (earnings)": "earn",
+  "Odd Lots (Lee, Kedrosky)": "skeptic",
+  "Prof G Markets (Elson, Kedrosky)": "skeptic",
+  "Sergio Gago, Cloudera (Big Technology sponsored)": "data",
+  "a16z (Ken Liu, First Person Labs)": "vc",
+  "Gavin Baker (Sourcery)": "vc",
+  "Dylan Patel / SemiAnalysis (Sourcery)": "data",
+  "Elon Musk (NYT DealBook)": "lab",
+  "Sam Altman and Greg Brockman (NYT DealBook)": "lab",
+  "The Compound and Friends": "markets",
+  "Aswath Damodaran (Prof G Markets)": "skeptic",
+  "a16z (Nick Bostrom)": "safety",
+  "Elon Musk (TomorrowX)": "lab",
+  "Brian Rosso, Cloudera (Big Technology sponsored)": "data",
+  "Odd Lots (Daniel Saedi, Minerva)": "macro",
+  "a16z (DHH)": "vc",
+  "Brad Gerstner": "vc",
+  "Satya Nadella": "lab",
+  "Odd Lots (Kyle Chan)": "data",
+  "Odd Lots (Afra Wang)": "data",
+  "All-In (George Kurtz)": "vc",
+  "Prof G Markets (Galloway, Elson)": "markets",
+  "Gavin Baker (Atreides)": "vc",
+  "Steve Eisman (Steve Tusa)": "skeptic",
+  "a16z (OpenAI Life Sciences)": "lab",
+  "Sam Altman and Greg Brockman (DealBook)": "lab",
+  "Animal Spirits (Batnick, Carlson)": "markets",
+  "The Compound (Sam Koppelman, Hunterbrook)": "skeptic",
+  "Prof G Markets (George Noble, Charles Elson)": "skeptic",
+  "Invest Like the Best (Scott Wu, Cognition)": "vc",
+  "Odd Lots (Alexander Altmann)": "macro",
+  "Odd Lots (Marc Levinson)": "macro"
+ },
+ "sourceGroups": [
+  {
+   "key": "vc",
+   "name": "VC & tech-investor podcasts",
+   "desc": "Venture and growth investors and the founders they host: a16z, All-In, BG2, Invest Like the Best, Moonshots, Cheeky Pint. Mostly long the AI trade."
+  },
+  {
+   "key": "markets",
+   "name": "Markets podcasts & TV desks",
+   "desc": "The Compound, Animal Spirits, Prof G Markets, Bloomberg and CNBC. Close to the tape, but often reacting to the same news."
+  },
+  {
+   "key": "lab",
+   "name": "AI-lab & big-tech leaders",
+   "desc": "First-person interviews with the people building AI: Huang, Musk, Altman, Amodei, Hassabis, Nadella. Closest to the work, and they talk their book."
+  },
+  {
+   "key": "macro",
+   "name": "Macro strategists & economists",
+   "desc": "Rates, liquidity, the economy and politics: Visser, Raoul Pal, Odd Lots guests, Fidelity, JPMorgan, Morgan Stanley strategists."
+  },
+  {
+   "key": "earn",
+   "name": "Earnings calls & official sources",
+   "desc": "Company earnings calls, the Fed and government officials. The hardest numbers in the library, though management spins the outlook."
+  },
+  {
+   "key": "skeptic",
+   "name": "Skeptics & valuation voices",
+   "desc": "The counterweight to the bulls: Eisman, Damodaran, Grantham, Kedrosky, Gary Marcus. Watched for crowding and bubble risk."
+  },
+  {
+   "key": "data",
+   "name": "Industry & data specialists",
+   "desc": "Chips, energy, quantum and China specialists such as SemiAnalysis and Ember. They sell research, not stocks."
+  },
+  {
+   "key": "crypto",
+   "name": "Crypto voices",
+   "desc": "Crypto investors, builders and treasury companies. Nearly all of them own what they discuss."
+  },
+  {
+   "key": "capital",
+   "name": "Credit, allocators & asset managers",
+   "desc": "Private credit, fund allocators and asset managers (Apollo, Blue Owl, Baron, Hamilton Lane): how the AI build gets financed."
+  },
+  {
+   "key": "safety",
+   "name": "Academics & AI-safety researchers",
+   "desc": "University economists, legal scholars and AI-safety researchers. Little money at stake, but often off-core for investing."
+  }
+ ]
 };
 
 /* ============================================================ RENDER ============================================================ */
@@ -34298,8 +34662,27 @@ function renderLibrary(){
 function renderSources(){
   const v=$("#v-sources");v.innerHTML="";
   v.appendChild(el("p","lead","The honesty panel. The library inherits the bias of what's fed in — so this x-ray shows the mix of voices and, more importantly, what's still missing. When a theme is 'high conviction' but every voice shares one incentive, treat the number with suspicion."));
-  const p=el("div","panel");p.appendChild(el("h3","","Composition of the "+DATA.voices+" distinct voices"));
-  const bars=el("div","bars");DATA.sourceComposition.forEach(s=>{const row=el("div","b");row.appendChild(el("div","lab",s.label+"<br><span class='faint' style='font-size:11px'>"+s.who+"</span>"));const bt=el("div","bt");const bf=el("div","bf");bf.style.width=s.pct+"%";bt.appendChild(bf);row.appendChild(bt);row.appendChild(el("div","faint",s.pct+"%"));bars.appendChild(row);});
+  // Source X-Ray (2026-11-26): ten groups that add to 100%; click a row for its voices and past notes.
+  const p=el("div","panel");const L=typeof LIBSRC!=="undefined"?LIBSRC:{};const tcount={};Object.values(L).forEach(n=>tcount[n]=(tcount[n]||0)+1);
+  const names=Object.keys(tcount),VG=DATA.voiceGroups||{},tot=names.length||1;
+  const groups=(DATA.sourceGroups||[]).map(g=>Object.assign({},g,{voices:names.filter(n=>VG[n]===g.key).sort((a,b)=>a.localeCompare(b))}));
+  const uns=names.filter(n=>!groups.some(g=>g.key===VG[n]));if(uns.length)groups.push({key:"_",name:"Not yet sorted",desc:"New voices waiting to be placed in a group.",voices:uns.sort()});
+  groups.forEach(g=>{g.raw=g.voices.length*100/tot;g.pct=Math.floor(g.raw);});let left=100-groups.reduce((a,g)=>a+g.pct,0);
+  groups.slice().sort((a,b)=>(b.raw-b.pct)-(a.raw-a.pct)).forEach(g=>{if(left>0&&g.voices.length){g.pct++;left--;}});
+  groups.sort((a,b)=>b.voices.length-a.voices.length);const top=Math.max(1,...groups.map(g=>g.pct));
+  p.appendChild(el("h3","","Composition of the "+tot+" distinct voices"));
+  p.appendChild(el("p","faint xrhint","Ten groups that add up to 100%. Click a row to see who is in it and the notes from past editions (×3 = three episodes from that voice)."));
+  const bars=el("div","xrbars");
+  groups.forEach(g=>{const w=el("div","xrg");const row=el("div","xrrow");row.setAttribute("role","button");row.tabIndex=0;row.setAttribute("aria-expanded","false");
+    row.innerHTML='<span class="xrcar">▾</span><span class="xrname">'+g.name+'<span class="faint xrn"> · '+g.voices.length+' voices</span></span><span class="bt xrbar"><span class="bf" style="display:block;width:'+(g.pct/top*100)+'%"></span></span><span class="xrpct">'+g.pct+'%</span>';
+    const det=el("div","xrdet");det.hidden=true;
+    let h='<p class="muted" style="margin:0">'+g.desc+'</p><div class="xrh">Voices ('+g.voices.length+')</div><div class="xrvo">'+g.voices.map(n=>n+(tcount[n]>1?' <span class="faint">×'+tcount[n]+'</span>':'')).join(' · ')+'</div>';
+    const notes=(DATA.sourceComposition||[]).filter(r=>r.grp===g.key);
+    if(notes.length)h+='<div class="xrh">Notes from past editions</div><ul class="xrnotes">'+notes.map(r=>'<li><span class="xrnl">'+r.label+'</span><br><span class="faint">'+r.who+'</span></li>').join('')+'</ul>';
+    det.innerHTML=h;
+    const tog=()=>{det.hidden=!det.hidden;w.classList.toggle("open",!det.hidden);row.setAttribute("aria-expanded",String(!det.hidden));};
+    row.onclick=tog;row.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();tog();}};
+    w.appendChild(row);w.appendChild(det);bars.appendChild(w);});
   p.appendChild(bars);v.appendChild(p);
   const b=el("div","blind");let h="<h4>Blind spots &amp; directional bias</h4><ul style='margin:8px 0 0;padding-left:18px' class='muted'>";DATA.blindspots.forEach(x=>h+="<li style='margin:6px 0'>"+bLead(x)+"</li>");h+="</ul><p class='muted' style='margin-top:12px'><b>What to feed next to keep stress-testing:</b> a China-domestic voice, an energy-utility/grid executive, a private-credit practitioner, and independent corroboration of the crypto-rails theme. Keep disconfirming — not just reinforcing.</p>";b.innerHTML=h;v.appendChild(b);
 }
