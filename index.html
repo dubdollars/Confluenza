@@ -188,7 +188,7 @@ table.pred th{color:var(--faint);font-weight:600;font-size:12px;text-transform:u
 .bars .b{display:grid;grid-template-columns:180px 1fr 40px;gap:12px;align-items:center;margin:7px 0}
 .bars .lab{color:var(--dim);font-size:13px}
 .bt{height:14px;background:#0e131b;border:1px solid #202a37;border-radius:5px;overflow:hidden}
-.xrhint{margin:-4px 0 10px;font-size:12.5px}.xrrow{display:grid;grid-template-columns:18px minmax(0,320px) 1fr 46px;gap:12px;align-items:center;padding:8px 6px;border-radius:8px;cursor:pointer}.xrrow:hover,.xrg.open .xrrow{background:#151c27}.xrrow:focus-visible{outline:2px solid #7c9cff}.xrcar{color:#7c9cff;font-size:14px;transition:transform .15s;display:inline-block;text-align:center}.xrg.open .xrcar{transform:rotate(180deg)}.xrname{color:var(--ink);font-size:14px;font-weight:600}.xrn{font-size:12px;font-weight:400}.xrpct{text-align:right;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}.xrdet{margin:4px 0 12px 30px;padding:10px 14px;border-left:2px solid #2a3546;font-size:13px}.xrh{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--dim);margin:12px 0 4px}.xrvo{line-height:1.7;color:var(--ink)}.xrnotes{margin:4px 0 0;padding-left:18px}.xrnotes li{margin:7px 0}.xrnl{color:var(--ink)}@media(max-width:640px){.xrrow{grid-template-columns:18px 1fr 46px;grid-template-areas:"c n p" "c b b";row-gap:6px}.xrcar{grid-area:c}.xrname{grid-area:n}.xrbar{grid-area:b}.xrpct{grid-area:p}.xrdet{margin-left:8px}}
+.xrhint{margin:-4px 0 10px;font-size:12.5px}.xrrow{display:grid;grid-template-columns:18px minmax(0,320px) 1fr 46px;gap:12px;align-items:center;padding:8px 6px;border-radius:8px;cursor:pointer}.xrrow:hover,.xrg.open>.xrrow{background:#151c27}.xrrow:focus-visible,.xrsubrow:focus-visible{outline:2px solid #7c9cff}.xrcar{color:#7c9cff;font-size:14px;transition:transform .15s;display:inline-block;text-align:center}.xrg.open>.xrrow .xrcar,.xrsub.open>.xrsubrow .xrcar{transform:rotate(180deg)}.xrname{color:var(--ink);font-size:14px;font-weight:600}.xrn{font-size:12px;font-weight:400}.xrpct{text-align:right;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}.xrdet{margin:4px 0 12px 30px;padding:4px 14px 6px;border-left:2px solid #2a3546;font-size:13.5px}.xrdesc{color:var(--dim);line-height:1.6;margin:4px 0 10px;max-width:820px}.xrsubrow{display:inline-flex;gap:8px;align-items:center;cursor:pointer;color:var(--ink);font-weight:600;font-size:13px;padding:5px 8px;border:1px solid #2a3546;border-radius:7px}.xrsubrow:hover{background:#151c27}.xrvl{margin:8px 0 4px}.xrv{padding:6px 0;border-bottom:1px solid #1b2330;line-height:1.45}.xrv:last-child{border-bottom:0}.xrvn{color:var(--ink);font-weight:600}.xrvw{color:var(--dim)}.xrva{display:block;font-size:12px;margin-top:1px}@media(max-width:640px){.xrrow{grid-template-columns:18px 1fr 46px;grid-template-areas:"c n p" "c b b";row-gap:6px}.xrrow>.xrcar{grid-area:c}.xrname{grid-area:n}.xrbar{grid-area:b}.xrpct{grid-area:p}.xrdet{margin-left:8px}}
 .bf{height:100%;background:linear-gradient(90deg,#c792ff,#7c9cff)}
 .blind{background:#1a1113;border:1px solid #5a2b34;border-radius:10px;padding:14px 16px;margin-top:16px}
 .blind h4{color:#ff9aa6}
@@ -21517,54 +21517,13 @@ const DATA = {
   }
  ],
  "blindspots": [
-  "NEW LENS (Edition 022): the first automated sweep pulled every show on the watch list for two weeks (79 transcripts) plus nine earnings calls and the FOMC. The honest unknowns: whether the neocloud stress spreads to the IG core, how much AI equity supply the market can absorb (Anthropic, SpaceX, Meta ATM, then OpenAI), and what a Democratic Congress does to power, data centers and pricing.",
-  "STILL THIN: no direct voices from utilities, grid operators or regulators; no Chinese lab or Chinese investor voices; few non-US macro voices outside Europe-as-warning. Crypto coverage is mostly holders (Jordi, Pomp) plus one bear-risk voice (Wissner-Gross).",
-  "NEW LENS (Edition 021): we followed the money from the model (Batch 19) to the rails agents will settle on. The healthy part: the consumer agent arrived with operator numbers (Instinct), and the ETH case arrived with its intellectual lineage plus real institutional choices. The honest unknowns: whether agent payments flow on stablecoins or on cards (the leading operator uses cards), whether banks open or block agents, and whether the frontier labs keep a premium once they price publicly.",
-  "CAVEAT (Edition 021): the batch leaned on two clusters. Four ETH-holding voices (Polosukhin, Mougayar, Chalom, Tom Lee) supplied the trust-layer case - one incentive; Jordi, who sent us to them, also holds NEAR and is writing part of Mougayars foreword. The Compound house supplied three episodes. Still missing: a payments-industry voice (Visa, Stripe, a bank) on agent rails, and an independent read on lab unit economics (Prof G with Paul Kedrosky; Ezra Klein with Jensen Huang).",
-  "FOUR LIVE TENSIONS (Edition 021), hold them: (1) crypto rails or card rails for agents (Chalom/Lee/Jordi vs the Instinct founder/Ben Carlson)? (2) AI lab bubble or compute-owning duopoly (Ed Elson/Pomp vs Jordi/Josh)? (3) breadth as a 2000 warning (Goepfert, Barclays) or a rate-sector rotation (Matt, McClellan, Batnik)? (4) Fed hike priced (~4.5-5%) or walked back (Williams, Tom Lee)? The structural tail: the Everything Trade - if AI capex funding wobbles, stocks, credit and bonds wobble together.",
-  "NEW LENS (Edition 020): the payoff question (Batch 18) became a where-does-value-migrate question. The healthy part: the commoditization case arrived with hard datapoints (the 80/20 token flip, ~50% price cuts, an IPO slip) AND a named counter (Sacks duopoly, ~60% of new compute), and the RSI debate got a credible middle position (Noam Brown ~3x). The honest unknowns: whether the frontier labs keep a premium at IPO, and whether consumer agents retain users once the novelty fades. Watch the Anthropic IPO price, open-weight token share and Muse retention.",
-  "CAVEAT (Edition 020): the crypto signal is the loudest and least clean in the corpus. Six sources leaned bullish - Jordi x2, Tom Lee, Pal, Galvin, Vlad Tenev - and every one of them runs crypto money or a crypto venue. The only incentive-light reads were skeptical (Batnik: Bitcoin moves with software; Wissner-Gross: tokenization needs no blockchain). The batch was also repeat-heavy (Jordi, Moonshots and the Compound each twice). Still missing: an independent, non-crypto macro voice on why Bitcoin rallied through a hike, and a consumer-behavior read on agent retention.",
-  "FOUR LIVE TENSIONS (Edition 020), hold them: (1) does the frontier lab keep a premium (Sacks) or does the model commoditize (Chamath/Thompson/a16z)? (2) is Bitcoin a fundamental asset (Jordi/Lee/Pal) or high-beta software (Batnik)? (3) in crypto, does value accrue to the L1 (Tom Lee) or the app layer (Galvin) - or does tokenization not need crypto at all (Wissner-Gross)? (4) is RSI foom, ~3x, or not happening (Aschenbrenner / Noam Brown / Ghodsi)? The structural tails: a lab-IPO repricing that hits the payback math, and a monitoring failure (CoT degrading) that turns the doom policy fight into regulation.",
-  "NEW LENS (Edition 019): the question moved on from is-it-dangerous (Batch 17) to does-it-pay-off, does-RSI-actually-run, and where-does-the-value-land. The healthy part: the RSI thesis that powers the whole why-now got its origin text (Aschenbrenner T166) pulled in ALONGSIDE its sharpest disconfirmer (Ghodsis four-criteria T162), so it is now a properly two-sided, testable claim rather than an article of faith. The honest unknowns: whether AI-lab monthly revenue actually doubles to justify the capex (Gerstners math cuts both ways), and whether frontier training cost-per-capability starts falling (the RSI decider). Watch the lab-revenue prints ($4B vs $8B) and the cost-per-capability trend.",
-  "CAVEAT (Edition 019): another repeat- and book-heavy batch. Jordi Visser appeared THREE more times (Coin Stories, Pomp, solo - counted as one voice, and he is launching a paid crypto product), Moonshots again (accelerationist house), and the genuinely new voices were mostly long-the-trade: Gerstner (Altimeter), Ghodsi (Databricks - sells the data layer he says is the unlock), Dina Powell McCormick (Meta), and Aschenbrenner (now runs an AI hedge fund). The bulls (Ives/Lee T157) are the least incentive-clean. Weigh the FRAMEWORKS above the conclusions, and keep hunting the two disconfirmers the batch still lacks: an independent (non-vendor) read on whether context/ontology really is the enterprise bottleneck, and a credit practitioner on whether the offtake-revenue math holds when the next capex wave is debt-funded.",
-  "FIVE LIVE TENSIONS (Edition 019), hold them: (1) does the CapEx PAY OFF - is offtake revenue on track (Gerstner: labs $100B to $180B, offtake to $1T) or does it stall at $4B/mo? (2) is RSI actually running (Aschenbrenner/Moonshots/Jordi) or are the four criteria NOT met (Ghodsi)? (3) is the value in the FRONTIER (the labs) or the CONTEXT (Ghodsi/Lightfield - the frontier neednt advance)? (4) open source cant-compete (Aschenbrenner) vs catching-up-by-token (Ghodsi GLM, Meta democratize-it)? (5) is crypto the next leg of the AI trade (Jordi #1) or a reflexive book-talk hedge? The two structural tails are unchanged: a rates-driven capex pullback at the leveraged edge, and a bitter-lesson/efficiency break that strands todays chips - which is ALSO the RSI/safety tail.",
-  "NEW LENS (Edition 018): the AI-danger debate broke into the open and scrambled the usual sides - OpenAIs own chief scientist and Elon on the real-risk/pace-it side, Jensen/Trump/Sacks on the hoax/reg-capture side. The healthy part: both sides agree the Hugging Face incident was REAL (Brockman and Elon confirm a breakout), so the fight is about meaning and policy, not facts, and there is a concrete fix on the table (Elons cross-lab peer review). The honest unknowns: whether oversight actually keeps pace with recursive self-improvement, and whether the push for regulation is safety or a bid to lock in an OpenAI/Anthropic duopoly (Sackss reg-capture point + the coordinated-whistleblower tell). Watch whether an AI-safety bill passes (~11%) and whether peer review is adopted.",
-  "CAVEAT (Edition 018): this was the HEAVIEST repeat batch yet - Jordi Visser x3 (counted as one voice), All-In x3 (Jensen live, Shotwell/Elon, the house), Moonshots, two a16z shows, and Jensen/Elon repeats. The genuinely new voices were Gwynne Shotwell (an operator, but SpaceX book-talk on the compute business), David Sacks (an administration official - incentive-laden), Greg Brockman (an OpenAI primary source - sells OpenAI), and an LP-allocator lens (biased toward more venture allocation). Weight the incentive-lighter reads, and keep hunting for the two disconfirmers the batch lacks: an independent AI-safety researcher (not tied to a lab) on the real-risk case, and a credit practitioner on whether the depreciation-rebuttal (GPU repricing) actually holds when the Rubin generation floods in.",
-  "FOUR LIVE TENSIONS (Edition 018), hold them: (1) is the AI danger REAL/pace-it (Dario/Pachocki/Brockman/Elon) or a manufactured PANIC + reg-capture (Jensen/Trump/Sacks)? (2) was Hugging Face a REAL breakout with deception (Elon/Brockman) or negligent MISCONFIG (Sacks/All-In)? (3) do RATES matter or is the economy DIGITAL/rate-insensitive (Jordi/Pal)? (4) is the DEPRECIATION bear DEAD (GPU repricing) or just DELAYED (the bitter-lesson/efficiency break)? The two structural tails from prior editions are unchanged and now converge: a rates-driven capex pullback at the leveraged edge, and a bitter-lesson efficiency shock that strands todays chips - which is now ALSO the safety risk, since a more efficient architecture is exactly what an RSI loop could produce.",
-  "NEW LENS (Edition 017): the batch shifted the question from is-it-a-bubble to where-does-the-ACTION-value-land. Three things made the picture healthier: the not-1999 case got a MECHANISM (Dan Skelly's synthetic-tariff operating leverage explains the S&P-493) instead of a hope; the circular worry got a monitorable TELL (watch the spreads - Oracle CDS, CCC-vs-IG); and the loudest doom story (the Hugging Face agent-swarm) got debunked as a misconfigured sandbox + exposed keys. But the honest unknown is unchanged and now sharper: the two biggest buyers of compute (OpenAI/Anthropic) are private, unprofitable and untested - the not-1999 case has an asterisk exactly where demand concentrates. Watch the private-buyer disclosures + the spreads.",
-  "CAVEAT (Edition 017): this was a BOOK-TALK-heavy batch. Jensen sells the shovels (T144), World Labs are promoting their own launch (T146), Levchin/Rampell talk the Affirm/a16z book (T145), and TAIS/All-In lean enthusiast (T139-T141/T143). The genuinely incentive-lighter voice was Dan Skelly (a wealth-desk strategist, T142). Weight his earnings-mechanism and watch-the-spreads tell above the founders' superlatives, and keep hunting for an incentive-clean DISCONFIRMER on the two new frontiers - an independent roboticist on whether world-models actually solve the sim-to-real gap, and a credit practitioner on whether the SPV/IG financing (~$320B in 2026) is as sound as it looks.",
-  "TWO NEW LIVE TENSIONS (Edition 017), hold them, do not resolve them: (1) the agent-swarm incident is a genuine oversight-losing WARNING (TAIS T141, Moonshots T133) vs standard misconfig + reg-capture HYPE (All-In T143, Jensen T144); (2) jobs REMAIN and get supercharged (Jensen T144) vs PERMANENT displacement (Gates T141, Yampolskiy T129). Plus the carryover open-vs-closed fight (Jensen as the open-source bulwark vs an EA/FDA-for-AI reg-capture push) and the un-monitorable-until-now circular fork, now monitorable via SPREADS. The two structural tails from prior editions are unchanged (a rates-driven capex pullback at the leveraged edge; a bitter-lesson efficiency shock - to which Jensen's only answer is fungibility).",
-  "NEW LENS (Edition 016): the batch is the first where the bull and bear cases got ARGUED in mechanical detail rather than asserted. The circular-financing question is now two-sided in numbers: the BEAR (Wissner-Gross) distinguishes income-statement from balance-sheet circularity; the BULL (Baker) answers with sub-1-year paybacks, RVG structures that cannot lose money, and operating-cash-flow funding; Steno Larsen (T131) decodes the treasury plumbing under the whole rates spine. That is a healthier epistemic state than another round of vibes - but the honest unknown (the undisclosed income-vs-balance-sheet financing mix) is the thing to keep watching.",
-  "CAVEAT (Edition 016): this batch leaned HEAVY on long-the-trade sources - TWO Moonshots pods (counted as one accelerationist house), TWO a16z shows (Baker + Sinofsky/Casado, both long the trade), and a consensus CNBC desk. The genuinely incentive-lighter votes were the SemiAnalysis node (T127, sells data), Steno Larsen/Pal (research-sellers, but the plumbing is clean), and Colas (prior). Weight the clean desks above the bulls, and keep hunting for a real DISCONFIRMER of the bull mechanics (a credit practitioner on the RVG/ABS structure; a competing supply-chain desk on the compute-centralization ROI).",
-  "FOUR LIVE TENSIONS are unresolved and now explicit - hold them, do not resolve them: (1) Anthropic AHEAD (T127, Baker) vs COMPUTE-BEHIND OpenAI (Steno/Pal T131, Moonshots T134); (2) open-source a THREAT to the labs (T128/T134) vs a MOAT for the picks-and-shovels (Baker T135 - GREAT for Jensen); (3) capex PLATEAUS/bursts (the bears) vs ACCELERATES in nominal terms (Steno T131, Baker T135); (4) circular-financing BULL (Baker) vs BEAR (Wissner-Gross). The two structural tails from last edition are unchanged: a rates-driven capex pullback and a bitter-lesson efficiency shock that strands compute.",
-  "NEW LENS (Edition 015): the batch reframed the AI trade as a FINANCING story — and finally added the incentive-lighter source type the book was missing when it was all builders + financiers. Markets-research strategists (Colas/DataTrek, the Compound, Animal Spirits) now check the operator/lab enthusiasm with the rates/discount-rate lens: real rates at 2007 highs, ~$1.75T of AI issuance crowding out Treasuries, hyperscalers now debt issuers with roll risk (Oracle near junk), and the ROI that must broaden to the S&P-493. That's a healthier balance than a table full of people who are all long the trade.",
-  "CAVEAT (Edition 015): Batch 14 leaned HEAVY on repeat voices — Visser ×2, two Moonshots pods, All-In ×2, the Compound, Animal Spirits. The genuinely NEW votes were NVIDIA's print (management), Arthur Hayes (an incentive-loaded crypto-bull), Nick Colas (sell-side research), and Michael Kratsios (an administration official) — none fully incentive-clean. Weight the repeats as corroboration, and keep hunting for a real DISCONFIRMER of the rising-rates bear (e.g., a credible case that AI cash flows are short-duration enough to shrug off higher discount rates, or that hyperscaler FCF funds the capex without the debt market).",
-  "STILL-OPEN — the two tails that would break the trade are unresolved and BOTH are structural, not vibes: (1) a RATES-driven capex pullback (watch the 10-yr at 5% + Oracle/neocloud spreads + hyperscaler FCF-vs-debt); (2) a bitter-lesson EFFICIENCY shock that strands today's chips (watch etched-weights + any move away from brute-force scaling). The entire compute-financing edifice assumes neither happens — and the whole batch was still, on net, a bloc that benefits if AI compounds.",
-  "NEW STRENGTH (Edition 014): the batch supplied the FINANCING mechanism the whole bull thesis was missing — compute as a financeable asset class, with a hard ROI proof (SemiAnalysis: >$100B revenue per GW per year on inference) and bottom-up validation (Nebius funding a buildout from prepayments + asset-backed debt on contracted IG cash flows at 41% margins). This is the plumbing that lets the buildout scale past hyperscaler balance sheets — and it tilted the #1 credit bear a notch toward self-funds (7.6→7.4).",
-  "NEW / SHARPENED TAIL (Edition 014): the honest counter now lives INSIDE the bull story. The compute-as-asset-class thesis rests entirely on PREDICTABLE depreciation; a Sutton 'bitter-lesson' architecture break would strand the compute and blow up the ABS math. Jensen's only rebuttal is fungibility ('someone else operates it'). So the pivotal 'scaling' fork was upgraded from an abstract capability debate to the single technological event that could break the financeable-compute trade — watch efficiency-shock signals + any move away from brute-force scaling.",
-  "CAVEAT (Edition 014): Batch 13 is a BULL BLOC talking its book — the $500B financiers (Fink/Gray), Nvidia, Stripe, and the Moonshots panel all have skin in the 'AI compounds' game, and Visser ×2 + the Moonshots roundups were counted as repeats. The genuinely incentive-lighter votes were Nebius's actual numbers, Ramez Naam on the grid, and Todd Sohn on flows. Keep hunting for incentive-clean disconfirmers of the asset-class thesis (a competing supply-chain desk on depreciation; a credit practitioner on the ABS structure).",
-  "NEW STRENGTH (Edition 013): the 'not-a-bubble-because-EARNINGS' case is now ANCHORED and multi-sourced — Gavin Baker's '$11B ARR in a month' frame + Ed Yardeni's earnings-led teardown of the 1999 analogy (28.8% growth, record margins, fwd P/E DOWN while price UP, breadth at a record). Crucially, the strongest bull (Baker) ALSO supplies the discipline: every foundational tech gets a bubble, he's worried about a 'diversity breakdown,' and he hands us the single best gauge — TSMC's capacity. So the book isn't cheerleading; it holds the earnings-are-real case AND a concrete over-build watch in the same voice.",
-  "NEW STRENGTH (Edition 013): the credit fork got REAL-TIME, dated texture from incentive-varied Bloomberg-desk practitioners — Marathon's Bruce Richards (software-loan defaults ~15%, ~23% of PC is software) and Moody's Mark Pinto (it's liquidity, not quality — Blue Owl at par, net inflows). The crack, if it comes, is now a specific channel (software loans / BDC gates), not a vibe. Resolver: software-loan marks + BDC discounts vs GPU spot-vs-contract curves.",
-  "CAVEAT (Edition 013): Batch 12 leaned heavily on REPEAT voices (Visser ×2, All-In/Gerstner, Moonshots, Musk ×2, Baker) and news-TV multi-guest shows (Bloomberg ×2) — high information density but few genuinely NEW independent votes (Yardeni, Eli Lilly, and the Bloomberg analysts did the incremental work). One new voice (Dylan LeClair, crypto-treasury) was logged LOW-SIGNAL/off-core. Weight the repeats as corroboration, not fresh confirmation, and keep hunting for incentive-clean disconfirmers of the not-a-bubble anchor.",
-  "NEW STRENGTH (Edition 012): the #1 debt/credit bear is now checked from BOTH ends by credible new voices — a rebuttal (Baker: compute reprices higher → fund from cash flow, ~$700B of credit demand out) AND a rigorous fragility map (Granato/Drall academics: PE socializes AI-credit risk through insurers' guaranty-fund backstop + shadow reinsurance; Guggenheim 3%→40%). That's the ideal 'eyes wide open' state: the loudest bear got a serious bull counter AND a more specific bear mechanism in the same batch. Resolver to watch: GPU spot-vs-contract rental curves vs insurer/private-credit stress.",
-  "STILL-OPEN caveat: the batch's heavyweight (Baker) and the frontier-CEO (Altman) are both LONG the ecosystem — weigh their bull rebuttal for optimism; the incentive-clean counterweights (McLennan value-allocator, Granato/Drall academics) are the check. The credit fork is genuinely unresolved, not settled bullish.",
-  "NEW STRENGTH (this batch): two INCENTIVE-CLEAN source types now check the book — supply-chain/AI-compute DATA desks (SemiAnalysis's Dylan Patel, Silicon Data's Steve; they sell data/hedging, not a stock book) and AGI-economics ACADEMICS (Imas/Trammell). These aren't talking a position, so their agreement carries more weight than operator/lab book-talk. They re-drew the deep ceiling (EUV/ASML), killed the depreciation bear (H100 rents higher than 3yr ago), and rebutted the AI-recession call.",
-  "CAVEAT on the above: SemiAnalysis is now represented by THREE people (Doug O'Laughlin T19/T20, Jeremy Eliuveros T38, Dylan Patel T64/T69) — that's ONE institutional house-view, not three independent confirmations. Weight their agreement as a single (very good) source, and keep looking for a competing supply-chain desk to disconfirm them.",
-  "NEW STRENGTH (Edition 010): the macro side is now anchored by two of the best incentive-clean INSTITUTIONAL strategists in the business — Jurrien Timmer (Fidelity) and Michael Cembalest (JPM, ~$4T). They add rigor the fintwit/operator sources lack: Cembalest's job is literally debunking narratives with data (he countered the dollar-collapse, gold-hoarding and China-dumping-treasuries stories this batch) and gave the sharpest bear TELL (watch the hyperscaler buyers). This is the counterweight to the accelerationist/operator tilt.",
-  "NEW STRENGTH: earnings calls add a GROUND-TRUTH layer — hard numbers that reality-check the narratives. ServiceNow's beat refuted 'seat-SaaS is toast'; Alphabet's beat delivered the #1 pick's catalyst and refuted 'AI kills Search.' Caveat: management is always bullish, so pair each with the stock reaction and valuation.",
-  "NEW STRENGTH (Edition 011): all FOUR Q2 mega-cap calls (Meta, Microsoft, Amazon, Apple) are now in the book as ground-truth — and they let the library stress-test a live event. The AI-trade unwind (Leopold margin-call, Korea liquidations, SOX −20%) was diagnosed as POSITIONING, not fundamentals, precisely because the earnings moved the other way (AWS +36.7%, Azure +41%). Amazon's capex line ('higher cost of memory') gave the memory thesis its first buyer-side confirmation, and Meta's FCF collapse (−90% to $784M) is the one data point that fits the circular bear — a clean, sourced split rather than vibes.",
-  "NEW LENS (Edition 011): a POSITIONING / market-structure theme (~7) — leverage unwinds under a calm index are now a recurring feature (Visser's LTCM/2007/Archegos read; Goldman VIP crowded-book had its worst four days ever). This is a timing/risk overlay, not a directional call: buy the cleansing, watch the crowded-book index + prime-broker margin headlines.",
-  "The 'no close-to-the-trade markets voice' gap is now PARTLY CLOSED — Brown+Batnick add a positioning/flows/earnings read (and independently confirmed Alphabet). More of this cohort would help.",
-  "Bear/skeptic side WELL represented (Damodaran, Eisman, Marcus, O'Laughlin, Grantham); the accelerationist wave (Moonshots, Andreessen, Musk) re-tilted the library BACK toward net-long-AI — now with a markets check, but watch the tilt.",
-  "China-DOMESTIC voice now PARTLY CLOSED — ChinAI (Jeff Ding) translates primary Chinese sources and it CORRECTED the china-open-weight theme (confirmed domestic-stack progress, tempered 'China dominates compute'). Caveat: still translated/curated by a US-based academic, not a mainland practitioner.",
-  "CLOSED — energy/grid specialist: Jeremy/SemiAnalysis, Ember (global electricity data) and a TX wind landowner now supply the domain view. They CONFIRMED the energy bedrock from the inside (grid can't keep up) AND added an eyes-open caution (gas-turbine ORDERS may peak this year; the marginal build shifts to fuel cells/reciprocating/solar+batteries).",
-  "CLOSED — private-credit practitioner: Rowan (Apollo) + Lipschultz (Blue Owl) give the insider view; the #1 bear theme is now genuinely multi-sided — the IG senior-secured core is well-protected (13bps losses, 45% LTV) but UNTESTED in recession, and the risk sits in the levered fringe (neoclouds/PE-software/high-yield). Clark + Ahamed keep the doom case honest.",
-  "Crypto/stablecoin theme still leans on a few voices (Visser ×4, Carter ×2, Campbell ×2) — now with an institutional + quantum-exposure lens, but a mainland-China crypto practitioner is still missing.",
-  "NEW watch: quantum has a specialist (Bob Sorensen) but the pure-play equities are a fundable bubble (~85 makers, ~70 may die) — flagged, not owned.",
-  "Accelerationist cluster + max-bull VCs are a CORRELATED bloc — counted modestly (not one-vote-each), direction discounted; the tape + earnings + energy/credit specialists are the main independent checks on their optimism.",
-  "NOW COVERED: physical-AI/autonomy has a dedicated operator (Applied Intuition), and a close-to-the-trade AI-compute read (BG2 / Gerstner+Baker) + a growth-scale read (a16z's David George) are folded in — these strengthen the frontier-captures-value counter to the open-source bear.",
-  "NEW (this batch): the Taiwan tail is now SPECIALIST-QUANTIFIED (Patel: a blockade takes incremental AI compute to ~zero; the litho tools themselves use Taiwan chips) — severity sized, probability still unknown/unhedgeable.",
-  "STILL OPEN: a COMPETING supply-chain desk to disconfirm SemiAnalysis; a mainland-China crypto/AI practitioner; a dedicated consumer-AI voice; and more of the close-to-the-trade markets cohort (the tape is a check, but thin relative to the analyst/operator side)."
+  "Tilted toward people who profit from AI spending: about {vc+lab}% of the material comes from venture investors, founders and AI-lab leaders. They are close to the work and usually early, but they are long the trade, so a theme only they support is treated as a hypothesis, not a conclusion.",
+  "Skeptics are outnumbered: valuation voices and bears are about {skeptic}% of the mix. Their pushback is weighted heavily when it lands, but the bear case simply gets less airtime than the bull case.",
+  "A handful of shows carry a lot of weight: The Compound, a16z, Jordi Visser, Prof G Markets, Moonshots, Odd Lots and All-In supply roughly 60% of the material. Weekly hosts can make an idea sound more agreed-on than it is, so repeat appearances count as one voice when confluence is scored.",
+  "Hard numbers are a small slice: earnings calls, the Fed and official sources are about {earn}% of the mix. They anchor the scoring, because numbers beat opinions, but most of what comes in is interpretation.",
+  "Thin on the physical build and its financing: few voices from utilities, grid operators, data-center builders or lenders, even though power and financing are two of the biggest themes. Credit and allocator voices are about {capital}% of recent material.",
+  "Mostly American: China comes through a few translators and researchers, with no Chinese lab or investor voices, and there is little from Europe, Japan, India or the Gulf.",
+  "Part of the reading list comes from one bull: many shows are added because Jordi Visser recommends them, so the list partly reflects his priorities. Skeptic shows are added on purpose to balance it."
  ],
  "method": {},
  "timelineArchive": [
@@ -34262,54 +34221,316 @@ const DATA = {
   {
    "key": "vc",
    "name": "VC & tech-investor podcasts",
-   "desc": "Venture and growth investors and the founders they host: a16z, All-In, BG2, Invest Like the Best, Moonshots, Cheeky Pint. Mostly long the AI trade."
+   "desc": "Venture and growth investors, and the founders they put on their shows: a16z, All-In, BG2, Invest Like the Best, Moonshots and Cheeky Pint. They see new companies and spending plans early, which makes them the fastest read on where AI is heading. Most of them are long the AI trade, so their optimism is discounted and their numbers are checked against earnings."
   },
   {
    "key": "markets",
    "name": "Markets podcasts & TV desks",
-   "desc": "The Compound, Animal Spirits, Prof G Markets, Bloomberg and CNBC. Close to the tape, but often reacting to the same news."
+   "desc": "Daily and weekly markets shows: The Compound, Animal Spirits, Prof G Markets, Bloomberg and CNBC. They track what investors are actually doing with their money, which feeds Macro Pulse and the Weekly Synthesis. They often react to the same headlines, so several of them agreeing counts for less than it looks."
   },
   {
    "key": "lab",
    "name": "AI-lab & big-tech leaders",
-   "desc": "First-person interviews with the people building AI: Huang, Musk, Altman, Amodei, Hassabis, Nadella. Closest to the work, and they talk their book."
+   "desc": "The people building AI, in their own words: Huang, Musk, Altman, Amodei, Hassabis, Nadella and their teams. They are the best source on what the technology can do next and how much they plan to spend. They also sell the product, so their timelines go on the Timeline as claims to be graded, not as facts."
   },
   {
    "key": "macro",
    "name": "Macro strategists & economists",
-   "desc": "Rates, liquidity, the economy and politics: Visser, Raoul Pal, Odd Lots guests, Fidelity, JPMorgan, Morgan Stanley strategists."
+   "desc": "Strategists and economists on rates, inflation, the Fed, liquidity and politics: Jordi Visser, Raoul Pal, Fidelity's Jurrien Timmer, JPMorgan's Michael Cembalest and the guests on Odd Lots. They supply the backdrop behind Macro Pulse and help judge whether the AI story is fighting the economy or riding it."
   },
   {
    "key": "earn",
    "name": "Earnings calls & official sources",
-   "desc": "Company earnings calls, the Fed and government officials. The hardest numbers in the library, though management spins the outlook."
+   "desc": "Company earnings calls, the Federal Reserve and government officials. This is the hardest data in the library: real revenue, spending and guidance. Management still spins the outlook, so the numbers count for more than the commentary."
   },
   {
    "key": "skeptic",
    "name": "Skeptics & valuation voices",
-   "desc": "The counterweight to the bulls: Eisman, Damodaran, Grantham, Kedrosky, Gary Marcus. Watched for crowding and bubble risk."
+   "desc": "The counterweight to the bulls: Steve Eisman, Aswath Damodaran, Jeremy Grantham, Paul Kedrosky and Gary Marcus. They test valuations, financing and hype, and feed the bear and contested themes. When a skeptic and a bull agree, that agreement is weighted heavily."
   },
   {
    "key": "data",
    "name": "Industry & data specialists",
-   "desc": "Chips, energy, quantum and China specialists such as SemiAnalysis and Ember. They sell research, not stocks."
+   "desc": "Specialists who sell research rather than stocks: SemiAnalysis on chips and data centers, energy researchers such as Ember, and quantum and China analysts. They supply the supply-chain detail behind the chip, power and China themes, and are some of the least conflicted voices in the library."
   },
   {
    "key": "crypto",
    "name": "Crypto voices",
-   "desc": "Crypto investors, builders and treasury companies. Nearly all of them own what they discuss."
+   "desc": "Crypto investors, builders and treasury-company executives, from Arthur Hayes to Vitalik Buterin. They feed the crypto and tokenization themes. Nearly all of them own what they discuss, so their views carry little weight unless others back them up."
   },
   {
    "key": "capital",
    "name": "Credit, allocators & asset managers",
-   "desc": "Private credit, fund allocators and asset managers (Apollo, Blue Owl, Baron, Hamilton Lane): how the AI build gets financed."
+   "desc": "Private-credit lenders, fund allocators and asset managers: Apollo, Blue Owl, Hamilton Lane, Baron Capital and First Eagle. They show how the AI build is being financed and who carries the risk if it goes wrong."
   },
   {
    "key": "safety",
    "name": "Academics & AI-safety researchers",
-   "desc": "University economists, legal scholars and AI-safety researchers. Little money at stake, but often off-core for investing."
+   "desc": "University economists, legal scholars and AI-safety researchers such as Tyler Cowen, Ethan Mollick and Paul Christiano. They have little money at stake and raise questions markets tend to ignore: jobs, regulation and runaway risk. Most of it sits outside day-to-day investing, so it shapes the long-range Timeline more than anything else."
   }
- ]
+ ],
+ "voiceInfo": {
+  "Jordi Visser": "Jordi Visser|Macro strategist at 22V Research, ex-Morgan Stanley; runs an AI and crypto portfolio|His weekly macro video",
+  "Pomp x Jordi Visser": "Jordi Visser|Macro strategist at 22V Research, ex-Morgan Stanley; runs an AI and crypto portfolio|The Pomp Podcast",
+  "Pomp (w/ Jordi Visser)": "Jordi Visser|Macro strategist at 22V Research, ex-Morgan Stanley; runs an AI and crypto portfolio|The Pomp Podcast",
+  "Pomp Podcast (Visser)": "Jordi Visser|Macro strategist at 22V Research, ex-Morgan Stanley; runs an AI and crypto portfolio|The Pomp Podcast",
+  "Jordi Visser & Anthony Pompliano": "Jordi Visser|Macro strategist at 22V Research, ex-Morgan Stanley; runs an AI and crypto portfolio|The Pomp Podcast",
+  "Raoul Pal & Jordi Visser": "Raoul Pal|Founder of Real Vision; ex-Goldman macro trader, long crypto|Real Vision / The Journeyman",
+  "Steno Larsen & Raoul Pal": "Raoul Pal|Founder of Real Vision; ex-Goldman macro trader, long crypto|Real Vision",
+  "Raoul Pal & Richard Galvin": "Richard Galvin|Crypto fund manager at DACM, with Raoul Pal|Real Vision",
+  "Jensen Huang": "Jensen Huang|Nvidia co-founder|Interviews, keynotes and launches",
+  "Jensen Huang (BG2)": "Jensen Huang|Nvidia co-founder|BG2, Ezra Klein, Yahoo Finance and more",
+  "Jensen Huang (Ezra Klein)": "Jensen Huang|Nvidia co-founder|BG2, Ezra Klein, Yahoo Finance and more",
+  "Jensen Huang (Yahoo Finance)": "Jensen Huang|Nvidia co-founder|BG2, Ezra Klein, Yahoo Finance and more",
+  "Demis Hassabis": "Demis Hassabis|CEO of Google DeepMind, Nobel laureate|Interviews and Masters of Scale",
+  "Demis Hassabis (Masters of Scale)": "Demis Hassabis|CEO of Google DeepMind, Nobel laureate|Interviews and Masters of Scale",
+  "Dario Amodei": "Dario Amodei|Anthropic co-founder and CEO|Long-form interviews",
+  "Dario & Daniela Amodei (The Builders)": "Dario Amodei|Anthropic co-founder and CEO (with president Daniela Amodei)|The Builders with Walter Isaacson",
+  "Elon Musk": "Elon Musk|CEO of Tesla and SpaceX, founder of xAI|Dwarkesh, DealBook, The Builders, conferences",
+  "Elon Musk (The Builders)": "Elon Musk|CEO of Tesla and SpaceX, founder of xAI|Dwarkesh, DealBook, The Builders, conferences",
+  "Elon Musk (NYT DealBook)": "Elon Musk|CEO of Tesla and SpaceX, founder of xAI|Dwarkesh, DealBook, The Builders, conferences",
+  "Elon Musk (TomorrowX)": "Elon Musk|CEO of Tesla and SpaceX, founder of xAI|Dwarkesh, DealBook, The Builders, conferences",
+  "Elon Musk (Baron conference)": "Elon Musk|CEO of Tesla and SpaceX, founder of xAI|Dwarkesh, DealBook, The Builders, conferences",
+  "Sam Altman": "Sam Altman|OpenAI co-founder and CEO|Invest Like the Best, Cheeky Pint, Semafor, Stanford and more",
+  "Sam Altman (Cheeky Pint)": "Sam Altman|OpenAI co-founder and CEO|Invest Like the Best, Cheeky Pint, Semafor, Stanford and more",
+  "Sam Altman (Matthew Berman)": "Sam Altman|OpenAI co-founder and CEO|Invest Like the Best, Cheeky Pint, Semafor, Stanford and more",
+  "Sam Altman (Raj Shamani)": "Sam Altman|OpenAI co-founder and CEO|Invest Like the Best, Cheeky Pint, Semafor, Stanford and more",
+  "Sam Altman (Stanford GSB)": "Sam Altman|OpenAI co-founder and CEO|Invest Like the Best, Cheeky Pint, Semafor, Stanford and more",
+  "Sam Altman (OpenAI)": "Sam Altman|OpenAI co-founder and CEO|Invest Like the Best, Cheeky Pint, Semafor, Stanford and more",
+  "Sam Altman and Greg Brockman (NYT DealBook)": "Sam Altman & Greg Brockman|OpenAI's CEO and president|NYT DealBook Summit",
+  "Sam Altman and Greg Brockman (DealBook)": "Sam Altman & Greg Brockman|OpenAI's CEO and president|NYT DealBook Summit",
+  "Greg Brockman (OpenAI)": "Greg Brockman|OpenAI president and co-founder|a16z podcast",
+  "Noam Brown (OpenAI)": "Noam Brown|OpenAI reasoning researcher|Dwarkesh Podcast",
+  "a16z (OpenAI computer-use leads)": "OpenAI computer-use team|Product leads behind OpenAI's computer-using agents|a16z podcast",
+  "a16z (OpenAI Life Sciences)": "OpenAI Life Sciences|OpenAI's biology and health team|a16z Bio + Health",
+  "a16z (Chen, Schulman)": "Mark Chen & John Schulman|OpenAI chief research officer; OpenAI co-founder|a16z podcast",
+  "Boris Cherny": "Boris Cherny|Creator of Claude Code at Anthropic|Odd Lots",
+  "World Labs (Fei-Fei Li)": "Fei-Fei Li|Stanford AI pioneer, co-founder of World Labs|World Labs launch",
+  "Gwynne Shotwell (SpaceX)": "Gwynne Shotwell|SpaceX president and COO|All-In",
+  "Dina Powell McCormick (Meta)": "Dina Powell McCormick|Meta president|All-In Summit",
+  "Meta (Zuckerberg/Wang on Cheeky Pint)": "Mark Zuckerberg & Alexandr Wang|Meta CEO and Meta's chief AI officer|Cheeky Pint",
+  "Satya Nadella (Semafor)": "Satya Nadella|Microsoft CEO|Semafor, 20VC, DealBook and more",
+  "Satya Nadella (20VC)": "Satya Nadella|Microsoft CEO|Semafor, 20VC, DealBook and more",
+  "Satya Nadella (Microsoft)": "Satya Nadella|Microsoft CEO|Semafor, 20VC, DealBook and more",
+  "Satya Nadella": "Satya Nadella|Microsoft CEO|Semafor, 20VC, DealBook and more",
+  "Sundar Pichai (Big Technology)": "Sundar Pichai|Alphabet and Google CEO|Big Technology",
+  "The Compound (Alex Altmann, Barclays)": "Alexander Altmann|Barclays equity strategist|The Compound and Odd Lots",
+  "Odd Lots (Alex Altmann, Barclays)": "Alexander Altmann|Barclays equity strategist|The Compound and Odd Lots",
+  "Odd Lots (Alexander Altmann)": "Alexander Altmann|Barclays equity strategist|The Compound and Odd Lots",
+  "All-In": "All-In hosts|Chamath Palihapitiya, David Sacks, Jason Calacanis and David Friedberg; venture investors|All-In podcast",
+  "All-In (w/ Nikesh Arora)": "Nikesh Arora|Palo Alto Networks CEO|All-In",
+  "All-In (Krishna/Arora panel)": "Arvind Krishna|IBM CEO, with Nikesh Arora|All-In CIO panel",
+  "All-In (Dylan Field)": "Dylan Field|Figma co-founder and CEO|All-In",
+  "All-In (Rick Smith, Axon)": "Rick Smith|Axon founder and CEO|All-In",
+  "All-In (Ghodsi)": "Ali Ghodsi|Databricks co-founder and CEO|All-In and a16z",
+  "Ali Ghodsi (Databricks)": "Ali Ghodsi|Databricks co-founder and CEO|All-In and a16z",
+  "All-In (George Kurtz)": "George Kurtz|CrowdStrike co-founder and CEO|All-In",
+  "Marc Andreessen": "Marc Andreessen|a16z co-founder; the most bullish pole in the library|Podcasts and a16z",
+  "a16z (Andreessen/Horowitz/Dixon)": "Marc Andreessen|a16z co-founder; the most bullish pole in the library|Podcasts and a16z",
+  "Marc Andreessen (2014 ref)": "Marc Andreessen (2014 essay)|'Why Bitcoin Matters', a reference text|New York Times",
+  "Moonshots (Diamandis)": "Moonshots panel|Peter Diamandis and co-hosts; tech optimists|Moonshots podcast",
+  "Moonshots (Ismail)": "Moonshots panel|Peter Diamandis and co-hosts; tech optimists|Moonshots podcast",
+  "Moonshots (Diamandis) + Chamath": "Moonshots panel|Peter Diamandis and co-hosts; tech optimists|Moonshots podcast",
+  "Moonshots (Brett Adcock)": "Brett Adcock|Founder and CEO of Figure (humanoid robots)|Moonshots",
+  "Vlad Tenev (Robinhood)": "Vlad Tenev|Robinhood co-founder and CEO|Moonshots",
+  "Ramez Naam": "Ramez Naam|Clean-energy investor and author|Moonshots",
+  "BG2": "Brad Gerstner|Altimeter Capital founder; big public-markets tech investor|BG2, CNBC, Invest Like the Best",
+  "Brad Gerstner (Altimeter)": "Brad Gerstner|Altimeter Capital founder; big public-markets tech investor|BG2, CNBC, Invest Like the Best",
+  "Brad Gerstner (CNBC)": "Brad Gerstner|Altimeter Capital founder; big public-markets tech investor|BG2, CNBC, Invest Like the Best",
+  "Brad Gerstner (ILTB)": "Brad Gerstner|Altimeter Capital founder; big public-markets tech investor|BG2, CNBC, Invest Like the Best",
+  "Brad Gerstner": "Brad Gerstner|Altimeter Capital founder; big public-markets tech investor|BG2, CNBC, Invest Like the Best",
+  "Gavin Baker": "Gavin Baker|Atreides Management CIO; tech and semis investor|Invest Like the Best, TBPN and more",
+  "Gavin Baker (TBPN)": "Gavin Baker|Atreides Management CIO; tech and semis investor|Invest Like the Best, TBPN and more",
+  "Gavin Baker (Sourcery)": "Gavin Baker|Atreides Management CIO; tech and semis investor|Invest Like the Best, TBPN and more",
+  "Gavin Baker (Atreides)": "Gavin Baker|Atreides Management CIO; tech and semis investor|Invest Like the Best, TBPN and more",
+  "David George": "David George|Runs a16z's growth fund|a16z podcast",
+  "David George (a16z)": "David George|Runs a16z's growth fund|a16z podcast",
+  "Applied Intuition": "Applied Intuition|Autonomy and physical-AI software company|a16z podcast",
+  "Travis Kalanick": "Travis Kalanick|Uber co-founder, now CloudKitchens|Interview",
+  "Stripe (Gaybrick)": "Will Gaybrick|Stripe president of product and business|Interview",
+  "Stripe Sessions (Kaliski)": "Steve Kaliski|Stripe engineer on agent commerce|Stripe Sessions",
+  "Sinofsky & Casado (a16z)": "Martin Casado & Steven Sinofsky|a16z general partner; ex-Microsoft Windows chief|a16z podcast",
+  "Casado, Sinofsky & Levie (a16z)": "Martin Casado & Steven Sinofsky|a16z general partner; ex-Microsoft Windows chief|a16z podcast",
+  "Invest Like the Best (Martin Casado)": "Martin Casado & Steven Sinofsky|a16z general partner; ex-Microsoft Windows chief|a16z podcast",
+  "a16z (Naous/Casado)": "Jad Naous|Founder of Grepr|a16z podcast",
+  "The AI Show (TAIS)": "The AI Show|AI-industry news podcast|The AI Show",
+  "Levchin & Rampell": "Max Levchin|Affirm founder and CEO, with a16z's Alex Rampell|a16z podcast",
+  "Lightfield (Keith Peiris)": "Keith Peiris|Founder of Lightfield|a16z podcast",
+  "Instinct founder": "Instinct founder|Startup founder|Invest Like the Best",
+  "a16z (Pollen/Assistant Bench)": "David Pollen|Founder of Assistant Bench|a16z podcast",
+  "a16z": "David Pawlan|Consumer-AI founder, with a16z partners|a16z podcast",
+  "a16z (Andy Jassy)": "Andy Jassy|Amazon CEO|a16z podcast",
+  "a16z (Gruenstein, Tutor Intelligence)": "Josh Gruenstein|Tutor Intelligence co-founder (robotics)|a16z podcast",
+  "a16z (Madheswaran, Eve)": "Jay Madheswaran|Eve co-founder (legal AI)|a16z podcast",
+  "a16z American Dynamism": "a16z American Dynamism|a16z's defense and industrial team|a16z podcast",
+  "a16z (Mark Cuban)": "Mark Cuban|Investor, founder of Cost Plus Drugs|a16z podcast",
+  "a16z (Greze, Town)": "Jean-Denis Greze|Founder of Town (AI tax)|a16z podcast",
+  "a16z (Angelos, VGS)": "Terry Angelos|CEO of VGS (payments security)|a16z podcast",
+  "a16z (Nathan Lambert)": "Nathan Lambert|Open-model AI researcher|a16z podcast",
+  "a16z (Figma CFO)": "Praveer Melwani|Figma CFO|a16z podcast",
+  "a16z (Somorjai)": "John Somorjai|Salesforce Ventures chief|a16z podcast",
+  "a16z (Dharmesh Shah)": "Dharmesh Shah|HubSpot co-founder|a16z podcast",
+  "a16z (Volpi)": "Mike Volpi|Ex-Cisco M&A chief, investor|a16z podcast",
+  "a16z (Luttwak)": "Ami Luttwak|Wiz co-founder and CTO|a16z podcast",
+  "a16z (Ken Liu, First Person Labs)": "Ken Liu|Founder of First Person Labs|a16z podcast",
+  "a16z (DHH)": "David Heinemeier Hansson|Creator of Ruby on Rails, Basecamp co-founder|a16z podcast",
+  "Scott Nolan (General Matter, Cheeky Pint)": "Scott Nolan|Founder of General Matter (nuclear fuel)|Cheeky Pint",
+  "Cheeky Pint (Storonsky)": "Nik Storonsky|Revolut founder and CEO|Cheeky Pint",
+  "Invest Like the Best (Christina Cacioppo)": "Christina Cacioppo|Vanta co-founder and CEO|Invest Like the Best",
+  "Invest Like the Best (Ramtin Naimi)": "Ramtin Naimi|Abstract Ventures founder|Invest Like the Best",
+  "Invest Like the Best (Zach Reitano, Ro)": "Zach Reitano|Ro co-founder and CEO|Invest Like the Best",
+  "Invest Like the Best (Scott Wu, Cognition)": "Scott Wu|Cognition co-founder and CEO|Invest Like the Best",
+  "Dwarkesh Patel": "Dwarkesh Patel|Host of the Dwarkesh Podcast, AI interviewer|Dwarkesh Podcast",
+  "The Compound": "Josh Brown & Michael Batnick|Ritholtz Wealth advisers; markets commentary|The Compound, What Are Your Thoughts",
+  "The Compound (Brown/Batnik)": "Josh Brown & Michael Batnick|Ritholtz Wealth advisers; markets commentary|The Compound, What Are Your Thoughts",
+  "The Compound (WAYT)": "Josh Brown & Michael Batnick|Ritholtz Wealth advisers; markets commentary|The Compound, What Are Your Thoughts",
+  "WAYT (Compound)": "Josh Brown & Michael Batnick|Ritholtz Wealth advisers; markets commentary|The Compound, What Are Your Thoughts",
+  "The Compound and Friends": "Josh Brown & Michael Batnick|Ritholtz Wealth advisers; markets commentary|The Compound, What Are Your Thoughts",
+  "The Compound (Brown, Batnick, Parets)": "JC Parets|Technical analyst, All Star Charts|The Compound and Friends",
+  "Animal Spirits": "Ben Carlson & Michael Batnick|Ritholtz Wealth advisers; markets and culture|Animal Spirits",
+  "Animal Spirits (Carlson/Batnik)": "Ben Carlson & Michael Batnick|Ritholtz Wealth advisers; markets and culture|Animal Spirits",
+  "Animal Spirits (Batnick/Carlson)": "Ben Carlson & Michael Batnick|Ritholtz Wealth advisers; markets and culture|Animal Spirits",
+  "Animal Spirits (The Compound)": "Ben Carlson & Michael Batnick|Ritholtz Wealth advisers; markets and culture|Animal Spirits",
+  "Animal Spirits (Compound)": "Ben Carlson & Michael Batnick|Ritholtz Wealth advisers; markets and culture|Animal Spirits",
+  "Animal Spirits (Batnick, Carlson)": "Ben Carlson & Michael Batnick|Ritholtz Wealth advisers; markets and culture|Animal Spirits",
+  "Animal Spirits (Cullen Roche)": "Cullen Roche|Discipline Funds founder|Animal Spirits",
+  "The Compound (Todd Sohn)": "Todd Sohn|ETF and technical strategist at Strategas|The Compound and Friends",
+  "The Compound (Ives & Lee)": "Dan Ives & Tom Lee|Wedbush tech analyst; Fundstrat strategist|The Compound and Friends",
+  "The Compound (Ed Elson)": "Ed Elson|Prof G Markets host|The Compound and Friends",
+  "The Compound (Chart Kid Matt)": "Chart Kid Matt|Technical chartist|The Compound and Friends",
+  "The Compound (Jill Schlesinger)": "Jill Schlesinger|CBS News business analyst|The Compound and Friends",
+  "The Compound (Dan Clifton)": "Dan Clifton|Strategas head of policy research|The Compound and Friends",
+  "Jurrien Timmer (Compound and Friends)": "Jurrien Timmer|Fidelity director of global macro|The Compound and Ask the Expert",
+  "Jurrien Timmer": "Jurrien Timmer|Fidelity director of global macro|The Compound and Ask the Expert",
+  "Alex Kantrowitz": "Alex Kantrowitz|Tech journalist, Big Technology|The Compound and Friends",
+  "Bloomberg (Open Interest)": "Bloomberg Open Interest|Bloomberg TV markets show with guests|Bloomberg TV",
+  "Bloomberg (Surveillance)": "Bloomberg Surveillance|Bloomberg's morning markets show with guests|Bloomberg TV and radio",
+  "CNBC Halftime/Closing (desk)": "CNBC Halftime and Closing Bell|CNBC markets desks with rotating guests|CNBC",
+  "Prof G Markets (Galloway/Elson)": "Scott Galloway & Ed Elson|NYU professor and his co-host; markets and business|Prof G Markets",
+  "Prof G Markets (Galloway & Elson)": "Scott Galloway & Ed Elson|NYU professor and his co-host; markets and business|Prof G Markets",
+  "Prof G Markets (Galloway, Elson)": "Scott Galloway & Ed Elson|NYU professor and his co-host; markets and business|Prof G Markets",
+  "Prof G Markets (Ed Elson)": "Scott Galloway & Ed Elson|NYU professor and his co-host; markets and business|Prof G Markets",
+  "Prof G Markets (Elson)": "Scott Galloway & Ed Elson|NYU professor and his co-host; markets and business|Prof G Markets",
+  "Prof G Markets (Elson w/ Foley, Bosa, Zandi)": "Mark Zandi & guests|Moody's chief economist, with CNBC's Deirdre Bosa|Prof G Markets",
+  "Prof G Markets (w/ Josh Brown)": "Josh Brown|Ritholtz Wealth CEO|Prof G Markets",
+  "Prof G Markets (w/ Luria, Gapen)": "Gil Luria|D.A. Davidson tech analyst|Prof G Markets",
+  "Prof G Markets (Elson/Luria)": "Gil Luria|D.A. Davidson tech analyst|Prof G Markets",
+  "Prof G Markets (Misha Laskin, Reflection AI)": "Misha Laskin|Reflection AI co-founder|Prof G Markets",
+  "Prof G Markets (Scaramucci)": "Anthony Scaramucci|SkyBridge founder|Prof G Markets",
+  "Prof G Markets (Edwards)": "Kathryn Anne Edwards|Labor economist|Prof G Markets",
+  "Prof G Markets (Bosa/Goswami)": "Deirdre Bosa & Rohan Goswami|Tech reporters|Prof G Markets",
+  "Michael Cembalest": "Michael Cembalest|JPMorgan Asset Management chief strategist, 'Eye on the Market'|Podcast interview",
+  "Ed Yardeni": "Ed Yardeni|Veteran Wall Street strategist, Yardeni Research|The Compound and Friends",
+  "Nick Colas (DataTrek)": "Nick Colas|DataTrek Research co-founder|The Compound",
+  "Dan Skelly (Morgan Stanley)": "Dan Skelly|Morgan Stanley Wealth Management strategist|The Compound and Friends",
+  "Dan Ives": "Dan Ives|Wall Street tech analyst, the loudest AI bull on the sell side|The Pomp Podcast",
+  "Russell Clark": "Russell Clark|Macro hedge-fund manager|Podcast interview",
+  "Liaquat Ahamed": "Liaquat Ahamed|Economic historian, author of 'Lords of Finance'|Podcast interview",
+  "Eric (YWR)": "Eric (YWR)|Macro and equity investor, Your Weekend Reading|Podcast interview",
+  "Goldman Sachs Exchanges (Lynam/Ablon)": "Goldman Sachs credit team|Goldman Sachs credit strategists|Goldman Sachs Exchanges",
+  "Odd Lots (Nate Silver)": "Nate Silver|Election forecaster, Silver Bulletin|Odd Lots",
+  "Odd Lots (Alex Micalizzi, Nomura)": "Alex Micalizzi|Nomura structured-products specialist|Odd Lots",
+  "Odd Lots (Lindsay Owens)": "Lindsay Owens|Groundwork Collaborative economist|Odd Lots",
+  "Odd Lots (Terry Duffy, CME)": "Terry Duffy|CME Group chairman and CEO|Odd Lots",
+  "Odd Lots (Skanda Amarnath)": "Skanda Amarnath|Employ America executive director|Odd Lots",
+  "Odd Lots (James Bosworth)": "James Bosworth|Latin America political-risk analyst|Odd Lots",
+  "Odd Lots (guest)": "Joshua Goodman|New York City sanitation official|Odd Lots",
+  "Odd Lots (guests)": "Nishant Kumar|Bloomberg hedge-fund reporter|Odd Lots",
+  "Odd Lots (Morley)": "John Morley|Yale law professor|Odd Lots",
+  "Odd Lots (Tian Yang)": "Tian Yang|Variant Perception macro researcher|Odd Lots",
+  "Odd Lots (Daniel Saedi, Minerva)": "Daniel Saedi|Founder of Minerva|Odd Lots",
+  "Odd Lots (Marc Levinson)": "Marc Levinson|Economic historian|Odd Lots",
+  "ServiceNow (earnings)": "ServiceNow|Enterprise-software company|Earnings call",
+  "Alphabet (earnings)": "Alphabet|Google's parent|Earnings call",
+  "Bloom Energy (earnings)": "Bloom Energy|Fuel-cell power for data centers|Earnings call",
+  "Meta (earnings)": "Meta|Zuckerberg and CFO Susan Li|Earnings call",
+  "Microsoft (earnings)": "Microsoft|Nadella and CFO Amy Hood|Earnings call",
+  "Amazon (earnings)": "Amazon|Jassy and the CFO|Earnings call",
+  "Apple (earnings)": "Apple|Cook and the CFO|Earnings call",
+  "Tesla (earnings)": "Tesla|Musk and the leadership team|Earnings call",
+  "Eli Lilly (earnings)": "Eli Lilly|Drugmaker; a non-tech read on the economy|Earnings call",
+  "Nebius (earnings)": "Nebius|AI cloud provider|Earnings call",
+  "CoreWeave (earnings)": "CoreWeave|AI cloud provider|Earnings call",
+  "SpaceX (earnings)": "SpaceX|Rockets, Starlink and AI compute|Earnings call",
+  "TSMC (earnings)": "TSMC|Makes most of the world's advanced chips|Earnings call",
+  "ASML (earnings)": "ASML|Makes the machines that make advanced chips|Earnings results",
+  "NVIDIA (earnings)": "Nvidia|The chipmaker at the center of the AI build|Earnings calls",
+  "Nvidia (earnings)": "Nvidia|The chipmaker at the center of the AI build|Earnings calls",
+  "NVIDIA / CNBC ($500B round table)": "Nvidia $500B round table|Jensen Huang with Larry Fink and other leaders|CNBC special",
+  "Microsoft-Nvidia (Nadella/Huang)": "Nadella & Huang|Microsoft and Nvidia CEOs at a joint launch|Launch fireside chat",
+  "Fed (FOMC/Warsh)": "Federal Reserve|Rate decision and Chair Warsh's press conference|FOMC meeting",
+  "Michael Kratsios (OSTP)": "Michael Kratsios|White House science and technology director|All-In",
+  "David Sacks": "David Sacks|White House AI and crypto czar|Interviews",
+  "Aswath Damodaran": "Aswath Damodaran|NYU finance professor, 'the dean of valuation'|Interviews and Prof G Markets",
+  "Aswath Damodaran (Prof G Markets)": "Aswath Damodaran|NYU finance professor, 'the dean of valuation'|Interviews and Prof G Markets",
+  "Jeremy Grantham": "Jeremy Grantham|GMO co-founder, bubble historian|Odd Lots",
+  "Gary Marcus": "Gary Marcus|AI scientist and leading critic of AI hype|The Real Eisman Playbook",
+  "David Hunter": "David Hunter|Contrarian macro strategist|Coin Stories and more",
+  "On the Tape": "Danny Moses & co-hosts|'The Big Short' trader and colleagues|On the Tape",
+  "Tino": "Tino|Retail livestream trader (weighted lightly)|Livestream",
+  "Peter Schiff": "Peter Schiff|Gold bull and Bitcoin skeptic (weighted lightly)|The Pomp Podcast",
+  "Steve Eisman": "Steve Eisman|'The Big Short' investor, now a podcaster|The Real Eisman Playbook",
+  "Steve Eisman (w/ Benn Steil)": "Steve Eisman|'The Big Short' investor, now a podcaster|The Real Eisman Playbook",
+  "Steve Eisman (w/ Danny Moses)": "Steve Eisman|'The Big Short' investor, now a podcaster|The Real Eisman Playbook",
+  "Steve Eisman (Ives, Luria)": "Steve Eisman|'The Big Short' investor, now a podcaster|The Real Eisman Playbook",
+  "Steve Eisman (Steve Tusa)": "Steve Eisman|'The Big Short' investor, now a podcaster|The Real Eisman Playbook",
+  "Steve Eisman (The Compound)": "Steve Eisman|'The Big Short' investor, now a podcaster|The Real Eisman Playbook",
+  "Prof G Markets (Elson w/ Eisman)": "Steve Eisman|'The Big Short' investor, now a podcaster|The Real Eisman Playbook",
+  "Prof G Markets (Elson w/ Kedrosky, Armstrong)": "Paul Kedrosky|Investor and researcher on AI capex|Odd Lots and Prof G Markets",
+  "Prof G Markets (Elson, Kedrosky)": "Paul Kedrosky|Investor and researcher on AI capex|Odd Lots and Prof G Markets",
+  "Odd Lots (Lee, Kedrosky)": "Paul Kedrosky|Investor and researcher on AI capex|Odd Lots and Prof G Markets",
+  "The Compound (Sam Koppelman, Hunterbrook)": "Sam Koppelman|Hunterbrook, an investigative newsroom and short fund|The Compound and Friends",
+  "Prof G Markets (George Noble, Charles Elson)": "George Noble|Veteran fund manager, ex-Fidelity|Prof G Markets",
+  "Doug O'Laughlin": "Doug O'Laughlin|Semiconductor analyst, Fabricated Knowledge|SemiAnalysis stream",
+  "Dylan Patel (SemiAnalysis)": "Dylan Patel|SemiAnalysis founder; chips and data centers|Dwarkesh, Big Technology and talks",
+  "Dylan Patel / SemiAnalysis (Big Technology)": "Dylan Patel|SemiAnalysis founder; chips and data centers|Dwarkesh, Big Technology and talks",
+  "Dylan Patel / SemiAnalysis (Modal Runtime)": "Dylan Patel|SemiAnalysis founder; chips and data centers|Dwarkesh, Big Technology and talks",
+  "Dylan Patel / SemiAnalysis (Sourcery)": "Dylan Patel|SemiAnalysis founder; chips and data centers|Dwarkesh, Big Technology and talks",
+  "Jeremy Eliuveros (SemiAnalysis)": "Jeremy Eliuveros|SemiAnalysis energy and power analyst|SemiAnalysis",
+  "Ben Pulandian": "Ben Pulandian|Semiconductor supply-chain researcher, BEP Research|Interview",
+  "Steve (Silicon Data)": "Silicon Data|Tracks GPU rental prices and compute indexes|Forward Guidance",
+  "Bob Sorensen": "Bob Sorensen|Quantum-computing analyst at Hyperion Research|Interview",
+  "Ember": "Ember|Energy think tank|Global Electricity Review",
+  "John Davis": "John Davis|Texas rancher, ex-legislator, wind landowner|Interview",
+  "ChinAI (Jeff Ding)": "Jeffrey Ding|GWU professor who translates Chinese AI sources|ChinAI newsletter",
+  "Odd Lots (Kyle Chan)": "Kyle Chan|Brookings China industry researcher|Odd Lots",
+  "Odd Lots (Afra Wang)": "Afra Wang|Writer on China's tech scene|Odd Lots",
+  "Odd Lots (Rasgon)": "Stacy Rasgon|Bernstein semiconductor analyst|Odd Lots",
+  "Dwarkesh Patel (Intel leaders)": "Intel leadership|Intel's CTO on a fab tour|Dwarkesh Podcast",
+  "Sergio Gago, Cloudera (Big Technology sponsored)": "Cloudera executives|Enterprise data company (sponsored segments)|Big Technology",
+  "Brian Rosso, Cloudera (Big Technology sponsored)": "Cloudera executives|Enterprise data company (sponsored segments)|Big Technology",
+  "Nick Carter": "Nick Carter|Castle Island Ventures partner|Podcasts",
+  "Austin Campbell": "Austin Campbell|Stablecoin and risk-management practitioner|Validated",
+  "Arthur Hayes": "Arthur Hayes|BitMEX co-founder, Maelstrom fund|The Pomp Podcast",
+  "Dylan LeClair": "Dylan LeClair|Bitcoin strategist at Metaplanet|Coin Stories",
+  "Tom Lee": "Tom Lee|Fundstrat co-founder, BitMine chair|Coinage and Prof G Markets",
+  "Prof G Markets (Tom Lee)": "Tom Lee|Fundstrat co-founder, BitMine chair|Coinage and Prof G Markets",
+  "Illia Polosukhin (NEAR)": "Illia Polosukhin|NEAR founder, co-author of the Transformer paper|Podcast",
+  "William Mougayar": "William Mougayar|Ethereum adviser and author|The Edge",
+  "Joseph Chalom (SharpLink)": "Joseph Chalom|SharpLink CEO, ex-BlackRock|The Rollup",
+  "Vitalik Buterin (OKX keynote)": "Vitalik Buterin|Ethereum co-founder|OKX keynote",
+  "Marc Rowan": "Marc Rowan|Apollo Global CEO|Interview",
+  "Marc Lipschultz": "Marc Lipschultz|Blue Owl co-CEO|Interview",
+  "Sean McGould": "Sean McGould|Lighthouse Partners, fund-of-funds allocator|Interview",
+  "Takahē Capital": "Takahē Capital|Systematic trend-following fund|Interview",
+  "Erik Hirsch (Hamilton Lane)": "Erik Hirsch|Hamilton Lane co-CEO|The Compound",
+  "Ron & Michael Baron": "Ron & Michael Baron|Baron Capital, long-term growth investors|Interview",
+  "Jonathan Thomas": "Jonathan Thomas|American Century Investments CEO|The Compound",
+  "Matt McLennan": "Matt McLennan|First Eagle global value investor|Bloomberg",
+  "Bloomberg Businessweek Daily (Moynihan/Whitney)": "Brian Moynihan & Meredith Whitney|Bank of America CEO; banking analyst|Bloomberg Businessweek Daily",
+  "Invest Like the Best (Cliff Sosin)": "Cliff Sosin|CAS Investment Partners founder|Invest Like the Best",
+  "Menand & Tankus": "Lev Menand & Nathan Tankus|Columbia law scholar; monetary-policy writer|Odd Lots",
+  "Imas & Trammell": "Alex Imas & Phil Trammell|AGI economists at UChicago and Stanford|Podcast",
+  "a16z (Cowen, Imas)": "Tyler Cowen|George Mason economist|a16z podcast",
+  "Odd Lots (Granato & Drall)": "Granato & Drall|Academics on private equity, insurance and private credit|Odd Lots",
+  "Eric Weinstein": "Eric Weinstein|Mathematician and commentator|All-In",
+  "Roman Yampolskiy": "Roman Yampolskiy|AI-safety researcher|The Pomp Podcast",
+  "Leopold Aschenbrenner": "Leopold Aschenbrenner|Ex-OpenAI researcher, 'Situational Awareness'|Essay",
+  "Ethan Mollick (Big Technology)": "Ethan Mollick|Wharton professor who studies AI at work|Big Technology",
+  "Dwarkesh Podcast (Paul Christiano)": "Paul Christiano|AI-safety researcher|Dwarkesh Podcast",
+  "a16z (Nick Bostrom)": "Nick Bostrom|Philosopher, author of 'Superintelligence'|a16z podcast",
+  "The Compound (Brown/Batnick)": "Josh Brown & Michael Batnick|Ritholtz Wealth advisers; markets commentary|The Compound, What Are Your Thoughts"
+ }
 };
 
 /* ============================================================ RENDER ============================================================ */
@@ -34660,31 +34881,34 @@ function renderLibrary(){
 
 /* ---- Sources ---- */
 function renderSources(){
+  // Source X-Ray (2026-11-26): where the site's information comes from. Ten groups that add to 100%,
+  // weighted by recency (90-day half-life). Each group opens to a description and a Voices list.
   const v=$("#v-sources");v.innerHTML="";
-  v.appendChild(el("p","lead","The honesty panel. The library inherits the bias of what's fed in — so this x-ray shows the mix of voices and, more importantly, what's still missing. When a theme is 'high conviction' but every voice shares one incentive, treat the number with suspicion."));
-  // Source X-Ray (2026-11-26): ten groups that add to 100%; click a row for its voices and past notes.
-  const p=el("div","panel");const L=typeof LIBSRC!=="undefined"?LIBSRC:{};const tcount={};Object.values(L).forEach(n=>tcount[n]=(tcount[n]||0)+1);
-  const names=Object.keys(tcount),VG=DATA.voiceGroups||{},tot=names.length||1;
-  const groups=(DATA.sourceGroups||[]).map(g=>Object.assign({},g,{voices:names.filter(n=>VG[n]===g.key).sort((a,b)=>a.localeCompare(b))}));
-  const uns=names.filter(n=>!groups.some(g=>g.key===VG[n]));if(uns.length)groups.push({key:"_",name:"Not yet sorted",desc:"New voices waiting to be placed in a group.",voices:uns.sort()});
-  groups.forEach(g=>{g.raw=g.voices.length*100/tot;g.pct=Math.floor(g.raw);});let left=100-groups.reduce((a,g)=>a+g.pct,0);
-  groups.slice().sort((a,b)=>(b.raw-b.pct)-(a.raw-a.pct)).forEach(g=>{if(left>0&&g.voices.length){g.pct++;left--;}});
-  groups.sort((a,b)=>b.voices.length-a.voices.length);const top=Math.max(1,...groups.map(g=>g.pct));
-  p.appendChild(el("h3","","Composition of the "+tot+" distinct voices"));
-  p.appendChild(el("p","faint xrhint","Ten groups that add up to 100%. Click a row to see who is in it and the notes from past editions (×3 = three episodes from that voice)."));
-  const bars=el("div","xrbars");
-  groups.forEach(g=>{const w=el("div","xrg");const row=el("div","xrrow");row.setAttribute("role","button");row.tabIndex=0;row.setAttribute("aria-expanded","false");
-    row.innerHTML='<span class="xrcar">▾</span><span class="xrname">'+g.name+'<span class="faint xrn"> · '+g.voices.length+' voices</span></span><span class="bt xrbar"><span class="bf" style="display:block;width:'+(g.pct/top*100)+'%"></span></span><span class="xrpct">'+g.pct+'%</span>';
-    const det=el("div","xrdet");det.hidden=true;
-    let h='<p class="muted" style="margin:0">'+g.desc+'</p><div class="xrh">Voices ('+g.voices.length+')</div><div class="xrvo">'+g.voices.map(n=>n+(tcount[n]>1?' <span class="faint">×'+tcount[n]+'</span>':'')).join(' · ')+'</div>';
-    const notes=(DATA.sourceComposition||[]).filter(r=>r.grp===g.key);
-    if(notes.length)h+='<div class="xrh">Notes from past editions</div><ul class="xrnotes">'+notes.map(r=>'<li><span class="xrnl">'+r.label+'</span><br><span class="faint">'+r.who+'</span></li>').join('')+'</ul>';
-    det.innerHTML=h;
-    const tog=()=>{det.hidden=!det.hidden;w.classList.toggle("open",!det.hidden);row.setAttribute("aria-expanded",String(!det.hidden));};
-    row.onclick=tog;row.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();tog();}};
-    w.appendChild(row);w.appendChild(det);bars.appendChild(w);});
-  p.appendChild(bars);v.appendChild(p);
-  const b=el("div","blind");let h="<h4>Blind spots &amp; directional bias</h4><ul style='margin:8px 0 0;padding-left:18px' class='muted'>";DATA.blindspots.forEach(x=>h+="<li style='margin:6px 0'>"+bLead(x)+"</li>");h+="</ul><p class='muted' style='margin-top:12px'><b>What to feed next to keep stress-testing:</b> a China-domestic voice, an energy-utility/grid executive, a private-credit practitioner, and independent corroboration of the crypto-rails theme. Keep disconfirming — not just reinforcing.</p>";b.innerHTML=h;v.appendChild(b);
+  v.appendChild(el("p","lead","Where the information behind the Weekly Synthesis, Timeline, Newsletters and Library comes from. Recent episodes count more than older ones, so this mix reflects what is shaping the current view."));
+  const L=typeof LIBSRC!=="undefined"?LIBSRC:{},VG=DATA.voiceGroups||{},VI=DATA.voiceInfo||{},now=new Date(calToday()+"T12:00:00");
+  const wt={},eps={},last={};(DATA.library||[]).forEach(c=>{const k=L[c.id];if(!k)return;const d=String(c.date||"").length===10?new Date(c.date+"T12:00:00"):null;const age=d?Math.max(0,(now-d)/864e5):365;wt[k]=(wt[k]||0)+Math.pow(.5,age/90);eps[k]=(eps[k]||0)+1;if(d&&(!last[k]||c.date>last[k]))last[k]=c.date;});
+  const info=k=>{const p=String(VI[k]||k).split("|");return {n:p[0],who:p[1]||"",at:p[2]||""};};
+  const groups=(DATA.sourceGroups||[]).map(g=>Object.assign({},g));if(Object.keys(wt).some(k=>!groups.some(g=>g.key===VG[k])))groups.push({key:"_",name:"Not yet sorted",desc:"New voices waiting to be placed in a group."});
+  groups.forEach(g=>{const ppl={};Object.keys(wt).filter(k=>(groups.some(x=>x.key===VG[k])?VG[k]:"_")===g.key).forEach(k=>{const i=info(k);const p=ppl[i.n]||(ppl[i.n]={n:i.n,who:i.who,at:i.at,w:0,e:0});p.w+=wt[k];p.e+=eps[k];});g.people=Object.values(ppl).sort((a,b)=>b.w-a.w);g.w=g.people.reduce((a,p)=>a+p.w,0);});
+  const W=groups.reduce((a,g)=>a+g.w,0)||1;groups.forEach(g=>{g.raw=g.w*100/W;g.pct=Math.floor(g.raw);});
+  let left=100-groups.reduce((a,g)=>a+g.pct,0);groups.slice().sort((a,b)=>(b.raw-b.pct)-(a.raw-a.pct)).forEach(g=>{if(left>0&&g.w>0){g.pct++;left--;}});
+  groups.sort((a,b)=>b.w-a.w);const top=Math.max(1,...groups.map(g=>g.pct)),share={};groups.forEach(g=>share[g.key]=g.raw);
+  const nPeople=groups.reduce((a,g)=>a+g.people.length,0);
+  const p=el("div","panel");p.appendChild(el("h3","","Where the information comes from"));
+  p.appendChild(el("p","faint xrhint",nPeople+" voices across "+(DATA.library||[]).length+" transcripts. Percentages are each group's share of the material, with recent episodes counting more. Click a row for more."));
+  const caret='<span class="xrcar">▾</span>';
+  const toggle=(row,det,box)=>{const t=()=>{det.hidden=!det.hidden;box.classList.toggle("open",!det.hidden);row.setAttribute("aria-expanded",String(!det.hidden));};row.setAttribute("role","button");row.tabIndex=0;row.setAttribute("aria-expanded","false");row.onclick=t;row.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();t();}};};
+  groups.forEach(g=>{const w=el("div","xrg");const row=el("div","xrrow");
+    row.innerHTML=caret+'<span class="xrname">'+g.name+'<span class="faint xrn"> · '+g.people.length+' voices</span></span><span class="bt xrbar"><span class="bf" style="display:block;width:'+(g.pct/top*100)+'%"></span></span><span class="xrpct">'+g.pct+'%</span>';
+    const det=el("div","xrdet");det.hidden=true;det.appendChild(el("p","xrdesc",g.desc));
+    const vb=el("div","xrsub");const vr=el("div","xrsubrow",caret+'<span>Voices ('+g.people.length+')</span>');const vl=el("div","xrvl");vl.hidden=true;
+    g.people.forEach(q=>vl.appendChild(el("div","xrv",'<span class="xrvn">'+q.n+'</span>'+(q.who?'<span class="xrvw"> — '+q.who+'</span>':'')+'<span class="faint xrva">'+(q.at?q.at+' · ':'')+q.e+(q.e===1?' episode':' episodes')+'</span>')));
+    toggle(vr,vl,vb);vb.appendChild(vr);vb.appendChild(vl);det.appendChild(vb);
+    toggle(row,det,w);w.appendChild(row);w.appendChild(det);p.appendChild(w);});
+  v.appendChild(p);
+  const fill=t=>String(t).replace(/\{([a-z+]+)\}/g,(m,k)=>Math.round(k.split("+").reduce((a,x)=>a+(share[x]||0),0)));
+  const b=el("div","blind");let h="<h4>Blind spots &amp; bias</h4><p class='muted' style='margin:6px 0 0'>Where this mix could mislead, and how the site adjusts for it.</p><ul style='margin:8px 0 0;padding-left:18px' class='muted'>";
+  (DATA.blindspots||[]).forEach(x=>{const t=fill(x),i=t.indexOf(": ");h+="<li style='margin:8px 0'>"+(i>0&&i<80?"<b style='color:var(--ink)'>"+t.slice(0,i)+".</b> "+t.charAt(i+2).toUpperCase()+t.slice(i+3):t)+"</li>";});h+="</ul><p class='muted' style='margin-top:12px'><b>Next to add:</b> a utility or grid executive, a private-credit lender, a Chinese AI voice and more skeptics.</p>";b.innerHTML=h;v.appendChild(b);
 }
 
 /* ---- Methodology ---- */
